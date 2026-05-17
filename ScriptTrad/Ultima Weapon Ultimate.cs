@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Threading;
 using System.Collections.Generic;
 using System.Collections.Immutable;
@@ -24,7 +24,7 @@ namespace LinoaScripts.WeaponsRefrainUltimate
         guid: "ba05255f-37df-413f-8ddb-f0a61a9bacbe",
         version: "0.0.0.2",
         note: scriptNotes,
-        author: "Linoa")]
+        Author: "Linoa235")]
 
     public class Weapons_Refrain_Ultimate
     {
@@ -223,12 +223,12 @@ namespace LinoaScripts.WeaponsRefrainUltimate
             "The end may justify the means as long as there is something that justifies the end.",
             "One by one the righteous fell, and the ills of ignorance permeated.",
             "They defended the grains of sand in the desert to the last drop of their blood.",
-            "All history is man's efforts to realise ideals.\n- Éamon de Valera, 1929",
+            "All history is man's efforts to realise ideals.\n- Ã‰amon de Valera, 1929",
             "Let us dedicate ourselves to what the Greeks wrote so many years ago: to tame the savageness of man and make gentle the life of this world.\n- Robert F. Kennedy, 1968",
             "Yesterday is not ours to recover, but tomorrow is ours to win or lose.\n- Lyndon B. Johnson, 1964",
             "The end of hope is the beginning of death.\n- Charles de Gaulle, 1945",
             "The day I leave the power, inside my pockets will only be dust.\n- Antonio de Oliveira Salazar, 1968",
-            "When smashing monuments, save the pedestals. They always come in handy.\n- Stanisław Jerzy Lec, 1957",
+            "When smashing monuments, save the pedestals. They always come in handy.\n- StanisÅ‚aw Jerzy Lec, 1957",
             "Fear not the path of truth for the lack of people walking on it.\n- Robert F. Kennedy, 1968",
             "The rocket worked perfectly, except for landing on the wrong planet.\n- Wernher von Braun upon the first V-2 hitting London, 1944",
             "Do not pray for easy lives, pray to be stronger men.\n- John F. Kennedy, 1963",

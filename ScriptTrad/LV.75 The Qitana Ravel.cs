@@ -26,7 +26,7 @@ using static Lumina.Data.Parsing.Layer.LayerCommon;
 namespace Veever.Shadowbringers.the_Qitana_Ravel;
 
 [ScriptType(name: "LV.75 The Qitana Ravel", territorys: [823], guid: "50c922c1-1ecd-4750-8b55-24f19793408f",
-    version: "0.0.0.2", author: "Veever", note: noteStr)]
+    version: "0.0.0.2", Author: "Linoa235", note: noteStr)]
 
 public class the_Qitana_Ravel
 {

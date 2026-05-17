@@ -1,4 +1,4 @@
-using Dalamud.Utility.Numerics;
+﻿using Dalamud.Utility.Numerics;
 using FFXIVClientStructs.FFXIV.Client.Game.Character;
 using FFXIVClientStructs.FFXIV.Client.Game.Object;
 using FFXIVClientStructs.FFXIV.Client.Graphics.Vfx;
@@ -28,7 +28,7 @@ using System.Xml.Linq;
 namespace Veever.DawnTrail.San_d_Oria_The_Second_Walk;
 
 [ScriptType(name: Name, territorys: [1304], guid: "26a812eb-b8e2-4f31-8568-affe775bd4c6",
-    version: Version, author: "Veever", note: NoteStr, updateInfo: UpdateInfo)]
+    version: Version, Author: "Linoa235", note: NoteStr, updateInfo: UpdateInfo)]
 
 public class San_d_Oria_The_Second_Walk
 {
@@ -41,7 +41,7 @@ public class San_d_Oria_The_Second_Walk
     3. Boss 3 does not auto-use anti-knockback for tankbuster knockbacks. 
     4. In the initial version, Boss 2's Energy Ray (reflect laser) and Boss 4's Duplicate may have drawing issues (wrong/missing).  
        If you encounter this, please provide an ARR for feedback on DC.
-    5. Boss 2's floor drawing has a small issue — just ignore it.
+    5. Boss 2's floor drawing has a small issue â€” just ignore it.
     6. If the game crashes, please report it in the dc channel.  
        If no ARR is available, let me know roughly which mechanic and the time it happened, and provide your [dalamud.log].
     Duckmen
@@ -65,7 +65,7 @@ public class San_d_Oria_The_Second_Walk
     [UserSetting("Language")]
     public Language language { get; set; } = Language.Chinese;
 
-    [UserSetting("Draw opacity — higher value = more visible")]
+    [UserSetting("Draw opacity â€” higher value = more visible")]
     public static float ColorAlpha { get; set; } = 1f;
 
     [UserSetting("Text Banner Toggle")]
@@ -1095,7 +1095,7 @@ public class San_d_Oria_The_Second_Walk
                 }
                 else
                 {
-                    msg = language == Language.Chinese ? "AOE Tankbuster — Stay Away" : "AOE Tankbuster — Stay Away";
+                    msg = language == Language.Chinese ? "AOE Tankbuster â€” Stay Away" : "AOE Tankbuster â€” Stay Away";
                 }
                 if (isText) sa.Method.TextInfo($"{msg}", duration: 6900, true);
                 if (isTTS) sa.Method.EdgeTTS($"{msg}");
@@ -1234,7 +1234,7 @@ public class San_d_Oria_The_Second_Walk
                 }
                 else
                 {
-                    msg = language == Language.Chinese ? "AOE Tankbuster — Stay Away" : "AOE Tankbuster — Stay Away";
+                    msg = language == Language.Chinese ? "AOE Tankbuster â€” Stay Away" : "AOE Tankbuster â€” Stay Away";
                 }
                 if (isText) sa.Method.TextInfo($"{msg}", duration: 4700, true);
                 if (isTTS) sa.Method.EdgeTTS($"{msg}");

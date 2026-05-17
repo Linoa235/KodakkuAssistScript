@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -14,14 +14,14 @@ using System.Threading.Tasks;
 namespace P11n;
 
 [ScriptType(guid: "07be068a-65ea-4fd9-a324-9ec5326bb04b", name: "P11N", territorys: [1151],
-    version: "0.0.0.2", author: "Tetora", note: noteStr)]
+    version: "0.0.0.2", Author: "Linoa235", note: noteStr)]
 
 public class P11n
 {
     const string noteStr =
         """
         v0.0.0.1:
-        LV90 Pandæmonium: Asphodelos (Themis) Initial Drawing
+        LV90 PandÃ¦monium: Asphodelos (Themis) Initial Drawing
         """;
     
     [UserSetting("TTS Toggle (Choose one TTS option)")]

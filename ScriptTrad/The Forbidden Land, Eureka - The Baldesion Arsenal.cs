@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -15,7 +15,7 @@ using System.Threading.Tasks;
 namespace The_Baldesion_Arsenal_Eureka;
 
 [ScriptType(guid: "cb001385-81e0-4c16-8bb3-fb51fd70336a", name: "The Forbidden Land, Eureka - The Baldesion Arsenal", territorys: [827],
-    version: "0.0.0.4", author: "Tetora", note: noteStr)]
+    version: "0.0.0.4", Author: "Linoa235", note: noteStr)]
 
 public class The_Baldesion_Arsenal
 {
@@ -95,7 +95,7 @@ public class The_Baldesion_Arsenal
     
     #region Trash Hints
     
-    [ScriptMethod(name: "——————  Trash Basic Hints ——————", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:0"])]
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€”  Trash Basic Hints â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:0"])]
     public void TrashBasicHints(Event @event, ScriptAccessory accessory) { }
     
     [ScriptMethod(name: "Baldesion Wise Toad_Toy Hammer Stillness Hint", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:15363"])]
@@ -180,7 +180,7 @@ public class The_Baldesion_Arsenal
     
     #region Trash Drawing
     
-    [ScriptMethod(name: "——————  Skill Drawing ——————", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:0"])]
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€”  Skill Drawing â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:0"])]
     public void TrashSkillDrawing(Event @event, ScriptAccessory accessory) { }
     
     [ScriptMethod(name: "Baldesion Byblos_Tail Smash (Tail Swipe)", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:15356"])]

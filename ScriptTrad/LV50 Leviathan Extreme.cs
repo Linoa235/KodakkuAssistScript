@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -15,7 +15,7 @@ using KodakkuAssist.Extensions;
 namespace the_Whorleater_Extreme;
 
 [ScriptType(guid: "07f20e0e-9463-4a10-9dd1-956fde6a9c46", name: "Leviathan Extreme", territorys: [359],
-    version: "0.0.0.4", author: "Tetora", note: noteStr)]
+    version: "0.0.0.4", Author: "Linoa235", note: noteStr)]
 
 public class the_Whorleater_Extreme
 {
@@ -47,33 +47,33 @@ public class the_Whorleater_Extreme
     }
     
     [ScriptMethod(name: "Phase Transition: P1", eventType: EventTypeEnum.Chat, userControl: false, eventCondition: ["Type:NPCDialogueAnnouncements",
-        "Message:regex:^(被光明所污染的人们.*|You trespass upon my domain.*|我が海域を侵すか.*)$"])]
+        "Message:regex:^(è¢«å…‰æ˜Žæ‰€æ±¡æŸ“çš„äººä»¬.*|You trespass upon my domain.*|æˆ‘ãŒæµ·åŸŸã‚’ä¾µã™ã‹.*)$"])]
     public void PhaseTransition1(Event @event, ScriptAccessory accessory)
     {
         Phase = 1;
     }
     
     [ScriptMethod(name: "Phase Transition: P2", eventType: EventTypeEnum.Chat, userControl: false, eventCondition: ["Type:NPCDialogueAnnouncements",
-        "Message:regex:^(蓝色清净的大海之水将会扫去一切污秽.*|Drink deep of the sea's bitter draught.*|清浄なる青き水を以て、穢れ清めん.*)$"])]
+        "Message:regex:^(è“è‰²æ¸…å‡€çš„å¤§æµ·ä¹‹æ°´å°†ä¼šæ‰«åŽ»ä¸€åˆ‡æ±¡ç§½.*|Drink deep of the sea's bitter draught.*|æ¸…æµ„ãªã‚‹é’ãæ°´ã‚’ä»¥ã¦ã€ç©¢ã‚Œæ¸…ã‚ã‚“.*)$"])]
     public void PhaseTransition2(Event @event, ScriptAccessory accessory)
     {
         Phase = 2;
     }
     
     [ScriptMethod(name: "Phase Transition: P3", eventType: EventTypeEnum.Chat, userControl: false, eventCondition: ["Type:NPCDialogueAnnouncements",
-        "Message:regex:^(竟然对我卖弄小伎俩.*|You challenge me with trickery.*|ぬぅ、小細工を弄したか.*)$"])]
+        "Message:regex:^(ç«Ÿç„¶å¯¹æˆ‘å–å¼„å°ä¼Žä¿©.*|You challenge me with trickery.*|ã¬ã…ã€å°ç´°å·¥ã‚’å¼„ã—ãŸã‹.*)$"])]
     public void PhaseTransition3(Event @event, ScriptAccessory accessory)
     {
         Phase = 3;
     }
     
-    [ScriptMethod(name: "Dive Record", eventType: EventTypeEnum.Targetable, eventCondition: ["SourceName:regex:^(利维亚桑|Leviathan|リヴァイアサン)$", "Targetable:False"], userControl: false)]
+    [ScriptMethod(name: "Dive Record", eventType: EventTypeEnum.Targetable, eventCondition: ["SourceName:regex:^(åˆ©ç»´äºšæ¡‘|Leviathan|ãƒªãƒ´ã‚¡ã‚¤ã‚¢ã‚µãƒ³)$", "Targetable:False"], userControl: false)]
     public void DiveRecord(Event @event, ScriptAccessory accessory)
     {
         Dive = 1;
     }
     
-    [ScriptMethod(name: "Dive Cancel", eventType: EventTypeEnum.Targetable, eventCondition: ["SourceName:regex:^(利维亚桑|Leviathan|リヴァイアサン)$", "Targetable:True"], userControl: false)]
+    [ScriptMethod(name: "Dive Cancel", eventType: EventTypeEnum.Targetable, eventCondition: ["SourceName:regex:^(åˆ©ç»´äºšæ¡‘|Leviathan|ãƒªãƒ´ã‚¡ã‚¤ã‚¢ã‚µãƒ³)$", "Targetable:True"], userControl: false)]
     public void DiveCancel(Event @event, ScriptAccessory accessory)
     {
         Dive = 0;
@@ -87,10 +87,10 @@ public class the_Whorleater_Extreme
         var isDps = accessory.Data.MyObject?.IsDps() ?? false;
         var isHealer = accessory.Data.MyObject?.IsHealer() ?? false;
 
-        if (isTank && isText) accessory.Method.TextInfo("Difficulty: ★☆, leave if not confident\nT: MT pulls head, ST pulls tail. ST also pulls adds, stun Wave-tongue Sahagin (immune below 60%)", duration: 10000, true);
-        if (isDps && isText) accessory.Method.TextInfo("Difficulty: ☆\nDPS: Attack yellow orbs, ignore blue orbs. Prioritize Wave-tongue Sahagin adds, avoid tank's auto-attacks", duration: 10000, true);
-        if (isHealer && isText) accessory.Method.TextInfo("Difficulty: ★★, leave if not confident\nH: Let fairy and Regen heal ST. Heal party at staggered times, avoid Water Mirror debuff if possible", duration: 10000, true);
-        accessory.Method.SendChat("/e ————Cheat Sheet————\nT: MT pulls head, ST pulls tail. ST also pulls adds, stun Wave-tongue Sahagin (immune below 60%)\nST kites blue orb, after one slam, move away from party and use heavy mitigation to explode\nDPS: Attack yellow orbs, prioritize Wave-tongue Sahagin adds, avoid tank's auto-attacks\nH: Let fairy and Regen heal ST. Heal party at staggered times, avoid Water Mirror debuff if possible");
+        if (isTank && isText) accessory.Method.TextInfo("Difficulty: â˜…â˜†, leave if not confident\nT: MT pulls head, ST pulls tail. ST also pulls adds, stun Wave-tongue Sahagin (immune below 60%)", duration: 10000, true);
+        if (isDps && isText) accessory.Method.TextInfo("Difficulty: â˜†\nDPS: Attack yellow orbs, ignore blue orbs. Prioritize Wave-tongue Sahagin adds, avoid tank's auto-attacks", duration: 10000, true);
+        if (isHealer && isText) accessory.Method.TextInfo("Difficulty: â˜…â˜…, leave if not confident\nH: Let fairy and Regen heal ST. Heal party at staggered times, avoid Water Mirror debuff if possible", duration: 10000, true);
+        accessory.Method.SendChat("/e â€”â€”â€”â€”Cheat Sheetâ€”â€”â€”â€”\nT: MT pulls head, ST pulls tail. ST also pulls adds, stun Wave-tongue Sahagin (immune below 60%)\nST kites blue orb, after one slam, move away from party and use heavy mitigation to explode\nDPS: Attack yellow orbs, prioritize Wave-tongue Sahagin adds, avoid tank's auto-attacks\nH: Let fairy and Regen heal ST. Heal party at staggered times, avoid Water Mirror debuff if possible");
     }
     
     [ScriptMethod(name: "Veil of the Whorl Hint", eventType: EventTypeEnum.ActionEffect, eventCondition: ["ActionId:2165"])]
@@ -134,7 +134,7 @@ public class the_Whorleater_Extreme
         accessory.Method.SendDraw(DrawModeEnum.Default, DrawTypeEnum.Circle, dp);
     }
     
-    [ScriptMethod(name: "Dive Hint", eventType: EventTypeEnum.Targetable, eventCondition: ["SourceName:regex:^(利维亚桑|Leviathan|リヴァイアサン)$", "Targetable:False"])]
+    [ScriptMethod(name: "Dive Hint", eventType: EventTypeEnum.Targetable, eventCondition: ["SourceName:regex:^(åˆ©ç»´äºšæ¡‘|Leviathan|ãƒªãƒ´ã‚¡ã‚¤ã‚¢ã‚µãƒ³)$", "Targetable:False"])]
     public void DiveHint(Event @event, ScriptAccessory accessory)
     {
         if (isText && Phase == 1) accessory.Method.TextInfo("Go to opposite side of water spout for knockback", duration: 5000, true);
@@ -156,7 +156,7 @@ public class the_Whorleater_Extreme
     }
     
     [ScriptMethod(name: "Tidal Wave (Knockback)", eventType: EventTypeEnum.Chat, eventCondition: ["Type:NPCDialogueAnnouncements",
-        "Message:regex:^(竟然对我卖弄小伎俩.*|You challenge me with trickery.*|ぬぅ、小細工を弄したか.*)$"])]
+        "Message:regex:^(ç«Ÿç„¶å¯¹æˆ‘å–å¼„å°ä¼Žä¿©.*|You challenge me with trickery.*|ã¬ã…ã€å°ç´°å·¥ã‚’å¼„ã—ãŸã‹.*)$"])]
     public void TidalWave(Event @event, ScriptAccessory accessory)
     {
         foreach (var item in accessory.Data.Objects.GetByDataId(2802))

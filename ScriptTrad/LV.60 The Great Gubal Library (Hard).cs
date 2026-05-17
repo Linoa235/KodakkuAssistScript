@@ -1,4 +1,4 @@
-using Dalamud.Utility.Numerics;
+﻿using Dalamud.Utility.Numerics;
 using FFXIVClientStructs.FFXIV.Client.Game.Character;
 using FFXIVClientStructs.FFXIV.Client.Game.Gauge;
 using FFXIVClientStructs.FFXIV.Client.Game.Object;
@@ -28,7 +28,7 @@ using System.Xml.Linq;
 namespace Veever.Heavensward.the_Great_Gubal_Library_Hard;
 
 [ScriptType(name: Name, territorys: [578], guid: "d376d381-8bd0-4a3b-9a87-d3e06e5afab8",
-    version: Version, author: "Veever", note: NoteStr, updateInfo: UpdateInfo)]
+    version: Version, Author: "Linoa235", note: NoteStr, updateInfo: UpdateInfo)]
 
 public class the_Great_Gubal_Library_Hard
 {

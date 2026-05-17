@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using KodakkuAssist.Module.GameEvent;
 using KodakkuAssist.Script;
 using KodakkuAssist.Module.GameEvent.Struct;
@@ -23,7 +23,7 @@ using FFXIVClientStructs.FFXIV.Client.Graphics.Vfx;
 namespace UsamisKodakku.Script._07_DawnTrail.QueenEternal;
 
 [ScriptType(name: Name, territorys: [1243], guid: "45fff289-e23d-41ab-9039-71cd310668e4", 
-    version: Version, author: "Usami", note: NoteStr)]
+    version: Version, Author: "Linoa235", note: NoteStr)]
 
 // ^(?!.*((Monk|Machinist|Dragoon|Samurai|Ninja|Viper|Reaper|Dancer|Bard|Astrologian|Sage|Scholar|(Eos|Selene)|Seraph|White Mage|Warrior|Paladin|Dark Knight|Gunbreaker|Pictomancer|Black Mage|Blue Mage|Summoner|Carbuncle|Demigod Bahamut|Demigod Phoenix|Garuda-Egi|Titan-Egi|Ifrit-Egi|Puppet)\] (Used|Cast))).*35501.*$
 
@@ -125,7 +125,7 @@ public class QueenEternalEx
         _bossId = @event.SourceId();
     }
     
-    [ScriptMethod(name: "---- 《Aethertithe》 ----", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld"],
+    [ScriptMethod(name: "---- ã€ŠAethertitheã€‹ ----", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld"],
         userControl: true)]
     public void SplitLine_Aethertithe(Event @event, ScriptAccessory accessory)
     {
@@ -182,7 +182,7 @@ public class QueenEternalEx
 
     #region Left/Right Cleave
 
-    [ScriptMethod(name: "---- 《Legitimate Force》 ----", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld"],
+    [ScriptMethod(name: "---- ã€ŠLegitimate Forceã€‹ ----", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld"],
         userControl: true)]
     public void SplitLine_LegitimateForce(Event @event, ScriptAccessory accessory)
     {
@@ -238,7 +238,7 @@ public class QueenEternalEx
     
     #region Wind Phase
     
-    [ScriptMethod(name: "---- 《Laws of Wind》 ----", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld"],
+    [ScriptMethod(name: "---- ã€ŠLaws of Windã€‹ ----", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld"],
         userControl: true)]
     public void SplitLine_LawsofWind(Event @event, ScriptAccessory accessory)
     {
@@ -407,7 +407,7 @@ public class QueenEternalEx
     #endregion Wind Phase
 
     #region Divide and Conquer
-    [ScriptMethod(name: "---- 《Divide and Conquer》 ----", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld"],
+    [ScriptMethod(name: "---- ã€ŠDivide and Conquerã€‹ ----", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld"],
         userControl: true)]
     public void SplitLine_DivideAndConquer(Event @event, ScriptAccessory accessory)
     {
@@ -458,7 +458,7 @@ public class QueenEternalEx
 
     #region Earth Phase
 
-    [ScriptMethod(name: "---- 《Laws of Earth》 ----", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld"],
+    [ScriptMethod(name: "---- ã€ŠLaws of Earthã€‹ ----", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld"],
         userControl: true)]
     public void SplitLine_LawsofEarth(Event @event, ScriptAccessory accessory)
     {
@@ -822,7 +822,7 @@ public class QueenEternalEx
 
     #region Absolute Authority
     
-    [ScriptMethod(name: "---- 《Absolute Authority》 ----", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld"],
+    [ScriptMethod(name: "---- ã€ŠAbsolute Authorityã€‹ ----", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld"],
         userControl: true)]
     public void SplitLine_AbsoluteAuthority(Event @event, ScriptAccessory accessory)
     {
@@ -928,7 +928,7 @@ public class QueenEternalEx
 
     #region Ice Phase
 
-    [ScriptMethod(name: "---- 《Laws of Ice》 ----", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld"],
+    [ScriptMethod(name: "---- ã€ŠLaws of Iceã€‹ ----", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld"],
         userControl: true)]
     public void SplitLine_LawsofIce(Event @event, ScriptAccessory accessory)
     {
@@ -1179,7 +1179,7 @@ public class QueenEternalEx
 
     #region Radical Shift (Enrage)
 
-    [ScriptMethod(name: "---- 《Soft Enrage》 ----", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld"],
+    [ScriptMethod(name: "---- ã€ŠSoft Enrageã€‹ ----", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld"],
         userControl: true)]
     public void SplitLine_Enrage(Event @event, ScriptAccessory accessory)
     {

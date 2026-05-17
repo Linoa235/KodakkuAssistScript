@@ -38,7 +38,7 @@ using KodaMarkType = KodakkuAssist.Module.GameOperate.MarkType;
 namespace Veever.A_Realm_Reborn.Snowcloak;
 
 [ScriptType(name: Name, territorys: [1062], guid: "e64621a3-5ff4-40e2-9070-88e69191a1c0",
-    version: Version, author: "Veever", note: NoteStr, updateInfo: UpdateStr)]
+    version: Version, Author: "Linoa235", note: NoteStr, updateInfo: UpdateStr)]
 
 // ^(?!.*((Monk|Machinist|Dragoon|Samurai|Ninja|Viper|Reaper|Dancer|Bard|Astrologian|Sage|Scholar|(Eos|Selene)|Seraph|White Mage|Warrior|Paladin|Dark Knight|Gunbreaker|Pictomancer|Black Mage|Blue Mage|Summoner|Carbuncle|Demigod Bahamut|Demigod Phoenix|Garuda-Egi|Titan-Egi|Ifrit-Egi|Puppet)\] (Used|Cast))).*35501.*$
 // ^\[\w+\|[^|]+\|E\]\s\w+ 

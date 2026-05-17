@@ -1,4 +1,4 @@
-using FFXIVClientStructs.FFXIV.Common.Math;
+﻿using FFXIVClientStructs.FFXIV.Common.Math;
 using KodakkuAssist.Module.Draw;
 using KodakkuAssist.Module.GameEvent;
 using KodakkuAssist.Script;
@@ -7,7 +7,7 @@ using System;
 
 namespace KDrawScript.Dev
 {
-    [ScriptType(name: "Abyssos The Eighth Circle (P8)", territorys: [1087], guid: "A8B2CE40-AD15-4F26-9CBE-C8AD1081F702", version: "0.0.0.1", author: "Due")]
+    [ScriptType(name: "Abyssos The Eighth Circle (P8)", territorys: [1087], guid: "A8B2CE40-AD15-4F26-9CBE-C8AD1081F702", version: "0.0.0.1", Author: "Linoa235")]
     public class Abyssos_The_Eighth_Circle
     {
         [UserSetting(note: "Enable text reminders")]

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -25,7 +25,7 @@ using FFXIVClientStructs.FFXIV.Component.GUI;
 namespace A10N;
 
 [ScriptType(guid: "ec6bec7b-27bf-4a19-ae0c-cef069c7742d", name: "A10N", territorys: [581],
-    version: "0.0.0.1", author: "Tetora", note: noteStr)]
+    version: "0.0.0.1", Author: "Linoa235", note: noteStr)]
 
 public class NewDuty
 {
@@ -189,7 +189,7 @@ public class NewDuty
     }
     
     [ScriptMethod(name: "Rotating Chainsaw_Slash", eventType: EventTypeEnum.Chat, eventCondition: ["Type:NPCDialogueAnnouncements", 
-        "Message:regex:^(呼哧……呼哧……\n来试试青蓝之手制作的陷阱吧哥布！|Pssshkoh... Illuminati give Lamebrix toys. Lamebrix likes funplaying with toys!|シュコォ……シュコォ……\n「青の手」が作った悪趣味な罠……使ってみるゴブ！)$"])]
+        "Message:regex:^(å‘¼å“§â€¦â€¦å‘¼å“§â€¦â€¦\næ¥è¯•è¯•é’è“ä¹‹æ‰‹åˆ¶ä½œçš„é™·é˜±å§å“¥å¸ƒï¼|Pssshkoh... Illuminati give Lamebrix toys. Lamebrix likes funplaying with toys!|ã‚·ãƒ¥ã‚³ã‚©â€¦â€¦ã‚·ãƒ¥ã‚³ã‚©â€¦â€¦\nã€Œé’ã®æ‰‹ã€ãŒä½œã£ãŸæ‚ªè¶£å‘³ãªç½ â€¦â€¦ä½¿ã£ã¦ã¿ã‚‹ã‚´ãƒ–ï¼)$"])]
     public void Slash(Event @event, ScriptAccessory accessory)
     {
         var dp = accessory.Data.GetDefaultDrawProperties();

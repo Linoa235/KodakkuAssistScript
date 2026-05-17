@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Numerics;
 using Newtonsoft.Json;
@@ -24,7 +24,7 @@ using FFXIVClientStructs.FFXIV.Client.Game.Character;
 namespace Veever.A_Realm_Reborn.Haukke_Manor;
 
 [ScriptType(name: "LV.28 Haukke Manor", territorys: [1040], guid: "964f1a0a-5b2a-4473-b41b-a170bc823f67",
-    version: "0.0.0.4", author: "Veever", note: noteStr)]
+    version: "0.0.0.4", Author: "Linoa235", note: noteStr)]
 
 public class Haukke_Manor
 {

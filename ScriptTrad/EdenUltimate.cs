@@ -1,4 +1,4 @@
-// File: EdenUltimate_Unknown.cs
+﻿// File: EdenUltimate_Unknown.cs
 using System;
 using KodakkuAssist.Module.GameEvent;
 using KodakkuAssist.Script;

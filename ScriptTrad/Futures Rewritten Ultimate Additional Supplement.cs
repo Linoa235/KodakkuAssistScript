@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -15,7 +15,7 @@ using System.Threading.Tasks;
 namespace FRU_DLC;
 
 [ScriptType(guid: "981e39b5-ea99-4b85-a4b1-0e698d4c4036", name: "FRU_DLC [Futures Rewritten Ultimate_Additional Supplement]", territorys: [1238],
-    version: "0.0.0.4", author: "Tetora", note: noteStr)]
+    version: "0.0.0.4", Author: "Linoa235", note: noteStr)]
 
 public class FRU_DLC
 {
@@ -332,10 +332,10 @@ public class FRU_DLC
     
     #region Dragoon Tools
     
-    [ScriptMethod(name: "———— Dragoon Tools (No Real Practical Meaning) ————", eventType: EventTypeEnum.StartCasting, eventCondition: ["DataId:1"])]
+    [ScriptMethod(name: "â€”â€”â€”â€” Dragoon Tools (No Real Practical Meaning) â€”â€”â€”â€”", eventType: EventTypeEnum.StartCasting, eventCondition: ["DataId:1"])]
     public void DragoonTools(Event @event, ScriptAccessory accessory) { }
     
-    [ScriptMethod(name: "P1 Opening Hint", eventType: EventTypeEnum.Chat, eventCondition: ["Message:距离战斗开始还有5秒！"])]
+    [ScriptMethod(name: "P1 Opening Hint", eventType: EventTypeEnum.Chat, eventCondition: ["Message:è·ç¦»æˆ˜æ–—å¼€å§‹è¿˜æœ‰5ç§’ï¼"])]
     public async void FatebreakerStart(Event @event, ScriptAccessory accessory)
     {
         if (!isDRG) return; 

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Numerics;
 using Newtonsoft.Json;
@@ -15,7 +15,7 @@ using System.Runtime.Intrinsics.Arm;
 namespace Veever.Heavensward.AetherochemicalResearchFacility;
 
 [ScriptType(name: "LV.60 Aetherochemical Research Facility", territorys: [1110], guid: "dd08165c-b709-4100-a96e-65f2c7ae4f3b",
-    version: "0.0.0.7", author: "Veever", note: noteStr)]
+    version: "0.0.0.7", Author: "Linoa235", note: noteStr)]
 
 public class AetherochemicalResearchFacility
 {
@@ -88,7 +88,7 @@ public class AetherochemicalResearchFacility
 
 
     #region Boss2
-    [ScriptMethod(name: "Boss2 Cleave Announcement", eventType: EventTypeEnum.Chat, eventCondition: ["Message:启动合成生物性能评测系统——赫鲁玛奇斯。"])]
+    [ScriptMethod(name: "Boss2 Cleave Announcement", eventType: EventTypeEnum.Chat, eventCondition: ["Message:å¯åŠ¨åˆæˆç”Ÿç‰©æ€§èƒ½è¯„æµ‹ç³»ç»Ÿâ€”â€”èµ«é²çŽ›å¥‡æ–¯ã€‚"])]
     public void Boss2Notification(Event @event, ScriptAccessory accessory)
     {
         if (isText) accessory.Method.TextInfo("Most of this boss's skills are cleaves, non-tank jobs should not stand in front of the boss", duration: 5000, true);
@@ -234,7 +234,7 @@ public class AetherochemicalResearchFacility
 
 
     #region Boss3-P2
-    [ScriptMethod(name: "Boss3-P2 Reset Variables", eventType: EventTypeEnum.Chat, eventCondition: ["Message:regex:^暗之力在涌动……\\r?\\n如火炎般热烈，如冰霜般寂静！$"])]
+    [ScriptMethod(name: "Boss3-P2 Reset Variables", eventType: EventTypeEnum.Chat, eventCondition: ["Message:regex:^æš—ä¹‹åŠ›åœ¨æ¶ŒåŠ¨â€¦â€¦\\r?\\nå¦‚ç«ç‚Žèˆ¬çƒ­çƒˆï¼Œå¦‚å†°éœœèˆ¬å¯‚é™ï¼$"])]
     public void Boss3P2Clean(Event @event, ScriptAccessory accessory)
     {
         iceCount = 10;

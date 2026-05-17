@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -25,7 +25,7 @@ using FFXIVClientStructs.FFXIV.Component.GUI;
 namespace NewDuty;
 
 [ScriptType(guid: "80890eac-4730-4708-ad1b-05aba469c2a1", name: "Latest Hottest Temporary Drawing", territorys: [1307],
-    version: "0.0.0.8", author: "Tetora", note: noteStr)]
+    version: "0.0.0.8", Author: "Linoa235", note: noteStr)]
 
 /* MapID
  * 1307: G Lair Abolition
@@ -64,7 +64,7 @@ public class NewDuty
     
     #region 7.4 G Lair Abolition
     
-    [ScriptMethod(name: "—————— 7.4 G Lair Abolition ——————", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€” 7.4 G Lair Abolition â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
     public void GLairAbolition(Event @event, ScriptAccessory accessory) { }
     
     [ScriptMethod(name: "Thunder Explosion Double Tankbuster", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:45660"])]

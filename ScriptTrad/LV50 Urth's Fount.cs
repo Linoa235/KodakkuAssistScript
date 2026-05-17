@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 namespace Urths_Fount;
 
 [ScriptType(guid: "1a07440d-a7bd-4b67-b781-90d14087ee60", name: "Urth's Fount", territorys: [394],
-    version: "0.0.0.3", author: "Tetora", note: noteStr)]
+    version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
 public class Urths_Fount
 {
     const string noteStr =

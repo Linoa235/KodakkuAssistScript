@@ -1,770 +1,1969 @@
-using System;
-using System.Linq;
-using System.Numerics;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Threading;
-using System.Threading.Tasks;
-using Dalamud.Game.ClientState.Objects.Enums;
-using Dalamud.Game.ClientState.Objects.Types;
-using Dalamud.Game.Network.Structures.InfoProxy;
-using Newtonsoft.Json;
-using Dalamud.Utility.Numerics;
-using KodakkuAssist.Script;
+﻿using System;
+using System.Collections.Concurrent;
 using KodakkuAssist.Module.GameEvent;
+using KodakkuAssist.Script;
+using KodakkuAssist.Module.GameEvent.Struct;
 using KodakkuAssist.Module.Draw;
-using KodakkuAssist.Module.Draw.Manager;
-using FFXIVClientStructs.FFXIV.Client.Game.Character;
-using FFXIVClientStructs;
-using KodakkuAssist.Module.Script.Type;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using System.Numerics;
+using Newtonsoft.Json;
+using System.Linq;
+using System.ComponentModel;
+using System.Diagnostics.CodeAnalysis;
+using System.Xml.Linq;
+using Dalamud.Game.ClientState.Objects.Types;
+using Dalamud.Utility.Numerics;
+using KodakkuAssist.Module.GameOperate;
+using Newtonsoft.Json.Linq;
 
-namespace UsamisScript.EndWalker.ZodiarkEx;
-
-[ScriptType(name: "Zodiark [Extreme]", territorys: [993],
-    guid: "e24a0c8b-5c41-4e58-87c3-355f1f925986", version: "0.0.0.6", author: "Usami", note: noteStr)]
-public class ZodiarkEx
+namespace KodakkuScript
 {
-    const string noteStr =
-    """
-    v0.0.0.6:
-    Duckmen.
-    """;
-
-    [UserSetting("Debug mode, turn off unless developing")]
-    public bool DebugMode { get; set; } = false;
-
-    int ParadeigmaNum = 0;      // Paradigm count
-    Vector3[] BirdOrBeastPos = new Vector3[4];    // Quetzalcoatl & Behemoth positions
-    Vector3[] SnakePos = new Vector3[16];         // Python positions
-    Vector3[] SnakePosTarget = new Vector3[16];   // Python target positions
-    List<uint> EsoterikosSourceIds = [];          // Recorded esoterikos IDs
-    public ScriptColor colorPink = new ScriptColor { V4 = new Vector4(1f, 0f, 1f, 1.0f) };
-    public ScriptColor colorRed = new ScriptColor { V4 = new Vector4(1f, 0f, 0f, 1.0f) };
-    bool isTurnLeft = false;                      // Rotation direction
-    bool isStarFall = false;                      // Transition phase, for triple esoterikos drawing
-    Dictionary<string, (int, int)>? AstralMapping = null;
-    int AstralNum = 0;          // Astral count
-    int AstralType = 0;         // Astral safe zone type
-    Vector3[] AstralSafePos = new Vector3[6];   // 6 astral safe points
-    public void Init(ScriptAccessory accessory)
-    {
-        ParadeigmaNum = 0;
-
-        BirdOrBeastPos[0] = new(89.50f, 0, 89.50f);    // Top-left
-        BirdOrBeastPos[1] = new(110.50f, 0, 89.50f);   // Top-right
-        BirdOrBeastPos[2] = new(89.50f, 0, 110.50f);   // Bottom-left
-        BirdOrBeastPos[3] = new(110.50f, 0, 110.50f);  // Bottom-right
-
-        SnakePos[0] = new(85.00f, 0, 75.00f);
-        SnakePos[1] = new(95.00f, 0, 75.00f);
-        SnakePos[2] = new(105.00f, 0, 75.00f);
-        SnakePos[3] = new(115.00f, 0, 75.00f);
-
-        SnakePos[4] = new(125.00f, 0, 85.00f);
-        SnakePos[5] = new(125.00f, 0, 95.00f);
-        SnakePos[6] = new(125.00f, 0, 105.00f);
-        SnakePos[7] = new(125.00f, 0, 115.00f);
-
-        SnakePos[8] = new(115.00f, 0, 125.00f);
-        SnakePos[9] = new(105.00f, 0, 125.00f);
-        SnakePos[10] = new(95.00f, 0, 125.00f);
-        SnakePos[11] = new(85.00f, 0, 125.00f);
-
-        SnakePos[12] = new(75.00f, 0, 115.00f);
-        SnakePos[13] = new(75.00f, 0, 105.00f);
-        SnakePos[14] = new(75.00f, 0, 95.00f);
-        SnakePos[15] = new(75.00f, 0, 85.00f);
-
-        SnakePosTarget[0] = SnakePos[11];
-        SnakePosTarget[1] = SnakePos[10];
-        SnakePosTarget[2] = SnakePos[9];
-        SnakePosTarget[3] = SnakePos[8];
-        SnakePosTarget[4] = SnakePos[15];
-        SnakePosTarget[5] = SnakePos[14];
-        SnakePosTarget[6] = SnakePos[13];
-        SnakePosTarget[7] = SnakePos[12];
-        SnakePosTarget[8] = SnakePos[3];
-        SnakePosTarget[9] = SnakePos[2];
-        SnakePosTarget[10] = SnakePos[1];
-        SnakePosTarget[11] = SnakePos[0];
-        SnakePosTarget[12] = SnakePos[7];
-        SnakePosTarget[13] = SnakePos[6];
-        SnakePosTarget[14] = SnakePos[5];
-        SnakePosTarget[15] = SnakePos[4];
-
-        AstralSafePos[0] = new(86, 0, 86);
-        AstralSafePos[1] = new(100, 0, 86);
-        AstralSafePos[2] = new(114, 0, 86);
-        AstralSafePos[3] = new(86, 0, 100);
-        AstralSafePos[4] = new(100, 0, 100);
-        AstralSafePos[5] = new(114, 0, 100);
-
-        EsoterikosSourceIds = [];
-
-        isTurnLeft = false;
-        isStarFall = false;
-
-        AstralMapping = new Dictionary<string, (int val1, int val2)>
-        {
-            {"00020001", (1, 1)},
-            {"00800040", (10, 10)},
-            {"10000800", (2, 20)},
-            {"00200010", (3, 30)}
-        };
-
-        AstralNum = 0;
-        AstralType = 0;
-
-        accessory.Method.RemoveDraw(".*");
-    }
-
-    private static bool ParseObjectId(string? idStr, out uint id)
-    {
-        id = 0;
-        if (string.IsNullOrEmpty(idStr)) return false;
-        try
-        {
-            var idStr2 = idStr.Replace("0x", "");
-            id = uint.Parse(idStr2, System.Globalization.NumberStyles.HexNumber);
-            return true;
-        }
-        catch (Exception)
-        {
-            return false;
-        }
-    }
-
-    private void DebugMsg(string str, ScriptAccessory accessory)
-    {
-        if (!DebugMode) return;
-        accessory.Method.SendChat(str);
-    }
-
-    [ScriptMethod(name: "Anytime DEBUG", eventType: EventTypeEnum.Chat, eventCondition: ["Type:Echo", "Message:=TST"], userControl: false)]
-    public void EchoDebug(Event @event, ScriptAccessory accessory)
-    {
-        if (!DebugMode) return;
-        var msg = @event["Message"].ToString();
-        accessory.Method.SendChat($"/e Received player message: {msg}");
-
-        var dp = accessory.Data.GetDefaultDrawProperties();
-        dp.Name = $"Heavy";
-        dp.Scale = new(3f);
-        dp.Position = new(86f, 0, 86f);
-        dp.Delay = 0;
-        dp.DestoryAt = 2000;
-        dp.Color = accessory.Data.DefaultDangerColor;
-        accessory.Method.SendDraw(DrawModeEnum.Default, DrawTypeEnum.Circle, dp);
-    }
-
-    [ScriptMethod(name: "[Global] Paradigm Count Record (uncontrolled)", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:26559"], userControl: false)]
-    public void ParadeigmaNumRecord(Event @event, ScriptAccessory accessory)
-    {
-        if (!ParseObjectId(@event["SourceId"], out var sid)) return;
-        ParadeigmaNum++;
-        isStarFall = false;
-        DebugMsg($"/e [DEBUG] Paradigm count increased: {ParadeigmaNum}.", accessory);
-    }
-
-    private void drawBirdDonut(int birdIdx, int delay, int destoryAt, ScriptAccessory accessory)
-    {
-        var dp = accessory.Data.GetDefaultDrawProperties();
-        dp.Name = $"Donut {birdIdx}";
-        dp.Scale = new(15);
-        dp.InnerScale = new(5);
-        dp.Radian = float.Pi * 2;
-        dp.Position = BirdOrBeastPos[birdIdx];
-        dp.Delay = delay;
-        dp.DestoryAt = destoryAt;
-        dp.Color = accessory.Data.DefaultDangerColor;
-        accessory.Method.SendDraw(DrawModeEnum.Default, DrawTypeEnum.Donut, dp);
-    }
-
-    private void drawBeastCircle(int beastIdx, int delay, int destoryAt, ScriptAccessory accessory)
-    {
-        var dp = accessory.Data.GetDefaultDrawProperties();
-        dp.Name = $"Heavy {beastIdx}";
-        dp.Scale = new(15);
-        dp.Position = BirdOrBeastPos[beastIdx];
-        dp.Delay = delay;
-        dp.DestoryAt = destoryAt;
-        dp.Color = accessory.Data.DefaultDangerColor;
-        accessory.Method.SendDraw(DrawModeEnum.Default, DrawTypeEnum.Circle, dp);
-    }
-
-    private void drawSnakeLine(int[] SnakeIdx, int delay, int destoryAt, ScriptAccessory accessory)
-    {
-        DebugMsg($"/e [DEBUG] Found snake {SnakeIdx[0]} -> {SnakePosTarget[SnakeIdx[0]]} and {SnakeIdx[1]} -> {SnakePosTarget[SnakeIdx[1]]}", accessory);
-
-        var dp = accessory.Data.GetDefaultDrawProperties();
-        dp.Name = $"Line {SnakeIdx[0]}";
-        dp.Scale = new(11);
-        dp.ScaleMode = ScaleMode.YByDistance;
-        dp.Position = SnakePos[SnakeIdx[0]];
-        dp.TargetPosition = SnakePosTarget[SnakeIdx[0]];
-        dp.Delay = delay;
-        dp.DestoryAt = destoryAt;
-        dp.Color = accessory.Data.DefaultDangerColor;
-        accessory.Method.SendDraw(DrawModeEnum.Default, DrawTypeEnum.Rect, dp);
-
-        dp.Name = $"Line {SnakeIdx[1]}";
-        dp.Position = SnakePos[SnakeIdx[1]];
-        dp.TargetPosition = SnakePosTarget[SnakeIdx[1]];
-        accessory.Method.SendDraw(DrawModeEnum.Default, DrawTypeEnum.Rect, dp);
-    }
-
-    private void drawFan(uint sid, int delay, int destoryAt, ScriptAccessory accessory)
-    {
-        var dp = accessory.Data.GetDefaultDrawProperties();
-        dp.Name = $"Triangle Esoterikos {sid}";
-        dp.Scale = new(60);
-        dp.Radian = float.Pi / 3;
-        dp.Owner = sid;
-        dp.Delay = delay;
-        dp.DestoryAt = destoryAt;
-        dp.Color = accessory.Data.DefaultDangerColor;
-        accessory.Method.SendDraw(DrawModeEnum.Default, DrawTypeEnum.Fan, dp);
-    }
-
-    private void drawHalfCleave(uint sid, int delay, int destoryAt, ScriptAccessory accessory)
-    {
-        var dp = accessory.Data.GetDefaultDrawProperties();
-        dp.Name = $"Half-Room Esoterikos {sid}";
-        dp.Scale = new(42, 21);
-        dp.Owner = sid;
-        dp.Delay = delay;
-        dp.DestoryAt = destoryAt;
-        dp.Color = accessory.Data.DefaultDangerColor;
-        accessory.Method.SendDraw(DrawModeEnum.Default, DrawTypeEnum.Rect, dp);
-    }
-
-    private void drawLine(uint sid, int delay, int destoryAt, ScriptAccessory accessory)
-    {
-        var dp = accessory.Data.GetDefaultDrawProperties();
-        dp.Name = $"Line Esoterikos {sid}";
-        dp.Scale = new(16, 42);
-        dp.Owner = sid;
-        dp.Delay = delay;
-        dp.DestoryAt = destoryAt;
-        dp.Color = accessory.Data.DefaultDangerColor;
-        accessory.Method.SendDraw(DrawModeEnum.Default, DrawTypeEnum.Rect, dp);
-    }
-
-    [ScriptMethod(name: "Stack Marker", eventType: EventTypeEnum.TargetIcon, eventCondition: ["Id:013C"])]
-    public void GenerateTargetRecord(Event @event, ScriptAccessory accessory)
-    {
-        if (!ParseObjectId(@event["TargetId"], out var tid)) return;
-        DebugMsg($"/e Detected {tid} marked for stack.", accessory);
-
-        var dp = accessory.Data.GetDefaultDrawProperties();
-        dp.Name = $"Stack {tid}";
-        dp.Scale = new(5);
-        dp.Owner = tid;
-        dp.Delay = 0;
-        dp.DestoryAt = 12000;
-        dp.Color = accessory.Data.DefaultSafeColor;
-        accessory.Method.SendDraw(DrawModeEnum.Default, DrawTypeEnum.Circle, dp);
-    }
-
-    [ScriptMethod(name: "Esoterikos (Triangle, Half-Room, Line)", eventType: EventTypeEnum.SetObjPos, eventCondition: ["SourceDataId:regex:^(1371[123])$"])]
-    public void Exoterikos(Event @event, ScriptAccessory accessory)
-    {
-        lock (this)
-        {
-            if (!ParseObjectId(@event["SourceId"], out var sid)) return;
-
-            if (EsoterikosSourceIds.Contains(sid))
-            {
-                DebugMsg($"/e [DEBUG] Removing esoterikos: {sid}.", accessory);
-                EsoterikosSourceIds.Remove(sid);
-                accessory.Method.RemoveDraw(@$"(Line|Triangle|Half-Room)Esoterikos{sid}");
-                return;
-            }
-            else
-                EsoterikosSourceIds.Add(sid);
-
-            var sdid = JsonConvert.DeserializeObject<uint>(@event["SourceDataId"]);
-
-            DebugMsg($"/e [DEBUG] Found esoterikos {sid} casting: {sdid}.", accessory);
-
-            switch (sdid)
-            {
-                case 13711:
-                    if (isStarFall)
-                        drawLine(sid, 5000, 25000, accessory);
-                    else
-                        drawLine(sid, 0, 25000, accessory);
-                    break;
-                case 13712:
-                    drawHalfCleave(sid, 0, 25000, accessory);
-                    break;
-                case 13713:
-                    drawFan(sid, 0, 25000, accessory);
-                    break;
-                default:
-                    return;
-            }
-        }
-    }
-
-    [ScriptMethod(name: "Mourning", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:26601"], userControl: false)]
-    public void OrbsDownSync(Event @event, ScriptAccessory accessory)
-    {
-        Task.Delay(50).ContinueWith(t =>
-        {
-            EsoterikosSourceIds = [];
-            isStarFall = true;
-            accessory.Method.RemoveDraw(".*");
-        });
-    }
-
-    [ScriptMethod(name: "Algedon (Diagonal Charge)", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:26606"])]
-    public void Algedon(Event @event, ScriptAccessory accessory)
-    {
-        if (!ParseObjectId(@event["SourceId"], out var sid)) return;
-        var dp = accessory.Data.GetDefaultDrawProperties();
-        dp.Name = $"Algedon {sid}";
-        dp.Scale = new(30, 60);
-        dp.Owner = sid;
-        dp.Delay = 0;
-        dp.DestoryAt = 8000;
-        dp.Color = colorPink.V4.WithW(1.5f);
-        accessory.Method.SendDraw(DrawModeEnum.Default, DrawTypeEnum.Rect, dp);
-    }
-
-    [ScriptMethod(name: "Adikia (Small Fist)", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:26609"])]
-    public void Adikia(Event @event, ScriptAccessory accessory)
-    {
-        if (!ParseObjectId(@event["SourceId"], out var sid)) return;
-        var dp = accessory.Data.GetDefaultDrawProperties();
-        dp.Name = $"Adikia {sid}";
-        dp.Scale = new(21);
-        dp.Position = new Vector3(121.0f, 0, 100.0f);
-        dp.Delay = 0;
-        dp.DestoryAt = 7500;
-        dp.Color = accessory.Data.DefaultDangerColor;
-        accessory.Method.SendDraw(DrawModeEnum.Default, DrawTypeEnum.Circle, dp);
-
-        dp.Position = new Vector3(79.0f, 0, 100.0f);
-        accessory.Method.SendDraw(DrawModeEnum.Default, DrawTypeEnum.Circle, dp);
-    }
-
-    [ScriptMethod(name: "Astral (Transition Starfall)", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:26599"])]
-    public void Astral(Event @event, ScriptAccessory accessory)
-    {
-        if (!ParseObjectId(@event["SourceId"], out var sid)) return;
-        var dp = accessory.Data.GetDefaultDrawProperties();
-        dp.Name = $"Astral {sid}";
-        dp.Scale = new(10);
-        dp.ScaleMode = ScaleMode.ByTime;
-        dp.Owner = sid;
-        dp.Delay = 0;
-        dp.DestoryAt = 3000;
-        dp.Color = accessory.Data.DefaultDangerColor;
-        accessory.Method.SendDraw(DrawModeEnum.Default, DrawTypeEnum.Circle, dp);
-    }
-
-    [ScriptMethod(name: "Bird Donut", eventType: EventTypeEnum.EnvControl, eventCondition: ["DirectorId:80034E71", "Id:00200010", "Index:regex:^(0000001[5678])$"])]
-    public async void BirdDonut(Event @event, ScriptAccessory accessory)
-    {
-        if (!ParseObjectId(@event["Index"], out var idx)) return;
-
-        DebugMsg($"/e [DEBUG] Found bird donut {idx}.", accessory);
-
-        switch (ParadeigmaNum)
-        {
-            case 1:
-            case 2:
-                drawBirdDonut(getBirdIndex(idx), 0, 20000, accessory);
-                break;
-            case 3:
-            case 4:
-            case 5:
-            case 6:
-                await Task.Delay(5000);
-                drawBirdDonut(isTurnLeft ? getBeastBirdTurnLeftIndex(getBirdIndex(idx)) : getBeastBirdTurnRightIndex(getBirdIndex(idx)), 0, 20000, accessory);
-                break;
-            case 7:
-            case 8:
-            case 9:
-                await Task.Delay(9500);
-                drawBirdDonut(isTurnLeft ? getBeastBirdTurnLeftIndex(getBirdIndex(idx)) : getBeastBirdTurnRightIndex(getBirdIndex(idx)), 0, 20000, accessory);
-                break;
-            default:
-                return;
-        }
-    }
-
-    [ScriptMethod(name: "Behemoth Heavy", eventType: EventTypeEnum.EnvControl, eventCondition: ["DirectorId:80034E71", "Id:00200010", "Index:regex:^(0000000[9ABC])$"])]
-    public async void BeastCircle(Event @event, ScriptAccessory accessory)
-    {
-        if (!ParseObjectId(@event["Index"], out var idx)) return;
-
-        DebugMsg($"/e [DEBUG] Found behemoth heavy {idx}.", accessory);
-
-        switch (ParadeigmaNum)
-        {
-            case 1:
-            case 2:
-                drawBeastCircle(getBeastIndex(idx), 0, 20000, accessory);
-                break;
-            case 3:
-            case 4:
-            case 5:
-            case 6:
-                await Task.Delay(5000);
-                drawBeastCircle(isTurnLeft ? getBeastBirdTurnLeftIndex(getBeastIndex(idx)) : getBeastBirdTurnRightIndex(getBeastIndex(idx)), 0, 20000, accessory);
-                break;
-            case 7:
-            case 8:
-            case 9:
-                await Task.Delay(9500);
-                drawBeastCircle(isTurnLeft ? getBeastBirdTurnLeftIndex(getBeastIndex(idx)) : getBeastBirdTurnRightIndex(getBeastIndex(idx)), 0, 20000, accessory);
-                break;
-            default:
-                return;
-        }
-    }
-
-    [ScriptMethod(name: "Snake Line", eventType: EventTypeEnum.EnvControl, eventCondition: ["DirectorId:80034E71", "Id:00200010", "Index:regex:^(000000(0[DEF]|(1[01234])))$"])]
-    public async void SnakeLine(Event @event, ScriptAccessory accessory)
-    {
-        if (!ParseObjectId(@event["Index"], out var idx)) return;
-        DebugMsg($"/e [DEBUG] Found snake line {idx}.", accessory);
-
-        switch (ParadeigmaNum)
-        {
-            case 1:
-            case 2:
-                drawSnakeLine(getSnakeIndex(idx), 0, 20000, accessory);
-                break;
-            case 3:
-                await Task.Delay(9500);
-                drawSnakeLine(isTurnLeft ? getSnakeTurnLeftIndex(getSnakeIndex(idx)) : getSnakeTurnRightIndex(getSnakeIndex(idx)), 0, 20000, accessory);
-                break;
-            case 4:
-                drawSnakeLine(getSnakeIndex(idx), 0, 20000, accessory);
-                break;
-            case 5:
-            case 6:
-                await Task.Delay(5000);
-                drawSnakeLine(isTurnLeft ? getSnakeTurnLeftIndex(getSnakeIndex(idx)) : getSnakeTurnRightIndex(getSnakeIndex(idx)), 0, 20000, accessory);
-                break;
-            case 7:
-                await Task.Delay(9500);
-                drawSnakeLine(isTurnLeft ? getSnakeTurnLeftIndex(getSnakeIndex(idx)) : getSnakeTurnRightIndex(getSnakeIndex(idx)), 0, 20000, accessory);
-                break;
-            case 8:
-            case 9:
-                await Task.Delay(9500);
-                drawSnakeLine(isTurnLeft ? getSnakeTurnLeftIndex(getSnakeIndex(idx)) : getSnakeTurnRightIndex(getSnakeIndex(idx)), 0, 20000, accessory);
-                break;
-            default:
-                return;
-        }
-    }
-
-    [ScriptMethod(name: "Rotation Direction Record (uncontrolled)", eventType: EventTypeEnum.EnvControl, eventCondition: ["DirectorId:80034E71", "Id:regex:^(00200010|00020001)$", "Index:00000002"], userControl: false)]
-    public void RotateRecord(Event @event, ScriptAccessory accessory)
-    {
-        var id = @event["Id"].ToString();
-        switch (id)
-        {
-            case "00200010":
-                DebugMsg($"/e [DEBUG] Turning left.", accessory);
-                isTurnLeft = true;
-                break;
-
-            case "00020001":
-                DebugMsg($"/e [DEBUG] Turning right.", accessory);
-                isTurnLeft = false;
-                break;
-
-            default:
-                return;
-        }
-    }
-
-    [ScriptMethod(name: "Astral Navigation", eventType: EventTypeEnum.EnvControl, eventCondition: ["DirectorId:80034E71", "Index:regex:^(0000000[678])$"])]
-    public void AstralDir(Event @event, ScriptAccessory accessory)
-    {
-        if (AstralNum == 2) return;
-        AstralNum++;
-        var id = @event["Id"].ToString();
-        if (AstralMapping.ContainsKey(id))
-        {
-            var (val1, val2) = AstralMapping[id];
-            AstralType = AstralType + (AstralNum == 1 ? val1 : val2);
-        }
-
-        if (AstralNum != 2) return;
-        DebugMsg($"/e Got AstralType: {AstralType}", accessory);
-        switch (AstralType)
-        {
-            case 31:
-                drawAstralDir(3, 4, 2, accessory);
-                break;
-            case 12:
-                drawAstralDir(0, 3, 1, accessory);
-                break;
-            case 21:
-                drawAstralDir(3, 1, 4, accessory);
-                break;
-            case 32:
-                drawAstralDir(0, 4, 2, accessory);
-                break;
-            case 23:
-                drawAstralDir(0, 1, 2, accessory);
-                break;
-            case 13:
-                drawAstralDir(0, 3, 1, accessory);
-                break;
-            default:
-                break;
-        }
-    }
-
-    private void drawAstralDir(int safeIdx1, int safeIdx2, int safeIdx3, ScriptAccessory accessory)
-    {
-        var dp = accessory.Data.GetDefaultDrawProperties();
-        dp.Name = $"Astral Safe Zone 1";
-        dp.Scale = new(3f);
-        dp.ScaleMode = ScaleMode.YByDistance;
-        dp.Position = AstralSafePos[safeIdx1];
-        dp.Delay = 0;
-        dp.DestoryAt = 11000;
-        dp.Color = accessory.Data.DefaultSafeColor;
-        accessory.Method.SendDraw(DrawModeEnum.Default, DrawTypeEnum.Circle, dp);
-
-        dp.Name = $"Astral Safe Zone 2";
-        dp.Position = AstralSafePos[safeIdx2];
-        dp.Delay = 0;
-        dp.DestoryAt = 15000;
-        accessory.Method.SendDraw(DrawModeEnum.Default, DrawTypeEnum.Circle, dp);
-
-        dp.Name = $"Astral Safe Zone 3";
-        dp.Position = AstralSafePos[safeIdx3];
-        dp.Delay = 0;
-        dp.DestoryAt = 19000;
-        accessory.Method.SendDraw(DrawModeEnum.Default, DrawTypeEnum.Circle, dp);
-        
-        dp = accessory.Data.GetDefaultDrawProperties();
-        dp.Name = $"Astral Navigation Marker 1";
-        dp.Scale = new(0.5f);
-        dp.ScaleMode = ScaleMode.YByDistance;
-        dp.Owner = accessory.Data.Me;
-        dp.TargetPosition = AstralSafePos[safeIdx1];
-        dp.Delay = 0;
-        dp.DestoryAt = 11000;
-        dp.Color = accessory.Data.DefaultSafeColor;
-        accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
-
-        dp.Name = $"Astral Navigation Marker 2";
-        dp.TargetPosition = AstralSafePos[safeIdx2];
-        dp.Delay = 11000;
-        dp.DestoryAt = 4000;
-        accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
-
-        dp.Name = $"Astral Navigation Marker 2";
-        dp.TargetPosition = AstralSafePos[safeIdx3];
-        dp.Delay = 15000;
-        dp.DestoryAt = 4000;
-        accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
-    }
-
-    [ScriptMethod(name: "Fire Line Safe Zone", eventType: EventTypeEnum.EnvControl, eventCondition: ["DirectorId:80034E71", "Id:regex:^(00020001|00400020)$", "Index:00000005"])]
-    public async void Firebar(Event @event, ScriptAccessory accessory)
-    {
-        await Task.Delay(500);
-        var id = @event["Id"].ToString();
-        switch (id)
-        {
-            case "00400020":
-                DebugMsg($"/e [DEBUG] Detected fire line from top-left to bottom-right.", accessory);
-                if (isTurnLeft)
-                {
-                    drawQuadrant(1, 0, 20000, accessory);
-                    drawQuadrant(3, 0, 20000, accessory);
-                }
-                else
-                {
-                    drawQuadrant(0, 0, 20000, accessory);
-                    drawQuadrant(2, 0, 20000, accessory);
-                }
-                break;
-            case "00020001":
-                DebugMsg($"/e [DEBUG] Detected fire line from top-right to bottom-left.", accessory);
-                if (isTurnLeft)
-                {
-                    drawQuadrant(0, 0, 20000, accessory);
-                    drawQuadrant(2, 0, 20000, accessory);
-                }
-                else
-                {
-                    drawQuadrant(1, 0, 20000, accessory);
-                    drawQuadrant(3, 0, 20000, accessory);
-                }
-                break;
-            default:
-                return;
-        }
-    }
-
-    private void drawQuadrant(int posIdx, int delay, int destoryAt, ScriptAccessory accessory)
-    {
-        Vector3 bias;
-        switch (posIdx)
-        {
-            case 0:
-                bias = new Vector3(0, 0, -1.5f);
-                break;
-            case 1:
-                bias = new Vector3(-1.5f, 0, 0);
-                break;
-            case 2:
-                bias = new Vector3(0, 0, 1.5f);
-                break;
-            case 3:
-                bias = new Vector3(1.5f, 0, 0);
-                break;
-            default:
-                return;
-        }
-        var dp = accessory.Data.GetDefaultDrawProperties();
-        dp.Name = $"Quadrant {posIdx}";
-        dp.Scale = new(30);
-        dp.Radian = float.Pi / 2;
-        dp.Position = new Vector3(100, 0, 100) + bias;
-        dp.Rotation = float.Pi / 2 * posIdx;
-        dp.Delay = delay;
-        dp.DestoryAt = destoryAt;
-        dp.Color = colorRed.V4.WithW(1.5f);
-        accessory.Method.SendDraw(DrawModeEnum.Default, DrawTypeEnum.Fan, dp);
-    }
-
-    [ScriptMethod(name: "Bird Donut Remove", eventType: EventTypeEnum.ActionEffect, eventCondition: ["ActionId:26593"], userControl: false)]
-    public void BirdDonutRemove(Event @event, ScriptAccessory accessory)
-    {
-        accessory.Method.RemoveDraw(@$"Donut\d+$");
-        accessory.Method.RemoveDraw(@$"Quadrant\d+$");
-    }
-
-    [ScriptMethod(name: "Behemoth Heavy Remove", eventType: EventTypeEnum.ActionEffect, eventCondition: ["ActionId:26594"], userControl: false)]
-    public void BeastCircleRemove(Event @event, ScriptAccessory accessory)
-    {
-        accessory.Method.RemoveDraw(@$"Heavy\d+$");
-        accessory.Method.RemoveDraw(@$"Quadrant\d+$");
-    }
-
-    [ScriptMethod(name: "Snake Line Remove", eventType: EventTypeEnum.ActionEffect, eventCondition: ["ActionId:26595"], userControl: false)]
-    public void SnakeLineRemove(Event @event, ScriptAccessory accessory)
-    {
-        accessory.Method.RemoveDraw(@$"Line\d+$");
-        accessory.Method.RemoveDraw(@$"Quadrant\d+$");
-    }
-
-    private int getBirdIndex(uint index)
-    {
-        switch (index)
-        {
-            case 21:
-                return 0;
-            case 22:
-                return 1;
-            case 23:
-                return 2;
-            case 24:
-                return 3;
-            default:
-                return -1;
-        }
-    }
-
-    private int getBeastIndex(uint index)
-    {
-        switch (index)
-        {
-            case 9:
-                return 0;
-            case 10:
-                return 1;
-            case 11:
-                return 2;
-            case 12:
-                return 3;
-            default:
-                return -1;
-        }
-    }
-
-    private int getBeastBirdTurnRightIndex(int posIndex)
-    {
-        switch (posIndex)
-        {
-            case 0:
-                return 1;
-            case 1:
-                return 3;
-            case 2:
-                return 0;
-            case 3:
-                return 2;
-            default:
-                return -1;
-        }
-    }
-
-    private int getBeastBirdTurnLeftIndex(int posIndex)
-    {
-        switch (posIndex)
-        {
-            case 0:
-                return 2;
-            case 1:
-                return 0;
-            case 2:
-                return 3;
-            case 3:
-                return 1;
-            default:
-                return -1;
-        }
-    }
-
-    private int[] getSnakeIndex(uint index)
-    {
-        switch (index)
-        {
-            case 13:
-                return [0, 2];
-            case 14:
-                return [1, 3];
-            case 15:
-                return [11, 9];
-            case 16:
-                return [10, 8];
-            case 17:
-                return [15, 13];
-            case 18:
-                return [14, 12];
-            case 19:
-                return [4, 6];
-            case 20:
-                return [5, 7];
-            default:
-                return [-1, -1];
-        }
-    }
-
-    private int[] getSnakeTurnRightIndex(int[] posIndex)
-    {
-        return [posIndex[0] + 4 > 15 ? posIndex[0] + 4 - 16 : posIndex[0] + 4,
-                posIndex[1] + 4 > 15 ? posIndex[1] + 4 - 16 : posIndex[1] + 4];
-    }
-
-    private int[] getSnakeTurnLeftIndex(int[] posIndex)
-    {
-        return [posIndex[0] - 4 < 0 ? posIndex[0] - 4 + 16 : posIndex[0] - 4,
-                posIndex[1] - 4 < 0 ? posIndex[1] - 4 + 16 : posIndex[1] - 4];
-    }
+	[ScriptType(name: "Zelenia Extreme", territorys: [1271], guid: "6192A434-05E0-4E7E-9724-1CC855E9C975", version: "0.0.1.2", note: noteStr, Author: "Linoa235")]
+
+	public class Recollection
+	{
+		const string noteStr =
+	"""
+        Game8 strategy, plug and play
+
+        """;
+		[UserSetting("Enable Debug Output")]
+		public bool EnableDev { get; set; }
+
+		string debugOutput = "";
+
+		int parse = -1;
+
+		List<int> P1Tower = [0, 0, 0, 0, 0, 0, 0, 0];
+		List<int> P2Tether = [0, 0, 0, 0, 0, 0, 0, 0];
+		List<int> P3_3Mark = [0, 0, 0, 0, 0, 0, 0, 0];
+		List<int> P3_3Index = [];
+		List<int> P3Circle = [0, 0, 0, 0, 0, 0, 0, 0];
+		List<int> P3_4Mark = [0, 0, 0, 0, 0, 0, 0, 0];
+		List<int> P3_6Mark = [0, 0, 0, 0, 0, 0, 0, 0];
+
+		bool THFirst = false;
+		bool Map = false;
+		bool Map2 = false;
+		bool Map4 = false;
+		bool Map6 = false;
+		int P3_5Safe = 0;
+		float P3_3North = float.Pi;
+
+		//Near cleave = 0, Far cleave = 1
+		List<bool> NearFarCleaveRecord = [false, false, false, false];
+		int NearFarCleaveCount = 0;
+		Vector3 CloseBase = new(100f, 0f, 94f);
+		Vector3 FarBase = new(100f, 0f, 91f);
+		Vector3 centre = new(100f, 0f, 100f);
+
+		Vector3 EastTopInner = new(107.5f, 0f, 99.5f);
+		Vector3 EastBottomInner = new(107.5f, 0f, 100.5f);
+		Vector3 EastTopOuter = new(108.5f, 0f, 99.5f);
+		Vector3 EastBottomOuter = new(108.5f, 0f, 100.5f);
+
+		Vector3 WestTopInner = new(92.5f, 0f, 99.5f);
+		Vector3 WestBottomInner = new(92.5f, 0f, 100.5f);
+		Vector3 WestTopOuter = new(91.5f, 0f, 99.5f);
+		Vector3 WestBottomOuter = new(91.5f, 0f, 100.5f);
+
+		Vector3 SouthLeftInner = new(99.5f, 0f, 107.5f);
+		//Vector3 SouthRightInner = new(100.5f, 0f, 107.5f);
+		Vector3 SouthLeftOuter = new(99.5f, 0f, 108.5f);
+		//Vector3 SouthRightOuter = new(100.5f, 0f, 108.5f);
+
+		//Vector3 NorthLeftInner = new(99.5f, 0f, 92.5f);
+		Vector3 NorthRightInner = new(100.5f, 0f, 92.5f);
+		//Vector3 NorthLeftOuter = new(99.5f, 0f, 91.5f);
+		Vector3 NorthRightOuter = new(100.5f, 0f, 91.5f);
+
+		float CloseMulti67_5 = 4.15746f;
+		float CloseMulti22_5 = 1.72208f;
+		float FarMulti67_5 = 6.46716f;
+		float FarMulti22_5 = 2.67878f;
+
+
+		public void Init(ScriptAccessory accessory)
+		{	
+			accessory.Method.RemoveDraw(".*");
+			debugOutput = "";
+			parse = 1;
+			P1Tower = [0, 0, 0, 0, 0, 0, 0, 0];
+			P2Tether = [0, 0, 0, 0, 0, 0, 0, 0];
+			P3_3Mark = [0, 0, 0, 0, 0, 0, 0, 0];
+			P3_3Index = [];
+			P3Circle = [0, 0, 0, 0, 0, 0, 0, 0];
+			P3_4Mark = [0, 0, 0, 0, 0, 0, 0, 0];
+			P3_6Mark = [0, 0, 0, 0, 0, 0, 0, 0];
+
+			THFirst = false;
+			Map = false;
+			Map2 = false;
+			Map4 = false;
+			Map6 = false;
+			P3_5Safe = 0;
+			NearFarCleaveRecord = [false, false, false, false];
+			NearFarCleaveCount = 0;
+			P3_3North = float.Pi;
+		}
+
+		[ScriptMethod(name: "Opening_DonutTower_MarkerRecord", eventType: EventTypeEnum.TargetIcon, eventCondition: ["Id:0244"], userControl: false)]
+		public void Opening_DonutTower_MarkerRecord(Event @event, ScriptAccessory accessory)
+		{
+			if (parse != 1) return;
+			if (!ParseObjectId(@event["TargetId"], out var tid)) return;
+			var tIndex = accessory.Data.PartyList.IndexOf(((uint)tid));
+			P1Tower[tIndex] = 1;
+		}
+
+		[ScriptMethod(name: "Opening_DonutTower_Navigation", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:43226"])]
+		public void Opening_DonutTower_Navigation(Event @event, ScriptAccessory accessory)
+		{
+			if (parse != 1) return;
+			var myIndex = accessory.Data.PartyList.IndexOf(accessory.Data.Me);
+			if (P1Tower[myIndex] != 1) return;
+
+			Vector3 TowerNW = new Vector3(92, 0, 95);
+			Vector3 TowerNE = new Vector3(108, 0, 95);
+			Vector3 TowerSE = new Vector3(108, 0, 105);
+			Vector3 TowerSW = new Vector3(92, 0, 105);
+
+			if (myIndex == 0 || myIndex == 6)
+			{
+				var dp = accessory.Data.GetDefaultDrawProperties();
+				dp.Name = "Opening_DonutTower_Navigation";
+				dp.Scale = new(2);
+				dp.ScaleMode |= ScaleMode.YByDistance;
+				dp.Owner = accessory.Data.Me;
+				dp.TargetPosition = TowerNW;
+				dp.Color = accessory.Data.DefaultSafeColor;
+				dp.DestoryAt = 7000;
+				accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+			}
+			if (myIndex == 1 || myIndex == 7)
+			{
+				var dp = accessory.Data.GetDefaultDrawProperties();
+				dp.Name = "Opening_DonutTower_Navigation";
+				dp.Scale = new(2);
+				dp.ScaleMode |= ScaleMode.YByDistance;
+				dp.Owner = accessory.Data.Me;
+				dp.TargetPosition = TowerNE;
+				dp.Color = accessory.Data.DefaultSafeColor;
+				dp.DestoryAt = 7000;
+				accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+			}
+			if (myIndex == 3 || myIndex == 5)
+			{
+				var dp = accessory.Data.GetDefaultDrawProperties();
+				dp.Name = "Opening_DonutTower_Navigation";
+				dp.Scale = new(2);
+				dp.ScaleMode |= ScaleMode.YByDistance;
+				dp.Owner = accessory.Data.Me;
+				dp.TargetPosition = TowerSE;
+				dp.Color = accessory.Data.DefaultSafeColor;
+				dp.DestoryAt = 7000;
+				accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+			}
+			if (myIndex == 2 || myIndex == 4)
+			{
+				var dp = accessory.Data.GetDefaultDrawProperties();
+				dp.Name = "Opening_DonutTower_Navigation";
+				dp.Scale = new(2);
+				dp.ScaleMode |= ScaleMode.YByDistance;
+				dp.Owner = accessory.Data.Me;
+				dp.TargetPosition = TowerSW;
+				dp.Color = accessory.Data.DefaultSafeColor;
+				dp.DestoryAt = 7000;
+				accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+			}
+		}
+
+		[ScriptMethod(name: "FirstRound_NearFarCleave_Record", eventType: EventTypeEnum.StatusAdd, eventCondition: ["StatusID:2970"], userControl: false)]
+		public void FirstRound_NearFarCleave_Record(Event @event, ScriptAccessory accessory)
+		{
+			if (parse != 1) return;
+			if (@event.StatusParam == 759)
+			{
+				NearFarCleaveRecord[NearFarCleaveCount] = true;
+			}
+			NearFarCleaveCount++;
+			if (EnableDev)
+			{
+				debugOutput = @event.StatusParam == 759 ? "Far Cleave" : "Near Cleave";
+				accessory.Method.SendChat($"""/e {debugOutput}""");
+			}
+		}
+
+		[ScriptMethod(name: "FirstRound_NearFarCleave_Navigation", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:43181"])]
+		public async void FirstRound_NearFarCleave_Navigation(Event @event, ScriptAccessory accessory)
+		{
+			if (parse != 1) return;
+			var myIndex = accessory.Data.PartyList.IndexOf(accessory.Data.Me);
+			//13-3-3-3
+			//Starting from west, clockwise 1-8
+			List<Vector3> ClosePos = [];
+			List<Vector3> FarPos = [];
+
+			ClosePos.Add(new Vector3(100 - CloseMulti22_5, 0, 100 - CloseMulti67_5));
+			ClosePos.Add(new Vector3(100 + CloseMulti22_5, 0, 100 - CloseMulti67_5));
+			ClosePos.Add(new Vector3(100 - CloseMulti67_5, 0, 100 - CloseMulti22_5));
+			ClosePos.Add(new Vector3(100 + CloseMulti67_5, 0, 100 - CloseMulti22_5));
+			ClosePos.Add(new Vector3(100 - CloseMulti22_5, 0, 100 + CloseMulti67_5));
+			ClosePos.Add(new Vector3(100 + CloseMulti22_5, 0, 100 + CloseMulti67_5));
+			ClosePos.Add(new Vector3(100 - CloseMulti67_5, 0, 100 + CloseMulti22_5));
+			ClosePos.Add(new Vector3(100 + CloseMulti67_5, 0, 100 + CloseMulti22_5));
+
+			FarPos.Add(new Vector3(100 - FarMulti22_5, 0, 100 - FarMulti67_5));
+			FarPos.Add(new Vector3(100 + FarMulti22_5, 0, 100 - FarMulti67_5));
+			FarPos.Add(new Vector3(100 - FarMulti67_5, 0, 100 - FarMulti22_5));
+			FarPos.Add(new Vector3(100 + FarMulti67_5, 0, 100 - FarMulti22_5));
+			FarPos.Add(new Vector3(100 - FarMulti22_5, 0, 100 + FarMulti67_5));
+			FarPos.Add(new Vector3(100 + FarMulti22_5, 0, 100 + FarMulti67_5));
+			FarPos.Add(new Vector3(100 - FarMulti67_5, 0, 100 + FarMulti22_5));
+			FarPos.Add(new Vector3(100 + FarMulti67_5, 0, 100 + FarMulti22_5));
+
+			await Task.Delay(1000);
+			if (NearFarCleaveRecord.Count == 0)
+			{
+				debugOutput = "Error occurred, please report to DC";
+				accessory.Method.SendChat($"""/e {debugOutput}""");
+				return;
+			}
+
+
+			if (myIndex < 4)
+			{
+				var dp = accessory.Data.GetDefaultDrawProperties();
+				dp.Name = "FirstRound_NearFarCleave_Navigation1";
+				dp.Scale = new(2);
+				dp.ScaleMode |= ScaleMode.YByDistance;
+				dp.Owner = accessory.Data.Me;
+				dp.TargetPosition = ClosePos[myIndex];
+				dp.Color = accessory.Data.DefaultSafeColor;
+				dp.DestoryAt = 12000;
+				accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+				await Task.Delay(12000);
+				dp = accessory.Data.GetDefaultDrawProperties();
+				dp.Name = "FirstRound_NearFarCleave_Navigation2";
+				dp.Scale = new(2);
+				dp.ScaleMode |= ScaleMode.YByDistance;
+				dp.Owner = accessory.Data.Me;
+				dp.TargetPosition = NearFarCleaveRecord[0] != NearFarCleaveRecord[1] ? ClosePos[myIndex] : FarPos[myIndex];
+				dp.Color = accessory.Data.DefaultSafeColor;
+				dp.DestoryAt = 3000;
+				accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+				dp = accessory.Data.GetDefaultDrawProperties();
+				dp.Name = "FirstRound_NearFarCleave_Navigation3";
+				dp.Scale = new(2);
+				dp.ScaleMode |= ScaleMode.YByDistance;
+				dp.Owner = accessory.Data.Me;
+				dp.TargetPosition = FarPos[myIndex];
+				dp.Color = accessory.Data.DefaultSafeColor;
+				dp.Delay = 3000;
+				dp.DestoryAt = 3000;
+				accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+				dp = accessory.Data.GetDefaultDrawProperties();
+				dp.Name = "FirstRound_NearFarCleave_Navigation4";
+				dp.Scale = new(2);
+				dp.ScaleMode |= ScaleMode.YByDistance;
+				dp.Owner = accessory.Data.Me;
+				dp.TargetPosition = NearFarCleaveRecord[0] != NearFarCleaveRecord[1] ? FarPos[myIndex] : ClosePos[myIndex];
+				dp.Color = accessory.Data.DefaultSafeColor;
+				dp.Delay = 6000;
+				dp.DestoryAt = 3000;
+				accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+			}
+			if (myIndex > 3)
+			{
+				var dp = accessory.Data.GetDefaultDrawProperties();
+				dp.Name = "FirstRound_NearFarCleave_Navigation1";
+				dp.Scale = new(2);
+				dp.ScaleMode |= ScaleMode.YByDistance;
+				dp.Owner = accessory.Data.Me;
+				dp.TargetPosition = FarPos[myIndex];
+				dp.Color = accessory.Data.DefaultSafeColor;
+				dp.DestoryAt = 12000;
+				accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+				await Task.Delay(12000); 
+				dp = accessory.Data.GetDefaultDrawProperties();
+				dp.Name = "FirstRound_NearFarCleave_Navigation2";
+				dp.Scale = new(2);
+				dp.ScaleMode |= ScaleMode.YByDistance;
+				dp.Owner = accessory.Data.Me;
+				dp.TargetPosition = NearFarCleaveRecord[0] != NearFarCleaveRecord[1] ? FarPos[myIndex] : ClosePos[myIndex];
+				dp.Color = accessory.Data.DefaultSafeColor;
+				dp.DestoryAt = 3000;
+				accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+				dp = accessory.Data.GetDefaultDrawProperties();
+				dp.Name = "FirstRound_NearFarCleave_Navigation3";
+				dp.Scale = new(2);
+				dp.ScaleMode |= ScaleMode.YByDistance;
+				dp.Owner = accessory.Data.Me;
+				dp.TargetPosition = ClosePos[myIndex];
+				dp.Color = accessory.Data.DefaultSafeColor;
+				dp.Delay = 3000;
+				dp.DestoryAt = 3000;
+				accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+				dp = accessory.Data.GetDefaultDrawProperties();
+				dp.Name = "FirstRound_NearFarCleave_Navigation4";
+				dp.Scale = new(2);
+				dp.ScaleMode |= ScaleMode.YByDistance;
+				dp.Owner = accessory.Data.Me;
+				dp.TargetPosition = NearFarCleaveRecord[0] != NearFarCleaveRecord[1] ? ClosePos[myIndex] : FarPos[myIndex];
+				dp.Color = accessory.Data.DefaultSafeColor;
+				dp.Delay = 6000;
+				dp.DestoryAt = 3000;
+				accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+			}
+
+		}
+
+		[ScriptMethod(name: "HolyShieldPhase_PhaseChange", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:43189"], userControl: false)]
+		public void HolyShieldPhase_PhaseChange(Event @event, ScriptAccessory accessory)
+		{
+			parse = 2;
+			NearFarCleaveRecord = [false, false, false, false];
+			NearFarCleaveCount = 0;
+		}
+
+		[ScriptMethod(name: "HolyShield_TetherCollection", eventType: EventTypeEnum.Tether, eventCondition: ["Id:0011"], userControl: false)]
+		public void HolyShield_TetherCollection(Event @event, ScriptAccessory accessory)
+		{
+			if (parse != 2) return;
+			if (!ParseObjectId(@event["TargetId"], out var tid)) return;
+			var tIndex = accessory.Data.PartyList.IndexOf(tid);
+			P2Tether[tIndex] = 1;
+			if (EnableDev)
+			{
+				var c = accessory.Data.Objects.SearchById(tid);
+				if (c == null) return;				
+				debugOutput = c.Name.ToString();
+				accessory.Method.SendChat($"""/e {debugOutput}""");
+			}
+		}
+
+		[ScriptMethod(name: "HolyShield_TetherNavigation", eventType: EventTypeEnum.PlayActionTimeline, eventCondition: ["Id:regex:^(321[67])$"])]
+		public async void HolyShield_TetherNavigation(Event @event, ScriptAccessory accessory)
+		{
+			if (parse != 2) return;
+			if (!ParseObjectId(@event["Id"], out var id)) return;
+			var myIndex = accessory.Data.PartyList.IndexOf(accessory.Data.Me);
+			var pos = JsonConvert.DeserializeObject<Vector3>(@event["SourcePosition"]);
+
+			Vector3 TH_N_Pos = new(pos.X, 0, pos.Z - 3);
+			Vector3 TH_S_Pos = new(pos.X, 0, pos.Z + 3);
+			Vector3 DPS_N_Pos = new(pos.X, 0, pos.Z - 3);
+			Vector3 DPS_S_Pos = new(pos.X, 0, pos.Z + 3);
+			//4561-appear, 3216-right cleave-12822, 3217-left cleave-12823
+			await Task.Delay(1000);
+			
+			if (P2Tether[myIndex] != 1) return;		
+
+			if (EnableDev)
+			{
+				debugOutput = id.ToString();
+				accessory.Method.SendChat($"""/e {debugOutput}""");
+			}
+
+			if (myIndex < 4)
+			{
+				//TH group
+				if (pos.X > 105f) return;
+				var dp = accessory.Data.GetDefaultDrawProperties();
+				dp.Name = "HolyShield_TetherNavigation";
+				dp.Scale = new(2);
+				dp.ScaleMode |= ScaleMode.YByDistance;
+				dp.Owner = accessory.Data.Me;
+				dp.TargetPosition = id == 12822 ? TH_S_Pos : TH_N_Pos;
+				dp.Color = accessory.Data.DefaultSafeColor;
+				dp.DestoryAt = 5000;
+				accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+			}
+			if (myIndex > 3)
+			{
+				//DPS group
+				if (pos.X < 95f) return;
+				var dp = accessory.Data.GetDefaultDrawProperties();
+				dp.Name = "HolyShield_TetherNavigation";
+				dp.Scale = new(2);
+				dp.ScaleMode |= ScaleMode.YByDistance;
+				dp.Owner = accessory.Data.Me;
+				dp.TargetPosition = id == 12822 ? DPS_N_Pos : DPS_S_Pos;
+				dp.Color = accessory.Data.DefaultSafeColor;
+				dp.DestoryAt = 5000;
+				accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+			}
+		}
+
+		[ScriptMethod(name: "HolyShield_TetherClear", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:43187"], userControl: false)]
+		public void HolyShield_TetherClear(Event @event, ScriptAccessory accessory)
+		{
+			if (parse != 2) return;
+			P2Tether = [0, 0, 0, 0, 0, 0, 0, 0];
+		}
+
+		[ScriptMethod(name: "HolyShield_TowerNavigation", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:43068"])]
+		public void HolyShield_TowerNavigation(Event @event, ScriptAccessory accessory)
+		{
+			if (parse != 2) return;
+			var myIndex = accessory.Data.PartyList.IndexOf(accessory.Data.Me);
+			if (P2Tether[myIndex] == 1) return;
+			var pos = JsonConvert.DeserializeObject<Vector3>(@event["SourcePosition"]);
+			if (myIndex < 4)
+			{
+				//TH group
+				if (pos.X > 100) return;				
+				var dp = accessory.Data.GetDefaultDrawProperties();
+				dp.Name = "HolyShield_TowerNavigation";
+				dp.Scale = new(2);
+				dp.ScaleMode |= ScaleMode.YByDistance;
+				dp.Owner = accessory.Data.Me;
+				dp.TargetPosition = pos;
+				dp.Color = accessory.Data.DefaultSafeColor;
+				dp.DestoryAt = 6000;
+				accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+			}
+			if (myIndex > 3)
+			{
+				//DPS group
+				if (pos.X < 100) return;
+				var dp = accessory.Data.GetDefaultDrawProperties();
+				dp.Name = "HolyShield_TowerNavigation";
+				dp.Scale = new(2);
+				dp.ScaleMode |= ScaleMode.YByDistance;
+				dp.Owner = accessory.Data.Me;
+				dp.TargetPosition = pos;
+				dp.Color = accessory.Data.DefaultSafeColor;
+				dp.DestoryAt = 6000;
+				accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+			}
+		}
+
+		[ScriptMethod(name: "SecondHalf_PhaseChange", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:43213"], userControl: false)]
+		public void SecondHalf_PhaseChange(Event @event, ScriptAccessory accessory)
+		{
+			parse = 3;
+		}
+
+		[ScriptMethod(name: "MagicCircleUnfold_PhaseChange", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:43193"], userControl: false)]
+		public void MagicCircleUnfold_PhaseChange(Event @event, ScriptAccessory accessory)
+		{
+			if (parse == 3) parse = 4;
+			if (parse == 9) parse = 10;
+		}
+
+		[ScriptMethod(name: "MagicCircleUnfold_FloorCollection", eventType: EventTypeEnum.EnvControl, eventCondition: ["Flag:256"], userControl: false)]
+		public void MagicCircleUnfold_FloorCollection(Event @event, ScriptAccessory accessory)
+		{
+			if (parse != 4 && parse != 10) return;
+			if (!int.TryParse(@event["Index"], out var index))return;
+			if (index == 6)
+			{
+				Map = true;
+			}
+			if (index == 4)
+			{
+				Map = false;
+			}
+			if (EnableDev)
+			{
+				debugOutput = index.ToString();
+				accessory.Method.SendChat($"""/e {debugOutput}""");
+			}
+			//04-bottom right start clockwise-false, 06-top start counterclockwise-true
+		}
+
+		[ScriptMethod(name: "MagicCircleUnfold_Navigation", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:43198"])]
+		public void MagicCircleUnfold_Navigation(Event @event, ScriptAccessory accessory)
+		{
+			if (parse != 4 && parse != 10) return;
+			Vector3 NorthStart = new(99.2f, 0, 94.8f);
+			Vector3 NorthEnd = new(90f, 0, 105.5f);
+			Vector3 SouthStart = new(105.6f, 0, 102f);
+			Vector3 SouthEnd = new(96.4f, 0, 105.5f);
+			if (Map)
+			{
+				var dp = accessory.Data.GetDefaultDrawProperties();
+				dp.Name = "MagicCircleUnfold_Navigation1";
+				dp.Scale = new(2);
+				dp.ScaleMode |= ScaleMode.YByDistance;
+				dp.Owner = accessory.Data.Me;
+				dp.TargetPosition = NorthStart;
+				dp.Color = accessory.Data.DefaultSafeColor;
+				dp.DestoryAt = 6000;
+				accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+
+				dp = accessory.Data.GetDefaultDrawProperties();
+				dp.Name = "MagicCircleUnfold_Navigation2";
+				dp.Scale = new(2);
+				dp.ScaleMode |= ScaleMode.YByDistance;
+				dp.Owner = accessory.Data.Me;
+				dp.TargetPosition = NorthEnd;
+				dp.Color = accessory.Data.DefaultSafeColor;
+				dp.Delay = 6000;
+				dp.DestoryAt = 12000;
+				accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+			}
+			else
+			{
+				var dp = accessory.Data.GetDefaultDrawProperties();
+				dp.Name = "MagicCircleUnfold_Navigation1";
+				dp.Scale = new(2);
+				dp.ScaleMode |= ScaleMode.YByDistance;
+				dp.Owner = accessory.Data.Me;
+				dp.TargetPosition = SouthStart;
+				dp.Color = accessory.Data.DefaultSafeColor;
+				dp.DestoryAt = 6000;
+				accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+
+				dp = accessory.Data.GetDefaultDrawProperties();
+				dp.Name = "MagicCircleUnfold_Navigation2";
+				dp.Scale = new(2);
+				dp.ScaleMode |= ScaleMode.YByDistance;
+				dp.Owner = accessory.Data.Me;
+				dp.TargetPosition = SouthEnd;
+				dp.Color = accessory.Data.DefaultSafeColor;
+				dp.Delay = 6000;
+				dp.DestoryAt = 12000;
+				accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+			}
+		}
+
+		[ScriptMethod(name: "MagicCircleUnfold_SecondForm_PhaseChange", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:43540"], userControl: false)]
+		public void MagicCircleUnfold_SecondForm_PhaseChange(Event @event, ScriptAccessory accessory)
+		{
+			parse = 5;
+		}
+
+		[ScriptMethod(name: "MagicCircleUnfold_SecondForm_FloorCollection", eventType: EventTypeEnum.EnvControl, eventCondition: ["Flag:256"], userControl: false)]
+		public void MagicCircleUnfold_SecondForm_FloorCollection(Event @event, ScriptAccessory accessory)
+		{
+			if (parse != 5) return;
+			if (!int.TryParse(@event["Index"], out var index)) return;
+			if (index == 5)
+			{
+				Map2 = true;
+			}
+			if (index == 10)
+			{
+				Map2 = false;
+			}
+			if (EnableDev && (index == 5 || index == 10))
+			{
+				debugOutput = Map2 ? "Heavy left, Donut right" : "Heavy right, Donut left";
+				accessory.Method.SendChat($"""/e {debugOutput}""");
+			}
+			//Get: right-up inner red (05) / left-up inner red (0A)
+			//10-Heavy right Donut left-false, 5-Heavy left Donut right-true
+		}
+
+		[ScriptMethod(name: "MagicCircleUnfold_SecondForm_Navigation", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:regex:^(4344[89])$"])]
+		public void MagicCircleUnfold_SecondForm_Navigation(Event @event, ScriptAccessory accessory)
+		{
+			if (parse != 5) return;
+
+			//8-Heavy first, 9-Donut first
+			if (@event.ActionId == 43448)
+			{
+				if (Map2)
+				{
+					var dp = accessory.Data.GetDefaultDrawProperties();
+					dp.Name = "MagicCircleUnfold_SecondForm_Navigation1";
+					dp.Scale = new(2);
+					dp.ScaleMode |= ScaleMode.YByDistance;
+					dp.Owner = accessory.Data.Me;
+					dp.TargetPosition = WestBottomOuter;
+					dp.Color = accessory.Data.DefaultSafeColor;
+					dp.DestoryAt = 6000;
+					accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+
+					dp = accessory.Data.GetDefaultDrawProperties();
+					dp.Name = "MagicCircleUnfold_SecondForm_Navigation2";
+					dp.Scale = new(2);
+					dp.ScaleMode |= ScaleMode.YByDistance;
+					dp.Owner = accessory.Data.Me;
+					dp.TargetPosition = WestTopInner;
+					dp.Color = accessory.Data.DefaultSafeColor;
+					dp.Delay = 6000;
+					dp.DestoryAt = 3000;
+					accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+
+					dp = accessory.Data.GetDefaultDrawProperties();
+					dp.Name = "MagicCircleUnfold_SecondForm_Navigation3";
+					dp.Scale = new(2);
+					dp.ScaleMode |= ScaleMode.YByDistance;
+					dp.Owner = accessory.Data.Me;
+					dp.TargetPosition = WestBottomInner;
+					dp.Color = accessory.Data.DefaultSafeColor;
+					dp.Delay = 9000;
+					dp.DestoryAt = 2000;
+					accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+				}
+				else
+				{
+					var dp = accessory.Data.GetDefaultDrawProperties();
+					dp.Name = "MagicCircleUnfold_SecondForm_Navigation1";
+					dp.Scale = new(2);
+					dp.ScaleMode |= ScaleMode.YByDistance;
+					dp.Owner = accessory.Data.Me;
+					dp.TargetPosition = EastBottomOuter;
+					dp.Color = accessory.Data.DefaultSafeColor;
+					dp.DestoryAt = 6000;
+					accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+
+					dp = accessory.Data.GetDefaultDrawProperties();
+					dp.Name = "MagicCircleUnfold_SecondForm_Navigation2";
+					dp.Scale = new(2);
+					dp.ScaleMode |= ScaleMode.YByDistance;
+					dp.Owner = accessory.Data.Me;
+					dp.TargetPosition = EastBottomInner;
+					dp.Color = accessory.Data.DefaultSafeColor;
+					dp.Delay = 6000;
+					dp.DestoryAt = 2000;
+					accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+
+					dp = accessory.Data.GetDefaultDrawProperties();
+					dp.Name = "MagicCircleUnfold_SecondForm_Navigation3";
+					dp.Scale = new(2);
+					dp.ScaleMode |= ScaleMode.YByDistance;
+					dp.Owner = accessory.Data.Me;
+					dp.TargetPosition = EastTopInner;
+					dp.Color = accessory.Data.DefaultSafeColor;					
+					dp.Delay = 8000;
+					dp.DestoryAt = 2000;
+					accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+				}
+			}
+			if (@event.ActionId == 43449)
+			{
+				if (Map2)
+				{
+					var dp = accessory.Data.GetDefaultDrawProperties();
+					dp.Name = "MagicCircleUnfold_SecondForm_Navigation1";
+					dp.Scale = new(2);
+					dp.ScaleMode |= ScaleMode.YByDistance;
+					dp.Owner = accessory.Data.Me;
+					dp.TargetPosition = EastBottomInner;
+					dp.Color = accessory.Data.DefaultSafeColor;
+					dp.DestoryAt = 6000;
+					accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+
+					dp = accessory.Data.GetDefaultDrawProperties();
+					dp.Name = "MagicCircleUnfold_SecondForm_Navigation2";
+					dp.Scale = new(2);
+					dp.ScaleMode |= ScaleMode.YByDistance;
+					dp.Owner = accessory.Data.Me;
+					dp.TargetPosition = EastBottomOuter;
+					dp.Color = accessory.Data.DefaultSafeColor;
+					dp.Delay = 6000;
+					dp.DestoryAt = 2000;
+					accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+
+					dp = accessory.Data.GetDefaultDrawProperties();
+					dp.Name = "MagicCircleUnfold_SecondForm_Navigation3";
+					dp.Scale = new(2);
+					dp.ScaleMode |= ScaleMode.YByDistance;
+					dp.Owner = accessory.Data.Me;
+					dp.TargetPosition = EastTopOuter;
+					dp.Color = accessory.Data.DefaultSafeColor;
+					dp.Delay = 8000;
+					dp.DestoryAt = 2000;
+					accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+				}
+				else
+				{
+					var dp = accessory.Data.GetDefaultDrawProperties();
+					dp.Name = "MagicCircleUnfold_SecondForm_Navigation1";
+					dp.Scale = new(2);
+					dp.ScaleMode |= ScaleMode.YByDistance;
+					dp.Owner = accessory.Data.Me;
+					dp.TargetPosition = WestBottomInner;
+					dp.Color = accessory.Data.DefaultSafeColor;
+					dp.DestoryAt = 6000;
+					accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+
+					dp = accessory.Data.GetDefaultDrawProperties();
+					dp.Name = "MagicCircleUnfold_SecondForm_Navigation2";
+					dp.Scale = new(2);
+					dp.ScaleMode |= ScaleMode.YByDistance;
+					dp.Owner = accessory.Data.Me;
+					dp.TargetPosition = WestTopOuter;
+					dp.Color = accessory.Data.DefaultSafeColor;
+					dp.Delay = 6000;
+					dp.DestoryAt = 3000;
+					accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+
+					dp = accessory.Data.GetDefaultDrawProperties();
+					dp.Name = "MagicCircleUnfold_SecondForm_Navigation3";
+					dp.Scale = new(2);
+					dp.ScaleMode |= ScaleMode.YByDistance;
+					dp.Owner = accessory.Data.Me;
+					dp.TargetPosition = WestBottomOuter;
+					dp.Color = accessory.Data.DefaultSafeColor;
+					dp.Delay = 9000;
+					dp.DestoryAt = 2000;
+					accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+				}
+			}
+		}
+
+		[ScriptMethod(name: "MagicCircleUnfold_ThirdForm_PhaseChange", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:43541"], userControl: false)]
+		public void MagicCircleUnfold_ThirdForm_PhaseChange(Event @event, ScriptAccessory accessory)
+		{
+			parse = 6;
+		}
+
+		[ScriptMethod(name: "MagicCircleUnfold_ThirdForm_FloorCollection", eventType: EventTypeEnum.EnvControl, eventCondition: ["Flag:256"], userControl: false)]
+		public void MagicCircleUnfold_ThirdForm_FloorCollection(Event @event, ScriptAccessory accessory)
+		{
+			if (parse != 6) return;
+			if (!int.TryParse(@event["Index"], out var index)) return;
+			if (index < 12)
+			{
+				P3_3Index.Add(index);
+			}
+			//Get: inner circle red (north clockwise 04-0B) 4-11
+		}
+
+		[ScriptMethod(name: "MagicCircleUnfold_ThirdForm_FloorCalculation", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:43195"], userControl: false)]
+		public void MagicCircleUnfold_ThirdForm_FloorCalculation(Event @event, ScriptAccessory accessory)
+		{
+			if (parse != 6) return;
+			if (P3_3Index[0] * P3_3Index[1] == 0)
+			{
+				return;
+			}
+			if (P3_3Index[0] * P3_3Index[1] == 40)
+			{
+				P3_3North = 15 * float.Pi / 8;
+			}
+			else if(P3_3Index[0] * P3_3Index[1] == 55)
+			{
+				P3_3North = float.Pi / 8;
+			}
+			else
+			{
+				P3_3Index[0] -= 3;
+				P3_3Index[1] -= 3;
+				P3_3North = (P3_3Index[0] + P3_3Index[1]- 1) * float.Pi / 8;
+			}
+			if (EnableDev)
+			{
+				if (P3_3Index[0] * P3_3Index[1] == 40)
+				{
+					debugOutput = "Tile 8 is north";
+					accessory.Method.SendChat($"""/e {debugOutput}""");
+				}
+				else if (P3_3Index[0] * P3_3Index[1] == 55)
+				{
+					debugOutput = "Tile 1 is north";
+					accessory.Method.SendChat($"""/e {debugOutput}""");
+				}
+				else
+				{
+					float debugOutputnum = (P3_3Index[0] + P3_3Index[1]) / 2;
+					debugOutput = $"""{debugOutputnum} is north""";
+					accessory.Method.SendChat($"""/e {debugOutput}""");
+				}
+
+				debugOutput = P3_3North.ToString();
+				accessory.Method.SendChat($"""/e {debugOutput}""");
+			}
+			//Special: 1+7  2+8    (2n-1)pi/8
+			//Get: inner circle red (north clockwise 04-0B) 4-11
+		}
+
+		[ScriptMethod(name: "MagicCircleUnfold_ThirdForm_MarkerCollection", eventType: EventTypeEnum.TargetIcon, eventCondition: ["Id:0250"], userControl: false)]
+		public void MagicCircleUnfold_ThirdForm_MarkerCollection(Event @event, ScriptAccessory accessory)
+		{			
+			if (parse != 6) return;
+			if (!ParseObjectId(@event["TargetId"], out var tid)) return;
+			var tIndex = accessory.Data.PartyList.IndexOf(tid);
+			P3_3Mark[tIndex] = 1;
+		}
+
+		[ScriptMethod(name: "MagicCircleUnfold_ThirdForm_MarkerNavigation", eventType: EventTypeEnum.TargetIcon, eventCondition: ["Id:0250"])]
+		public void MagicCircleUnfold_ThirdForm_MarkerNavigation(Event @event, ScriptAccessory accessory)
+		{
+			if (parse != 6) return;
+			if (!ParseObjectId(@event["TargetId"], out var tid)) return;
+			var myIndex = accessory.Data.PartyList.IndexOf(accessory.Data.Me);
+			//if (P3_3Mark[myIndex] != 1) return;
+			if (tid != accessory.Data.Me) return;
+
+			if (EnableDev)
+			{
+				debugOutput = "You need to place flower";
+				accessory.Method.SendChat($"""/e {debugOutput}""");
+			}
+			if (myIndex == 0 || myIndex == 6)
+			{
+				var dealpos = RotatePoint(CloseBase, centre, P3_3North);
+
+				var dp = accessory.Data.GetDefaultDrawProperties();
+				dp.Name = "MagicCircleUnfold_ThirdForm_MarkerNavigation";
+				dp.Scale = new(2);
+				dp.ScaleMode |= ScaleMode.YByDistance;
+				dp.Owner = accessory.Data.Me;
+				dp.TargetPosition = dealpos;
+				dp.Color = accessory.Data.DefaultSafeColor;
+				dp.DestoryAt = 5000;
+				accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+			}
+			if (myIndex == 1 || myIndex == 5)
+			{
+				var dealpos = RotatePoint(CloseBase, centre, P3_3North + float.Pi);
+
+				var dp = accessory.Data.GetDefaultDrawProperties();
+				dp.Name = "MagicCircleUnfold_ThirdForm_MarkerNavigation";
+				dp.Scale = new(2);
+				dp.ScaleMode |= ScaleMode.YByDistance;
+				dp.Owner = accessory.Data.Me;
+				dp.TargetPosition = dealpos;
+				dp.Color = accessory.Data.DefaultSafeColor;
+				dp.DestoryAt = 5000;
+				accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+			}
+			if (myIndex == 2 || myIndex == 4)
+			{
+				var dealpos = RotatePoint(CloseBase, centre, P3_3North + (float.Pi * 5 / 4));
+
+				var dp = accessory.Data.GetDefaultDrawProperties();
+				dp.Name = "MagicCircleUnfold_ThirdForm_MarkerNavigation";
+				dp.Scale = new(2);
+				dp.ScaleMode |= ScaleMode.YByDistance;
+				dp.Owner = accessory.Data.Me;
+				dp.TargetPosition = dealpos;
+				dp.Color = accessory.Data.DefaultSafeColor;
+				dp.DestoryAt = 5000;
+				accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+			}
+			if (myIndex == 3 || myIndex == 7)
+			{
+				var dealpos = RotatePoint(CloseBase, centre, P3_3North + (float.Pi * 3 / 4));
+
+				var dp = accessory.Data.GetDefaultDrawProperties();
+				dp.Name = "MagicCircleUnfold_ThirdForm_MarkerNavigation";
+				dp.Scale = new(2);
+				dp.ScaleMode |= ScaleMode.YByDistance;
+				dp.Owner = accessory.Data.Me;
+				dp.TargetPosition = dealpos;
+				dp.Color = accessory.Data.DefaultSafeColor;
+				dp.DestoryAt = 5000;
+				accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+			}
+		}
+
+		[ScriptMethod(name: "MagicCircleUnfold_ThirdForm_TowerNavigation", eventType: EventTypeEnum.TargetIcon, eventCondition: ["Id:0250"])]
+		public async void MagicCircleUnfold_ThirdForm_TowerNavigation(Event @event, ScriptAccessory accessory)
+		{
+			if (parse != 6) return;
+			await Task.Delay(1000);
+			var myIndex = accessory.Data.PartyList.IndexOf(accessory.Data.Me);
+			if (P3_3Mark[myIndex] == 1) return;
+			if (myIndex == 0 || myIndex == 6)
+			{
+				var dealpos = RotatePoint(FarBase, centre, P3_3North);
+
+				var dp = accessory.Data.GetDefaultDrawProperties();
+				dp.Name = "MagicCircleUnfold_ThirdForm_TowerNavigation";
+				dp.Scale = new(2);
+				dp.ScaleMode |= ScaleMode.YByDistance;
+				dp.Owner = accessory.Data.Me;
+				dp.TargetPosition = dealpos;
+				dp.Color = accessory.Data.DefaultSafeColor;
+				dp.DestoryAt = 5000;
+				accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+			}
+			if (myIndex == 1 || myIndex == 5)
+			{
+				var dealpos = RotatePoint(FarBase, centre, P3_3North + float.Pi);
+
+				var dp = accessory.Data.GetDefaultDrawProperties();
+				dp.Name = "MagicCircleUnfold_ThirdForm_TowerNavigation";
+				dp.Scale = new(2);
+				dp.ScaleMode |= ScaleMode.YByDistance;
+				dp.Owner = accessory.Data.Me;
+				dp.TargetPosition = dealpos;
+				dp.Color = accessory.Data.DefaultSafeColor;
+				dp.DestoryAt = 5000;
+				accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+			}
+			if (myIndex == 2 || myIndex == 4)
+			{
+				var dealpos = RotatePoint(FarBase, centre, P3_3North + (float.Pi * 3 / 2));
+
+				var dp = accessory.Data.GetDefaultDrawProperties();
+				dp.Name = "MagicCircleUnfold_ThirdForm_TowerNavigation";
+				dp.Scale = new(2);
+				dp.ScaleMode |= ScaleMode.YByDistance;
+				dp.Owner = accessory.Data.Me;
+				dp.TargetPosition = dealpos;
+				dp.Color = accessory.Data.DefaultSafeColor;
+				dp.DestoryAt = 5000;
+				accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+			}
+			if (myIndex == 3 || myIndex == 7)
+			{
+				var dealpos = RotatePoint(FarBase, centre, P3_3North + (float.Pi / 2));
+
+				var dp = accessory.Data.GetDefaultDrawProperties();
+				dp.Name = "MagicCircleUnfold_ThirdForm_TowerNavigation";
+				dp.Scale = new(2);
+				dp.ScaleMode |= ScaleMode.YByDistance;
+				dp.Owner = accessory.Data.Me;
+				dp.TargetPosition = dealpos;
+				dp.Color = accessory.Data.DefaultSafeColor;
+				dp.DestoryAt = 5000;
+				accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+			}
+
+		}
+
+		[ScriptMethod(name: "SecondRound_NearFarCleave_DonutRecord", eventType: EventTypeEnum.TargetIcon, eventCondition: ["Id:0244"], userControl: false)]
+		public void SecondRound_NearFarCleave_DonutRecord(Event @event, ScriptAccessory accessory)
+		{
+			if (parse != 6) return;
+			if (!ParseObjectId(@event["TargetId"], out var tid)) return;
+			if (tid == accessory.Data.PartyList[4] ||
+				tid == accessory.Data.PartyList[5] ||
+				tid == accessory.Data.PartyList[6] ||
+				tid == accessory.Data.PartyList[7])
+			{
+				THFirst = true;
+				if (EnableDev)
+				{
+					debugOutput = "TH bait first";
+					accessory.Method.SendChat($"""/e {debugOutput}""");
+				}
+			}
+			if (tid == accessory.Data.PartyList[0] ||
+				tid == accessory.Data.PartyList[1] ||
+				tid == accessory.Data.PartyList[2] ||
+				tid == accessory.Data.PartyList[3])
+			{
+				THFirst = false;
+				if (EnableDev)
+				{
+					debugOutput = "DPS bait first";
+					accessory.Method.SendChat($"""/e {debugOutput}""");
+				}
+			}
+		}
+
+		[ScriptMethod(name: "SecondRound_NearFarCleave_Record", eventType: EventTypeEnum.StatusAdd, eventCondition: ["StatusID:2970"], userControl: false)]
+		public void SecondRound_NearFarCleave_Record(Event @event, ScriptAccessory accessory)
+		{
+			if (parse != 6) return;
+			if (@event.StatusParam == 759)
+			{
+				NearFarCleaveRecord[NearFarCleaveCount] = true;
+			}
+			NearFarCleaveCount++;
+			if (EnableDev)
+			{
+				debugOutput = @event.StatusParam == 759 ? "Far Cleave" : "Near Cleave";
+				accessory.Method.SendChat($"""/e {debugOutput}""");
+			}
+		}
+
+		[ScriptMethod(name: "SecondRound_NearFarCleave_Navigation", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:43181"])]
+		public async void SecondRound_NearFarCleave_Navigation(Event @event, ScriptAccessory accessory)
+		{
+			if (parse != 6) return;
+			var myIndex = accessory.Data.PartyList.IndexOf(accessory.Data.Me);
+			//13-3-3-3
+			//Starting from west, clockwise 1-8
+			List<Vector3> ClosePos = [];
+			List<Vector3> FarPos = [];
+
+			ClosePos.Add(new Vector3(100 - CloseMulti22_5, 0, 100 - CloseMulti67_5));
+			ClosePos.Add(new Vector3(100 + CloseMulti22_5, 0, 100 - CloseMulti67_5));
+			ClosePos.Add(new Vector3(100 - CloseMulti67_5, 0, 100 - CloseMulti22_5));
+			ClosePos.Add(new Vector3(100 + CloseMulti67_5, 0, 100 - CloseMulti22_5));
+			ClosePos.Add(new Vector3(100 - CloseMulti22_5, 0, 100 + CloseMulti67_5));
+			ClosePos.Add(new Vector3(100 + CloseMulti22_5, 0, 100 + CloseMulti67_5));
+			ClosePos.Add(new Vector3(100 - CloseMulti67_5, 0, 100 + CloseMulti22_5));
+			ClosePos.Add(new Vector3(100 + CloseMulti67_5, 0, 100 + CloseMulti22_5));
+
+			FarPos.Add(new Vector3(100 - FarMulti22_5, 0, 100 - FarMulti67_5));
+			FarPos.Add(new Vector3(100 + FarMulti22_5, 0, 100 - FarMulti67_5));
+			FarPos.Add(new Vector3(100 - FarMulti67_5, 0, 100 - FarMulti22_5));
+			FarPos.Add(new Vector3(100 + FarMulti67_5, 0, 100 - FarMulti22_5));
+			FarPos.Add(new Vector3(100 - FarMulti22_5, 0, 100 + FarMulti67_5));
+			FarPos.Add(new Vector3(100 + FarMulti22_5, 0, 100 + FarMulti67_5));
+			FarPos.Add(new Vector3(100 - FarMulti67_5, 0, 100 + FarMulti22_5));
+			FarPos.Add(new Vector3(100 + FarMulti67_5, 0, 100 + FarMulti22_5));
+
+			Vector3 WaitN = new Vector3(100, 0, 94.5f);
+			Vector3 WaitS = new Vector3(100, 0, 105.5f);
+			await Task.Delay(1000);
+
+			if (NearFarCleaveRecord.Count == 0)
+			{
+				debugOutput = "Error occurred, please report to DC";
+				accessory.Method.SendChat($"""/e {debugOutput}""");
+				return;
+			}
+
+			if (THFirst)
+			{
+				if (myIndex < 4)
+				{
+					var dp = accessory.Data.GetDefaultDrawProperties();
+					dp.Name = "SecondRound_NearFarCleave_Navigation1";
+					dp.Scale = new(2);
+					dp.ScaleMode |= ScaleMode.YByDistance;
+					dp.Owner = accessory.Data.Me;
+					dp.TargetPosition = NearFarCleaveRecord[0] == false ? ClosePos[myIndex] : FarPos[myIndex];
+					dp.Color = accessory.Data.DefaultSafeColor;
+					dp.DestoryAt = 12000;
+					accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+					await Task.Delay(12000);
+
+					dp = accessory.Data.GetDefaultDrawProperties();
+					dp.Name = "SecondRound_NearFarCleave_Navigation2";
+					dp.Scale = new(2);
+					dp.ScaleMode |= ScaleMode.YByDistance;
+					dp.Owner = accessory.Data.Me;
+					dp.TargetPosition = NearFarCleaveRecord[1] == false ? FarPos[myIndex] : ClosePos[myIndex];
+					dp.Color = accessory.Data.DefaultSafeColor;
+					dp.DestoryAt = 3000;
+					accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+					dp = accessory.Data.GetDefaultDrawProperties();
+					dp.Name = "SecondRound_NearFarCleave_Navigation3";
+					dp.Scale = new(2);
+					dp.ScaleMode |= ScaleMode.YByDistance;
+					dp.Owner = accessory.Data.Me;
+					dp.TargetPosition = NearFarCleaveRecord[2] == false ? ClosePos[myIndex] : FarPos[myIndex];
+					dp.Color = accessory.Data.DefaultSafeColor;
+					dp.Delay = 3000;
+					dp.DestoryAt = 3000;
+					accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+					dp = accessory.Data.GetDefaultDrawProperties();
+					dp.Name = "SecondRound_NearFarCleave_Navigation4";
+					dp.Scale = new(2);
+					dp.ScaleMode |= ScaleMode.YByDistance;
+					dp.Owner = accessory.Data.Me;
+					dp.TargetPosition = NearFarCleaveRecord[3] == false ? FarPos[myIndex] : ClosePos[myIndex];
+					dp.Color = accessory.Data.DefaultSafeColor;
+					dp.Delay = 6000;
+					dp.DestoryAt = 3000;
+					accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+				}
+				if (myIndex > 3)
+				{
+					var dp = accessory.Data.GetDefaultDrawProperties();
+					dp.Name = "SecondRound_NearFarCleave_Navigation1";
+					dp.Scale = new(2);
+					dp.ScaleMode |= ScaleMode.YByDistance;
+					dp.Owner = accessory.Data.Me;
+					dp.TargetPosition = WaitS;
+					dp.Color = accessory.Data.DefaultSafeColor;
+					dp.DestoryAt = 12000;
+					accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+					await Task.Delay(12000);
+
+					dp = accessory.Data.GetDefaultDrawProperties();
+					dp.Name = "SecondRound_NearFarCleave_Navigation2";
+					dp.Scale = new(2);
+					dp.ScaleMode |= ScaleMode.YByDistance;
+					dp.Owner = accessory.Data.Me;
+					dp.TargetPosition = NearFarCleaveRecord[1] == false ? ClosePos[myIndex] : FarPos[myIndex];
+					dp.Color = accessory.Data.DefaultSafeColor;
+					dp.DestoryAt = 3000;
+					accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+					dp = accessory.Data.GetDefaultDrawProperties();
+					dp.Name = "SecondRound_NearFarCleave_Navigation3";
+					dp.Scale = new(2);
+					dp.ScaleMode |= ScaleMode.YByDistance;
+					dp.Owner = accessory.Data.Me;
+					dp.TargetPosition = NearFarCleaveRecord[2] == false ? FarPos[myIndex] : ClosePos[myIndex];
+					dp.Color = accessory.Data.DefaultSafeColor;
+					dp.Delay = 3000;
+					dp.DestoryAt = 3000;
+					accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+					dp = accessory.Data.GetDefaultDrawProperties();
+					dp.Name = "SecondRound_NearFarCleave_Navigation4";
+					dp.Scale = new(2);
+					dp.ScaleMode |= ScaleMode.YByDistance;
+					dp.Owner = accessory.Data.Me;
+					dp.TargetPosition = NearFarCleaveRecord[3] == false ? ClosePos[myIndex] : FarPos[myIndex];
+					dp.Color = accessory.Data.DefaultSafeColor;
+					dp.Delay = 6000;
+					dp.DestoryAt = 3000;
+					accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+				}
+
+			}
+			else
+			{
+				if (myIndex < 4)
+				{
+					var dp = accessory.Data.GetDefaultDrawProperties();
+					dp.Name = "SecondRound_NearFarCleave_Navigation1";
+					dp.Scale = new(2);
+					dp.ScaleMode |= ScaleMode.YByDistance;
+					dp.Owner = accessory.Data.Me;
+					dp.TargetPosition = WaitN;
+					dp.Color = accessory.Data.DefaultSafeColor;
+					dp.DestoryAt = 12000;
+					accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+					await Task.Delay(12000);
+
+					dp = accessory.Data.GetDefaultDrawProperties();
+					dp.Name = "SecondRound_NearFarCleave_Navigation2";
+					dp.Scale = new(2);
+					dp.ScaleMode |= ScaleMode.YByDistance;
+					dp.Owner = accessory.Data.Me;
+					dp.TargetPosition = NearFarCleaveRecord[1] == false ? ClosePos[myIndex] : FarPos[myIndex];
+					dp.Color = accessory.Data.DefaultSafeColor;
+					dp.DestoryAt = 3000;
+					accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+					dp = accessory.Data.GetDefaultDrawProperties();
+					dp.Name = "SecondRound_NearFarCleave_Navigation3";
+					dp.Scale = new(2);
+					dp.ScaleMode |= ScaleMode.YByDistance;
+					dp.Owner = accessory.Data.Me;
+					dp.TargetPosition = NearFarCleaveRecord[2] == false ? FarPos[myIndex] : ClosePos[myIndex];
+					dp.Color = accessory.Data.DefaultSafeColor;
+					dp.Delay = 3000;
+					dp.DestoryAt = 3000;
+					accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+					dp = accessory.Data.GetDefaultDrawProperties();
+					dp.Name = "SecondRound_NearFarCleave_Navigation4";
+					dp.Scale = new(2);
+					dp.ScaleMode |= ScaleMode.YByDistance;
+					dp.Owner = accessory.Data.Me;
+					dp.TargetPosition = NearFarCleaveRecord[3] == false ? ClosePos[myIndex] : FarPos[myIndex];
+					dp.Color = accessory.Data.DefaultSafeColor;
+					dp.Delay = 6000;
+					dp.DestoryAt = 3000;
+					accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+				}
+				if (myIndex > 3)
+				{
+					var dp = accessory.Data.GetDefaultDrawProperties();
+					dp.Name = "SecondRound_NearFarCleave_Navigation1";
+					dp.Scale = new(2);
+					dp.ScaleMode |= ScaleMode.YByDistance;
+					dp.Owner = accessory.Data.Me;
+					dp.TargetPosition = NearFarCleaveRecord[0] == false ? ClosePos[myIndex] : FarPos[myIndex];
+					dp.Color = accessory.Data.DefaultSafeColor;
+					dp.DestoryAt = 12000;
+					accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+					await Task.Delay(12000);
+
+					dp = accessory.Data.GetDefaultDrawProperties();
+					dp.Name = "SecondRound_NearFarCleave_Navigation2";
+					dp.Scale = new(2);
+					dp.ScaleMode |= ScaleMode.YByDistance;
+					dp.Owner = accessory.Data.Me;
+					dp.TargetPosition = NearFarCleaveRecord[1] == false ? FarPos[myIndex] : ClosePos[myIndex];
+					dp.Color = accessory.Data.DefaultSafeColor;
+					dp.DestoryAt = 3000;
+					accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+					dp = accessory.Data.GetDefaultDrawProperties();
+					dp.Name = "SecondRound_NearFarCleave_Navigation3";
+					dp.Scale = new(2);
+					dp.ScaleMode |= ScaleMode.YByDistance;
+					dp.Owner = accessory.Data.Me;
+					dp.TargetPosition = NearFarCleaveRecord[2] == false ? ClosePos[myIndex] : FarPos[myIndex];
+					dp.Color = accessory.Data.DefaultSafeColor;
+					dp.Delay = 3000;
+					dp.DestoryAt = 3000;
+					accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+					dp = accessory.Data.GetDefaultDrawProperties();
+					dp.Name = "SecondRound_NearFarCleave_Navigation4";
+					dp.Scale = new(2);
+					dp.ScaleMode |= ScaleMode.YByDistance;
+					dp.Owner = accessory.Data.Me;
+					dp.TargetPosition = NearFarCleaveRecord[3] == false ? FarPos[myIndex] : ClosePos[myIndex];
+					dp.Color = accessory.Data.DefaultSafeColor;
+					dp.Delay = 6000;
+					dp.DestoryAt = 3000;
+					accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+				}
+			}
+		}
+
+		[ScriptMethod(name: "MagicCircleUnfold_FourthForm_PhaseChange", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:43542"], userControl: false)]
+		public void MagicCircleUnfold_FourthForm_PhaseChange(Event @event, ScriptAccessory accessory)
+		{
+			parse = 7;
+			NearFarCleaveRecord = [false, false, false, false];
+			NearFarCleaveCount = 0;
+		}
+
+		[ScriptMethod(name: "MagicCircleUnfold_FourthForm_FloorCollection", eventType: EventTypeEnum.EnvControl, eventCondition: ["Flag:256"], userControl: false)]
+		public void MagicCircleUnfold_FourthForm_FloorCollection(Event @event, ScriptAccessory accessory)
+		{
+			if (parse != 7) return;
+			if (!int.TryParse(@event["Index"], out var index)) return;
+			if (index == 6)
+			{
+				Map4 = true;
+			}
+			if (EnableDev)
+			{
+				if (index == 5)
+				{
+					debugOutput = "Place flower on south";
+					accessory.Method.SendChat($"""/e {debugOutput}""");
+				}
+				if (index == 6)
+				{
+					debugOutput = "Place flower on north";
+					accessory.Method.SendChat($"""/e {debugOutput}""");
+				}
+			}
+			//Get: inner circle red (north clockwise 04-0B)
+			//6-place flower north-true
+		}
+
+		[ScriptMethod(name: "MagicCircleUnfold_FourthForm_MarkerCollection", eventType: EventTypeEnum.TargetIcon, eventCondition: ["Id:0250"], userControl: false)]
+		public void MagicCircleUnfold_FourthForm_MarkerCollection(Event @event, ScriptAccessory accessory)
+		{
+			if (parse != 7) return;
+			if (!ParseObjectId(@event["TargetId"], out var tid)) return;
+			var tIndex = accessory.Data.PartyList.IndexOf(tid);
+			P3_4Mark[tIndex] = 1;
+		}
+
+		[ScriptMethod(name: "MagicCircleUnfold_FourthForm_MarkerNavigation", eventType: EventTypeEnum.TargetIcon, eventCondition: ["Id:0250"])]
+		public void MagicCircleUnfold_FourthForm_MarkerNavigation(Event @event, ScriptAccessory accessory)
+		{
+			if (parse != 7) return;
+			var myIndex = accessory.Data.PartyList.IndexOf(accessory.Data.Me);
+			if (!ParseObjectId(@event["TargetId"], out var tid)) return;
+			if (tid != accessory.Data.Me) return;
+			if (EnableDev)
+			{
+				debugOutput = "You need to place flower";
+				accessory.Method.SendChat($"""/e {debugOutput}""");
+			}
+
+			var P4RotBase = Map4 ? 0 : float.Pi;
+			if (myIndex == 0 || myIndex == 4)
+			{
+				var dealpos = RotatePoint(CloseBase, centre, P4RotBase + float.Pi / 8);
+
+				var dp = accessory.Data.GetDefaultDrawProperties();
+				dp.Name = "MagicCircleUnfold_FourthForm_MarkerNavigation";
+				dp.Scale = new(2);
+				dp.ScaleMode |= ScaleMode.YByDistance;
+				dp.Owner = accessory.Data.Me;
+				dp.TargetPosition = dealpos;
+				dp.Color = accessory.Data.DefaultSafeColor;
+				dp.DestoryAt = 6000;
+				accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+			}
+			if (myIndex == 1 || myIndex == 5)
+			{
+				var dealpos = RotatePoint(CloseBase, centre, P4RotBase - float.Pi / 8);
+
+				var dp = accessory.Data.GetDefaultDrawProperties();
+				dp.Name = "MagicCircleUnfold_FourthForm_MarkerNavigation";
+				dp.Scale = new(2);
+				dp.ScaleMode |= ScaleMode.YByDistance;
+				dp.Owner = accessory.Data.Me;
+				dp.TargetPosition = dealpos;
+				dp.Color = accessory.Data.DefaultSafeColor;
+				dp.DestoryAt = 6000;
+				accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+			}
+			if (myIndex == 2 || myIndex == 6)
+			{
+				var dealpos = RotatePoint(FarBase, centre, P4RotBase + float.Pi / 8);
+
+				var dp = accessory.Data.GetDefaultDrawProperties();
+				dp.Name = "MagicCircleUnfold_FourthForm_MarkerNavigation";
+				dp.Scale = new(2);
+				dp.ScaleMode |= ScaleMode.YByDistance;
+				dp.Owner = accessory.Data.Me;
+				dp.TargetPosition = dealpos;
+				dp.Color = accessory.Data.DefaultSafeColor;
+				dp.DestoryAt = 6000;
+				accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+			}
+			if (myIndex == 3 || myIndex == 7)
+			{
+				var dealpos = RotatePoint(FarBase, centre, P4RotBase - float.Pi / 8);
+
+				var dp = accessory.Data.GetDefaultDrawProperties();
+				dp.Name = "MagicCircleUnfold_FourthForm_MarkerNavigation";
+				dp.Scale = new(2);
+				dp.ScaleMode |= ScaleMode.YByDistance;
+				dp.Owner = accessory.Data.Me;
+				dp.TargetPosition = dealpos;
+				dp.Color = accessory.Data.DefaultSafeColor;
+				dp.DestoryAt = 6000;
+				accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+			}
+		}
+
+		[ScriptMethod(name: "ThirdRound_NearFarCleave_Record", eventType: EventTypeEnum.StatusAdd, eventCondition: ["StatusID:2970"], userControl: false)]
+		public void ThirdRound_NearFarCleave_Record(Event @event, ScriptAccessory accessory)
+		{
+			if (parse != 7) return;
+			if (@event.StatusParam == 759)
+			{
+				NearFarCleaveRecord[NearFarCleaveCount] = true;
+			}
+			NearFarCleaveCount++;
+			if (EnableDev)
+			{
+				debugOutput = @event.StatusParam == 759 ? "Far Cleave" : "Near Cleave";
+				accessory.Method.SendChat($"""/e {debugOutput}""");
+			}
+		}
+
+		[ScriptMethod(name: "ThirdRound_NearFarCleave_Navigation", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:43181"])]
+		public async void ThirdRound_NearFarCleave_Navigation(Event @event, ScriptAccessory accessory)
+		{
+			if (parse != 7) return;
+			var myIndex = accessory.Data.PartyList.IndexOf(accessory.Data.Me);
+			//13-3-3-3
+			//Starting from west, clockwise 1-8
+			List<Vector3> ClosePos = [];
+			List<Vector3> FarPos = [];
+
+			ClosePos.Add(new Vector3(100 - CloseMulti22_5, 0, 100 - CloseMulti67_5));
+			ClosePos.Add(new Vector3(100 + CloseMulti22_5, 0, 100 - CloseMulti67_5));
+			ClosePos.Add(new Vector3(100 - CloseMulti67_5, 0, 100 - CloseMulti22_5));
+			ClosePos.Add(new Vector3(100 + CloseMulti67_5, 0, 100 - CloseMulti22_5));
+			ClosePos.Add(new Vector3(100 - CloseMulti22_5, 0, 100 + CloseMulti67_5));
+			ClosePos.Add(new Vector3(100 + CloseMulti22_5, 0, 100 + CloseMulti67_5));
+			ClosePos.Add(new Vector3(100 - CloseMulti67_5, 0, 100 + CloseMulti22_5));
+			ClosePos.Add(new Vector3(100 + CloseMulti67_5, 0, 100 + CloseMulti22_5));
+
+			FarPos.Add(new Vector3(100 - FarMulti22_5, 0, 100 - FarMulti67_5));
+			FarPos.Add(new Vector3(100 + FarMulti22_5, 0, 100 - FarMulti67_5));
+			FarPos.Add(new Vector3(100 - FarMulti67_5, 0, 100 - FarMulti22_5));
+			FarPos.Add(new Vector3(100 + FarMulti67_5, 0, 100 - FarMulti22_5));
+			FarPos.Add(new Vector3(100 - FarMulti22_5, 0, 100 + FarMulti67_5));
+			FarPos.Add(new Vector3(100 + FarMulti22_5, 0, 100 + FarMulti67_5));
+			FarPos.Add(new Vector3(100 - FarMulti67_5, 0, 100 + FarMulti22_5));
+			FarPos.Add(new Vector3(100 + FarMulti67_5, 0, 100 + FarMulti22_5));
+
+			await Task.Delay(1000);
+			if (NearFarCleaveRecord.Count == 0)
+			{
+				debugOutput = "Error occurred, please report to DC";
+				accessory.Method.SendChat($"""/e {debugOutput}""");
+				return;
+			}
+
+
+			if (myIndex < 4)
+			{
+				var dp = accessory.Data.GetDefaultDrawProperties();
+				dp.Name = "ThirdRound_NearFarCleave_Navigation1";
+				dp.Scale = new(2);
+				dp.ScaleMode |= ScaleMode.YByDistance;
+				dp.Owner = accessory.Data.Me;
+				dp.TargetPosition = ClosePos[myIndex];
+				dp.Color = accessory.Data.DefaultSafeColor;
+				dp.DestoryAt = 12000;
+				accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+				await Task.Delay(12000);
+				dp = accessory.Data.GetDefaultDrawProperties();
+				dp.Name = "ThirdRound_NearFarCleave_Navigation2";
+				dp.Scale = new(2);
+				dp.ScaleMode |= ScaleMode.YByDistance;
+				dp.Owner = accessory.Data.Me;
+				dp.TargetPosition = NearFarCleaveRecord[0] != NearFarCleaveRecord[1] ? ClosePos[myIndex] : FarPos[myIndex];
+				dp.Color = accessory.Data.DefaultSafeColor;
+				dp.DestoryAt = 3000;
+				accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+				dp = accessory.Data.GetDefaultDrawProperties();
+				dp.Name = "ThirdRound_NearFarCleave_Navigation3";
+				dp.Scale = new(2);
+				dp.ScaleMode |= ScaleMode.YByDistance;
+				dp.Owner = accessory.Data.Me;
+				dp.TargetPosition = FarPos[myIndex];
+				dp.Color = accessory.Data.DefaultSafeColor;
+				dp.Delay = 3000;
+				dp.DestoryAt = 3000;
+				accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+				dp = accessory.Data.GetDefaultDrawProperties();
+				dp.Name = "ThirdRound_NearFarCleave_Navigation4";
+				dp.Scale = new(2);
+				dp.ScaleMode |= ScaleMode.YByDistance;
+				dp.Owner = accessory.Data.Me;
+				dp.TargetPosition = NearFarCleaveRecord[0] != NearFarCleaveRecord[1] ? FarPos[myIndex] : ClosePos[myIndex];
+				dp.Color = accessory.Data.DefaultSafeColor;
+				dp.Delay = 6000;
+				dp.DestoryAt = 3000;
+				accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+			}
+			if (myIndex > 3)
+			{
+				var dp = accessory.Data.GetDefaultDrawProperties();
+				dp.Name = "ThirdRound_NearFarCleave_Navigation1";
+				dp.Scale = new(2);
+				dp.ScaleMode |= ScaleMode.YByDistance;
+				dp.Owner = accessory.Data.Me;
+				dp.TargetPosition = FarPos[myIndex];
+				dp.Color = accessory.Data.DefaultSafeColor;
+				dp.DestoryAt = 12000;
+				accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+				await Task.Delay(12000);
+				dp = accessory.Data.GetDefaultDrawProperties();
+				dp.Name = "ThirdRound_NearFarCleave_Navigation2";
+				dp.Scale = new(2);
+				dp.ScaleMode |= ScaleMode.YByDistance;
+				dp.Owner = accessory.Data.Me;
+				dp.TargetPosition = NearFarCleaveRecord[0] != NearFarCleaveRecord[1] ? FarPos[myIndex] : ClosePos[myIndex];
+				dp.Color = accessory.Data.DefaultSafeColor;
+				dp.DestoryAt = 3000;
+				accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+				dp = accessory.Data.GetDefaultDrawProperties();
+				dp.Name = "ThirdRound_NearFarCleave_Navigation3";
+				dp.Scale = new(2);
+				dp.ScaleMode |= ScaleMode.YByDistance;
+				dp.Owner = accessory.Data.Me;
+				dp.TargetPosition = ClosePos[myIndex];
+				dp.Color = accessory.Data.DefaultSafeColor;
+				dp.Delay = 3000;
+				dp.DestoryAt = 3000;
+				accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+				dp = accessory.Data.GetDefaultDrawProperties();
+				dp.Name = "ThirdRound_NearFarCleave_Navigation4";
+				dp.Scale = new(2);
+				dp.ScaleMode |= ScaleMode.YByDistance;
+				dp.Owner = accessory.Data.Me;
+				dp.TargetPosition = NearFarCleaveRecord[0] != NearFarCleaveRecord[1] ? ClosePos[myIndex] : FarPos[myIndex];
+				dp.Color = accessory.Data.DefaultSafeColor;
+				dp.Delay = 6000;
+				dp.DestoryAt = 3000;
+				accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+			}
+
+		}
+
+		[ScriptMethod(name: "OutsideCloneHalfRoomCleave", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:regex:^(4318[45])$"])]
+		public void OutsideCloneHalfRoomCleave(Event @event, ScriptAccessory accessory)
+		{
+			if (parse != 7) return;
+			if (!ParseObjectId(@event["SourceId"], out var sid)) return;
+			if (EnableDev)
+			{
+				debugOutput = "Watch for left/right cleave";
+				accessory.Method.SendChat($"""/e {debugOutput}""");
+			}
+			var dp = accessory.Data.GetDefaultDrawProperties();
+			dp.Name = "OutsideCloneHalfRoomCleave";
+			dp.Scale = new(80, 80);
+			dp.Owner = sid;
+			dp.Rotation = @event["ActionId"] == "43185" ? float.Pi / 2 : float.Pi / -2;
+			dp.Color = accessory.Data.DefaultDangerColor;
+			dp.DestoryAt = 6000;
+			accessory.Method.SendDraw(DrawModeEnum.Default, DrawTypeEnum.Rect, dp);
+		}
+
+		[ScriptMethod(name: "MagicCircleUnfold_FifthForm_PhaseChange", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:43543"], userControl: false)]
+		public void MagicCircleUnfold_FifthForm_PhaseChange(Event @event, ScriptAccessory accessory)
+		{
+			parse = 8;
+		}
+
+		[ScriptMethod(name: "MagicCircleUnfold_FifthForm_BladeCollection", eventType: EventTypeEnum.PlayActionTimeline, eventCondition: ["Id:4571"], userControl: false)]
+		public void MagicCircleUnfold_FifthForm_BladeCollection(Event @event, ScriptAccessory accessory)
+		{
+			if (parse != 8) return;
+			var pos = JsonConvert.DeserializeObject<Vector3>(@event["SourcePosition"]);
+			if (P3_5Safe == 0)
+			{
+				if (pos.Z > 100)
+				{
+					P3_5Safe = 1;
+				}
+				if (pos.Z < 100)
+				{
+					P3_5Safe = 2;
+				}			
+				if (EnableDev)
+				{
+					if (P3_5Safe == 1)
+					{
+						debugOutput = "South safe";
+						accessory.Method.SendChat($"""/e {debugOutput}""");
+					}
+					if (P3_5Safe == 2)
+					{
+						debugOutput = "North safe";
+						accessory.Method.SendChat($"""/e {debugOutput}""");
+					}
+					if (P3_5Safe != 1 && P3_5Safe != 2)							
+					{
+						debugOutput = "Error!";
+						accessory.Method.SendChat($"""/e {debugOutput}""");
+					}
+				}
+			}
+			//1-South safe, 2-North safe
+		}
+
+		[ScriptMethod(name: "MagicCircleUnfold_FifthForm_Navigation", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:regex:^(4344[89])$"])]
+		public void MagicCircleUnfold_FifthForm_Navigation(Event @event, ScriptAccessory accessory)
+		{
+			if (parse != 8) return;
+
+			//8-Heavy first, 9-Donut first
+			if (@event.ActionId == 43448)
+			{
+				if (P3_5Safe == 1)
+				{
+					var dp = accessory.Data.GetDefaultDrawProperties();
+					dp.Name = "MagicCircleUnfold_FifthForm_Navigation1";
+					dp.Scale = new(2);
+					dp.ScaleMode |= ScaleMode.YByDistance;
+					dp.Owner = accessory.Data.Me;
+					dp.TargetPosition = EastTopOuter;
+					dp.Color = accessory.Data.DefaultSafeColor;
+					dp.DestoryAt = 6000;
+					accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+
+					dp = accessory.Data.GetDefaultDrawProperties();
+					dp.Name = "MagicCircleUnfold_FifthForm_Navigation2";
+					dp.Scale = new(2);
+					dp.ScaleMode |= ScaleMode.YByDistance;
+					dp.Owner = accessory.Data.Me;
+					dp.TargetPosition = SouthLeftInner;
+					dp.Color = accessory.Data.DefaultSafeColor;
+					dp.Delay = 6000;
+					dp.DestoryAt = 3000;
+					accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+				}
+				else
+				{
+					var dp = accessory.Data.GetDefaultDrawProperties();
+					dp.Name = "MagicCircleUnfold_FifthForm_Navigation1";
+					dp.Scale = new(2);
+					dp.ScaleMode |= ScaleMode.YByDistance;
+					dp.Owner = accessory.Data.Me;
+					dp.TargetPosition = WestBottomOuter;
+					dp.Color = accessory.Data.DefaultSafeColor;
+					dp.DestoryAt = 6000;
+					accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+
+					dp = accessory.Data.GetDefaultDrawProperties();
+					dp.Name = "MagicCircleUnfold_FifthForm_Navigation2";
+					dp.Scale = new(2);
+					dp.ScaleMode |= ScaleMode.YByDistance;
+					dp.Owner = accessory.Data.Me;
+					dp.TargetPosition = NorthRightInner;
+					dp.Color = accessory.Data.DefaultSafeColor;
+					dp.Delay = 6000;
+					dp.DestoryAt = 3000;
+					accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+				}
+			}
+			if (@event.ActionId == 43449)
+			{
+				if (P3_5Safe == 1)
+				{
+					var dp = accessory.Data.GetDefaultDrawProperties();
+					dp.Name = "MagicCircleUnfold_FifthForm_Navigation1";
+					dp.Scale = new(2);
+					dp.ScaleMode |= ScaleMode.YByDistance;
+					dp.Owner = accessory.Data.Me;
+					dp.TargetPosition = EastTopInner;
+					dp.Color = accessory.Data.DefaultSafeColor;
+					dp.DestoryAt = 6000;
+					accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+
+					dp = accessory.Data.GetDefaultDrawProperties();
+					dp.Name = "MagicCircleUnfold_FifthForm_Navigation2";
+					dp.Scale = new(2);
+					dp.ScaleMode |= ScaleMode.YByDistance;
+					dp.Owner = accessory.Data.Me;
+					dp.TargetPosition = SouthLeftOuter;
+					dp.Color = accessory.Data.DefaultSafeColor;
+					dp.Delay = 6000;
+					dp.DestoryAt = 3000;
+					accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+				}
+				else
+				{
+					var dp = accessory.Data.GetDefaultDrawProperties();
+					dp.Name = "MagicCircleUnfold_FifthForm_Navigation1";
+					dp.Scale = new(2);
+					dp.ScaleMode |= ScaleMode.YByDistance;
+					dp.Owner = accessory.Data.Me;
+					dp.TargetPosition = WestBottomInner;
+					dp.Color = accessory.Data.DefaultSafeColor;
+					dp.DestoryAt = 6000;
+					accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+
+					dp = accessory.Data.GetDefaultDrawProperties();
+					dp.Name = "MagicCircleUnfold_FifthForm_Navigation2";
+					dp.Scale = new(2);
+					dp.ScaleMode |= ScaleMode.YByDistance;
+					dp.Owner = accessory.Data.Me;
+					dp.TargetPosition = NorthRightOuter;
+					dp.Color = accessory.Data.DefaultSafeColor;
+					dp.Delay = 6000;
+					dp.DestoryAt = 3000;
+					accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+				}
+			}
+		}
+
+		[ScriptMethod(name: "MagicCircleUnfold_SixthForm_PhaseChange", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:43544"], userControl: false)]
+		public void MagicCircleUnfold_SixthForm_PhaseChange(Event @event, ScriptAccessory accessory)
+		{
+			parse = 9;
+		}
+
+		[ScriptMethod(name: "MagicCircleUnfold_SixthForm_FloorCollection", eventType: EventTypeEnum.EnvControl, eventCondition: ["Flag:256"], userControl: false)]
+		public void MagicCircleUnfold_SixthForm_FloorCollection(Event @event, ScriptAccessory accessory)
+		{
+			if (parse != 9) return;
+			if (!int.TryParse(@event["Index"], out var index)) return;
+			if (index == 6)
+			{
+				Map6 = true;
+			}
+			if (EnableDev)
+			{
+				debugOutput = index.ToString();
+				accessory.Method.SendChat($"""/e {debugOutput}""");
+			}
+
+			//Get: right-up inner red (05) / right-bottom inner red (06)
+			//06-true:MTD3 tower near7 flower far8; STD4 flower near1 tower far2; H1D1 flower near5 tower far6; H2D2 tower near3 flower far4
+			//05-false:MTD3 flower near8 tower far7; STD4 tower near2 flower far1; H1D1 tower near6 flower far5; H2D2 flower near4 tower far3	
+			// (2n-1)*pi/8
+		}
+
+		[ScriptMethod(name: "MagicCircleUnfold_SixthForm_MarkerCollection", eventType: EventTypeEnum.TargetIcon, eventCondition: ["Id:0250"], userControl: false)]
+		public void MagicCircleUnfold_SixthForm_MarkerCollection(Event @event, ScriptAccessory accessory)
+		{
+			if (parse != 9) return;
+			if (!ParseObjectId(@event["TargetId"], out var tid)) return;
+			var tIndex = accessory.Data.PartyList.IndexOf(tid);
+			P3_6Mark[tIndex] = 1;
+		}
+
+		[ScriptMethod(name: "MagicCircleUnfold_SixthForm_MarkerNavigation", eventType: EventTypeEnum.TargetIcon, eventCondition: ["Id:0250"])]
+		public void MagicCircleUnfold_SixthForm_MarkerNavigation(Event @event, ScriptAccessory accessory)
+		{
+			if (parse != 9) return;
+			if (!ParseObjectId(@event["TargetId"], out var tid)) return;
+			var myIndex = accessory.Data.PartyList.IndexOf(accessory.Data.Me);
+			//if (P3_6Mark[myIndex] != 1) return;
+			if (tid != accessory.Data.Me) return;
+			if (EnableDev)
+			{
+				debugOutput = "You need to place flower";
+				accessory.Method.SendChat($"""/e {debugOutput}""");
+			}
+			if (myIndex == 0 || myIndex == 6)
+			{
+				if (Map6)
+				{
+					var dealpos = RotatePoint(FarBase, centre, float.Pi * 15 / 8);
+
+					var dp = accessory.Data.GetDefaultDrawProperties();
+					dp.Name = "MagicCircleUnfold_SixthForm_MarkerNavigation";
+					dp.Scale = new(2);
+					dp.ScaleMode |= ScaleMode.YByDistance;
+					dp.Owner = accessory.Data.Me;
+					dp.TargetPosition = dealpos;
+					dp.Color = accessory.Data.DefaultSafeColor;
+					dp.DestoryAt = 6000;
+					accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+				}
+				else
+				{
+					var dealpos = RotatePoint(CloseBase, centre, float.Pi * 15 / 8);
+
+					var dp = accessory.Data.GetDefaultDrawProperties();
+					dp.Name = "MagicCircleUnfold_SixthForm_MarkerNavigation";
+					dp.Scale = new(2);
+					dp.ScaleMode |= ScaleMode.YByDistance;
+					dp.Owner = accessory.Data.Me;
+					dp.TargetPosition = dealpos;
+					dp.Color = accessory.Data.DefaultSafeColor;
+					dp.DestoryAt = 6000;
+					accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+				}
+			}
+			if (myIndex == 1 || myIndex == 7)
+			{
+				if (Map6)
+				{
+					var dealpos = RotatePoint(CloseBase, centre, float.Pi * 1 / 8);
+
+					var dp = accessory.Data.GetDefaultDrawProperties();
+					dp.Name = "MagicCircleUnfold_SixthForm_MarkerNavigation";
+					dp.Scale = new(2);
+					dp.ScaleMode |= ScaleMode.YByDistance;
+					dp.Owner = accessory.Data.Me;
+					dp.TargetPosition = dealpos;
+					dp.Color = accessory.Data.DefaultSafeColor;
+					dp.DestoryAt = 6000;
+					accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+				}
+				else
+				{
+					var dealpos = RotatePoint(FarBase, centre, float.Pi * 1 / 8);
+
+					var dp = accessory.Data.GetDefaultDrawProperties();
+					dp.Name = "MagicCircleUnfold_SixthForm_MarkerNavigation";
+					dp.Scale = new(2);
+					dp.ScaleMode |= ScaleMode.YByDistance;
+					dp.Owner = accessory.Data.Me;
+					dp.TargetPosition = dealpos;
+					dp.Color = accessory.Data.DefaultSafeColor;
+					dp.DestoryAt = 6000;
+					accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+				}
+			}
+			if (myIndex == 2 || myIndex == 4)
+			{
+				if (Map6)
+				{
+					var dealpos = RotatePoint(CloseBase, centre, float.Pi * 9 / 8);
+
+					var dp = accessory.Data.GetDefaultDrawProperties();
+					dp.Name = "MagicCircleUnfold_SixthForm_MarkerNavigation";
+					dp.Scale = new(2);
+					dp.ScaleMode |= ScaleMode.YByDistance;
+					dp.Owner = accessory.Data.Me;
+					dp.TargetPosition = dealpos;
+					dp.Color = accessory.Data.DefaultSafeColor;
+					dp.DestoryAt = 6000;
+					accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+				}
+				else
+				{
+					var dealpos = RotatePoint(FarBase, centre, float.Pi * 9 / 8);
+
+					var dp = accessory.Data.GetDefaultDrawProperties();
+					dp.Name = "MagicCircleUnfold_SixthForm_MarkerNavigation";
+					dp.Scale = new(2);
+					dp.ScaleMode |= ScaleMode.YByDistance;
+					dp.Owner = accessory.Data.Me;
+					dp.TargetPosition = dealpos;
+					dp.Color = accessory.Data.DefaultSafeColor;
+					dp.DestoryAt = 6000;
+					accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+				}
+			}
+			if (myIndex == 3 || myIndex == 5)
+			{
+				if (Map6)
+				{
+					var dealpos = RotatePoint(FarBase, centre, float.Pi * 7 / 8);
+
+					var dp = accessory.Data.GetDefaultDrawProperties();
+					dp.Name = "MagicCircleUnfold_SixthForm_MarkerNavigation";
+					dp.Scale = new(2);
+					dp.ScaleMode |= ScaleMode.YByDistance;
+					dp.Owner = accessory.Data.Me;
+					dp.TargetPosition = dealpos;
+					dp.Color = accessory.Data.DefaultSafeColor;
+					dp.DestoryAt = 6000;
+					accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+				}
+				else
+				{
+					var dealpos = RotatePoint(CloseBase, centre, float.Pi * 7 / 8);
+
+					var dp = accessory.Data.GetDefaultDrawProperties();
+					dp.Name = "MagicCircleUnfold_SixthForm_MarkerNavigation";
+					dp.Scale = new(2);
+					dp.ScaleMode |= ScaleMode.YByDistance;
+					dp.Owner = accessory.Data.Me;
+					dp.TargetPosition = dealpos;
+					dp.Color = accessory.Data.DefaultSafeColor;
+					dp.DestoryAt = 6000;
+					accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+				}
+			}
+		}
+
+		[ScriptMethod(name: "MagicCircleUnfold_SixthForm_TowerNavigation", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:43201"])]
+		public void MagicCircleUnfold_SixthForm_TowerNavigation(Event @event, ScriptAccessory accessory)
+		{
+			if (parse != 9) return;
+			var myIndex = accessory.Data.PartyList.IndexOf(accessory.Data.Me);
+			if (P3_6Mark[myIndex] == 1) return;
+			if (EnableDev)
+			{
+				debugOutput = "You need to do tower";
+				accessory.Method.SendChat($"""/e {debugOutput}""");
+			}
+
+			if (myIndex == 0 || myIndex == 6)
+			{
+				if (Map6)
+				{
+					var dealpos = RotatePoint(CloseBase, centre, float.Pi * 13 / 8);
+
+					var dp = accessory.Data.GetDefaultDrawProperties();
+					dp.Name = "MagicCircleUnfold_SixthForm_MarkerNavigation";
+					dp.Scale = new(2);
+					dp.ScaleMode |= ScaleMode.YByDistance;
+					dp.Owner = accessory.Data.Me;
+					dp.TargetPosition = dealpos;
+					dp.Color = accessory.Data.DefaultSafeColor;
+					dp.DestoryAt = 8000;
+					accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+				}
+				else
+				{
+					var dealpos = RotatePoint(FarBase, centre, float.Pi * 13 / 8);
+
+					var dp = accessory.Data.GetDefaultDrawProperties();
+					dp.Name = "MagicCircleUnfold_SixthForm_MarkerNavigation";
+					dp.Scale = new(2);
+					dp.ScaleMode |= ScaleMode.YByDistance;
+					dp.Owner = accessory.Data.Me;
+					dp.TargetPosition = dealpos;
+					dp.Color = accessory.Data.DefaultSafeColor;
+					dp.DestoryAt = 8000;
+					accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+				}
+			}
+			if (myIndex == 1 || myIndex == 7)
+			{
+				if (Map6)
+				{
+					var dealpos = RotatePoint(FarBase, centre, float.Pi * 3 / 8);
+
+					var dp = accessory.Data.GetDefaultDrawProperties();
+					dp.Name = "MagicCircleUnfold_SixthForm_MarkerNavigation";
+					dp.Scale = new(2);
+					dp.ScaleMode |= ScaleMode.YByDistance;
+					dp.Owner = accessory.Data.Me;
+					dp.TargetPosition = dealpos;
+					dp.Color = accessory.Data.DefaultSafeColor;
+					dp.DestoryAt = 8000;
+					accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+				}
+				else
+				{
+					var dealpos = RotatePoint(CloseBase, centre, float.Pi * 3 / 8);
+
+					var dp = accessory.Data.GetDefaultDrawProperties();
+					dp.Name = "MagicCircleUnfold_SixthForm_MarkerNavigation";
+					dp.Scale = new(2);
+					dp.ScaleMode |= ScaleMode.YByDistance;
+					dp.Owner = accessory.Data.Me;
+					dp.TargetPosition = dealpos;
+					dp.Color = accessory.Data.DefaultSafeColor;
+					dp.DestoryAt = 8000;
+					accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+				}
+			}
+			if (myIndex == 2 || myIndex == 4)
+			{
+				if (Map6)
+				{
+					var dealpos = RotatePoint(FarBase, centre, float.Pi * 11 / 8);
+
+					var dp = accessory.Data.GetDefaultDrawProperties();
+					dp.Name = "MagicCircleUnfold_SixthForm_MarkerNavigation";
+					dp.Scale = new(2);
+					dp.ScaleMode |= ScaleMode.YByDistance;
+					dp.Owner = accessory.Data.Me;
+					dp.TargetPosition = dealpos;
+					dp.Color = accessory.Data.DefaultSafeColor;
+					dp.DestoryAt = 8000;
+					accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+				}
+				else
+				{
+					var dealpos = RotatePoint(CloseBase, centre, float.Pi * 11 / 8);
+
+					var dp = accessory.Data.GetDefaultDrawProperties();
+					dp.Name = "MagicCircleUnfold_SixthForm_MarkerNavigation";
+					dp.Scale = new(2);
+					dp.ScaleMode |= ScaleMode.YByDistance;
+					dp.Owner = accessory.Data.Me;
+					dp.TargetPosition = dealpos;
+					dp.Color = accessory.Data.DefaultSafeColor;
+					dp.DestoryAt = 8000;
+					accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+				}
+			}
+			if (myIndex == 3 || myIndex == 5)
+			{
+				if (Map6)
+				{
+					var dealpos = RotatePoint(CloseBase, centre, float.Pi * 5 / 8);
+
+					var dp = accessory.Data.GetDefaultDrawProperties();
+					dp.Name = "MagicCircleUnfold_SixthForm_MarkerNavigation";
+					dp.Scale = new(2);
+					dp.ScaleMode |= ScaleMode.YByDistance;
+					dp.Owner = accessory.Data.Me;
+					dp.TargetPosition = dealpos;
+					dp.Color = accessory.Data.DefaultSafeColor;
+					dp.DestoryAt = 8000;
+					accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+				}
+				else
+				{
+					var dealpos = RotatePoint(FarBase, centre, float.Pi * 5 / 8);
+
+					var dp = accessory.Data.GetDefaultDrawProperties();
+					dp.Name = "MagicCircleUnfold_SixthForm_MarkerNavigation";
+					dp.Scale = new(2);
+					dp.ScaleMode |= ScaleMode.YByDistance;
+					dp.Owner = accessory.Data.Me;
+					dp.TargetPosition = dealpos;
+					dp.Color = accessory.Data.DefaultSafeColor;
+					dp.DestoryAt = 8000;
+					accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+				}
+			}
+		}
+
+		#region Utility
+		private static bool ParseObjectId(string? idStr, out uint id)
+		{
+			id = 0;
+			if (string.IsNullOrEmpty(idStr)) return false;
+			try
+			{
+				var idStr2 = idStr.Replace("0x", "");
+				id = uint.Parse(idStr2, System.Globalization.NumberStyles.HexNumber);
+				return true;
+			}
+			catch (Exception)
+			{
+				return false;
+			}
+		}
+		private Vector3 RotatePoint(Vector3 point, Vector3 centre, float radian)
+		{
+
+			Vector2 v2 = new(point.X - centre.X, point.Z - centre.Z);
+
+			var rot = (MathF.PI - MathF.Atan2(v2.X, v2.Y) + radian);
+			var lenth = v2.Length();
+			return new(centre.X + MathF.Sin(rot) * lenth, centre.Y, centre.Z - MathF.Cos(rot) * lenth);
+		}
+/*
+		private byte? GetTransformationID(uint _id, ScriptAccessory accessory)
+		{
+			var obj = accessory.Data.Objects.SearchById(_id);
+			if (obj != null)
+			{
+				unsafe
+				{
+					FFXIVClientStructs.FFXIV.Client.Game.Character.Character* objStruct = (FFXIVClientStructs.FFXIV.Client.Game.Character.Character*)obj.Address;
+					return objStruct->Timeline.ModelState;
+				}
+			}
+			return null;
+		}*/
+		#endregion
+	}
 }

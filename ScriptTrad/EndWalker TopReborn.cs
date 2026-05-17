@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using KodakkuAssist.Module.GameEvent;
 using KodakkuAssist.Script;
 using KodakkuAssist.Module.GameEvent.Struct;
@@ -23,7 +23,7 @@ using Lumina.Excel.Sheets;
 namespace UsamisKodakku.Scripts._06_EndWalker.TopReborn;
 
 [ScriptType(name: Name, territorys: [1122], guid: "6272e52b-5500-4ff0-8634-dd15f2e3b25e",
-    version: Version, author: "Usami", note: NoteStr, updateInfo: UpdateInfo)]
+    version: Version, Author: "Linoa235", note: NoteStr, updateInfo: UpdateInfo)]
 
 // ^(?!.*((Monk|Machinist|Dragoon|Samurai|Ninja|Viper|Reaper|Dancer|Bard|Astrologian|Sage|Scholar|(Eos|Selene)|Seraph|White Mage|Warrior|Paladin|Dark Knight|Gunbreaker|Pictomancer|Black Mage|Blue Mage|Summoner|Carbuncle|Demigod Bahamut|Demigod Phoenix|Garuda-Egi|Titan-Egi|Ifrit-Egi|Puppet)) (Used|Cast))).*35501.*$
 // ^\[\w+\|[^|]+\|E\]\s\w+
@@ -138,7 +138,7 @@ public class TopReborn
     
     #region P1A Loop Program
 
-    [ScriptMethod(name: "———————— 《P1A Loop Program》 ————————", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld:asdf"],
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€”â€”â€” ã€ŠP1A Loop Programã€‹ â€”â€”â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld:asdf"],
         userControl: true)]
     public void P1A_LoopProgram_Separator(Event ev, ScriptAccessory sa)
     {
@@ -395,7 +395,7 @@ public class TopReborn
 
     #region P1B Omniscient
 
-    [ScriptMethod(name: "———————— 《P1B Omniscient》 ————————", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld:asdf"],
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€”â€”â€” ã€ŠP1B Omniscientã€‹ â€”â€”â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld:asdf"],
         userControl: true)]
     public void P1B_Omniscient_Separator(Event ev, ScriptAccessory sa)
     {
@@ -698,7 +698,7 @@ public class TopReborn
 
     #region P2 Omega Firewall Settings
 
-    [ScriptMethod(name: "———————— 《P2 Omega Firewall Settings》 ————————", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld:asdf"],
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€”â€”â€” ã€ŠP2 Omega Firewall Settingsã€‹ â€”â€”â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld:asdf"],
         userControl: true)]
     public void P2_OmegaFirewallSettings_Separator(Event ev, ScriptAccessory sa)
     {
@@ -845,7 +845,7 @@ public class TopReborn
 
     #region P2A Synergy Program
 
-    [ScriptMethod(name: "———————— 《P2A Synergy Program》 ————————", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld:asdf"],
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€”â€”â€” ã€ŠP2A Synergy Programã€‹ â€”â€”â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld:asdf"],
         userControl: true)]
     public void P2A_SynergyProgram_Separator(Event ev, ScriptAccessory sa)
     {
@@ -1146,7 +1146,7 @@ public class TopReborn
 
     #region P2B Blades
 
-    [ScriptMethod(name: "———————— 《P2B Blades》 ————————", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld:asdf"],
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€”â€”â€” ã€ŠP2B Bladesã€‹ â€”â€”â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld:asdf"],
         userControl: true)]
     public void P2B_Blades_Separator(Event ev, ScriptAccessory sa)
     {
@@ -1400,7 +1400,7 @@ public class TopReborn
 
     #region P3A Hello World
 
-    [ScriptMethod(name: "———————— 《P3A Hello World》 ————————", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld:asdf"],
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€”â€”â€” ã€ŠP3A Hello Worldã€‹ â€”â€”â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld:asdf"],
         userControl: true)]
     public void P3A_HelloWorld_Separator(Event ev, ScriptAccessory sa)
     {
@@ -1514,7 +1514,7 @@ public class TopReborn
     {
         if (_parse != 3) return;
         
-        //  远离 after stack -> stack -> 靠近 after big circle -> big circle ->
+        //  è¿œç¦» after stack -> stack -> é è¿‘ after big circle -> big circle ->
         const int STATE_REMOTE_BREAK = 0;
         const int STATE_STACK = 1;
         const int STATE_LOCAL_BREAK = 2;
@@ -1558,12 +1558,12 @@ public class TopReborn
         {
             return state switch
             {
-                STATE_DEFAMATION   => (defamationTower, DEFAMATION_CLOSE_DEG, DEFAMATION_OUT, $"Inside Big Circle【{(_p3.BigCircleIsRedTower ? "Red" : "Blue")}】Tower"),
-                STATE_REMOTE_BREAK => (stackTower,      REMOTE_CLOSE_DEG,     REMOTE_OUT,     $"Far Tether【{(_p3.BigCircleIsRedTower ? "Blue" : "Red")}】Between Towers Stack"),
-                STATE_STACK        => (stackTower,      STACK_CLOSE_DEG,      STACK_OUT,      $"Stack【{(_p3.BigCircleIsRedTower ? "Blue" : "Red")}】Inside Tower"),
+                STATE_DEFAMATION   => (defamationTower, DEFAMATION_CLOSE_DEG, DEFAMATION_OUT, $"Inside Big Circleã€{(_p3.BigCircleIsRedTower ? "Red" : "Blue")}ã€‘Tower"),
+                STATE_REMOTE_BREAK => (stackTower,      REMOTE_CLOSE_DEG,     REMOTE_OUT,     $"Far Tetherã€{(_p3.BigCircleIsRedTower ? "Blue" : "Red")}ã€‘Between Towers Stack"),
+                STATE_STACK        => (stackTower,      STACK_CLOSE_DEG,      STACK_OUT,      $"Stackã€{(_p3.BigCircleIsRedTower ? "Blue" : "Red")}ã€‘Inside Tower"),
                 STATE_LOCAL_BREAK  => _p3.HelloWorldRound == 4 
-                                    ? (stackTower,      REMOTE_CLOSE_DEG,     REMOTE_OUT,     $"Near Tether Round 4【{(_p3.BigCircleIsRedTower ? "Blue" : "Red")}】Between Towers Stack") // Round 4 Near uses Far
-                                    : (defamationTower, LOCAL_CLOSE_DEG,      LOCAL_OUT,      $"Near Tether【{(_p3.BigCircleIsRedTower ? "Red" : "Blue")}】Outside Tower Spread"), // Other rounds use Big Circle tower
+                                    ? (stackTower,      REMOTE_CLOSE_DEG,     REMOTE_OUT,     $"Near Tether Round 4ã€{(_p3.BigCircleIsRedTower ? "Blue" : "Red")}ã€‘Between Towers Stack") // Round 4 Near uses Far
+                                    : (defamationTower, LOCAL_CLOSE_DEG,      LOCAL_OUT,      $"Near Tetherã€{(_p3.BigCircleIsRedTower ? "Red" : "Blue")}ã€‘Outside Tower Spread"), // Other rounds use Big Circle tower
                 _ => throw new ArgumentException($"Unknown state: {state}")
             };
         }
@@ -1573,7 +1573,7 @@ public class TopReborn
         {
             // Determine if the first tower is recorded in the units digit (true: units, false: tens)
             // bool isFirstAtDigitOne = towerPos.GetDecimalDigit(1) < towerPos.GetDecimalDigit(2);
-            // The difference is ±2 or ±6, when the subtraction result is -2 or 6, the direction represented by the units digit is the first tower, rotating counter-clockwise by 2 gives the second tower
+            // The difference is Â±2 or Â±6, when the subtraction result is -2 or 6, the direction represented by the units digit is the first tower, rotating counter-clockwise by 2 gives the second tower
             bool isFirstAtDigitOne = Math.Abs(2 - (towerPos.GetDecimalDigit(1) - towerPos.GetDecimalDigit(2))) == 4;
             float direction = isFirstAtDigitOne ? 1f : -1f;
     
@@ -1600,7 +1600,7 @@ public class TopReborn
     {
         if (_parse != 3) return;
         
-        //  远离 after stack -> stack -> 靠近 after big circle -> big circle ->
+        //  è¿œç¦» after stack -> stack -> é è¿‘ after big circle -> big circle ->
         const int STATE_REMOTE_BREAK = 0;
         const int STATE_STACK = 1;
         const int STATE_LOCAL_BREAK = 2;
@@ -1896,7 +1896,7 @@ public class TopReborn
 
     #region P4 Blue Screen
 
-    [ScriptMethod(name: "———————— 《P4 Blue Screen》 ————————", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld:asdf"],
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€”â€”â€” ã€ŠP4 Blue Screenã€‹ â€”â€”â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld:asdf"],
         userControl: true)]
     public void P4_BlueScreen_Separator(Event ev, ScriptAccessory sa)
     {
@@ -2075,7 +2075,7 @@ public class TopReborn
 
     #region P5A Mechanic 1 / First Debuff Transfer
     
-    [ScriptMethod(name: "———————— 《P5A1 Mechanic 1》 ————————", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld:asdf"],
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€”â€”â€” ã€ŠP5A1 Mechanic 1ã€‹ â€”â€”â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld:asdf"],
         userControl: true)]
     public void P5_Mechanic1_Separator(Event ev, ScriptAccessory sa)
     {
@@ -2340,7 +2340,7 @@ public class TopReborn
             // All coordinates are based on quadrant 0 (bottom right), later mirrored by quadrant
             Vector3 raw = isRemoteTetherOutside ? new Vector3(102.7f, 0, 110f) : new Vector3(108.7f, 0, 110f);
 
-            // Rotate overall -90° clockwise when Boss is in odd direction
+            // Rotate overall -90Â° clockwise when Boss is in odd direction
             if (omegaDir % 2 == 1)
                 raw = raw.RotateAndExtend(new Vector3(109.9f, 0, 110f), -90f.DegToRad());
             
@@ -2662,7 +2662,7 @@ public class TopReborn
         sa.DebugMsg($"First Transfer: After correction, {_pd.ShowPriorities()}", Debugging);
     }
     
-    [ScriptMethod(name: "———————— 《P5A2 First Transfer》 ————————", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld:asdf"],
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€”â€”â€” ã€ŠP5A2 First Transferã€‹ â€”â€”â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld:asdf"],
         userControl: true)]
     public void P5A2_FirstTransfer_Separator(Event ev, ScriptAccessory sa)
     {
@@ -2751,7 +2751,7 @@ public class TopReborn
 
     #region P5B Mechanic 2 / Second Transfer
 
-    [ScriptMethod(name: "———————— 《P5B1 Mechanic 2》 ————————", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld:asdf"],
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€”â€”â€” ã€ŠP5B1 Mechanic 2ã€‹ â€”â€”â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld:asdf"],
         userControl: true)]
     public void P5B1_Mechanic2_Separator(Event ev, ScriptAccessory sa)
     {
@@ -2919,7 +2919,7 @@ public class TopReborn
         sa.DebugMsg($"Current phase: {_parse}", Debugging);
     }
     
-    [ScriptMethod(name: "———————— 《P5B2 Second Transfer》 ————————", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld:asdf"],
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€”â€”â€” ã€ŠP5B2 Second Transferã€‹ â€”â€”â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld:asdf"],
         userControl: true)]
     public void P5B2_SecondTransfer_Separator(Event ev, ScriptAccessory sa)
     {
@@ -3151,7 +3151,7 @@ public class TopReborn
     
     #region P5C Mechanic 3 / Third Transfer
 
-    [ScriptMethod(name: "———————— 《P5C1 Mechanic 3》 ————————", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld:asdf"],
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€”â€”â€” ã€ŠP5C1 Mechanic 3ã€‹ â€”â€”â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld:asdf"],
         userControl: true)]
     public void P5C1_Mechanic3_Separator(Event ev, ScriptAccessory sa)
     {
@@ -3367,7 +3367,7 @@ public class TopReborn
         _parse = 5.35;
     }
 
-    [ScriptMethod(name: "———————— 《P5C2 Third Transfer》 ————————", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld:asdf"],
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€”â€”â€” ã€ŠP5C2 Third Transferã€‹ â€”â€”â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld:asdf"],
         userControl: true)]
     public void P5C2_ThirdTransfer_Separator(Event ev, ScriptAccessory sa)
     {
@@ -3470,7 +3470,7 @@ public class TopReborn
         sa.DebugMsg($"Current phase: {_parse}", Debugging);
     }
     
-    [ScriptMethod(name: "———————— 《P5C3 Fourth Transfer》 ————————", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld:asdf"],
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€”â€”â€” ã€ŠP5C3 Fourth Transferã€‹ â€”â€”â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld:asdf"],
         userControl: true)]
     public void P5C3_FourthTransfer_Separator(Event ev, ScriptAccessory sa)
     {
@@ -3618,7 +3618,7 @@ public class TopReborn
 
     #region P6 Cosmic Memory
     
-    [ScriptMethod(name: "———————— 《P6 Cosmic Memory》 ————————", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld:asdf"],
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€”â€”â€” ã€ŠP6 Cosmic Memoryã€‹ â€”â€”â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld:asdf"],
         userControl: true)]
     public void P6_AutoAttack_Separator(Event ev, ScriptAccessory sa)
     {
@@ -3827,7 +3827,7 @@ public class TopReborn
     
     #region P6A Cosmo Arrow
 
-    [ScriptMethod(name: "———————— 《P6A Cosmo Arrow》 ————————", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld:asdf"],
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€”â€”â€” ã€ŠP6A Cosmo Arrowã€‹ â€”â€”â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld:asdf"],
         userControl: true)]
     public void P6A_CosmoArrow_Separator(Event ev, ScriptAccessory sa)
     {
@@ -4028,7 +4028,7 @@ public class TopReborn
 
     #region P6B Unlimited Wave Cannon
 
-    [ScriptMethod(name: "———————— 《P6B Unlimited Wave Cannon》 ————————", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld:asdf"],
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€”â€”â€” ã€ŠP6B Unlimited Wave Cannonã€‹ â€”â€”â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld:asdf"],
         userControl: true)]
     public void P6B_UnlimitedWaveCannon_Separator(Event ev, ScriptAccessory sa)
     {
@@ -4156,7 +4156,7 @@ public class TopReborn
 
     #region P6C Cosmic Meteor
 
-    [ScriptMethod(name: "———————— 《P6C Cosmic Meteor》 ————————", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld:asdf"],
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€”â€”â€” ã€ŠP6C Cosmic Meteorã€‹ â€”â€”â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld:asdf"],
         userControl: true)]
     public void P6C_CosmicMeteor_Separator(Event ev, ScriptAccessory sa)
     {

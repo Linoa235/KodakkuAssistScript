@@ -1,4 +1,4 @@
-// File: OmegaProtocolUltimate_Unknown.cs
+﻿// File: OmegaProtocolUltimate_Unknown.cs
 using System;
 using KodakkuAssist.Module.GameEvent;
 using KodakkuAssist.Script;

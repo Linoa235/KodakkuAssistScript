@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -15,7 +15,7 @@ using System.Threading.Tasks;
 namespace the_Aery;
 
 [ScriptType(guid: "ac6caf4e-5eee-406c-8621-a5f3c5c7e9b0", name: "LV55 The Aery", territorys: [1065],
-    version: "0.0.0.3", author: "Tetora", note: noteStr)]
+    version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
 
 public class the_Aery
 {

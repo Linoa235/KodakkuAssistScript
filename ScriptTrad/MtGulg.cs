@@ -1,4 +1,4 @@
-using Dalamud.Utility.Numerics;
+﻿using Dalamud.Utility.Numerics;
 using FFXIVClientStructs.FFXIV.Client.Game;
 using FFXIVClientStructs.FFXIV.Client.Game.Character;
 using FFXIVClientStructs.FFXIV.Client.Game.Control;
@@ -33,7 +33,7 @@ using KodaMarkType = KodakkuAssist.Module.GameOperate.MarkType;
 namespace Veever.Shadowbringers.MtGulg;
 
 [ScriptType(name: Name, territorys: [822], guid: "e67816ed-08b7-4df6-857a-2b71e9426d1c",
-    version: Version, author: "Veever", note: NoteStr, updateInfo: UpdateInfo)]
+    version: Version, Author: "Linoa235", note: NoteStr, updateInfo: UpdateInfo)]
 
 // ^(?!.*((Monk|Machinist|Dragoon|Samurai|Ninja|Viper|Reaper|Dancer|Bard|Astrologian|Sage|Scholar|(Eos|Selene)|Seraph|White Mage|Warrior|Paladin|Dark Knight|Gunbreaker|Pictomancer|Black Mage|Blue Mage|Summoner|Carbuncle|Demigod Bahamut|Demigod Phoenix|Garuda-Egi|Titan-Egi|Ifrit-Egi|Automaton Queen)\] (Used|Cast))).*35501.*$
 // ^\[\w+\|[^|]+\|E\]\s\w+
@@ -46,7 +46,7 @@ public class MtGulg
     1. If you need a draw for a mechanic or notice any issues, @ me on DC or DM me.
     Duckmen
     ------------------------------
-    1. Si necesita un dibujo para una mecánica o nota algún problema, @ me en DC o envíame un MD.
+    1. Si necesita un dibujo para una mecÃ¡nica o nota algÃºn problema, @ me en DC o envÃ­ame un MD.
     Duckmen
     """;
 
@@ -66,7 +66,7 @@ public class MtGulg
     [UserSetting("Announce Language")]
     public Language language { get; set; } = Language.Chinese;
 
-    [UserSetting("Draw Opacity — higher value = more visible")]
+    [UserSetting("Draw Opacity â€” higher value = more visible")]
     public static float ColorAlpha { get; set; } = 1f;
 
     [UserSetting("Banner Text Toggle")]
@@ -192,11 +192,11 @@ public class MtGulg
         string msg = "";
         if (isMark)
         {
-            msg = language == Language.Chinese ? "打断被标记目标" : "Interrupt marked target";
+            msg = language == Language.Chinese ? "æ‰“æ–­è¢«æ ‡è®°ç›®æ ‡" : "Interrupt marked target";
         }
         else
         {
-            msg = language == Language.Chinese ? "打断得到宽恕的偏见" : "Interrupt Forgiven Prejudice";
+            msg = language == Language.Chinese ? "æ‰“æ–­å¾—åˆ°å®½æ•çš„åè§" : "Interrupt Forgiven Prejudice";
         }
 
         if (isText) sa.Method.TextInfo($"{msg}", duration: 4500, true);
@@ -234,7 +234,7 @@ public class MtGulg
     {
         if (ev.TargetId == sa.Data.Me)
         {
-            string msg = language == Language.Chinese ? "死刑点名, 注意减伤" : "Tankbuster on YOU, use mitigation";
+            string msg = language == Language.Chinese ? "æ­»åˆ‘ç‚¹å, æ³¨æ„å‡ä¼¤" : "Tankbuster on YOU, use mitigation";
             if (isText) sa.Method.TextInfo($"{msg}", duration: 2500, true);
             if (isTTS) sa.Method.EdgeTTS($"{msg}");
         }
@@ -289,7 +289,7 @@ public class MtGulg
     {
         if (ev.TargetId == sa.Data.Me)
         {
-            string msg = language == Language.Chinese ? "死刑点名, 注意减伤" : "Tankbuster on YOU, use mitigation";
+            string msg = language == Language.Chinese ? "æ­»åˆ‘ç‚¹å, æ³¨æ„å‡ä¼¤" : "Tankbuster on YOU, use mitigation";
             if (isText) sa.Method.TextInfo($"{msg}", duration: 4200, true);
             if (isTTS) sa.Method.EdgeTTS($"{msg}");
         }

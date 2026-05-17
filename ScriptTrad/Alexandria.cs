@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Numerics;
 using System.Collections.Generic;
@@ -11,7 +11,7 @@ using KodakkuAssist.Module.Draw;
 
 namespace Cyf5119Script.Dawntrail.Alexandria;
 
-[ScriptType(guid: "243443E4-FC8E-3EA6-9A75-FD2A4B6990FF", name: "Alexandria", territorys: [1199], version: "0.0.0.4", author: "Cyf5119")]
+[ScriptType(guid: "243443E4-FC8E-3EA6-9A75-FD2A4B6990FF", name: "Alexandria", territorys: [1199], version: "0.0.0.4", Author: "Linoa235")]
 public class Alexandria
 {
     private List<List<uint>> InterferonList = [];

@@ -1,4 +1,4 @@
-// File: AloaloIslandDrawingAndGuide_Mao.cs
+﻿// File: AloaloIslandDrawingAndGuide_Mao.cs
 using System;
 using Newtonsoft.Json;
 using System.Numerics;
@@ -32,15 +32,15 @@ using static TsingNamespace.AloaloIsland.ScriptExtensions_Tsing;
 namespace TsingNamespace.AloaloIsland
 {
 
-    [ScriptType(name: "Aloalo Island Drawing + Guide", territorys: [1179, 1180], guid: "e3cfc380-edc2-f441-bebe-e9e294f2632a", version: "0.0.1.5", author: "Mao", note: noteStr)]
+    [ScriptType(name: "Aloalo Island Drawing + Guide", territorys: [1179, 1180], guid: "e3cfc380-edc2-f441-bebe-e9e294f2632a", version: "0.0.1.5", Author: "Linoa235", note: noteStr)]
     public class AloaloIslandScript
     {   
         const string noteStr =
         """
         Based on Maomao Nest Guide;
         Mobs: Provides target filtering function, enabled by default, can be disabled in method settings.
-            ↑ When the current group of mobs is not defeated, the next group of mobs cannot be targeted (Crab Boss group will be released when Shrimp auto-attacks).
-            ↑ Tree grouping strategy follows MMW guide; all mobs will forcibly release target selection if triggered accidentally.
+            â†‘ When the current group of mobs is not defeated, the next group of mobs cannot be targeted (Crab Boss group will be released when Shrimp auto-attacks).
+            â†‘ Tree grouping strategy follows MMW guide; all mobs will forcibly release target selection if triggered accidentally.
         Boss 1 uses fusion method by default, can be modified in user settings.
         Boss 2 provides facing correction function, can be enabled in user settings.
         Boss 2 can set facing indicator color depth separately for double light orb + step floor fire.
@@ -620,10 +620,10 @@ namespace TsingNamespace.AloaloIsland
             1, Calculate the angle value of the center crystal's coordinates
             2, Add the crystal's orientation: 0 for horizontal crystal, -1.57 for vertical crystal
             
-            Angle π/4, horizontal crystal, no rotation; vertical crystal, origin rotation +π/2
-            Angle 3π/4, horizontal crystal, origin rotation π; vertical crystal, origin rotation π/2
-            Angle 5π/4, horizontal crystal, origin rotation π; vertical crystal, origin rotation 3π/2
-            Angle 7π/4, horizontal crystal, origin rotation 2π; vertical crystal, origin rotation 3π/2
+            Angle Ï€/4, horizontal crystal, no rotation; vertical crystal, origin rotation +Ï€/2
+            Angle 3Ï€/4, horizontal crystal, origin rotation Ï€; vertical crystal, origin rotation Ï€/2
+            Angle 5Ï€/4, horizontal crystal, origin rotation Ï€; vertical crystal, origin rotation 3Ï€/2
+            Angle 7Ï€/4, horizontal crystal, origin rotation 2Ï€; vertical crystal, origin rotation 3Ï€/2
 
             */
 
@@ -952,8 +952,8 @@ namespace TsingNamespace.AloaloIsland
 
             /* Design node paths
             Point 1, starting point; (wait for the first water circle to be placed)
-            Point 2, starting point rotated π/2 around the quarter arena (direction determined by isClockwise); (wait for the second water circle to be placed)
-            Point 3, starting point rotated π around the quarter arena; (wait for the third water circle to be placed, the first buff triggers when the third water circle is placed)
+            Point 2, starting point rotated Ï€/2 around the quarter arena (direction determined by isClockwise); (wait for the second water circle to be placed)
+            Point 3, starting point rotated Ï€ around the quarter arena; (wait for the third water circle to be placed, the first buff triggers when the third water circle is placed)
             Point 4, a point 6m from the end point (wait for the fourth water circle to be placed) <= spread first then stack
             Point 4, the "midpoint" between point 3 and the end point moved 5m toward the arena center <= stack first then spread
             Point 5, end point (wait for the fifth water circle to be placed, the second buff triggers when the fifth water circle is placed)
@@ -1134,7 +1134,7 @@ namespace TsingNamespace.AloaloIsland
             Vector2 myPoint2 = Util.RotatePoint(point2_template, isMeGoToNorth ? Math.PI : 0);
             Vector2 myEndPoint = Util.RotatePoint(endPoint_template, isMeGoToNorth ? Math.PI : 0);
 
-            //If it's east-west side, rotate -0.5π
+            //If it's east-west side, rotate -0.5Ï€
             if(!isVerticalWater)
             {
                 mySatrtPoint = Util.RotatePoint(mySatrtPoint,-0.5 * Math.PI);
@@ -1219,7 +1219,7 @@ namespace TsingNamespace.AloaloIsland
                                 ? myPriority < Array.IndexOf(roleMarkPriority, accessory.GetIndexInParty(anotherOneId))
                                 : false;
 
-            //2. Check mob debuff situation, sort by rotation angle - 0.5π is the first mob DataId 16545, mob bubble debuff Id 3745
+            //2. Check mob debuff situation, sort by rotation angle - 0.5Ï€ is the first mob DataId 16545, mob bubble debuff Id 3745
             uint mobDataId1 = 16545;
             uint mobDataId2 = 16552;
             uint bubbleDebuffIdOnMob = 3745;
@@ -1328,7 +1328,7 @@ namespace TsingNamespace.AloaloIsland
             accessory.Log.Debug($"Boss 1 Second Spring Crystals Safe Zone Draw : isMeGetBubbleDebuff => {isMeGetBubbleDebuff}");
             accessory.Log.Debug($"Boss 1 Second Spring Crystals Safe Zone Draw : isMeGetFetterDebuff => {isMeGetFetterDebuff}");
             accessory.Log.Debug($"Boss 1 Second Spring Crystals Safe Zone Draw : isMeFirst(high priority) => {isMeFirst}");
-            accessory.Log.Debug($"Boss 1 Second Spring Crystals Safe Zone Draw : safeZoneType(1←→,2↑↓) => {safeZoneType}");
+            accessory.Log.Debug($"Boss 1 Second Spring Crystals Safe Zone Draw : safeZoneType(1â†â†’,2â†‘â†“) => {safeZoneType}");
             accessory.Log.Debug($"Boss 1 Second Spring Crystals Safe Zone Draw : myMob => {myMob}");
         }
 
@@ -1539,7 +1539,7 @@ namespace TsingNamespace.AloaloIsland
         Clockwise rotation 01ED
         Counterclockwise rotation 01EE
         X icon 01F8
-        √ icon 01F7
+        âˆš icon 01F7
 
         On boss
         Clockwise rotation 01E4
@@ -1562,7 +1562,7 @@ namespace TsingNamespace.AloaloIsland
 
 
         //Rune Cannon safety detection requires obtaining boss cast + boss's target type simultaneously
-        //↑Not necessary to detect like this, boss's Rune Cannon cast is 34955-34958; and there is an invisible clone cast 34959, the back of that cast unit's facing is the safe zone
+        //â†‘Not necessary to detect like this, boss's Rune Cannon cast is 34955-34958; and there is an invisible clone cast 34959, the back of that cast unit's facing is the safe zone
         [ScriptMethod(name: "Boss 2 Rune Blight Safe Zone", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:regex:^(34959|35814)$"])]
         public void Boss2_ArcaneBlightSafeZone(Event @event, ScriptAccessory accessory)
         {
@@ -2316,7 +2316,7 @@ namespace TsingNamespace.AloaloIsland
                 dpFan.Radian = MathF.PI / 3f ;
                 dpFan.Color = accessory.Data.DefaultSafeColor.WithW(0.4f);
                 dpFan.Delay = 12000;
-                //Starting coordinate is FFXIV coordinate -0.5π, clockwise/counterclockwise opposite
+                //Starting coordinate is FFXIV coordinate -0.5Ï€, clockwise/counterclockwise opposite
                 float _rot = -1f * MathF.PI + safeNumber * MathF.PI/3f ;
                 dpFan.Rotation = -_rot;
                 accessory.Method.SendDraw(DrawModeEnum.Default, DrawTypeEnum.Fan, dpFan);
@@ -2479,10 +2479,10 @@ namespace TsingNamespace.AloaloIsland
             
             /*
             Pass which bomb is closest to which number point
-            Point 1, -0.25π,19
-            Point 2, 0.25π,19
-            Point 3, 0.75π,19
-            Point 4, -0.75π,19
+            Point 1, -0.25Ï€,19
+            Point 2, 0.25Ï€,19
+            Point 3, 0.75Ï€,19
+            Point 4, -0.75Ï€,19
             Calculate the distance from each point to the three bombs, take the shortest distance as the point's identifier distance
             Sort each point by identifier distance
             */
@@ -2591,7 +2591,7 @@ namespace TsingNamespace.AloaloIsland
             Vector3 originPos = new (-200,-200,0);
             float _homingRot = MathF.Atan2(_homingPatternPos.Z - originPos.Z,_homingPatternPos.X - originPos.X);
             int _homingNum = (int)Math.Round((_homingRot + 2f * MathF.PI - MathF.PI/12f) / (MathF.PI/6f)) % 3;
-            //If 0, landing point is blue, new 12 o'clock angle is 0 + (π/2)x integer ;1, red, π/6 + (π/2)x integer ;2, green, π/3 + (π/2)x integer;
+            //If 0, landing point is blue, new 12 o'clock angle is 0 + (Ï€/2)x integer ;1, red, Ï€/6 + (Ï€/2)x integer ;2, green, Ï€/3 + (Ï€/2)x integer;
             float newNorthRot = -0.5f * MathF.PI;
             foreach (float fireSpreadRot in boss3_fireSpreadRotation)
             {
@@ -2698,7 +2698,7 @@ namespace TsingNamespace.AloaloIsland
                 isMyObjectAtLeft = _pos.X < originPos.X;
             }
 
-            //Template with 1 point -0.25π as new north point
+            //Template with 1 point -0.25Ï€ as new north point
             Vector3 claw_startTemplate = new(-200 + 13, -200, -13);
             Vector3 claw_endTemplate = new(-200 - 13, -200, 13);
             Vector3 missile_startTemplate = new(-200, -200, 0);

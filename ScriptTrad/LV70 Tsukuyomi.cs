@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -15,7 +15,7 @@ using KodakkuAssist.Extensions;
 namespace Tsukuyomi;
 
 [ScriptType(guid: "97415dc8-cd16-4c9b-87be-026a297c3451", name: "Tsukuyomi", territorys: [778],
-    version: "0.0.0.2", author: "Tetora", note: noteStr)]
+    version: "0.0.0.2", Author: "Linoa235", note: noteStr)]
 
 public class Tsukuyomi
 {

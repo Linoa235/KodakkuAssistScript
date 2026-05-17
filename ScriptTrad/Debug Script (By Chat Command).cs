@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Collections.Concurrent;
 using System.Globalization;
@@ -26,7 +26,7 @@ namespace KodakkuDebugScript
         guid: "B866F3EA-35A3-4BAA-8259-17A0D7608928",
         territorys: [],
         version: "0.0.2",
-        author: "XSZYYS",
+        Author: "Linoa235",
         note: "Enter commands in echo channel for dynamic drawing.\nUsage:\n[target] [shape] [parameters...]\n\nTarget (optional, defaults to self):\n- test ... (draw on self)\n- test eid=[entity ID] ... (draw on specified entity)\n\nShapes and parameters:\n- circle [radius]\n- fan [radius] [angle]\n- rect [width] [length]\n- donut [outer radius] [inner radius]\n- straight [width] [length]\n\nExamples:\n- test circle 5\n- test eid=4000123A fan 10 90"
     )]
     public class GeneralDebugScript
@@ -196,7 +196,7 @@ namespace KodakkuDebugScript
             dp.DestoryAt = 5000;
             dp.ScaleMode |= ScaleMode.ByTime;
             accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Fan, dp);
-            accessory.Method.SendChat($"/e [Debug Script] Drawn fan with radius {radius}, angle {angleDegrees}° on {origin.SourceName}.");
+            accessory.Method.SendChat($"/e [Debug Script] Drawn fan with radius {radius}, angle {angleDegrees}Â° on {origin.SourceName}.");
         }
 
         private void HandleRectCommand(string[] parts, DrawOrigin origin, ScriptAccessory accessory)

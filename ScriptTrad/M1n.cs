@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Numerics;
 using System.Collections.Generic;
@@ -13,7 +13,7 @@ using KodakkuAssist.Module.Draw;
 
 namespace Cyf5119Script.Dawntrail.M1n;
 
-[ScriptType(guid: "28EEE8DC-DA6A-3F91-0D0C-7AA1BFB49AB0", name: "M1n", territorys: [1225], version: "0.0.0.4", author: "Cyf5119")]
+[ScriptType(guid: "28EEE8DC-DA6A-3F91-0D0C-7AA1BFB49AB0", name: "M1n", territorys: [1225], version: "0.0.0.4", Author: "Linoa235")]
 public class M1n
 {
     private uint tethered = 0;

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Numerics;
 using Newtonsoft.Json;
@@ -17,7 +17,7 @@ using System.ComponentModel;
 namespace Veever.A_Realm_Reborn.FlickingSticksandTakingNames;
 
 [ScriptType(name: "LV.25 Flicking Sticks and Taking Names", territorys: [219], guid: "f63ef61a-5fe6-437a-afb4-513dafecbb54",
-    version: "0.0.0.3", author: "Veever", note: noteStr)]
+    version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
 
 public class Flicking_Sticks_and_Taking_Names
 {

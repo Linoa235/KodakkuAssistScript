@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using KodakkuAssist.Module.GameEvent;
 using KodakkuAssist.Script;
 using KodakkuAssist.Module.GameEvent.Struct;
@@ -23,7 +23,7 @@ using Lumina.Excel.Sheets;
 namespace UsamisKodakku.Scripts._07_DawnTrail.FRU;
 
 [ScriptType(name: Name, territorys: [1238], guid: "3076a62b-127e-468e-96d3-4f1d559857ec",
-    version: Version, author: "Usami", note: NoteStr, updateInfo: UpdateInfo)]
+    version: Version, Author: "Linoa235", note: NoteStr, updateInfo: UpdateInfo)]
 
 // ^(?!.*((Monk|Machinist|Dragoon|Samurai|Ninja|Viper|Reaper|Dancer|Bard|Astrologian|Sage|Scholar|(Eos|Selene)|Seraph|White Mage|Warrior|Paladin|Dark Knight|Gunbreaker|Pictomancer|Black Mage|Blue Mage|Summoner|Carbuncle|Demigod Bahamut|Demigod Phoenix|Garuda-Egi|Titan-Egi|Ifrit-Egi|Puppet)\] (Used|Cast))).*35501.*$
 // ^\[\w+\|[^|]+\|E\]\s\w+
@@ -182,7 +182,7 @@ public class FruPatch
 
     #region P1 Fatebreaker
 
-    [ScriptMethod(name: "---- 《P1: Fatebreaker》 ----", eventType: EventTypeEnum.NpcYell, eventCondition: ["ActionId:Hello1aya2World"],
+    [ScriptMethod(name: "---- ã€ŠP1: Fatebreakerã€‹ ----", eventType: EventTypeEnum.NpcYell, eventCondition: ["ActionId:Hello1aya2World"],
         userControl: true)]
     public void SplitLine_FateBreaker(Event @event, ScriptAccessory accessory)
     {
@@ -459,7 +459,7 @@ public class FruPatch
 
     #region P2 Shiva
 
-    [ScriptMethod(name: "---- 《P2: Shiva·Mitron》 ----", eventType: EventTypeEnum.NpcYell, eventCondition: ["ActionId:Hello1aya2World"],
+    [ScriptMethod(name: "---- ã€ŠP2: ShivaÂ·Mitronã€‹ ----", eventType: EventTypeEnum.NpcYell, eventCondition: ["ActionId:Hello1aya2World"],
         userControl: true)]
     public void SplitLine_Shiva(Event @event, ScriptAccessory accessory)
     {
@@ -640,7 +640,7 @@ public class FruPatch
 
     #region P3 Gaia
 
-    [ScriptMethod(name: "---- 《P3: Oracle of Darkness》 ----", eventType: EventTypeEnum.NpcYell, eventCondition: ["ActionId:Hello1aya2World"],
+    [ScriptMethod(name: "---- ã€ŠP3: Oracle of Darknessã€‹ ----", eventType: EventTypeEnum.NpcYell, eventCondition: ["ActionId:Hello1aya2World"],
         userControl: true)]
     public void SplitLine_Gaia(Event ev, ScriptAccessory accessory)
     {
@@ -1292,7 +1292,7 @@ public class FruPatch
 
     #region P4 Light & Dark Maidens
 
-    [ScriptMethod(name: "---- 《P4: Light & Dark Maidens》 ----", eventType: EventTypeEnum.NpcYell, eventCondition: ["ActionId:Hello1aya2World"],
+    [ScriptMethod(name: "---- ã€ŠP4: Light & Dark Maidensã€‹ ----", eventType: EventTypeEnum.NpcYell, eventCondition: ["ActionId:Hello1aya2World"],
         userControl: true)]
     public void SplitLine_Girls(Event @event, ScriptAccessory accessory)
     {
@@ -1402,9 +1402,9 @@ public class FruPatch
 
     #endregion P4 Light & Dark Maidens
 
-    #region P5 Pandora·Mitron
+    #region P5 PandoraÂ·Mitron
 
-    [ScriptMethod(name: "---- 《P5: Pandora·Mitron》 ----", eventType: EventTypeEnum.NpcYell, eventCondition: ["ActionId:Hello1aya2World"],
+    [ScriptMethod(name: "---- ã€ŠP5: PandoraÂ·Mitronã€‹ ----", eventType: EventTypeEnum.NpcYell, eventCondition: ["ActionId:Hello1aya2World"],
         userControl: true)]
     public void SplitLine_Pandora(Event @event, ScriptAccessory accessory)
     {
@@ -1446,7 +1446,7 @@ public class FruPatch
 
     #endregion P5.3 Polarizing Strike
 
-    #endregion P5 Pandora·Mitron
+    #endregion P5 PandoraÂ·Mitron
 
     #region Event Enum
     public enum EventIdx : int
@@ -1644,7 +1644,7 @@ public class FruPatch
 
         public string ShowCounter()
         {
-            var str = $"{Annotation} Counter 【{(Enable ? "Enabled" : "Disabled")}】: {Number}\n";
+            var str = $"{Annotation} Counter ã€{(Enable ? "Enabled" : "Disabled")}ã€‘: {Number}\n";
             accessory.DebugMsg(str, DebugMode);
             return str;
         }

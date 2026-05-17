@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using KodakkuAssist.Module.GameEvent;
 using KodakkuAssist.Script;
 using KodakkuAssist.Module.Draw;
@@ -10,7 +10,7 @@ using System.Linq;
 
 namespace Meva.Heavensward.KodakkuAssist.Alexander;
 
-[ScriptType(name: "LV.60 Alexander - The Burden of the Father", territorys: [583], guid: "c77e794f-f3bc-37fc-810b-bb153ba399c1", version: "0.0.0.4", author: "Meva", note:noteStr)]
+[ScriptType(name: "LV.60 Alexander - The Burden of the Father", territorys: [583], guid: "c77e794f-f3bc-37fc-810b-bb153ba399c1", version: "0.0.0.4", Author: "Linoa235", note:noteStr)]
 public class A12N
 {
     const string noteStr =

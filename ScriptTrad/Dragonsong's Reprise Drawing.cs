@@ -1,4 +1,4 @@
-// File: DragongSingDraw_Karlin.cs
+﻿// File: DragongSingDraw_Karlin.cs
 using System;
 using KodakkuAssist.Module.GameEvent;
 using KodakkuAssist.Script;
@@ -17,7 +17,7 @@ using KodakkuAssist.Module.GameOperate;
 
 namespace KarlinScriptNamespace
 {
-    [ScriptType(name:"Dragonsong's Reprise Drawing", territorys: [968], guid: "d9c97e91-9b59-432d-a3a1-42a8475b7e2a", version:"0.0.0.6", author: "Karlin")]
+    [ScriptType(name:"Dragonsong's Reprise Drawing", territorys: [968], guid: "d9c97e91-9b59-432d-a3a1-42a8475b7e2a", version:"0.0.0.6", Author: "Linoa235")]
     public class DragongSingDraw
     {
         
@@ -344,69 +344,69 @@ namespace KarlinScriptNamespace
             var cpos = new Vector3(100, 0, 100);
             var npos = new Vector3(100, 0, 96);
             
-            //○
+            //â—‹
             if (p1sony[index] == 0)
             {
                 var p1= RotatePoint(npos, cpos, float.Pi / 2);
                 var p2= RotatePoint(npos, cpos, float.Pi / -2);
                 
-                dp.Name= "P1_Sony○1";
+                dp.Name= "P1_Sonyâ—‹1";
                 dp.TargetPosition = p1;
                 accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
-                dp.Name = "P1_Sony○2";
+                dp.Name = "P1_Sonyâ—‹2";
                 dp.TargetPosition = p2;
                 accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
             }
-            //▽
+            //â–½
             if (p1sony[index] == 1)
             {
                 if(index==2||index==3)
                 {
                     var p = RotatePoint(npos, cpos, float.Pi / -4); 
-                    dp.Name = "P1_Sony▽Healer";
+                    dp.Name = "P1_Sonyâ–½Healer";
                     dp.TargetPosition = p;
                     accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
                 }
                 else
                 {
                     var p = RotatePoint(npos, cpos, float.Pi / 4 * 3);
-                    dp.Name = "P1_Sony▽DPS";
+                    dp.Name = "P1_Sonyâ–½DPS";
                     dp.TargetPosition = p;
                     accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
                 }
             }
-            //□
+            //â–¡
             if (p1sony[index] == 2)
             {
                 if (index == 0 || index == 1)
                 {
                     var p = RotatePoint(npos, cpos, float.Pi / 4);
-                    dp.Name = "P1_Sony□Tank";
+                    dp.Name = "P1_Sonyâ–¡Tank";
                     dp.TargetPosition = p;
                     accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
                 }
                 else
                 {
                     var p = RotatePoint(npos, cpos, float.Pi / -4 * 3);
-                    dp.Name = "P1_Sony□DPS";
+                    dp.Name = "P1_Sonyâ–¡DPS";
                     dp.TargetPosition = p;
                     accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
                 }
             }
-            //×
+            //Ã—
             if (p1sony[index] == 3)
             {
                 if (index == 0 || index == 1)
                 {
                     var p = npos;
-                    dp.Name = "P1_Sony×Tank";
+                    dp.Name = "P1_SonyÃ—Tank";
                     dp.TargetPosition = p;
                     accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
                 }
                 else
                 {
                     var p = RotatePoint(npos, cpos, float.Pi);
-                    dp.Name = "P1_Sony×DPS";
+                    dp.Name = "P1_SonyÃ—DPS";
                     dp.TargetPosition = p;
                     accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
                 }
@@ -476,8 +476,8 @@ namespace KarlinScriptNamespace
                 tordanId = id;
             }
         }
-        [ScriptMethod(name: "P2 First Mechanic Pol克兰 Charge", eventType: EventTypeEnum.NpcYell, eventCondition: ["Id:3781"])]
-        public void P2_FirstMechanicPol克兰Charge(Event @event, ScriptAccessory accessory)
+        [ScriptMethod(name: "P2 First Mechanic Polå…‹å…° Charge", eventType: EventTypeEnum.NpcYell, eventCondition: ["Id:3781"])]
+        public void P2_FirstMechanicPolå…‹å…°Charge(Event @event, ScriptAccessory accessory)
         {
             if (parse != 2.1) return;
             var dp = accessory.Data.GetDefaultDrawProperties();
@@ -490,8 +490,8 @@ namespace KarlinScriptNamespace
             dp.DestoryAt = 7000;
             accessory.Method.SendDraw(DrawModeEnum.Default, DrawTypeEnum.Rect, dp);
         }
-        [ScriptMethod(name: "P2 First Mechanic 伊尼亚斯 Charge", eventType: EventTypeEnum.NpcYell, eventCondition: ["Id:3782"])]
-        public void P2_FirstMechanic伊尼亚斯Charge(Event @event, ScriptAccessory accessory)
+        [ScriptMethod(name: "P2 First Mechanic ä¼Šå°¼äºšæ–¯ Charge", eventType: EventTypeEnum.NpcYell, eventCondition: ["Id:3782"])]
+        public void P2_FirstMechanicä¼Šå°¼äºšæ–¯Charge(Event @event, ScriptAccessory accessory)
         {
             if (parse != 2.1) return;
             var dp = accessory.Data.GetDefaultDrawProperties();
@@ -504,8 +504,8 @@ namespace KarlinScriptNamespace
             dp.DestoryAt = 7000;
             accessory.Method.SendDraw(DrawModeEnum.Default, DrawTypeEnum.Rect, dp);
         }
-        [ScriptMethod(name: "P2 First Mechanic 韦尔吉纳 Charge", eventType: EventTypeEnum.NpcYell, eventCondition: ["Id:3783"])]
-        public void P2_FirstMechanic韦尔吉纳Charge(Event @event, ScriptAccessory accessory)
+        [ScriptMethod(name: "P2 First Mechanic éŸ¦å°”å‰çº³ Charge", eventType: EventTypeEnum.NpcYell, eventCondition: ["Id:3783"])]
+        public void P2_FirstMechanicéŸ¦å°”å‰çº³Charge(Event @event, ScriptAccessory accessory)
         {
             if (parse != 2.1) return;
             var dp = accessory.Data.GetDefaultDrawProperties();
@@ -681,8 +681,8 @@ namespace KarlinScriptNamespace
                 accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Line, dp);
             }
         }
-        [ScriptMethod(name: "P2 First Mechanic 让勒努 Charge", eventType: EventTypeEnum.NpcYell, eventCondition: ["Id:2551"])]
-        public void P2_FirstMechanic让勒努Charge(Event @event, ScriptAccessory accessory)
+        [ScriptMethod(name: "P2 First Mechanic è®©å‹’åŠª Charge", eventType: EventTypeEnum.NpcYell, eventCondition: ["Id:2551"])]
+        public void P2_FirstMechanicè®©å‹’åŠªCharge(Event @event, ScriptAccessory accessory)
         {
             if (parse != 2.1) return;
             var dp = accessory.Data.GetDefaultDrawProperties();
@@ -698,8 +698,8 @@ namespace KarlinScriptNamespace
             dp.ScaleMode |= ScaleMode.YByDistance;
             accessory.Method.SendDraw(DrawModeEnum.Default, DrawTypeEnum.Rect, dp);
         }
-        [ScriptMethod(name: "P2 First Mechanic 阿代尔菲尔 Charge", eventType: EventTypeEnum.NpcYell, eventCondition: ["Id:2550"])]
-        public void P2_FirstMechanic阿代尔菲尔Charge(Event @event, ScriptAccessory accessory)
+        [ScriptMethod(name: "P2 First Mechanic é˜¿ä»£å°”è²å°” Charge", eventType: EventTypeEnum.NpcYell, eventCondition: ["Id:2550"])]
+        public void P2_FirstMechanicé˜¿ä»£å°”è²å°”Charge(Event @event, ScriptAccessory accessory)
         {
             if (parse != 2.1) return;
             var dp = accessory.Data.GetDefaultDrawProperties();
@@ -776,8 +776,8 @@ namespace KarlinScriptNamespace
             accessory.Method.SendDraw(DrawModeEnum.Default, DrawTypeEnum.SightAvoid, dp);
 
         }
-        [ScriptMethod(name: "P2 Second Mechanic 泽菲兰 Position Record", eventType: EventTypeEnum.NpcYell, eventCondition: ["Id:2549"], userControl: false)]
-        public void P2_SecondMechanic泽菲兰PositionRecord(Event @event, ScriptAccessory accessory)
+        [ScriptMethod(name: "P2 Second Mechanic æ³½è²å…° Position Record", eventType: EventTypeEnum.NpcYell, eventCondition: ["Id:2549"], userControl: false)]
+        public void P2_SecondMechanicæ³½è²å…°PositionRecord(Event @event, ScriptAccessory accessory)
         {
             if (parse != 2.2) return;
             p2ZPos = JsonConvert.DeserializeObject<Vector3>(@event["SourcePosition"]);
@@ -796,8 +796,8 @@ namespace KarlinScriptNamespace
                 if (tid == -279) p2Jump.Item2 = index;
             }
         }
-        [ScriptMethod(name: "P2 Second Mechanic 阿代尔菲尔 Position", eventType: EventTypeEnum.SetObjPos, eventCondition: ["SourceDataId:12601"], userControl: false)]
-        public void P2_SecondMechanic阿代尔菲尔Position(Event @event, ScriptAccessory accessory)
+        [ScriptMethod(name: "P2 Second Mechanic é˜¿ä»£å°”è²å°” Position", eventType: EventTypeEnum.SetObjPos, eventCondition: ["SourceDataId:12601"], userControl: false)]
+        public void P2_SecondMechanicé˜¿ä»£å°”è²å°”Position(Event @event, ScriptAccessory accessory)
         {
             if (parse != 2.2) return;
             p2AdelPos=JsonConvert.DeserializeObject<Vector3>(@event["SourcePosition"]);
@@ -2055,7 +2055,7 @@ namespace KarlinScriptNamespace
                 dp2.Scale = new(1f);
                 dp2.DestoryAt = 5000;
                 dp2.Name = $"P5_SecondMechanicSony{sony}KnockbackEnd";
-                //Doom ○
+                //Doom â—‹
                 if (sony == 10)
                 {
                     if (priority)
@@ -2069,31 +2069,31 @@ namespace KarlinScriptNamespace
                         dp2.Position = RotatePoint(npos2, cpos, float.Pi / 2);
                     }
                 }
-                //Doom ▽
+                //Doom â–½
                 if (sony == 11)
                 {
                     dp.TargetPosition = RotatePoint(npos, cpos, float.Pi * 0.75f);
                     dp2.Position = RotatePoint(npos2, cpos, float.Pi * 0.75f);
                 }
-                //Doom □
+                //Doom â–¡
                 if (sony == 12)
                 {
                     dp.TargetPosition = RotatePoint(npos, cpos, float.Pi * -0.75f);
                     dp2.Position = RotatePoint(npos2, cpos, float.Pi * -0.75f);
                 }
-                //▽
+                //â–½
                 if (sony == 1)
                 {
                     dp.TargetPosition = RotatePoint(npos, cpos, float.Pi * -0.25f);
                     dp2.Position = RotatePoint(npos2, cpos, float.Pi * -0.25f);
                 }
-                //□
+                //â–¡
                 if (sony == 2)
                 {
                     dp.TargetPosition = RotatePoint(npos, cpos, float.Pi * 0.25f);
                     dp2.Position = RotatePoint(npos2, cpos, float.Pi * 0.25f);
                 }
-                //×
+                //Ã—
                 if (sony == 3)
                 {
                     if (priority)

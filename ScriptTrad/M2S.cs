@@ -19,7 +19,7 @@ using KodakkuAssist.Extensions;
 
 namespace KarlinScriptNamespace
 {
-    [ScriptType(name: "M2s Drawing", territorys:[1228],guid: "d99c7e91-9b56-432d-a3a8-49a8586915b7e2a", version:"0.0.0.3", author: "Karlin")]
+    [ScriptType(name: "M2s Drawing", territorys:[1228],guid: "d99c7e91-9b56-432d-a3a8-49a8586915b7e2a", version:"0.0.0.3", Author: "Linoa235")]
     public class M2sDrawing
     {
         [UserSetting("Ground Heart Trajectory Length")]

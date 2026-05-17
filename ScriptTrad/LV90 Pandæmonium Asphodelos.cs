@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -12,17 +12,17 @@ using KodakkuAssist.Data;
 using KodakkuAssist.Extensions;
 using System.Threading.Tasks;
 
-namespace Pandæmonium.Normal;
+namespace PandÃ¦monium.Normal;
 
 [ScriptType(guid: "f28cc2f2-6ce2-4526-a303-56fe1c02dea8", name: "P10N", territorys: [1149],
-    version: "0.0.0.3", author: "Tetora", note: noteStr)]
+    version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
 
 public class P10n
 {
     const string noteStr =
         """
         v0.0.0.2:
-        LV90 Pandæmonium: Asphodelos (Pandaemonium) Initial Drawing
+        LV90 PandÃ¦monium: Asphodelos (Pandaemonium) Initial Drawing
         """;
     
     [ScriptMethod(name: "Spit Web Spread Hint", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:33369"])]

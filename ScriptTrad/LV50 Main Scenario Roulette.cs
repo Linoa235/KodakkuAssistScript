@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -15,7 +15,7 @@ using System.Threading.Tasks;
 namespace MainScenario_Roulette;
 
 [ScriptType(guid: "84c15eea-2a19-4477-ad21-cd43d1263cfa", name: "Main Scenario Roulette", territorys: [1043, 1044, 1048],
-    version: "0.0.0.3", author: "Tetora", note: noteStr)]
+    version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
 
 public class MainScenario_Roulette
 {
@@ -46,7 +46,7 @@ public class MainScenario_Roulette
     
     #region The Porta Decumana
     
-    [ScriptMethod(name: "————The Porta Decumana————", eventType: EventTypeEnum.Tether, eventCondition: ["ActionId:"])]
+    [ScriptMethod(name: "â€”â€”â€”â€”The Porta Decumanaâ€”â€”â€”â€”", eventType: EventTypeEnum.Tether, eventCondition: ["ActionId:"])]
     public void ThePortaDecumana(Event @event, ScriptAccessory accessory) { }
     
     [ScriptMethod(name: "BOSS1_Magitek Colossus Rubricatus High-power Magitek Laser (Line)", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:28773"])]
@@ -94,7 +94,7 @@ public class MainScenario_Roulette
     
     #region The Praetorium
     
-    [ScriptMethod(name: "————The Praetorium————", eventType: EventTypeEnum.Tether, eventCondition: ["ActionId:"])]
+    [ScriptMethod(name: "â€”â€”â€”â€”The Praetoriumâ€”â€”â€”â€”", eventType: EventTypeEnum.Tether, eventCondition: ["ActionId:"])]
     public void ThePraetorium(Event @event, ScriptAccessory accessory) { }
     
     [ScriptMethod(name: "En route_Bombardment & Magitek Cannon (Circle)", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:regex:^29(180|049)$"])]
@@ -185,7 +185,7 @@ public class MainScenario_Roulette
     
     #region The Ultimate Weapon
     
-    [ScriptMethod(name: "————The Ultimate Weapon————", eventType: EventTypeEnum.Tether, eventCondition: ["ActionId:"])]
+    [ScriptMethod(name: "â€”â€”â€”â€”The Ultimate Weaponâ€”â€”â€”â€”", eventType: EventTypeEnum.Tether, eventCondition: ["ActionId:"])]
     public void TheUltimateWeapon(Event @event, ScriptAccessory accessory) { }
     
     [ScriptMethod(name: "Magitek Nuclear Explosion (AOE)", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:29022"])]

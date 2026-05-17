@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -15,7 +15,7 @@ using System.Threading.Tasks;
 namespace Zurvan;
 
 [ScriptType(guid: "214f8fbd-ad04-430f-8bba-fd7319581780", name: "Zurvan", territorys: [637],
-    version: "0.0.0.5", author: "Tetora", note: noteStr)]
+    version: "0.0.0.5", Author: "Linoa235", note: noteStr)]
 
 public class Zurvan
 {
@@ -71,7 +71,7 @@ public class Zurvan
     }
     
     [ScriptMethod(name: "Fire and Ice Ice Circle", eventType: EventTypeEnum.Chat, 
-        eventCondition: ["Type:NPCDialogueAnnouncements", "Message:regex:^(我的叹息将化为寒冰.*|By sorrow's chill doth all become ice.*|我が嘆きは、氷となって凍て付き.*)$"])]
+        eventCondition: ["Type:NPCDialogueAnnouncements", "Message:regex:^(æˆ‘çš„å¹æ¯å°†åŒ–ä¸ºå¯’å†°.*|By sorrow's chill doth all become ice.*|æˆ‘ãŒå˜†ãã¯ã€æ°·ã¨ãªã£ã¦å‡ã¦ä»˜ã.*)$"])]
     public void FireAndIce(Event @event, ScriptAccessory accessory)
     {
         if (isText) accessory.Method.TextInfo("Don't stand in the middle", duration: 4000, true);
@@ -189,7 +189,7 @@ public class Zurvan
     }
     
     [ScriptMethod(name: "Ice-Fire Brand Buff Reset", userControl: false, eventType: EventTypeEnum.Chat, 
-        eventCondition: ["Type:NPCDialogueAnnouncements", "Message:regex:^(刻印发动.*|Graven in flesh, the brand is awoken.*|肉体に刻まれし、刻印を発動する.*)$"])]
+        eventCondition: ["Type:NPCDialogueAnnouncements", "Message:regex:^(åˆ»å°å‘åŠ¨.*|Graven in flesh, the brand is awoken.*|è‚‰ä½“ã«åˆ»ã¾ã‚Œã—ã€åˆ»å°ã‚’ç™ºå‹•ã™ã‚‹.*)$"])]
     public void IceFireBrandReset(Event @event, ScriptAccessory accessory)
     {
         MyFire = 0;

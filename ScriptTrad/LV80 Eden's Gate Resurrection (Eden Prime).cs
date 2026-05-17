@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -15,7 +15,7 @@ using System.Threading.Tasks;
 namespace E1n;
 
 [ScriptType(guid: "35c751e5-2958-4f55-b783-405b4acfde1b", name: "E1N", territorys: [849],
-    version: "0.0.0.3", author: "Tetora", note: noteStr)]
+    version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
 
 public class E1n
 {

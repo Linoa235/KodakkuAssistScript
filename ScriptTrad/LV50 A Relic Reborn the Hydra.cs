@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 namespace A_Relic_Reborn_the_Hydra;
 
 [ScriptType(guid: "d32d7489-a1bb-4117-98dd-ee895390804d", name: "A Relic Reborn: the Hydra", territorys: [369],
-    version: "0.0.0.3", author: "Tetora", note: noteStr)]
+    version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
 
 public class theBowlofEmbers_Hard
 {

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 namespace E9n;
 
 [ScriptType(guid: "e4b80c15-7885-46b7-8e3d-201a6a248c89", name: "E9N", territorys: [942],
-    version: "0.0.0.2", author: "Tetora", note: noteStr)]
+    version: "0.0.0.2", Author: "Linoa235", note: noteStr)]
 
 public class E9n
 {

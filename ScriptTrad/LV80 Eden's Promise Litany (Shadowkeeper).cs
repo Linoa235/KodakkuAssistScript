@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -15,7 +15,7 @@ using System.Threading.Tasks;
 namespace E10n;
 
 [ScriptType(guid: "038e00e8-d378-4f43-89ab-e27df5561d5a", name: "E10N", territorys: [943],
-    version: "0.0.0.3", author: "Tetora", note: noteStr)]
+    version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
 
 public class E10n
 {
@@ -110,7 +110,7 @@ public class E10n
                 directionConfirmed = true;
                 break;
             case ImplosionType.SHADOWY_FRONT:
-                dp.Name = "Shadow·Front Implosion";
+                dp.Name = "ShadowÂ·Front Implosion";
                 directionConfirmed = true;
                 break;
             case ImplosionType.BACK:
@@ -119,7 +119,7 @@ public class E10n
                 directionConfirmed = true;
                 break;
             case ImplosionType.SHADOWY_BACK:
-                dp.Name = "Shadow·Back Implosion";
+                dp.Name = "ShadowÂ·Back Implosion";
                 dp.Rotation = 180f.DegToRad();
                 directionConfirmed = true;
                 break;
@@ -129,7 +129,7 @@ public class E10n
                 directionConfirmed = true;
                 break;
             case ImplosionType.SHADOWY_LEFT:
-                dp.Name = "Shadow·Left Ten Billion Slashes";
+                dp.Name = "ShadowÂ·Left Ten Billion Slashes";
                 dp.Rotation = 90f.DegToRad();
                 directionConfirmed = true;
                 break;
@@ -139,7 +139,7 @@ public class E10n
                 directionConfirmed = true;
                 break;
             case ImplosionType.SHADOWY_RIGHT:
-                dp.Name = "Shadow·Right Ten Billion Slashes";
+                dp.Name = "ShadowÂ·Right Ten Billion Slashes";
                 dp.Rotation = -90f.DegToRad();
                 directionConfirmed = true;
                 break;

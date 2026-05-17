@@ -56,7 +56,7 @@ public enum PartyFilterMode
 }
 
 [ScriptType(name: Name, territorys: [], guid: "260323f1-9d7d-4fd6-9222-282eb1aa9bf5",
-    version: Version, author: "Veever", note: NoteStr, updateInfo: UpdateInfo)]
+    version: Version, Author: "Linoa235", note: NoteStr, updateInfo: UpdateInfo)]
 
 public class VVToolKit
 {

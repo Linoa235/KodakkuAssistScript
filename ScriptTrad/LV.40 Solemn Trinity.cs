@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Numerics;
 using Newtonsoft.Json;
@@ -18,7 +18,7 @@ using System.Windows;
 namespace Veever.A_Realm_Reborn.SolemnTrinity;
 
 [ScriptType(name: "LV.40 Solemn Trinity", territorys: [300], guid: "32e7ed24-f55c-48b0-8a40-3fa7442dd6df",
-    version: "0.0.0.3", author: "Veever", note: noteStr)]
+    version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
 
 public class Solemn_Trinity
 {

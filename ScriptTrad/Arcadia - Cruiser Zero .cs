@@ -21,7 +21,7 @@ using FFXIVClientStructs.FFXIV.Client.Game.Character;
 
 namespace KodakkuScript
 {
-	[ScriptType(name: "Arcadia Cruiser Zero 1", territorys: [1257], guid: "783C797E-52BB-41ED-98CD-A2315533036F", version: "0.0.0.6", note: noteStr, author: "UMP")]
+	[ScriptType(name: "Arcadia Cruiser Zero 1", territorys: [1257], guid: "783C797E-52BB-41ED-98CD-A2315533036F", version: "0.0.0.6", note: noteStr, Author: "Linoa235")]
 
 	public class M5S
 	{

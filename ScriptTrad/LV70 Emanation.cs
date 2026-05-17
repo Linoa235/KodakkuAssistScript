@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -15,7 +15,7 @@ using System.Threading.Tasks;
 namespace Emanation;
 
 [ScriptType(guid: "a7bacd3e-834f-41ba-a210-c66e2c12d208", name: "Emanation", territorys: [719],
-    version: "0.0.0.4", author: "Tetora", note: noteStr)]
+    version: "0.0.0.4", Author: "Linoa235", note: noteStr)]
 
 public class Lakshmi
 {

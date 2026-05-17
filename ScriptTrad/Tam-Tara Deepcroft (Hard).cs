@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -24,7 +24,7 @@ using FFXIVClientStructs.FFXIV.Component.GUI;
 namespace the_Tam_Tara_Deepcroft_Hard;
 
 [ScriptType(guid: "6d397f5e-20b1-4c7b-9e4f-7a1ecbab2333", name: "Tam-Tara Deepcroft (Hard)", territorys: [373],
-    version: "0.0.0.1", author: "Tetora", note: noteStr)]
+    version: "0.0.0.1", Author: "Linoa235", note: noteStr)]
 
 public class the_Tam_Tara_Deepcroft_Hard
 {
@@ -191,10 +191,10 @@ public class the_Tam_Tara_Deepcroft_Hard
 
     #region BOSS3_Vigorous Avair
 
-    [ScriptMethod(name: "BOSS3_Fiancé Kill Hint", eventType: EventTypeEnum.AddCombatant, eventCondition: ["DataId:regex:^3056$"], suppress: 9000)]
+    [ScriptMethod(name: "BOSS3_FiancÃ© Kill Hint", eventType: EventTypeEnum.AddCombatant, eventCondition: ["DataId:regex:^3056$"], suppress: 9000)]
     public void Fiance(Event @event, ScriptAccessory accessory)
     {
-        if (isText) accessory.Method.TextInfo($"Kill <Fiancé>", duration: 2000, true);
+        if (isText) accessory.Method.TextInfo($"Kill <FiancÃ©>", duration: 2000, true);
         if (isTTS) accessory.Method.TTS($"Kill add");
         if (isEdgeTTS) accessory.Method.EdgeTTS($"Kill add");
     }

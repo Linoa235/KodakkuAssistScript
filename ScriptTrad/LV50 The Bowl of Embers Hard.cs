@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -24,7 +24,7 @@ using FFXIVClientStructs.FFXIV.Component.GUI;
 namespace theBowlofEmbers_Hard;
 
 [ScriptType(guid: "d3d532f1-0707-427f-ac04-871a22022c11", name: "The Bowl of Embers (Hard)", territorys: [292, 1045],
-    version: "0.0.0.4", author: "Tetora", note: noteStr)]
+    version: "0.0.0.4", Author: "Linoa235", note: noteStr)]
 
 public class theBowlofEmbers_Hard
 {
@@ -38,7 +38,7 @@ public class theBowlofEmbers_Hard
     [UserSetting("Opening Cleave Tankbuster Prediction")]
     public static bool Incinerate { get; set; } = true;
     
-    [ScriptMethod(name: "Incinerate (Opening Only)", eventType: EventTypeEnum.Chat, userControl: false, eventCondition: ["Type:NPCDialogueAnnouncements", "Message:regex:^勇猛无比.*", "Sender:Ifrit"])]
+    [ScriptMethod(name: "Incinerate (Opening Only)", eventType: EventTypeEnum.Chat, userControl: false, eventCondition: ["Type:NPCDialogueAnnouncements", "Message:regex:^å‹‡çŒ›æ— æ¯”.*", "Sender:Ifrit"])]
     public void IncinerateDrawing(Event @event, ScriptAccessory accessory)
     {
         if (!Incinerate) return;
@@ -63,7 +63,7 @@ public class theBowlofEmbers_Hard
     [UserSetting("Opening Knockback Prediction")]
     public static bool Vulcan_urst { get; set; } = false;
     
-    [ScriptMethod(name: "Vulcan Burst (Opening Only)", eventType: EventTypeEnum.Chat, userControl: false, eventCondition: ["Type:NPCDialogueAnnouncements", "Message:regex:^勇猛无比.*", "Sender:Ifrit"])]
+    [ScriptMethod(name: "Vulcan Burst (Opening Only)", eventType: EventTypeEnum.Chat, userControl: false, eventCondition: ["Type:NPCDialogueAnnouncements", "Message:regex:^å‹‡çŒ›æ— æ¯”.*", "Sender:Ifrit"])]
     public void VulcanBurstDrawing(Event @event, ScriptAccessory accessory)
     {
         if (!Vulcan_urst) return;

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -16,7 +16,7 @@ using KodakkuAssist.Extensions;
 namespace Battle_in_the_Big_Keep;
 
 [ScriptType(guid: "90783a42-7947-4392-9c3e-f3162d52c248", name: "Battle in the Big Keep", territorys: [396],
-    version: "0.0.0.3", author: "Tetora", note: noteStr)]
+    version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
 
 public class Battle_in_the_Big_Keep
 {
@@ -37,7 +37,7 @@ public class Battle_in_the_Big_Keep
     public bool isText { get; set; } = true;
     
     
-    [ScriptMethod(name: "Opening Hint", eventType: EventTypeEnum.Chat, eventCondition: ["Type:NPCDialogueAnnouncements", "Message:regex:^(一起上吧.*|To my side.*|行くぞ.*)$"])]
+    [ScriptMethod(name: "Opening Hint", eventType: EventTypeEnum.Chat, eventCondition: ["Type:NPCDialogueAnnouncements", "Message:regex:^(ä¸€èµ·ä¸Šå§.*|To my side.*|è¡Œããž.*)$"])]
     public void Opening(Event @event, ScriptAccessory accessory)
     {
         if (isText) accessory.Method.TextInfo("Only attack <Enkidu>", duration: 5000, true);

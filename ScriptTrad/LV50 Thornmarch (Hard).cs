@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -15,7 +15,7 @@ using KodakkuAssist.Extensions;
 namespace Thornmarch_Hard;
 
 [ScriptType(guid: "cd81e178-12e6-4e53-9b81-63002cc51ecb", name: "Thornmarch (Hard) (Fun Edition)", territorys: [1067],
-    version: "0.0.0.3", author: "Tetora", note: noteStr)]
+    version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
 
 public class Thornmarch_Hard
 {
@@ -45,7 +45,7 @@ public class Thornmarch_Hard
     #region Voice Lines
     
     [ScriptMethod(name: "Those who rebel against the Moogle retinue will be utterly crushed, kupo!", userControl: false, eventType: EventTypeEnum.Chat, eventCondition: 
-        ["Type:NPCDialogueAnnouncements", "Message:反抗莫古力家臣团的人\n会被莫古们彻底击溃库啵！"])]
+        ["Type:NPCDialogueAnnouncements", "Message:åæŠ—èŽ«å¤åŠ›å®¶è‡£å›¢çš„äºº\nä¼šè¢«èŽ«å¤ä»¬å½»åº•å‡»æºƒåº“å•µï¼"])]
     public void WillBeUtterlyCrushedKupo(Event @event, ScriptAccessory accessory)
     {
         if (isText) accessory.Method.TextInfo("Those who rebel against the Moogle retinue will be utterly crushed, kupo!", duration: 4000, true);
@@ -55,7 +55,7 @@ public class Thornmarch_Hard
     [ScriptMethod(name: "Taste the moogle's axe, kupo!", userControl: false, eventType: EventTypeEnum.NpcYell, eventCondition: ["Id:1950"])]
     public void TasteTheMooglesAxeKupo(Event @event, ScriptAccessory accessory)
     {
-        if (isSendMessage) accessory.Method.SendChat("/e Fluffy Axe Kuputa·Kapa: Taste the moogle's axe, kupo!");
+        if (isSendMessage) accessory.Method.SendChat("/e Fluffy Axe KuputaÂ·Kapa: Taste the moogle's axe, kupo!");
     }
     
     [ScriptMethod(name: "Watch me shoot you in the butt, kupo!", userControl: false, eventType: EventTypeEnum.NpcYell, eventCondition: ["Id:1960"])]
@@ -63,28 +63,28 @@ public class Thornmarch_Hard
     {
         if (isText) accessory.Method.TextInfo("Watch me shoot you in the butt, kupo!", duration: 4000, true);
         if (isTTS) accessory.Method.EdgeTTS("Watch me shoot you in the butt, kupo!");
-        if (isSendMessage) accessory.Method.SendChat("/e Soft Bow Kupoko·Koji: Watch me shoot you in the butt, kupo!");
+        if (isSendMessage) accessory.Method.SendChat("/e Soft Bow KupokoÂ·Koji: Watch me shoot you in the butt, kupo!");
     }
     
     [ScriptMethod(name: "I can't believe we lost, kupo...", userControl: false, eventType: EventTypeEnum.NpcYell, eventCondition: ["Id:1947"])]
     public void ICanBelieveWeLostKupo(Event @event, ScriptAccessory accessory)
     {
         if (isTTS) accessory.Method.EdgeTTS("I can't believe we lost, kupo...");
-        if (isSendMessage) accessory.Method.SendChat("/e Fluffy Wall Kupudi·Kupu: I can't believe we lost, kupo...");
+        if (isSendMessage) accessory.Method.SendChat("/e Fluffy Wall KupudiÂ·Kupu: I can't believe we lost, kupo...");
     }
     
     [ScriptMethod(name: "I've been defeated, kupo...", userControl: false, eventType: EventTypeEnum.NpcYell, eventCondition: ["Id:1952"])]
     public void IveBeenDefeatedKupo(Event @event, ScriptAccessory accessory)
     {
         if (isTTS) accessory.Method.EdgeTTS("I've been defeated, kupo...");
-        if (isSendMessage) accessory.Method.SendChat("/e Fluffy Axe Kuputa·Kapa: I've been defeated, kupo...");
+        if (isSendMessage) accessory.Method.SendChat("/e Fluffy Axe KuputaÂ·Kapa: I've been defeated, kupo...");
     }
     
     [ScriptMethod(name: "I got taken down, kupo...", userControl: false, eventType: EventTypeEnum.NpcYell, eventCondition: ["Id:1962"])]
     public void IGotTakenDownKupo(Event @event, ScriptAccessory accessory)
     {
         if (isTTS) accessory.Method.EdgeTTS("I got taken down, kupo...");
-        if (isSendMessage) accessory.Method.SendChat("/e Soft Bow Kupoko·Koji: I got taken down, kupo...");
+        if (isSendMessage) accessory.Method.SendChat("/e Soft Bow KupokoÂ·Koji: I got taken down, kupo...");
     }
     
     [ScriptMethod(name: "Want to be skewered, kupo!", userControl: false, eventType: EventTypeEnum.NpcYell, eventCondition: ["Id:1955"])]
@@ -92,27 +92,27 @@ public class Thornmarch_Hard
     {
         if (isText) accessory.Method.TextInfo("Want to be skewered, kupo!", duration: 4000, true);
         if (isTTS) accessory.Method.EdgeTTS("Want to be skewered, kupo!");
-        if (isSendMessage) accessory.Method.SendChat("/e Fluffy Heal Kupro·Chip: Want to be skewered, kupo!");
+        if (isSendMessage) accessory.Method.SendChat("/e Fluffy Heal KuproÂ·Chip: Want to be skewered, kupo!");
     }
     
     [ScriptMethod(name: "Come dance with the moogles, kupo!", userControl: false, eventType: EventTypeEnum.NpcYell, eventCondition: ["Id:1573"])]
     public void ComeDanceWithTheMooglesKupo(Event @event, ScriptAccessory accessory)
     {
-        if (isSendMessage) accessory.Method.SendChat("/e Soft Sound Pukuhi·Piko: Come dance with the moogles, kupo!");
+        if (isSendMessage) accessory.Method.SendChat("/e Soft Sound PukuhiÂ·Piko: Come dance with the moogles, kupo!");
     }
     
     [ScriptMethod(name: "Moogle lost, kupo...", userControl: false, eventType: EventTypeEnum.NpcYell, eventCondition: ["Id:1957"])]
     public void MoogleLostKupo(Event @event, ScriptAccessory accessory)
     {
         if (isTTS) accessory.Method.EdgeTTS("Moogle lost, kupo...");
-        if (isSendMessage) accessory.Method.SendChat("/e Fluffy Heal Kupro·Chip: Moogle lost, kupo...");
+        if (isSendMessage) accessory.Method.SendChat("/e Fluffy Heal KuproÂ·Chip: Moogle lost, kupo...");
     }
     
     [ScriptMethod(name: "I can't sing anymore, kupo...", userControl: false, eventType: EventTypeEnum.NpcYell, eventCondition: ["Id:1975"])]
     public void ICanSingAnymoreKupo(Event @event, ScriptAccessory accessory)
     {
         if (isTTS) accessory.Method.EdgeTTS("I can't sing anymore, kupo...");
-        if (isSendMessage) accessory.Method.SendChat("/e Soft Sound Pukuhi·Piko: I can't sing anymore, kupo...");
+        if (isSendMessage) accessory.Method.SendChat("/e Soft Sound PukuhiÂ·Piko: I can't sing anymore, kupo...");
     }
     
     [ScriptMethod(name: "Playing with fire is so fun, kupo!", userControl: false, eventType: EventTypeEnum.NpcYell, eventCondition: ["Id:1965"])]
@@ -120,18 +120,18 @@ public class Thornmarch_Hard
     {
         if (isText) accessory.Method.TextInfo("Playing with fire is so fun, kupo!", duration: 4000, true);
         if (isTTS) accessory.Method.EdgeTTS("Playing with fire is so fun, kupo!");
-        if (isSendMessage) accessory.Method.SendChat("/e Soft Strength Pukura·Puchi: Playing with fire is so fun, kupo!");
+        if (isSendMessage) accessory.Method.SendChat("/e Soft Strength PukuraÂ·Puchi: Playing with fire is so fun, kupo!");
     }
     
     [ScriptMethod(name: "D-Do we really have to fight, kupo?", userControl: false, eventType: EventTypeEnum.NpcYell, eventCondition: ["Id:1978"])]
     public void DoWeReallyHaveToFightKupo(Event @event, ScriptAccessory accessory)
     {
         if (isTTS) accessory.Method.EdgeTTS("D-Do we really have to fight, kupo?");
-        if (isSendMessage) accessory.Method.SendChat("/e Fluffy Barrier Pukuna·Pako: D-Do we really have to fight, kupo?");
+        if (isSendMessage) accessory.Method.SendChat("/e Fluffy Barrier PukunaÂ·Pako: D-Do we really have to fight, kupo?");
     }
     
     [ScriptMethod(name: "Focus power into the Fluffy Meteor and smash you to pieces, kupo!", userControl: false, eventType: EventTypeEnum.Chat, eventCondition: 
-        ["Type:NPCDialogueAnnouncements", "Message:将力量集中到绒绒陨石上，\n把你们砸烂库啵！"])]
+        ["Type:NPCDialogueAnnouncements", "Message:å°†åŠ›é‡é›†ä¸­åˆ°ç»’ç»’é™¨çŸ³ä¸Šï¼Œ\næŠŠä½ ä»¬ç ¸çƒ‚åº“å•µï¼"])]
     public void SmashYouToPiecesKupo(Event @event, ScriptAccessory accessory)
     {
         if (isText) accessory.Method.TextInfo("Focus power into the Fluffy Meteor and smash you to pieces, kupo!", duration: 4000, true);
@@ -142,25 +142,25 @@ public class Thornmarch_Hard
     public void MoogleHasBurnedOutKupo(Event @event, ScriptAccessory accessory)
     {
         if (isTTS) accessory.Method.EdgeTTS("The moogle has burned out, kupo...");
-        if (isSendMessage) accessory.Method.SendChat("/e Soft Strength Pukura·Puchi: The moogle has burned out, kupo...");
+        if (isSendMessage) accessory.Method.SendChat("/e Soft Strength PukuraÂ·Puchi: The moogle has burned out, kupo...");
     }
     
     [ScriptMethod(name: "So scary, kupo...", userControl: false, eventType: EventTypeEnum.NpcYell, eventCondition: ["Id:1980"])]
     public void SoScaryKupo(Event @event, ScriptAccessory accessory)
     {
         if (isTTS) accessory.Method.EdgeTTS("So scary, kupo...");
-        if (isSendMessage) accessory.Method.SendChat("/e Fluffy Barrier Pukuna·Pako: So scary, kupo...");
+        if (isSendMessage) accessory.Method.SendChat("/e Fluffy Barrier PukunaÂ·Pako: So scary, kupo...");
     }
     
     [ScriptMethod(name: "Y-You're pretty good, kupo... But the Good King will take care of you, kupo!", userControl: false, eventType: EventTypeEnum.Chat, eventCondition: 
-        ["Type:NPCDialogueAnnouncements", "Message:挺、挺厉害的嘛库啵……\n但贤王大人会收拾你们的库啵！"])]
+        ["Type:NPCDialogueAnnouncements", "Message:æŒºã€æŒºåŽ‰å®³çš„å˜›åº“å•µâ€¦â€¦\nä½†è´¤çŽ‹å¤§äººä¼šæ”¶æ‹¾ä½ ä»¬çš„åº“å•µï¼"])]
     public void GoodKingWillTakeCareOfYouKupo(Event @event, ScriptAccessory accessory)
     {
         if (isTTS) accessory.Method.EdgeTTS("Y-You're pretty good, kupo... But the Good King will take care of you, kupo!");
     }
     
     [ScriptMethod(name: "Oh Good King, please deliver your judgment, kupo!", userControl: false, eventType: EventTypeEnum.Chat, eventCondition: 
-        ["Type:NPCDialogueAnnouncements", "Message:贤王大人啊，\n请降下您的制裁库啵！"])]
+        ["Type:NPCDialogueAnnouncements", "Message:è´¤çŽ‹å¤§äººå•Šï¼Œ\nè¯·é™ä¸‹æ‚¨çš„åˆ¶è£åº“å•µï¼"])]
     public void PleaseDeliverYourJudgmentKupo(Event @event, ScriptAccessory accessory)
     {
         if (isText) accessory.Method.TextInfo("Oh Good King, please deliver your judgment, kupo!", duration: 4000, true);
@@ -171,25 +171,25 @@ public class Thornmarch_Hard
     public void WhatWasTheSecondLineAgainKupo(Event @event, ScriptAccessory accessory)
     {
         if (isTTS) accessory.Method.EdgeTTS("Oh Good King... what was the second line again, kupo?");
-        if (isSendMessage) accessory.Method.SendChat("/e Fluffy Barrier Pukuna·Pako: Oh Good King... what was the second line again, kupo?");
+        if (isSendMessage) accessory.Method.SendChat("/e Fluffy Barrier PukunaÂ·Pako: Oh Good King... what was the second line again, kupo?");
     }
     
     [ScriptMethod(name: "Death Moogle Warning! You will pay for your defiance, kupo!", userControl: false, eventType: EventTypeEnum.Chat, eventCondition: 
-        ["Type:NPCDialogueAnnouncements", "Message:死亡莫古警告！\n你们会为忤逆行为付出代价库啵！"])]
+        ["Type:NPCDialogueAnnouncements", "Message:æ­»äº¡èŽ«å¤è­¦å‘Šï¼\nä½ ä»¬ä¼šä¸ºå¿¤é€†è¡Œä¸ºä»˜å‡ºä»£ä»·åº“å•µï¼"])]
     public void YouWillPayForYourDefianceKupo(Event @event, ScriptAccessory accessory)
     {
         if (isTTS) accessory.Method.EdgeTTS("Death Moogle Warning! You will pay for your defiance, kupo!");
     }
     
     [ScriptMethod(name: "The moogles' battle has only just begun, kupo!", userControl: false, eventType: EventTypeEnum.Chat, eventCondition: 
-        ["Type:NPCDialogueAnnouncements", "Message:莫古们的战斗才刚刚开始库啵！"])]
+        ["Type:NPCDialogueAnnouncements", "Message:èŽ«å¤ä»¬çš„æˆ˜æ–—æ‰åˆšåˆšå¼€å§‹åº“å•µï¼"])]
     public void BattleHasOnlyJustBegunKupo(Event @event, ScriptAccessory accessory)
     {
         if (isTTS) accessory.Method.EdgeTTS("The moogles' battle has only just begun, kupo!");
     }
     
     [ScriptMethod(name: "Retainers, it's your turn to step up, kupo!", userControl: false, eventType: EventTypeEnum.Chat, eventCondition: 
-        ["Type:NPCDialogueAnnouncements", "Message:家臣们，\n到你们出马的时候了库啵！"])]
+        ["Type:NPCDialogueAnnouncements", "Message:å®¶è‡£ä»¬ï¼Œ\nåˆ°ä½ ä»¬å‡ºé©¬çš„æ—¶å€™äº†åº“å•µï¼"])]
     public void YourTurnToStepUpKupo(Event @event, ScriptAccessory accessory)
     {
         if (isTTS) accessory.Method.EdgeTTS("Retainers, it's your turn to step up, kupo!");
@@ -199,25 +199,25 @@ public class Thornmarch_Hard
     public void ShowYouTruePowerKupo(Event @event, ScriptAccessory accessory)
     {
         if (isTTS) accessory.Method.EdgeTTS("L-Let me show you the moogle's true power, kupo!");
-        if (isSendMessage) accessory.Method.SendChat("/e Fluffy Barrier Pukuna·Pako: L-Let me show you the moogle's true power, kupo!");
+        if (isSendMessage) accessory.Method.SendChat("/e Fluffy Barrier PukunaÂ·Pako: L-Let me show you the moogle's true power, kupo!");
     }
     
     [ScriptMethod(name: "Taste the Scattershot Arrow, kupo!", userControl: false, eventType: EventTypeEnum.NpcYell, eventCondition: ["Id:1963"])]
     public void TasteScattershotArrowKupo(Event @event, ScriptAccessory accessory)
     {
         if (isTTS) accessory.Method.EdgeTTS("Taste the Scattershot Arrow, kupo!");
-        if (isSendMessage) accessory.Method.SendChat("/e Soft Bow Kupoko·Koji: Taste the Scattershot Arrow, kupo!");
+        if (isSendMessage) accessory.Method.SendChat("/e Soft Bow KupokoÂ·Koji: Taste the Scattershot Arrow, kupo!");
     }
     
     [ScriptMethod(name: "Sink into the poisonous bog, kupo!", userControl: false, eventType: EventTypeEnum.NpcYell, eventCondition: ["Id:1981"])]
     public void SinkIntoPoisonousBogKupo(Event @event, ScriptAccessory accessory)
     {
         if (isTTS) accessory.Method.EdgeTTS("Sink into the poisonous bog, kupo!");
-        if (isSendMessage) accessory.Method.SendChat("/e Fluffy Barrier Pukuna·Pako: Sink into the poisonous bog, kupo!");
+        if (isSendMessage) accessory.Method.SendChat("/e Fluffy Barrier PukunaÂ·Pako: Sink into the poisonous bog, kupo!");
     }
     
     [ScriptMethod(name: "Retainers, deliver judgment upon the wicked, kupo!", userControl: false, eventType: EventTypeEnum.Chat, eventCondition: 
-        ["Type:NPCDialogueAnnouncements", "Message:家臣们，\n给坏人以制裁库啵！"])]
+        ["Type:NPCDialogueAnnouncements", "Message:å®¶è‡£ä»¬ï¼Œ\nç»™åäººä»¥åˆ¶è£åº“å•µï¼"])]
     public void DeliverJudgmentUponTheWickedKupo(Event @event, ScriptAccessory accessory)
     {
         if (isTTS) accessory.Method.EdgeTTS("Retainers, deliver judgment upon the wicked, kupo!");
@@ -235,7 +235,7 @@ public class Thornmarch_Hard
     {
         if (isText) accessory.Method.TextInfo("I'll break you apart, kupo!\nI'll beat you senseless, kupo!", duration: 8700, true);
         if (isTTS) accessory.Method.EdgeTTS("I'll break you apart, kupo!");
-        if (isSendMessage) accessory.Method.SendChat("/e Fluffy Axe Kuputa·Kapa: I'll break you apart, kupo!");
+        if (isSendMessage) accessory.Method.SendChat("/e Fluffy Axe KuputaÂ·Kapa: I'll break you apart, kupo!");
     }
     
     [ScriptMethod(name: "I'll beat you senseless, kupo!", userControl: false, eventType: EventTypeEnum.NpcYell, eventCondition: ["Id:13782"])]
@@ -243,18 +243,18 @@ public class Thornmarch_Hard
     {
         if (isText) accessory.Method.TextInfo("I'll break you apart, kupo!\nI'll beat you senseless, kupo!", duration: 8700, true);
         if (isTTS) accessory.Method.EdgeTTS("I'll beat you senseless, kupo!");
-        if (isSendMessage) accessory.Method.SendChat("/e Fluffy Wall Kupudi·Kupu: I'll beat you senseless, kupo!");
+        if (isSendMessage) accessory.Method.SendChat("/e Fluffy Wall KupudiÂ·Kupu: I'll beat you senseless, kupo!");
     }
     
     [ScriptMethod(name: "Listen to a moogle's song, kupo!", userControl: false, eventType: EventTypeEnum.NpcYell, eventCondition: ["Id:13787"])]
     public void ListenToMooglesSongKupo(Event @event, ScriptAccessory accessory)
     {
         if (isTTS) accessory.Method.EdgeTTS("Listen to a moogle's song, kupo!");
-        if (isSendMessage) accessory.Method.SendChat("/e Soft Sound Pukuhi·Piko: Listen to a moogle's song, kupo!");
+        if (isSendMessage) accessory.Method.SendChat("/e Soft Sound PukuhiÂ·Piko: Listen to a moogle's song, kupo!");
     }
     
     [ScriptMethod(name: "Retainers, join hands and fight the enemy, kupo!", userControl: false, eventType: EventTypeEnum.Chat, eventCondition: 
-        ["Type:NPCDialogueAnnouncements", "Message:家臣们，\n联起手来，对抗敌人库啵！"])]
+        ["Type:NPCDialogueAnnouncements", "Message:å®¶è‡£ä»¬ï¼Œ\nè”èµ·æ‰‹æ¥ï¼Œå¯¹æŠ—æ•Œäººåº“å•µï¼"])]
     public void JoinHandsAndFightKupo(Event @event, ScriptAccessory accessory)
     {
         if (isTTS) accessory.Method.EdgeTTS("Retainers, join hands and fight the enemy, kupo!");
@@ -264,7 +264,7 @@ public class Thornmarch_Hard
     public void MagicIsBurningBrightKupo(Event @event, ScriptAccessory accessory)
     {
         if (isTTS) accessory.Method.EdgeTTS("The moogle's magic is burning bright, kupo!");
-        if (isSendMessage) accessory.Method.SendChat("/e Soft Strength Pukura·Puchi: The moogle's magic is burning bright, kupo!");
+        if (isSendMessage) accessory.Method.SendChat("/e Soft Strength PukuraÂ·Puchi: The moogle's magic is burning bright, kupo!");
     }
     
     [ScriptMethod(name: "I'll crush you, kupo!", userControl: false, eventType: EventTypeEnum.NpcYell, eventCondition: ["Id:13784"])]
@@ -278,7 +278,7 @@ public class Thornmarch_Hard
     public void TakeMooglesStrikeKupo(Event @event, ScriptAccessory accessory)
     {
         if (isTTS) accessory.Method.EdgeTTS("Take a moogle's strike, kupo!");
-        if (isSendMessage) accessory.Method.SendChat("/e Fluffy Heal Kupro·Chip: Take a moogle's strike, kupo!");
+        if (isSendMessage) accessory.Method.SendChat("/e Fluffy Heal KuproÂ·Chip: Take a moogle's strike, kupo!");
     }
     #endregion
     

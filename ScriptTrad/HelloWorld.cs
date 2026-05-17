@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Numerics;
 using KodakkuAssist.Script;
 using KodakkuAssist.Module.GameEvent;
@@ -10,7 +10,7 @@ namespace HelloWorld;
     territorys: new uint[] { },
     guid: "AF4E8C43-08BA-4C98-8DEF-70F023AF234D",
     version: "0.0.0.1",
-    author: "Baka-Water77",
+    Author: "Linoa235",
     note: null
 )]
 public class HelloWorld

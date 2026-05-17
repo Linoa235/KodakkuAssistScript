@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -21,7 +21,7 @@ using FFXIVClientStructs.FFXIV.Client.Game.UI;
 namespace PVPAction;
 
 [ScriptType(guid: "070e161a-26e9-4a57-8b19-da8c4201058c", name: "PVP Skill Drawing", territorys: [],
-    version: "0.0.0.8", author: "Tetora", note: noteStr)]
+    version: "0.0.0.8", Author: "Linoa235", note: noteStr)]
 
 public class PVPAction
 {
@@ -155,7 +155,7 @@ public class PVPAction
     
     #region Dragoon
     
-    [ScriptMethod(name: "———————— Dragoon ————————", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€”â€”â€” Dragoon â€”â€”â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
     public void Dragoon(Event @event, ScriptAccessory accessory) { }
 
     [ScriptMethod(name: "Self Stardiver Range Drawing", eventType: EventTypeEnum.StatusAdd, eventCondition: ["StatusID:3180"])]
@@ -289,7 +289,7 @@ public class PVPAction
 
     #region Sage
     
-    [ScriptMethod(name: "———————— Sage ————————", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€”â€”â€” Sage â€”â€”â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
     public void Sage(Event @event, ScriptAccessory accessory) { }
     
     [ScriptMethod(name: "Party Mesotes Drawing", eventType: EventTypeEnum.ActionEffect, eventCondition: ["ActionId:29266"])]
@@ -359,7 +359,7 @@ public class PVPAction
 
     #region Dark Knight
     
-    [ScriptMethod(name: "———————— Dark Knight ————————", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€”â€”â€” Dark Knight â€”â€”â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
     public void DarkKnight(Event @event, ScriptAccessory accessory) { }
     
     [ScriptMethod(name: "Enemy Salted Earth Drawing", eventType: EventTypeEnum.ActionEffect, eventCondition: ["ActionId:29094"],suppress:3000)]
@@ -390,7 +390,7 @@ public class PVPAction
 
     #region Machinist
     
-    [ScriptMethod(name: "———————— Machinist ————————", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€”â€”â€” Machinist â€”â€”â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
     public void Machinist(Event @event, ScriptAccessory accessory) { }
     
     [ScriptMethod(name: "Party Machinist Turret Drawing", eventType: EventTypeEnum.ActionEffect, eventCondition: ["ActionId:29412"],suppress:3000)]
@@ -442,7 +442,7 @@ public class PVPAction
 
     #region Paladin
     
-    [ScriptMethod(name: "———————— Paladin ————————", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€”â€”â€” Paladin â€”â€”â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
     public void Paladin(Event @event, ScriptAccessory accessory) { }
     
     [ScriptMethod(name: "Cover Connection Line", eventType: EventTypeEnum.StatusAdd, eventCondition: ["StatusID:1301"])]
@@ -611,7 +611,7 @@ public class PVPAction
 
     #region Viper
     
-    [ScriptMethod(name: "———————— Viper ————————", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€”â€”â€” Viper â€”â€”â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
     public void Viper(Event @event, ScriptAccessory accessory) { }
 
     [ScriptMethod(name: "Self Armored Scales", eventType: EventTypeEnum.StatusAdd, eventCondition: ["StatusID:regex:^409[78]$"])]
@@ -703,7 +703,7 @@ public class PVPAction
 
     #region Astrologian
     
-    [ScriptMethod(name: "———————— Astrologian ————————", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€”â€”â€” Astrologian â€”â€”â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
     public void Astrologian(Event @event, ScriptAccessory accessory) { }
     
     [ScriptMethod(name: "Enemy Celestial River Drawing", eventType: EventTypeEnum.ActionEffect, eventCondition: ["ActionId:29255"],suppress: 100)]
@@ -728,7 +728,7 @@ public class PVPAction
 
     #region Bard
     
-    [ScriptMethod(name: "———————— Bard ————————", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€”â€”â€” Bard â€”â€”â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
     public void Bard(Event @event, ScriptAccessory accessory) { }
         
     [ScriptMethod(name: "Enemy Final Fantasia Drawing", eventType: EventTypeEnum.StatusAdd, eventCondition: ["StatusID:4312"])]
@@ -753,7 +753,7 @@ public class PVPAction
 
     #region Dancer
     
-    [ScriptMethod(name: "———————— Dancer ————————", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€”â€”â€” Dancer â€”â€”â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
     public void Dancer(Event @event, ScriptAccessory accessory) { }
 
     [ScriptMethod(name: "Closed Position Prediction Outline [ Trigger Macro: /e CompulsoryControl ]", eventType: EventTypeEnum.Chat, eventCondition: ["Type:Echo", "Message:regex:^CompulsoryControl$"])]
@@ -800,7 +800,7 @@ public class PVPAction
     
     #region Reaper
     
-    [ScriptMethod(name: "———————— Reaper ————————", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€”â€”â€” Reaper â€”â€”â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
     public void Reaper(Event @event, ScriptAccessory accessory) { }
 
     [ScriptMethod(name: "Arcane Circle Prediction Outline [ Trigger Macro: /e CompulsoryControl ]", eventType: EventTypeEnum.Chat, eventCondition: ["Type:Echo", "Message:regex:^CompulsoryControl$"])]

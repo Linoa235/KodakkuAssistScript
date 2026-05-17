@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Numerics;
 using Newtonsoft.Json;
@@ -19,7 +19,7 @@ using System.Runtime.CompilerServices;
 namespace Veever.DawnTrail.Everkeep;
 
 [ScriptType(name: "LV.99 Everkeep", territorys: [1200], guid: "7a6d317c-b176-4e94-9fbc-3bc833be1338",
-    version: "0.0.0.9", author: "Veever", note: noteStr)]
+    version: "0.0.0.9", Author: "Linoa235", note: noteStr)]
 
 public class Everkeep
 {

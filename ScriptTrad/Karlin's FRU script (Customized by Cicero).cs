@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Concurrent;
 using KodakkuAssist.Module.GameEvent;
 using KodakkuAssist.Script;
@@ -23,12 +23,12 @@ using Newtonsoft.Json.Linq;
 namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 {
 
-    [ScriptType(name: "Karlin's FRU script (Customized by Cicero) | Karlin的绝伊甸脚本 (灵视改装版)",
+    [ScriptType(name: "Karlin's FRU script (Customized by Cicero) | Karlinçš„ç»ä¼Šç”¸è„šæœ¬ (çµè§†æ”¹è£…ç‰ˆ)",
         territorys: [1238],
         guid: "148718fd-575d-493a-8ac7-1cc7092aff85",
         version: "0.0.1.19",
         note: notesOfTheScript,
-        author: "Karlin")]
+        Author: "Linoa235")]
 
     public class Futures_Rewritten_Ultimate
     {
@@ -36,7 +36,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
         const string notesOfTheScript=
         """
         ***** Please read the note here carefully before running the script! *****
-        ***** 请在使用此脚本前仔细阅读此处的说明! *****
+        ***** è¯·åœ¨ä½¿ç”¨æ­¤è„šæœ¬å‰ä»”ç»†é˜…è¯»æ­¤å¤„çš„è¯´æ˜Ž! *****
 
         This is a customized version of Karlin's script for Futures Rewritten (Ultimate).
         The script was branched out from the version 0.0.0.10 and extensively customized by Cicero.
@@ -44,11 +44,11 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
         And of course, please don't run the customized script and the vanilla script simultaneously.
         If you would like to stream, there's no forced Vfx drawing in the script. Therefore, you could run it while streaming after proper configurations.
 
-        这是Karlin的另一个未来(绝伊甸)脚本的改装版本。
-        脚本是基于0.0.0.10版本的,灵视对脚本进行了大幅度改装。
-        在使用前请记得按照原版脚本重新配置一下这个脚本的用户设置!
-        当然也请不要同时开着改装脚本和原版脚本。
-        如果你有直播需求,脚本中没有强制使用Vfx的绘图,所以经过适当的配置可以直播时使用。
+        è¿™æ˜¯Karlinçš„å¦ä¸€ä¸ªæœªæ¥(ç»ä¼Šç”¸)è„šæœ¬çš„æ”¹è£…ç‰ˆæœ¬ã€‚
+        è„šæœ¬æ˜¯åŸºäºŽ0.0.0.10ç‰ˆæœ¬çš„,çµè§†å¯¹è„šæœ¬è¿›è¡Œäº†å¤§å¹…åº¦æ”¹è£…ã€‚
+        åœ¨ä½¿ç”¨å‰è¯·è®°å¾—æŒ‰ç…§åŽŸç‰ˆè„šæœ¬é‡æ–°é…ç½®ä¸€ä¸‹è¿™ä¸ªè„šæœ¬çš„ç”¨æˆ·è®¾ç½®!
+        å½“ç„¶ä¹Ÿè¯·ä¸è¦åŒæ—¶å¼€ç€æ”¹è£…è„šæœ¬å’ŒåŽŸç‰ˆè„šæœ¬ã€‚
+        å¦‚æžœä½ æœ‰ç›´æ’­éœ€æ±‚,è„šæœ¬ä¸­æ²¡æœ‰å¼ºåˆ¶ä½¿ç”¨Vfxçš„ç»˜å›¾,æ‰€ä»¥ç»è¿‡é€‚å½“çš„é…ç½®å¯ä»¥ç›´æ’­æ—¶ä½¿ç”¨ã€‚
 
         1. The entire set of default settings is consistent with Moglin Meow's FRU strat video, except the settings which have multiple branches in Moglin Meow's Triggers.
         Regarding settings without a specified default option, its actual default settings would be based on the enumeration values in the code.
@@ -95,53 +95,53 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
         If you encounter any issue or bug, leave the duty to cut off the recording (which would help me quickly pinpoint the pull with issues).
         After that, please describe the issue and share the related ARR recording with me. Appreciate your help!
 
-        1. 整套默认设置是跟莫灵喵视频攻略保持一致的,除了莫灵喵触发器中提供多个选择的部分。
-        没有默认选项的设置,其实际默认设置将根据代码中的枚举类型实际值决定。
-        2. 提供两种类型的TTS播报,原版TTS和Daily Routines TTS。
-        请确保你只启用了二者其一,这两个不能同时开。
-        当然,如果选择了Daily Routines TTS,你需要已经安装并启用了Daily Routines插件。
-        TTS提示的语言与文本提示语言相同。
-        3. 对于任何标记队友的功能,小队里只能有一个玩家启用,并且也不与其他科技的兼容。
-        4. P1乐园绝技(雾龙)期间被标记的玩家可能少于或者多于2人,因为会捕获玩家的实时位置进行计算,站位不标准可能会导致这种情况。
-        5. P1信仰崩塌(四连抓)期间的标记涉及到攻击,止步和禁止三种。
-        禁止1和2:前往北侧的被连线玩家。数字就是抓人的轮数。
-        锁链1和2:前往南侧的被连线玩家。数字就是抓人的轮数。
-        攻击1和2:前往北侧的闲人。数字1是优先级更高的。
-        攻击3和4:前往南侧的闲人。数字3是优先级更高的。
-        (假设优先级为 MT ST H1 H2 D1 D2 D3 D4, 那么高优先级指的是:
-           高优先级 <- MT ST H1 H2 D1 D2 D3 D4 -> 低优先级)
-        6. P2镜中奇遇攻略的描述中,左和右的基准指的是从场中面向两面红色镜子时的左和右。
-        7. P2光之失控(光暴)必须在配置中设定相应的预站位,否则指路会电椅。
-        例如如果你选择"六芒星日服野队法",你必须要选择两种蓝绿在北半场的预站位之一。
-        8. P3一运的最后如果玩家站在指路的点上并面向Boss,就一定不会吃到暗影之眼(石化眼)。
-        值得一提的是处理最后机制的人可能来不及就位,这种情况下可以通过面向自己的灯解决。
-        9. 如果P3二运选择了"根据目标标记的莫灵喵法或宝宝椅法",则接下来几乎所有绘制和指路都会依赖来自莫灵喵触发器或者宝宝椅的目标标记。
-        攻击1到4代表去左组的人,止步1到3和方块代表去右组的。下标1和2表示站近战位。
-        残缺或者错误的标记将导致电椅。
-        10. P4二运对圣龙爪(红)debuff玩家的标记涉及到禁止和止步。
-        对于禁止1和锁链1去西边的标记逻辑来说:
-        禁止1和锁链1:前往西侧处理机制。锁链是长debuff。
-        禁止2和锁链2:前往东侧处理机制。锁链是长debuff。
-        对于禁止1和禁止2去西边的标记逻辑来说:
-        禁止1和2:前往西侧处理机制。数字2是长debuff。
-        止步1和2:前往东侧处理机制。数字2是长debuff。
-        标记的优先级将取决于上面圣龙爪(红)玩家优先级的设置。
-        11. 如果P4二运的白圈指路逻辑设置为"根据我身上的目标标记",则会根据来自其他科技或者手摇的自身的标记(攻击1到4)指路。
-        同时,选项"根据我身上的目标标记"可以有效配合上面的P4二运标记功能使用。
-        如果P4二运的白圈指路逻辑设置为"根据Debuff",则只会根据Debuff指路,标记将完全被无视。
-        12. 如果P4二运持有圣龙爪(红)debuff的玩家吃了圣龙气息(龙头)的白圈,或者持有圣龙牙(蓝)debuff的玩家撞了圣龙气息(龙头),
-        那么相关绘制的移除可能有延迟并且会干扰玩家。
-        不过如果已经这样那大概率是要团灭了,修复这个问题在技术层面上也有点难度,所以我就不管了。
-        13. P5璀璨之刃(地火)指路被分为两个部分,一部分是当前步(默认绿色),另一部分是下一步(默认黄色)。
-        直到下一步变成安全色之前,永远不要提前移动。下一步的绘制仅作预览用途,让你有个心理准备。
-        14. 此脚本可以与@usamilyan4608的绝伊甸补丁脚本一起使用,这个补丁脚本进一步在许多细节上提供了优化和精修。
-        补丁脚本可以在@usamilyan4608的个人在线脚本库中找到。
-        15. 非常建议在用这个脚本打本的同时,启用插件A Realm Record(ARR)并开启录制。
-        如果遇到了问题或bug,请退本一次来切断录像(这样我能快速定位出问题的那一把)。
-        然后,简单描述一下问题并分享一下那份出了问题的ARR录像。非常感谢!
+        1. æ•´å¥—é»˜è®¤è®¾ç½®æ˜¯è·ŸèŽ«çµå–µè§†é¢‘æ”»ç•¥ä¿æŒä¸€è‡´çš„,é™¤äº†èŽ«çµå–µè§¦å‘å™¨ä¸­æä¾›å¤šä¸ªé€‰æ‹©çš„éƒ¨åˆ†ã€‚
+        æ²¡æœ‰é»˜è®¤é€‰é¡¹çš„è®¾ç½®,å…¶å®žé™…é»˜è®¤è®¾ç½®å°†æ ¹æ®ä»£ç ä¸­çš„æžšä¸¾ç±»åž‹å®žé™…å€¼å†³å®šã€‚
+        2. æä¾›ä¸¤ç§ç±»åž‹çš„TTSæ’­æŠ¥,åŽŸç‰ˆTTSå’ŒDaily Routines TTSã€‚
+        è¯·ç¡®ä¿ä½ åªå¯ç”¨äº†äºŒè€…å…¶ä¸€,è¿™ä¸¤ä¸ªä¸èƒ½åŒæ—¶å¼€ã€‚
+        å½“ç„¶,å¦‚æžœé€‰æ‹©äº†Daily Routines TTS,ä½ éœ€è¦å·²ç»å®‰è£…å¹¶å¯ç”¨äº†Daily Routinesæ’ä»¶ã€‚
+        TTSæç¤ºçš„è¯­è¨€ä¸Žæ–‡æœ¬æç¤ºè¯­è¨€ç›¸åŒã€‚
+        3. å¯¹äºŽä»»ä½•æ ‡è®°é˜Ÿå‹çš„åŠŸèƒ½,å°é˜Ÿé‡Œåªèƒ½æœ‰ä¸€ä¸ªçŽ©å®¶å¯ç”¨,å¹¶ä¸”ä¹Ÿä¸ä¸Žå…¶ä»–ç§‘æŠ€çš„å…¼å®¹ã€‚
+        4. P1ä¹å›­ç»æŠ€(é›¾é¾™)æœŸé—´è¢«æ ‡è®°çš„çŽ©å®¶å¯èƒ½å°‘äºŽæˆ–è€…å¤šäºŽ2äºº,å› ä¸ºä¼šæ•èŽ·çŽ©å®¶çš„å®žæ—¶ä½ç½®è¿›è¡Œè®¡ç®—,ç«™ä½ä¸æ ‡å‡†å¯èƒ½ä¼šå¯¼è‡´è¿™ç§æƒ…å†µã€‚
+        5. P1ä¿¡ä»°å´©å¡Œ(å››è¿žæŠ“)æœŸé—´çš„æ ‡è®°æ¶‰åŠåˆ°æ”»å‡»,æ­¢æ­¥å’Œç¦æ­¢ä¸‰ç§ã€‚
+        ç¦æ­¢1å’Œ2:å‰å¾€åŒ—ä¾§çš„è¢«è¿žçº¿çŽ©å®¶ã€‚æ•°å­—å°±æ˜¯æŠ“äººçš„è½®æ•°ã€‚
+        é”é“¾1å’Œ2:å‰å¾€å—ä¾§çš„è¢«è¿žçº¿çŽ©å®¶ã€‚æ•°å­—å°±æ˜¯æŠ“äººçš„è½®æ•°ã€‚
+        æ”»å‡»1å’Œ2:å‰å¾€åŒ—ä¾§çš„é—²äººã€‚æ•°å­—1æ˜¯ä¼˜å…ˆçº§æ›´é«˜çš„ã€‚
+        æ”»å‡»3å’Œ4:å‰å¾€å—ä¾§çš„é—²äººã€‚æ•°å­—3æ˜¯ä¼˜å…ˆçº§æ›´é«˜çš„ã€‚
+        (å‡è®¾ä¼˜å…ˆçº§ä¸º MT ST H1 H2 D1 D2 D3 D4, é‚£ä¹ˆé«˜ä¼˜å…ˆçº§æŒ‡çš„æ˜¯:
+           é«˜ä¼˜å…ˆçº§ <- MT ST H1 H2 D1 D2 D3 D4 -> ä½Žä¼˜å…ˆçº§)
+        6. P2é•œä¸­å¥‡é‡æ”»ç•¥çš„æè¿°ä¸­,å·¦å’Œå³çš„åŸºå‡†æŒ‡çš„æ˜¯ä»Žåœºä¸­é¢å‘ä¸¤é¢çº¢è‰²é•œå­æ—¶çš„å·¦å’Œå³ã€‚
+        7. P2å…‰ä¹‹å¤±æŽ§(å…‰æš´)å¿…é¡»åœ¨é…ç½®ä¸­è®¾å®šç›¸åº”çš„é¢„ç«™ä½,å¦åˆ™æŒ‡è·¯ä¼šç”µæ¤…ã€‚
+        ä¾‹å¦‚å¦‚æžœä½ é€‰æ‹©"å…­èŠ’æ˜Ÿæ—¥æœé‡Žé˜Ÿæ³•",ä½ å¿…é¡»è¦é€‰æ‹©ä¸¤ç§è“ç»¿åœ¨åŒ—åŠåœºçš„é¢„ç«™ä½ä¹‹ä¸€ã€‚
+        8. P3ä¸€è¿çš„æœ€åŽå¦‚æžœçŽ©å®¶ç«™åœ¨æŒ‡è·¯çš„ç‚¹ä¸Šå¹¶é¢å‘Boss,å°±ä¸€å®šä¸ä¼šåƒåˆ°æš—å½±ä¹‹çœ¼(çŸ³åŒ–çœ¼)ã€‚
+        å€¼å¾—ä¸€æçš„æ˜¯å¤„ç†æœ€åŽæœºåˆ¶çš„äººå¯èƒ½æ¥ä¸åŠå°±ä½,è¿™ç§æƒ…å†µä¸‹å¯ä»¥é€šè¿‡é¢å‘è‡ªå·±çš„ç¯è§£å†³ã€‚
+        9. å¦‚æžœP3äºŒè¿é€‰æ‹©äº†"æ ¹æ®ç›®æ ‡æ ‡è®°çš„èŽ«çµå–µæ³•æˆ–å®å®æ¤…æ³•",åˆ™æŽ¥ä¸‹æ¥å‡ ä¹Žæ‰€æœ‰ç»˜åˆ¶å’ŒæŒ‡è·¯éƒ½ä¼šä¾èµ–æ¥è‡ªèŽ«çµå–µè§¦å‘å™¨æˆ–è€…å®å®æ¤…çš„ç›®æ ‡æ ‡è®°ã€‚
+        æ”»å‡»1åˆ°4ä»£è¡¨åŽ»å·¦ç»„çš„äºº,æ­¢æ­¥1åˆ°3å’Œæ–¹å—ä»£è¡¨åŽ»å³ç»„çš„ã€‚ä¸‹æ ‡1å’Œ2è¡¨ç¤ºç«™è¿‘æˆ˜ä½ã€‚
+        æ®‹ç¼ºæˆ–è€…é”™è¯¯çš„æ ‡è®°å°†å¯¼è‡´ç”µæ¤…ã€‚
+        10. P4äºŒè¿å¯¹åœ£é¾™çˆª(çº¢)debuffçŽ©å®¶çš„æ ‡è®°æ¶‰åŠåˆ°ç¦æ­¢å’Œæ­¢æ­¥ã€‚
+        å¯¹äºŽç¦æ­¢1å’Œé”é“¾1åŽ»è¥¿è¾¹çš„æ ‡è®°é€»è¾‘æ¥è¯´:
+        ç¦æ­¢1å’Œé”é“¾1:å‰å¾€è¥¿ä¾§å¤„ç†æœºåˆ¶ã€‚é”é“¾æ˜¯é•¿debuffã€‚
+        ç¦æ­¢2å’Œé”é“¾2:å‰å¾€ä¸œä¾§å¤„ç†æœºåˆ¶ã€‚é”é“¾æ˜¯é•¿debuffã€‚
+        å¯¹äºŽç¦æ­¢1å’Œç¦æ­¢2åŽ»è¥¿è¾¹çš„æ ‡è®°é€»è¾‘æ¥è¯´:
+        ç¦æ­¢1å’Œ2:å‰å¾€è¥¿ä¾§å¤„ç†æœºåˆ¶ã€‚æ•°å­—2æ˜¯é•¿debuffã€‚
+        æ­¢æ­¥1å’Œ2:å‰å¾€ä¸œä¾§å¤„ç†æœºåˆ¶ã€‚æ•°å­—2æ˜¯é•¿debuffã€‚
+        æ ‡è®°çš„ä¼˜å…ˆçº§å°†å–å†³äºŽä¸Šé¢åœ£é¾™çˆª(çº¢)çŽ©å®¶ä¼˜å…ˆçº§çš„è®¾ç½®ã€‚
+        11. å¦‚æžœP4äºŒè¿çš„ç™½åœˆæŒ‡è·¯é€»è¾‘è®¾ç½®ä¸º"æ ¹æ®æˆ‘èº«ä¸Šçš„ç›®æ ‡æ ‡è®°",åˆ™ä¼šæ ¹æ®æ¥è‡ªå…¶ä»–ç§‘æŠ€æˆ–è€…æ‰‹æ‘‡çš„è‡ªèº«çš„æ ‡è®°(æ”»å‡»1åˆ°4)æŒ‡è·¯ã€‚
+        åŒæ—¶,é€‰é¡¹"æ ¹æ®æˆ‘èº«ä¸Šçš„ç›®æ ‡æ ‡è®°"å¯ä»¥æœ‰æ•ˆé…åˆä¸Šé¢çš„P4äºŒè¿æ ‡è®°åŠŸèƒ½ä½¿ç”¨ã€‚
+        å¦‚æžœP4äºŒè¿çš„ç™½åœˆæŒ‡è·¯é€»è¾‘è®¾ç½®ä¸º"æ ¹æ®Debuff",åˆ™åªä¼šæ ¹æ®DebuffæŒ‡è·¯,æ ‡è®°å°†å®Œå…¨è¢«æ— è§†ã€‚
+        12. å¦‚æžœP4äºŒè¿æŒæœ‰åœ£é¾™çˆª(çº¢)debuffçš„çŽ©å®¶åƒäº†åœ£é¾™æ°”æ¯(é¾™å¤´)çš„ç™½åœˆ,æˆ–è€…æŒæœ‰åœ£é¾™ç‰™(è“)debuffçš„çŽ©å®¶æ’žäº†åœ£é¾™æ°”æ¯(é¾™å¤´),
+        é‚£ä¹ˆç›¸å…³ç»˜åˆ¶çš„ç§»é™¤å¯èƒ½æœ‰å»¶è¿Ÿå¹¶ä¸”ä¼šå¹²æ‰°çŽ©å®¶ã€‚
+        ä¸è¿‡å¦‚æžœå·²ç»è¿™æ ·é‚£å¤§æ¦‚çŽ‡æ˜¯è¦å›¢ç­äº†,ä¿®å¤è¿™ä¸ªé—®é¢˜åœ¨æŠ€æœ¯å±‚é¢ä¸Šä¹Ÿæœ‰ç‚¹éš¾åº¦,æ‰€ä»¥æˆ‘å°±ä¸ç®¡äº†ã€‚
+        13. P5ç’€ç’¨ä¹‹åˆƒ(åœ°ç«)æŒ‡è·¯è¢«åˆ†ä¸ºä¸¤ä¸ªéƒ¨åˆ†,ä¸€éƒ¨åˆ†æ˜¯å½“å‰æ­¥(é»˜è®¤ç»¿è‰²),å¦ä¸€éƒ¨åˆ†æ˜¯ä¸‹ä¸€æ­¥(é»˜è®¤é»„è‰²)ã€‚
+        ç›´åˆ°ä¸‹ä¸€æ­¥å˜æˆå®‰å…¨è‰²ä¹‹å‰,æ°¸è¿œä¸è¦æå‰ç§»åŠ¨ã€‚ä¸‹ä¸€æ­¥çš„ç»˜åˆ¶ä»…ä½œé¢„è§ˆç”¨é€”,è®©ä½ æœ‰ä¸ªå¿ƒç†å‡†å¤‡ã€‚
+        14. æ­¤è„šæœ¬å¯ä»¥ä¸Ž@usamilyan4608çš„ç»ä¼Šç”¸è¡¥ä¸è„šæœ¬ä¸€èµ·ä½¿ç”¨,è¿™ä¸ªè¡¥ä¸è„šæœ¬è¿›ä¸€æ­¥åœ¨è®¸å¤šç»†èŠ‚ä¸Šæä¾›äº†ä¼˜åŒ–å’Œç²¾ä¿®ã€‚
+        è¡¥ä¸è„šæœ¬å¯ä»¥åœ¨@usamilyan4608çš„ä¸ªäººåœ¨çº¿è„šæœ¬åº“ä¸­æ‰¾åˆ°ã€‚
+        15. éžå¸¸å»ºè®®åœ¨ç”¨è¿™ä¸ªè„šæœ¬æ‰“æœ¬çš„åŒæ—¶,å¯ç”¨æ’ä»¶A Realm Record(ARR)å¹¶å¼€å¯å½•åˆ¶ã€‚
+        å¦‚æžœé‡åˆ°äº†é—®é¢˜æˆ–bug,è¯·é€€æœ¬ä¸€æ¬¡æ¥åˆ‡æ–­å½•åƒ(è¿™æ ·æˆ‘èƒ½å¿«é€Ÿå®šä½å‡ºé—®é¢˜çš„é‚£ä¸€æŠŠ)ã€‚
+        ç„¶åŽ,ç®€å•æè¿°ä¸€ä¸‹é—®é¢˜å¹¶åˆ†äº«ä¸€ä¸‹é‚£ä»½å‡ºäº†é—®é¢˜çš„ARRå½•åƒã€‚éžå¸¸æ„Ÿè°¢!
 
         ***** Credits *****
-        ***** 致谢 *****
+        ***** è‡´è°¢ *****
 
         The original author, the founder and the co-maintainer: @karlin_z
         Helpers (sorted lexicographically):
@@ -155,20 +155,20 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
            (Mar 16, 2025; Mar 22, 2025; Mar 24, 2025; Apr 7, 2025)
          - @veever2464 provided supports of Daily Routines TTS for each TTS prompt. (Mar 10, 2025)
 
-        原作者,奠基人兼共同维护者: @karlin_z
-        提供帮助的人(按字典序排序):
-        - @abigseal为P1末尾踩塔提供了打法"固定H1_H2_D4剩余人补位"。 (2025.03.09)
-        - @alexandria_prime为P1信仰崩塌(四连抓)提供了打法"按HTD顺序单排","按H1TDH2顺序单排"和"面向Boss"。 (2025.03.05)
-        - @bupleurum.为配置文本提供了国服MMW攻略相关标注,P2光之失控(光暴)新灰九法光流侵蚀(放泥)大致路径细化。 (2025.3.20)
-        - @cyf5119为P1光轮召唤提供了雷焰之光轮的AOE范围。 (2025.3.19)
-        - @milkvio为P5璀璨之刃(地火)提供了指路。 (2025.03.16)
-        - @usamilyan4608为P2光之失控(光暴)期间的光球AOE提供了时间警告,P4二运龙头绘制优化,开发者模式调试输出修复。
-          @usamilyan4608还为P3二运的罕见本地错误提供了珍贵录像和修复建议。
+        åŽŸä½œè€…,å¥ åŸºäººå…¼å…±åŒç»´æŠ¤è€…: @karlin_z
+        æä¾›å¸®åŠ©çš„äºº(æŒ‰å­—å…¸åºæŽ’åº):
+        - @abigsealä¸ºP1æœ«å°¾è¸©å¡”æä¾›äº†æ‰“æ³•"å›ºå®šH1_H2_D4å‰©ä½™äººè¡¥ä½"ã€‚ (2025.03.09)
+        - @alexandria_primeä¸ºP1ä¿¡ä»°å´©å¡Œ(å››è¿žæŠ“)æä¾›äº†æ‰“æ³•"æŒ‰HTDé¡ºåºå•æŽ’","æŒ‰H1TDH2é¡ºåºå•æŽ’"å’Œ"é¢å‘Boss"ã€‚ (2025.03.05)
+        - @bupleurum.ä¸ºé…ç½®æ–‡æœ¬æä¾›äº†å›½æœMMWæ”»ç•¥ç›¸å…³æ ‡æ³¨,P2å…‰ä¹‹å¤±æŽ§(å…‰æš´)æ–°ç°ä¹æ³•å…‰æµä¾µèš€(æ”¾æ³¥)å¤§è‡´è·¯å¾„ç»†åŒ–ã€‚ (2025.3.20)
+        - @cyf5119ä¸ºP1å…‰è½®å¬å”¤æä¾›äº†é›·ç„°ä¹‹å…‰è½®çš„AOEèŒƒå›´ã€‚ (2025.3.19)
+        - @milkvioä¸ºP5ç’€ç’¨ä¹‹åˆƒ(åœ°ç«)æä¾›äº†æŒ‡è·¯ã€‚ (2025.03.16)
+        - @usamilyan4608ä¸ºP2å…‰ä¹‹å¤±æŽ§(å…‰æš´)æœŸé—´çš„å…‰çƒAOEæä¾›äº†æ—¶é—´è­¦å‘Š,P4äºŒè¿é¾™å¤´ç»˜åˆ¶ä¼˜åŒ–,å¼€å‘è€…æ¨¡å¼è°ƒè¯•è¾“å‡ºä¿®å¤ã€‚
+          @usamilyan4608è¿˜ä¸ºP3äºŒè¿çš„ç½•è§æœ¬åœ°é”™è¯¯æä¾›äº†çè´µå½•åƒå’Œä¿®å¤å»ºè®®ã€‚
           (2025.03.16, 2025.03.22, 2025.03.24, 2025.04.07)
-        - @veever2464为每一条TTS提示提供了Daily Routines TTS支持。 (2025.03.10)
+        - @veever2464ä¸ºæ¯ä¸€æ¡TTSæç¤ºæä¾›äº†Daily Routines TTSæ”¯æŒã€‚ (2025.03.10)
 
         ***** New Features *****
-        ***** 新功能 *****
+        ***** æ–°åŠŸèƒ½ *****
 
         Phase 1:
          - Refinements for the entire phase;
@@ -192,28 +192,28 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
          - Guidance of Polarizing Strikes.
 
         P1:
-         - 整个阶段的精修;
-         - 乐园绝技(雾龙),信仰崩塌(四连抓)和最后踩塔都增加了新攻略;
-         - 乐园绝技(雾龙)的玩家标记;
-         - 重做信仰崩塌(四连抓)的玩家标记;
+         - æ•´ä¸ªé˜¶æ®µçš„ç²¾ä¿®;
+         - ä¹å›­ç»æŠ€(é›¾é¾™),ä¿¡ä»°å´©å¡Œ(å››è¿žæŠ“)å’Œæœ€åŽè¸©å¡”éƒ½å¢žåŠ äº†æ–°æ”»ç•¥;
+         - ä¹å›­ç»æŠ€(é›¾é¾™)çš„çŽ©å®¶æ ‡è®°;
+         - é‡åšä¿¡ä»°å´©å¡Œ(å››è¿žæŠ“)çš„çŽ©å®¶æ ‡è®°;
         P2:
-         - 钻石星辰击退后指路重做;
-         - 镜中奇遇指路重做;
-         - 光之失控(光暴)修复和细化;
+         - é’»çŸ³æ˜Ÿè¾°å‡»é€€åŽæŒ‡è·¯é‡åš;
+         - é•œä¸­å¥‡é‡æŒ‡è·¯é‡åš;
+         - å…‰ä¹‹å¤±æŽ§(å…‰æš´)ä¿®å¤å’Œç»†åŒ–;
         P3:
-         - 二运指路(包括双分组法,车头法和基于标记的莫灵喵或宝宝椅法);
+         - äºŒè¿æŒ‡è·¯(åŒ…æ‹¬åŒåˆ†ç»„æ³•,è½¦å¤´æ³•å’ŒåŸºäºŽæ ‡è®°çš„èŽ«çµå–µæˆ–å®å®æ¤…æ³•);
         P4:
-         - 一运新攻略(单换);
-         - 二运圣龙气息(龙头)白圈相关的指路;
-         - 二运原版指路修复和细化;
-         - 二运新攻略(HTD优先级)与玩家标记;
+         - ä¸€è¿æ–°æ”»ç•¥(å•æ¢);
+         - äºŒè¿åœ£é¾™æ°”æ¯(é¾™å¤´)ç™½åœˆç›¸å…³çš„æŒ‡è·¯;
+         - äºŒè¿åŽŸç‰ˆæŒ‡è·¯ä¿®å¤å’Œç»†åŒ–;
+         - äºŒè¿æ–°æ”»ç•¥(HTDä¼˜å…ˆçº§)ä¸ŽçŽ©å®¶æ ‡è®°;
         P5:
-         - 璀璨之刃(地火)指路;
-         - 光与暗之翼(踩塔)指路(包括灰九脑死法和倒三角法);
-         - 极化打击(挡枪)指路。
+         - ç’€ç’¨ä¹‹åˆƒ(åœ°ç«)æŒ‡è·¯;
+         - å…‰ä¸Žæš—ä¹‹ç¿¼(è¸©å¡”)æŒ‡è·¯(åŒ…æ‹¬ç°ä¹è„‘æ­»æ³•å’Œå€’ä¸‰è§’æ³•);
+         - æžåŒ–æ‰“å‡»(æŒ¡æžª)æŒ‡è·¯ã€‚
 
         ***** Known Issues *****
-        ***** 已知问题 *****
+        ***** å·²çŸ¥é—®é¢˜ *****
 
         Phase 3:
          - Ultimate Relativity: The guidance of Sinbound Meltdown may disappear a tiny bit earlier than the time that the direction is anchored. It's not fatal by any mean, but it's always recommended that baiting it precisely before leaving.
@@ -222,13 +222,13 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
         After all the known issues are resolved, there will be no more major update. The version will be considered as the final version.
 
         P3:
-         - 时间压缩·绝(一运): 罪缚熔毁(激光)的指路变化时间可能略微早于实际判定时间一点点。不是大问题,但最好还是确保引导到了以后再移动。
-           会在未来精修此处的时间轴。
+         - æ—¶é—´åŽ‹ç¼©Â·ç»(ä¸€è¿): ç½ªç¼šç†”æ¯(æ¿€å…‰)çš„æŒ‡è·¯å˜åŒ–æ—¶é—´å¯èƒ½ç•¥å¾®æ—©äºŽå®žé™…åˆ¤å®šæ—¶é—´ä¸€ç‚¹ç‚¹ã€‚ä¸æ˜¯å¤§é—®é¢˜,ä½†æœ€å¥½è¿˜æ˜¯ç¡®ä¿å¼•å¯¼åˆ°äº†ä»¥åŽå†ç§»åŠ¨ã€‚
+           ä¼šåœ¨æœªæ¥ç²¾ä¿®æ­¤å¤„çš„æ—¶é—´è½´ã€‚
 
-        当所有已知问题都被解决后,就不会再有大更新了。那个时候的版本就是最终版。
+        å½“æ‰€æœ‰å·²çŸ¥é—®é¢˜éƒ½è¢«è§£å†³åŽ,å°±ä¸ä¼šå†æœ‰å¤§æ›´æ–°äº†ã€‚é‚£ä¸ªæ—¶å€™çš„ç‰ˆæœ¬å°±æ˜¯æœ€ç»ˆç‰ˆã€‚
 
         ***** To Resellers *****
-        ***** 致倒卖者 *****
+        ***** è‡´å€’å–è€… *****
 
         I sincerely wish:
         Your life will be like Nero;
@@ -240,15 +240,15 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
         Your future will be like Severus Alexander;
         And your end will be like Romulus Augustulus.
         
-        我衷心地祝愿:
-        你的人生像尼禄;
-        你的运气像戴克里先;
-        你的名誉像康茂德;
-        你的诚信像卡拉卡拉;
-        你的道德像埃拉伽巴路斯;
-        你的信用像加里恩努斯;
-        你的未来像塞维鲁·亚历山大;
-        而你的结局像罗慕路斯·奥古斯都。
+        æˆ‘è¡·å¿ƒåœ°ç¥æ„¿:
+        ä½ çš„äººç”Ÿåƒå°¼ç¦„;
+        ä½ çš„è¿æ°”åƒæˆ´å…‹é‡Œå…ˆ;
+        ä½ çš„åèª‰åƒåº·èŒ‚å¾·;
+        ä½ çš„è¯šä¿¡åƒå¡æ‹‰å¡æ‹‰;
+        ä½ çš„é“å¾·åƒåŸƒæ‹‰ä¼½å·´è·¯æ–¯;
+        ä½ çš„ä¿¡ç”¨åƒåŠ é‡Œæ©åŠªæ–¯;
+        ä½ çš„æœªæ¥åƒå¡žç»´é²Â·äºšåŽ†å±±å¤§;
+        è€Œä½ çš„ç»“å±€åƒç½—æ…•è·¯æ–¯Â·å¥¥å¤æ–¯éƒ½ã€‚
 
         """;
         */
@@ -258,14 +258,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
         ***** Please read the note here carefully before running the script! *****
         
         There is a character limit in the description area of scripts that I'm unable to put the whole description here. Therefore, I moved the script description to the pinned messages on Discord.
-        Navigate to the Discord of Kodakku Assist, find the post "Cicero's Kodakku Assist 个人在线脚本库" in the channel "示例与分享", and finally check "Pinned Messages" for the script description.
+        Navigate to the Discord of Kodakku Assist, find the post "Cicero's Kodakku Assist ä¸ªäººåœ¨çº¿è„šæœ¬åº“" in the channel "ç¤ºä¾‹ä¸Žåˆ†äº«", and finally check "Pinned Messages" for the script description.
         For PC, "Pinned Messages" is in the upper right corner of the chat bar. For mobile, click the arrow icon in the upper right corner, then there would be a tab "Pins".
         It would take about 5 minutes to go through the English part of the description. Please make sure you have read it in full before running the script. Thank you!
         
-        ***** 脚本描述部分有字数限制,没法放下整个描述,所以我把描述部分移到了Discord上的标注消息中。 *****
-        去可达鸭的Discord,在"示例与分享"频道中找到帖子"Cicero's Kodakku Assist 个人在线脚本库",选择"已标注消息",就可以查看脚本描述了。
-        对于电脑端,"已标注消息"在聊天栏的右上角。对于手机端,点击右上角的箭头标志,然后可以找到一个名为"标注"的标签页。
-        阅读完中文部分大约需要花费5分钟的时间。请先完整地阅读脚本描述再使用本脚本，谢谢！
+        ***** è„šæœ¬æè¿°éƒ¨åˆ†æœ‰å­—æ•°é™åˆ¶,æ²¡æ³•æ”¾ä¸‹æ•´ä¸ªæè¿°,æ‰€ä»¥æˆ‘æŠŠæè¿°éƒ¨åˆ†ç§»åˆ°äº†Discordä¸Šçš„æ ‡æ³¨æ¶ˆæ¯ä¸­ã€‚ *****
+        åŽ»å¯è¾¾é¸­çš„Discord,åœ¨"ç¤ºä¾‹ä¸Žåˆ†äº«"é¢‘é“ä¸­æ‰¾åˆ°å¸–å­"Cicero's Kodakku Assist ä¸ªäººåœ¨çº¿è„šæœ¬åº“",é€‰æ‹©"å·²æ ‡æ³¨æ¶ˆæ¯",å°±å¯ä»¥æŸ¥çœ‹è„šæœ¬æè¿°äº†ã€‚
+        å¯¹äºŽç”µè„‘ç«¯,"å·²æ ‡æ³¨æ¶ˆæ¯"åœ¨èŠå¤©æ çš„å³ä¸Šè§’ã€‚å¯¹äºŽæ‰‹æœºç«¯,ç‚¹å‡»å³ä¸Šè§’çš„ç®­å¤´æ ‡å¿—,ç„¶åŽå¯ä»¥æ‰¾åˆ°ä¸€ä¸ªåä¸º"æ ‡æ³¨"çš„æ ‡ç­¾é¡µã€‚
+        é˜…è¯»å®Œä¸­æ–‡éƒ¨åˆ†å¤§çº¦éœ€è¦èŠ±è´¹5åˆ†é’Ÿçš„æ—¶é—´ã€‚è¯·å…ˆå®Œæ•´åœ°é˜…è¯»è„šæœ¬æè¿°å†ä½¿ç”¨æœ¬è„šæœ¬ï¼Œè°¢è°¢ï¼
         
         
         
@@ -276,8 +276,8 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
         Whether by design or chance, the supreme commander of the victorious army recited a famous line from Homer's Iliad, spoken by the Trojan hero Hector:
         "Troy, I suppose, will also perish with King Priam and the warriors who follow him!"
         The historian Polybius, standing behind him, asked why he said this. Scipio Aemilianus turned, looked at his close friend of twenty years, took his hand, and replied:
-        "Polybius, we have just destroyed an empire that was once powerful, and we have won this 'great moment'. But my heart is not filled with the joy of victory. Instead, I am somewhat sad — I fear that our own Rome may one day suffer the same fate!"
-        — At the fall of Carthage, near the end of the Third Punic War, 146 BC
+        "Polybius, we have just destroyed an empire that was once powerful, and we have won this 'great moment'. But my heart is not filled with the joy of victory. Instead, I am somewhat sad â€” I fear that our own Rome may one day suffer the same fate!"
+        â€” At the fall of Carthage, near the end of the Third Punic War, 146 BC
         """;
         
         #region User_Settings
@@ -289,7 +289,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
         [UserSetting("Language Of Prompts")]
         public Languages_Of_Prompts Language_Of_Prompts { get; set; }
         [UserSetting("Weird Shenanigans (Some random weird prompts after each wipe.)")]
-        public Weird_Shenanigans Weird_Shenanigan { get; set; } = Weird_Shenanigans.Astesia_ACR_蟹蟹的ACR;
+        public Weird_Shenanigans Weird_Shenanigan { get; set; } = Weird_Shenanigans.Astesia_ACR_èŸ¹èŸ¹çš„ACR;
 
         [UserSetting("-----TTS Settings----- (No actual meaning for this setting)")]
         public bool _____TTS_Settings_____ { get; set; } = true;
@@ -301,36 +301,36 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
         [UserSetting("-----Phase 1 Settings----- (No actual meaning for this setting)")]
         public bool _____Phase1_Settings_____ { get; set; } = true;
         [UserSetting("P1 Utopian Sky Standby Position")]
-        public Phase1_Standby_Positions_Of_Utopian_Sky Phase1_Standby_Position_Of_Utopian_Sky { get; set; } = Phase1_Standby_Positions_Of_Utopian_Sky.Swap_OT_And_M2_交换ST与D4_莫灵喵与MMW;
+        public Phase1_Standby_Positions_Of_Utopian_Sky Phase1_Standby_Position_Of_Utopian_Sky { get; set; } = Phase1_Standby_Positions_Of_Utopian_Sky.Swap_OT_And_M2_äº¤æ¢STä¸ŽD4_èŽ«çµå–µä¸ŽMMW;
         [UserSetting("P1 Mark Players In Safe Positions (Make sure only one in the party enables this!)")]
         public bool Phase1_Mark_Players_In_Safe_Positions { get; set; } = false;
         [UserSetting("P1 Colour Of Burnt Strike Characteristics")]
         public ScriptColor Phase1_Colour_Of_Burnt_Strike_Characteristics { get; set; } = new() { V4 = new(1f, 1f, 0f, 1f) };
         [UserSetting("P1 Turn Of The Heavens Groups")]
-        public Phase1_Groups_Of_Turn_Of_The_Heavens Phase1_Group_Of_Turn_Of_The_Heavens { get; set; } = Phase1_Groups_Of_Turn_Of_The_Heavens.MTOTH1H2_Go_North_MTM1_vary_MTSTH1H2去北MTD1换_莫灵喵与MMW;
+        public Phase1_Groups_Of_Turn_Of_The_Heavens Phase1_Group_Of_Turn_Of_The_Heavens { get; set; } = Phase1_Groups_Of_Turn_Of_The_Heavens.MTOTH1H2_Go_North_MTM1_vary_MTSTH1H2åŽ»åŒ—MTD1æ¢_èŽ«çµå–µä¸ŽMMW;
         [UserSetting("P1 Fall Of Faith Strat")]
-        public Phase1_Strats_Of_Fall_Of_Faith Phase1_Strat_Of_Fall_Of_Faith { get; set; } = Phase1_Strats_Of_Fall_Of_Faith.Single_Line_In_HTD_Order_按HTD顺序单排_莫灵喵;
+        public Phase1_Strats_Of_Fall_Of_Faith Phase1_Strat_Of_Fall_Of_Faith { get; set; } = Phase1_Strats_Of_Fall_Of_Faith.Single_Line_In_HTD_Order_æŒ‰HTDé¡ºåºå•æŽ’_èŽ«çµå–µ;
         [UserSetting("P1 Mark Players During Fall Of Faith (Make sure only one in the party enables this!)")]
         public bool Phase1_Mark_Players_During_Fall_Of_Faith { get; set; } = false;
         [UserSetting("P1 Orientation Benchmarks During Fall Of Faith")]
-        public Phase1_Orientation_Benchmarks_During_Fall_Of_Faith Phase1_Orientation_Benchmark_During_Fall_Of_Faith { get; set; } = Phase1_Orientation_Benchmarks_During_Fall_Of_Faith.High_Priority_Left_Facing_The_Boss_面向Boss左侧高优先级_莫灵喵与MMW;
+        public Phase1_Orientation_Benchmarks_During_Fall_Of_Faith Phase1_Orientation_Benchmark_During_Fall_Of_Faith { get; set; } = Phase1_Orientation_Benchmarks_During_Fall_Of_Faith.High_Priority_Left_Facing_The_Boss_é¢å‘Bosså·¦ä¾§é«˜ä¼˜å…ˆçº§_èŽ«çµå–µä¸ŽMMW;
         [UserSetting("P1 Towers Strat")]
-        public Phase1_Strats_Of_Towers Phase1_Strat_Of_Towers { get; set; } = Phase1_Strats_Of_Towers.Completely_Based_On_Priority_完全根据优先级_莫灵喵;
+        public Phase1_Strats_Of_Towers Phase1_Strat_Of_Towers { get; set; } = Phase1_Strats_Of_Towers.Completely_Based_On_Priority_å®Œå…¨æ ¹æ®ä¼˜å…ˆçº§_èŽ«çµå–µ;
 
         [UserSetting("-----Phase 2 Settings----- (No actual meaning for this setting)")]
         public bool _____Phase2_Settings_____ { get; set; } = true;
         [UserSetting("P2 Strat After Knockback")]
-        public Phase2_Strats_After_Knockback Phase2_Strat_After_Knockback { get; set; } = Phase2_Strats_After_Knockback.Clockwise_Both_Groups_Counterclockwise_总是顺时针双组逆时针_莫灵喵与MMW;
+        public Phase2_Strats_After_Knockback Phase2_Strat_After_Knockback { get; set; } = Phase2_Strats_After_Knockback.Clockwise_Both_Groups_Counterclockwise_æ€»æ˜¯é¡ºæ—¶é’ˆåŒç»„é€†æ—¶é’ˆ_èŽ«çµå–µä¸ŽMMW;
         [UserSetting("P2 Mirror Mirror Strat")]
-        public Phase2_Strats_Of_Mirror_Mirror Phase2_Strat_Of_Mirror_Mirror { get; set; } = Phase2_Strats_Of_Mirror_Mirror.Melee_Group_Closest_Red_Right_If_Same_近战组最近红色镜子距离相同则右_莫灵喵与MMW;
+        public Phase2_Strats_Of_Mirror_Mirror Phase2_Strat_Of_Mirror_Mirror { get; set; } = Phase2_Strats_Of_Mirror_Mirror.Melee_Group_Closest_Red_Right_If_Same_è¿‘æˆ˜ç»„æœ€è¿‘çº¢è‰²é•œå­è·ç¦»ç›¸åŒåˆ™å³_èŽ«çµå–µä¸ŽMMW;
         [UserSetting("P2 Colour Of Mirror Rough Guidance")]
         public ScriptColor Phase2_Colour_Of_Mirror_Rough_Guidance { get; set; } = new() { V4 = new(1f, 1f, 0f, 1f) };
         [UserSetting("P2 Colour Of Potential Dangerous Zones")]
         public ScriptColor Phase2_Colour_Of_Potential_Dangerous_Zones { get; set; } = new() { V4 = new(1f, 0f, 0f, 1f) };
         [UserSetting("P2 Light Rampant Initial Protean Positions")]
-        public Phase2_Initial_Protean_Positions_Of_Light_Rampant Phase2_Initial_Protean_Position_Of_Light_Rampant { get; set; } = Phase2_Initial_Protean_Positions_Of_Light_Rampant.Normal_Protean_Tanks_North_East_For_Both_Grey9_常规八方T在东北_灰9用;
+        public Phase2_Initial_Protean_Positions_Of_Light_Rampant Phase2_Initial_Protean_Position_Of_Light_Rampant { get; set; } = Phase2_Initial_Protean_Positions_Of_Light_Rampant.Normal_Protean_Tanks_North_East_For_Both_Grey9_å¸¸è§„å…«æ–¹Tåœ¨ä¸œåŒ—_ç°9ç”¨;
         [UserSetting("P2 Light Rampant Strat")]
-        public Phase2_Strats_Of_Light_Rampant Phase2_Strat_Of_Light_Rampant { get; set; } = Phase2_Strats_Of_Light_Rampant.New_Grey9_新灰九法_莫灵喵与MMW;
+        public Phase2_Strats_Of_Light_Rampant Phase2_Strat_Of_Light_Rampant { get; set; } = Phase2_Strats_Of_Light_Rampant.New_Grey9_æ–°ç°ä¹æ³•_èŽ«çµå–µä¸ŽMMW;
         [UserSetting("P2 Colour Of Rough Paths")]
         public ScriptColor Phase2_Colour_Of_Rough_Paths { get; set; } = new() { V4 = new(1f, 1f, 0f, 1f) };
         [UserSetting("P2 Colour Of Sphere AOEs")]
@@ -339,15 +339,15 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
         [UserSetting("-----Phase 3 Settings----- (No actual meaning for this setting)")]
         public bool _____Phase3_Settings_____ { get; set; } = true;
         [UserSetting("P3 First Half Strat")]
-        public Phase3_Strats_Of_The_First_Half Phase3_Strat_Of_The_First_Half { get; set; } = Phase3_Strats_Of_The_First_Half.Moogle_莫古力_莫灵喵与MMW;
+        public Phase3_Strats_Of_The_First_Half Phase3_Strat_Of_The_First_Half { get; set; } = Phase3_Strats_Of_The_First_Half.Moogle_èŽ«å¤åŠ›_èŽ«çµå–µä¸ŽMMW;
         [UserSetting("P3 Second Half Strat")]
-        public Phase3_Strats_Of_The_Second_Half Phase3_Strat_Of_The_Second_Half { get; set; } = Phase3_Strats_Of_The_Second_Half.Moglin_Meow_Or_Baby_Wheelchair_Based_On_Signs_根据目标标记的莫灵喵法或宝宝椅法;
+        public Phase3_Strats_Of_The_Second_Half Phase3_Strat_Of_The_Second_Half { get; set; } = Phase3_Strats_Of_The_Second_Half.Moglin_Meow_Or_Baby_Wheelchair_Based_On_Signs_æ ¹æ®ç›®æ ‡æ ‡è®°çš„èŽ«çµå–µæ³•æˆ–å®å®æ¤…æ³•;
         [UserSetting("P3 Double Group Strat Branch")]
-        public Phase3_Branches_Of_The_Double_Group_Strat Phase3_Branch_Of_The_Double_Group_Strat { get; set; } = Phase3_Branches_Of_The_Double_Group_Strat.Based_On_Safe_Positions_安全区为基准_MMW;
+        public Phase3_Branches_Of_The_Double_Group_Strat Phase3_Branch_Of_The_Double_Group_Strat { get; set; } = Phase3_Branches_Of_The_Double_Group_Strat.Based_On_Safe_Positions_å®‰å…¨åŒºä¸ºåŸºå‡†_MMW;
         [UserSetting("P3 Locomotive Strat Branch")]
-        public Phase3_Branches_Of_The_Locomotive_Strat Phase3_Branch_Of_The_Locomotive_Strat { get; set; } = Phase3_Branches_Of_The_Locomotive_Strat.Others_As_Locomotives_Chinese_PF_国服野队人群为车头;
+        public Phase3_Branches_Of_The_Locomotive_Strat Phase3_Branch_Of_The_Locomotive_Strat { get; set; } = Phase3_Branches_Of_The_Locomotive_Strat.Others_As_Locomotives_Chinese_PF_å›½æœé‡Žé˜Ÿäººç¾¤ä¸ºè½¦å¤´;
         [UserSetting("P3 Zone Division")]
-        public Phase3_Divisions_Of_The_Zone Phase3_Division_Of_The_Zone { get; set; } = Phase3_Divisions_Of_The_Zone.North_To_Southwest_For_The_Left_Group_左组从正北到西南_莫灵喵与MMW;
+        public Phase3_Divisions_Of_The_Zone Phase3_Division_Of_The_Zone { get; set; } = Phase3_Divisions_Of_The_Zone.North_To_Southwest_For_The_Left_Group_å·¦ç»„ä»Žæ­£åŒ—åˆ°è¥¿å—_èŽ«çµå–µä¸ŽMMW;
         [UserSetting("P3 Colour Of Rough Guidance")]
         public ScriptColor Phase3_Colour_Of_Rough_Guidance { get; set; } = new() { V4 = new(1f, 1f, 0f, 1f) };
         [UserSetting("P3 Colour Of The Penultimate Apocalypse")]
@@ -360,7 +360,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
         [UserSetting("-----Phase 4 Settings----- (No actual meaning for this setting)")]
         public bool _____Phase4_Settings_____ { get; set; } = true;
         [UserSetting("P4 First Half Strat")]
-        public Phase4_Strats_Of_The_First_Half Phase4_Strat_Of_The_First_Half { get; set; } = Phase4_Strats_Of_The_First_Half.Single_Swap_Baiting_After_先单换再引导_莫灵喵与MMW;
+        public Phase4_Strats_Of_The_First_Half Phase4_Strat_Of_The_First_Half { get; set; } = Phase4_Strats_Of_The_First_Half.Single_Swap_Baiting_After_å…ˆå•æ¢å†å¼•å¯¼_èŽ«çµå–µä¸ŽMMW;
         [UserSetting("P4 Colour Of Somber Dance")]
         public ScriptColor Phase4_Colour_Of_Somber_Dance { get; set; } = new() { V4 = new(1f, 0f, 0f, 1f) };
         [UserSetting("P4 Mark Players During The Second Half (Make sure only one in the party enables this!)")]
@@ -368,9 +368,9 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
         [UserSetting("P4 Player Types To Be Marked")]
         public Phase4_Player_Types_To_Be_Marked Phase4_Player_Type_To_Be_Marked { get; set; }
         [UserSetting("P4 Priority Of The Players With Wyrmclaw")]
-        public Phase4_Priorities_Of_The_Players_With_Wyrmclaw Phase4_Priority_Of_The_Players_With_Wyrmclaw { get; set; } = Phase4_Priorities_Of_The_Players_With_Wyrmclaw.In_THD_Order_按THD顺序_莫灵喵;
+        public Phase4_Priorities_Of_The_Players_With_Wyrmclaw Phase4_Priority_Of_The_Players_With_Wyrmclaw { get; set; } = Phase4_Priorities_Of_The_Players_With_Wyrmclaw.In_THD_Order_æŒ‰THDé¡ºåº_èŽ«çµå–µ;
         [UserSetting("P4 Logic Of Marking Teammates With Wyrmclaw")]
-        public Phase4_Logics_Of_Marking_Teammates_With_Wyrmclaw Phase4_Logic_Of_Marking_Teammates_With_Wyrmclaw { get; set; } = Phase4_Logics_Of_Marking_Teammates_With_Wyrmclaw.Ignore1_And_Bind1_Go_West_禁止1和锁链1去西边_莫灵喵;
+        public Phase4_Logics_Of_Marking_Teammates_With_Wyrmclaw Phase4_Logic_Of_Marking_Teammates_With_Wyrmclaw { get; set; } = Phase4_Logics_Of_Marking_Teammates_With_Wyrmclaw.Ignore1_And_Bind1_Go_West_ç¦æ­¢1å’Œé”é“¾1åŽ»è¥¿è¾¹_èŽ«çµå–µ;
         [UserSetting("P4 Logic Of Marking Teammates With Wyrmfang")]
         public Phase4_Logics_Of_Marking_Teammates_With_Wyrmfang Phase4_Logic_Of_Marking_Teammates_With_Wyrmfang { get; set; }
         [UserSetting("P4 Drawing Duration Of Normal And Delayed Lights (seconds)")]
@@ -378,27 +378,27 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
         [UserSetting("P4 Colour Of Tidal Light")]
         public ScriptColor Phase4_Colour_Of_Tidal_Light { get; set; } = new() { V4 = new(1f, 1f, 0f, 1f) };
         [UserSetting("P4 Position Before Knockback")]
-        public Phase4_Positions_Before_Knockback Phase4_Position_Before_Knockback { get; set; } = Phase4_Positions_Before_Knockback.Normal_正攻_莫灵喵与MMW;
+        public Phase4_Positions_Before_Knockback Phase4_Position_Before_Knockback { get; set; } = Phase4_Positions_Before_Knockback.Normal_æ­£æ”»_èŽ«çµå–µä¸ŽMMW;
         [UserSetting("P4 Logic Of Residue Guidance")]
-        public Phase4_Logics_Of_Residue_Guidance Phase4_Logic_Of_Residue_Guidance { get; set; } = Phase4_Logics_Of_Residue_Guidance.According_To_Signs_On_Me_根据我身上的目标标记_莫灵喵和MMW;
+        public Phase4_Logics_Of_Residue_Guidance Phase4_Logic_Of_Residue_Guidance { get; set; } = Phase4_Logics_Of_Residue_Guidance.According_To_Signs_On_Me_æ ¹æ®æˆ‘èº«ä¸Šçš„ç›®æ ‡æ ‡è®°_èŽ«çµå–µå’ŒMMW;
         [UserSetting("P4 Colour Of Residue Guidance")]
         public ScriptColor Phase4_Colour_Of_Residue_Guidance { get; set; } = new() { V4 = new(1f, 1f, 0f, 1f) };
         [UserSetting("P4 Residue Belongs To Attack1 (Sign Setting)")]
-        public Phase4_Relative_Positions_Of_Residues Phase4_Residue_Belongs_To_Attack1 { get; set; } = Phase4_Relative_Positions_Of_Residues.Eastmost_最东侧;
+        public Phase4_Relative_Positions_Of_Residues Phase4_Residue_Belongs_To_Attack1 { get; set; } = Phase4_Relative_Positions_Of_Residues.Eastmost_æœ€ä¸œä¾§;
         [UserSetting("P4 Residue Belongs To Attack2 (Sign Setting)")]
-        public Phase4_Relative_Positions_Of_Residues Phase4_Residue_Belongs_To_Attack2 { get; set; } = Phase4_Relative_Positions_Of_Residues.About_East_次东侧;
+        public Phase4_Relative_Positions_Of_Residues Phase4_Residue_Belongs_To_Attack2 { get; set; } = Phase4_Relative_Positions_Of_Residues.About_East_æ¬¡ä¸œä¾§;
         [UserSetting("P4 Residue Belongs To Attack3 (Sign Setting)")]
-        public Phase4_Relative_Positions_Of_Residues Phase4_Residue_Belongs_To_Attack3 { get; set; } = Phase4_Relative_Positions_Of_Residues.About_West_次西侧;
+        public Phase4_Relative_Positions_Of_Residues Phase4_Residue_Belongs_To_Attack3 { get; set; } = Phase4_Relative_Positions_Of_Residues.About_West_æ¬¡è¥¿ä¾§;
         [UserSetting("P4 Residue Belongs To Attack4 (Sign Setting)")]
-        public Phase4_Relative_Positions_Of_Residues Phase4_Residue_Belongs_To_Attack4 { get; set; } = Phase4_Relative_Positions_Of_Residues.Westmost_最西侧;
+        public Phase4_Relative_Positions_Of_Residues Phase4_Residue_Belongs_To_Attack4 { get; set; } = Phase4_Relative_Positions_Of_Residues.Westmost_æœ€è¥¿ä¾§;
         [UserSetting("P4 Residue Belongs To Dark Eruption (Debuff Setting)")]
-        public Phase4_Relative_Positions_Of_Residues Phase4_Residue_Belongs_To_Dark_Eruption { get; set; } = Phase4_Relative_Positions_Of_Residues.Eastmost_最东侧;
+        public Phase4_Relative_Positions_Of_Residues Phase4_Residue_Belongs_To_Dark_Eruption { get; set; } = Phase4_Relative_Positions_Of_Residues.Eastmost_æœ€ä¸œä¾§;
         [UserSetting("P4 Residue Belongs To Unholy Darkness (Debuff Setting)")]
-        public Phase4_Relative_Positions_Of_Residues Phase4_Residue_Belongs_To_Unholy_Darkness { get; set; } = Phase4_Relative_Positions_Of_Residues.About_East_次东侧;
+        public Phase4_Relative_Positions_Of_Residues Phase4_Residue_Belongs_To_Unholy_Darkness { get; set; } = Phase4_Relative_Positions_Of_Residues.About_East_æ¬¡ä¸œä¾§;
         [UserSetting("P4 Residue Belongs To Dark Blizzard III (Debuff Setting)")]
-        public Phase4_Relative_Positions_Of_Residues Phase4_Residue_Belongs_To_Dark_Blizzard_III { get; set; } = Phase4_Relative_Positions_Of_Residues.About_West_次西侧;
+        public Phase4_Relative_Positions_Of_Residues Phase4_Residue_Belongs_To_Dark_Blizzard_III { get; set; } = Phase4_Relative_Positions_Of_Residues.About_West_æ¬¡è¥¿ä¾§;
         [UserSetting("P4 Residue Belongs To Dark Water III (Debuff Setting)")]
-        public Phase4_Relative_Positions_Of_Residues Phase4_Residue_Belongs_To_Dark_Water_III { get; set; } = Phase4_Relative_Positions_Of_Residues.Westmost_最西侧;
+        public Phase4_Relative_Positions_Of_Residues Phase4_Residue_Belongs_To_Dark_Water_III { get; set; } = Phase4_Relative_Positions_Of_Residues.Westmost_æœ€è¥¿ä¾§;
         [UserSetting("P4 Length Of Drachen Wanderer Hitboxes (meters)")]
         public float Phase4_Length_Of_Drachen_Wanderer_Hitboxes { get; set; } = 1.5f;
         [UserSetting("P4 Colour Of Drachen Wanderer Hitboxes")]
@@ -417,15 +417,15 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
         [UserSetting("P5 Boss Faces Players After Fulgent Blade")]
         public bool Phase5_Boss_Faces_Players_After_Fulgent_Blade { get; set; } = true;
         [UserSetting("P5 Wings Dark And Light Strat")]
-        public Phase5_Strats_Of_Wings_Dark_And_Light Phase5_Strat_Of_Wings_Dark_And_Light { get; set; } = Phase5_Strats_Of_Wings_Dark_And_Light.Grey9_Brain_Dead_MT_First_Tower_Opposite_灰九脑死法MT一塔对侧_莫灵喵与MMW;
+        public Phase5_Strats_Of_Wings_Dark_And_Light Phase5_Strat_Of_Wings_Dark_And_Light { get; set; } = Phase5_Strats_Of_Wings_Dark_And_Light.Grey9_Brain_Dead_MT_First_Tower_Opposite_ç°ä¹è„‘æ­»æ³•MTä¸€å¡”å¯¹ä¾§_èŽ«çµå–µä¸ŽMMW;
         [UserSetting("P5 Grey9 Brain Dead Strat Branch")]
-        public Phase5_Branches_Of_The_Grey9_Brain_Dead_Strat Phase5_Branch_Of_The_Grey9_Brain_Dead_Strat { get; set; } = Phase5_Branches_Of_The_Grey9_Brain_Dead_Strat.Healers_First_Then_Melees_Left_Ranges_Right_奶妈先然后近战左远程右_莫灵喵;
+        public Phase5_Branches_Of_The_Grey9_Brain_Dead_Strat Phase5_Branch_Of_The_Grey9_Brain_Dead_Strat { get; set; } = Phase5_Branches_Of_The_Grey9_Brain_Dead_Strat.Healers_First_Then_Melees_Left_Ranges_Right_å¥¶å¦ˆå…ˆç„¶åŽè¿‘æˆ˜å·¦è¿œç¨‹å³_èŽ«çµå–µ;
         [UserSetting("P5 Reverse Triangle Strat Branch")]
         public Phase5_Branches_Of_The_Reverse_Triangle_Strat Phase5_Branch_Of_The_Reverse_Triangle_Strat { get; set; }
         [UserSetting("P5 Reminder To Provoke During Wings Dark And Light")]
         public bool Phase5_Reminder_To_Provoke_During_Wings_Dark_And_Light { get; set; } = true;
         [UserSetting("P5 Order During Polarizing Strikes")]
-        public Phase5_Orders_During_Polarizing_Strikes Phase5_Order_During_Polarizing_Strikes { get; set; } = Phase5_Orders_During_Polarizing_Strikes.Tanks_Melees_Ranges_Healers_坦克近战远程奶妈_莫灵喵与MMW;
+        public Phase5_Orders_During_Polarizing_Strikes Phase5_Order_During_Polarizing_Strikes { get; set; } = Phase5_Orders_During_Polarizing_Strikes.Tanks_Melees_Ranges_Healers_å¦å…‹è¿‘æˆ˜è¿œç¨‹å¥¶å¦ˆ_èŽ«çµå–µä¸ŽMMW;
 
         [UserSetting("-----Developer Settings----- (No actual meaning for this setting)")]
         public bool _____Developer_Settings_____ { get; set; } = true;
@@ -441,11 +441,11 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
         volatile bool isInPhase5 = false;
         System.Threading.AutoResetEvent shenaniganSemaphore=new System.Threading.AutoResetEvent(false);
 
-        int P1雾龙计数 = 0;
-        readonly Object P1雾龙计数读写锁_AsAConstant = new Object();
-        int P1雾龙计数2 = 0;
-        readonly Object P1雾龙计数2读写锁_AsAConstant = new Object();
-        List<int> P1雾龙记录 = new List<int>{0, 0, 0, 0};
+        int P1é›¾é¾™è®¡æ•° = 0;
+        readonly Object P1é›¾é¾™è®¡æ•°è¯»å†™é”_AsAConstant = new Object();
+        int P1é›¾é¾™è®¡æ•°2 = 0;
+        readonly Object P1é›¾é¾™è®¡æ•°2è¯»å†™é”_AsAConstant = new Object();
+        List<int> P1é›¾é¾™è®°å½• = new List<int>{0, 0, 0, 0};
         List<MarkType> phase1_markForThePlayersInSafePositions_asAConstant = [
             MarkType.Attack1,
             MarkType.Attack2,
@@ -456,8 +456,8 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             MarkType.Attack7,
             MarkType.Attack8
         ];
-        bool P1雾龙雷 = false;
-        List<int> P1转轮召抓人 = [0, 0, 0, 0, 0, 0, 0, 0];
+        bool P1é›¾é¾™é›· = false;
+        List<int> P1è½¬è½®å¬æŠ“äºº = [0, 0, 0, 0, 0, 0, 0, 0];
         volatile int phase1_timesBurnishedGloryWasCast = 0;
         volatile List<int> phase1_tetheredPlayersDuringFallOfFaith = [];
         volatile bool phase1_isInFallOfFaith = false;
@@ -478,7 +478,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
         volatile int phase1_semaphoreOfDrawing = 0;
         volatile int phase1_semaphoreOfMarkingUntetheredPlayers = 0;
         volatile int phase1_semaphoreOfTheFinalPrompt = 0;
-        List<int> P1塔 = [0, 0, 0, 0];
+        List<int> P1å¡” = [0, 0, 0, 0];
 
         volatile string phase2_bossId = "";
         bool P2DDDircle = false;
@@ -635,19 +635,19 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
         public enum Languages_Of_Prompts
         {
 
-            Simplified_Chinese_简体中文,
-            English_英文
+            Simplified_Chinese_ç®€ä½“ä¸­æ–‡,
+            English_è‹±æ–‡
 
         }
 
         public enum Weird_Shenanigans {
             
-            Disabled_不启用,
-            Astesia_ACR_蟹蟹的ACR,
-            Res_Gestae_Populi_Romani_II_Bellum_Hannibalicum_罗马人的故事2汉尼拔战纪,
-            Helldivers_绝地潜兵,
-            Call_Of_Duty_Death_Quotes_使命召唤阵亡名人名言,
-            StarCraft_SCBoy_星际争霸星际老男孩
+            Disabled_ä¸å¯ç”¨,
+            Astesia_ACR_èŸ¹èŸ¹çš„ACR,
+            Res_Gestae_Populi_Romani_II_Bellum_Hannibalicum_ç½—é©¬äººçš„æ•…äº‹2æ±‰å°¼æ‹”æˆ˜çºª,
+            Helldivers_ç»åœ°æ½œå…µ,
+            Call_Of_Duty_Death_Quotes_ä½¿å‘½å¬å”¤é˜µäº¡åäººåè¨€,
+            StarCraft_SCBoy_æ˜Ÿé™…äº‰éœ¸æ˜Ÿé™…è€ç”·å­©
             
         }
 
@@ -662,125 +662,125 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
         public enum Phase1_Standby_Positions_Of_Utopian_Sky
         {
 
-            Swap_OT_And_M2_交换ST与D4_莫灵喵与MMW,
-            Both_Tanks_Go_Center_双T去中间
+            Swap_OT_And_M2_äº¤æ¢STä¸ŽD4_èŽ«çµå–µä¸ŽMMW,
+            Both_Tanks_Go_Center_åŒTåŽ»ä¸­é—´
 
         }
 
         public enum Phase1_Groups_Of_Turn_Of_The_Heavens
         {
 
-            MTOTH1H2_Go_North_MTM1_vary_MTSTH1H2去北MTD1换_莫灵喵与MMW,
-            MTH1M1R1_Go_North_MTOT_vary_MTH1D1D3去北MTST换,
-            MTOTR1R2_Go_North_MTM1_vary_MTSTD3D4去北MTD1换_莫灵喵
+            MTOTH1H2_Go_North_MTM1_vary_MTSTH1H2åŽ»åŒ—MTD1æ¢_èŽ«çµå–µä¸ŽMMW,
+            MTH1M1R1_Go_North_MTOT_vary_MTH1D1D3åŽ»åŒ—MTSTæ¢,
+            MTOTR1R2_Go_North_MTM1_vary_MTSTD3D4åŽ»åŒ—MTD1æ¢_èŽ«çµå–µ
 
         }
 
         public enum Phase1_Strats_Of_Fall_Of_Faith
         {
 
-            Single_Line_In_THD_Order_按THD顺序单排,
-            Single_Line_In_HTD_Order_按HTD顺序单排_莫灵喵,
-            Single_Line_In_H1TDH2_Order_按H1TDH2顺序单排,
-            Double_Lines_H12MOT_Left_M12R12_Right_双排左H12MST右D1234_莫灵喵与MMW,
-            Double_Lines_MOTH12_Left_M12R12_Right_双排左MSTH12右D1234
+            Single_Line_In_THD_Order_æŒ‰THDé¡ºåºå•æŽ’,
+            Single_Line_In_HTD_Order_æŒ‰HTDé¡ºåºå•æŽ’_èŽ«çµå–µ,
+            Single_Line_In_H1TDH2_Order_æŒ‰H1TDH2é¡ºåºå•æŽ’,
+            Double_Lines_H12MOT_Left_M12R12_Right_åŒæŽ’å·¦H12MSTå³D1234_èŽ«çµå–µä¸ŽMMW,
+            Double_Lines_MOTH12_Left_M12R12_Right_åŒæŽ’å·¦MSTH12å³D1234
 
         }
 
         public enum Phase1_Orientation_Benchmarks_During_Fall_Of_Faith
         {
 
-            High_Priority_Left_Facing_Due_North_面向正北左侧高优先级,
-            High_Priority_Left_Facing_The_Boss_面向Boss左侧高优先级_莫灵喵与MMW
+            High_Priority_Left_Facing_Due_North_é¢å‘æ­£åŒ—å·¦ä¾§é«˜ä¼˜å…ˆçº§,
+            High_Priority_Left_Facing_The_Boss_é¢å‘Bosså·¦ä¾§é«˜ä¼˜å…ˆçº§_èŽ«çµå–µä¸ŽMMW
 
         }
 
         public enum Phase1_Strats_Of_Towers
         {
 
-            Completely_Based_On_Priority_完全根据优先级_莫灵喵,
-            Fixed_H1H2R2_Priority_For_Rest_固定H1H2D4剩余人优先级,
-            Fixed_H1H2R2_Rest_Fill_Vacancies_固定H1H2D4剩余人补位_MMW
+            Completely_Based_On_Priority_å®Œå…¨æ ¹æ®ä¼˜å…ˆçº§_èŽ«çµå–µ,
+            Fixed_H1H2R2_Priority_For_Rest_å›ºå®šH1H2D4å‰©ä½™äººä¼˜å…ˆçº§,
+            Fixed_H1H2R2_Rest_Fill_Vacancies_å›ºå®šH1H2D4å‰©ä½™äººè¡¥ä½_MMW
 
         }
 
         public enum Phase2_Strats_After_Knockback
         {
 
-            Clockwise_One_Group_Counterclockwise_总是顺时针单组逆时针,
-            Counterclockwise_One_Group_Clockwise_总是逆时针单组顺时针,
-            Clockwise_Both_Groups_Counterclockwise_总是顺时针双组逆时针_莫灵喵与MMW,
-            Counterclockwise_Both_Groups_Clockwise_总是逆时针双组顺时针
+            Clockwise_One_Group_Counterclockwise_æ€»æ˜¯é¡ºæ—¶é’ˆå•ç»„é€†æ—¶é’ˆ,
+            Counterclockwise_One_Group_Clockwise_æ€»æ˜¯é€†æ—¶é’ˆå•ç»„é¡ºæ—¶é’ˆ,
+            Clockwise_Both_Groups_Counterclockwise_æ€»æ˜¯é¡ºæ—¶é’ˆåŒç»„é€†æ—¶é’ˆ_èŽ«çµå–µä¸ŽMMW,
+            Counterclockwise_Both_Groups_Clockwise_æ€»æ˜¯é€†æ—¶é’ˆåŒç»„é¡ºæ—¶é’ˆ
 
         }
 
         public enum Phase2_Strats_Of_Mirror_Mirror
         {
 
-            Melee_Group_Left_Red_近战组去左红色镜子,
-            Melee_Group_Right_Red_近战组去右红色镜子,
-            Melee_Group_Closest_Red_Left_If_Same_近战组最近红色镜子距离相同则左,
-            Melee_Group_Closest_Red_Right_If_Same_近战组最近红色镜子距离相同则右_莫灵喵与MMW
+            Melee_Group_Left_Red_è¿‘æˆ˜ç»„åŽ»å·¦çº¢è‰²é•œå­,
+            Melee_Group_Right_Red_è¿‘æˆ˜ç»„åŽ»å³çº¢è‰²é•œå­,
+            Melee_Group_Closest_Red_Left_If_Same_è¿‘æˆ˜ç»„æœ€è¿‘çº¢è‰²é•œå­è·ç¦»ç›¸åŒåˆ™å·¦,
+            Melee_Group_Closest_Red_Right_If_Same_è¿‘æˆ˜ç»„æœ€è¿‘çº¢è‰²é•œå­è·ç¦»ç›¸åŒåˆ™å³_èŽ«çµå–µä¸ŽMMW
 
         }
         
         public enum Phase2_Initial_Protean_Positions_Of_Light_Rampant
         {
 
-            Supporters_North_MOTH12_For_JPPF_And_L_蓝绿全部在北MSTH12_日野和L团用,
-            Supporters_North_H12MOT_For_JPPF_And_L_蓝绿全部在北H12MST_日野和L团用,
-            Normal_Protean_Tanks_North_East_For_Both_Grey9_常规八方T在东北_灰9用
+            Supporters_North_MOTH12_For_JPPF_And_L_è“ç»¿å…¨éƒ¨åœ¨åŒ—MSTH12_æ—¥é‡Žå’ŒLå›¢ç”¨,
+            Supporters_North_H12MOT_For_JPPF_And_L_è“ç»¿å…¨éƒ¨åœ¨åŒ—H12MST_æ—¥é‡Žå’ŒLå›¢ç”¨,
+            Normal_Protean_Tanks_North_East_For_Both_Grey9_å¸¸è§„å…«æ–¹Tåœ¨ä¸œåŒ—_ç°9ç”¨
 
         }
 
         public enum Phase2_Strats_Of_Light_Rampant
         {
 
-            Star_Of_David_Japanese_PF_六芒星日服野队法_莫灵喵与MMW,
-            New_Grey9_新灰九法_莫灵喵与MMW,
-            Lucrezia_L团法,
-            Obsolete_Old_Grey9_已淘汰的旧灰九法_莫灵喵
+            Star_Of_David_Japanese_PF_å…­èŠ’æ˜Ÿæ—¥æœé‡Žé˜Ÿæ³•_èŽ«çµå–µä¸ŽMMW,
+            New_Grey9_æ–°ç°ä¹æ³•_èŽ«çµå–µä¸ŽMMW,
+            Lucrezia_Lå›¢æ³•,
+            Obsolete_Old_Grey9_å·²æ·˜æ±°çš„æ—§ç°ä¹æ³•_èŽ«çµå–µ
 
         }
 
         public enum Phase3_Strats_Of_The_First_Half
         {
 
-            Moogle_莫古力_莫灵喵与MMW,
-            Other_Strats_Are_Work_In_Progress_其他攻略正在施工中
+            Moogle_èŽ«å¤åŠ›_èŽ«çµå–µä¸ŽMMW,
+            Other_Strats_Are_Work_In_Progress_å…¶ä»–æ”»ç•¥æ­£åœ¨æ–½å·¥ä¸­
 
         }
 
         public enum Phase3_Strats_Of_The_Second_Half
         {
 
-            Double_Group_双分组法,
-            High_Priority_As_Locomotives_车头低换法_MMW,
-            Moglin_Meow_Or_Baby_Wheelchair_Based_On_Signs_根据目标标记的莫灵喵法或宝宝椅法
+            Double_Group_åŒåˆ†ç»„æ³•,
+            High_Priority_As_Locomotives_è½¦å¤´ä½Žæ¢æ³•_MMW,
+            Moglin_Meow_Or_Baby_Wheelchair_Based_On_Signs_æ ¹æ®ç›®æ ‡æ ‡è®°çš„èŽ«çµå–µæ³•æˆ–å®å®æ¤…æ³•
 
         }
 
         public enum Phase3_Branches_Of_The_Double_Group_Strat
         {
 
-            Based_On_Safe_Positions_安全区为基准_MMW,
-            Based_On_The_Second_Apocalypse_第二次启示为基准
+            Based_On_Safe_Positions_å®‰å…¨åŒºä¸ºåŸºå‡†_MMW,
+            Based_On_The_Second_Apocalypse_ç¬¬äºŒæ¬¡å¯ç¤ºä¸ºåŸºå‡†
 
         }
 
         public enum Phase3_Branches_Of_The_Locomotive_Strat
         {
 
-            MT_And_M1_As_Locomotives_MT和D1为车头_MMW,
-            Others_As_Locomotives_Chinese_PF_国服野队人群为车头
+            MT_And_M1_As_Locomotives_MTå’ŒD1ä¸ºè½¦å¤´_MMW,
+            Others_As_Locomotives_Chinese_PF_å›½æœé‡Žé˜Ÿäººç¾¤ä¸ºè½¦å¤´
 
         }
 
         public enum Phase3_Divisions_Of_The_Zone
         {
 
-            North_To_Southwest_For_The_Left_Group_左组从正北到西南_莫灵喵与MMW,
-            Northwest_To_South_For_The_Left_Group_左组从西北到正南
+            North_To_Southwest_For_The_Left_Group_å·¦ç»„ä»Žæ­£åŒ—åˆ°è¥¿å—_èŽ«çµå–µä¸ŽMMW,
+            Northwest_To_South_For_The_Left_Group_å·¦ç»„ä»Žè¥¿åŒ—åˆ°æ­£å—
 
         }
 
@@ -797,104 +797,104 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
         public enum Phase4_Strats_Of_The_First_Half
         {
 
-            Single_Swap_Baiting_After_先单换再引导_莫灵喵与MMW,
-            Single_Swap_Baiting_First_先引导再单换,
-            Double_Swaps_Baiting_First_先引导再双换
+            Single_Swap_Baiting_After_å…ˆå•æ¢å†å¼•å¯¼_èŽ«çµå–µä¸ŽMMW,
+            Single_Swap_Baiting_First_å…ˆå¼•å¯¼å†å•æ¢,
+            Double_Swaps_Baiting_First_å…ˆå¼•å¯¼å†åŒæ¢
 
         }
 
         public enum Phase4_Player_Types_To_Be_Marked {
             
-            Both_The_Debuffs_Wyrmclaw_And_Wyrmfang_圣龙爪圣龙牙两种都标记,
-            Only_Wyrmclaw_The_Red_Debuff_仅圣龙爪红色Debuff,
-            Only_Wyrmfang_The_Blue_Debuff_仅圣龙牙蓝色Debuff
+            Both_The_Debuffs_Wyrmclaw_And_Wyrmfang_åœ£é¾™çˆªåœ£é¾™ç‰™ä¸¤ç§éƒ½æ ‡è®°,
+            Only_Wyrmclaw_The_Red_Debuff_ä»…åœ£é¾™çˆªçº¢è‰²Debuff,
+            Only_Wyrmfang_The_Blue_Debuff_ä»…åœ£é¾™ç‰™è“è‰²Debuff
             
         }
 
         public enum Phase4_Priorities_Of_The_Players_With_Wyrmclaw
         {
 
-            In_THD_Order_按THD顺序_莫灵喵,
-            In_HTD_Order_按HTD顺序_MMW,
-            In_H1TDH2_Order_按H1TDH2顺序
+            In_THD_Order_æŒ‰THDé¡ºåº_èŽ«çµå–µ,
+            In_HTD_Order_æŒ‰HTDé¡ºåº_MMW,
+            In_H1TDH2_Order_æŒ‰H1TDH2é¡ºåº
 
         }
 
         public enum Phase4_Logics_Of_Marking_Teammates_With_Wyrmclaw {
             
-            Ignore1_And_Bind1_Go_West_禁止1和锁链1去西边_莫灵喵,
-            Ignore1_And_Ignore2_Go_West_禁止1和禁止2去西边
+            Ignore1_And_Bind1_Go_West_ç¦æ­¢1å’Œé”é“¾1åŽ»è¥¿è¾¹_èŽ«çµå–µ,
+            Ignore1_And_Ignore2_Go_West_ç¦æ­¢1å’Œç¦æ­¢2åŽ»è¥¿è¾¹
             
         }
 
         public enum Phase4_Logics_Of_Residue_Guidance
         {
 
-            According_To_Signs_On_Me_根据我身上的目标标记_莫灵喵和MMW,
-            According_To_Debuffs_根据Debuff
+            According_To_Signs_On_Me_æ ¹æ®æˆ‘èº«ä¸Šçš„ç›®æ ‡æ ‡è®°_èŽ«çµå–µå’ŒMMW,
+            According_To_Debuffs_æ ¹æ®Debuff
 
         }
 
         public enum Phase4_Logics_Of_Marking_Teammates_With_Wyrmfang
         {
 
-            According_To_Debuffs_1234_From_East_To_West_根据Debuff从东到西1234,
-            According_To_Debuffs_1342_From_East_To_West_根据Debuff从东到西1342,
-            According_To_The_Priority_THD_根据THD优先级,
-            According_To_The_Priority_HTD_根据HTD优先级,
-            According_To_The_Priority_H1TDH2_根据H1TDH2优先级
+            According_To_Debuffs_1234_From_East_To_West_æ ¹æ®Debuffä»Žä¸œåˆ°è¥¿1234,
+            According_To_Debuffs_1342_From_East_To_West_æ ¹æ®Debuffä»Žä¸œåˆ°è¥¿1342,
+            According_To_The_Priority_THD_æ ¹æ®THDä¼˜å…ˆçº§,
+            According_To_The_Priority_HTD_æ ¹æ®HTDä¼˜å…ˆçº§,
+            According_To_The_Priority_H1TDH2_æ ¹æ®H1TDH2ä¼˜å…ˆçº§
 
         }
 
         public enum Phase4_Relative_Positions_Of_Residues
         {
 
-            Eastmost_最东侧,
-            About_East_次东侧,
-            About_West_次西侧,
-            Westmost_最西侧,
-            Unknown_未知
+            Eastmost_æœ€ä¸œä¾§,
+            About_East_æ¬¡ä¸œä¾§,
+            About_West_æ¬¡è¥¿ä¾§,
+            Westmost_æœ€è¥¿ä¾§,
+            Unknown_æœªçŸ¥
 
         }
 
         public enum Phase4_Positions_Before_Knockback
         {
 
-            Normal_正攻_莫灵喵与MMW,
-            Y_Formation_Japanese_PF_日服野队Y字队形
+            Normal_æ­£æ”»_èŽ«çµå–µä¸ŽMMW,
+            Y_Formation_Japanese_PF_æ—¥æœé‡Žé˜ŸYå­—é˜Ÿå½¢
 
         }
 
         public enum Phase5_Strats_Of_Wings_Dark_And_Light
         {
 
-            Grey9_Brain_Dead_MT_First_Tower_Opposite_灰九脑死法MT一塔对侧_莫灵喵与MMW,
-            Reverse_Triangle_MT_Baits_In_Towers_倒三角法MT在塔中引导
+            Grey9_Brain_Dead_MT_First_Tower_Opposite_ç°ä¹è„‘æ­»æ³•MTä¸€å¡”å¯¹ä¾§_èŽ«çµå–µä¸ŽMMW,
+            Reverse_Triangle_MT_Baits_In_Towers_å€’ä¸‰è§’æ³•MTåœ¨å¡”ä¸­å¼•å¯¼
 
         }
 
         public enum Phase5_Branches_Of_The_Grey9_Brain_Dead_Strat
         {
 
-            Healers_First_Then_Melees_Left_Ranges_Right_奶妈先然后近战左远程右_莫灵喵,
-            Melees_First_Then_Healers_Left_Ranges_Right_近战先然后奶妈左远程右,
-            Healer_First_Then_Melees_Farther_Ranges_Closer_奶妈先然后近战远远程近_MMW
+            Healers_First_Then_Melees_Left_Ranges_Right_å¥¶å¦ˆå…ˆç„¶åŽè¿‘æˆ˜å·¦è¿œç¨‹å³_èŽ«çµå–µ,
+            Melees_First_Then_Healers_Left_Ranges_Right_è¿‘æˆ˜å…ˆç„¶åŽå¥¶å¦ˆå·¦è¿œç¨‹å³,
+            Healer_First_Then_Melees_Farther_Ranges_Closer_å¥¶å¦ˆå…ˆç„¶åŽè¿‘æˆ˜è¿œè¿œç¨‹è¿‘_MMW
 
         }
         
         public enum Phase5_Branches_Of_The_Reverse_Triangle_Strat
         {
 
-            Healers_First_Then_Melees_Left_Ranges_Right_奶妈先然后近战左远程右,
-            Melees_First_Then_Healers_Left_Ranges_Right_近战先然后奶妈左远程右
+            Healers_First_Then_Melees_Left_Ranges_Right_å¥¶å¦ˆå…ˆç„¶åŽè¿‘æˆ˜å·¦è¿œç¨‹å³,
+            Melees_First_Then_Healers_Left_Ranges_Right_è¿‘æˆ˜å…ˆç„¶åŽå¥¶å¦ˆå·¦è¿œç¨‹å³
 
         }
 
         public enum Phase5_Orders_During_Polarizing_Strikes
         {
 
-            Tanks_Melees_Ranges_Healers_坦克近战远程奶妈_莫灵喵与MMW,
-            Tanks_Healers_Melees_Ranges_坦克奶妈近战远程
+            Tanks_Melees_Ranges_Healers_å¦å…‹è¿‘æˆ˜è¿œç¨‹å¥¶å¦ˆ_èŽ«çµå–µä¸ŽMMW,
+            Tanks_Healers_Melees_Ranges_å¦å…‹å¥¶å¦ˆè¿‘æˆ˜è¿œç¨‹
 
         }
 
@@ -966,10 +966,10 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             isInPhase5 = false;
             shenaniganSemaphore.Set();
 
-            P1雾龙记录 = new List<int>{0, 0, 0, 0};
-            P1雾龙计数 = 0;
-            P1雾龙计数2 = 0;
-            P1转轮召抓人 = [0, 0, 0, 0, 0, 0, 0, 0];
+            P1é›¾é¾™è®°å½• = new List<int>{0, 0, 0, 0};
+            P1é›¾é¾™è®¡æ•° = 0;
+            P1é›¾é¾™è®¡æ•°2 = 0;
+            P1è½¬è½®å¬æŠ“äºº = [0, 0, 0, 0, 0, 0, 0, 0];
             phase1_timesBurnishedGloryWasCast = 0;
             phase1_tetheredPlayersDuringFallOfFaith = [];
             phase1_isInFallOfFaith = false;
@@ -978,7 +978,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             phase1_semaphoreOfDrawing = 0;
             phase1_semaphoreOfMarkingUntetheredPlayers = 0;
             phase1_semaphoreOfTheFinalPrompt = 0;
-            P1塔 = [0, 0, 0, 0];
+            P1å¡” = [0, 0, 0, 0];
 
             phase2_bossId = "";
             Phase2_Positions_Of_Icicle_Impact.Clear();
@@ -1090,7 +1090,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             suppress:15000,
             userControl:false)]
 
-        public void Weird_Shenanigans_搞怪(Event @event, ScriptAccessory accessory) {
+        public void Weird_Shenanigans_æžæ€ª(Event @event, ScriptAccessory accessory) {
 
             shenaniganSemaphore.WaitOne();
 
@@ -1100,7 +1100,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             
             System.Threading.Thread.MemoryBarrier();
 
-            if(Weird_Shenanigan==Weird_Shenanigans.Disabled_不启用) {
+            if(Weird_Shenanigan==Weird_Shenanigans.Disabled_ä¸å¯ç”¨) {
                 
                 shenaniganSemaphore=new System.Threading.AutoResetEvent(false);
 
@@ -1113,19 +1113,19 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             System.Random seed=new System.Random();
             string prompt="";
 
-            if(Weird_Shenanigan==Weird_Shenanigans.Astesia_ACR_蟹蟹的ACR) {
+            if(Weird_Shenanigan==Weird_Shenanigans.Astesia_ACR_èŸ¹èŸ¹çš„ACR) {
                 
                 int randomNumber=seed.Next(1,101);
 
                 if(randomNumber<=25) {
 
-                    if(Language_Of_Prompts==Languages_Of_Prompts.Simplified_Chinese_简体中文) {
+                    if(Language_Of_Prompts==Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡) {
 
                         prompt="Welcome to Astesia The Piggy's ACR!";
 
                     }
                     
-                    if(Language_Of_Prompts==Languages_Of_Prompts.English_英文) {
+                    if(Language_Of_Prompts==Languages_Of_Prompts.English_è‹±æ–‡) {
 
                         prompt="You're now running Astesia The Piggy's ACR!";
 
@@ -1135,13 +1135,13 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
                 else {
                     
-                    if(Language_Of_Prompts==Languages_Of_Prompts.Simplified_Chinese_简体中文) {
+                    if(Language_Of_Prompts==Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡) {
 
                         prompt="Welcome to Astesia's ACR!";
 
                     }
                     
-                    if(Language_Of_Prompts==Languages_Of_Prompts.English_英文) {
+                    if(Language_Of_Prompts==Languages_Of_Prompts.English_è‹±æ–‡) {
 
                         prompt="You're now running Astesia's ACR!";
 
@@ -1151,29 +1151,29 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
             }
             
-            if(Weird_Shenanigan==Weird_Shenanigans.Res_Gestae_Populi_Romani_II_Bellum_Hannibalicum_罗马人的故事2汉尼拔战纪) {
+            if(Weird_Shenanigan==Weird_Shenanigans.Res_Gestae_Populi_Romani_II_Bellum_Hannibalicum_ç½—é©¬äººçš„æ•…äº‹2æ±‰å°¼æ‹”æˆ˜çºª) {
                 
                 List<string> englishContents=[
                     "The First Punic War:\nRome and Carthage clashed in their first large-scale land and naval war over the control of Sicily. In its naval debut, Rome nearly annihilated the Carthaginian fleet. Ultimately, Rome emerged victorious and seized Sicily.",
                     "After the First Punic War:\nCarthage shifted its focus to expanding into Spain to compensate for its losses. During this period, Hannibal, the son of General Hamilcar from the First Punic War, made his legendary entrance onto the stage of history.",
                     "Early Phase of the Second Punic War:\nCarthage initiated the Second Punic War. Hannibal led his army through Gaul and over the Alps in a miraculous feat, inflicting devastating defeats on Rome, including the complete annihilation of Roman forces at the Battle of Cannae.",
-                    "Middle Phase of the Second Punic War Part I:\nAlthough Hannibal won victory after victory in Italy, he failed to capture Rome. Meanwhile, Rome’s counteroffensive in Spain was crushed. At this moment of existential crisis for the Republic, Scipio volunteered before the Senate — the legendary Roman general stepped into the spotlight.",
-                    "Middle Phase of the Second Punic War Part II:\nScipio won a series of brilliant victories in Spain, defeating two Carthaginian armies despite being outnumbered. Hannibal’s reinforcements entering Italy were intercepted and annihilated. Rome regained control over all major cities in southern Italy.",
-                    "Late Phase of the Second Punic War:\nScipio landed in North Africa and took control of Numidia. The Carthaginian elders recalled Hannibal home. In the epic Battle of Zama, the two legendary generals faced off, and Scipio used Hannibal’s own tactics to decisively defeat him. Rome triumphed completely.",
+                    "Middle Phase of the Second Punic War Part I:\nAlthough Hannibal won victory after victory in Italy, he failed to capture Rome. Meanwhile, Romeâ€™s counteroffensive in Spain was crushed. At this moment of existential crisis for the Republic, Scipio volunteered before the Senate â€” the legendary Roman general stepped into the spotlight.",
+                    "Middle Phase of the Second Punic War Part II:\nScipio won a series of brilliant victories in Spain, defeating two Carthaginian armies despite being outnumbered. Hannibalâ€™s reinforcements entering Italy were intercepted and annihilated. Rome regained control over all major cities in southern Italy.",
+                    "Late Phase of the Second Punic War:\nScipio landed in North Africa and took control of Numidia. The Carthaginian elders recalled Hannibal home. In the epic Battle of Zama, the two legendary generals faced off, and Scipio used Hannibalâ€™s own tactics to decisively defeat him. Rome triumphed completely.",
                     "After the Punic Wars:\nScipio was forced to resign and retire due to political attacks by his rival Cato. He died shortly after, lamenting: \"Ungrateful country, you won't even have my bones\". Hannibal fled to the Hellenistic Phoenician cities in Greece and eventually took poison to end his life in Asia Minor before being cornered by Roman pursuers.",
                     "The Fall of Macedonia:\nRome defeated the Kingdom of Macedonia in the Third Macedonian War and dissolved it, bringing Greece under Roman control and achieving dominance over the Mediterranean.",
-                    "The Fall of Carthage:\nRome launched the Third Punic War. Carthage was captured and utterly destroyed. The Carthaginian state ceased to exist. The Romans, gazing over the Mediterranean, left behind a proud victor’s declaration: \"Mare Nostrum (Our Sea)\"."
+                    "The Fall of Carthage:\nRome launched the Third Punic War. Carthage was captured and utterly destroyed. The Carthaginian state ceased to exist. The Romans, gazing over the Mediterranean, left behind a proud victorâ€™s declaration: \"Mare Nostrum (Our Sea)\"."
                 ];
                 
                 int randomNumber=seed.Next(0,9);
 
-                if(Language_Of_Prompts==Languages_Of_Prompts.Simplified_Chinese_简体中文) {
+                if(Language_Of_Prompts==Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡) {
 
                     // prompt=chineseContents[randomNumber]; (Chinese contents omitted for brevity)
 
                 }
                     
-                if(Language_Of_Prompts==Languages_Of_Prompts.English_英文) {
+                if(Language_Of_Prompts==Languages_Of_Prompts.English_è‹±æ–‡) {
 
                     prompt=englishContents[randomNumber];
                     
@@ -1181,7 +1181,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
             }
             
-            if(Weird_Shenanigan==Weird_Shenanigans.Helldivers_绝地潜兵) {
+            if(Weird_Shenanigan==Weird_Shenanigans.Helldivers_ç»åœ°æ½œå…µ) {
 
                 int randomNumber=seed.Next(1,101);
 
@@ -1219,7 +1219,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
             }
             
-            if(Weird_Shenanigan==Weird_Shenanigans.Call_Of_Duty_Death_Quotes_使命召唤阵亡名人名言) {
+            if(Weird_Shenanigan==Weird_Shenanigans.Call_Of_Duty_Death_Quotes_ä½¿å‘½å¬å”¤é˜µäº¡åäººåè¨€) {
                 
                 List<string> englishContents=[
                     "Del Giordano le rive saluta, di Sionne le torri atterrate...",
@@ -1247,12 +1247,12 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                     "Nothing more cruel and inhuman than a war. Nothing more desirable than peace. But peace has its causes, it is an effect. The effect of respect for mutual rights.",
                     "One by one the righteous fell, and the ills of ignorance permeated.",
                     "They defended the grains of sand in the desert to the last drop of their blood.",
-                    "All history is man's efforts to realise ideals.\n- Éamon de Valera, 1929",
+                    "All history is man's efforts to realise ideals.\n- Ã‰amon de Valera, 1929",
                     "Let us dedicate ourselves to what the Greeks wrote so many years ago: to tame the savageness of man and make gentle the life of this world.\n- Robert F. Kennedy, 1968",
                     "Yesterday is not ours to recover, but tomorrow is ours to win or lose.\n- Lyndon B. Johnson, 1964",
                     "The end of hope is the beginning of death.\n- Charles de Gaulle, 1945",
                     "The day I leave the power, inside my pockets will only be dust.\n- Antonio de Oliveira Salazar, 1968",
-                    "When smashing monuments, save the pedestals. They always come in handy.\n- Stanisław Jerzy Lec, 1957",
+                    "When smashing monuments, save the pedestals. They always come in handy.\n- StanisÅ‚aw Jerzy Lec, 1957",
                     "Fear not the path of truth for the lack of people walking on it.\n- Robert F. Kennedy, 1968",
                     "The rocket worked perfectly, except for landing on the wrong planet.\n- Wernher von Braun upon the first V-2 hitting London, 1944",
                     "A man is not finished when he's defeated. He's finished when he quits.\n- Richard Nixon, 1962",
@@ -1276,13 +1276,13 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 
                 int randomNumber=seed.Next(0,50);
 
-                if(Language_Of_Prompts==Languages_Of_Prompts.Simplified_Chinese_简体中文) {
+                if(Language_Of_Prompts==Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡) {
 
                     // prompt=chineseContents[randomNumber]; (Chinese contents omitted for brevity)
 
                 }
                     
-                if(Language_Of_Prompts==Languages_Of_Prompts.English_英文) {
+                if(Language_Of_Prompts==Languages_Of_Prompts.English_è‹±æ–‡) {
 
                     prompt=englishContents[randomNumber];
                     
@@ -1290,7 +1290,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
             }
             
-            if(Weird_Shenanigan==Weird_Shenanigans.StarCraft_SCBoy_星际争霸星际老男孩) {
+            if(Weird_Shenanigan==Weird_Shenanigans.StarCraft_SCBoy_æ˜Ÿé™…äº‰éœ¸æ˜Ÿé™…è€ç”·å­©) {
                 
                 List<string> contents=[
                     "Hey, your ally's base is being overrun!",
@@ -1370,7 +1370,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
         [ScriptMethod(name: "----- Phase 1 ----- (No actual meaning for this toggle)",
             eventType: EventTypeEnum.NpcYell,
             eventCondition: ["Give me your tired",
-                            "给我你们疲倦的人"])]
+                            "ç»™æˆ‘ä½ ä»¬ç–²å€¦çš„äºº"])]
 
         public void Phase1_Placeholder(Event @event, ScriptAccessory accessory) { }
 
@@ -1457,14 +1457,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                     accessory.Method.SendDraw(DrawModeEnum.Default, DrawTypeEnum.Circle, dp);
                 }
 
-                if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                 {
 
-                    prompt = "分散";
+                    prompt = "åˆ†æ•£";
 
                 }
 
-                if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                 {
 
                     prompt = "Spread";
@@ -1493,14 +1493,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                     accessory.Method.SendDraw(DrawModeEnum.Default, DrawTypeEnum.Circle, dp);
                 }
 
-                if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                 {
 
-                    prompt = "分摊";
+                    prompt = "åˆ†æ‘Š";
 
                 }
 
-                if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                 {
 
                     prompt = "Stack";
@@ -1592,14 +1592,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                accessory.Data.PartyList.IndexOf(accessory.Data.Me) == 1)
             {
 
-                if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                 {
 
-                    prompt = "稍微靠近另一个T";
+                    prompt = "ç¨å¾®é è¿‘å¦ä¸€ä¸ªT";
 
                 }
 
-                if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                 {
 
                     prompt = "Get slightly closer to another tank";
@@ -1613,14 +1613,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                accessory.Data.PartyList.IndexOf(accessory.Data.Me) <= 7)
             {
 
-                if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                 {
 
-                    prompt = "远离双T";
+                    prompt = "è¿œç¦»åŒT";
 
                 }
 
-                if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                 {
 
                     prompt = "Stay away from both tanks";
@@ -1659,13 +1659,13 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             } while(obj==null);
             
             var dir8 = PositionTo8Dir(obj.Position, new(100, 0, 100));
-            P1雾龙记录[dir8 % 4] = 1;
+            P1é›¾é¾™è®°å½•[dir8 % 4] = 1;
         }
         [ScriptMethod(name: "P1_UtopianSky_RecordThunderFire", eventType: EventTypeEnum.ActionEffect, eventCondition: ["ActionId:regex:^(4015[45])$"], userControl: false)]
         public void P1_UtopianSky_RecordThunderFire(Event @event, ScriptAccessory accessory)
         {
             if (parse!=1) return;
-            P1雾龙雷 = (@event["ActionId"] == "40155");
+            P1é›¾é¾™é›· = (@event["ActionId"] == "40155");
         }
         [ScriptMethod(name: "P1_UtopianSky_Range", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:regex:^(40158)$"])]
         public void P1_UtopianSky_Range(Event @event, ScriptAccessory accessory)
@@ -1708,14 +1708,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                     accessory.Method.SendDraw(DrawModeEnum.Default, DrawTypeEnum.Circle, dp);
                 }
 
-                if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                 {
 
-                    prompt = "分散";
+                    prompt = "åˆ†æ•£";
 
                 }
 
-                if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                 {
 
                     prompt = "Spread";
@@ -1748,14 +1748,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 dp.DestoryAt = 5000;
                 accessory.Method.SendDraw(DrawModeEnum.Default, DrawTypeEnum.Circle, dp);
 
-                if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                 {
 
-                    prompt = "分摊";
+                    prompt = "åˆ†æ‘Š";
 
                 }
 
-                if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                 {
 
                     prompt = "Stack";
@@ -1786,7 +1786,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventType: EventTypeEnum.StartCasting,
             eventCondition: ["ActionId:regex:^(4015[45])$"])]
 
-        public void Phase1_Standby_Position_Of_Utopian_Sky_乐园绝技待机位置(Event @event, ScriptAccessory accessory)
+        public void Phase1_Standby_Position_Of_Utopian_Sky_ä¹å›­ç»æŠ€å¾…æœºä½ç½®(Event @event, ScriptAccessory accessory)
         {
 
             if (parse!=1)
@@ -1798,7 +1798,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
             int myIndex = accessory.Data.PartyList.IndexOf(accessory.Data.Me);
 
-            if (Phase1_Standby_Position_Of_Utopian_Sky == Phase1_Standby_Positions_Of_Utopian_Sky.Swap_OT_And_M2_交换ST与D4_莫灵喵与MMW)
+            if (Phase1_Standby_Position_Of_Utopian_Sky == Phase1_Standby_Positions_Of_Utopian_Sky.Swap_OT_And_M2_äº¤æ¢STä¸ŽD4_èŽ«çµå–µä¸ŽMMW)
             {
 
                 int rotationMultiplier = myIndex switch
@@ -1857,7 +1857,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
             }
 
-            if (Phase1_Standby_Position_Of_Utopian_Sky == Phase1_Standby_Positions_Of_Utopian_Sky.Both_Tanks_Go_Center_双T去中间)
+            if (Phase1_Standby_Position_Of_Utopian_Sky == Phase1_Standby_Positions_Of_Utopian_Sky.Both_Tanks_Go_Center_åŒTåŽ»ä¸­é—´)
             {
 
                 var myPosition = new Vector3(100, 0, 100);
@@ -1921,15 +1921,15 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
         {
             if (parse!=1) return;
 
-            lock (P1雾龙计数读写锁_AsAConstant)
+            lock (P1é›¾é¾™è®¡æ•°è¯»å†™é”_AsAConstant)
             {
-                P1雾龙计数++;
-                if (P1雾龙计数 != 3) return;
+                P1é›¾é¾™è®¡æ•°++;
+                if (P1é›¾é¾™è®¡æ•° != 3) return;
                 Task.Delay(334).ContinueWith(t =>
                 {
-                    if (!P1雾龙雷)
+                    if (!P1é›¾é¾™é›·)
                     {
-                        var safeDir = P1雾龙记录.IndexOf(0);
+                        var safeDir = P1é›¾é¾™è®°å½•.IndexOf(0);
                         List<int> h1group = [0, 2, 4, 6];
                         var myindex = accessory.Data.PartyList.IndexOf(accessory.Data.Me);
                         var isH1group = h1group.Contains(myindex);
@@ -1955,7 +1955,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                     }
                     else
                     {
-                        var safeDir = P1雾龙记录.IndexOf(0);
+                        var safeDir = P1é›¾é¾™è®°å½•.IndexOf(0);
                         List<int> h1group = [0, 2, 4, 6];
                         var myindex = accessory.Data.PartyList.IndexOf(accessory.Data.Me);
                         var isH1group = h1group.Contains(myindex);
@@ -2006,7 +2006,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventCondition: ["ActionId:40158"],
             userControl: false)]
 
-        public void Phase1_Mark_Players_In_Safe_Positions_标记在安全位置的玩家(Event @event, ScriptAccessory accessory)
+        public void Phase1_Mark_Players_In_Safe_Positions_æ ‡è®°åœ¨å®‰å…¨ä½ç½®çš„çŽ©å®¶(Event @event, ScriptAccessory accessory)
         {
 
             if (parse!=1)
@@ -2023,14 +2023,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
             }
 
-            lock (P1雾龙计数2读写锁_AsAConstant)
+            lock (P1é›¾é¾™è®¡æ•°2è¯»å†™é”_AsAConstant)
             {
 
-                ++P1雾龙计数2;
+                ++P1é›¾é¾™è®¡æ•°2;
 
                 System.Threading.Thread.MemoryBarrier();
 
-                if (P1雾龙计数2 != 3)
+                if (P1é›¾é¾™è®¡æ•°2 != 3)
                 {
 
                     return;
@@ -2042,18 +2042,18 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                     // I know this is not a thread safe practice, but I'm just too lazy to rework it in a thread safe way. Please forgive me :(
                     // And by the way, If something really goes wrong here, it probably indicates that the frame rate of the current user is below 3 FPS.
 
-                    int safePositions = P1雾龙记录.IndexOf(0);
+                    int safePositions = P1é›¾é¾™è®°å½•.IndexOf(0);
                     List<int> temporaryOrder = [0, 1, 2, 3, 4, 5, 6, 7];
                     string debugOutput = "";
 
-                    if (Phase1_Standby_Position_Of_Utopian_Sky == Phase1_Standby_Positions_Of_Utopian_Sky.Swap_OT_And_M2_交换ST与D4_莫灵喵与MMW)
+                    if (Phase1_Standby_Position_Of_Utopian_Sky == Phase1_Standby_Positions_Of_Utopian_Sky.Swap_OT_And_M2_äº¤æ¢STä¸ŽD4_èŽ«çµå–µä¸ŽMMW)
                     {
 
                         temporaryOrder = [0, 1, 7, 5, 3, 4, 2, 6];
 
                     }
 
-                    if (Phase1_Standby_Position_Of_Utopian_Sky == Phase1_Standby_Positions_Of_Utopian_Sky.Both_Tanks_Go_Center_双T去中间)
+                    if (Phase1_Standby_Position_Of_Utopian_Sky == Phase1_Standby_Positions_Of_Utopian_Sky.Both_Tanks_Go_Center_åŒTåŽ»ä¸­é—´)
                     {
 
                         temporaryOrder = [0, 7, 3, 5, 1, 4, 2, 6];
@@ -2110,7 +2110,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             userControl: false,
             suppress: 2000)]
 
-        public void Phase1_Clear_Marks_On_Players_In_Safe_Positions_清理安全位置玩家的标记(Event @event, ScriptAccessory accessory)
+        public void Phase1_Clear_Marks_On_Players_In_Safe_Positions_æ¸…ç†å®‰å…¨ä½ç½®çŽ©å®¶çš„æ ‡è®°(Event @event, ScriptAccessory accessory)
         {
 
             if (parse!=1)
@@ -2133,7 +2133,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventType: EventTypeEnum.StartCasting,
             eventCondition: ["ActionId:regex:^(40164)$"])]
 
-        public void Phase1_Thunder_Burnt_Strike_雷燃烧击(Event @event, ScriptAccessory accessory)
+        public void Phase1_Thunder_Burnt_Strike_é›·ç‡ƒçƒ§å‡»(Event @event, ScriptAccessory accessory)
         {
 
             if (parse!=1)
@@ -2178,7 +2178,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventType: EventTypeEnum.StartCasting,
             eventCondition: ["ActionId:regex:^(40161)$"])]
 
-        public void Phase1_Fire_Burnt_Strike_火燃烧击(Event @event, ScriptAccessory accessory)
+        public void Phase1_Fire_Burnt_Strike_ç«ç‡ƒçƒ§å‡»(Event @event, ScriptAccessory accessory)
         {
 
             if (parse!=1)
@@ -2273,7 +2273,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             if (!ParseObjectId(@event["TargetId"], out var tid)) return;
             lock (this)
             {
-                P1转轮召抓人[accessory.Data.PartyList.IndexOf(((uint)tid))] = 1;
+                P1è½¬è½®å¬æŠ“äºº[accessory.Data.PartyList.IndexOf(((uint)tid))] = 1;
             }
         }
 
@@ -2281,7 +2281,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventType: EventTypeEnum.StartCasting,
             eventCondition: ["ActionId:regex:^(40152)$"])]
 
-        public void Phase1_Stack_Range_Of_Turn_Of_The_Heavens_光轮召唤分摊范围(Event @event, ScriptAccessory accessory)
+        public void Phase1_Stack_Range_Of_Turn_Of_The_Heavens_å…‰è½®å¬å”¤åˆ†æ‘ŠèŒƒå›´(Event @event, ScriptAccessory accessory)
         {
 
             if (parse!=1)
@@ -2301,11 +2301,11 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             }
 
             bool hasSelectedAStrat = false;
-            int highPriorityStack = P1转轮召抓人.IndexOf(1);
-            int lowPriorityStack = P1转轮召抓人.LastIndexOf(1);
+            int highPriorityStack = P1è½¬è½®å¬æŠ“äºº.IndexOf(1);
+            int lowPriorityStack = P1è½¬è½®å¬æŠ“äºº.LastIndexOf(1);
             List<int> membersOfTheNorthGroup = [];
 
-            if (Phase1_Group_Of_Turn_Of_The_Heavens == Phase1_Groups_Of_Turn_Of_The_Heavens.MTOTH1H2_Go_North_MTM1_vary_MTSTH1H2去北MTD1换_莫灵喵与MMW)
+            if (Phase1_Group_Of_Turn_Of_The_Heavens == Phase1_Groups_Of_Turn_Of_The_Heavens.MTOTH1H2_Go_North_MTM1_vary_MTSTH1H2åŽ»åŒ—MTD1æ¢_èŽ«çµå–µä¸ŽMMW)
             {
 
                 hasSelectedAStrat = true;
@@ -2357,7 +2357,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
             }
 
-            if (Phase1_Group_Of_Turn_Of_The_Heavens == Phase1_Groups_Of_Turn_Of_The_Heavens.MTH1M1R1_Go_North_MTOT_vary_MTH1D1D3去北MTST换)
+            if (Phase1_Group_Of_Turn_Of_The_Heavens == Phase1_Groups_Of_Turn_Of_The_Heavens.MTH1M1R1_Go_North_MTOT_vary_MTH1D1D3åŽ»åŒ—MTSTæ¢)
             {
 
                 hasSelectedAStrat = true;
@@ -2409,7 +2409,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
             }
 
-            if (Phase1_Group_Of_Turn_Of_The_Heavens == Phase1_Groups_Of_Turn_Of_The_Heavens.MTOTR1R2_Go_North_MTM1_vary_MTSTD3D4去北MTD1换_莫灵喵)
+            if (Phase1_Group_Of_Turn_Of_The_Heavens == Phase1_Groups_Of_Turn_Of_The_Heavens.MTOTR1R2_Go_North_MTM1_vary_MTSTD3D4åŽ»åŒ—MTD1æ¢_èŽ«çµå–µ)
             {
 
                 hasSelectedAStrat = true;
@@ -2556,10 +2556,10 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             if (MathF.Abs(pos.Z - 100) > 1) return;
 
             var atEast = pos.X - 100 > 1;
-            var o1 = P1转轮召抓人.IndexOf(1);
-            var o2 = P1转轮召抓人.LastIndexOf(1);
+            var o1 = P1è½¬è½®å¬æŠ“äºº.IndexOf(1);
+            var o2 = P1è½¬è½®å¬æŠ“äºº.LastIndexOf(1);
             List<int> upGroup = [];
-            if (Phase1_Group_Of_Turn_Of_The_Heavens == Phase1_Groups_Of_Turn_Of_The_Heavens.MTOTH1H2_Go_North_MTM1_vary_MTSTH1H2去北MTD1换_莫灵喵与MMW)
+            if (Phase1_Group_Of_Turn_Of_The_Heavens == Phase1_Groups_Of_Turn_Of_The_Heavens.MTOTH1H2_Go_North_MTM1_vary_MTSTH1H2åŽ»åŒ—MTD1æ¢_èŽ«çµå–µä¸ŽMMW)
             {
                 upGroup.Add(o1);
                 if (o1 != 1 && o2 != 1) upGroup.Add(1);
@@ -2568,7 +2568,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 if (upGroup.Count < 4 && o1 != 0 && o2 != 0) upGroup.Add(0);
                 if (upGroup.Count < 4 && o1 != 4 && o2 != 4) upGroup.Add(4);
             }
-            if (Phase1_Group_Of_Turn_Of_The_Heavens == Phase1_Groups_Of_Turn_Of_The_Heavens.MTH1M1R1_Go_North_MTOT_vary_MTH1D1D3去北MTST换)
+            if (Phase1_Group_Of_Turn_Of_The_Heavens == Phase1_Groups_Of_Turn_Of_The_Heavens.MTH1M1R1_Go_North_MTOT_vary_MTH1D1D3åŽ»åŒ—MTSTæ¢)
             {
                 upGroup.Add(o1);
                 if (o1 != 2 && o2 != 2) upGroup.Add(2);
@@ -2577,7 +2577,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 if (upGroup.Count < 4 && o1 != 0 && o2 != 0) upGroup.Add(0);
                 if (upGroup.Count < 4 && o1 != 1 && o2 != 1) upGroup.Add(1);
             }
-            if (Phase1_Group_Of_Turn_Of_The_Heavens == Phase1_Groups_Of_Turn_Of_The_Heavens.MTOTR1R2_Go_North_MTM1_vary_MTSTD3D4去北MTD1换_莫灵喵)
+            if (Phase1_Group_Of_Turn_Of_The_Heavens == Phase1_Groups_Of_Turn_Of_The_Heavens.MTOTR1R2_Go_North_MTM1_vary_MTSTD3D4åŽ»åŒ—MTD1æ¢_èŽ«çµå–µ)
             {
                 /* (commented out as in original)
                 List<int> upIndex = [0, 1, 6, 7];
@@ -2657,7 +2657,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventCondition: ["ActionId:regex:^(40170)$"],
             userControl: false)]
 
-        public void Phase1_Fall_Of_Faith_Control_信仰崩塌控制(Event @event, ScriptAccessory accessory)
+        public void Phase1_Fall_Of_Faith_Control_ä¿¡ä»°å´©å¡ŒæŽ§åˆ¶(Event @event, ScriptAccessory accessory)
         {
 
             if (parse!=1)
@@ -2771,7 +2771,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventCondition: ["Id:regex:^(00F9|011F)$"],
             userControl: false)]
 
-        public void Phase1_Record_Tethered_Players_记录被连线的玩家(Event @event, ScriptAccessory accessory)
+        public void Phase1_Record_Tethered_Players_è®°å½•è¢«è¿žçº¿çš„çŽ©å®¶(Event @event, ScriptAccessory accessory)
         {
 
             if (parse!=1)
@@ -2818,7 +2818,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventCondition: ["Id:regex:^(00F9|011F)$"],
             userControl: false)]
 
-        public void Phase1_Mark_Tethered_Players_标记被连线的玩家(Event @event, ScriptAccessory accessory)
+        public void Phase1_Mark_Tethered_Players_æ ‡è®°è¢«è¿žçº¿çš„çŽ©å®¶(Event @event, ScriptAccessory accessory)
         {
 
             if (!Phase1_Mark_Players_During_Fall_Of_Faith)
@@ -2876,7 +2876,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventType: EventTypeEnum.Tether,
             eventCondition: ["Id:regex:^(00F9|011F)$"])]
 
-        public void Phase1_Prompt_The_Type_Of_The_Current_Tether_提示当前连线的类型(Event @event, ScriptAccessory accessory)
+        public void Phase1_Prompt_The_Type_Of_The_Current_Tether_æç¤ºå½“å‰è¿žçº¿çš„ç±»åž‹(Event @event, ScriptAccessory accessory)
         {
 
             if (parse!=1)
@@ -2911,14 +2911,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 if (isFireTether)
                 {
 
-                    if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                    if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                     {
 
-                        prompt = "火";
+                        prompt = "ç«";
 
                     }
 
-                    if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                    if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                     {
 
                         prompt = "Fire";
@@ -2930,14 +2930,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 else
                 {
 
-                    if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                    if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                     {
 
-                        prompt = "雷";
+                        prompt = "é›·";
 
                     }
 
-                    if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                    if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                     {
 
                         prompt = "Thunder";
@@ -2973,7 +2973,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventType: EventTypeEnum.Tether,
             eventCondition: ["Id:regex:^(00F9|011F)$"])]
 
-        public void Phase1_Range_Of_The_Current_Tether_当前连线的范围(Event @event, ScriptAccessory accessory)
+        public void Phase1_Range_Of_The_Current_Tether_å½“å‰è¿žçº¿çš„èŒƒå›´(Event @event, ScriptAccessory accessory)
         {
 
             if (parse!=1)
@@ -3052,7 +3052,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventCondition: ["Id:regex:^(00F9|011F)$"],
             userControl: false)]
 
-        public void Phase1_Mark_Untethered_Players_标记未被连线的玩家(Event @event, ScriptAccessory accessory)
+        public void Phase1_Mark_Untethered_Players_æ ‡è®°æœªè¢«è¿žçº¿çš„çŽ©å®¶(Event @event, ScriptAccessory accessory)
         {
 
             if (!Phase1_Mark_Players_During_Fall_Of_Faith)
@@ -3095,9 +3095,9 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             var tetheredPlayers = phase1_tetheredPlayersDuringFallOfFaith.Select(o => o % 10).ToList();
             List<int> untetheredPlayers = [];
 
-            if (Phase1_Strat_Of_Fall_Of_Faith == Phase1_Strats_Of_Fall_Of_Faith.Single_Line_In_THD_Order_按THD顺序单排
+            if (Phase1_Strat_Of_Fall_Of_Faith == Phase1_Strats_Of_Fall_Of_Faith.Single_Line_In_THD_Order_æŒ‰THDé¡ºåºå•æŽ’
                ||
-               Phase1_Strat_Of_Fall_Of_Faith == Phase1_Strats_Of_Fall_Of_Faith.Double_Lines_MOTH12_Left_M12R12_Right_双排左MSTH12右D1234)
+               Phase1_Strat_Of_Fall_Of_Faith == Phase1_Strats_Of_Fall_Of_Faith.Double_Lines_MOTH12_Left_M12R12_Right_åŒæŽ’å·¦MSTH12å³D1234)
             {
 
                 for (int i = 0; i < accessory.Data.PartyList.Count; ++i)
@@ -3114,9 +3114,9 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
             }
 
-            if (Phase1_Strat_Of_Fall_Of_Faith == Phase1_Strats_Of_Fall_Of_Faith.Single_Line_In_HTD_Order_按HTD顺序单排_莫灵喵
+            if (Phase1_Strat_Of_Fall_Of_Faith == Phase1_Strats_Of_Fall_Of_Faith.Single_Line_In_HTD_Order_æŒ‰HTDé¡ºåºå•æŽ’_èŽ«çµå–µ
                ||
-               Phase1_Strat_Of_Fall_Of_Faith == Phase1_Strats_Of_Fall_Of_Faith.Double_Lines_H12MOT_Left_M12R12_Right_双排左H12MST右D1234_莫灵喵与MMW)
+               Phase1_Strat_Of_Fall_Of_Faith == Phase1_Strats_Of_Fall_Of_Faith.Double_Lines_H12MOT_Left_M12R12_Right_åŒæŽ’å·¦H12MSTå³D1234_èŽ«çµå–µä¸ŽMMW)
             {
                 // The addition of this strat credits to @alexandria_prime. Appreciate!
 
@@ -3136,7 +3136,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
             }
 
-            if (Phase1_Strat_Of_Fall_Of_Faith == Phase1_Strats_Of_Fall_Of_Faith.Single_Line_In_H1TDH2_Order_按H1TDH2顺序单排)
+            if (Phase1_Strat_Of_Fall_Of_Faith == Phase1_Strats_Of_Fall_Of_Faith.Single_Line_In_H1TDH2_Order_æŒ‰H1TDH2é¡ºåºå•æŽ’)
             {
                 // The addition of this strat credits to @alexandria_prime. Appreciate!
 
@@ -3199,7 +3199,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventType: EventTypeEnum.Tether,
             eventCondition: ["Id:regex:^(00F9|011F)$"])]
 
-        public void Phase1_Prompt_All_The_Types_Of_Tethers_提示所有连线的类型(Event @event, ScriptAccessory accessory)
+        public void Phase1_Prompt_All_The_Types_Of_Tethers_æç¤ºæ‰€æœ‰è¿žçº¿çš„ç±»åž‹(Event @event, ScriptAccessory accessory)
         {
 
             if (parse!=1)
@@ -3243,14 +3243,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
             string prompt = "";
 
-            if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+            if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
             {
 
-                prompt += (isFireTether[0]) ? "火" : "雷";
+                prompt += (isFireTether[0]) ? "ç«" : "é›·";
 
             }
 
-            if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+            if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
             {
 
                 prompt += (isFireTether[0]) ? "Fire" : "Thunder";
@@ -3260,14 +3260,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             for (int i = 1; i < isFireTether.Count; ++i)
             {
 
-                if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                 {
 
-                    prompt += (isFireTether[i]) ? ",火" : ",雷";
+                    prompt += (isFireTether[i]) ? ",ç«" : ",é›·";
 
                 }
 
-                if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                 {
 
                     prompt += (isFireTether[i]) ? ", Fire" : ", Thunder";
@@ -3462,9 +3462,9 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                     var tehterObjIndex = phase1_tetheredPlayersDuringFallOfFaith.Select(o => o % 10).ToList();
                     var tehterIsFire = phase1_tetheredPlayersDuringFallOfFaith.Select(o => o < 20).ToList();
                     List<int> idleObjIndex = [];
-                    if (Phase1_Strat_Of_Fall_Of_Faith == Phase1_Strats_Of_Fall_Of_Faith.Single_Line_In_THD_Order_按THD顺序单排
+                    if (Phase1_Strat_Of_Fall_Of_Faith == Phase1_Strats_Of_Fall_Of_Faith.Single_Line_In_THD_Order_æŒ‰THDé¡ºåºå•æŽ’
                         ||
-                        Phase1_Strat_Of_Fall_Of_Faith == Phase1_Strats_Of_Fall_Of_Faith.Double_Lines_MOTH12_Left_M12R12_Right_双排左MSTH12右D1234)
+                        Phase1_Strat_Of_Fall_Of_Faith == Phase1_Strats_Of_Fall_Of_Faith.Double_Lines_MOTH12_Left_M12R12_Right_åŒæŽ’å·¦MSTH12å³D1234)
                     {
                         for (int i = 0; i < accessory.Data.PartyList.Count; i++)
                         {
@@ -3473,9 +3473,9 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                         }
                     }
 
-                    if (Phase1_Strat_Of_Fall_Of_Faith == Phase1_Strats_Of_Fall_Of_Faith.Single_Line_In_HTD_Order_按HTD顺序单排_莫灵喵
+                    if (Phase1_Strat_Of_Fall_Of_Faith == Phase1_Strats_Of_Fall_Of_Faith.Single_Line_In_HTD_Order_æŒ‰HTDé¡ºåºå•æŽ’_èŽ«çµå–µ
                        ||
-                       Phase1_Strat_Of_Fall_Of_Faith == Phase1_Strats_Of_Fall_Of_Faith.Double_Lines_H12MOT_Left_M12R12_Right_双排左H12MST右D1234_莫灵喵与MMW)
+                       Phase1_Strat_Of_Fall_Of_Faith == Phase1_Strats_Of_Fall_Of_Faith.Double_Lines_H12MOT_Left_M12R12_Right_åŒæŽ’å·¦H12MSTå³D1234_èŽ«çµå–µä¸ŽMMW)
                     {
                         // The addition of this strat credits to @alexandria_prime. Appreciate!
 
@@ -3495,7 +3495,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
                     }
 
-                    if (Phase1_Strat_Of_Fall_Of_Faith == Phase1_Strats_Of_Fall_Of_Faith.Single_Line_In_H1TDH2_Order_按H1TDH2顺序单排)
+                    if (Phase1_Strat_Of_Fall_Of_Faith == Phase1_Strats_Of_Fall_Of_Faith.Single_Line_In_H1TDH2_Order_æŒ‰H1TDH2é¡ºåºå•æŽ’)
                     {
                         // The addition of this strat credits to @alexandria_prime. Appreciate!
 
@@ -3528,7 +3528,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                     Vector3 dealpos1 = default;
                     Vector3 dealpos2 = default;
 
-                    if (Phase1_Orientation_Benchmark_During_Fall_Of_Faith == Phase1_Orientation_Benchmarks_During_Fall_Of_Faith.High_Priority_Left_Facing_Due_North_面向正北左侧高优先级)
+                    if (Phase1_Orientation_Benchmark_During_Fall_Of_Faith == Phase1_Orientation_Benchmarks_During_Fall_Of_Faith.High_Priority_Left_Facing_Due_North_é¢å‘æ­£åŒ—å·¦ä¾§é«˜ä¼˜å…ˆçº§)
                     {
 
                         i1p1 = tehterIsFire[0] ? new(100, 0, 100 - far - dis) : new(100 - dis, 0, 100 - far);
@@ -3542,7 +3542,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
                     }
 
-                    if (Phase1_Orientation_Benchmark_During_Fall_Of_Faith == Phase1_Orientation_Benchmarks_During_Fall_Of_Faith.High_Priority_Left_Facing_The_Boss_面向Boss左侧高优先级_莫灵喵与MMW)
+                    if (Phase1_Orientation_Benchmark_During_Fall_Of_Faith == Phase1_Orientation_Benchmarks_During_Fall_Of_Faith.High_Priority_Left_Facing_The_Boss_é¢å‘Bosså·¦ä¾§é«˜ä¼˜å…ˆçº§_èŽ«çµå–µä¸ŽMMW)
                     {
                         // The addition of this benchmark credits to @alexandria_prime. Appreciate!
 
@@ -3637,16 +3637,16 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 };
                 if (MathF.Abs(pos.Z - 100) < 1)
                 {
-                    P1塔[1] = count;
+                    P1å¡”[1] = count;
                 }
                 else
                 {
-                    if (pos.Z - 100 > 1) P1塔[2] = count;
-                    else P1塔[0] = count;
+                    if (pos.Z - 100 > 1) P1å¡”[2] = count;
+                    else P1å¡”[0] = count;
                 }
                 if (pos.X - 100 > 1)
                 {
-                    P1塔[3] = 1;
+                    P1å¡”[3] = 1;
                 }
             }
         }
@@ -3655,7 +3655,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventType: EventTypeEnum.StartCasting,
             eventCondition: ["ActionId:regex:^(40134|40129)$"])]
 
-        public void Phase1_Burnt_Strike_With_Towers_And_Tank_Busters_带有塔和死刑的燃烧击(Event @event, ScriptAccessory accessory)
+        public void Phase1_Burnt_Strike_With_Towers_And_Tank_Busters_å¸¦æœ‰å¡”å’Œæ­»åˆ‘çš„ç‡ƒçƒ§å‡»(Event @event, ScriptAccessory accessory)
         {
 
             if (parse!=1)
@@ -3764,7 +3764,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 var myIndex = accessory.Data.PartyList.IndexOf(accessory.Data.Me);
                 if (@event["ActionId"] == "40134")
                 {
-                    var eastTower = P1塔[3] == 1;
+                    var eastTower = P1å¡”[3] == 1;
                     //Thunder
                     if (myIndex == 0 || myIndex == 1)
                     {
@@ -3788,20 +3788,20 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                         Vector3 standbyPosition = new Vector3(100, 0, 100);
                         Vector3 towerPosition = new Vector3(100, 0, 100);
 
-                        if (Phase1_Strat_Of_Towers == Phase1_Strats_Of_Towers.Completely_Based_On_Priority_完全根据优先级_莫灵喵)
+                        if (Phase1_Strat_Of_Towers == Phase1_Strats_Of_Towers.Completely_Based_On_Priority_å®Œå…¨æ ¹æ®ä¼˜å…ˆçº§_èŽ«çµå–µ)
                         {
 
-                            if (myTowerIndex > 0 && myTowerIndex <= P1塔[0]) standbyPosition = new(eastTower ? 113.08f : 86.92f, 0, 90.81f);
-                            if (myTowerIndex > P1塔[0] && myTowerIndex <= P1塔[0] + P1塔[1]) standbyPosition = new(eastTower ? 115.98f : 84.02f, 0, 100f);
-                            if (myTowerIndex > P1塔[0] + P1塔[1] && myTowerIndex <= P1塔[0] + P1塔[1] + P1塔[2]) standbyPosition = new(eastTower ? 113.08f : 86.92f, 0, 109.18f);
+                            if (myTowerIndex > 0 && myTowerIndex <= P1å¡”[0]) standbyPosition = new(eastTower ? 113.08f : 86.92f, 0, 90.81f);
+                            if (myTowerIndex > P1å¡”[0] && myTowerIndex <= P1å¡”[0] + P1å¡”[1]) standbyPosition = new(eastTower ? 115.98f : 84.02f, 0, 100f);
+                            if (myTowerIndex > P1å¡”[0] + P1å¡”[1] && myTowerIndex <= P1å¡”[0] + P1å¡”[1] + P1å¡”[2]) standbyPosition = new(eastTower ? 113.08f : 86.92f, 0, 109.18f);
 
-                            if (myTowerIndex > 0 && myTowerIndex <= P1塔[0]) towerPosition = new(eastTower ? 113.08f : 86.92f, 0, 90.81f);
-                            if (myTowerIndex > P1塔[0] && myTowerIndex <= P1塔[0] + P1塔[1]) towerPosition = new(eastTower ? 115.98f : 84.02f, 0, 100f);
-                            if (myTowerIndex > P1塔[0] + P1塔[1] && myTowerIndex <= P1塔[0] + P1塔[1] + P1塔[2]) towerPosition = new(eastTower ? 113.08f : 86.92f, 0, 109.18f);
+                            if (myTowerIndex > 0 && myTowerIndex <= P1å¡”[0]) towerPosition = new(eastTower ? 113.08f : 86.92f, 0, 90.81f);
+                            if (myTowerIndex > P1å¡”[0] && myTowerIndex <= P1å¡”[0] + P1å¡”[1]) towerPosition = new(eastTower ? 115.98f : 84.02f, 0, 100f);
+                            if (myTowerIndex > P1å¡”[0] + P1å¡”[1] && myTowerIndex <= P1å¡”[0] + P1å¡”[1] + P1å¡”[2]) towerPosition = new(eastTower ? 113.08f : 86.92f, 0, 109.18f);
 
                         }
 
-                        if (Phase1_Strat_Of_Towers == Phase1_Strats_Of_Towers.Fixed_H1H2R2_Priority_For_Rest_固定H1H2D4剩余人优先级)
+                        if (Phase1_Strat_Of_Towers == Phase1_Strats_Of_Towers.Fixed_H1H2R2_Priority_For_Rest_å›ºå®šH1H2D4å‰©ä½™äººä¼˜å…ˆçº§)
                         {
 
                             bool fixedPartyMember = false;
@@ -3839,9 +3839,9 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                             if (!fixedPartyMember)
                             {
 
-                                int newTower0 = P1塔[0] - 1;
-                                int newTower1 = P1塔[1] - 1;
-                                int newTower2 = P1塔[2] - 1;
+                                int newTower0 = P1å¡”[0] - 1;
+                                int newTower1 = P1å¡”[1] - 1;
+                                int newTower2 = P1å¡”[2] - 1;
                                 int myNewTowerIndex = myIndex - 3;
 
                                 if (Enable_Developer_Mode)
@@ -3892,7 +3892,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
                         }
 
-                        if (Phase1_Strat_Of_Towers == Phase1_Strats_Of_Towers.Fixed_H1H2R2_Rest_Fill_Vacancies_固定H1H2D4剩余人补位_MMW)
+                        if (Phase1_Strat_Of_Towers == Phase1_Strats_Of_Towers.Fixed_H1H2R2_Rest_Fill_Vacancies_å›ºå®šH1H2D4å‰©ä½™äººè¡¥ä½_MMW)
                         {
                             // The algorithm implementation of this strat was inspired by @abigseal's script.
                             // Therefore, the following code should credit to him. Appreciate!
@@ -3937,9 +3937,9 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
                                     accessory.Method.SendChat($"""
                                                                /e 
-                                                               P1塔[0]={P1塔[0]}
-                                                               P1塔[1]={P1塔[1]}
-                                                               P1塔[2]={P1塔[2]}
+                                                               P1å¡”[0]={P1å¡”[0]}
+                                                               P1å¡”[1]={P1å¡”[1]}
+                                                               P1å¡”[2]={P1å¡”[2]}
                                                                myTowerIndex={myTowerIndex}
 
                                                                """);
@@ -3949,7 +3949,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                                 if (myIndex == 4)
                                 {
 
-                                    if (P1塔[0] >= 2)
+                                    if (P1å¡”[0] >= 2)
                                     {
 
                                         standbyPosition = new(eastTower ? 113.08f : 86.92f, 0, 90.81f);
@@ -3960,7 +3960,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                                     else
                                     {
 
-                                        if (P1塔[1] >= 3)
+                                        if (P1å¡”[1] >= 3)
                                         {
 
                                             standbyPosition = new(eastTower ? 115.98f : 84.02f, 0, 100f);
@@ -3968,7 +3968,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
                                         }
 
-                                        if (P1塔[2] >= 3)
+                                        if (P1å¡”[2] >= 3)
                                         {
 
                                             standbyPosition = new(eastTower ? 113.08f : 86.92f, 0, 109.18f);
@@ -3983,7 +3983,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                                 if (myIndex == 5)
                                 {
 
-                                    if (P1塔[1] >= 2)
+                                    if (P1å¡”[1] >= 2)
                                     {
 
                                         standbyPosition = new(eastTower ? 115.98f : 84.02f, 0, 100f);
@@ -3994,7 +3994,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                                     else
                                     {
 
-                                        if (P1塔[0] >= 3)
+                                        if (P1å¡”[0] >= 3)
                                         {
 
                                             standbyPosition = new(eastTower ? 113.08f : 86.92f, 0, 90.81f);
@@ -4002,7 +4002,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
                                         }
 
-                                        if (P1塔[2] >= 3)
+                                        if (P1å¡”[2] >= 3)
                                         {
 
                                             standbyPosition = new(eastTower ? 113.08f : 86.92f, 0, 109.18f);
@@ -4017,7 +4017,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                                 if (myIndex == 6)
                                 {
 
-                                    if (P1塔[2] >= 2)
+                                    if (P1å¡”[2] >= 2)
                                     {
 
                                         standbyPosition = new(eastTower ? 113.08f : 86.92f, 0, 109.18f);
@@ -4028,7 +4028,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                                     else
                                     {
 
-                                        if (P1塔[0] >= 3)
+                                        if (P1å¡”[0] >= 3)
                                         {
 
                                             standbyPosition = new(eastTower ? 113.08f : 86.92f, 0, 90.81f);
@@ -4036,7 +4036,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
                                         }
 
-                                        if (P1塔[1] >= 3)
+                                        if (P1å¡”[1] >= 3)
                                         {
 
                                             standbyPosition = new(eastTower ? 115.98f : 84.02f, 0, 100f);
@@ -4093,7 +4093,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 }
                 else
                 {
-                    var eastTower = P1塔[3] == 1;
+                    var eastTower = P1å¡”[3] == 1;
                     //Fire
                     if (myIndex == 0 || myIndex == 1)
                     {
@@ -4143,20 +4143,20 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                         Vector3 standbyPosition = new Vector3(100, 0, 100);
                         Vector3 towerPosition = new Vector3(100, 0, 100);
 
-                        if (Phase1_Strat_Of_Towers == Phase1_Strats_Of_Towers.Completely_Based_On_Priority_完全根据优先级_莫灵喵)
+                        if (Phase1_Strat_Of_Towers == Phase1_Strats_Of_Towers.Completely_Based_On_Priority_å®Œå…¨æ ¹æ®ä¼˜å…ˆçº§_èŽ«çµå–µ)
                         {
 
-                            if (myTowerIndex > 0 && myTowerIndex <= P1塔[0]) standbyPosition = new(eastTower ? 102f : 98f, 0, 90.81f);
-                            if (myTowerIndex > P1塔[0] && myTowerIndex <= P1塔[0] + P1塔[1]) standbyPosition = new(eastTower ? 102f : 98f, 0, 100f);
-                            if (myTowerIndex > P1塔[0] + P1塔[1] && myTowerIndex <= P1塔[0] + P1塔[1] + P1塔[2]) standbyPosition = new(eastTower ? 102f : 98f, 0, 109.18f);
+                            if (myTowerIndex > 0 && myTowerIndex <= P1å¡”[0]) standbyPosition = new(eastTower ? 102f : 98f, 0, 90.81f);
+                            if (myTowerIndex > P1å¡”[0] && myTowerIndex <= P1å¡”[0] + P1å¡”[1]) standbyPosition = new(eastTower ? 102f : 98f, 0, 100f);
+                            if (myTowerIndex > P1å¡”[0] + P1å¡”[1] && myTowerIndex <= P1å¡”[0] + P1å¡”[1] + P1å¡”[2]) standbyPosition = new(eastTower ? 102f : 98f, 0, 109.18f);
 
-                            if (myTowerIndex > 0 && myTowerIndex <= P1塔[0]) towerPosition = new(eastTower ? 113.08f : 86.92f, 0, 90.81f);
-                            if (myTowerIndex > P1塔[0] && myTowerIndex <= P1塔[0] + P1塔[1]) towerPosition = new(eastTower ? 115.98f : 84.02f, 0, 100f);
-                            if (myTowerIndex > P1塔[0] + P1塔[1] && myTowerIndex <= P1塔[0] + P1塔[1] + P1塔[2]) towerPosition = new(eastTower ? 113.08f : 86.92f, 0, 109.18f);
+                            if (myTowerIndex > 0 && myTowerIndex <= P1å¡”[0]) towerPosition = new(eastTower ? 113.08f : 86.92f, 0, 90.81f);
+                            if (myTowerIndex > P1å¡”[0] && myTowerIndex <= P1å¡”[0] + P1å¡”[1]) towerPosition = new(eastTower ? 115.98f : 84.02f, 0, 100f);
+                            if (myTowerIndex > P1å¡”[0] + P1å¡”[1] && myTowerIndex <= P1å¡”[0] + P1å¡”[1] + P1å¡”[2]) towerPosition = new(eastTower ? 113.08f : 86.92f, 0, 109.18f);
 
                         }
 
-                        if (Phase1_Strat_Of_Towers == Phase1_Strats_Of_Towers.Fixed_H1H2R2_Priority_For_Rest_固定H1H2D4剩余人优先级)
+                        if (Phase1_Strat_Of_Towers == Phase1_Strats_Of_Towers.Fixed_H1H2R2_Priority_For_Rest_å›ºå®šH1H2D4å‰©ä½™äººä¼˜å…ˆçº§)
                         {
 
                             bool fixedPartyMember = false;
@@ -4194,9 +4194,9 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                             if (!fixedPartyMember)
                             {
 
-                                int newTower0 = P1塔[0] - 1;
-                                int newTower1 = P1塔[1] - 1;
-                                int newTower2 = P1塔[2] - 1;
+                                int newTower0 = P1å¡”[0] - 1;
+                                int newTower1 = P1å¡”[1] - 1;
+                                int newTower2 = P1å¡”[2] - 1;
                                 int myNewTowerIndex = myIndex - 3;
 
                                 if (Enable_Developer_Mode)
@@ -4247,7 +4247,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
                         }
 
-                        if (Phase1_Strat_Of_Towers == Phase1_Strats_Of_Towers.Fixed_H1H2R2_Rest_Fill_Vacancies_固定H1H2D4剩余人补位_MMW)
+                        if (Phase1_Strat_Of_Towers == Phase1_Strats_Of_Towers.Fixed_H1H2R2_Rest_Fill_Vacancies_å›ºå®šH1H2D4å‰©ä½™äººè¡¥ä½_MMW)
                         {
                             // Same as before, the following credits to @abigseal. Appreciate!
 
@@ -4291,9 +4291,9 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
                                     accessory.Method.SendChat($"""
                                                                /e 
-                                                               P1塔[0]={P1塔[0]}
-                                                               P1塔[1]={P1塔[1]}
-                                                               P1塔[2]={P1塔[2]}
+                                                               P1å¡”[0]={P1å¡”[0]}
+                                                               P1å¡”[1]={P1å¡”[1]}
+                                                               P1å¡”[2]={P1å¡”[2]}
                                                                myTowerIndex={myTowerIndex}
 
                                                                """);
@@ -4303,7 +4303,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                                 if (myIndex == 4)
                                 {
 
-                                    if (P1塔[0] >= 2)
+                                    if (P1å¡”[0] >= 2)
                                     {
 
                                         standbyPosition = new(eastTower ? 102f : 98f, 0, 90.81f);
@@ -4314,7 +4314,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                                     else
                                     {
 
-                                        if (P1塔[1] >= 3)
+                                        if (P1å¡”[1] >= 3)
                                         {
 
                                             standbyPosition = new(eastTower ? 102f : 98f, 0, 100f);
@@ -4322,7 +4322,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
                                         }
 
-                                        if (P1塔[2] >= 3)
+                                        if (P1å¡”[2] >= 3)
                                         {
 
                                             standbyPosition = new(eastTower ? 102f : 98f, 0, 109.18f);
@@ -4337,7 +4337,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                                 if (myIndex == 5)
                                 {
 
-                                    if (P1塔[1] >= 2)
+                                    if (P1å¡”[1] >= 2)
                                     {
 
                                         standbyPosition = new(eastTower ? 102f : 98f, 0, 100f);
@@ -4348,7 +4348,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                                     else
                                     {
 
-                                        if (P1塔[0] >= 3)
+                                        if (P1å¡”[0] >= 3)
                                         {
 
                                             standbyPosition = new(eastTower ? 102f : 98f, 0, 90.81f);
@@ -4356,7 +4356,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
                                         }
 
-                                        if (P1塔[2] >= 3)
+                                        if (P1å¡”[2] >= 3)
                                         {
 
                                             standbyPosition = new(eastTower ? 102f : 98f, 0, 109.18f);
@@ -4371,7 +4371,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                                 if (myIndex == 6)
                                 {
 
-                                    if (P1塔[2] >= 2)
+                                    if (P1å¡”[2] >= 2)
                                     {
 
                                         standbyPosition = new(eastTower ? 102f : 98f, 0, 109.18f);
@@ -4382,7 +4382,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                                     else
                                     {
 
-                                        if (P1塔[0] >= 3)
+                                        if (P1å¡”[0] >= 3)
                                         {
 
                                             standbyPosition = new(eastTower ? 102f : 98f, 0, 90.81f);
@@ -4390,7 +4390,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
                                         }
 
-                                        if (P1塔[1] >= 3)
+                                        if (P1å¡”[1] >= 3)
                                         {
 
                                             standbyPosition = new(eastTower ? 102f : 98f, 0, 100f);
@@ -4456,7 +4456,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
         [ScriptMethod(name: "----- Phase 2 ----- (No actual meaning for this toggle)",
             eventType: EventTypeEnum.NpcYell,
             eventCondition: ["Your poor",
-                            "给我你们贫穷的人"])]
+                            "ç»™æˆ‘ä½ ä»¬è´«ç©·çš„äºº"])]
 
         public void Phase2_Placeholder(Event @event, ScriptAccessory accessory) { }
 
@@ -4471,7 +4471,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventCondition: ["ActionId:40180"],
             userControl: false)]
 
-        public void Phase2_Diamond_Dust_Initialization_钻石星尘初始化(Event @event, ScriptAccessory accessory)
+        public void Phase2_Diamond_Dust_Initialization_é’»çŸ³æ˜Ÿå°˜åˆå§‹åŒ–(Event @event, ScriptAccessory accessory)
         {
 
             parse=21;
@@ -4634,7 +4634,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventType: EventTypeEnum.ActionEffect,
             eventCondition: ["ActionId:40199"])]
 
-        public void Phase2_Frigid_Needle_冰针(Event @event, ScriptAccessory accessory)
+        public void Phase2_Frigid_Needle_å†°é’ˆ(Event @event, ScriptAccessory accessory)
         {
 
             if (parse!=21)
@@ -4708,7 +4708,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventCondition: ["ActionId:40198"],
             userControl: false)]
 
-        public void Phase2_Record_Positions_Of_Icicle_Impact_记录冰柱冲击的位置(Event @event, ScriptAccessory accessory)
+        public void Phase2_Record_Positions_Of_Icicle_Impact_è®°å½•å†°æŸ±å†²å‡»çš„ä½ç½®(Event @event, ScriptAccessory accessory)
         {
 
             if (parse!=21)
@@ -4748,7 +4748,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             userControl: false,
             suppress: 2000)]
 
-        public void Phase2_Determine_The_Position_To_Be_Knocked_Back_确定击退位置(Event @event, ScriptAccessory accessory)
+        public void Phase2_Determine_The_Position_To_Be_Knocked_Back_ç¡®å®šå‡»é€€ä½ç½®(Event @event, ScriptAccessory accessory)
         {
 
             if (parse!=21)
@@ -4790,7 +4790,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventCondition: ["ActionId:40199"],
             suppress: 2000)]
 
-        public void Phase2_Guidance_Of_The_Position_To_Be_Knocked_Back_击退位置指路(Event @event, ScriptAccessory accessory)
+        public void Phase2_Guidance_Of_The_Position_To_Be_Knocked_Back_å‡»é€€ä½ç½®æŒ‡è·¯(Event @event, ScriptAccessory accessory)
         {
 
             if (parse!=21)
@@ -4831,7 +4831,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventType: EventTypeEnum.StartCasting,
             eventCondition: ["ActionId:40208"])]
 
-        public void Phase2_Guidance_After_Knockback_击退后指路(Event @event, ScriptAccessory accessory)
+        public void Phase2_Guidance_After_Knockback_å‡»é€€åŽæŒ‡è·¯(Event @event, ScriptAccessory accessory)
         {
 
             if (parse!=21)
@@ -4884,7 +4884,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             currentProperty.Color = accessory.Data.DefaultSafeColor.WithW(25f);
             currentProperty.DestoryAt = 14250;
 
-            if (Phase2_Strat_After_Knockback == Phase2_Strats_After_Knockback.Clockwise_One_Group_Counterclockwise_总是顺时针单组逆时针)
+            if (Phase2_Strat_After_Knockback == Phase2_Strats_After_Knockback.Clockwise_One_Group_Counterclockwise_æ€»æ˜¯é¡ºæ—¶é’ˆå•ç»„é€†æ—¶é’ˆ)
             {
 
                 if (((proteanPositionOfTheCurrentGroup + 1) % 8) == proteanPositionOfTheReflection)
@@ -4893,14 +4893,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                     currentProperty.Radian = float.Pi / 2 - float.Pi / 18;
                     currentProperty.Rotation += (float.Pi / 2 - float.Pi / 18) / 2;
 
-                    if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                    if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                     {
 
-                        prompt = "逆时针80度,遇见对组";
+                        prompt = "é€†æ—¶é’ˆ80åº¦,é‡è§å¯¹ç»„";
 
                     }
 
-                    if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                    if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                     {
 
                         prompt = "Counterclockwise 80 degrees, encountering the opposite group";
@@ -4918,14 +4918,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                         currentProperty.Radian = float.Pi / 2 - float.Pi / 18;
                         currentProperty.Rotation += -((float.Pi / 2 - float.Pi / 18) / 2);
 
-                        if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                        if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                         {
 
-                            prompt = "顺时针80度,遇见对组";
+                            prompt = "é¡ºæ—¶é’ˆ80åº¦,é‡è§å¯¹ç»„";
 
                         }
 
-                        if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                        if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                         {
 
                             prompt = "Clockwise 80 degrees, encountering the opposite group";
@@ -4953,14 +4953,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
                         rotationOfThePath *= 45;
 
-                        if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                        if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                         {
 
-                            prompt = $"顺时针{rotationOfThePath}度";
+                            prompt = $"é¡ºæ—¶é’ˆ{rotationOfThePath}åº¦";
 
                         }
 
-                        if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                        if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                         {
 
                             prompt = $"Clockwise {rotationOfThePath} degrees";
@@ -4975,7 +4975,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
             }
 
-            if (Phase2_Strat_After_Knockback == Phase2_Strats_After_Knockback.Counterclockwise_One_Group_Clockwise_总是逆时针单组顺时针)
+            if (Phase2_Strat_After_Knockback == Phase2_Strats_After_Knockback.Counterclockwise_One_Group_Clockwise_æ€»æ˜¯é€†æ—¶é’ˆå•ç»„é¡ºæ—¶é’ˆ)
             {
 
                 if (((proteanPositionOfTheCurrentGroup - 1 + 8) % 8) == proteanPositionOfTheReflection)
@@ -4984,14 +4984,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                     currentProperty.Radian = float.Pi / 2 - float.Pi / 18;
                     currentProperty.Rotation += -((float.Pi / 2 - float.Pi / 18) / 2);
 
-                    if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                    if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                     {
 
-                        prompt = "顺时针80度,遇见对组";
+                        prompt = "é¡ºæ—¶é’ˆ80åº¦,é‡è§å¯¹ç»„";
 
                     }
 
-                    if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                    if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                     {
 
                         prompt = "Clockwise 80 degrees, encountering the opposite group";
@@ -5009,14 +5009,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                         currentProperty.Radian = float.Pi / 2 - float.Pi / 18;
                         currentProperty.Rotation += (float.Pi / 2 - float.Pi / 18) / 2;
 
-                        if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                        if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                         {
 
-                            prompt = "逆时针80度,遇见对组";
+                            prompt = "é€†æ—¶é’ˆ80åº¦,é‡è§å¯¹ç»„";
 
                         }
 
-                        if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                        if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                         {
 
                             prompt = "Counterclockwise 80 degrees, encountering the opposite group";
@@ -5044,14 +5044,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
                         rotationOfThePath *= 45;
 
-                        if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                        if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                         {
 
-                            prompt = $"逆时针{rotationOfThePath}度";
+                            prompt = $"é€†æ—¶é’ˆ{rotationOfThePath}åº¦";
 
                         }
 
-                        if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                        if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                         {
 
                             prompt = $"Counterclockwise {rotationOfThePath} degrees";
@@ -5066,7 +5066,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
             }
 
-            if (Phase2_Strat_After_Knockback == Phase2_Strats_After_Knockback.Clockwise_Both_Groups_Counterclockwise_总是顺时针双组逆时针_莫灵喵与MMW)
+            if (Phase2_Strat_After_Knockback == Phase2_Strats_After_Knockback.Clockwise_Both_Groups_Counterclockwise_æ€»æ˜¯é¡ºæ—¶é’ˆåŒç»„é€†æ—¶é’ˆ_èŽ«çµå–µä¸ŽMMW)
             {
 
                 if (((proteanPositionOfTheCurrentGroup + 1) % 8) == proteanPositionOfTheReflection
@@ -5077,14 +5077,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                     currentProperty.Radian = float.Pi / 4 * 3;
                     currentProperty.Rotation += (float.Pi / 4 * 3) / 2;
 
-                    if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                    if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                     {
 
-                        prompt = "逆时针135度";
+                        prompt = "é€†æ—¶é’ˆ135åº¦";
 
                     }
 
-                    if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                    if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                     {
 
                         prompt = "Counterclockwise 135 degrees";
@@ -5112,14 +5112,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
                     rotationOfThePath *= 45;
 
-                    if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                    if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                     {
 
-                        prompt = $"顺时针{rotationOfThePath}度";
+                        prompt = $"é¡ºæ—¶é’ˆ{rotationOfThePath}åº¦";
 
                     }
 
-                    if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                    if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                     {
 
                         prompt = $"Clockwise {rotationOfThePath} degrees";
@@ -5132,7 +5132,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
             }
 
-            if (Phase2_Strat_After_Knockback == Phase2_Strats_After_Knockback.Counterclockwise_Both_Groups_Clockwise_总是逆时针双组顺时针)
+            if (Phase2_Strat_After_Knockback == Phase2_Strats_After_Knockback.Counterclockwise_Both_Groups_Clockwise_æ€»æ˜¯é€†æ—¶é’ˆåŒç»„é¡ºæ—¶é’ˆ)
             {
 
                 if (((proteanPositionOfTheCurrentGroup - 1 + 8) % 8) == proteanPositionOfTheReflection
@@ -5143,14 +5143,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                     currentProperty.Radian = float.Pi / 4 * 3;
                     currentProperty.Rotation += -((float.Pi / 4 * 3) / 2);
 
-                    if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                    if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                     {
 
-                        prompt = "顺时针135度";
+                        prompt = "é¡ºæ—¶é’ˆ135åº¦";
 
                     }
 
-                    if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                    if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                     {
 
                         prompt = "Clockwise 135 degrees";
@@ -5178,14 +5178,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
                     rotationOfThePath *= 45;
 
-                    if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                    if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                     {
 
-                        prompt = $"逆时针{rotationOfThePath}度";
+                        prompt = $"é€†æ—¶é’ˆ{rotationOfThePath}åº¦";
 
                     }
 
-                    if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                    if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                     {
 
                         prompt = $"Counterclockwise {rotationOfThePath} degrees";
@@ -5287,7 +5287,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventType: EventTypeEnum.StartCasting,
             eventCondition: ["ActionId:40208"])]
 
-        public void Phase2_Prediction_Of_Skating_滑冰预测(Event @event, ScriptAccessory accessory)
+        public void Phase2_Prediction_Of_Skating_æ»‘å†°é¢„æµ‹(Event @event, ScriptAccessory accessory)
         {
 
             if (parse!=21)
@@ -5385,7 +5385,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventCondition: ["ActionId:40210"],
             userControl: false)]
 
-        public void Phase2_Reset_Semaphores_After_Diamond_Dust_钻石星尘后重置信号灯(Event @event, ScriptAccessory accessory)
+        public void Phase2_Reset_Semaphores_After_Diamond_Dust_é’»çŸ³æ˜Ÿå°˜åŽé‡ç½®ä¿¡å·ç¯(Event @event, ScriptAccessory accessory)
         {
 
             if (parse!=21
@@ -5407,7 +5407,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventCondition: ["ActionId:40179"],
             userControl: false)]
 
-        public void Phase2_Mirror_Mirror_Initialization_镜中奇遇初始化(Event @event, ScriptAccessory accessory)
+        public void Phase2_Mirror_Mirror_Initialization_é•œä¸­å¥‡é‡åˆå§‹åŒ–(Event @event, ScriptAccessory accessory)
         {
 
             parse=22;
@@ -5437,14 +5437,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                     accessory.Method.SendDraw(DrawModeEnum.Default, DrawTypeEnum.Circle, dp);
                 }
 
-                if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                 {
 
-                    prompt = "分散";
+                    prompt = "åˆ†æ•£";
 
                 }
 
-                if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                 {
 
                     prompt = "Spread";
@@ -5468,14 +5468,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                     accessory.Method.SendDraw(DrawModeEnum.Default, DrawTypeEnum.Circle, dp);
                 }
 
-                if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                 {
 
-                    prompt = "分摊";
+                    prompt = "åˆ†æ‘Š";
 
                 }
 
-                if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                 {
 
                     prompt = "Stack";
@@ -5647,7 +5647,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventCondition: ["DirectorId:800375BF", "State:00020001"],
             userControl: false)]
 
-        public void Phase2_Determine_The_Protean_Position_Of_The_Colourless_Mirror_确定无色镜子八方位置(Event @event, ScriptAccessory accessory)
+        public void Phase2_Determine_The_Protean_Position_Of_The_Colourless_Mirror_ç¡®å®šæ— è‰²é•œå­å…«æ–¹ä½ç½®(Event @event, ScriptAccessory accessory)
         {
 
             if (parse!=22)
@@ -5679,7 +5679,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventType: EventTypeEnum.EnvControl,
             eventCondition: ["DirectorId:800375BF", "State:00020001"])]
 
-        public void Phase2_Rough_Guidance_Of_The_Colourless_Mirror_无色镜子粗略指路(Event @event, ScriptAccessory accessory)
+        public void Phase2_Rough_Guidance_Of_The_Colourless_Mirror_æ— è‰²é•œå­ç²—ç•¥æŒ‡è·¯(Event @event, ScriptAccessory accessory)
         {
 
             if (parse!=22)
@@ -5791,7 +5791,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventCondition: ["DirectorId:800375BF", "State:02000100"],
             userControl: false)]
 
-        public void Phase2_Determine_Protean_Positions_Of_Red_Mirrors_确定红色镜子八方位置(Event @event, ScriptAccessory accessory)
+        public void Phase2_Determine_Protean_Positions_Of_Red_Mirrors_ç¡®å®šçº¢è‰²é•œå­å…«æ–¹ä½ç½®(Event @event, ScriptAccessory accessory)
         {
 
             if (parse!=22)
@@ -5836,7 +5836,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventCondition: ["DirectorId:800375BF", "State:02000100"],
             suppress: 2000)]
 
-        public void Phase2_Rough_Guidance_Of_Red_Mirrors_红色镜子粗略指路(Event @event, ScriptAccessory accessory)
+        public void Phase2_Rough_Guidance_Of_Red_Mirrors_çº¢è‰²é•œå­ç²—ç•¥æŒ‡è·¯(Event @event, ScriptAccessory accessory)
         {
 
             if (parse!=22)
@@ -5961,9 +5961,9 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                ((leftMirror + 1) % 8) == phase2_getOppositeProteanPosition(colourlessMirror))
             {
 
-                if (Phase2_Strat_Of_Mirror_Mirror == Phase2_Strats_Of_Mirror_Mirror.Melee_Group_Left_Red_近战组去左红色镜子
+                if (Phase2_Strat_Of_Mirror_Mirror == Phase2_Strats_Of_Mirror_Mirror.Melee_Group_Left_Red_è¿‘æˆ˜ç»„åŽ»å·¦çº¢è‰²é•œå­
                    ||
-                   Phase2_Strat_Of_Mirror_Mirror == Phase2_Strats_Of_Mirror_Mirror.Melee_Group_Closest_Red_Left_If_Same_近战组最近红色镜子距离相同则左)
+                   Phase2_Strat_Of_Mirror_Mirror == Phase2_Strats_Of_Mirror_Mirror.Melee_Group_Closest_Red_Left_If_Same_è¿‘æˆ˜ç»„æœ€è¿‘çº¢è‰²é•œå­è·ç¦»ç›¸åŒåˆ™å·¦)
                 {
 
                     Vector3 targetPosition = new Vector3(100, 0, 100);
@@ -5997,9 +5997,9 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
                 }
 
-                if (Phase2_Strat_Of_Mirror_Mirror == Phase2_Strats_Of_Mirror_Mirror.Melee_Group_Right_Red_近战组去右红色镜子
+                if (Phase2_Strat_Of_Mirror_Mirror == Phase2_Strats_Of_Mirror_Mirror.Melee_Group_Right_Red_è¿‘æˆ˜ç»„åŽ»å³çº¢è‰²é•œå­
                    ||
-                   Phase2_Strat_Of_Mirror_Mirror == Phase2_Strats_Of_Mirror_Mirror.Melee_Group_Closest_Red_Right_If_Same_近战组最近红色镜子距离相同则右_莫灵喵与MMW)
+                   Phase2_Strat_Of_Mirror_Mirror == Phase2_Strats_Of_Mirror_Mirror.Melee_Group_Closest_Red_Right_If_Same_è¿‘æˆ˜ç»„æœ€è¿‘çº¢è‰²é•œå­è·ç¦»ç›¸åŒåˆ™å³_èŽ«çµå–µä¸ŽMMW)
                 {
 
                     Vector3 targetPosition = new Vector3(100, 0, 100);
@@ -6038,7 +6038,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             else
             {
 
-                if (Phase2_Strat_Of_Mirror_Mirror == Phase2_Strats_Of_Mirror_Mirror.Melee_Group_Left_Red_近战组去左红色镜子)
+                if (Phase2_Strat_Of_Mirror_Mirror == Phase2_Strats_Of_Mirror_Mirror.Melee_Group_Left_Red_è¿‘æˆ˜ç»„åŽ»å·¦çº¢è‰²é•œå­)
                 {
 
                     Vector3 targetPosition = new Vector3(100, 0, 100);
@@ -6072,7 +6072,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
                 }
 
-                if (Phase2_Strat_Of_Mirror_Mirror == Phase2_Strats_Of_Mirror_Mirror.Melee_Group_Right_Red_近战组去右红色镜子)
+                if (Phase2_Strat_Of_Mirror_Mirror == Phase2_Strats_Of_Mirror_Mirror.Melee_Group_Right_Red_è¿‘æˆ˜ç»„åŽ»å³çº¢è‰²é•œå­)
                 {
 
                     Vector3 targetPosition = new Vector3(100, 0, 100);
@@ -6139,9 +6139,9 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 if (discreteDistanceToTheLeft < discreteDistanceToTheRight)
                 {
 
-                    if (Phase2_Strat_Of_Mirror_Mirror == Phase2_Strats_Of_Mirror_Mirror.Melee_Group_Closest_Red_Left_If_Same_近战组最近红色镜子距离相同则左
+                    if (Phase2_Strat_Of_Mirror_Mirror == Phase2_Strats_Of_Mirror_Mirror.Melee_Group_Closest_Red_Left_If_Same_è¿‘æˆ˜ç»„æœ€è¿‘çº¢è‰²é•œå­è·ç¦»ç›¸åŒåˆ™å·¦
                        ||
-                       Phase2_Strat_Of_Mirror_Mirror == Phase2_Strats_Of_Mirror_Mirror.Melee_Group_Closest_Red_Right_If_Same_近战组最近红色镜子距离相同则右_莫灵喵与MMW)
+                       Phase2_Strat_Of_Mirror_Mirror == Phase2_Strats_Of_Mirror_Mirror.Melee_Group_Closest_Red_Right_If_Same_è¿‘æˆ˜ç»„æœ€è¿‘çº¢è‰²é•œå­è·ç¦»ç›¸åŒåˆ™å³_èŽ«çµå–µä¸ŽMMW)
                     {
 
                         Vector3 targetPosition = new Vector3(100, 0, 100);
@@ -6180,9 +6180,9 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 if (discreteDistanceToTheLeft > discreteDistanceToTheRight)
                 {
 
-                    if (Phase2_Strat_Of_Mirror_Mirror == Phase2_Strats_Of_Mirror_Mirror.Melee_Group_Closest_Red_Left_If_Same_近战组最近红色镜子距离相同则左
+                    if (Phase2_Strat_Of_Mirror_Mirror == Phase2_Strats_Of_Mirror_Mirror.Melee_Group_Closest_Red_Left_If_Same_è¿‘æˆ˜ç»„æœ€è¿‘çº¢è‰²é•œå­è·ç¦»ç›¸åŒåˆ™å·¦
                        ||
-                       Phase2_Strat_Of_Mirror_Mirror == Phase2_Strats_Of_Mirror_Mirror.Melee_Group_Closest_Red_Right_If_Same_近战组最近红色镜子距离相同则右_莫灵喵与MMW)
+                       Phase2_Strat_Of_Mirror_Mirror == Phase2_Strats_Of_Mirror_Mirror.Melee_Group_Closest_Red_Right_If_Same_è¿‘æˆ˜ç»„æœ€è¿‘çº¢è‰²é•œå­è·ç¦»ç›¸åŒåˆ™å³_èŽ«çµå–µä¸ŽMMW)
                     {
 
                         Vector3 targetPosition = new Vector3(100, 0, 100);
@@ -6255,7 +6255,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventCondition: ["ActionId:40212"],
             userControl: false)]
 
-        public void Phase2_Reset_Semaphores_After_Mirror_Mirror_镜中奇遇后重置信号灯(Event @event, ScriptAccessory accessory)
+        public void Phase2_Reset_Semaphores_After_Mirror_Mirror_é•œä¸­å¥‡é‡åŽé‡ç½®ä¿¡å·ç¯(Event @event, ScriptAccessory accessory)
         {
 
             if (parse!=22
@@ -6277,7 +6277,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventCondition: ["ActionId:40212"],
             userControl: false)]
 
-        public void Phase2_Light_Rampant_Initialization_光之失控初始化(Event @event, ScriptAccessory accessory)
+        public void Phase2_Light_Rampant_Initialization_å…‰ä¹‹å¤±æŽ§åˆå§‹åŒ–(Event @event, ScriptAccessory accessory)
         {
 
             parse=23;
@@ -6294,7 +6294,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventType: EventTypeEnum.StartCasting,
             eventCondition: ["ActionId:40212"])]
 
-        public void Phase2_Initial_Positions_Before_Light_Rampant_光之失控前初始站位(Event @event, ScriptAccessory accessory)
+        public void Phase2_Initial_Positions_Before_Light_Rampant_å…‰ä¹‹å¤±æŽ§å‰åˆå§‹ç«™ä½(Event @event, ScriptAccessory accessory)
         {
 
             if (parse!=22
@@ -6309,7 +6309,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             int myIndex = accessory.Data.PartyList.IndexOf(accessory.Data.Me);
             double rotation = 0d;
 
-            if (Phase2_Initial_Protean_Position_Of_Light_Rampant == Phase2_Initial_Protean_Positions_Of_Light_Rampant.Normal_Protean_Tanks_North_East_For_Both_Grey9_常规八方T在东北_灰9用)
+            if (Phase2_Initial_Protean_Position_Of_Light_Rampant == Phase2_Initial_Protean_Positions_Of_Light_Rampant.Normal_Protean_Tanks_North_East_For_Both_Grey9_å¸¸è§„å…«æ–¹Tåœ¨ä¸œåŒ—_ç°9ç”¨)
             {
 
                 rotation = 0d;
@@ -6328,7 +6328,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
             }
 
-            if (Phase2_Initial_Protean_Position_Of_Light_Rampant == Phase2_Initial_Protean_Positions_Of_Light_Rampant.Supporters_North_MOTH12_For_JPPF_And_L_蓝绿全部在北MSTH12_日野和L团用)
+            if (Phase2_Initial_Protean_Position_Of_Light_Rampant == Phase2_Initial_Protean_Positions_Of_Light_Rampant.Supporters_North_MOTH12_For_JPPF_And_L_è“ç»¿å…¨éƒ¨åœ¨åŒ—MSTH12_æ—¥é‡Žå’ŒLå›¢ç”¨)
             {
 
                 rotation = -0.5d;
@@ -6347,7 +6347,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
             }
 
-            if (Phase2_Initial_Protean_Position_Of_Light_Rampant == Phase2_Initial_Protean_Positions_Of_Light_Rampant.Supporters_North_H12MOT_For_JPPF_And_L_蓝绿全部在北H12MST_日野和L团用)
+            if (Phase2_Initial_Protean_Position_Of_Light_Rampant == Phase2_Initial_Protean_Positions_Of_Light_Rampant.Supporters_North_H12MOT_For_JPPF_And_L_è“ç»¿å…¨éƒ¨åœ¨åŒ—H12MST_æ—¥é‡Žå’ŒLå›¢ç”¨)
             {
 
                 rotation = -0.5d;
@@ -6385,7 +6385,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventCondition: ["ActionId:40212"],
             suppress: 2000)]
 
-        public void Phase2_Rough_Path_Of_Luminous_Hammer_光流侵蚀大致路径(Event @event, ScriptAccessory accessory)
+        public void Phase2_Rough_Path_Of_Luminous_Hammer_å…‰æµä¾µèš€å¤§è‡´è·¯å¾„(Event @event, ScriptAccessory accessory)
         {
 
             if (parse!=23)
@@ -6397,7 +6397,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
             var currentproperty = accessory.Data.GetDefaultDrawProperties();
 
-            if (Phase2_Strat_Of_Light_Rampant == Phase2_Strats_Of_Light_Rampant.Star_Of_David_Japanese_PF_六芒星日服野队法_莫灵喵与MMW)
+            if (Phase2_Strat_Of_Light_Rampant == Phase2_Strats_Of_Light_Rampant.Star_Of_David_Japanese_PF_å…­èŠ’æ˜Ÿæ—¥æœé‡Žé˜Ÿæ³•_èŽ«çµå–µä¸ŽMMW)
             {
 
                 Vector3 point1 = new Vector3(97.321f, 0f, 106.467f);
@@ -6489,7 +6489,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
             }
 
-            if (Phase2_Strat_Of_Light_Rampant == Phase2_Strats_Of_Light_Rampant.New_Grey9_新灰九法_莫灵喵与MMW)
+            if (Phase2_Strat_Of_Light_Rampant == Phase2_Strats_Of_Light_Rampant.New_Grey9_æ–°ç°ä¹æ³•_èŽ«çµå–µä¸ŽMMW)
             {
 
                 Vector3 point1 = new Vector3(92f, 0f, 100f);
@@ -6615,7 +6615,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventType: EventTypeEnum.TargetIcon,
             userControl: false)]
 
-        public void Phase2_Determine_Luminous_Hammer_During_Light_Rampant_光之失控确定光流侵蚀(Event @event, ScriptAccessory accessory)
+        public void Phase2_Determine_Luminous_Hammer_During_Light_Rampant_å…‰ä¹‹å¤±æŽ§ç¡®å®šå…‰æµä¾µèš€(Event @event, ScriptAccessory accessory)
         {
             if (ParsTargetIcon(@event["Id"]) != 157)
             {
@@ -6666,7 +6666,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventCondition: ["StatusID:2257"],
             userControl: false)]
 
-        public void Phase2_Determine_Stacks_Of_Lightsteeped_During_Light_Rampant_光之失控确定过量光层数(Event @event, ScriptAccessory accessory)
+        public void Phase2_Determine_Stacks_Of_Lightsteeped_During_Light_Rampant_å…‰ä¹‹å¤±æŽ§ç¡®å®šè¿‡é‡å…‰å±‚æ•°(Event @event, ScriptAccessory accessory)
         {
 
             if (parse!=23)
@@ -6725,7 +6725,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventCondition: ["ActionId:40218"],
             userControl: false)]
 
-        public void Phase2_Disable_The_Write_Permission_For_Lightsteeped_禁止写入过量光(Event @event, ScriptAccessory accessory)
+        public void Phase2_Disable_The_Write_Permission_For_Lightsteeped_ç¦æ­¢å†™å…¥è¿‡é‡å…‰(Event @event, ScriptAccessory accessory)
         {
 
             phase2_writePermissionForLightsteeped = false;
@@ -6750,14 +6750,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                     accessory.Method.SendDraw(DrawModeEnum.Default, DrawTypeEnum.Circle, dp);
                 }
 
-                if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                 {
 
-                    prompt = "分散";
+                    prompt = "åˆ†æ•£";
 
                 }
 
-                if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                 {
 
                     prompt = "Spread";
@@ -6780,14 +6780,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                     accessory.Method.SendDraw(DrawModeEnum.Default, DrawTypeEnum.Circle, dp);
                 }
 
-                if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                 {
 
-                    prompt = "分摊";
+                    prompt = "åˆ†æ‘Š";
 
                 }
 
-                if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                 {
 
                     prompt = "Stack";
@@ -6835,7 +6835,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventType: EventTypeEnum.TargetIcon,
             suppress: 2000)]
 
-        public void Phase2_Guidance_Of_Towers_During_Light_Rampant_光之失控踩塔指路(Event @event, ScriptAccessory accessory)
+        public void Phase2_Guidance_Of_Towers_During_Light_Rampant_å…‰ä¹‹å¤±æŽ§è¸©å¡”æŒ‡è·¯(Event @event, ScriptAccessory accessory)
         {
 
             if (ParsTargetIcon(@event["Id"]) != 157)
@@ -6869,7 +6869,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
             List<int> playersWithTethers = [];
 
-            if (Phase2_Initial_Protean_Position_Of_Light_Rampant == Phase2_Initial_Protean_Positions_Of_Light_Rampant.Normal_Protean_Tanks_North_East_For_Both_Grey9_常规八方T在东北_灰9用)
+            if (Phase2_Initial_Protean_Position_Of_Light_Rampant == Phase2_Initial_Protean_Positions_Of_Light_Rampant.Normal_Protean_Tanks_North_East_For_Both_Grey9_å¸¸è§„å…«æ–¹Tåœ¨ä¸œåŒ—_ç°9ç”¨)
             {
 
                 List<int> orderFromTheWestInclusive = [2, 6, 0, 7, 1, 5, 3, 4];
@@ -6888,7 +6888,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
             }
 
-            if (Phase2_Initial_Protean_Position_Of_Light_Rampant == Phase2_Initial_Protean_Positions_Of_Light_Rampant.Supporters_North_MOTH12_For_JPPF_And_L_蓝绿全部在北MSTH12_日野和L团用)
+            if (Phase2_Initial_Protean_Position_Of_Light_Rampant == Phase2_Initial_Protean_Positions_Of_Light_Rampant.Supporters_North_MOTH12_For_JPPF_And_L_è“ç»¿å…¨éƒ¨åœ¨åŒ—MSTH12_æ—¥é‡Žå’ŒLå›¢ç”¨)
             {
 
                 List<int> orderFromTheWestInclusive = [0, 1, 2, 3, 7, 6, 5, 4];
@@ -6907,7 +6907,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
             }
 
-            if (Phase2_Initial_Protean_Position_Of_Light_Rampant == Phase2_Initial_Protean_Positions_Of_Light_Rampant.Supporters_North_H12MOT_For_JPPF_And_L_蓝绿全部在北H12MST_日野和L团用)
+            if (Phase2_Initial_Protean_Position_Of_Light_Rampant == Phase2_Initial_Protean_Positions_Of_Light_Rampant.Supporters_North_H12MOT_For_JPPF_And_L_è“ç»¿å…¨éƒ¨åœ¨åŒ—H12MST_æ—¥é‡Žå’ŒLå›¢ç”¨)
             {
 
                 List<int> orderFromTheWestInclusive = [2, 3, 0, 1, 7, 6, 5, 4];
@@ -6960,9 +6960,9 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             Vector3 southMeetingPoint = new Vector3(100.00f, 0, 118.00f);
             Vector3 westMeetingPoint = new Vector3(82.00f, 0, 100.00f);
 
-            if (Phase2_Strat_Of_Light_Rampant == Phase2_Strats_Of_Light_Rampant.Star_Of_David_Japanese_PF_六芒星日服野队法_莫灵喵与MMW)
+            if (Phase2_Strat_Of_Light_Rampant == Phase2_Strats_Of_Light_Rampant.Star_Of_David_Japanese_PF_å…­èŠ’æ˜Ÿæ—¥æœé‡Žé˜Ÿæ³•_èŽ«çµå–µä¸ŽMMW)
             {
-                accessory.Log.Debug("Star_Of_David_Japanese_PF_六芒星日服野队法_莫灵喵与MMW");
+                accessory.Log.Debug("Star_Of_David_Japanese_PF_å…­èŠ’æ˜Ÿæ—¥æœé‡Žé˜Ÿæ³•_èŽ«çµå–µä¸ŽMMW");
                 myTower = myTetherIndex switch
                 {
                     1 => tower4,
@@ -6993,7 +6993,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
             }
 
-            if (Phase2_Strat_Of_Light_Rampant == Phase2_Strats_Of_Light_Rampant.New_Grey9_新灰九法_莫灵喵与MMW)
+            if (Phase2_Strat_Of_Light_Rampant == Phase2_Strats_Of_Light_Rampant.New_Grey9_æ–°ç°ä¹æ³•_èŽ«çµå–µä¸ŽMMW)
             {
                 foreach (var item in phase2_playersWithLuminousHammer)
                 {
@@ -7199,9 +7199,9 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
             }
 
-            if (Phase2_Strat_Of_Light_Rampant == Phase2_Strats_Of_Light_Rampant.Lucrezia_L团法)
+            if (Phase2_Strat_Of_Light_Rampant == Phase2_Strats_Of_Light_Rampant.Lucrezia_Lå›¢æ³•)
             {
-                accessory.Log.Debug("Lucrezia_L团法");
+                accessory.Log.Debug("Lucrezia_Lå›¢æ³•");
                 myTower = myTetherIndex switch
                 {
                     1 => tower1,
@@ -7232,9 +7232,9 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
             }
 
-            if (Phase2_Strat_Of_Light_Rampant == Phase2_Strats_Of_Light_Rampant.Obsolete_Old_Grey9_已淘汰的旧灰九法_莫灵喵)
+            if (Phase2_Strat_Of_Light_Rampant == Phase2_Strats_Of_Light_Rampant.Obsolete_Old_Grey9_å·²æ·˜æ±°çš„æ—§ç°ä¹æ³•_èŽ«çµå–µ)
             {
-                accessory.Log.Debug("Obsolete_Old_Grey9_已淘汰的旧灰九法_莫灵喵");
+                accessory.Log.Debug("Obsolete_Old_Grey9_å·²æ·˜æ±°çš„æ—§ç°ä¹æ³•_èŽ«çµå–µ");
                 int numberOfPlayersWithLuminousHammerBefore = 0;
 
                 if (myIndex == 0)
@@ -7490,7 +7490,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             userControl: false,
             suppress: 2000)]
 
-        public void Phase2_Determine_Final_Lightsteeped_确定最后的过量光(Event @event, ScriptAccessory accessory)
+        public void Phase2_Determine_Final_Lightsteeped_ç¡®å®šæœ€åŽçš„è¿‡é‡å…‰(Event @event, ScriptAccessory accessory)
         {
 
             if (parse!=23)
@@ -7562,7 +7562,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventType: EventTypeEnum.EnvControl,
             eventCondition: ["DirectorId:800375BF", "State:00020001", "Index:00000015"])]
 
-        public void Phase2_Guidance_Of_The_Last_Tower_During_Light_Rampant_光之失控踩最后塔指路(Event @event, ScriptAccessory accessory)
+        public void Phase2_Guidance_Of_The_Last_Tower_During_Light_Rampant_å…‰ä¹‹å¤±æŽ§è¸©æœ€åŽå¡”æŒ‡è·¯(Event @event, ScriptAccessory accessory)
         {
 
             if (parse!=23)
@@ -7658,7 +7658,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventCondition: ["ActionId:40224"],
             userControl: false)]
 
-        public void Phase2_Reset_Semaphores_After_Light_Rampant_光之失控后重置信号灯(Event @event, ScriptAccessory accessory)
+        public void Phase2_Reset_Semaphores_After_Light_Rampant_å…‰ä¹‹å¤±æŽ§åŽé‡ç½®ä¿¡å·ç¯(Event @event, ScriptAccessory accessory)
         {
 
             if (parse!=23)
@@ -7698,7 +7698,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
         [ScriptMethod(name: "----- Phase 2.5 ----- (No actual meaning for this toggle)",
             eventType: EventTypeEnum.NpcYell,
             eventCondition: ["Your huddled masses yearning to breathe free",
-                            "蜷缩着祈盼自由呼吸的人"])]
+                            "èœ·ç¼©ç€ç¥ˆç›¼è‡ªç”±å‘¼å¸çš„äºº"])]
 
         public void Phase2point5_Placeholder(Event @event, ScriptAccessory accessory) { }
 
@@ -7723,7 +7723,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
         [ScriptMethod(name: "----- Phase 3 ----- (No actual meaning for this toggle)",
             eventType: EventTypeEnum.NpcYell,
             eventCondition: ["The wretched refuse of your teeming shore",
-                            "被你们的繁荣拒之门外受苦的人"])]
+                            "è¢«ä½ ä»¬çš„ç¹è£æ‹’ä¹‹é—¨å¤–å—è‹¦çš„äºº"])]
 
         public void Phase3_Placeholder(Event @event, ScriptAccessory accessory) { }
 
@@ -8164,7 +8164,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventType: EventTypeEnum.StartCasting,
             eventCondition: ["ActionId:40286"])]
 
-        public void Phase3_Prompt_Before_Shell_Crusher_破盾一击前提示(Event @event, ScriptAccessory accessory)
+        public void Phase3_Prompt_Before_Shell_Crusher_ç ´ç›¾ä¸€å‡»å‰æç¤º(Event @event, ScriptAccessory accessory)
         {
 
             if (parse!=31)
@@ -8177,14 +8177,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             if (Enable_Text_Prompts)
             {
 
-                if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                 {
 
-                    accessory.Method.TextInfo("场中集合分摊", 3000);
+                    accessory.Method.TextInfo("åœºä¸­é›†åˆåˆ†æ‘Š", 3000);
 
                 }
 
-                if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                 {
 
                     accessory.Method.TextInfo("Stack in the center", 3000);
@@ -8196,14 +8196,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             if (Enable_Vanilla_TTS || Enable_Daily_Routines_TTS)
             {
 
-                if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                 {
 
-                    accessory.TTS("场中集合分摊", Enable_Vanilla_TTS, Enable_Daily_Routines_TTS);
+                    accessory.TTS("åœºä¸­é›†åˆåˆ†æ‘Š", Enable_Vanilla_TTS, Enable_Daily_Routines_TTS);
 
                 }
 
-                if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                 {
 
                     accessory.TTS("Stack in the center", Enable_Vanilla_TTS, Enable_Daily_Routines_TTS);
@@ -8235,7 +8235,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventType: EventTypeEnum.ActionEffect,
             eventCondition: ["ActionId:40290"])]
 
-        public void Phase3_Initial_Orientation_Before_The_Second_Half_二运前的初始面向(Event @event, ScriptAccessory accessory)
+        public void Phase3_Initial_Orientation_Before_The_Second_Half_äºŒè¿å‰çš„åˆå§‹é¢å‘(Event @event, ScriptAccessory accessory)
         {
 
             if (parse!=31)
@@ -8293,14 +8293,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             if (Enable_Text_Prompts)
             {
 
-                if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                 {
 
-                    accessory.Method.TextInfo("让Boss面向正北", 12500);
+                    accessory.Method.TextInfo("è®©Bossé¢å‘æ­£åŒ—", 12500);
 
                 }
 
-                if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                 {
 
                     accessory.Method.TextInfo("Make the Boss orient to the north", 12500);
@@ -8312,14 +8312,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             if (Enable_Vanilla_TTS || Enable_Daily_Routines_TTS)
             {
 
-                if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                 {
 
-                    accessory.TTS("让Boss面向正北", Enable_Vanilla_TTS, Enable_Daily_Routines_TTS);
+                    accessory.TTS("è®©Bossé¢å‘æ­£åŒ—", Enable_Vanilla_TTS, Enable_Daily_Routines_TTS);
 
                 }
 
-                if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                 {
 
                     accessory.TTS("Make the Boss orient to the north", Enable_Vanilla_TTS, Enable_Daily_Routines_TTS);
@@ -8381,7 +8381,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventType: EventTypeEnum.Marker,
             userControl: false)]
 
-        public void Phase3_Record_Signs_On_Party_Members_记录小队队员的目标标记(Event @event, ScriptAccessory accessory)
+        public void Phase3_Record_Signs_On_Party_Members_è®°å½•å°é˜Ÿé˜Ÿå‘˜çš„ç›®æ ‡æ ‡è®°(Event @event, ScriptAccessory accessory)
         {
 
             if (parse!=32)
@@ -8450,7 +8450,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventCondition: ["StatusID:2461"],
             userControl: false)]
 
-        public void Phase3_Determine_Types_Of_Dark_Water_III_确定黑暗狂水类型(Event @event, ScriptAccessory accessory)
+        public void Phase3_Determine_Types_Of_Dark_Water_III_ç¡®å®šé»‘æš—ç‹‚æ°´ç±»åž‹(Event @event, ScriptAccessory accessory)
         {
 
             if (parse!=32)
@@ -8552,7 +8552,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventCondition: ["StatusID:2461"],
             suppress: 2000)]
 
-        public void Phase3_Prompt_Before_Dark_Water_III_暗黑狂水前提示(Event @event, ScriptAccessory accessory)
+        public void Phase3_Prompt_Before_Dark_Water_III_æš—é»‘ç‹‚æ°´å‰æç¤º(Event @event, ScriptAccessory accessory)
         {
 
             if (parse!=32)
@@ -8571,7 +8571,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
             System.Threading.Thread.MemoryBarrier();
 
-            if (Phase3_Strat_Of_The_Second_Half == Phase3_Strats_Of_The_Second_Half.Double_Group_双分组法)
+            if (Phase3_Strat_Of_The_Second_Half == Phase3_Strats_Of_The_Second_Half.Double_Group_åŒåˆ†ç»„æ³•)
             {
 
                 bool goLeft = phase3_doubleGroup_shouldGoLeft(accessory.Data.PartyList.IndexOf(accessory.Data.Me));
@@ -8592,14 +8592,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 if (goLeft)
                 {
 
-                    if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                    if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                     {
 
-                        prompt += "去左组分摊第一第三次，";
+                        prompt += "åŽ»å·¦ç»„åˆ†æ‘Šç¬¬ä¸€ç¬¬ä¸‰æ¬¡ï¼Œ";
 
                     }
 
-                    if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                    if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                     {
 
                         prompt += "Go left for the first and third, ";
@@ -8611,14 +8611,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 else
                 {
 
-                    if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                    if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                     {
 
-                        prompt += "去右组分摊第一第三次，";
+                        prompt += "åŽ»å³ç»„åˆ†æ‘Šç¬¬ä¸€ç¬¬ä¸‰æ¬¡ï¼Œ";
 
                     }
 
-                    if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                    if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                     {
 
                         prompt += "Go right for the first and third, ";
@@ -8630,14 +8630,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 if (stayInTheGroup)
                 {
 
-                    if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                    if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                     {
 
-                        prompt += "第二次留在本组";
+                        prompt += "ç¬¬äºŒæ¬¡ç•™åœ¨æœ¬ç»„";
 
                     }
 
-                    if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                    if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                     {
 
                         prompt += "stay in the current group for the second";
@@ -8649,14 +8649,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 else
                 {
 
-                    if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                    if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                     {
 
-                        prompt += "第二次换去对组";
+                        prompt += "ç¬¬äºŒæ¬¡æ¢åŽ»å¯¹ç»„";
 
                     }
 
-                    if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                    if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                     {
 
                         prompt += "move to the opposite group for the second";
@@ -8676,7 +8676,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
             }
 
-            if (Phase3_Strat_Of_The_Second_Half == Phase3_Strats_Of_The_Second_Half.High_Priority_As_Locomotives_车头低换法_MMW)
+            if (Phase3_Strat_Of_The_Second_Half == Phase3_Strats_Of_The_Second_Half.High_Priority_As_Locomotives_è½¦å¤´ä½Žæ¢æ³•_MMW)
             {
 
                 int myIndex = accessory.Data.PartyList.IndexOf(accessory.Data.Me);
@@ -8697,14 +8697,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 if (goLeft)
                 {
 
-                    if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                    if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                     {
 
-                        prompt += "去左组分摊，";
+                        prompt += "åŽ»å·¦ç»„åˆ†æ‘Šï¼Œ";
 
                     }
 
-                    if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                    if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                     {
 
                         prompt += "Go left to stack, ";
@@ -8716,14 +8716,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 else
                 {
 
-                    if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                    if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                     {
 
-                        prompt += "去右组分摊，";
+                        prompt += "åŽ»å³ç»„åˆ†æ‘Šï¼Œ";
 
                     }
 
-                    if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                    if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                     {
 
                         prompt += "Go right to stack, ";
@@ -8732,20 +8732,20 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
                 }
 
-                if (Phase3_Branch_Of_The_Locomotive_Strat == Phase3_Branches_Of_The_Locomotive_Strat.MT_And_M1_As_Locomotives_MT和D1为车头_MMW)
+                if (Phase3_Branch_Of_The_Locomotive_Strat == Phase3_Branches_Of_The_Locomotive_Strat.MT_And_M1_As_Locomotives_MTå’ŒD1ä¸ºè½¦å¤´_MMW)
                 {
 
                     if (myIndex != 0 && myIndex != 4)
                     {
 
-                        if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                        if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                         {
 
-                            prompt += (goLeft) ? ("跟随MT") : ("跟随D1");
+                            prompt += (goLeft) ? ("è·ŸéšMT") : ("è·ŸéšD1");
 
                         }
 
-                        if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                        if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                         {
 
                             prompt += (goLeft) ? ("follow MT") : ("follow M1");
@@ -8757,14 +8757,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                     if (myIndex == 0 || myIndex == 4)
                     {
 
-                        if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                        if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                         {
 
-                            prompt += "你是车头";
+                            prompt += "ä½ æ˜¯è½¦å¤´";
 
                         }
 
-                        if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                        if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                         {
 
                             prompt += "you are the locomotive";
@@ -8775,20 +8775,20 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
                 }
 
-                if (Phase3_Branch_Of_The_Locomotive_Strat == Phase3_Branches_Of_The_Locomotive_Strat.Others_As_Locomotives_Chinese_PF_国服野队人群为车头)
+                if (Phase3_Branch_Of_The_Locomotive_Strat == Phase3_Branches_Of_The_Locomotive_Strat.Others_As_Locomotives_Chinese_PF_å›½æœé‡Žé˜Ÿäººç¾¤ä¸ºè½¦å¤´)
                 {
 
                     if (myIndex != 0 && myIndex != 4)
                     {
 
-                        if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                        if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                         {
 
-                            prompt += "你是人群车头之一";
+                            prompt += "ä½ æ˜¯äººç¾¤è½¦å¤´ä¹‹ä¸€";
 
                         }
 
-                        if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                        if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                         {
 
                             prompt += "you are one of the locomotives";
@@ -8800,14 +8800,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                     if (myIndex == 0 || myIndex == 4)
                     {
 
-                        if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                        if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                         {
 
-                            prompt += "跟随组内人群";
+                            prompt += "è·Ÿéšç»„å†…äººç¾¤";
 
                         }
 
-                        if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                        if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                         {
 
                             prompt += "follow others in the group";
@@ -8829,7 +8829,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
             }
 
-            if (Phase3_Strat_Of_The_Second_Half == Phase3_Strats_Of_The_Second_Half.Moglin_Meow_Or_Baby_Wheelchair_Based_On_Signs_根据目标标记的莫灵喵法或宝宝椅法)
+            if (Phase3_Strat_Of_The_Second_Half == Phase3_Strats_Of_The_Second_Half.Moglin_Meow_Or_Baby_Wheelchair_Based_On_Signs_æ ¹æ®ç›®æ ‡æ ‡è®°çš„èŽ«çµå–µæ³•æˆ–å®å®æ¤…æ³•)
             {
 
                 System.Threading.Thread.MemoryBarrier();
@@ -8856,14 +8856,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 if (goLeft)
                 {
 
-                    if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                    if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                     {
 
-                        prompt += "始终去左组分摊";
+                        prompt += "å§‹ç»ˆåŽ»å·¦ç»„åˆ†æ‘Š";
 
                     }
 
-                    if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                    if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                     {
 
                         prompt += "Always stack on the left";
@@ -8875,14 +8875,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 else
                 {
 
-                    if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                    if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                     {
 
-                        prompt += "始终去右组分摊";
+                        prompt += "å§‹ç»ˆåŽ»å³ç»„åˆ†æ‘Š";
 
                     }
 
-                    if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                    if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                     {
 
                         prompt += "Always stack on the right";
@@ -8910,7 +8910,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             suppress: 2000,
             userControl: false)]
 
-        public void Phase3_Release_The_Semaphore_Of_Dark_Water_III_释放黑暗狂水的信号灯(Event @event, ScriptAccessory accessory)
+        public void Phase3_Release_The_Semaphore_Of_Dark_Water_III_é‡Šæ”¾é»‘æš—ç‹‚æ°´çš„ä¿¡å·ç¯(Event @event, ScriptAccessory accessory)
         {
 
             if (parse!=32)
@@ -8945,7 +8945,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventCondition: ["StatusID:2458"],
             suppress: 2000)]
 
-        public void Phase3_Range_Of_Dark_Water_III_黑暗狂水范围(Event @event, ScriptAccessory accessory)
+        public void Phase3_Range_Of_Dark_Water_III_é»‘æš—ç‹‚æ°´èŒƒå›´(Event @event, ScriptAccessory accessory)
         {
             
             if(@event["SourceId"].Equals("00000000")) {
@@ -9009,7 +9009,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
             var currentProperty = accessory.Data.GetDefaultDrawProperties();
 
-            if (Phase3_Strat_Of_The_Second_Half == Phase3_Strats_Of_The_Second_Half.Double_Group_双分组法)
+            if (Phase3_Strat_Of_The_Second_Half == Phase3_Strats_Of_The_Second_Half.Double_Group_åŒåˆ†ç»„æ³•)
             {
 
                 if (phase3_numberOfDarkWaterIiiHasBeenProcessed == 6)
@@ -9140,7 +9140,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
             }
 
-            if (Phase3_Strat_Of_The_Second_Half == Phase3_Strats_Of_The_Second_Half.High_Priority_As_Locomotives_车头低换法_MMW)
+            if (Phase3_Strat_Of_The_Second_Half == Phase3_Strats_Of_The_Second_Half.High_Priority_As_Locomotives_è½¦å¤´ä½Žæ¢æ³•_MMW)
             {
 
                 if (phase3_numberOfDarkWaterIiiHasBeenProcessed == 6)
@@ -9187,7 +9187,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
             }
 
-            if (Phase3_Strat_Of_The_Second_Half == Phase3_Strats_Of_The_Second_Half.Moglin_Meow_Or_Baby_Wheelchair_Based_On_Signs_根据目标标记的莫灵喵法或宝宝椅法)
+            if (Phase3_Strat_Of_The_Second_Half == Phase3_Strats_Of_The_Second_Half.Moglin_Meow_Or_Baby_Wheelchair_Based_On_Signs_æ ¹æ®ç›®æ ‡æ ‡è®°çš„èŽ«çµå–µæ³•æˆ–å®å®æ¤…æ³•)
             {
 
                 if (phase3_numberOfMarksHaveBeenRecorded >= 8)
@@ -9257,14 +9257,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             if (Enable_Text_Prompts)
             {
 
-                if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                 {
 
-                    accessory.Method.TextInfo("分摊", 2000);
+                    accessory.Method.TextInfo("åˆ†æ‘Š", 2000);
 
                 }
 
-                if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                 {
 
                     accessory.Method.TextInfo("Stack", 2000);
@@ -9276,14 +9276,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             if (Enable_Vanilla_TTS || Enable_Daily_Routines_TTS)
             {
 
-                if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                 {
 
-                    accessory.TTS("分摊", Enable_Vanilla_TTS, Enable_Daily_Routines_TTS);
+                    accessory.TTS("åˆ†æ‘Š", Enable_Vanilla_TTS, Enable_Daily_Routines_TTS);
 
                 }
 
-                if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                 {
 
                     accessory.TTS("Stack", Enable_Vanilla_TTS, Enable_Daily_Routines_TTS);
@@ -9299,7 +9299,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventCondition: ["StatusID:2458"],
             suppress: 2000)]
 
-        public void Phase3_Guidance_Of_Dark_Water_III_黑暗狂水指路(Event @event, ScriptAccessory accessory)
+        public void Phase3_Guidance_Of_Dark_Water_III_é»‘æš—ç‹‚æ°´æŒ‡è·¯(Event @event, ScriptAccessory accessory)
         {
             
             if(@event["SourceId"].Equals("00000000")) {
@@ -9337,7 +9337,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             currentProperty.Color = accessory.Data.DefaultSafeColor;
             currentProperty.DestoryAt = 5000;
 
-            if (Phase3_Strat_Of_The_Second_Half == Phase3_Strats_Of_The_Second_Half.Double_Group_双分组法)
+            if (Phase3_Strat_Of_The_Second_Half == Phase3_Strats_Of_The_Second_Half.Double_Group_åŒåˆ†ç»„æ³•)
             {
 
                 bool goLeft = phase3_doubleGroup_shouldGoLeft(accessory.Data.PartyList.IndexOf(accessory.Data.Me));
@@ -9366,14 +9366,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
                             targetPositionConfirmed = true;
 
-                            if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                            if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                             {
 
-                                prompt = (goLeft) ? ("左侧分摊") : ("右侧分摊");
+                                prompt = (goLeft) ? ("å·¦ä¾§åˆ†æ‘Š") : ("å³ä¾§åˆ†æ‘Š");
 
                             }
 
-                            if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                            if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                             {
 
                                 prompt = (goLeft) ? ("Stack on the left") : ("Stack on the right");
@@ -9441,14 +9441,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
                             }
 
-                            if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                            if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                             {
 
-                                prompt = (stayInTheGroup) ? ("本组分摊") : ("对组分摊");
+                                prompt = (stayInTheGroup) ? ("æœ¬ç»„åˆ†æ‘Š") : ("å¯¹ç»„åˆ†æ‘Š");
 
                             }
 
-                            if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                            if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                             {
 
                                 prompt = (stayInTheGroup) ? ("Stack in the current group") : ("Stack in the opposite group");
@@ -9514,14 +9514,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
                             }
 
-                            if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                            if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                             {
 
-                                prompt = (goLeft) ? ("左侧分摊") : ("右侧分摊");
+                                prompt = (goLeft) ? ("å·¦ä¾§åˆ†æ‘Š") : ("å³ä¾§åˆ†æ‘Š");
 
                             }
 
-                            if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                            if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                             {
 
                                 prompt = (goLeft) ? ("Stack on the left") : ("Stack on the right");
@@ -9544,7 +9544,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
             }
 
-            if (Phase3_Strat_Of_The_Second_Half == Phase3_Strats_Of_The_Second_Half.High_Priority_As_Locomotives_车头低换法_MMW)
+            if (Phase3_Strat_Of_The_Second_Half == Phase3_Strats_Of_The_Second_Half.High_Priority_As_Locomotives_è½¦å¤´ä½Žæ¢æ³•_MMW)
             {
 
                 bool goLeft = phase3_locomotive_shouldGoLeft(accessory.Data.PartyList.IndexOf(accessory.Data.Me));
@@ -9571,14 +9571,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
                             targetPositionConfirmed = true;
 
-                            if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                            if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                             {
 
-                                prompt = (goLeft) ? ("左侧分摊") : ("右侧分摊");
+                                prompt = (goLeft) ? ("å·¦ä¾§åˆ†æ‘Š") : ("å³ä¾§åˆ†æ‘Š");
 
                             }
 
-                            if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                            if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                             {
 
                                 prompt = (goLeft) ? ("Stack on the left") : ("Stack on the right");
@@ -9598,14 +9598,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
                             targetPositionConfirmed = true;
 
-                            if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                            if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                             {
 
-                                prompt = "场中当前侧分摊";
+                                prompt = "åœºä¸­å½“å‰ä¾§åˆ†æ‘Š";
 
                             }
 
-                            if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                            if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                             {
 
                                 prompt = "Stack on this side of the center";
@@ -9671,14 +9671,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
                             }
 
-                            if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                            if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                             {
 
-                                prompt = (goLeft) ? ("左侧分摊") : ("右侧分摊");
+                                prompt = (goLeft) ? ("å·¦ä¾§åˆ†æ‘Š") : ("å³ä¾§åˆ†æ‘Š");
 
                             }
 
-                            if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                            if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                             {
 
                                 prompt = (goLeft) ? ("Stack on the left") : ("Stack on the right");
@@ -9701,7 +9701,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
             }
 
-            if (Phase3_Strat_Of_The_Second_Half == Phase3_Strats_Of_The_Second_Half.Moglin_Meow_Or_Baby_Wheelchair_Based_On_Signs_根据目标标记的莫灵喵法或宝宝椅法)
+            if (Phase3_Strat_Of_The_Second_Half == Phase3_Strats_Of_The_Second_Half.Moglin_Meow_Or_Baby_Wheelchair_Based_On_Signs_æ ¹æ®ç›®æ ‡æ ‡è®°çš„èŽ«çµå–µæ³•æˆ–å®å®æ¤…æ³•)
             {
 
                 bool goLeft = phase3_moglinMeow_shouldGoLeft(accessory.Data.PartyList.IndexOf(accessory.Data.Me));
@@ -9728,14 +9728,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
                             targetPositionConfirmed = true;
 
-                            if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                            if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                             {
 
-                                prompt = (goLeft) ? ("左侧分摊") : ("右侧分摊");
+                                prompt = (goLeft) ? ("å·¦ä¾§åˆ†æ‘Š") : ("å³ä¾§åˆ†æ‘Š");
 
                             }
 
-                            if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                            if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                             {
 
                                 prompt = (goLeft) ? ("Stack on the left") : ("Stack on the right");
@@ -9755,14 +9755,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
                             targetPositionConfirmed = true;
 
-                            if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                            if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                             {
 
-                                prompt = "场中当前侧分摊";
+                                prompt = "åœºä¸­å½“å‰ä¾§åˆ†æ‘Š";
 
                             }
 
-                            if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                            if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                             {
 
                                 prompt = "Stack on this side of the center";
@@ -9828,14 +9828,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
                             }
 
-                            if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                            if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                             {
 
-                                prompt = (goLeft) ? ("左侧分摊") : ("右侧分摊");
+                                prompt = (goLeft) ? ("å·¦ä¾§åˆ†æ‘Š") : ("å³ä¾§åˆ†æ‘Š");
 
                             }
 
-                            if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                            if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                             {
 
                                 prompt = (goLeft) ? ("Stack on the left") : ("Stack on the right");
@@ -10097,7 +10097,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventType: EventTypeEnum.StartCasting,
             eventCondition: ["ActionId:40288"])]
 
-        public void Phase3_Range_Of_Spirit_Taker_碎灵一击范围(Event @event, ScriptAccessory accessory)
+        public void Phase3_Range_Of_Spirit_Taker_ç¢Žçµä¸€å‡»èŒƒå›´(Event @event, ScriptAccessory accessory)
         {
 
             if (parse!=32)
@@ -10128,14 +10128,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             if (Enable_Text_Prompts)
             {
 
-                if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                 {
 
-                    accessory.Method.TextInfo("分散", 2000);
+                    accessory.Method.TextInfo("åˆ†æ•£", 2000);
 
                 }
 
-                if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                 {
 
                     accessory.Method.TextInfo("Spread", 2000);
@@ -10147,14 +10147,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             if (Enable_Vanilla_TTS || Enable_Daily_Routines_TTS)
             {
 
-                if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                 {
 
-                    accessory.TTS("分散", Enable_Vanilla_TTS, Enable_Daily_Routines_TTS);
+                    accessory.TTS("åˆ†æ•£", Enable_Vanilla_TTS, Enable_Daily_Routines_TTS);
 
                 }
 
-                if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                 {
 
                     accessory.TTS("Spread", Enable_Vanilla_TTS, Enable_Daily_Routines_TTS);
@@ -10169,7 +10169,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventType: EventTypeEnum.StartCasting,
             eventCondition: ["ActionId:40288"])]
 
-        public void Phase3_Guidance_Of_Spirit_Taker_碎灵一击指路(Event @event, ScriptAccessory accessory)
+        public void Phase3_Guidance_Of_Spirit_Taker_ç¢Žçµä¸€å‡»æŒ‡è·¯(Event @event, ScriptAccessory accessory)
         {
 
             if (parse!=32)
@@ -10190,7 +10190,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             currentProperty.Delay = 1250;
             currentProperty.DestoryAt = 2500;
 
-            if (Phase3_Strat_Of_The_Second_Half == Phase3_Strats_Of_The_Second_Half.Double_Group_双分组法)
+            if (Phase3_Strat_Of_The_Second_Half == Phase3_Strats_Of_The_Second_Half.Double_Group_åŒåˆ†ç»„æ³•)
             {
 
                 int myDoubleGroupIndex = phase3_doubleGroup_getDoubleGroupIndex(accessory.Data.PartyList.IndexOf(accessory.Data.Me));
@@ -10480,7 +10480,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             userControl: false,
             suppress: 2000)]
 
-        public void Phase3_Determine_Initial_Safe_Positions_Of_Apocalypse_确定启示初始安全位置(Event @event, ScriptAccessory accessory)
+        public void Phase3_Determine_Initial_Safe_Positions_Of_Apocalypse_ç¡®å®šå¯ç¤ºåˆå§‹å®‰å…¨ä½ç½®(Event @event, ScriptAccessory accessory)
         {
 
             if (parse!=32)
@@ -10528,13 +10528,13 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
             }
 
-            if (Phase3_Strat_Of_The_Second_Half == Phase3_Strats_Of_The_Second_Half.Double_Group_双分组法)
+            if (Phase3_Strat_Of_The_Second_Half == Phase3_Strats_Of_The_Second_Half.Double_Group_åŒåˆ†ç»„æ³•)
             {
 
-                if (Phase3_Branch_Of_The_Double_Group_Strat == Phase3_Branches_Of_The_Double_Group_Strat.Based_On_Safe_Positions_安全区为基准_MMW)
+                if (Phase3_Branch_Of_The_Double_Group_Strat == Phase3_Branches_Of_The_Double_Group_Strat.Based_On_Safe_Positions_å®‰å…¨åŒºä¸ºåŸºå‡†_MMW)
                 {
 
-                    if (Phase3_Division_Of_The_Zone == Phase3_Divisions_Of_The_Zone.North_To_Southwest_For_The_Left_Group_左组从正北到西南_莫灵喵与MMW)
+                    if (Phase3_Division_Of_The_Zone == Phase3_Divisions_Of_The_Zone.North_To_Southwest_For_The_Left_Group_å·¦ç»„ä»Žæ­£åŒ—åˆ°è¥¿å—_èŽ«çµå–µä¸ŽMMW)
                     {
 
                         if (direction1OfTheLast == 0
@@ -10583,7 +10583,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
                     }
 
-                    if (Phase3_Division_Of_The_Zone == Phase3_Divisions_Of_The_Zone.Northwest_To_South_For_The_Left_Group_左组从西北到正南)
+                    if (Phase3_Division_Of_The_Zone == Phase3_Divisions_Of_The_Zone.Northwest_To_South_For_The_Left_Group_å·¦ç»„ä»Žè¥¿åŒ—åˆ°æ­£å—)
                     {
 
                         if (direction1OfTheLast == 7
@@ -10634,10 +10634,10 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
                 }
 
-                if (Phase3_Branch_Of_The_Double_Group_Strat == Phase3_Branches_Of_The_Double_Group_Strat.Based_On_The_Second_Apocalypse_第二次启示为基准)
+                if (Phase3_Branch_Of_The_Double_Group_Strat == Phase3_Branches_Of_The_Double_Group_Strat.Based_On_The_Second_Apocalypse_ç¬¬äºŒæ¬¡å¯ç¤ºä¸ºåŸºå‡†)
                 {
 
-                    if (Phase3_Division_Of_The_Zone == Phase3_Divisions_Of_The_Zone.North_To_Southwest_For_The_Left_Group_左组从正北到西南_莫灵喵与MMW)
+                    if (Phase3_Division_Of_The_Zone == Phase3_Divisions_Of_The_Zone.North_To_Southwest_For_The_Left_Group_å·¦ç»„ä»Žæ­£åŒ—åˆ°è¥¿å—_èŽ«çµå–µä¸ŽMMW)
                     {
 
                         if (direction1OfTheSecond == 0
@@ -10686,7 +10686,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
                     }
 
-                    if (Phase3_Division_Of_The_Zone == Phase3_Divisions_Of_The_Zone.Northwest_To_South_For_The_Left_Group_左组从西北到正南)
+                    if (Phase3_Division_Of_The_Zone == Phase3_Divisions_Of_The_Zone.Northwest_To_South_For_The_Left_Group_å·¦ç»„ä»Žè¥¿åŒ—åˆ°æ­£å—)
                     {
 
                         if (direction1OfTheSecond == 7
@@ -10739,13 +10739,13 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
             }
 
-            if (Phase3_Strat_Of_The_Second_Half == Phase3_Strats_Of_The_Second_Half.High_Priority_As_Locomotives_车头低换法_MMW)
+            if (Phase3_Strat_Of_The_Second_Half == Phase3_Strats_Of_The_Second_Half.High_Priority_As_Locomotives_è½¦å¤´ä½Žæ¢æ³•_MMW)
             {
 
-                if (Phase3_Branch_Of_The_Locomotive_Strat == Phase3_Branches_Of_The_Locomotive_Strat.MT_And_M1_As_Locomotives_MT和D1为车头_MMW)
+                if (Phase3_Branch_Of_The_Locomotive_Strat == Phase3_Branches_Of_The_Locomotive_Strat.MT_And_M1_As_Locomotives_MTå’ŒD1ä¸ºè½¦å¤´_MMW)
                 {
 
-                    if (Phase3_Division_Of_The_Zone == Phase3_Divisions_Of_The_Zone.North_To_Southwest_For_The_Left_Group_左组从正北到西南_莫灵喵与MMW)
+                    if (Phase3_Division_Of_The_Zone == Phase3_Divisions_Of_The_Zone.North_To_Southwest_For_The_Left_Group_å·¦ç»„ä»Žæ­£åŒ—åˆ°è¥¿å—_èŽ«çµå–µä¸ŽMMW)
                     {
 
                         if (direction1OfThePenultimate == 0
@@ -10794,7 +10794,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
                     }
 
-                    if (Phase3_Division_Of_The_Zone == Phase3_Divisions_Of_The_Zone.Northwest_To_South_For_The_Left_Group_左组从西北到正南)
+                    if (Phase3_Division_Of_The_Zone == Phase3_Divisions_Of_The_Zone.Northwest_To_South_For_The_Left_Group_å·¦ç»„ä»Žè¥¿åŒ—åˆ°æ­£å—)
                     {
 
                         if (direction1OfThePenultimate == 7
@@ -10845,10 +10845,10 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
                 }
 
-                if (Phase3_Branch_Of_The_Locomotive_Strat == Phase3_Branches_Of_The_Locomotive_Strat.Others_As_Locomotives_Chinese_PF_国服野队人群为车头)
+                if (Phase3_Branch_Of_The_Locomotive_Strat == Phase3_Branches_Of_The_Locomotive_Strat.Others_As_Locomotives_Chinese_PF_å›½æœé‡Žé˜Ÿäººç¾¤ä¸ºè½¦å¤´)
                 {
 
-                    if (Phase3_Division_Of_The_Zone == Phase3_Divisions_Of_The_Zone.North_To_Southwest_For_The_Left_Group_左组从正北到西南_莫灵喵与MMW)
+                    if (Phase3_Division_Of_The_Zone == Phase3_Divisions_Of_The_Zone.North_To_Southwest_For_The_Left_Group_å·¦ç»„ä»Žæ­£åŒ—åˆ°è¥¿å—_èŽ«çµå–µä¸ŽMMW)
                     {
 
                         if (direction1OfTheLast == 0
@@ -10897,7 +10897,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
                     }
 
-                    if (Phase3_Division_Of_The_Zone == Phase3_Divisions_Of_The_Zone.Northwest_To_South_For_The_Left_Group_左组从西北到正南)
+                    if (Phase3_Division_Of_The_Zone == Phase3_Divisions_Of_The_Zone.Northwest_To_South_For_The_Left_Group_å·¦ç»„ä»Žè¥¿åŒ—åˆ°æ­£å—)
                     {
 
                         if (direction1OfTheLast == 7
@@ -10950,7 +10950,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
             }
 
-            if (Phase3_Strat_Of_The_Second_Half == Phase3_Strats_Of_The_Second_Half.Moglin_Meow_Or_Baby_Wheelchair_Based_On_Signs_根据目标标记的莫灵喵法或宝宝椅法)
+            if (Phase3_Strat_Of_The_Second_Half == Phase3_Strats_Of_The_Second_Half.Moglin_Meow_Or_Baby_Wheelchair_Based_On_Signs_æ ¹æ®ç›®æ ‡æ ‡è®°çš„èŽ«çµå–µæ³•æˆ–å®å®æ¤…æ³•)
             {
 
                 if (direction1OfTheLast == 0
@@ -11147,7 +11147,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventType: EventTypeEnum.ActionEffect,
             eventCondition: ["ActionId:40289"])]
 
-        public void Phase3_Rough_Guidance_Of_Initial_Safe_Positions_初始安全位置粗略指路(Event @event, ScriptAccessory accessory)
+        public void Phase3_Rough_Guidance_Of_Initial_Safe_Positions_åˆå§‹å®‰å…¨ä½ç½®ç²—ç•¥æŒ‡è·¯(Event @event, ScriptAccessory accessory)
         {
 
             if (parse!=32)
@@ -11168,7 +11168,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             currentProperty.Delay = 500;
             currentProperty.DestoryAt = 6500;
 
-            if (Phase3_Strat_Of_The_Second_Half == Phase3_Strats_Of_The_Second_Half.Double_Group_双分组法)
+            if (Phase3_Strat_Of_The_Second_Half == Phase3_Strats_Of_The_Second_Half.Double_Group_åŒåˆ†ç»„æ³•)
             {
 
                 if (0 <= accessory.Data.PartyList.IndexOf(accessory.Data.Me)
@@ -11195,7 +11195,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
             }
 
-            if (Phase3_Strat_Of_The_Second_Half == Phase3_Strats_Of_The_Second_Half.High_Priority_As_Locomotives_车头低换法_MMW)
+            if (Phase3_Strat_Of_The_Second_Half == Phase3_Strats_Of_The_Second_Half.High_Priority_As_Locomotives_è½¦å¤´ä½Žæ¢æ³•_MMW)
             {
 
                 bool goLeft = phase3_locomotive_shouldGoLeft(accessory.Data.PartyList.IndexOf(accessory.Data.Me));
@@ -11220,7 +11220,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
             }
 
-            if (Phase3_Strat_Of_The_Second_Half == Phase3_Strats_Of_The_Second_Half.Moglin_Meow_Or_Baby_Wheelchair_Based_On_Signs_根据目标标记的莫灵喵法或宝宝椅法)
+            if (Phase3_Strat_Of_The_Second_Half == Phase3_Strats_Of_The_Second_Half.Moglin_Meow_Or_Baby_Wheelchair_Based_On_Signs_æ ¹æ®ç›®æ ‡æ ‡è®°çš„èŽ«çµå–µæ³•æˆ–å®å®æ¤…æ³•)
             {
 
                 bool goLeft = phase3_moglinMeow_shouldGoLeft(accessory.Data.PartyList.IndexOf(accessory.Data.Me));
@@ -11258,7 +11258,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventType: EventTypeEnum.StartCasting,
             eventCondition: ["ActionId:40181"])]
 
-        public void Phase3_Range_Of_Darkest_Dance_暗夜舞蹈范围(Event @event, ScriptAccessory accessory)
+        public void Phase3_Range_Of_Darkest_Dance_æš—å¤œèˆžè¹ˆèŒƒå›´(Event @event, ScriptAccessory accessory)
         {
 
             if (parse!=32)
@@ -11315,14 +11315,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 if (Enable_Text_Prompts)
                 {
 
-                    if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                    if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                     {
 
-                        accessory.Method.TextInfo("最远死刑", 1500);
+                        accessory.Method.TextInfo("æœ€è¿œæ­»åˆ‘", 1500);
 
                     }
 
-                    if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                    if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                     {
 
                         accessory.Method.TextInfo("Stay away and bait", 1500);
@@ -11334,14 +11334,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 if (Enable_Vanilla_TTS || Enable_Daily_Routines_TTS)
                 {
 
-                    if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                    if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                     {
 
-                        accessory.TTS("最远死刑", Enable_Vanilla_TTS, Enable_Daily_Routines_TTS);
+                        accessory.TTS("æœ€è¿œæ­»åˆ‘", Enable_Vanilla_TTS, Enable_Daily_Routines_TTS);
 
                     }
 
-                    if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                    if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                     {
 
                         accessory.TTS("Stay away and bait", Enable_Vanilla_TTS, Enable_Daily_Routines_TTS);
@@ -11361,14 +11361,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                     if (Enable_Text_Prompts)
                     {
 
-                        if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                        if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                         {
 
-                            accessory.Method.TextInfo("远离MT", 1500);
+                            accessory.Method.TextInfo("è¿œç¦»MT", 1500);
 
                         }
 
-                        if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                        if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                         {
 
                             accessory.Method.TextInfo("Stay away from MT", 1500);
@@ -11380,14 +11380,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                     if (Enable_Vanilla_TTS || Enable_Daily_Routines_TTS)
                     {
 
-                        if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                        if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                         {
 
-                            accessory.TTS("远离MT", Enable_Vanilla_TTS, Enable_Daily_Routines_TTS);
+                            accessory.TTS("è¿œç¦»MT", Enable_Vanilla_TTS, Enable_Daily_Routines_TTS);
 
                         }
 
-                        if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                        if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                         {
 
                             accessory.TTS("Stay away from MT", Enable_Vanilla_TTS, Enable_Daily_Routines_TTS);
@@ -11404,14 +11404,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                     if (Enable_Text_Prompts)
                     {
 
-                        if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                        if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                         {
 
-                            accessory.Method.TextInfo("远离ST", 1500);
+                            accessory.Method.TextInfo("è¿œç¦»ST", 1500);
 
                         }
 
-                        if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                        if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                         {
 
                             accessory.Method.TextInfo("Stay away from OT", 1500);
@@ -11423,14 +11423,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                     if (Enable_Vanilla_TTS || Enable_Daily_Routines_TTS)
                     {
 
-                        if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                        if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                         {
 
-                            accessory.TTS("远离ST", Enable_Vanilla_TTS, Enable_Daily_Routines_TTS);
+                            accessory.TTS("è¿œç¦»ST", Enable_Vanilla_TTS, Enable_Daily_Routines_TTS);
 
                         }
 
-                        if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                        if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                         {
 
                             accessory.TTS("Stay away from OT", Enable_Vanilla_TTS, Enable_Daily_Routines_TTS);
@@ -11449,7 +11449,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventType: EventTypeEnum.StartCasting,
             eventCondition: ["ActionId:40181"])]
 
-        public void Phase3_Guidance_Of_Darkest_Dance_暗夜舞蹈指路(Event @event, ScriptAccessory accessory)
+        public void Phase3_Guidance_Of_Darkest_Dance_æš—å¤œèˆžè¹ˆæŒ‡è·¯(Event @event, ScriptAccessory accessory)
         {
 
             if (parse!=32)
@@ -11609,7 +11609,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventCondition: ["ActionId:40300"],
             userControl: false)]
 
-        public void Phase3_Determine_The_Final_Position_Of_The_Boss_确定Boss的最终位置(Event @event, ScriptAccessory accessory)
+        public void Phase3_Determine_The_Final_Position_Of_The_Boss_ç¡®å®šBossçš„æœ€ç»ˆä½ç½®(Event @event, ScriptAccessory accessory)
         {
 
             if (parse!=32)
@@ -11627,7 +11627,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventType: EventTypeEnum.ActionEffect,
             eventCondition: ["ActionId:40300"])]
 
-        public void Phase3_Initial_Position_Of_The_Boss_In_Phase4_P4时Boss的初始位置(Event @event, ScriptAccessory accessory)
+        public void Phase3_Initial_Position_Of_The_Boss_In_Phase4_P4æ—¶Bossçš„åˆå§‹ä½ç½®(Event @event, ScriptAccessory accessory)
         {
 
             if (parse!=32)
@@ -11675,14 +11675,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             if (Enable_Text_Prompts)
             {
 
-                if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                 {
 
-                    accessory.Method.TextInfo(((inTheNorth) ? ("Boss即将出现在正北") : ("Boss即将出现在正南")), 7250);
+                    accessory.Method.TextInfo(((inTheNorth) ? ("Bosså³å°†å‡ºçŽ°åœ¨æ­£åŒ—") : ("Bosså³å°†å‡ºçŽ°åœ¨æ­£å—")), 7250);
 
                 }
 
-                if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                 {
 
                     accessory.Method.TextInfo(((inTheNorth) ? ("The Boss will appear in the north") : ("The Boss will appear in the south")), 7250);
@@ -11694,15 +11694,15 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             if (Enable_Vanilla_TTS || Enable_Daily_Routines_TTS)
             {
 
-                if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                 {
 
-                    accessory.TTS($"{((inTheNorth) ? ("Boss即将出现在正北") : ("Boss即将出现在正南"))}",
+                    accessory.TTS($"{((inTheNorth) ? ("Bosså³å°†å‡ºçŽ°åœ¨æ­£åŒ—") : ("Bosså³å°†å‡ºçŽ°åœ¨æ­£å—"))}",
                         Enable_Vanilla_TTS, Enable_Daily_Routines_TTS);
 
                 }
 
-                if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                 {
 
                     accessory.TTS(
@@ -11726,7 +11726,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                     break;
                 }
             }
-            if (Phase3_Strat_Of_The_First_Half == Phase3_Strats_Of_The_First_Half.Moogle_莫古力_莫灵喵与MMW)
+            if (Phase3_Strat_Of_The_First_Half == Phase3_Strats_Of_The_First_Half.Moogle_èŽ«å¤åŠ›_èŽ«çµå–µä¸ŽMMW)
             {
                 //Short Fire
                 if (P3FireBuff[myPartyIndex] == 1)
@@ -11793,7 +11793,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
         [ScriptMethod(name: "----- Phase 4 ----- (No actual meaning for this toggle)",
             eventType: EventTypeEnum.NpcYell,
             eventCondition: ["Send these, the homeless, tempest-tost to me",
-                            "送来那些无家可归，被风吹雨淋的人"])]
+                            "é€æ¥é‚£äº›æ— å®¶å¯å½’ï¼Œè¢«é£Žå¹é›¨æ·‹çš„äºº"])]
 
         public void Phase4_Placeholder(Event @event, ScriptAccessory accessory) { }
 
@@ -11826,20 +11826,20 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventType: EventTypeEnum.ActionEffect,
             eventCondition: ["ActionId:40246"])]
 
-        public void Phase4_Prompt_Before_Akh_Rhai_天光轮回前提示(Event @event, ScriptAccessory accessory)
+        public void Phase4_Prompt_Before_Akh_Rhai_å¤©å…‰è½®å›žå‰æç¤º(Event @event, ScriptAccessory accessory)
         {
 
             if (Enable_Text_Prompts)
             {
 
-                if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                 {
 
-                    accessory.Method.TextInfo("集合并远离未来的碎片", 9500);
+                    accessory.Method.TextInfo("é›†åˆå¹¶è¿œç¦»æœªæ¥çš„ç¢Žç‰‡", 9500);
 
                 }
 
-                if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                 {
 
                     accessory.Method.TextInfo("Get together and stay away from Fragment of Fate", 9500);
@@ -11851,14 +11851,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             if (Enable_Vanilla_TTS || Enable_Daily_Routines_TTS)
             {
 
-                if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                 {
 
-                    accessory.TTS("集合并远离未来的碎片", Enable_Vanilla_TTS, Enable_Daily_Routines_TTS);
+                    accessory.TTS("é›†åˆå¹¶è¿œç¦»æœªæ¥çš„ç¢Žç‰‡", Enable_Vanilla_TTS, Enable_Daily_Routines_TTS);
 
                 }
 
-                if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                 {
 
                     accessory.TTS("Get together and stay away from Fragment of Fate", Enable_Vanilla_TTS, Enable_Daily_Routines_TTS);
@@ -11873,20 +11873,20 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventType: EventTypeEnum.ActionEffect,
             eventCondition: ["ActionId:40186"])]
 
-        public void Phase4_Prompt_To_Dodge_Akh_Rhai_天光轮回躲避提示(Event @event, ScriptAccessory accessory)
+        public void Phase4_Prompt_To_Dodge_Akh_Rhai_å¤©å…‰è½®å›žèº²é¿æç¤º(Event @event, ScriptAccessory accessory)
         {
 
             if (Enable_Text_Prompts)
             {
 
-                if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                 {
 
-                    accessory.Method.TextInfo("跑！", 3000);
+                    accessory.Method.TextInfo("è·‘ï¼", 3000);
 
                 }
 
-                if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                 {
 
                     accessory.Method.TextInfo("Run!", 3000);
@@ -11898,14 +11898,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             if (Enable_Vanilla_TTS || Enable_Daily_Routines_TTS)
             {
 
-                if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                 {
 
-                    accessory.TTS("跑！", Enable_Vanilla_TTS, Enable_Daily_Routines_TTS);
+                    accessory.TTS("è·‘ï¼", Enable_Vanilla_TTS, Enable_Daily_Routines_TTS);
 
                 }
 
-                if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                 {
 
                     accessory.TTS("Run!", Enable_Vanilla_TTS, Enable_Daily_Routines_TTS);
@@ -11931,7 +11931,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventType: EventTypeEnum.StartCasting,
             eventCondition: ["ActionId:40239"])]
 
-        public void Phase4_Initial_Position_Before_Darklit_Dragonsong_暗光龙诗前预站位(Event @event, ScriptAccessory accessory)
+        public void Phase4_Initial_Position_Before_Darklit_Dragonsong_æš—å…‰é¾™è¯—å‰é¢„ç«™ä½(Event @event, ScriptAccessory accessory)
         {
 
             if (parse!=41
@@ -12134,7 +12134,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             }
             var ii = idles.IndexOf(idleStack);
 
-            if (Phase4_Strat_Of_The_First_Half == Phase4_Strats_Of_The_First_Half.Double_Swaps_Baiting_First_先引导再双换)
+            if (Phase4_Strat_Of_The_First_Half == Phase4_Strats_Of_The_First_Half.Double_Swaps_Baiting_First_å…ˆå¼•å¯¼å†åŒæ¢)
             {
                 if (upGroup.Contains(tetherStack))
                 {
@@ -12173,7 +12173,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                     }
                 }
             }
-            if (Phase4_Strat_Of_The_First_Half == Phase4_Strats_Of_The_First_Half.Single_Swap_Baiting_After_先单换再引导_莫灵喵与MMW || Phase4_Strat_Of_The_First_Half == Phase4_Strats_Of_The_First_Half.Single_Swap_Baiting_First_先引导再单换)
+            if (Phase4_Strat_Of_The_First_Half == Phase4_Strats_Of_The_First_Half.Single_Swap_Baiting_After_å…ˆå•æ¢å†å¼•å¯¼_èŽ«çµå–µä¸ŽMMW || Phase4_Strat_Of_The_First_Half == Phase4_Strats_Of_The_First_Half.Single_Swap_Baiting_First_å…ˆå¼•å¯¼å†å•æ¢)
             {
                 if (upGroup.Contains(tetherStack))
                 {
@@ -12309,14 +12309,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
         {
             if (parse!=42) return;
             if (P4Tether[accessory.Data.PartyList.IndexOf(accessory.Data.Me)] == -1) return;
-            if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+            if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
             {
-                if (Enable_Text_Prompts) accessory.Method.TextInfo("线未消失,保持距离", 1500);
-                accessory.TTS($"线未消失,保持距离",
+                if (Enable_Text_Prompts) accessory.Method.TextInfo("çº¿æœªæ¶ˆå¤±,ä¿æŒè·ç¦»", 1500);
+                accessory.TTS($"çº¿æœªæ¶ˆå¤±,ä¿æŒè·ç¦»",
                     Enable_Vanilla_TTS, Enable_Daily_Routines_TTS);
             }
 
-            if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+            if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
             {
                 if (Enable_Text_Prompts) accessory.Method.TextInfo("The tether is still, keep your distance", 1500);
                 accessory.TTS($"The tether is still, keep your distance",
@@ -12330,7 +12330,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
             if (!ParseObjectId(@event["SourceId"], out var sid)) return;
             if (sid != accessory.Data.Me) return;
-            //accessory.Log.Debug("线");
+            //accessory.Log.Debug("çº¿");
             
             System.Threading.Thread.MemoryBarrier();
             
@@ -12417,7 +12417,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             System.Threading.Thread.MemoryBarrier();
             
             Vector3 dealpos = new();
-            if (Phase4_Strat_Of_The_First_Half == Phase4_Strats_Of_The_First_Half.Double_Swaps_Baiting_First_先引导再双换 || Phase4_Strat_Of_The_First_Half == Phase4_Strats_Of_The_First_Half.Single_Swap_Baiting_First_先引导再单换)
+            if (Phase4_Strat_Of_The_First_Half == Phase4_Strats_Of_The_First_Half.Double_Swaps_Baiting_First_å…ˆå¼•å¯¼å†åŒæ¢ || Phase4_Strat_Of_The_First_Half == Phase4_Strats_Of_The_First_Half.Single_Swap_Baiting_First_å…ˆå¼•å¯¼å†å•æ¢)
             {
                 List<int> idles = [];
                 for (int i = 0; i < 8; i++)
@@ -12437,7 +12437,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                     3 => new(104.2f, 0, 102.0f),
                 };
             }
-            if (Phase4_Strat_Of_The_First_Half == Phase4_Strats_Of_The_First_Half.Single_Swap_Baiting_After_先单换再引导_莫灵喵与MMW)
+            if (Phase4_Strat_Of_The_First_Half == Phase4_Strats_Of_The_First_Half.Single_Swap_Baiting_After_å…ˆå•æ¢å†å¼•å¯¼_èŽ«çµå–µä¸ŽMMW)
             {
                 var tIndex = P4Tether[0] == -1 ? 1 : 0;
                 var nIndex = P4Tether[2] == -1 ? 3 : 2;
@@ -12639,7 +12639,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 }
             }
             var ii = idles.IndexOf(idleStack);
-            if (Phase4_Strat_Of_The_First_Half == Phase4_Strats_Of_The_First_Half.Double_Swaps_Baiting_First_先引导再双换)
+            if (Phase4_Strat_Of_The_First_Half == Phase4_Strats_Of_The_First_Half.Double_Swaps_Baiting_First_å…ˆå¼•å¯¼å†åŒæ¢)
             {
                 if (upGroup.Contains(tetherStack))
                 {
@@ -12678,7 +12678,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                     }
                 }
             }
-            if (Phase4_Strat_Of_The_First_Half == Phase4_Strats_Of_The_First_Half.Single_Swap_Baiting_After_先单换再引导_莫灵喵与MMW || Phase4_Strat_Of_The_First_Half == Phase4_Strats_Of_The_First_Half.Single_Swap_Baiting_First_先引导再单换)
+            if (Phase4_Strat_Of_The_First_Half == Phase4_Strats_Of_The_First_Half.Single_Swap_Baiting_After_å…ˆå•æ¢å†å¼•å¯¼_èŽ«çµå–µä¸ŽMMW || Phase4_Strat_Of_The_First_Half == Phase4_Strats_Of_The_First_Half.Single_Swap_Baiting_First_å…ˆå¼•å¯¼å†å•æ¢)
             {
                 if (upGroup.Contains(tetherStack))
                 {
@@ -12955,9 +12955,9 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             List<int> pdList = Phase4_Priority_Of_The_Players_With_Wyrmclaw switch
             {
                 // Smaller number means higher priority (more left), default is THD order.
-                Phase4_Priorities_Of_The_Players_With_Wyrmclaw.In_THD_Order_按THD顺序_莫灵喵 => [0, 1, 2, 3, 4, 5, 6, 7],
-                Phase4_Priorities_Of_The_Players_With_Wyrmclaw.In_HTD_Order_按HTD顺序_MMW => [2, 3, 0, 1, 4, 5, 6, 7],
-                Phase4_Priorities_Of_The_Players_With_Wyrmclaw.In_H1TDH2_Order_按H1TDH2顺序 => [1, 2, 0, 7, 3, 4, 5, 6],
+                Phase4_Priorities_Of_The_Players_With_Wyrmclaw.In_THD_Order_æŒ‰THDé¡ºåº_èŽ«çµå–µ => [0, 1, 2, 3, 4, 5, 6, 7],
+                Phase4_Priorities_Of_The_Players_With_Wyrmclaw.In_HTD_Order_æŒ‰HTDé¡ºåº_MMW => [2, 3, 0, 1, 4, 5, 6, 7],
+                Phase4_Priorities_Of_The_Players_With_Wyrmclaw.In_H1TDH2_Order_æŒ‰H1TDH2é¡ºåº => [1, 2, 0, 7, 3, 4, 5, 6],
                 _ => [2, 3, 0, 1, 4, 5, 6, 7],
             };
             _pd.AddPriorities(pdList);
@@ -13168,7 +13168,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             userControl: false,
             suppress: 2000)]
 
-        public void Phase4_Mark_Teammates_During_The_Second_Half_二运标记队友(Event @event, ScriptAccessory accessory)
+        public void Phase4_Mark_Teammates_During_The_Second_Half_äºŒè¿æ ‡è®°é˜Ÿå‹(Event @event, ScriptAccessory accessory)
         {
 
             if (parse!=43)
@@ -13195,13 +13195,13 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             List<int> temporaryOrder=[0,1,2,3,4,5,6,7];
             string debugOutput = "";
             
-            if(Phase4_Player_Type_To_Be_Marked==Phase4_Player_Types_To_Be_Marked.Both_The_Debuffs_Wyrmclaw_And_Wyrmfang_圣龙爪圣龙牙两种都标记
+            if(Phase4_Player_Type_To_Be_Marked==Phase4_Player_Types_To_Be_Marked.Both_The_Debuffs_Wyrmclaw_And_Wyrmfang_åœ£é¾™çˆªåœ£é¾™ç‰™ä¸¤ç§éƒ½æ ‡è®°
                ||
-               Phase4_Player_Type_To_Be_Marked==Phase4_Player_Types_To_Be_Marked.Only_Wyrmfang_The_Blue_Debuff_仅圣龙牙蓝色Debuff) {
+               Phase4_Player_Type_To_Be_Marked==Phase4_Player_Types_To_Be_Marked.Only_Wyrmfang_The_Blue_Debuff_ä»…åœ£é¾™ç‰™è“è‰²Debuff) {
 
-            if (Phase4_Logic_Of_Marking_Teammates_With_Wyrmfang == Phase4_Logics_Of_Marking_Teammates_With_Wyrmfang.According_To_Debuffs_1234_From_East_To_West_根据Debuff从东到西1234
+            if (Phase4_Logic_Of_Marking_Teammates_With_Wyrmfang == Phase4_Logics_Of_Marking_Teammates_With_Wyrmfang.According_To_Debuffs_1234_From_East_To_West_æ ¹æ®Debuffä»Žä¸œåˆ°è¥¿1234
                 ||
-                Phase4_Logic_Of_Marking_Teammates_With_Wyrmfang==Phase4_Logics_Of_Marking_Teammates_With_Wyrmfang.According_To_Debuffs_1342_From_East_To_West_根据Debuff从东到西1342)
+                Phase4_Logic_Of_Marking_Teammates_With_Wyrmfang==Phase4_Logics_Of_Marking_Teammates_With_Wyrmfang.According_To_Debuffs_1342_From_East_To_West_æ ¹æ®Debuffä»Žä¸œåˆ°è¥¿1342)
             {
 
                 for (int i = 0; i < 8; ++i)
@@ -13255,7 +13255,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
             }
 
-            if (Phase4_Logic_Of_Marking_Teammates_With_Wyrmfang == Phase4_Logics_Of_Marking_Teammates_With_Wyrmfang.According_To_The_Priority_THD_根据THD优先级)
+            if (Phase4_Logic_Of_Marking_Teammates_With_Wyrmfang == Phase4_Logics_Of_Marking_Teammates_With_Wyrmfang.According_To_The_Priority_THD_æ ¹æ®THDä¼˜å…ˆçº§)
             {
 
                 for (int i = 0, j = 0; i < 8; ++i)
@@ -13276,7 +13276,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
             }
 
-            if (Phase4_Logic_Of_Marking_Teammates_With_Wyrmfang == Phase4_Logics_Of_Marking_Teammates_With_Wyrmfang.According_To_The_Priority_HTD_根据HTD优先级)
+            if (Phase4_Logic_Of_Marking_Teammates_With_Wyrmfang == Phase4_Logics_Of_Marking_Teammates_With_Wyrmfang.According_To_The_Priority_HTD_æ ¹æ®HTDä¼˜å…ˆçº§)
             {
 
                 temporaryOrder = [2, 3, 0, 1, 4, 5, 6, 7];
@@ -13299,7 +13299,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
             }
 
-            if (Phase4_Logic_Of_Marking_Teammates_With_Wyrmfang == Phase4_Logics_Of_Marking_Teammates_With_Wyrmfang.According_To_The_Priority_H1TDH2_根据H1TDH2优先级)
+            if (Phase4_Logic_Of_Marking_Teammates_With_Wyrmfang == Phase4_Logics_Of_Marking_Teammates_With_Wyrmfang.According_To_The_Priority_H1TDH2_æ ¹æ®H1TDH2ä¼˜å…ˆçº§)
             {
 
                 temporaryOrder = [2, 0, 1, 4, 5, 6, 7, 3];
@@ -13324,25 +13324,25 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
             }
             
-            if(Phase4_Player_Type_To_Be_Marked==Phase4_Player_Types_To_Be_Marked.Both_The_Debuffs_Wyrmclaw_And_Wyrmfang_圣龙爪圣龙牙两种都标记
+            if(Phase4_Player_Type_To_Be_Marked==Phase4_Player_Types_To_Be_Marked.Both_The_Debuffs_Wyrmclaw_And_Wyrmfang_åœ£é¾™çˆªåœ£é¾™ç‰™ä¸¤ç§éƒ½æ ‡è®°
                ||
-               Phase4_Player_Type_To_Be_Marked==Phase4_Player_Types_To_Be_Marked.Only_Wyrmclaw_The_Red_Debuff_仅圣龙爪红色Debuff) {
+               Phase4_Player_Type_To_Be_Marked==Phase4_Player_Types_To_Be_Marked.Only_Wyrmclaw_The_Red_Debuff_ä»…åœ£é¾™çˆªçº¢è‰²Debuff) {
 
                 temporaryOrder=[0,1,2,3,4,5,6,7];
 
-                if(Phase4_Priority_Of_The_Players_With_Wyrmclaw==Phase4_Priorities_Of_The_Players_With_Wyrmclaw.In_THD_Order_按THD顺序_莫灵喵) {
+                if(Phase4_Priority_Of_The_Players_With_Wyrmclaw==Phase4_Priorities_Of_The_Players_With_Wyrmclaw.In_THD_Order_æŒ‰THDé¡ºåº_èŽ«çµå–µ) {
                     
                     temporaryOrder=[0,1,2,3,4,5,6,7];
                     
                 }
                 
-                if(Phase4_Priority_Of_The_Players_With_Wyrmclaw==Phase4_Priorities_Of_The_Players_With_Wyrmclaw.In_HTD_Order_按HTD顺序_MMW) {
+                if(Phase4_Priority_Of_The_Players_With_Wyrmclaw==Phase4_Priorities_Of_The_Players_With_Wyrmclaw.In_HTD_Order_æŒ‰HTDé¡ºåº_MMW) {
                     
                     temporaryOrder=[2,3,0,1,4,5,6,7];
                     
                 }
                 
-                if(Phase4_Priority_Of_The_Players_With_Wyrmclaw==Phase4_Priorities_Of_The_Players_With_Wyrmclaw.In_H1TDH2_Order_按H1TDH2顺序) {
+                if(Phase4_Priority_Of_The_Players_With_Wyrmclaw==Phase4_Priorities_Of_The_Players_With_Wyrmclaw.In_H1TDH2_Order_æŒ‰H1TDH2é¡ºåº) {
                     
                     temporaryOrder=[2,0,1,4,5,6,7,3];
                     
@@ -13351,14 +13351,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 List<MarkType> marksForShortWyrmclaw=[MarkType.Stop1,MarkType.Bind1];
                 List<MarkType> marksForLongWyrmclaw=[MarkType.Stop2,MarkType.Bind2];
 
-                if(Phase4_Logic_Of_Marking_Teammates_With_Wyrmclaw==Phase4_Logics_Of_Marking_Teammates_With_Wyrmclaw.Ignore1_And_Bind1_Go_West_禁止1和锁链1去西边_莫灵喵) {
+                if(Phase4_Logic_Of_Marking_Teammates_With_Wyrmclaw==Phase4_Logics_Of_Marking_Teammates_With_Wyrmclaw.Ignore1_And_Bind1_Go_West_ç¦æ­¢1å’Œé”é“¾1åŽ»è¥¿è¾¹_èŽ«çµå–µ) {
                     
                     marksForShortWyrmclaw=[MarkType.Stop1,MarkType.Stop2];
                     marksForLongWyrmclaw=[MarkType.Bind1,MarkType.Bind2];
                     
                 }
                 
-                if(Phase4_Logic_Of_Marking_Teammates_With_Wyrmclaw==Phase4_Logics_Of_Marking_Teammates_With_Wyrmclaw.Ignore1_And_Ignore2_Go_West_禁止1和禁止2去西边) {
+                if(Phase4_Logic_Of_Marking_Teammates_With_Wyrmclaw==Phase4_Logics_Of_Marking_Teammates_With_Wyrmclaw.Ignore1_And_Ignore2_Go_West_ç¦æ­¢1å’Œç¦æ­¢2åŽ»è¥¿è¾¹) {
                     
                     marksForShortWyrmclaw=[MarkType.Stop1,MarkType.Bind1];
                     marksForLongWyrmclaw=[MarkType.Stop2,MarkType.Bind2];
@@ -13408,27 +13408,27 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
         private int phase4_getMarkIndex(Phase4_Relative_Positions_Of_Residues currentPosition) {
 
-            if(Phase4_Logic_Of_Marking_Teammates_With_Wyrmfang==Phase4_Logics_Of_Marking_Teammates_With_Wyrmfang.According_To_Debuffs_1234_From_East_To_West_根据Debuff从东到西1234) {
+            if(Phase4_Logic_Of_Marking_Teammates_With_Wyrmfang==Phase4_Logics_Of_Marking_Teammates_With_Wyrmfang.According_To_Debuffs_1234_From_East_To_West_æ ¹æ®Debuffä»Žä¸œåˆ°è¥¿1234) {
                 
-                if(currentPosition==Phase4_Relative_Positions_Of_Residues.Eastmost_最东侧) {
+                if(currentPosition==Phase4_Relative_Positions_Of_Residues.Eastmost_æœ€ä¸œä¾§) {
 
                     return 0;
 
                 }
 
-                if(currentPosition==Phase4_Relative_Positions_Of_Residues.About_East_次东侧) {
+                if(currentPosition==Phase4_Relative_Positions_Of_Residues.About_East_æ¬¡ä¸œä¾§) {
 
                     return 1;
 
                 }
 
-                if(currentPosition==Phase4_Relative_Positions_Of_Residues.About_West_次西侧) {
+                if(currentPosition==Phase4_Relative_Positions_Of_Residues.About_West_æ¬¡è¥¿ä¾§) {
 
                     return 2;
 
                 }
 
-                if(currentPosition==Phase4_Relative_Positions_Of_Residues.Westmost_最西侧) {
+                if(currentPosition==Phase4_Relative_Positions_Of_Residues.Westmost_æœ€è¥¿ä¾§) {
 
                     return 3;
 
@@ -13436,27 +13436,27 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 
             }
             
-            if(Phase4_Logic_Of_Marking_Teammates_With_Wyrmfang==Phase4_Logics_Of_Marking_Teammates_With_Wyrmfang.According_To_Debuffs_1342_From_East_To_West_根据Debuff从东到西1342) {
+            if(Phase4_Logic_Of_Marking_Teammates_With_Wyrmfang==Phase4_Logics_Of_Marking_Teammates_With_Wyrmfang.According_To_Debuffs_1342_From_East_To_West_æ ¹æ®Debuffä»Žä¸œåˆ°è¥¿1342) {
                 
-                if(currentPosition==Phase4_Relative_Positions_Of_Residues.Eastmost_最东侧) {
+                if(currentPosition==Phase4_Relative_Positions_Of_Residues.Eastmost_æœ€ä¸œä¾§) {
 
                     return 0;
 
                 }
 
-                if(currentPosition==Phase4_Relative_Positions_Of_Residues.About_East_次东侧) {
+                if(currentPosition==Phase4_Relative_Positions_Of_Residues.About_East_æ¬¡ä¸œä¾§) {
 
                     return 2;
 
                 }
 
-                if(currentPosition==Phase4_Relative_Positions_Of_Residues.About_West_次西侧) {
+                if(currentPosition==Phase4_Relative_Positions_Of_Residues.About_West_æ¬¡è¥¿ä¾§) {
 
                     return 3;
 
                 }
 
-                if(currentPosition==Phase4_Relative_Positions_Of_Residues.Westmost_最西侧) {
+                if(currentPosition==Phase4_Relative_Positions_Of_Residues.Westmost_æœ€è¥¿ä¾§) {
 
                     return 1;
 
@@ -13574,14 +13574,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             {
                 bool isHigh = true;
 
-                if (Phase4_Priority_Of_The_Players_With_Wyrmclaw == Phase4_Priorities_Of_The_Players_With_Wyrmclaw.In_THD_Order_按THD顺序_莫灵喵)
+                if (Phase4_Priority_Of_The_Players_With_Wyrmclaw == Phase4_Priorities_Of_The_Players_With_Wyrmclaw.In_THD_Order_æŒ‰THDé¡ºåº_èŽ«çµå–µ)
                 {
 
                     isHigh = (P4ClawBuff.IndexOf(1) == myIndex);
 
                 }
 
-                if (Phase4_Priority_Of_The_Players_With_Wyrmclaw == Phase4_Priorities_Of_The_Players_With_Wyrmclaw.In_HTD_Order_按HTD顺序_MMW)
+                if (Phase4_Priority_Of_The_Players_With_Wyrmclaw == Phase4_Priorities_Of_The_Players_With_Wyrmclaw.In_HTD_Order_æŒ‰HTDé¡ºåº_MMW)
                 {
 
                     List<int> temporaryPriority = [2, 3, 0, 1, 4, 5, 6, 7];
@@ -13614,7 +13614,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
                 }
 
-                if (Phase4_Priority_Of_The_Players_With_Wyrmclaw == Phase4_Priorities_Of_The_Players_With_Wyrmclaw.In_H1TDH2_Order_按H1TDH2顺序)
+                if (Phase4_Priority_Of_The_Players_With_Wyrmclaw == Phase4_Priorities_Of_The_Players_With_Wyrmclaw.In_H1TDH2_Order_æŒ‰H1TDH2é¡ºåº)
                 {
 
                     List<int> temporaryPriority = [2, 0, 1, 4, 5, 6, 7, 3];
@@ -13713,14 +13713,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             {
                 bool isHigh = true;
 
-                if (Phase4_Priority_Of_The_Players_With_Wyrmclaw == Phase4_Priorities_Of_The_Players_With_Wyrmclaw.In_THD_Order_按THD顺序_莫灵喵)
+                if (Phase4_Priority_Of_The_Players_With_Wyrmclaw == Phase4_Priorities_Of_The_Players_With_Wyrmclaw.In_THD_Order_æŒ‰THDé¡ºåº_èŽ«çµå–µ)
                 {
 
                     isHigh = (P4ClawBuff.IndexOf(2) == myIndex);
 
                 }
 
-                if (Phase4_Priority_Of_The_Players_With_Wyrmclaw == Phase4_Priorities_Of_The_Players_With_Wyrmclaw.In_HTD_Order_按HTD顺序_MMW)
+                if (Phase4_Priority_Of_The_Players_With_Wyrmclaw == Phase4_Priorities_Of_The_Players_With_Wyrmclaw.In_HTD_Order_æŒ‰HTDé¡ºåº_MMW)
                 {
 
                     List<int> temporaryPriority = [2, 3, 0, 1, 4, 5, 6, 7];
@@ -13753,7 +13753,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
                 }
 
-                if (Phase4_Priority_Of_The_Players_With_Wyrmclaw == Phase4_Priorities_Of_The_Players_With_Wyrmclaw.In_H1TDH2_Order_按H1TDH2顺序)
+                if (Phase4_Priority_Of_The_Players_With_Wyrmclaw == Phase4_Priorities_Of_The_Players_With_Wyrmclaw.In_H1TDH2_Order_æŒ‰H1TDH2é¡ºåº)
                 {
 
                     List<int> temporaryPriority = [2, 0, 1, 4, 5, 6, 7, 3];
@@ -13943,7 +13943,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             if (P4WaterPos.Count == 1) return;
             var myindex = accessory.Data.PartyList.IndexOf(accessory.Data.Me);
             Vector3 centre = new(100, 0, 100);
-            if (Phase4_Position_Before_Knockback == Phase4_Positions_Before_Knockback.Normal_正攻_莫灵喵与MMW)
+            if (Phase4_Position_Before_Knockback == Phase4_Positions_Before_Knockback.Normal_æ­£æ”»_èŽ«çµå–µä¸ŽMMW)
             {
                 var dir8 = PositionTo8Dir((P4WaterPos[0] + P4WaterPos[1]) / 2, centre) - 1;
                 Vector3 mtPos = new(107, 0, 88);
@@ -13999,7 +13999,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                     accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
                 }
             }
-            if (Phase4_Position_Before_Knockback == Phase4_Positions_Before_Knockback.Y_Formation_Japanese_PF_日服野队Y字队形)
+            if (Phase4_Position_Before_Knockback == Phase4_Positions_Before_Knockback.Y_Formation_Japanese_PF_æ—¥æœé‡Žé˜ŸYå­—é˜Ÿå½¢)
             {
                 Vector3 mtPos = P4WaterPos[1].Z < 100 ? new(92, 0, 90) : new(108, 0, 110);
                 Vector3 stPos = P4WaterPos[1].Z < 100 ? new(108, 0, 90) : new(92, 0, 110);
@@ -14049,7 +14049,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventCondition: ["DataId:17836"],
             userControl: false)]
 
-        public void Phase4_Acquire_IDs_Of_Drachen_Wanderers_获取圣龙气息ID(Event @event, ScriptAccessory accessory)
+        public void Phase4_Acquire_IDs_Of_Drachen_Wanderers_èŽ·å–åœ£é¾™æ°”æ¯ID(Event @event, ScriptAccessory accessory)
         {
 
             if (parse!=43)
@@ -14109,7 +14109,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventType: EventTypeEnum.AddCombatant,
             eventCondition: ["DataId:17836"])]
 
-        public void Phase4_Hitbox_Of_Drachen_Wanderers_圣龙气息碰撞箱(Event @event, ScriptAccessory accessory)
+        public void Phase4_Hitbox_Of_Drachen_Wanderers_åœ£é¾™æ°”æ¯ç¢°æ’žç®±(Event @event, ScriptAccessory accessory)
         {
 
             if (parse!=43)
@@ -14145,7 +14145,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventType: EventTypeEnum.AddCombatant,
             eventCondition: ["DataId:17836"])]
 
-        public void Phase4_Explosion_Range_Of_Drachen_Wanderers_圣龙气息爆炸范围(Event @event, ScriptAccessory accessory)
+        public void Phase4_Explosion_Range_Of_Drachen_Wanderers_åœ£é¾™æ°”æ¯çˆ†ç‚¸èŒƒå›´(Event @event, ScriptAccessory accessory)
         {
 
             if (parse!=43)
@@ -14195,7 +14195,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventCondition: ["DataId:17836"],
             userControl: false)]
 
-        public void Phase4_Remove_Hitboxes_And_Explosion_Ranges_Of_Drachen_Wanderers_移除圣龙气息碰撞箱与爆炸范围(Event @event, ScriptAccessory accessory)
+        public void Phase4_Remove_Hitboxes_And_Explosion_Ranges_Of_Drachen_Wanderers_ç§»é™¤åœ£é¾™æ°”æ¯ç¢°æ’žç®±ä¸Žçˆ†ç‚¸èŒƒå›´(Event @event, ScriptAccessory accessory)
         {
 
             if (parse!=43)
@@ -14228,7 +14228,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
         // Obviously, the method would not help if a player with the Wyrmfang debuff (the blue debuff) hits a Drachen Wanderer. However, that's already a wipe, so whatever.
         // Thanks to Cyf5119 for providing a Dalamud way to detect if the player is dead, so that the method would skip the StatusRemove events caused by death.
 
-        public void Phase4_Remove_Hitboxes_And_Explosion_Ranges_Of_Drachen_Wanderers_In_Advance_提前移除圣龙气息碰撞箱与爆炸范围(Event @event, ScriptAccessory accessory)
+        public void Phase4_Remove_Hitboxes_And_Explosion_Ranges_Of_Drachen_Wanderers_In_Advance_æå‰ç§»é™¤åœ£é¾™æ°”æ¯ç¢°æ’žç®±ä¸Žçˆ†ç‚¸èŒƒå›´(Event @event, ScriptAccessory accessory)
         {
 
             if (parse!=43)
@@ -14330,7 +14330,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventType: EventTypeEnum.ActionEffect,
             eventCondition: ["ActionId:regex:^(40252|40253)$"])]
 
-        public void Phase4_Tidal_Light_光之潮汐(Event @event, ScriptAccessory accessory)
+        public void Phase4_Tidal_Light_å…‰ä¹‹æ½®æ±(Event @event, ScriptAccessory accessory)
         {
 
             if (parse!=43)
@@ -14364,7 +14364,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventCondition: ["DataId:2014529"],
             userControl: false)]
 
-        public void Phase4_Determine_Relative_Positions_Of_Residues_确定白圈相对位置(Event @event, ScriptAccessory accessory)
+        public void Phase4_Determine_Relative_Positions_Of_Residues_ç¡®å®šç™½åœˆç›¸å¯¹ä½ç½®(Event @event, ScriptAccessory accessory)
         {
 
             if (parse!=43)
@@ -14473,7 +14473,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventType: EventTypeEnum.ActionEffect,
             eventCondition: ["ActionId:regex:^(40252|40253)$"])]
 
-        public void Phase4_Guidance_Of_Residues_白圈指路(Event @event, ScriptAccessory accessory)
+        public void Phase4_Guidance_Of_Residues_ç™½åœˆæŒ‡è·¯(Event @event, ScriptAccessory accessory)
         {
 
             if (parse!=43)
@@ -14497,7 +14497,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             if (Enable_Developer_Mode)
             {
 
-                if (Phase4_Logic_Of_Residue_Guidance == Phase4_Logics_Of_Residue_Guidance.According_To_Signs_On_Me_根据我身上的目标标记_莫灵喵和MMW)
+                if (Phase4_Logic_Of_Residue_Guidance == Phase4_Logics_Of_Residue_Guidance.According_To_Signs_On_Me_æ ¹æ®æˆ‘èº«ä¸Šçš„ç›®æ ‡æ ‡è®°_èŽ«çµå–µå’ŒMMW)
                 {
 
                     accessory.Method.SendChat($"""
@@ -14528,7 +14528,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
             }
 
-            if (relativePositionOfMyResidue != Phase4_Relative_Positions_Of_Residues.Unknown_未知
+            if (relativePositionOfMyResidue != Phase4_Relative_Positions_Of_Residues.Unknown_æœªçŸ¥
                &&
                idOfMyResidue != 0)
             {
@@ -14585,7 +14585,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventCondition: ["StatusID:3264"],
             userControl: false)]
 
-        public void Phase4_Remove_Guidance_Of_Residues_移除白圈指路(Event @event, ScriptAccessory accessory)
+        public void Phase4_Remove_Guidance_Of_Residues_ç§»é™¤ç™½åœˆæŒ‡è·¯(Event @event, ScriptAccessory accessory)
         {
 
             if (parse!=43)
@@ -14617,7 +14617,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventType: EventTypeEnum.ObjectChanged,
             eventCondition: ["DataId:2014529"])]
 
-        public void Phase4_Highlight_Of_Residues_白圈高亮(Event @event, ScriptAccessory accessory)
+        public void Phase4_Highlight_Of_Residues_ç™½åœˆé«˜äº®(Event @event, ScriptAccessory accessory)
         {
 
             if (parse!=43)
@@ -14660,7 +14660,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventCondition: ["DataId:2014529"],
             userControl: false)]
 
-        public void Phase4_Remove_Highlights_Of_Residues_移除白圈高亮(Event @event, ScriptAccessory accessory)
+        public void Phase4_Remove_Highlights_Of_Residues_ç§»é™¤ç™½åœˆé«˜äº®(Event @event, ScriptAccessory accessory)
         {
 
             if (parse!=43)
@@ -14707,7 +14707,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
         // The background and implementation are almost the same as the removal of Hitboxes and Explosion Ranges before.
         // Please refer to the comments following that method for details.
 
-        public void Phase4_Remove_Highlights_Of_Residues_In_Advance_提前移除白圈高亮(Event @event, ScriptAccessory accessory)
+        public void Phase4_Remove_Highlights_Of_Residues_In_Advance_æå‰ç§»é™¤ç™½åœˆé«˜äº®(Event @event, ScriptAccessory accessory)
         {
 
             if (parse!=43)
@@ -14793,7 +14793,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventType: EventTypeEnum.Marker,
             userControl: false)]
 
-        public void Phase4_Record_Signs_On_Party_Members_记录小队队员的目标标记(Event @event, ScriptAccessory accessory)
+        public void Phase4_Record_Signs_On_Party_Members_è®°å½•å°é˜Ÿé˜Ÿå‘˜çš„ç›®æ ‡æ ‡è®°(Event @event, ScriptAccessory accessory)
         {
 
             if (parse!=43)
@@ -14852,7 +14852,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             if (currentIndex < 0 || currentIndex > 7)
             {
 
-                return Phase4_Relative_Positions_Of_Residues.Unknown_未知;
+                return Phase4_Relative_Positions_Of_Residues.Unknown_æœªçŸ¥;
 
             }
 
@@ -14860,11 +14860,11 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             {
                 // 1 stands for short Wyrmclaw (the red debuff), 2 stands for long Wyrmclaw (also the red debuff).
 
-                return Phase4_Relative_Positions_Of_Residues.Unknown_未知;
+                return Phase4_Relative_Positions_Of_Residues.Unknown_æœªçŸ¥;
 
             }
 
-            if (Phase4_Logic_Of_Residue_Guidance == Phase4_Logics_Of_Residue_Guidance.According_To_Debuffs_根据Debuff)
+            if (Phase4_Logic_Of_Residue_Guidance == Phase4_Logics_Of_Residue_Guidance.According_To_Debuffs_æ ¹æ®Debuff)
             {
 
                 if (P4ClawBuff[currentIndex] == 3)
@@ -14907,7 +14907,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
             }
 
-            if (Phase4_Logic_Of_Residue_Guidance == Phase4_Logics_Of_Residue_Guidance.According_To_Signs_On_Me_根据我身上的目标标记_莫灵喵和MMW)
+            if (Phase4_Logic_Of_Residue_Guidance == Phase4_Logics_Of_Residue_Guidance.According_To_Signs_On_Me_æ ¹æ®æˆ‘èº«ä¸Šçš„ç›®æ ‡æ ‡è®°_èŽ«çµå–µå’ŒMMW)
             {
 
 
@@ -14946,7 +14946,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
             }
 
-            return Phase4_Relative_Positions_Of_Residues.Unknown_未知;
+            return Phase4_Relative_Positions_Of_Residues.Unknown_æœªçŸ¥;
             // Just a placeholder and should never be reached.
 
         }
@@ -14957,35 +14957,35 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             switch (relativePosition)
             {
 
-                case (Phase4_Relative_Positions_Of_Residues.Eastmost_最东侧):
+                case (Phase4_Relative_Positions_Of_Residues.Eastmost_æœ€ä¸œä¾§):
                     {
 
                         return phase4_residueIdsFromEastToWest[0];
 
                     }
 
-                case (Phase4_Relative_Positions_Of_Residues.About_East_次东侧):
+                case (Phase4_Relative_Positions_Of_Residues.About_East_æ¬¡ä¸œä¾§):
                     {
 
                         return phase4_residueIdsFromEastToWest[1];
 
                     }
 
-                case (Phase4_Relative_Positions_Of_Residues.About_West_次西侧):
+                case (Phase4_Relative_Positions_Of_Residues.About_West_æ¬¡è¥¿ä¾§):
                     {
 
                         return phase4_residueIdsFromEastToWest[2];
 
                     }
 
-                case (Phase4_Relative_Positions_Of_Residues.Westmost_最西侧):
+                case (Phase4_Relative_Positions_Of_Residues.Westmost_æœ€è¥¿ä¾§):
                     {
 
                         return phase4_residueIdsFromEastToWest[3];
 
                     }
 
-                case (Phase4_Relative_Positions_Of_Residues.Unknown_未知):
+                case (Phase4_Relative_Positions_Of_Residues.Unknown_æœªçŸ¥):
                     {
 
                         return 0;
@@ -15010,17 +15010,17 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             switch (relativePosition)
             {
 
-                case (Phase4_Relative_Positions_Of_Residues.Eastmost_最东侧):
+                case (Phase4_Relative_Positions_Of_Residues.Eastmost_æœ€ä¸œä¾§):
                     {
 
-                        if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                        if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                         {
 
-                            return "最左/最东";
+                            return "æœ€å·¦/æœ€ä¸œ";
 
                         }
 
-                        if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                        if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                         {
 
                             return "Leftmost/Eastmost";
@@ -15032,17 +15032,17 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
                     }
 
-                case (Phase4_Relative_Positions_Of_Residues.About_East_次东侧):
+                case (Phase4_Relative_Positions_Of_Residues.About_East_æ¬¡ä¸œä¾§):
                     {
 
-                        if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                        if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                         {
 
-                            return "次左/次东";
+                            return "æ¬¡å·¦/æ¬¡ä¸œ";
 
                         }
 
-                        if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                        if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                         {
 
                             return "About left/About east";
@@ -15054,17 +15054,17 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
                     }
 
-                case (Phase4_Relative_Positions_Of_Residues.About_West_次西侧):
+                case (Phase4_Relative_Positions_Of_Residues.About_West_æ¬¡è¥¿ä¾§):
                     {
 
-                        if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                        if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                         {
 
-                            return "次右/次西";
+                            return "æ¬¡å³/æ¬¡è¥¿";
 
                         }
 
-                        if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                        if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                         {
 
                             return "About right/About west";
@@ -15076,17 +15076,17 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
                     }
 
-                case (Phase4_Relative_Positions_Of_Residues.Westmost_最西侧):
+                case (Phase4_Relative_Positions_Of_Residues.Westmost_æœ€è¥¿ä¾§):
                     {
 
-                        if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                        if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                         {
 
-                            return "最右/最西";
+                            return "æœ€å³/æœ€è¥¿";
 
                         }
 
-                        if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                        if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                         {
 
                             return "Rightmost/Westmost";
@@ -15098,7 +15098,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
                     }
 
-                case (Phase4_Relative_Positions_Of_Residues.Unknown_未知):
+                case (Phase4_Relative_Positions_Of_Residues.Unknown_æœªçŸ¥):
                     {
 
                         return "";
@@ -15123,7 +15123,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             userControl: false,
             suppress: 10000)]
 
-        public void Phase2_Reset_Semaphores_After_Crystallize_Time_时间结晶后重置信号灯(Event @event, ScriptAccessory accessory)
+        public void Phase2_Reset_Semaphores_After_Crystallize_Time_æ—¶é—´ç»“æ™¶åŽé‡ç½®ä¿¡å·ç¯(Event @event, ScriptAccessory accessory)
         {
 
             if (parse!=43)
@@ -15152,7 +15152,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
         [ScriptMethod(name: "----- Phase 5 ----- (No actual meaning for this toggle)",
             eventType: EventTypeEnum.NpcYell,
             eventCondition: ["I lift my lamp beside the golden door!",
-                            "我在金门旁为他们将灯举起!"])]
+                            "æˆ‘åœ¨é‡‘é—¨æ—ä¸ºä»–ä»¬å°†ç¯ä¸¾èµ·!"])]
 
         public void Phase5_Placeholder(Event @event, ScriptAccessory accessory) { }
 
@@ -15161,7 +15161,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventCondition: ["DataId:17839"],
             userControl: false)]
 
-        public void Phase5_Initialization_初始化(Event @event, ScriptAccessory accessory)
+        public void Phase5_Initialization_åˆå§‹åŒ–(Event @event, ScriptAccessory accessory)
         {
 
             phase5_bossId = @event["SourceId"];
@@ -15180,7 +15180,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventCondition: ["DataId:17839"],
             userControl: false)]
 
-        public void Phase5_Destruction_析构(Event @event, ScriptAccessory accessory)
+        public void Phase5_Destruction_æžæž„(Event @event, ScriptAccessory accessory)
         {
 
             isInPhase5 = false;
@@ -15247,7 +15247,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
         //1st fire glows effect
         [ScriptMethod(name: "Phase5 Guidance Of Fulgent Blade", eventType: EventTypeEnum.ObjectEffect, eventCondition: ["Id2:16"])]
-        public void Phase5_Guidance_Of_Fulgent_Blade_璀璨之刃指路(Event @event, ScriptAccessory accessory)
+        public void Phase5_Guidance_Of_Fulgent_Blade_ç’€ç’¨ä¹‹åˆƒæŒ‡è·¯(Event @event, ScriptAccessory accessory)
         {
             if (Phase == "P5FulgentBladeCalcComplete")//restrict group
              {
@@ -15400,7 +15400,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventType: EventTypeEnum.StartCasting,
             eventCondition: ["ActionId:40310"])]
 
-        public void Phase5_Boss_Central_Axis_After_Fulgent_Blade_璀璨之刃后Boss中轴线(Event @event, ScriptAccessory accessory)
+        public void Phase5_Boss_Central_Axis_After_Fulgent_Blade_ç’€ç’¨ä¹‹åˆƒåŽBossä¸­è½´çº¿(Event @event, ScriptAccessory accessory)
         {
 
             if (!isInPhase5)
@@ -15444,7 +15444,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventType: EventTypeEnum.StartCasting,
             eventCondition: ["ActionId:40310"])]
 
-        public void Phase5_Side_To_Stack_After_Fulgent_Blade_璀璨之刃后的分摊侧(Event @event, ScriptAccessory accessory)
+        public void Phase5_Side_To_Stack_After_Fulgent_Blade_ç’€ç’¨ä¹‹åˆƒåŽçš„åˆ†æ‘Šä¾§(Event @event, ScriptAccessory accessory)
         {
 
             if (!isInPhase5)
@@ -15561,14 +15561,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             if (Enable_Text_Prompts)
             {
 
-                if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                 {
 
-                    accessory.Method.TextInfo(((goLeft) ? ("左侧分摊") : ("右侧分摊")), 9000);
+                    accessory.Method.TextInfo(((goLeft) ? ("å·¦ä¾§åˆ†æ‘Š") : ("å³ä¾§åˆ†æ‘Š")), 9000);
 
                 }
 
-                if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                 {
 
                     accessory.Method.TextInfo(((goLeft) ? ("Stack on the left") : ("Stack on the right")), 9000);
@@ -15580,15 +15580,15 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             if (Enable_Vanilla_TTS || Enable_Daily_Routines_TTS)
             {
 
-                if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                 {
 
-                    accessory.TTS($"{((goLeft) ? ("左侧分摊") : ("右侧分摊"))}",
+                    accessory.TTS($"{((goLeft) ? ("å·¦ä¾§åˆ†æ‘Š") : ("å³ä¾§åˆ†æ‘Š"))}",
                         Enable_Vanilla_TTS, Enable_Daily_Routines_TTS);
 
                 }
 
-                if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                 {
 
                     accessory.TTS($"{((goLeft) ? ("Stack on the left") : ("Stack on the right"))}",
@@ -15605,7 +15605,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventCondition: ["ActionId:40319"],
             userControl: false)]
 
-        public void Phase5_Initialization_Of_Wings_Dark_And_Light_光与暗之翼初始化(Event @event, ScriptAccessory accessory)
+        public void Phase5_Initialization_Of_Wings_Dark_And_Light_å…‰ä¸Žæš—ä¹‹ç¿¼åˆå§‹åŒ–(Event @event, ScriptAccessory accessory)
         {
 
             if (!isInPhase5)
@@ -15686,7 +15686,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventCondition: ["DirectorId:800375BF", "State:00010004", "Index:regex:^(0000003[012])"],
             userControl: false)]
 
-        public void Phase5_Acquire_The_First_Tower_Of_Wings_Dark_And_Light_获取光与暗之翼一塔(Event @event, ScriptAccessory accessory)
+        public void Phase5_Acquire_The_First_Tower_Of_Wings_Dark_And_Light_èŽ·å–å…‰ä¸Žæš—ä¹‹ç¿¼ä¸€å¡”(Event @event, ScriptAccessory accessory)
         {
 
             if (!isInPhase5)
@@ -15711,7 +15711,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventType:EventTypeEnum.EnvControl,
             eventCondition:["DirectorId:800375BF","State:00010004","Index:regex:^(0000003[012])"])]
 
-        public void Phase5_Initial_Position_Of_The_Current_MT_Before_Towers_踩塔前当前MT的起始位置(Event @event, ScriptAccessory accessory) {
+        public void Phase5_Initial_Position_Of_The_Current_MT_Before_Towers_è¸©å¡”å‰å½“å‰MTçš„èµ·å§‹ä½ç½®(Event @event, ScriptAccessory accessory) {
 
             if(!isInPhase5) {
 
@@ -15812,7 +15812,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventType:EventTypeEnum.StartCasting,
             eventCondition:["ActionId:regex:^(40313|40233)$"])]
 
-        public void Phase5_Guidance_For_Tanks_During_Towers_坦克踩塔指路(Event @event, ScriptAccessory accessory) {
+        public void Phase5_Guidance_For_Tanks_During_Towers_å¦å…‹è¸©å¡”æŒ‡è·¯(Event @event, ScriptAccessory accessory) {
 
             if(!isInPhase5) {
 
@@ -15913,7 +15913,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
             }
 
-            if(Phase5_Strat_Of_Wings_Dark_And_Light==Phase5_Strats_Of_Wings_Dark_And_Light.Grey9_Brain_Dead_MT_First_Tower_Opposite_灰九脑死法MT一塔对侧_莫灵喵与MMW) {
+            if(Phase5_Strat_Of_Wings_Dark_And_Light==Phase5_Strats_Of_Wings_Dark_And_Light.Grey9_Brain_Dead_MT_First_Tower_Opposite_ç°ä¹è„‘æ­»æ³•MTä¸€å¡”å¯¹ä¾§_èŽ«çµå–µä¸ŽMMW) {
 
                 Vector3 position1OfCurrentMt=RotatePoint(positionOfTheFirstTower,new Vector3(100,0,100),float.Pi);
                 // Just opposite the first tower.
@@ -15976,13 +15976,13 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
                         if(Enable_Text_Prompts) {
 
-                            if(Language_Of_Prompts==Languages_Of_Prompts.Simplified_Chinese_简体中文) {
+                            if(Language_Of_Prompts==Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡) {
 
-                                accessory.Method.TextInfo("等待挑衅后退避",2500);
+                                accessory.Method.TextInfo("ç­‰å¾…æŒ‘è¡…åŽé€€é¿",2500);
 
                             }
 
-                            if(Language_Of_Prompts==Languages_Of_Prompts.English_英文) {
+                            if(Language_Of_Prompts==Languages_Of_Prompts.English_è‹±æ–‡) {
 
                                 accessory.Method.TextInfo("Wait for provocation then shirk",2500);
 
@@ -15992,13 +15992,13 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
                         if(Enable_Vanilla_TTS||Enable_Daily_Routines_TTS) {
 
-                            if(Language_Of_Prompts==Languages_Of_Prompts.Simplified_Chinese_简体中文) {
+                            if(Language_Of_Prompts==Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡) {
 
-                                accessory.TTS("等待挑衅后退避",Enable_Vanilla_TTS,Enable_Daily_Routines_TTS);
+                                accessory.TTS("ç­‰å¾…æŒ‘è¡…åŽé€€é¿",Enable_Vanilla_TTS,Enable_Daily_Routines_TTS);
 
                             }
 
-                            if(Language_Of_Prompts==Languages_Of_Prompts.English_英文) {
+                            if(Language_Of_Prompts==Languages_Of_Prompts.English_è‹±æ–‡) {
 
                                 accessory.TTS("Wait for provocation then shirk",Enable_Vanilla_TTS,Enable_Daily_Routines_TTS);
 
@@ -16055,13 +16055,13 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
                         if(Enable_Text_Prompts) {
 
-                            if(Language_Of_Prompts==Languages_Of_Prompts.Simplified_Chinese_简体中文) {
+                            if(Language_Of_Prompts==Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡) {
 
-                                accessory.Method.TextInfo("立即挑衅！",2500);
+                                accessory.Method.TextInfo("ç«‹å³æŒ‘è¡…ï¼",2500);
 
                             }
 
-                            if(Language_Of_Prompts==Languages_Of_Prompts.English_英文) {
+                            if(Language_Of_Prompts==Languages_Of_Prompts.English_è‹±æ–‡) {
 
                                 accessory.Method.TextInfo("Now provoke!",2500);
 
@@ -16071,13 +16071,13 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
                         if(Enable_Vanilla_TTS||Enable_Daily_Routines_TTS) {
 
-                            if(Language_Of_Prompts==Languages_Of_Prompts.Simplified_Chinese_简体中文) {
+                            if(Language_Of_Prompts==Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡) {
 
-                                accessory.TTS("立即挑衅！",Enable_Vanilla_TTS,Enable_Daily_Routines_TTS);
+                                accessory.TTS("ç«‹å³æŒ‘è¡…ï¼",Enable_Vanilla_TTS,Enable_Daily_Routines_TTS);
 
                             }
 
-                            if(Language_Of_Prompts==Languages_Of_Prompts.English_英文) {
+                            if(Language_Of_Prompts==Languages_Of_Prompts.English_è‹±æ–‡) {
 
                                 accessory.TTS("Now provoke!",Enable_Vanilla_TTS,Enable_Daily_Routines_TTS);
 
@@ -16091,7 +16091,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
             }
             
-            if(Phase5_Strat_Of_Wings_Dark_And_Light==Phase5_Strats_Of_Wings_Dark_And_Light.Reverse_Triangle_MT_Baits_In_Towers_倒三角法MT在塔中引导) {
+            if(Phase5_Strat_Of_Wings_Dark_And_Light==Phase5_Strats_Of_Wings_Dark_And_Light.Reverse_Triangle_MT_Baits_In_Towers_å€’ä¸‰è§’æ³•MTåœ¨å¡”ä¸­å¼•å¯¼) {
                 
                 Vector3 positionOfTheLeftTower=RotatePoint(positionOfTheFirstTower,new Vector3(100,0,100),float.Pi/3*2);
                 Vector3 positionOfTheRightTower=RotatePoint(positionOfTheFirstTower,new Vector3(100,0,100),-(float.Pi/3*2));
@@ -16156,13 +16156,13 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
                         if(Enable_Text_Prompts) {
 
-                            if(Language_Of_Prompts==Languages_Of_Prompts.Simplified_Chinese_简体中文) {
+                            if(Language_Of_Prompts==Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡) {
 
-                                accessory.Method.TextInfo("等待挑衅后退避",2500);
+                                accessory.Method.TextInfo("ç­‰å¾…æŒ‘è¡…åŽé€€é¿",2500);
 
                             }
 
-                            if(Language_Of_Prompts==Languages_Of_Prompts.English_英文) {
+                            if(Language_Of_Prompts==Languages_Of_Prompts.English_è‹±æ–‡) {
 
                                 accessory.Method.TextInfo("Wait for provocation then shirk",2500);
 
@@ -16172,13 +16172,13 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
                         if(Enable_Vanilla_TTS||Enable_Daily_Routines_TTS) {
 
-                            if(Language_Of_Prompts==Languages_Of_Prompts.Simplified_Chinese_简体中文) {
+                            if(Language_Of_Prompts==Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡) {
 
-                                accessory.TTS("等待挑衅后退避",Enable_Vanilla_TTS,Enable_Daily_Routines_TTS);
+                                accessory.TTS("ç­‰å¾…æŒ‘è¡…åŽé€€é¿",Enable_Vanilla_TTS,Enable_Daily_Routines_TTS);
 
                             }
 
-                            if(Language_Of_Prompts==Languages_Of_Prompts.English_英文) {
+                            if(Language_Of_Prompts==Languages_Of_Prompts.English_è‹±æ–‡) {
 
                                 accessory.TTS("Wait for provocation then shirk",Enable_Vanilla_TTS,Enable_Daily_Routines_TTS);
 
@@ -16235,13 +16235,13 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
                         if(Enable_Text_Prompts) {
 
-                            if (Language_Of_Prompts==Languages_Of_Prompts.Simplified_Chinese_简体中文) {
+                            if (Language_Of_Prompts==Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡) {
 
-                                accessory.Method.TextInfo("立即挑衅！",2500);
+                                accessory.Method.TextInfo("ç«‹å³æŒ‘è¡…ï¼",2500);
 
                             }
 
-                            if(Language_Of_Prompts==Languages_Of_Prompts.English_英文) {
+                            if(Language_Of_Prompts==Languages_Of_Prompts.English_è‹±æ–‡) {
 
                                 accessory.Method.TextInfo("Now provoke!",2500);
 
@@ -16251,13 +16251,13 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
                         if(Enable_Vanilla_TTS||Enable_Daily_Routines_TTS) {
 
-                            if(Language_Of_Prompts==Languages_Of_Prompts.Simplified_Chinese_简体中文) {
+                            if(Language_Of_Prompts==Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡) {
 
-                                accessory.TTS("立即挑衅！",Enable_Vanilla_TTS,Enable_Daily_Routines_TTS);
+                                accessory.TTS("ç«‹å³æŒ‘è¡…ï¼",Enable_Vanilla_TTS,Enable_Daily_Routines_TTS);
 
                             }
 
-                            if(Language_Of_Prompts==Languages_Of_Prompts.English_英文) {
+                            if(Language_Of_Prompts==Languages_Of_Prompts.English_è‹±æ–‡) {
 
                                 accessory.TTS("Now provoke!",Enable_Vanilla_TTS,Enable_Daily_Routines_TTS);
 
@@ -16277,7 +16277,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventType:EventTypeEnum.StartCasting,
             eventCondition:["ActionId:regex:^(40313|40233)$"])]
 
-        public void Phase5_Guidance_For_Others_During_Towers_人群踩塔指路(Event @event, ScriptAccessory accessory) {
+        public void Phase5_Guidance_For_Others_During_Towers_äººç¾¤è¸©å¡”æŒ‡è·¯(Event @event, ScriptAccessory accessory) {
 
             if(!isInPhase5) {
 
@@ -16314,13 +16314,13 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             }
 
             /*
-            if (Phase5_Strat_Of_Wings_Dark_And_Light == Phase5_Strats_Of_Wings_Dark_And_Light.Grey9_Brain_Dead_MT_First_Tower_Opposite_灰九脑死法MT一塔对侧_莫灵喵与MMW)
+            if (Phase5_Strat_Of_Wings_Dark_And_Light == Phase5_Strats_Of_Wings_Dark_And_Light.Grey9_Brain_Dead_MT_First_Tower_Opposite_ç°ä¹è„‘æ­»æ³•MTä¸€å¡”å¯¹ä¾§_èŽ«çµå–µä¸ŽMMW)
             {
                 // ... large commented-out original code ... (kept as is in the original file)
             }
             */
             
-            if(Phase5_Strat_Of_Wings_Dark_And_Light==Phase5_Strats_Of_Wings_Dark_And_Light.Grey9_Brain_Dead_MT_First_Tower_Opposite_灰九脑死法MT一塔对侧_莫灵喵与MMW) {
+            if(Phase5_Strat_Of_Wings_Dark_And_Light==Phase5_Strats_Of_Wings_Dark_And_Light.Grey9_Brain_Dead_MT_First_Tower_Opposite_ç°ä¹è„‘æ­»æ³•MTä¸€å¡”å¯¹ä¾§_èŽ«çµå–µä¸ŽMMW) {
                 // The previous spaghetti code is commented out. The entire part was reworked.
 
                 float rotation=0;
@@ -16355,7 +16355,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 Vector3 rightStandbyPosition=RotatePoint(phase5_standbyPointBetweenSouthAndNortheast_asAConstant,new Vector3(100,0,100),rotation);
                 var currentProperty=accessory.Data.GetDefaultDrawProperties();
                 
-                if(Phase5_Branch_Of_The_Grey9_Brain_Dead_Strat==Phase5_Branches_Of_The_Grey9_Brain_Dead_Strat.Melees_First_Then_Healers_Left_Ranges_Right_近战先然后奶妈左远程右) {
+                if(Phase5_Branch_Of_The_Grey9_Brain_Dead_Strat==Phase5_Branches_Of_The_Grey9_Brain_Dead_Strat.Melees_First_Then_Healers_Left_Ranges_Right_è¿‘æˆ˜å…ˆç„¶åŽå¥¶å¦ˆå·¦è¿œç¨‹å³) {
 
                     bool isMelee=false;
                     bool isRange=false;
@@ -16528,7 +16528,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
                 }
 
-                if(Phase5_Branch_Of_The_Grey9_Brain_Dead_Strat==Phase5_Branches_Of_The_Grey9_Brain_Dead_Strat.Healers_First_Then_Melees_Left_Ranges_Right_奶妈先然后近战左远程右_莫灵喵) {
+                if(Phase5_Branch_Of_The_Grey9_Brain_Dead_Strat==Phase5_Branches_Of_The_Grey9_Brain_Dead_Strat.Healers_First_Then_Melees_Left_Ranges_Right_å¥¶å¦ˆå…ˆç„¶åŽè¿‘æˆ˜å·¦è¿œç¨‹å³_èŽ«çµå–µ) {
                     
                     bool isMelee=false;
                     bool isRange=false;
@@ -16701,7 +16701,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                     
                 }
 
-                if(Phase5_Branch_Of_The_Grey9_Brain_Dead_Strat==Phase5_Branches_Of_The_Grey9_Brain_Dead_Strat.Healer_First_Then_Melees_Farther_Ranges_Closer_奶妈先然后近战远远程近_MMW) {
+                if(Phase5_Branch_Of_The_Grey9_Brain_Dead_Strat==Phase5_Branches_Of_The_Grey9_Brain_Dead_Strat.Healer_First_Then_Melees_Farther_Ranges_Closer_å¥¶å¦ˆå…ˆç„¶åŽè¿‘æˆ˜è¿œè¿œç¨‹è¿‘_MMW) {
                     
                     Vector3 positionOfTheCloserTower=(isLeftFirstAndFarFirst)?(positionOfTheRightTower):(positionOfTheLeftTower);
                     Vector3 positionOfTheFartherTower=(isLeftFirstAndFarFirst)?(positionOfTheLeftTower):(positionOfTheRightTower);
@@ -16881,7 +16881,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
             }
             
-            if(Phase5_Strat_Of_Wings_Dark_And_Light==Phase5_Strats_Of_Wings_Dark_And_Light.Reverse_Triangle_MT_Baits_In_Towers_倒三角法MT在塔中引导) {
+            if(Phase5_Strat_Of_Wings_Dark_And_Light==Phase5_Strats_Of_Wings_Dark_And_Light.Reverse_Triangle_MT_Baits_In_Towers_å€’ä¸‰è§’æ³•MTåœ¨å¡”ä¸­å¼•å¯¼) {
 
                 float rotation=0;
 
@@ -16915,7 +16915,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 // Maybe it could say that this is some kind of my growth?
                 var currentProperty=accessory.Data.GetDefaultDrawProperties();
                 
-                if(Phase5_Branch_Of_The_Reverse_Triangle_Strat==Phase5_Branches_Of_The_Reverse_Triangle_Strat.Melees_First_Then_Healers_Left_Ranges_Right_近战先然后奶妈左远程右) {
+                if(Phase5_Branch_Of_The_Reverse_Triangle_Strat==Phase5_Branches_Of_The_Reverse_Triangle_Strat.Melees_First_Then_Healers_Left_Ranges_Right_è¿‘æˆ˜å…ˆç„¶åŽå¥¶å¦ˆå·¦è¿œç¨‹å³) {
 
                     bool isMelee=false;
                     bool isRange=false;
@@ -17088,7 +17088,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
                 }
 
-                if(Phase5_Branch_Of_The_Reverse_Triangle_Strat==Phase5_Branches_Of_The_Reverse_Triangle_Strat.Healers_First_Then_Melees_Left_Ranges_Right_奶妈先然后近战左远程右) {
+                if(Phase5_Branch_Of_The_Reverse_Triangle_Strat==Phase5_Branches_Of_The_Reverse_Triangle_Strat.Healers_First_Then_Melees_Left_Ranges_Right_å¥¶å¦ˆå…ˆç„¶åŽè¿‘æˆ˜å·¦è¿œç¨‹å³) {
                     
                     bool isMelee=false;
                     bool isRange=false;
@@ -17269,7 +17269,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventType: EventTypeEnum.StartCasting,
             eventCondition: ["ActionId:40316"])]
 
-        public void Phase5_Boss_Central_Axis_During_Polarizing_Strikes_极化打击期间Boss中轴线(Event @event, ScriptAccessory accessory)
+        public void Phase5_Boss_Central_Axis_During_Polarizing_Strikes_æžåŒ–æ‰“å‡»æœŸé—´Bossä¸­è½´çº¿(Event @event, ScriptAccessory accessory)
         {
 
             if (!isInPhase5)
@@ -17313,7 +17313,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             eventType: EventTypeEnum.StartCasting,
             eventCondition: ["ActionId:40316"])]
 
-        public void Phase5_Guidance_Of_Polarizing_Strikes_极化打击指路(Event @event, ScriptAccessory accessory)
+        public void Phase5_Guidance_Of_Polarizing_Strikes_æžåŒ–æ‰“å‡»æŒ‡è·¯(Event @event, ScriptAccessory accessory)
         {
 
             if (!isInPhase5)
@@ -17548,14 +17548,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             if (Enable_Text_Prompts)
             {
 
-                if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                 {
 
-                    accessory.Method.TextInfo("挡枪然后换组", 1500);
+                    accessory.Method.TextInfo("æŒ¡æžªç„¶åŽæ¢ç»„", 1500);
 
                 }
 
-                if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                 {
 
                     accessory.Method.TextInfo("Take hits and swap the group", 1500);
@@ -17567,14 +17567,14 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             if (Enable_Vanilla_TTS || Enable_Daily_Routines_TTS)
             {
 
-                if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_简体中文)
+                if (Language_Of_Prompts == Languages_Of_Prompts.Simplified_Chinese_ç®€ä½“ä¸­æ–‡)
                 {
 
-                    accessory.TTS("挡枪然后换组", Enable_Vanilla_TTS, Enable_Daily_Routines_TTS);
+                    accessory.TTS("æŒ¡æžªç„¶åŽæ¢ç»„", Enable_Vanilla_TTS, Enable_Daily_Routines_TTS);
 
                 }
 
-                if (Language_Of_Prompts == Languages_Of_Prompts.English_英文)
+                if (Language_Of_Prompts == Languages_Of_Prompts.English_è‹±æ–‡)
                 {
 
                     accessory.TTS("Take hits and swap the group", Enable_Vanilla_TTS, Enable_Daily_Routines_TTS);
@@ -17588,7 +17588,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
         private int phase5_getRoundToTakeHits(int currentIndex)
         {
 
-            if (Phase5_Order_During_Polarizing_Strikes == Phase5_Orders_During_Polarizing_Strikes.Tanks_Melees_Ranges_Healers_坦克近战远程奶妈_莫灵喵与MMW)
+            if (Phase5_Order_During_Polarizing_Strikes == Phase5_Orders_During_Polarizing_Strikes.Tanks_Melees_Ranges_Healers_å¦å…‹è¿‘æˆ˜è¿œç¨‹å¥¶å¦ˆ_èŽ«çµå–µä¸ŽMMW)
             {
 
                 if (currentIndex == 0 || currentIndex == 1)
@@ -17625,7 +17625,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
             }
 
-            if (Phase5_Order_During_Polarizing_Strikes == Phase5_Orders_During_Polarizing_Strikes.Tanks_Healers_Melees_Ranges_坦克奶妈近战远程)
+            if (Phase5_Order_During_Polarizing_Strikes == Phase5_Orders_During_Polarizing_Strikes.Tanks_Healers_Melees_Ranges_å¦å…‹å¥¶å¦ˆè¿‘æˆ˜è¿œç¨‹)
             {
 
                 if (currentIndex == 0 || currentIndex == 1)

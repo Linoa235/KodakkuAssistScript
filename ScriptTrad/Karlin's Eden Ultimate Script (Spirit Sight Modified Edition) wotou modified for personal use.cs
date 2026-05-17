@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Concurrent;
 using KodakkuAssist.Module.GameEvent;
 using KodakkuAssist.Script;
@@ -32,7 +32,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
         guid: "148718fd-575d-493a-8ac7-1cc7092aff81",
         version: "0.0.1.50",
         note: notesOfTheScript,
-        author: "Karlin", 
+        Author: "Linoa235", 
         updateInfo: UpdateInfo)]
 
     public class Futures_Rewritten_Ultimate
@@ -46,7 +46,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
         const string notesOfTheScript=
         """
         ***** Please read the note here carefully before running the script! *****
-        ***** 请在使用此脚本前仔细阅读此处的说明! *****
+        ***** è¯·åœ¨ä½¿ç”¨æ­¤è„šæœ¬å‰ä»”ç»†é˜…è¯»æ­¤å¤„çš„è¯´æ˜Ž! *****
 
         This is a customized version of Karlin's script for Futures Rewritten (Ultimate).
         The script was branched out from the version 0.0.0.10 and extensively customized by Cicero.
@@ -54,11 +54,11 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
         And of course, please don't run the customized script and the vanilla script simultaneously.
         If you would like to stream, there's no forced Vfx drawing in the script. Therefore, you could run it while streaming after proper configurations.
 
-        这是Karlin的另一个未来(绝伊甸)脚本的改装版本。
-        脚本是基于0.0.0.10版本的,灵视对脚本进行了大幅度改装。
-        在使用前请记得按照原版脚本重新配置一下这个脚本的用户设置!
-        当然也请不要同时开着改装脚本和原版脚本。
-        如果你有直播需求,脚本中没有强制使用Vfx的绘图,所以经过适当的配置可以直播时使用。
+        è¿™æ˜¯Karlinçš„å¦ä¸€ä¸ªæœªæ¥(ç»ä¼Šç”¸)è„šæœ¬çš„æ”¹è£…ç‰ˆæœ¬ã€‚
+        è„šæœ¬æ˜¯åŸºäºŽ0.0.0.10ç‰ˆæœ¬çš„,çµè§†å¯¹è„šæœ¬è¿›è¡Œäº†å¤§å¹…åº¦æ”¹è£…ã€‚
+        åœ¨ä½¿ç”¨å‰è¯·è®°å¾—æŒ‰ç…§åŽŸç‰ˆè„šæœ¬é‡æ–°é…ç½®ä¸€ä¸‹è¿™ä¸ªè„šæœ¬çš„ç”¨æˆ·è®¾ç½®!
+        å½“ç„¶ä¹Ÿè¯·ä¸è¦åŒæ—¶å¼€ç€æ”¹è£…è„šæœ¬å’ŒåŽŸç‰ˆè„šæœ¬ã€‚
+        å¦‚æžœä½ æœ‰ç›´æ’­éœ€æ±‚,è„šæœ¬ä¸­æ²¡æœ‰å¼ºåˆ¶ä½¿ç”¨Vfxçš„ç»˜å›¾,æ‰€ä»¥ç»è¿‡é€‚å½“çš„é…ç½®å¯ä»¥ç›´æ’­æ—¶ä½¿ç”¨ã€‚
 
         1. The entire set of default settings is consistent with Moglin Meow's FRU strat video, except the settings which have multiple branches in Moglin Meow's Triggers.
         Regarding settings without a specified default option, its actual default settings would be based on the enumeration values in the code.
@@ -105,53 +105,53 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
         If you encounter any issue or bug, leave the duty to cut off the recording (which would help me quickly pinpoint the pull with issues).
         After that, please describe the issue and share the related ARR recording with me. Appreciate your help!
 
-        1. 整套默认设置是跟莫灵喵视频攻略保持一致的,除了莫灵喵触发器中提供多个选择的部分。
-        没有默认选项的设置,其实际默认设置将根据代码中的枚举类型实际值决定。
-        2. 提供两种类型的TTS播报,原版TTS和Daily Routines TTS。
-        请确保你只启用了二者其一,这两个不能同时开。
-        当然,如果选择了Daily Routines TTS,你需要已经安装并启用了Daily Routines插件。
-        TTS提示的语言与文本提示语言相同。
-        3. 对于任何标记队友的功能,小队里只能有一个玩家启用,并且也不与其他科技的兼容。
-        4. P1乐园绝技(雾龙)期间被标记的玩家可能少于或者多于2人,因为会捕获玩家的实时位置进行计算,站位不标准可能会导致这种情况。
-        5. P1信仰崩塌(四连抓)期间的标记涉及到攻击,止步和禁止三种。
-        禁止1和2:前往北侧的被连线玩家。数字就是抓人的轮数。
-        锁链1和2:前往南侧的被连线玩家。数字就是抓人的轮数。
-        攻击1和2:前往北侧的闲人。数字1是优先级更高的。
-        攻击3和4:前往南侧的闲人。数字3是优先级更高的。
-        (假设优先级为 MT ST H1 H2 D1 D2 D3 D4, 那么高优先级指的是:
-           高优先级 <- MT ST H1 H2 D1 D2 D3 D4 -> 低优先级)
-        6. P2镜中奇遇攻略的描述中,左和右的基准指的是从场中面向两面红色镜子时的左和右。
-        7. P2光之失控(光暴)必须在配置中设定相应的预站位,否则指路会电椅。
-        例如如果你选择"六芒星日服野队法",你必须要选择两种蓝绿在北半场的预站位之一。
-        8. P3一运的最后如果玩家站在指路的点上并面向Boss,就一定不会吃到暗影之眼(石化眼)。
-        值得一提的是处理最后机制的人可能来不及就位,这种情况下可以通过面向自己的灯解决。
-        9. 如果P3二运选择了"根据目标标记的莫灵喵法或宝宝椅法",则接下来几乎所有绘制和指路都会依赖来自莫灵喵触发器或者宝宝椅的目标标记。
-        攻击1到4代表去左组的人,止步1到3和方块代表去右组的。下标1和2表示站近战位。
-        残缺或者错误的标记将导致电椅。
-        10. P4二运对圣龙爪(红)debuff玩家的标记涉及到禁止和止步。
-        对于禁止1和锁链1去西边的标记逻辑来说:
-        禁止1和锁链1:前往西侧处理机制。锁链是长debuff。
-        禁止2和锁链2:前往东侧处理机制。锁链是长debuff。
-        对于禁止1和禁止2去西边的标记逻辑来说:
-        禁止1和2:前往西侧处理机制。数字2是长debuff。
-        止步1和2:前往东侧处理机制。数字2是长debuff。
-        标记的优先级将取决于上面圣龙爪(红)玩家优先级的设置。
-        11. 如果P4二运的白圈指路逻辑设置为"根据我身上的目标标记",则会根据来自其他科技或者手摇的自身的标记(攻击1到4)指路。
-        同时,选项"根据我身上的目标标记"可以有效配合上面的P4二运标记功能使用。
-        如果P4二运的白圈指路逻辑设置为"根据Debuff",则只会根据Debuff指路,标记将完全被无视。
-        12. 如果P4二运持有圣龙爪(红)debuff的玩家吃了圣龙气息(龙头)的白圈,或者持有圣龙牙(蓝)debuff的玩家撞了圣龙气息(龙头),
-        那么相关绘制的移除可能有延迟并且会干扰玩家。
-        不过如果已经这样那大概率是要团灭了,修复这个问题在技术层面上也有点难度,所以我就不管了。
-        13. P5璀璨之刃(地火)指路被分为两个部分,一部分是当前步(默认绿色),另一部分是下一步(默认黄色)。
-        直到下一步变成安全色之前,永远不要提前移动。下一步的绘制仅作预览用途,让你有个心理准备。
-        14. 此脚本可以与@usamilyan4608的绝伊甸补丁脚本一起使用,这个补丁脚本进一步在许多细节上提供了优化和精修。
-        补丁脚本可以在@usamilyan4608的个人在线脚本库中找到。
-        15. 非常建议在用这个脚本打本的同时,启用插件A Realm Record(ARR)并开启录制。
-        如果遇到了问题或bug,请退本一次来切断录像(这样我能快速定位出问题的那一把)。
-        然后,简单描述一下问题并分享一下那份出了问题的ARR录像。非常感谢!
+        1. æ•´å¥—é»˜è®¤è®¾ç½®æ˜¯è·ŸèŽ«çµå–µè§†é¢‘æ”»ç•¥ä¿æŒä¸€è‡´çš„,é™¤äº†èŽ«çµå–µè§¦å‘å™¨ä¸­æä¾›å¤šä¸ªé€‰æ‹©çš„éƒ¨åˆ†ã€‚
+        æ²¡æœ‰é»˜è®¤é€‰é¡¹çš„è®¾ç½®,å…¶å®žé™…é»˜è®¤è®¾ç½®å°†æ ¹æ®ä»£ç ä¸­çš„æžšä¸¾ç±»åž‹å®žé™…å€¼å†³å®šã€‚
+        2. æä¾›ä¸¤ç§ç±»åž‹çš„TTSæ’­æŠ¥,åŽŸç‰ˆTTSå’ŒDaily Routines TTSã€‚
+        è¯·ç¡®ä¿ä½ åªå¯ç”¨äº†äºŒè€…å…¶ä¸€,è¿™ä¸¤ä¸ªä¸èƒ½åŒæ—¶å¼€ã€‚
+        å½“ç„¶,å¦‚æžœé€‰æ‹©äº†Daily Routines TTS,ä½ éœ€è¦å·²ç»å®‰è£…å¹¶å¯ç”¨äº†Daily Routinesæ’ä»¶ã€‚
+        TTSæç¤ºçš„è¯­è¨€ä¸Žæ–‡æœ¬æç¤ºè¯­è¨€ç›¸åŒã€‚
+        3. å¯¹äºŽä»»ä½•æ ‡è®°é˜Ÿå‹çš„åŠŸèƒ½,å°é˜Ÿé‡Œåªèƒ½æœ‰ä¸€ä¸ªçŽ©å®¶å¯ç”¨,å¹¶ä¸”ä¹Ÿä¸ä¸Žå…¶ä»–ç§‘æŠ€çš„å…¼å®¹ã€‚
+        4. P1ä¹å›­ç»æŠ€(é›¾é¾™)æœŸé—´è¢«æ ‡è®°çš„çŽ©å®¶å¯èƒ½å°‘äºŽæˆ–è€…å¤šäºŽ2äºº,å› ä¸ºä¼šæ•èŽ·çŽ©å®¶çš„å®žæ—¶ä½ç½®è¿›è¡Œè®¡ç®—,ç«™ä½ä¸æ ‡å‡†å¯èƒ½ä¼šå¯¼è‡´è¿™ç§æƒ…å†µã€‚
+        5. P1ä¿¡ä»°å´©å¡Œ(å››è¿žæŠ“)æœŸé—´çš„æ ‡è®°æ¶‰åŠåˆ°æ”»å‡»,æ­¢æ­¥å’Œç¦æ­¢ä¸‰ç§ã€‚
+        ç¦æ­¢1å’Œ2:å‰å¾€åŒ—ä¾§çš„è¢«è¿žçº¿çŽ©å®¶ã€‚æ•°å­—å°±æ˜¯æŠ“äººçš„è½®æ•°ã€‚
+        é”é“¾1å’Œ2:å‰å¾€å—ä¾§çš„è¢«è¿žçº¿çŽ©å®¶ã€‚æ•°å­—å°±æ˜¯æŠ“äººçš„è½®æ•°ã€‚
+        æ”»å‡»1å’Œ2:å‰å¾€åŒ—ä¾§çš„é—²äººã€‚æ•°å­—1æ˜¯ä¼˜å…ˆçº§æ›´é«˜çš„ã€‚
+        æ”»å‡»3å’Œ4:å‰å¾€å—ä¾§çš„é—²äººã€‚æ•°å­—3æ˜¯ä¼˜å…ˆçº§æ›´é«˜çš„ã€‚
+        (å‡è®¾ä¼˜å…ˆçº§ä¸º MT ST H1 H2 D1 D2 D3 D4, é‚£ä¹ˆé«˜ä¼˜å…ˆçº§æŒ‡çš„æ˜¯:
+           é«˜ä¼˜å…ˆçº§ <- MT ST H1 H2 D1 D2 D3 D4 -> ä½Žä¼˜å…ˆçº§)
+        6. P2é•œä¸­å¥‡é‡æ”»ç•¥çš„æè¿°ä¸­,å·¦å’Œå³çš„åŸºå‡†æŒ‡çš„æ˜¯ä»Žåœºä¸­é¢å‘ä¸¤é¢çº¢è‰²é•œå­æ—¶çš„å·¦å’Œå³ã€‚
+        7. P2å…‰ä¹‹å¤±æŽ§(å…‰æš´)å¿…é¡»åœ¨é…ç½®ä¸­è®¾å®šç›¸åº”çš„é¢„ç«™ä½,å¦åˆ™æŒ‡è·¯ä¼šç”µæ¤…ã€‚
+        ä¾‹å¦‚å¦‚æžœä½ é€‰æ‹©"å…­èŠ’æ˜Ÿæ—¥æœé‡Žé˜Ÿæ³•",ä½ å¿…é¡»è¦é€‰æ‹©ä¸¤ç§è“ç»¿åœ¨åŒ—åŠåœºçš„é¢„ç«™ä½ä¹‹ä¸€ã€‚
+        8. P3ä¸€è¿çš„æœ€åŽå¦‚æžœçŽ©å®¶ç«™åœ¨æŒ‡è·¯çš„ç‚¹ä¸Šå¹¶é¢å‘Boss,å°±ä¸€å®šä¸ä¼šåƒåˆ°æš—å½±ä¹‹çœ¼(çŸ³åŒ–çœ¼)ã€‚
+        å€¼å¾—ä¸€æçš„æ˜¯å¤„ç†æœ€åŽæœºåˆ¶çš„äººå¯èƒ½æ¥ä¸åŠå°±ä½,è¿™ç§æƒ…å†µä¸‹å¯ä»¥é€šè¿‡é¢å‘è‡ªå·±çš„ç¯è§£å†³ã€‚
+        9. å¦‚æžœP3äºŒè¿é€‰æ‹©äº†"æ ¹æ®ç›®æ ‡æ ‡è®°çš„èŽ«çµå–µæ³•æˆ–å®å®æ¤…æ³•",åˆ™æŽ¥ä¸‹æ¥å‡ ä¹Žæ‰€æœ‰ç»˜åˆ¶å’ŒæŒ‡è·¯éƒ½ä¼šä¾èµ–æ¥è‡ªèŽ«çµå–µè§¦å‘å™¨æˆ–è€…å®å®æ¤…çš„ç›®æ ‡æ ‡è®°ã€‚
+        æ”»å‡»1åˆ°4ä»£è¡¨åŽ»å·¦ç»„çš„äºº,æ­¢æ­¥1åˆ°3å’Œæ–¹å—ä»£è¡¨åŽ»å³ç»„çš„ã€‚ä¸‹æ ‡1å’Œ2è¡¨ç¤ºç«™è¿‘æˆ˜ä½ã€‚
+        æ®‹ç¼ºæˆ–è€…é”™è¯¯çš„æ ‡è®°å°†å¯¼è‡´ç”µæ¤…ã€‚
+        10. P4äºŒè¿å¯¹åœ£é¾™çˆª(çº¢)debuffçŽ©å®¶çš„æ ‡è®°æ¶‰åŠåˆ°ç¦æ­¢å’Œæ­¢æ­¥ã€‚
+        å¯¹äºŽç¦æ­¢1å’Œé”é“¾1åŽ»è¥¿è¾¹çš„æ ‡è®°é€»è¾‘æ¥è¯´:
+        ç¦æ­¢1å’Œé”é“¾1:å‰å¾€è¥¿ä¾§å¤„ç†æœºåˆ¶ã€‚é”é“¾æ˜¯é•¿debuffã€‚
+        ç¦æ­¢2å’Œé”é“¾2:å‰å¾€ä¸œä¾§å¤„ç†æœºåˆ¶ã€‚é”é“¾æ˜¯é•¿debuffã€‚
+        å¯¹äºŽç¦æ­¢1å’Œç¦æ­¢2åŽ»è¥¿è¾¹çš„æ ‡è®°é€»è¾‘æ¥è¯´:
+        ç¦æ­¢1å’Œ2:å‰å¾€è¥¿ä¾§å¤„ç†æœºåˆ¶ã€‚æ•°å­—2æ˜¯é•¿debuffã€‚
+        æ­¢æ­¥1å’Œ2:å‰å¾€ä¸œä¾§å¤„ç†æœºåˆ¶ã€‚æ•°å­—2æ˜¯é•¿debuffã€‚
+        æ ‡è®°çš„ä¼˜å…ˆçº§å°†å–å†³äºŽä¸Šé¢åœ£é¾™çˆª(çº¢)çŽ©å®¶ä¼˜å…ˆçº§çš„è®¾ç½®ã€‚
+        11. å¦‚æžœP4äºŒè¿çš„ç™½åœˆæŒ‡è·¯é€»è¾‘è®¾ç½®ä¸º"æ ¹æ®æˆ‘èº«ä¸Šçš„ç›®æ ‡æ ‡è®°",åˆ™ä¼šæ ¹æ®æ¥è‡ªå…¶ä»–ç§‘æŠ€æˆ–è€…æ‰‹æ‘‡çš„è‡ªèº«çš„æ ‡è®°(æ”»å‡»1åˆ°4)æŒ‡è·¯ã€‚
+        åŒæ—¶,é€‰é¡¹"æ ¹æ®æˆ‘èº«ä¸Šçš„ç›®æ ‡æ ‡è®°"å¯ä»¥æœ‰æ•ˆé…åˆä¸Šé¢çš„P4äºŒè¿æ ‡è®°åŠŸèƒ½ä½¿ç”¨ã€‚
+        å¦‚æžœP4äºŒè¿çš„ç™½åœˆæŒ‡è·¯é€»è¾‘è®¾ç½®ä¸º"æ ¹æ®Debuff",åˆ™åªä¼šæ ¹æ®DebuffæŒ‡è·¯,æ ‡è®°å°†å®Œå…¨è¢«æ— è§†ã€‚
+        12. å¦‚æžœP4äºŒè¿æŒæœ‰åœ£é¾™çˆª(çº¢)debuffçš„çŽ©å®¶åƒäº†åœ£é¾™æ°”æ¯(é¾™å¤´)çš„ç™½åœˆ,æˆ–è€…æŒæœ‰åœ£é¾™ç‰™(è“)debuffçš„çŽ©å®¶æ’žäº†åœ£é¾™æ°”æ¯(é¾™å¤´),
+        é‚£ä¹ˆç›¸å…³ç»˜åˆ¶çš„ç§»é™¤å¯èƒ½æœ‰å»¶è¿Ÿå¹¶ä¸”ä¼šå¹²æ‰°çŽ©å®¶ã€‚
+        ä¸è¿‡å¦‚æžœå·²ç»è¿™æ ·é‚£å¤§æ¦‚çŽ‡æ˜¯è¦å›¢ç­äº†,ä¿®å¤è¿™ä¸ªé—®é¢˜åœ¨æŠ€æœ¯å±‚é¢ä¸Šä¹Ÿæœ‰ç‚¹éš¾åº¦,æ‰€ä»¥æˆ‘å°±ä¸ç®¡äº†ã€‚
+        13. P5ç’€ç’¨ä¹‹åˆƒ(åœ°ç«)æŒ‡è·¯è¢«åˆ†ä¸ºä¸¤ä¸ªéƒ¨åˆ†,ä¸€éƒ¨åˆ†æ˜¯å½“å‰æ­¥(é»˜è®¤ç»¿è‰²),å¦ä¸€éƒ¨åˆ†æ˜¯ä¸‹ä¸€æ­¥(é»˜è®¤é»„è‰²)ã€‚
+        ç›´åˆ°ä¸‹ä¸€æ­¥å˜æˆå®‰å…¨è‰²ä¹‹å‰,æ°¸è¿œä¸è¦æå‰ç§»åŠ¨ã€‚ä¸‹ä¸€æ­¥çš„ç»˜åˆ¶ä»…ä½œé¢„è§ˆç”¨é€”,è®©ä½ æœ‰ä¸ªå¿ƒç†å‡†å¤‡ã€‚
+        14. æ­¤è„šæœ¬å¯ä»¥ä¸Ž@usamilyan4608çš„ç»ä¼Šç”¸è¡¥ä¸è„šæœ¬ä¸€èµ·ä½¿ç”¨,è¿™ä¸ªè¡¥ä¸è„šæœ¬è¿›ä¸€æ­¥åœ¨è®¸å¤šç»†èŠ‚ä¸Šæä¾›äº†ä¼˜åŒ–å’Œç²¾ä¿®ã€‚
+        è¡¥ä¸è„šæœ¬å¯ä»¥åœ¨@usamilyan4608çš„ä¸ªäººåœ¨çº¿è„šæœ¬åº“ä¸­æ‰¾åˆ°ã€‚
+        15. éžå¸¸å»ºè®®åœ¨ç”¨è¿™ä¸ªè„šæœ¬æ‰“æœ¬çš„åŒæ—¶,å¯ç”¨æ’ä»¶A Realm Record(ARR)å¹¶å¼€å¯å½•åˆ¶ã€‚
+        å¦‚æžœé‡åˆ°äº†é—®é¢˜æˆ–bug,è¯·é€€æœ¬ä¸€æ¬¡æ¥åˆ‡æ–­å½•åƒ(è¿™æ ·æˆ‘èƒ½å¿«é€Ÿå®šä½å‡ºé—®é¢˜çš„é‚£ä¸€æŠŠ)ã€‚
+        ç„¶åŽ,ç®€å•æè¿°ä¸€ä¸‹é—®é¢˜å¹¶åˆ†äº«ä¸€ä¸‹é‚£ä»½å‡ºäº†é—®é¢˜çš„ARRå½•åƒã€‚éžå¸¸æ„Ÿè°¢!
 
         ***** Credits *****
-        ***** 致谢 *****
+        ***** è‡´è°¢ *****
 
         The original author, the founder and the co-maintainer: @karlin_z
         Helpers (sorted lexicographically):
@@ -165,20 +165,20 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
            (Mar 16, 2025; Mar 22, 2025; Mar 24, 2025; Apr 7, 2025)
          - @veever2464 provided supports of Daily Routines TTS for each TTS prompt. (Mar 10, 2025)
 
-        原作者,奠基人兼共同维护者: @karlin_z
-        提供帮助的人(按字典序排序):
-        - @abigseal为P1末尾踩塔提供了打法"固定H1_H2_D4剩余人补位"。 (2025.03.09)
-        - @alexandria_prime为P1信仰崩塌(四连抓)提供了打法"按HTD顺序单排","按H1TDH2顺序单排"和"面向Boss"。 (2025.03.05)
-        - @bupleurum.为配置文本提供了国服MMW攻略相关标注,P2光之失控(光暴)新灰九法光流侵蚀(放泥)大致路径细化。 (2025.3.20)
-        - @cyf5119为P1光轮召唤提供了雷焰之光轮的AOE范围。 (2025.3.19)
-        - @milkvio为P5璀璨之刃(地火)提供了指路。 (2025.03.16)
-        - @usamilyan4608为P2光之失控(光暴)期间的光球AOE提供了时间警告,P4二运龙头绘制优化,开发者模式调试输出修复。
-          @usamilyan4608还为P3二运的罕见本地错误提供了珍贵录像和修复建议。
+        åŽŸä½œè€…,å¥ åŸºäººå…¼å…±åŒç»´æŠ¤è€…: @karlin_z
+        æä¾›å¸®åŠ©çš„äºº(æŒ‰å­—å…¸åºæŽ’åº):
+        - @abigsealä¸ºP1æœ«å°¾è¸©å¡”æä¾›äº†æ‰“æ³•"å›ºå®šH1_H2_D4å‰©ä½™äººè¡¥ä½"ã€‚ (2025.03.09)
+        - @alexandria_primeä¸ºP1ä¿¡ä»°å´©å¡Œ(å››è¿žæŠ“)æä¾›äº†æ‰“æ³•"æŒ‰HTDé¡ºåºå•æŽ’","æŒ‰H1TDH2é¡ºåºå•æŽ’"å’Œ"é¢å‘Boss"ã€‚ (2025.03.05)
+        - @bupleurum.ä¸ºé…ç½®æ–‡æœ¬æä¾›äº†å›½æœMMWæ”»ç•¥ç›¸å…³æ ‡æ³¨,P2å…‰ä¹‹å¤±æŽ§(å…‰æš´)æ–°ç°ä¹æ³•å…‰æµä¾µèš€(æ”¾æ³¥)å¤§è‡´è·¯å¾„ç»†åŒ–ã€‚ (2025.3.20)
+        - @cyf5119ä¸ºP1å…‰è½®å¬å”¤æä¾›äº†é›·ç„°ä¹‹å…‰è½®çš„AOEèŒƒå›´ã€‚ (2025.3.19)
+        - @milkvioä¸ºP5ç’€ç’¨ä¹‹åˆƒ(åœ°ç«)æä¾›äº†æŒ‡è·¯ã€‚ (2025.03.16)
+        - @usamilyan4608ä¸ºP2å…‰ä¹‹å¤±æŽ§(å…‰æš´)æœŸé—´çš„å…‰çƒAOEæä¾›äº†æ—¶é—´è­¦å‘Š,P4äºŒè¿é¾™å¤´ç»˜åˆ¶ä¼˜åŒ–,å¼€å‘è€…æ¨¡å¼è°ƒè¯•è¾“å‡ºä¿®å¤ã€‚
+          @usamilyan4608è¿˜ä¸ºP3äºŒè¿çš„ç½•è§æœ¬åœ°é”™è¯¯æä¾›äº†çè´µå½•åƒå’Œä¿®å¤å»ºè®®ã€‚
           (2025.03.16, 2025.03.22, 2025.03.24, 2025.04.07)
-        - @veever2464为每一条TTS提示提供了Daily Routines TTS支持。 (2025.03.10)
+        - @veever2464ä¸ºæ¯ä¸€æ¡TTSæç¤ºæä¾›äº†Daily Routines TTSæ”¯æŒã€‚ (2025.03.10)
 
         ***** New Features *****
-        ***** 新功能 *****
+        ***** æ–°åŠŸèƒ½ *****
 
         Phase 1:
          - Refinements for the entire phase;
@@ -202,28 +202,28 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
          - Guidance of Polarizing Strikes.
 
         P1:
-         - 整个阶段的精修;
-         - 乐园绝技(雾龙),信仰崩塌(四连抓)和最后踩塔都增加了新攻略;
-         - 乐园绝技(雾龙)的玩家标记;
-         - 重做信仰崩塌(四连抓)的玩家标记;
+         - æ•´ä¸ªé˜¶æ®µçš„ç²¾ä¿®;
+         - ä¹å›­ç»æŠ€(é›¾é¾™),ä¿¡ä»°å´©å¡Œ(å››è¿žæŠ“)å’Œæœ€åŽè¸©å¡”éƒ½å¢žåŠ äº†æ–°æ”»ç•¥;
+         - ä¹å›­ç»æŠ€(é›¾é¾™)çš„çŽ©å®¶æ ‡è®°;
+         - é‡åšä¿¡ä»°å´©å¡Œ(å››è¿žæŠ“)çš„çŽ©å®¶æ ‡è®°;
         P2:
-         - 钻石星辰击退后指路重做;
-         - 镜中奇遇指路重做;
-         - 光之失控(光暴)修复和细化;
+         - é’»çŸ³æ˜Ÿè¾°å‡»é€€åŽæŒ‡è·¯é‡åš;
+         - é•œä¸­å¥‡é‡æŒ‡è·¯é‡åš;
+         - å…‰ä¹‹å¤±æŽ§(å…‰æš´)ä¿®å¤å’Œç»†åŒ–;
         P3:
-         - 二运指路(包括双分组法,车头法和基于标记的莫灵喵或宝宝椅法);
+         - äºŒè¿æŒ‡è·¯(åŒ…æ‹¬åŒåˆ†ç»„æ³•,è½¦å¤´æ³•å’ŒåŸºäºŽæ ‡è®°çš„èŽ«çµå–µæˆ–å®å®æ¤…æ³•);
         P4:
-         - 一运新攻略(单换);
-         - 二运圣龙气息(龙头)白圈相关的指路;
-         - 二运原版指路修复和细化;
-         - 二运新攻略(HTD优先级)与玩家标记;
+         - ä¸€è¿æ–°æ”»ç•¥(å•æ¢);
+         - äºŒè¿åœ£é¾™æ°”æ¯(é¾™å¤´)ç™½åœˆç›¸å…³çš„æŒ‡è·¯;
+         - äºŒè¿åŽŸç‰ˆæŒ‡è·¯ä¿®å¤å’Œç»†åŒ–;
+         - äºŒè¿æ–°æ”»ç•¥(HTDä¼˜å…ˆçº§)ä¸ŽçŽ©å®¶æ ‡è®°;
         P5:
-         - 璀璨之刃(地火)指路;
-         - 光与暗之翼(踩塔)指路(包括灰九脑死法和倒三角法);
-         - 极化打击(挡枪)指路。
+         - ç’€ç’¨ä¹‹åˆƒ(åœ°ç«)æŒ‡è·¯;
+         - å…‰ä¸Žæš—ä¹‹ç¿¼(è¸©å¡”)æŒ‡è·¯(åŒ…æ‹¬ç°ä¹è„‘æ­»æ³•å’Œå€’ä¸‰è§’æ³•);
+         - æžåŒ–æ‰“å‡»(æŒ¡æžª)æŒ‡è·¯ã€‚
 
         ***** Known Issues *****
-        ***** 已知问题 *****
+        ***** å·²çŸ¥é—®é¢˜ *****
 
         Phase 3:
          - Ultimate Relativity: The guidance of Sinbound Meltdown may disappear a tiny bit earlier than the time that the direction is anchored. It's not fatal by any mean, but it's always recommended that baiting it precisely before leaving.
@@ -232,13 +232,13 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
         After all the known issues are resolved, there will be no more major update. The version will be considered as the final version.
 
         P3:
-         - 时间压缩·绝(一运): 罪缚熔毁(激光)的指路变化时间可能略微早于实际判定时间一点点。不是大问题,但最好还是确保引导到了以后再移动。
-           会在未来精修此处的时间轴。
+         - æ—¶é—´åŽ‹ç¼©Â·ç»(ä¸€è¿): ç½ªç¼šç†”æ¯(æ¿€å…‰)çš„æŒ‡è·¯å˜åŒ–æ—¶é—´å¯èƒ½ç•¥å¾®æ—©äºŽå®žé™…åˆ¤å®šæ—¶é—´ä¸€ç‚¹ç‚¹ã€‚ä¸æ˜¯å¤§é—®é¢˜,ä½†æœ€å¥½è¿˜æ˜¯ç¡®ä¿å¼•å¯¼åˆ°äº†ä»¥åŽå†ç§»åŠ¨ã€‚
+           ä¼šåœ¨æœªæ¥ç²¾ä¿®æ­¤å¤„çš„æ—¶é—´è½´ã€‚
 
-        当所有已知问题都被解决后,就不会再有大更新了。那个时候的版本就是最终版。
+        å½“æ‰€æœ‰å·²çŸ¥é—®é¢˜éƒ½è¢«è§£å†³åŽ,å°±ä¸ä¼šå†æœ‰å¤§æ›´æ–°äº†ã€‚é‚£ä¸ªæ—¶å€™çš„ç‰ˆæœ¬å°±æ˜¯æœ€ç»ˆç‰ˆã€‚
 
         ***** To Resellers *****
-        ***** 致倒卖者 *****
+        ***** è‡´å€’å–è€… *****
 
         I sincerely wish:
         Your life will be like Nero;
@@ -250,15 +250,15 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
         Your future will be like Severus Alexander;
         And your end will be like Romulus Augustulus.
         
-        我衷心地祝愿:
-        你的人生像尼禄;
-        你的运气像戴克里先;
-        你的名誉像康茂德;
-        你的诚信像卡拉卡拉;
-        你的道德像埃拉伽巴路斯;
-        你的信用像加里恩努斯;
-        你的未来像塞维鲁·亚历山大;
-        而你的结局像罗慕路斯·奥古斯都。
+        æˆ‘è¡·å¿ƒåœ°ç¥æ„¿:
+        ä½ çš„äººç”Ÿåƒå°¼ç¦„;
+        ä½ çš„è¿æ°”åƒæˆ´å…‹é‡Œå…ˆ;
+        ä½ çš„åèª‰åƒåº·èŒ‚å¾·;
+        ä½ çš„è¯šä¿¡åƒå¡æ‹‰å¡æ‹‰;
+        ä½ çš„é“å¾·åƒåŸƒæ‹‰ä¼½å·´è·¯æ–¯;
+        ä½ çš„ä¿¡ç”¨åƒåŠ é‡Œæ©åŠªæ–¯;
+        ä½ çš„æœªæ¥åƒå¡žç»´é²Â·äºšåŽ†å±±å¤§;
+        è€Œä½ çš„ç»“å±€åƒç½—æ…•è·¯æ–¯Â·å¥¥å¤æ–¯éƒ½ã€‚
 
         """;
         */
@@ -266,29 +266,29 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
         const string notesOfTheScript =
         """
         ***** Please read the note here carefully before running the script! *****
-        ***** 请在使用此脚本前仔细阅读此处的说明! *****
+        ***** è¯·åœ¨ä½¿ç”¨æ­¤è„šæœ¬å‰ä»”ç»†é˜…è¯»æ­¤å¤„çš„è¯´æ˜Ž! *****
         
         There is a character limit in the description area of scripts that I'm unable to put the whole description here. Therefore, I moved the script description to the pinned messages on Discord.
-        Navigate to the Discord of Kodakku Assist, find the post "Cicero's Kodakku Assist 个人在线脚本库" in the channel "示例与分享", and finally check "Pinned Messages" for the script description.
+        Navigate to the Discord of Kodakku Assist, find the post "Cicero's Kodakku Assist ä¸ªäººåœ¨çº¿è„šæœ¬åº“" in the channel "ç¤ºä¾‹ä¸Žåˆ†äº«", and finally check "Pinned Messages" for the script description.
         For PC, "Pinned Messages" is in the upper right corner of the chat bar. For mobile, click the arrow icon in the upper right corner, then there would be a tab "Pins".
         It would take about 5 minutes to go through the English part of the description. Please make sure you have read it in full before running the script. Thank you!
         
-        脚本描述区域有字数限制,没法放下整个描述,所以我把描述部分移到了Discord上的标注消息中。
-        去可达鸭的Discord,在"示例与分享"频道中找到帖子"Cicero's Kodakku Assist 个人在线脚本库",选择"已标注消息",就可以查看脚本描述了。
-        对于电脑端,"已标注消息"在聊天栏的右上角。对于手机端,点击右上角的箭头标志,然后可以找到一个名为"标注"的标签页。
-        阅读完中文部分大约需要花费5分钟的时间。请先完整地阅读脚本描述再使用本脚本，谢谢！
+        è„šæœ¬æè¿°åŒºåŸŸæœ‰å­—æ•°é™åˆ¶,æ²¡æ³•æ”¾ä¸‹æ•´ä¸ªæè¿°,æ‰€ä»¥æˆ‘æŠŠæè¿°éƒ¨åˆ†ç§»åˆ°äº†Discordä¸Šçš„æ ‡æ³¨æ¶ˆæ¯ä¸­ã€‚
+        åŽ»å¯è¾¾é¸­çš„Discord,åœ¨"ç¤ºä¾‹ä¸Žåˆ†äº«"é¢‘é“ä¸­æ‰¾åˆ°å¸–å­"Cicero's Kodakku Assist ä¸ªäººåœ¨çº¿è„šæœ¬åº“",é€‰æ‹©"å·²æ ‡æ³¨æ¶ˆæ¯",å°±å¯ä»¥æŸ¥çœ‹è„šæœ¬æè¿°äº†ã€‚
+        å¯¹äºŽç”µè„‘ç«¯,"å·²æ ‡æ³¨æ¶ˆæ¯"åœ¨èŠå¤©æ çš„å³ä¸Šè§’ã€‚å¯¹äºŽæ‰‹æœºç«¯,ç‚¹å‡»å³ä¸Šè§’çš„ç®­å¤´æ ‡å¿—,ç„¶åŽå¯ä»¥æ‰¾åˆ°ä¸€ä¸ªåä¸º"æ ‡æ³¨"çš„æ ‡ç­¾é¡µã€‚
+        é˜…è¯»å®Œä¸­æ–‡éƒ¨åˆ†å¤§çº¦éœ€è¦èŠ±è´¹5åˆ†é’Ÿçš„æ—¶é—´ã€‚è¯·å…ˆå®Œæ•´åœ°é˜…è¯»è„šæœ¬æè¿°å†ä½¿ç”¨æœ¬è„šæœ¬ï¼Œè°¢è°¢ï¼
         
         
         
-        西庇阿·埃米利乌斯(小西庇阿)久久地凝视着脚下广阔的迦太基城。在700年的漫长岁月里,迦太基拥有广阔的土地,众多的岛屿,以及属于其支配的海洋。
-        迦太基所拥有的数量庞大的武器装备,战船,象群以及雄厚的财富,与之前人类历史上任何一个强大的帝国相比都毫不逊色。
-        然而,在今天,城市陷落了,并遭受了彻底的破坏,迦太基城从地面上消失了。想到对手的这种命运,西庇阿·埃米利乌斯不禁潸然泪下。他心潮起伏,此刻的思考已经超乎一个军事胜利者的惯常思维。
-        他想到的是,不仅限于人类,城市也好,国家也好,包括强盛的帝国,都逃避不了灭亡的命运。特洛伊帝国,亚述帝国,波斯帝国,还有20年前的马其顿王国,无不遵循了历史展示给人们的"胜者必衰"的铁律。
-        不知是有意还是无意,这位得胜之师的最高长官吟诵起《荷马史诗》中特洛伊主将赫克托耳的一句名言:
-        "归根结底,特洛伊大概也会随着国王普里阿摩斯和追随他的战士共同死亡吧!"
-        站在他背后的历史学家波里比阿询问他何出此言,西庇阿·埃米利乌斯回过头来,注视着波里比阿这个20年来的亲密朋友,拉着他的手回答:
-        "波里比阿,我们刚刚消灭了一个曾经盛极一时的帝国,赢来了这一'伟大的瞬间'。但是现在充满我胸怀的,却不是胜利的喜悦,我反而有些伤感——我担心我们的罗马也会在某一时刻遭遇与此相同的命运!"
-        ——第三次布匿战争末期,迦太基城沦陷时,146BC
+        è¥¿åº‡é˜¿Â·åŸƒç±³åˆ©ä¹Œæ–¯(å°è¥¿åº‡é˜¿)ä¹…ä¹…åœ°å‡è§†ç€è„šä¸‹å¹¿é˜”çš„è¿¦å¤ªåŸºåŸŽã€‚åœ¨700å¹´çš„æ¼«é•¿å²æœˆé‡Œ,è¿¦å¤ªåŸºæ‹¥æœ‰å¹¿é˜”çš„åœŸåœ°,ä¼—å¤šçš„å²›å±¿,ä»¥åŠå±žäºŽå…¶æ”¯é…çš„æµ·æ´‹ã€‚
+        è¿¦å¤ªåŸºæ‰€æ‹¥æœ‰çš„æ•°é‡åºžå¤§çš„æ­¦å™¨è£…å¤‡,æˆ˜èˆ¹,è±¡ç¾¤ä»¥åŠé›„åŽšçš„è´¢å¯Œ,ä¸Žä¹‹å‰äººç±»åŽ†å²ä¸Šä»»ä½•ä¸€ä¸ªå¼ºå¤§çš„å¸å›½ç›¸æ¯”éƒ½æ¯«ä¸é€Šè‰²ã€‚
+        ç„¶è€Œ,åœ¨ä»Šå¤©,åŸŽå¸‚é™·è½äº†,å¹¶é­å—äº†å½»åº•çš„ç ´å,è¿¦å¤ªåŸºåŸŽä»Žåœ°é¢ä¸Šæ¶ˆå¤±äº†ã€‚æƒ³åˆ°å¯¹æ‰‹çš„è¿™ç§å‘½è¿,è¥¿åº‡é˜¿Â·åŸƒç±³åˆ©ä¹Œæ–¯ä¸ç¦æ½¸ç„¶æ³ªä¸‹ã€‚ä»–å¿ƒæ½®èµ·ä¼,æ­¤åˆ»çš„æ€è€ƒå·²ç»è¶…ä¹Žä¸€ä¸ªå†›äº‹èƒœåˆ©è€…çš„æƒ¯å¸¸æ€ç»´ã€‚
+        ä»–æƒ³åˆ°çš„æ˜¯,ä¸ä»…é™äºŽäººç±»,åŸŽå¸‚ä¹Ÿå¥½,å›½å®¶ä¹Ÿå¥½,åŒ…æ‹¬å¼ºç››çš„å¸å›½,éƒ½é€ƒé¿ä¸äº†ç­äº¡çš„å‘½è¿ã€‚ç‰¹æ´›ä¼Šå¸å›½,äºšè¿°å¸å›½,æ³¢æ–¯å¸å›½,è¿˜æœ‰20å¹´å‰çš„é©¬å…¶é¡¿çŽ‹å›½,æ— ä¸éµå¾ªäº†åŽ†å²å±•ç¤ºç»™äººä»¬çš„"èƒœè€…å¿…è¡°"çš„é“å¾‹ã€‚
+        ä¸çŸ¥æ˜¯æœ‰æ„è¿˜æ˜¯æ— æ„,è¿™ä½å¾—èƒœä¹‹å¸ˆçš„æœ€é«˜é•¿å®˜åŸè¯µèµ·ã€Šè·é©¬å²è¯—ã€‹ä¸­ç‰¹æ´›ä¼Šä¸»å°†èµ«å…‹æ‰˜è€³çš„ä¸€å¥åè¨€:
+        "å½’æ ¹ç»“åº•,ç‰¹æ´›ä¼Šå¤§æ¦‚ä¹Ÿä¼šéšç€å›½çŽ‹æ™®é‡Œé˜¿æ‘©æ–¯å’Œè¿½éšä»–çš„æˆ˜å£«å…±åŒæ­»äº¡å§!"
+        ç«™åœ¨ä»–èƒŒåŽçš„åŽ†å²å­¦å®¶æ³¢é‡Œæ¯”é˜¿è¯¢é—®ä»–ä½•å‡ºæ­¤è¨€,è¥¿åº‡é˜¿Â·åŸƒç±³åˆ©ä¹Œæ–¯å›žè¿‡å¤´æ¥,æ³¨è§†ç€æ³¢é‡Œæ¯”é˜¿è¿™ä¸ª20å¹´æ¥çš„äº²å¯†æœ‹å‹,æ‹‰ç€ä»–çš„æ‰‹å›žç­”:
+        "æ³¢é‡Œæ¯”é˜¿,æˆ‘ä»¬åˆšåˆšæ¶ˆç­äº†ä¸€ä¸ªæ›¾ç»ç››æžä¸€æ—¶çš„å¸å›½,èµ¢æ¥äº†è¿™ä¸€'ä¼Ÿå¤§çš„çž¬é—´'ã€‚ä½†æ˜¯çŽ°åœ¨å……æ»¡æˆ‘èƒ¸æ€€çš„,å´ä¸æ˜¯èƒœåˆ©çš„å–œæ‚¦,æˆ‘åè€Œæœ‰äº›ä¼¤æ„Ÿâ€”â€”æˆ‘æ‹…å¿ƒæˆ‘ä»¬çš„ç½—é©¬ä¹Ÿä¼šåœ¨æŸä¸€æ—¶åˆ»é­é‡ä¸Žæ­¤ç›¸åŒçš„å‘½è¿!"
+        â€”â€”ç¬¬ä¸‰æ¬¡å¸ƒåŒ¿æˆ˜äº‰æœ«æœŸ,è¿¦å¤ªåŸºåŸŽæ²¦é™·æ—¶,146BC
         """;
         
         #region User_Settings
@@ -1190,12 +1190,12 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                     "The First Punic War:\nRome and Carthage clashed in their first large-scale land and naval war over the control of Sicily. In its naval debut, Rome nearly annihilated the Carthaginian fleet. Ultimately, Rome emerged victorious and seized Sicily.",
                     "After the First Punic War:\nCarthage shifted its focus to expanding into Spain to compensate for its losses. During this period, Hannibal, the son of General Hamilcar from the First Punic War, made his legendary entrance onto the stage of history.",
                     "Early Phase of the Second Punic War:\nCarthage initiated the Second Punic War. Hannibal led his army through Gaul and over the Alps in a miraculous feat, inflicting devastating defeats on Rome, including the complete annihilation of Roman forces at the Battle of Cannae.",
-                    "Middle Phase of the Second Punic War Part I:\nAlthough Hannibal won victory after victory in Italy, he failed to capture Rome. Meanwhile, Rome’s counteroffensive in Spain was crushed. At this moment of existential crisis for the Republic, Scipio volunteered before the Senate — the legendary Roman general stepped into the spotlight.",
-                    "Middle Phase of the Second Punic War Part II:\nScipio won a series of brilliant victories in Spain, defeating two Carthaginian armies despite being outnumbered. Hannibal’s reinforcements entering Italy were intercepted and annihilated. Rome regained control over all major cities in southern Italy.",
-                    "Late Phase of the Second Punic War:\nScipio landed in North Africa and took control of Numidia. The Carthaginian elders recalled Hannibal home. In the epic Battle of Zama, the two legendary generals faced off, and Scipio used Hannibal’s own tactics to decisively defeat him. Rome triumphed completely.",
+                    "Middle Phase of the Second Punic War Part I:\nAlthough Hannibal won victory after victory in Italy, he failed to capture Rome. Meanwhile, Romeâ€™s counteroffensive in Spain was crushed. At this moment of existential crisis for the Republic, Scipio volunteered before the Senate â€” the legendary Roman general stepped into the spotlight.",
+                    "Middle Phase of the Second Punic War Part II:\nScipio won a series of brilliant victories in Spain, defeating two Carthaginian armies despite being outnumbered. Hannibalâ€™s reinforcements entering Italy were intercepted and annihilated. Rome regained control over all major cities in southern Italy.",
+                    "Late Phase of the Second Punic War:\nScipio landed in North Africa and took control of Numidia. The Carthaginian elders recalled Hannibal home. In the epic Battle of Zama, the two legendary generals faced off, and Scipio used Hannibalâ€™s own tactics to decisively defeat him. Rome triumphed completely.",
                     "After the Punic Wars:\nScipio was forced to resign and retire due to political attacks by his rival Cato. He died shortly after, lamenting: \"Ungrateful country, you won't even have my bones\". Hannibal fled to the Hellenistic Phoenician cities in Greece and eventually took poison to end his life in Asia Minor before being cornered by Roman pursuers.",
                     "The Fall of Macedonia:\nRome defeated the Kingdom of Macedonia in the Third Macedonian War and dissolved it, bringing Greece under Roman control and achieving dominance over the Mediterranean.",
-                    "The Fall of Carthage:\nRome launched the Third Punic War. Carthage was captured and utterly destroyed. The Carthaginian state ceased to exist. The Romans, gazing over the Mediterranean, left behind a proud victor’s declaration: \"Mare Nostrum (Our Sea)\"."
+                    "The Fall of Carthage:\nRome launched the Third Punic War. Carthage was captured and utterly destroyed. The Carthaginian state ceased to exist. The Romans, gazing over the Mediterranean, left behind a proud victorâ€™s declaration: \"Mare Nostrum (Our Sea)\"."
                 ];
                 
                 int randomNumber=seed.Next(0,9);
@@ -1280,31 +1280,31 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                     "Nothing is more cruel and inhumane than war, nothing more desirable than peace. But peace cannot be achieved without respecting each other's rights.",
                     "The faithful fall one after another, the calamity of ignorance spreads far and wide.",
                     "To defend the grains of sand in the desert, they shed their last drop of blood.",
-                    "History is humanity's process of striving to remember ideals.\n—— Éamon de Valera, 1929",
-                    "Let us dedicate ourselves to what the Greeks wrote so many years ago: to tame the savagery of man and create the gentle life of this world.\n—— Robert F. Kennedy, 1968",
-                    "Yesterday's mistakes cannot be remedied, but tomorrow's victory or defeat can still be fought for.\n—— Lyndon B. Johnson, 1964",
-                    "The end of hope is the beginning of defeat.\n—— Charles de Gaulle, 1945",
-                    "When I retire, I will leave with nothing but a clean conscience.\n—— António de Oliveira Salazar, 1968",
-                    "When demolishing monuments, leave the pedestals. They will always come in handy.\n—— Stanisław Jerzy Lec, 1957",
-                    "Do not fear walking the path of truth alone.\n—— Robert F. Kennedy, 1968",
-                    "This rocket works perfectly, except it chose the wrong planet for its destination.\n—— Wernher von Braun after the first V-2 rocket struck London, 1944",
-                    "A person isn't finished when they're defeated; they're finished when they give up.\n—— Richard Nixon, 1962",
-                    "Do not pray for an easier life, my friend; pray to become a stronger person.\n—— John F. Kennedy, 1963",
-                    "Nature does not know extinction, only transformation.\n—— Wernher von Braun, 1962",
-                    "The optimist thinks this is the best of all possible worlds, while the pessimist fears it is true.\n—— James Branch Cabell, \"The Silver Stallion\", 1926",
-                    "It's hard to recognize the devil when he has his arm around your shoulder.\n—— Albert Speer, 1972",
-                    "In times of war, the laws are silent.\n—— Marcus Tullius Cicero, 52 BC",
-                    "They don't ask much of you: just to hate what you love and love what you despise.\n—— Boris Pasternak, 1960",
-                    "Most economic fallacies stem from the assumption of a 'fixed pie', that one party's gain must be another's loss.\n—— Milton Friedman, 1980",
-                    "There are three kinds of lies: lies, damned lies, and statistics.\n—— Mark Twain, 1907",
-                    "Bite me once, shame on the dog; bite me twice, shame on me for allowing it.\n—— Phyllis Schlafly, 1995",
-                    "I don't know what weapons World War III will be fought with, but World War IV will be fought with sticks and stones.\n—— Albert Einstein, 1949",
-                    "You can believe in Feng Shui if you want, but I believe human effort is what truly matters.\n—— Li Ka-shing, 1969",
-                    "I think it's a grave mistake to believe money is the only compensation for one's work. People need money, but they also need joy and pride in their work.\n—— Akio Morita, 1966",
-                    "Building a good reputation for yourself and your business is an invaluable asset not found on the balance sheet.\n—— Li Ka-shing, 1967",
-                    "Wealth comes and goes, but knowledge benefits you for life.\n—— Stanley Ho, 1966",
-                    "People often say: 'We live in a corrupt, hypocritical society.' That's not entirely true. Kind-hearted people are still in the majority.\n—— Pope John Paul I, 1978",
-                    "Half the world's confusion comes from not knowing how insignificant our needs are.\n—— Admiral Richard E. Byrd, in Antarctica, 1935"
+                    "History is humanity's process of striving to remember ideals.\nâ€”â€” Ã‰amon de Valera, 1929",
+                    "Let us dedicate ourselves to what the Greeks wrote so many years ago: to tame the savagery of man and create the gentle life of this world.\nâ€”â€” Robert F. Kennedy, 1968",
+                    "Yesterday's mistakes cannot be remedied, but tomorrow's victory or defeat can still be fought for.\nâ€”â€” Lyndon B. Johnson, 1964",
+                    "The end of hope is the beginning of defeat.\nâ€”â€” Charles de Gaulle, 1945",
+                    "When I retire, I will leave with nothing but a clean conscience.\nâ€”â€” AntÃ³nio de Oliveira Salazar, 1968",
+                    "When demolishing monuments, leave the pedestals. They will always come in handy.\nâ€”â€” StanisÅ‚aw Jerzy Lec, 1957",
+                    "Do not fear walking the path of truth alone.\nâ€”â€” Robert F. Kennedy, 1968",
+                    "This rocket works perfectly, except it chose the wrong planet for its destination.\nâ€”â€” Wernher von Braun after the first V-2 rocket struck London, 1944",
+                    "A person isn't finished when they're defeated; they're finished when they give up.\nâ€”â€” Richard Nixon, 1962",
+                    "Do not pray for an easier life, my friend; pray to become a stronger person.\nâ€”â€” John F. Kennedy, 1963",
+                    "Nature does not know extinction, only transformation.\nâ€”â€” Wernher von Braun, 1962",
+                    "The optimist thinks this is the best of all possible worlds, while the pessimist fears it is true.\nâ€”â€” James Branch Cabell, \"The Silver Stallion\", 1926",
+                    "It's hard to recognize the devil when he has his arm around your shoulder.\nâ€”â€” Albert Speer, 1972",
+                    "In times of war, the laws are silent.\nâ€”â€” Marcus Tullius Cicero, 52 BC",
+                    "They don't ask much of you: just to hate what you love and love what you despise.\nâ€”â€” Boris Pasternak, 1960",
+                    "Most economic fallacies stem from the assumption of a 'fixed pie', that one party's gain must be another's loss.\nâ€”â€” Milton Friedman, 1980",
+                    "There are three kinds of lies: lies, damned lies, and statistics.\nâ€”â€” Mark Twain, 1907",
+                    "Bite me once, shame on the dog; bite me twice, shame on me for allowing it.\nâ€”â€” Phyllis Schlafly, 1995",
+                    "I don't know what weapons World War III will be fought with, but World War IV will be fought with sticks and stones.\nâ€”â€” Albert Einstein, 1949",
+                    "You can believe in Feng Shui if you want, but I believe human effort is what truly matters.\nâ€”â€” Li Ka-shing, 1969",
+                    "I think it's a grave mistake to believe money is the only compensation for one's work. People need money, but they also need joy and pride in their work.\nâ€”â€” Akio Morita, 1966",
+                    "Building a good reputation for yourself and your business is an invaluable asset not found on the balance sheet.\nâ€”â€” Li Ka-shing, 1967",
+                    "Wealth comes and goes, but knowledge benefits you for life.\nâ€”â€” Stanley Ho, 1966",
+                    "People often say: 'We live in a corrupt, hypocritical society.' That's not entirely true. Kind-hearted people are still in the majority.\nâ€”â€” Pope John Paul I, 1978",
+                    "Half the world's confusion comes from not knowing how insignificant our needs are.\nâ€”â€” Admiral Richard E. Byrd, in Antarctica, 1935"
                 ];
                 
                 List<string> englishContents=[
@@ -1333,12 +1333,12 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                     "Nothing more cruel and inhuman than a war. Nothing more desirable than peace. But peace has its causes, it is an effect. The effect of respect for mutual rights.",
                     "One by one the righteous fell, and the ills of ignorance permeated.",
                     "They defended the grains of sand in the desert to the last drop of their blood.",
-                    "All history is man's efforts to realise ideals.\n- Éamon de Valera, 1929",
+                    "All history is man's efforts to realise ideals.\n- Ã‰amon de Valera, 1929",
                     "Let us dedicate ourselves to what the Greeks wrote so many years ago: to tame the savageness of man and make gentle the life of this world.\n- Robert F. Kennedy, 1968",
                     "Yesterday is not ours to recover, but tomorrow is ours to win or lose.\n- Lyndon B. Johnson, 1964",
                     "The end of hope is the beginning of death.\n- Charles de Gaulle, 1945",
                     "The day I leave the power, inside my pockets will only be dust.\n- Antonio de Oliveira Salazar, 1968",
-                    "When smashing monuments, save the pedestals. They always come in handy.\n- Stanisław Jerzy Lec, 1957",
+                    "When smashing monuments, save the pedestals. They always come in handy.\n- StanisÅ‚aw Jerzy Lec, 1957",
                     "Fear not the path of truth for the lack of people walking on it.\n- Robert F. Kennedy, 1968",
                     "The rocket worked perfectly, except for landing on the wrong planet.\n- Wernher von Braun upon the first V-2 hitting London, 1944",
                     "A man is not finished when he's defeated. He's finished when he quits.\n- Richard Nixon, 1962",
@@ -13674,7 +13674,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
         public void P4_CrystallizeTime_BuffHandlingPosition(Event @event, ScriptAccessory accessory)
         {
 
-            //buff后3.5s
+            //buffåŽ3.5s
             if (parse!=43) return;
             var myIndex = accessory.Data.PartyList.IndexOf(accessory.Data.Me);
             //Short Red

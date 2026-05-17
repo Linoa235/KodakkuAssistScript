@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Numerics;
 using System.Collections.Generic;
@@ -13,7 +13,7 @@ using KodakkuAssist.Module.Draw.Manager;
 
 namespace Cyf5119Scripts.Endwalker.TheAetherfont;
 
-[ScriptType(guid: "554C2F0D-3E58-14B1-237A-2CA662AC229E", name: "The Aetherfont", territorys: [1126], version: "0.0.0.2", author: "Cyf5119")]
+[ScriptType(guid: "554C2F0D-3E58-14B1-237A-2CA662AC229E", name: "The Aetherfont", territorys: [1126], version: "0.0.0.2", Author: "Linoa235")]
 public class TheAetherfont
 {
     public void Init(ScriptAccessory sa)

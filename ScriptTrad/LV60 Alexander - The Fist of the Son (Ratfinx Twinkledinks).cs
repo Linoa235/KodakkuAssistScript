@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -15,7 +15,7 @@ using KodakkuAssist.Extensions;
 namespace A5N;
 
 [ScriptType(guid: "1462516c-2bc2-4560-8244-387845cc098d", name: "A5N", territorys: [520],
-    version: "0.0.0.2", author: "Tetora", note: noteStr)]
+    version: "0.0.0.2", Author: "Linoa235", note: noteStr)]
 
 public class A5N
 {

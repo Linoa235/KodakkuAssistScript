@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using KodakkuAssist.Module.GameEvent;
 using KodakkuAssist.Script;
 using KodakkuAssist.Module.Draw;
@@ -16,7 +16,7 @@ using KodakkuAssist.Module.GameOperate;
 
 namespace KarlinScriptNamespace
 {
-    [ScriptType(name: "Dragonsong's Reprise Drawings", territorys: [968], guid: "d9c97e91-9b59-432d-a3a1-42a8475b7e2a", version: "0.0.0.6", author: "Karlin")]
+    [ScriptType(name: "Dragonsong's Reprise Drawings", territorys: [968], guid: "d9c97e91-9b59-432d-a3a1-42a8475b7e2a", version: "0.0.0.6", Author: "Linoa235")]
     public class DragongSingDraw
     {
         [UserSetting("P5 Tether Crash Display Delay (ms)")]
@@ -343,10 +343,10 @@ namespace KarlinScriptNamespace
             {
                 var p1 = RotatePoint(npos, cpos, float.Pi / 2);
                 var p2 = RotatePoint(npos, cpos, float.Pi / -2);
-                dp.Name = "P1_Sony○1";
+                dp.Name = "P1_Sonyâ—‹1";
                 dp.TargetPosition = p1;
                 accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
-                dp.Name = "P1_Sony○2";
+                dp.Name = "P1_Sonyâ—‹2";
                 dp.TargetPosition = p2;
                 accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
             }
@@ -355,14 +355,14 @@ namespace KarlinScriptNamespace
                 if (index == 2 || index == 3)
                 {
                     var p = RotatePoint(npos, cpos, float.Pi / -4);
-                    dp.Name = "P1_Sony▽Healer";
+                    dp.Name = "P1_Sonyâ–½Healer";
                     dp.TargetPosition = p;
                     accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
                 }
                 else
                 {
                     var p = RotatePoint(npos, cpos, float.Pi / 4 * 3);
-                    dp.Name = "P1_Sony▽DPS";
+                    dp.Name = "P1_Sonyâ–½DPS";
                     dp.TargetPosition = p;
                     accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
                 }
@@ -372,14 +372,14 @@ namespace KarlinScriptNamespace
                 if (index == 0 || index == 1)
                 {
                     var p = RotatePoint(npos, cpos, float.Pi / 4);
-                    dp.Name = "P1_Sony□Tank";
+                    dp.Name = "P1_Sonyâ–¡Tank";
                     dp.TargetPosition = p;
                     accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
                 }
                 else
                 {
                     var p = RotatePoint(npos, cpos, float.Pi / -4 * 3);
-                    dp.Name = "P1_Sony□DPS";
+                    dp.Name = "P1_Sonyâ–¡DPS";
                     dp.TargetPosition = p;
                     accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
                 }
@@ -389,14 +389,14 @@ namespace KarlinScriptNamespace
                 if (index == 0 || index == 1)
                 {
                     var p = npos;
-                    dp.Name = "P1_Sony×Tank";
+                    dp.Name = "P1_SonyÃ—Tank";
                     dp.TargetPosition = p;
                     accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
                 }
                 else
                 {
                     var p = RotatePoint(npos, cpos, float.Pi);
-                    dp.Name = "P1_Sony×DPS";
+                    dp.Name = "P1_SonyÃ—DPS";
                     dp.TargetPosition = p;
                     accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
                 }

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -15,7 +15,7 @@ using KodakkuAssist.Extensions;
 namespace Bismarck_Extreme;
 
 [ScriptType(guid: "56751be8-113f-4496-8b46-982ff96d90c3", name: "Bismarck Extreme", territorys: [447],
-    version: "0.0.0.2", author: "Tetora", note: noteStr)]
+    version: "0.0.0.2", Author: "Linoa235", note: noteStr)]
 
 public class Bismarck_Extreme
 {
@@ -49,8 +49,8 @@ public class Bismarck_Extreme
     [ScriptMethod(name: "Opening Hint", eventType: EventTypeEnum.Director, eventCondition: ["Command:40000001"])]
     public async void OpeningHint(Event @event, ScriptAccessory accessory)
     {
-        if (isText) accessory.Method.TextInfo("Difficulty: ☆\nKill differently colored snakes, watch for weather during transition", duration: 5000, true);
-        accessory.Method.SendChat("/e ————Cheat Sheet————\nAfter snakes spawn: Blue buff kills green snake, green buff kills blue snake\nThunder: Spread, don't attack water bubble\nLight rain: Center chariot, attack water bubble\nHeavy rain: Center knockback into donut, attack water bubble");
+        if (isText) accessory.Method.TextInfo("Difficulty: â˜†\nKill differently colored snakes, watch for weather during transition", duration: 5000, true);
+        accessory.Method.SendChat("/e â€”â€”â€”â€”Cheat Sheetâ€”â€”â€”â€”\nAfter snakes spawn: Blue buff kills green snake, green buff kills blue snake\nThunder: Spread, don't attack water bubble\nLight rain: Center chariot, attack water bubble\nHeavy rain: Center knockback into donut, attack water bubble");
     }
     
     [ScriptMethod(name: "Pull Hint", eventType: EventTypeEnum.AddCombatant, eventCondition: ["DataId:3827"])]
@@ -82,7 +82,7 @@ public class Bismarck_Extreme
         if (isEdgeTTS) accessory.Method.EdgeTTS("Use Magitek Field Generator");
     }
     
-    [ScriptMethod(name: "Get on Back Hint", eventType: EventTypeEnum.Targetable, eventCondition: ["Targetable:True", "SourceName:regex:^(角质甲壳|chitin carapace|強硬外殻)$"])]
+    [ScriptMethod(name: "Get on Back Hint", eventType: EventTypeEnum.Targetable, eventCondition: ["Targetable:True", "SourceName:regex:^(è§’è´¨ç”²å£³|chitin carapace|å¼·ç¡¬å¤–æ®»)$"])]
     public void GetOnBackHint(Event @event, ScriptAccessory accessory)
     {
         if (isTTS) accessory.Method.TTS("Get on back");
@@ -161,7 +161,7 @@ public class Bismarck_Extreme
         if (isText) accessory.Method.TextInfo("Thunder: Spread + don't attack water bubble\nHeavy rain: Attack water bubble, center knockback into donut\nLight rain: Attack water bubble, move away from center", duration: 10000, true);
         if (isTTS) accessory.Method.TTS("Watch weather change");
         if (isEdgeTTS) accessory.Method.EdgeTTS("Watch weather change");
-        accessory.Method.SendChat("/e ————Call Wind and Rain————\nThunder: Spread, don't attack water bubble\nLight rain: Center chariot, attack water bubble\nHeavy rain: Center knockback into donut, attack water bubble");
+        accessory.Method.SendChat("/e â€”â€”â€”â€”Call Wind and Rainâ€”â€”â€”â€”\nThunder: Spread, don't attack water bubble\nLight rain: Center chariot, attack water bubble\nHeavy rain: Center knockback into donut, attack water bubble");
     }
     
     [ScriptMethod(name: "Thunder_Spread Hint", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:4016"])]

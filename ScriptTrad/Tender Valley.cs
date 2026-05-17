@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Numerics;
 using Newtonsoft.Json;
@@ -8,7 +8,7 @@ using KodakkuAssist.Module.Draw;
 
 namespace Cyf5119Script.Dawntrail.TenderValley
 {
-    [ScriptType(guid: "C6AAF3DF-64BA-15C2-41F8-D24F7F4656DD", name: "Tender Valley", territorys: [1203], version: "0.0.0.5", author: "Cyf5119")]
+    [ScriptType(guid: "C6AAF3DF-64BA-15C2-41F8-D24F7F4656DD", name: "Tender Valley", territorys: [1203], version: "0.0.0.5", Author: "Linoa235")]
     public class TenderValley
     {
         private uint

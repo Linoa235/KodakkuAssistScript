@@ -1,4 +1,4 @@
-// File: M7S_ArcadiaSavage_Heavyweight3_Mao.cs
+﻿// File: M7S_ArcadiaSavage_Heavyweight3_Mao.cs
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,7 +24,7 @@ using EX = TsingNamespace.Dawntrail.Savage.M7S.ScriptExtensions_Tsing;
 
 namespace TsingNamespace.Dawntrail.Savage.M7S
 {
-    [ScriptType(name: "M7S·Arcadia Savage·Heavyweight 3", guid: "e3cfc380-edc2-f441-bebe-e9e294f2631f", territorys: [1261], version: "0.0.1.0", author: "Mao", note: noteStr)]
+    [ScriptType(name: "M7SÂ·Arcadia SavageÂ·Heavyweight 3", guid: "e3cfc380-edc2-f441-bebe-e9e294f2631f", territorys: [1261], version: "0.0.1.0", Author: "Linoa235", note: noteStr)]
     public class M7S_Script
     {
 
@@ -416,7 +416,7 @@ namespace TsingNamespace.Dawntrail.Savage.M7S
 
             (myStartPos, myModPos, myStackPos, myEndPos) = (myRole, WalkthroughType, isMeGetSinisterSeed) switch
             {
-                // ↓ Got ice flower
+                // â†“ Got ice flower
                 (EX.PlayerRoleEnum.MT, WalkthroughEnum.MMW_SPJP, true) =>
                     (center + new Vector3(-offset.X, 0, -offset.Z), myModPos, center + MMW_Offset_LeftStack, center + MMW_Offset_EndPos),
 
@@ -441,7 +441,7 @@ namespace TsingNamespace.Dawntrail.Savage.M7S
                 (EX.PlayerRoleEnum.D4, WalkthroughEnum.MMW_SPJP, true) =>
                     (center + new Vector3(offset.X, 0, -offset.Z), myModPos, center + MMW_Offset_RightStack, center + MMW_Offset_EndPos),
 
-                // ↓ Didn't get ice flower
+                // â†“ Didn't get ice flower
                 (EX.PlayerRoleEnum.MT, WalkthroughEnum.MMW_SPJP, false) =>
                     (center + new Vector3(0, 0, -1), center + new Vector3(0, 0, -9), center + MMW_Offset_LeftStack, center + MMW_Offset_EndPos),
 
@@ -1283,7 +1283,7 @@ namespace TsingNamespace.Dawntrail.Savage.M7S
             // else if (StrangeSeedsCount > 0)
             // {
             //     // The weapon jump after the ice flower also needs to be delayed, Donut delayed, Circle not delayed
-            //     // ↑ Oh my, the donut after GA-100's three-through-one also needs to be delayed, otherwise the safe zone on the arena floor won't be visible
+            //     // â†‘ Oh my, the donut after GA-100's three-through-one also needs to be delayed, otherwise the safe zone on the arena floor won't be visible
             //     if (actionId == (uint)DataM7S.AID.BrutishSwingMachete_P2)
             //     {
             //         delay_destoryAt = new(2460, destoryAt - 2460);
@@ -2409,21 +2409,21 @@ namespace TsingNamespace.Dawntrail.Savage.M7S
 
         /*
             P3 spore explosion draw danger zone
-            ↑ Same as P1, no additional drawing
+            â†‘ Same as P1, no additional drawing
         */
 
         /*
             P3 stack ice flower draw danger zone
             P3 stack ice flower draw danger zone after landing
-            ↑ Same as P2, no additional drawing
+            â†‘ Same as P2, no additional drawing
         */
         /*
             Petrification draw safe zone
-            ↑ Same as P1, no additional drawing
+            â†‘ Same as P1, no additional drawing
         */
         /*
             Burrowing cannon + ice flower draw danger zone
-            ↑ Same as P1, no additional drawing
+            â†‘ Same as P1, no additional drawing
         */
 
         // Remaining work 
@@ -2780,7 +2780,7 @@ namespace TsingNamespace.Dawntrail.Savage.M7S
 
             /* 
                 It's quite possible that the large club and later large club use two different IDs, P3's mouth cannon + spread cast is faster
-                ↑ Not so, it's the same
+                â†‘ Not so, it's the same
             */
             Stoneringer2Stoneringers_LStick = 42401, // Boss->self, 2.0+3.5s cast, single-target
             Stoneringer2Stoneringers_RStick = 42400, // Boss->self, 2.0+3.5s cast, single-target

@@ -1,4 +1,4 @@
-// File: NewMoonIslandCE_XSZYYS.cs
+﻿// File: NewMoonIslandCE_XSZYYS.cs
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -23,7 +23,7 @@ namespace KodakkuAssistXSZYYS
         guid: "15725518-8F8E-413A-BEA8-E19CC861CF93",
         territorys: [1252],
         version: "0.2.1",
-        author: "XSZYYS",
+        Author: "Linoa235",
         note: "New Moon Island CE Drawing Completed"
     )]
     public class NewMoonIslandCE

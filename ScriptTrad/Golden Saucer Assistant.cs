@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using KodakkuAssist.Module.GameEvent;
 using KodakkuAssist.Script;
 using KodakkuAssist.Module.GameEvent.Struct;
@@ -8,7 +8,7 @@ using Dalamud.Game.ClientState.Objects.Types;
 
 namespace MyScriptNamespace
 {
-    [ScriptType(name: "Golden Saucer Assistant", territorys: [144], guid: "9eed3085-cb11-738a-7e06-5ba0aa67363c", version: "0.0.0.1", author: "Karlin")]
+    [ScriptType(name: "Golden Saucer Assistant", territorys: [144], guid: "9eed3085-cb11-738a-7e06-5ba0aa67363c", version: "0.0.0.1", Author: "Linoa235")]
     public class GoldenSaucerAssistant
     {
         DateTime lasthealth = DateTime.Now;

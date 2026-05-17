@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -15,7 +15,7 @@ using System.Threading.Tasks;
 namespace Celestium;
 
 [ScriptType(guid: "7703f1a9-5698-4896-8908-bb8e415c1321", name: "Celestium", territorys: [796],
-    version: "0.0.0.6", author: "Tetora", note: noteStr)]
+    version: "0.0.0.6", Author: "Linoa235", note: noteStr)]
 
 public class Celestium
 {
@@ -42,7 +42,7 @@ public class Celestium
 
     #region 03: First Stone Wall - Xipacna
     
-    [ScriptMethod(name: "—————— 03: First Stone Wall - Xipacna ——————", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€” 03: First Stone Wall - Xipacna â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
     public void Floor3(Event @event, ScriptAccessory accessory) { }
     
     [ScriptMethod(name: "Exorcism Shock (Interrupt)", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:14365"])]
@@ -57,7 +57,7 @@ public class Celestium
     
     #region 08: Blue Fang, Red Fang
     
-    [ScriptMethod(name: "—————— 08: Blue Fang, Red Fang ——————", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€” 08: Blue Fang, Red Fang â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
     public void Floor8(Event @event, ScriptAccessory accessory) { }
     
     [ScriptMethod(name: "Grand Explosion (Interrupt)", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:14680"])]
@@ -72,7 +72,7 @@ public class Celestium
     
     #region 18: Blasting Duel
 
-    [ScriptMethod(name: "—————— 18: Blasting Duel ——————", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€” 18: Blasting Duel â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
     public void Floor18(Event @event, ScriptAccessory accessory) { }
     
     [ScriptMethod(name: "Wild Charge (Line Knockback)", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:15055"])]

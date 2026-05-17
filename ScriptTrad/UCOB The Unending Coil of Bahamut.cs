@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using KodakkuAssist.Module.GameEvent;
 using KodakkuAssist.Script;
 using KodakkuAssist.Module.Draw;
@@ -17,7 +17,7 @@ using KodakkuAssist.Module.Draw.Manager;
 namespace UsamisScript.StormBlood.Ucob;
 
 [ScriptType(name: "UCOB [The Unending Coil of Bahamut]", territorys: [733], guid: "884e415a-1210-44cc-bdff-8fab6878e87d",
-    version: "0.0.2.2", author: "Joshua and Usami", note: noteStr, updateInfo: UpdateInfo)]
+    version: "0.0.2.2", Author: "Linoa235", note: noteStr, updateInfo: UpdateInfo)]
 public class Ucob
 {
     // TODO
@@ -1646,28 +1646,28 @@ public class Ucob
                 accessory.Method.TextInfo($"1 black orb per group, no swap needed", msgDuration, false);
                 break;
             case [2, 1, 0]:
-                accessory.Method.TextInfo($"【H1 Group】: 2 black orbs, swap to 【D3D4 Group】", msgDuration, true);
+                accessory.Method.TextInfo($"ã€H1 Groupã€‘: 2 black orbs, swap to ã€D3D4 Groupã€‘", msgDuration, true);
                 break;
             case [2, 0, 1]:
-                accessory.Method.TextInfo($"【H1 Group】: 2 black orbs, swap to 【H2 Group】", msgDuration, true);
+                accessory.Method.TextInfo($"ã€H1 Groupã€‘: 2 black orbs, swap to ã€H2 Groupã€‘", msgDuration, true);
                 break;
             case [1, 2, 0]:
-                accessory.Method.TextInfo($"【H2 Group】: 2 black orbs, swap to 【D3D4 Group】", msgDuration, true);
+                accessory.Method.TextInfo($"ã€H2 Groupã€‘: 2 black orbs, swap to ã€D3D4 Groupã€‘", msgDuration, true);
                 break;
             case [0, 2, 1]:
-                accessory.Method.TextInfo($"【H2 Group】: 2 black orbs, swap to 【H1 Group】", msgDuration, true);
+                accessory.Method.TextInfo($"ã€H2 Groupã€‘: 2 black orbs, swap to ã€H1 Groupã€‘", msgDuration, true);
                 break;
             case [1, 0, 2]:
-                accessory.Method.TextInfo($"【D3D4 Group】: 2 black orbs, swap to 【H2 Group】\n【H1/H2 Group】: Assist interception for 【D3D4 Group】", msgDuration, true);
+                accessory.Method.TextInfo($"ã€D3D4 Groupã€‘: 2 black orbs, swap to ã€H2 Groupã€‘\nã€H1/H2 Groupã€‘: Assist interception for ã€D3D4 Groupã€‘", msgDuration, true);
                 break;
             case [0, 1, 2]:
-                accessory.Method.TextInfo($"【D3D4 Group】: 2 black orbs, swap to 【H1 Group】\n【H1/H2 Group】: Assist interception for 【D3D4 Group】", msgDuration, true);
+                accessory.Method.TextInfo($"ã€D3D4 Groupã€‘: 2 black orbs, swap to ã€H1 Groupã€‘\nã€H1/H2 Groupã€‘: Assist interception for ã€D3D4 Groupã€‘", msgDuration, true);
                 break;
             case [3, 0, 0]:
-                accessory.Method.TextInfo($"【H1 Group】: 3 black orbs, swap to other groups\n【H2/D3D4 Group】: Assist interception for 【H1 Group】", msgDuration, true);
+                accessory.Method.TextInfo($"ã€H1 Groupã€‘: 3 black orbs, swap to other groups\nã€H2/D3D4 Groupã€‘: Assist interception for ã€H1 Groupã€‘", msgDuration, true);
                 break;
             case [0, 3, 0]:
-                accessory.Method.TextInfo($"【H2 Group】: 3 black orbs, swap to other groups\n【H1/D3D4 Group】: Assist interception for 【H2 Group】", msgDuration, true);
+                accessory.Method.TextInfo($"ã€H2 Groupã€‘: 3 black orbs, swap to other groups\nã€H1/D3D4 Groupã€‘: Assist interception for ã€H2 Groupã€‘", msgDuration, true);
                 break;
         }
     }
@@ -1918,9 +1918,9 @@ public class Ucob
         var BahamutDir = PositionTo8Dir(BahamutPosition, new(0, 0, 0));
         bool isTurnLeft = BahamutDir % 2 == 0;
         if (isTurnLeft)
-            accessory.Method.TextInfo("After Nael dives, run to the 【LEFT】 facing outward", 3000);
+            accessory.Method.TextInfo("After Nael dives, run to the ã€LEFTã€‘ facing outward", 3000);
         else
-            accessory.Method.TextInfo("After Nael dives, run to the 【RIGHT】 facing outward", 3000);
+            accessory.Method.TextInfo("After Nael dives, run to the ã€RIGHTã€‘ facing outward", 3000);
     }
 
     [ScriptMethod(name: "P3 Bahamut: [Grand Octet] Return to Center, Twintania Position and Guidance", eventType: EventTypeEnum.TargetIcon, eventCondition: ["Id:0029"])]

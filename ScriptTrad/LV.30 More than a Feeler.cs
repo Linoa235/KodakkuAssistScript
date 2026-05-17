@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Numerics;
 using Newtonsoft.Json;
@@ -17,7 +17,7 @@ using System.ComponentModel;
 namespace Veever.A_Realm_Reborn.MorethanaFeeler;
 
 [ScriptType(name: "LV.30 More than a Feeler", territorys: [221], guid: "3113eeb5-96d8-48a8-9069-e1e3e5232ee1",
-    version: "0.0.0.3", author: "Veever", note: noteStr)]
+    version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
 
 public class More_than_a_Feeler
 {

@@ -1,4 +1,4 @@
-using Dalamud.Utility.Numerics;
+﻿using Dalamud.Utility.Numerics;
 using FFXIVClientStructs.FFXIV.Client.Game.Character;
 using FFXIVClientStructs.FFXIV.Client.Game.Object;
 using FFXIVClientStructs.FFXIV.Client.Graphics.Vfx;
@@ -28,7 +28,7 @@ using static FFXIVClientStructs.FFXIV.Client.Graphics.Render.Skeleton;
 namespace Veever.EndWalker.the_Dead_Ends;
 
 [ScriptType(name: Name, territorys: [973], guid: "850c08df-adad-43f7-8a2a-f8da31df4e84",
-    version: Version, author: "Veever", note: NoteStr, updateInfo: UpdateInfo)]
+    version: Version, Author: "Linoa235", note: NoteStr, updateInfo: UpdateInfo)]
 
 public class the_Dead_Ends
 {
@@ -60,7 +60,7 @@ public class the_Dead_Ends
     [UserSetting("Language")]
     public Language language { get; set; } = Language.Chinese;
 
-    [UserSetting("Draw opacity — higher value = more visible")]
+    [UserSetting("Draw opacity â€” higher value = more visible")]
     public static float ColorAlpha { get; set; } = 1f;
 
     [UserSetting("Text Banner Toggle")]

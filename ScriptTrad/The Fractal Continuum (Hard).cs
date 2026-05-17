@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -15,7 +15,7 @@ using System.Threading.Tasks;
 namespace the_Fractal_Continuum_Hard;
 
 [ScriptType(guid: "c76136e1-1b5b-4cfb-a677-4cc0917fa050", name: "The Fractal Continuum (Hard)", territorys: [743],
-    version: "0.0.0.3", author: "Tetora", note: noteStr)]
+    version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
 
 public class the_Fractal_Continuum_Hard
 {

@@ -1,4 +1,4 @@
-// File: Pilgrims_Traverse_Tetora.cs
+﻿// File: Pilgrims_Traverse_Tetora.cs
 using System;
 using System.ComponentModel;
 using System.Linq;
@@ -25,7 +25,7 @@ using FFXIVClientStructs.FFXIV.Component.GUI;
 
 namespace Pilgrims_Traverse;
 
-[ScriptType(guid: "3f65b3c0-df48-4ef8-89ae-b8091b7690f1", name: "Pilgrim's Traverse", author: "Tetora", 
+[ScriptType(guid: "3f65b3c0-df48-4ef8-89ae-b8091b7690f1", name: "Pilgrim's Traverse", Author: "Linoa235", 
     territorys: [1281, 1282, 1283, 1284, 1285, 1286, 1287, 1288, 1289, 1290, 1311, 1333],
     version: "0.0.1.91",note: noteStr)]
 
@@ -36,7 +36,7 @@ public class Pilgrims_Traverse
         v0.0.1.91:
         Pilgrim's Traverse Basic Drawing
         Changelog on Discord, please provide ARR recording if issues occur
-        Note: Layer numbers in method settings are for分割线 effects only, not batch switches
+        Note: Layer numbers in method settings are foråˆ†å‰²çº¿ effects only, not batch switches
         """;
 
     
@@ -217,7 +217,7 @@ public class Pilgrims_Traverse
     
     #region Tools Section
     
-    [ScriptMethod(name: "—————— Tools Section (Please disable unnecessary functions first) ——————", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€” Tools Section (Please disable unnecessary functions first) â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
     public void ToolsSection(Event @event, ScriptAccessory accessory) { }
     
     [ScriptMethod(name: "Self Bomb-Mother Big Burst Range Drawing", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:44629"])]
@@ -291,7 +291,7 @@ public class Pilgrims_Traverse
     #endregion
     
     #region  Floors 1~10 
-    [ScriptMethod(name: "—————— Floors 1 ~ 10 ——————", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€” Floors 1 ~ 10 â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
     public void Floor1(Event @event, ScriptAccessory accessory) { }
     
     [ScriptMethod(name: "1~2 Pilgrim's Echeveria_Leafcutter (Line)", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:44631"])]
@@ -402,7 +402,7 @@ public class Pilgrims_Traverse
     #endregion
     
     #region  Floors 11~20 
-    [ScriptMethod(name: "—————— Floors 11 ~ 20 ——————", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€” Floors 11 ~ 20 â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
     public void Floor11(Event @event, ScriptAccessory accessory) { }
     
     [ScriptMethod(name: "11~12 Pilgrim's Puck_Ovation (Line)", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:44657"])]
@@ -485,7 +485,7 @@ public class Pilgrims_Traverse
         foreach (float degree in degrees)
         {
             var dp = accessory.Data.GetDefaultDrawProperties();
-            dp.Name = $"TreeRoot_WoodsEmbrace_{degree}°";
+            dp.Name = $"TreeRoot_WoodsEmbrace_{degree}Â°";
             dp.Scale = new (6f, 60f);
             dp.Owner = @event.SourceId();
             dp.Color = accessory.Data.DefaultDangerColor.WithW(0.8f);
@@ -498,7 +498,7 @@ public class Pilgrims_Traverse
     #endregion
     
     #region Floors 21~30
-    [ScriptMethod(name: "—————— Floors 21 ~ 30 ——————", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€” Floors 21 ~ 30 â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
     public void Floor21(Event @event, ScriptAccessory accessory) { }
     
     [ScriptMethod(name: "21~23 Forgiven Bribe_Aetherial Spark (Line)", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:44680"])]
@@ -674,7 +674,7 @@ public class Pilgrims_Traverse
     #endregion
     
     #region  Floors 31~40
-    [ScriptMethod(name: "—————— Floors 31 ~ 40 ——————", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€” Floors 31 ~ 40 â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
     public void Floor31(Event @event, ScriptAccessory accessory) { }
     
     [ScriptMethod(name: "31~33 Pilgrim's Peagasus_Nicker (Circle)", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:44703"])]
@@ -870,7 +870,7 @@ public class Pilgrims_Traverse
     #endregion
     
     #region  Floors 41~50
-    [ScriptMethod(name: "—————— Floors 41 ~ 50 ——————", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€” Floors 41 ~ 50 â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
     public void Floor41(Event @event, ScriptAccessory accessory) { }
     
     [ScriptMethod(name: "42~45 Pilgrim's Arsenal_Smite of Rage (Line)", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:44714"])]
@@ -1057,7 +1057,7 @@ public class Pilgrims_Traverse
     #endregion
     
     #region  Floors 51~59
-    [ScriptMethod(name: "—————— Floors 51 ~ 60 ——————", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€” Floors 51 ~ 60 â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
     public void Floor51(Event @event, ScriptAccessory accessory) { }
     
     [ScriptMethod(name: "53~56 Pilgrim's Basilisk_Smoldering Scales Tip", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:42212"])]
@@ -1097,7 +1097,7 @@ public class Pilgrims_Traverse
         accessory.Method.RemoveDraw($"PilgrimsBasilisk_BlazeSpikes{@event.SourceId()}");
     }
     
-    [ScriptMethod(name: "56~59 Pilgrim's Sand Boa_Earthen Auger (270° Cleave)", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:42091"])]
+    [ScriptMethod(name: "56~59 Pilgrim's Sand Boa_Earthen Auger (270Â° Cleave)", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:42091"])]
     public void PilgrimsSandBoa_EarthenAuger (Event @event, ScriptAccessory accessory)
     {
         var dp = accessory.Data.GetDefaultDrawProperties();
@@ -1239,7 +1239,7 @@ public class Pilgrims_Traverse
     [ScriptMethod(name: "60 ArcheoMalik_Spinning Needles (Rotating Cone)", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:44868"])]
     public void ArcheoMalik_SpinningNeedles (Event @event, ScriptAccessory accessory)
     {
-        // Spinning Needles [ActionId: 44868 - Cast: 4.7s] ; total 10 judgments, each rotation 60°, interval about 1s, damage source ActionId: 44909 ;
+        // Spinning Needles [ActionId: 44868 - Cast: 4.7s] ; total 10 judgments, each rotation 60Â°, interval about 1s, damage source ActionId: 44909 ;
         // Clockwise rotation [TargetIcon: 00A7] ; Counterclockwise rotation [TargetIcon: 00A7] 
         var dp = accessory.Data.GetDefaultDrawProperties();
         dp.Name = $"ArcheoMalik_SpinningNeedles";
@@ -1276,7 +1276,7 @@ public class Pilgrims_Traverse
     #endregion
     
     #region  Floors 61~70
-    [ScriptMethod(name: "—————— Floors 61 ~ 70 ——————", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€” Floors 61 ~ 70 â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
     public void Floor61(Event @event, ScriptAccessory accessory) { }
     
     [ScriptMethod(name: "61~64 Forgiven Doubt_Concealed", eventType: EventTypeEnum.AddCombatant, eventCondition: ["DataId:18832"])]
@@ -1674,7 +1674,7 @@ public class Pilgrims_Traverse
     #endregion
     
     #region  Floors 71~80
-    [ScriptMethod(name: "—————— Floors 71 ~ 80 ——————", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€” Floors 71 ~ 80 â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
     public void Floor71(Event @event, ScriptAccessory accessory) { }
     
     [ScriptMethod(name: "71~74 Pilgrim's Detonator_Fracture (Circle)", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:42770"])]
@@ -2021,7 +2021,7 @@ public class Pilgrims_Traverse
     #endregion
     
     #region  Floors 81~90
-    [ScriptMethod(name: "—————— Floors 81 ~ 90 ——————", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€” Floors 81 ~ 90 â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
     public void Floor81(Event @event, ScriptAccessory accessory) { }
     
     [ScriptMethod(name: "81~83 Summoning Gremlin_Claw (Cleave)", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:44770"])]
@@ -2387,7 +2387,7 @@ public class Pilgrims_Traverse
     #endregion
     
     #region Floors 91~98 
-    [ScriptMethod(name: "—————— Floors 91 ~ 100 ——————", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€” Floors 91 ~ 100 â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
     public void Floor91(Event @event, ScriptAccessory accessory) { }
     
     [ScriptMethod(name: "91~94 Summoning Doll_Whinge (Circle)", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:44512"])]
@@ -3131,13 +3131,13 @@ public class Pilgrims_Traverse
     
     #region The Final Verse Quantum Deep Thinking Battle Full Tribute Difficulty Q40
     
-    [ScriptMethod(name: "—————— The Final Verse Quantum Deep Thinking Battle ——————", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€” The Final Verse Quantum Deep Thinking Battle â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
     public void TheFinalVerseQuantum(Event @event, ScriptAccessory accessory) { }
     
     // The Final Verse      NPCID: 14037 Target circle 28.5m
     // Devoured Eater  NPCID: 14038 Target circle 15.0m
     
-    // P1 Abyssal Blaze (Black-White Match + Tower Stepping + Floor Fire) → Blade of First Light + Chains of Condemnation / Fireball + Tether & Cross Fire → Spinelash (Block Stack) → Focus adds then role position ready for P2
+    // P1 Abyssal Blaze (Black-White Match + Tower Stepping + Floor Fire) â†’ Blade of First Light + Chains of Condemnation / Fireball + Tether & Cross Fire â†’ Spinelash (Block Stack) â†’ Focus adds then role position ready for P2
     
     [ScriptMethod(name: "Countdown Buff Renewal Tip", eventType: EventTypeEnum.Countdown, eventCondition: ["Type:Start"])]
     public void CountdownBuffRenewalTip(Event @event, ScriptAccessory accessory)
@@ -3156,8 +3156,8 @@ public class Pilgrims_Traverse
 
         var validBosses = new HashSet<string>
         {
-            "The Final Verse", "Eminent Grief", "エミネントグリーフ",
-            "Devoured Eater", "devoured eater", "侵蝕された罪喰い"
+            "The Final Verse", "Eminent Grief", "ã‚¨ãƒŸãƒãƒ³ãƒˆã‚°ãƒªãƒ¼ãƒ•",
+            "Devoured Eater", "devoured eater", "ä¾µè•ã•ã‚ŒãŸç½ªå–°ã„"
         };
 
         if (!validBosses.Contains(targetName))
@@ -3170,11 +3170,11 @@ public class Pilgrims_Traverse
         {
             { "The Final Verse", ("Dark", "Light") },
             { "Eminent Grief", ("Dark", "Light") },
-            { "エミネントグリーフ", ("Dark", "Light") },
+            { "ã‚¨ãƒŸãƒãƒ³ãƒˆã‚°ãƒªãƒ¼ãƒ•", ("Dark", "Light") },
     
             { "Devoured Eater", ("Light", "Dark") },
             { "devoured eater", ("Light", "Dark") },
-            { "侵蝕された罪喰い", ("Light", "Dark") }
+            { "ä¾µè•ã•ã‚ŒãŸç½ªå–°ã„", ("Light", "Dark") }
         };
 
         if (bossNameMapping.TryGetValue(targetName, out var bossInfo))
@@ -3545,8 +3545,8 @@ public class Pilgrims_Traverse
         if (isEdgeTTS)accessory.Method.EdgeTTS("Kill minion");
     }
     
-    // P2 Shackles of Sanctity (Role Debuff) → Flaming Domain (Guide Cage Tether + Suction) → Guide Triple Yellow Circle → Tail Combo (Tankbuster Tower + Diagonal AOE) → Unholy Darkness (AOE+DOT) → Tail Combo (Tankbuster Tower + Diagonal AOE)
-    // → Abyssal Blaze (Store Floor Fire) + Guide Triple Yellow Circle → Bounds of Sin (Trapping Prison) + Black-White Match → Floor Fire Judgment
+    // P2 Shackles of Sanctity (Role Debuff) â†’ Flaming Domain (Guide Cage Tether + Suction) â†’ Guide Triple Yellow Circle â†’ Tail Combo (Tankbuster Tower + Diagonal AOE) â†’ Unholy Darkness (AOE+DOT) â†’ Tail Combo (Tankbuster Tower + Diagonal AOE)
+    // â†’ Abyssal Blaze (Store Floor Fire) + Guide Triple Yellow Circle â†’ Bounds of Sin (Trapping Prison) + Black-White Match â†’ Floor Fire Judgment
     
     [ScriptMethod(name: "Shackles of Sanctity (Role Debuff) Cast Tip", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:44801"])]
     public void Q40_ShacklesOfSanctityTip(Event @event, ScriptAccessory accessory)
@@ -3710,9 +3710,9 @@ public class Pilgrims_Traverse
         }
     }
     
-    // P3 Crime and Punishment (Poison Transfer) [First] Blade of First Light (Line) + Chains of Condemnation / Fireball → [Second] Spinelash (Block Stack + Minion) → Bounds of Sin (Trapping Prison) + Tether + Cross Fire
-    // → [Third] Abyssal Blaze Store Floor Fire + Black-White Match → Drain Aether (Buff Detection) + Floor Fire Judgment → Unholy Darkness (AOE+DOT)
-    // First transfer same group → Second transfer same role → Third transfer same group [ T & D1 as one group; H & D2 as one group ]
+    // P3 Crime and Punishment (Poison Transfer) [First] Blade of First Light (Line) + Chains of Condemnation / Fireball â†’ [Second] Spinelash (Block Stack + Minion) â†’ Bounds of Sin (Trapping Prison) + Tether + Cross Fire
+    // â†’ [Third] Abyssal Blaze Store Floor Fire + Black-White Match â†’ Drain Aether (Buff Detection) + Floor Fire Judgment â†’ Unholy Darkness (AOE+DOT)
+    // First transfer same group â†’ Second transfer same role â†’ Third transfer same group [ T & D1 as one group; H & D2 as one group ]
     // First transfer: [after spicy wings spicy tail] poison in [center top-right] light floor, receive poison next to it ; Second transfer: same role transfer in place after line stack, others dodge ; Third transfer: direct transfer at black-white match position
     
     [ScriptMethod(name: "Crime and Punishment (Poison Transfer) Cast Tip", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:44165"])]
@@ -3826,7 +3826,7 @@ public class Pilgrims_Traverse
     }
 
     
-    // P4 Fevered Flame → Abyssal Blaze (Store Floor Fire)
+    // P4 Fevered Flame â†’ Abyssal Blaze (Store Floor Fire)
     // 1 legitimate (Idyllshire) advantage: melee doesn't lose DPS ; 2-combined double X method advantage: melee doesn't lose DPS ; 2-combined single X method disadvantage: melee loses DPS and higher DPS requirement ; 3-combined method advantage: lower total damage
     
     [ScriptMethod(name: "Fevered Flame (Fire Phase) Cast TTS Tip", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:regex:^441(69|70)$"])]
@@ -3940,7 +3940,7 @@ public class Pilgrims_Traverse
     
     #region Bottom Layer Section
     
-    [ScriptMethod(name: "—————— Bottom Layer Section (Requires corresponding plugin and permissions) ——————", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€” Bottom Layer Section (Requires corresponding plugin and permissions) â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
     public void BottomLayerSection(Event @event, ScriptAccessory accessory) { }
     
     [ScriptMethod(name: "[DR] During weather sprint, fix movement speed to 1.4x", eventType: EventTypeEnum.StatusAdd, eventCondition: ["StatusID:1548"])]

@@ -1,4 +1,4 @@
-using Dalamud.Utility.Numerics;
+﻿using Dalamud.Utility.Numerics;
 using FFXIVClientStructs.FFXIV.Client.Game;
 using FFXIVClientStructs.FFXIV.Client.Game.Character;
 using FFXIVClientStructs.FFXIV.Client.Game.Control;
@@ -37,7 +37,7 @@ using KodaMarkType = KodakkuAssist.Module.GameOperate.MarkType;
 namespace Veever.DawnTrail.Mistwake;
 
 [ScriptType(name: Name, territorys: [1314], guid: "b7d5e223-17b8-43bf-932f-dceddf10ba1a",
-    version: Version, author: "Tetora & Veever", note: NoteStr, updateInfo: UpdateStr)]
+    version: Version, Author: "Linoa235", note: NoteStr, updateInfo: UpdateStr)]
 
 public class Mistwake
 {
@@ -67,7 +67,7 @@ public class Mistwake
     [UserSetting("Language")]
     public Language language { get; set; } = Language.Chinese;
 
-    [UserSetting("Draw opacity — higher value = more visible")]
+    [UserSetting("Draw opacity â€” higher value = more visible")]
     public static float ColorAlpha { get; set; } = 1f;
 
     [UserSetting("Banner text toggle")]
@@ -240,7 +240,7 @@ public class Mistwake
     {
         if (ev.TargetId == sa.Data.Me)
         {
-            string msg = language == Language.Chinese ? "AOE tankbuster — Stay away from party" : "AOE tankbuster — Stay away from party";
+            string msg = language == Language.Chinese ? "AOE tankbuster â€” Stay away from party" : "AOE tankbuster â€” Stay away from party";
             if (isText) sa.Method.TextInfo($"{msg}", duration: 4700, true);
             if (isTTS) sa.TTS($"{msg}", isEdgeTTS);
         }

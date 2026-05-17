@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Numerics;
 using Newtonsoft.Json;
@@ -17,7 +17,7 @@ using System.ComponentModel;
 namespace Veever.A_Realm_Reborn.UndertheArmor;
 
 [ScriptType(name: "LV.10 Under the Armor", territorys: [190], guid: "8b28e087-549e-4a88-96db-50e1e7cc5214",
-    version: "0.0.0.5", author: "Veever", note: noteStr)]
+    version: "0.0.0.5", Author: "Linoa235", note: noteStr)]
 
 public class Under_the_Armor
 {
@@ -73,14 +73,14 @@ public class Under_the_Armor
     public void IronJustice(Event @event, ScriptAccessory accessory)
     {
         accessory.Method.SendChat("/ac \"Low Blow\"");
-        accessory.Method.SendChat("/ac 下踢");
+        accessory.Method.SendChat("/ac ä¸‹è¸¢");
         accessory.Method.SendChat("/ac \"Low Blow\"");
-        accessory.Method.SendChat("/ac 下踢");
+        accessory.Method.SendChat("/ac ä¸‹è¸¢");
         
         accessory.Method.SendChat("/ac \"Leg Sweep\"");
-        accessory.Method.SendChat("/ac 扫腿");
+        accessory.Method.SendChat("/ac æ‰«è…¿");
         accessory.Method.SendChat("/ac \"Leg Sweep\"");
-        accessory.Method.SendChat("/ac 扫腿");
+        accessory.Method.SendChat("/ac æ‰«è…¿");
 
         var dp = accessory.Data.GetDefaultDrawProperties();
         dp.Name = "Iron Justice";

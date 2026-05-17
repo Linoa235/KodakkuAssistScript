@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 namespace theStrikingTree_Hard;
 
 [ScriptType(guid: "de6d6f10-775d-4c45-91ec-2bd4ed6762c7", name: "The Striking Tree (Hard)", territorys: [374],
-    version: "0.0.0.3", author: "Tetora", note: noteStr)]
+    version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
 
 public class theStrikingTree_Hard_
 {

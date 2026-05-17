@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -25,7 +25,7 @@ using FFXIVClientStructs.FFXIV.Component.GUI;
 namespace Windurst_The_Third_Walk;
 
 [ScriptType(guid: "fa374b84-5ce5-405c-a22d-3e7ea1c9591b", name: "LV100 7.5 Windurst: The Third Walk", territorys: [1368],
-    version: "0.0.0.4", author: "Tetora", note: noteStr)]
+    version: "0.0.0.4", Author: "Linoa235", note: noteStr)]
 
 public class Windurst_The_Third_Walk
 {
@@ -53,7 +53,7 @@ public class Windurst_The_Third_Walk
     
     #region Trash Mobs
     
-    [ScriptMethod(name: "———————————  Trash Mobs  ———————————", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”  Trash Mobs  â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
     public void TrashMobs(Event @event, ScriptAccessory accessory) { }
     
     [ScriptMethod(name: "1.5 Abaddon_Cleave (Center Knockback)", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:regex:^50481$"])]
@@ -164,7 +164,7 @@ public class Windurst_The_Third_Walk
     
     #region BOSS1_Demon Shantotto
 
-    [ScriptMethod(name: "————————  BOSS1_Demon Shantotto  ————————", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€”â€”â€”  BOSS1_Demon Shantotto  â€”â€”â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
     public void Boss1_DemonShantotto(Event @event, ScriptAccessory accessory) { }
 
     [ScriptMethod(name: "Incensed Flare AOE", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:regex:^50215$"])]
@@ -325,7 +325,7 @@ public class Windurst_The_Third_Walk
     
     #region BOSS2_Giant Reappearance Alexander
     
-    [ScriptMethod(name: "————————  BOSS2_Giant Reappearance Alexander  ————————", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€”â€”â€”  BOSS2_Giant Reappearance Alexander  â€”â€”â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
     public void Boss2_Alexander(Event @event, ScriptAccessory accessory) { }
     
     [ScriptMethod(name: "Strong Banish IV AOE", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:regex:^50161$"])]
@@ -450,7 +450,7 @@ public class Windurst_The_Third_Walk
     
     #region BOSS3_Promathia
     
-    [ScriptMethod(name: "————————  BOSS3_Promathia  ————————", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€”â€”â€”  BOSS3_Promathia  â€”â€”â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
     public void Boss3_Promathia(Event @event, ScriptAccessory accessory) { }
     
     [ScriptMethod(name: "Divine Song AOE", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:regex:^50317$"])]
@@ -586,13 +586,13 @@ public class Windurst_The_Third_Walk
     
     #region BOSS4_Shinryu
     
-    [ScriptMethod(name: "————————  BOSS4_Shinryu  ————————", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€”â€”â€”  BOSS4_Shinryu  â€”â€”â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
     public void Boss4_Shinryu(Event @event, ScriptAccessory accessory) { }
     
     [ScriptMethod(name: "Cosmic Breath (Upper Half)", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:regex:^49107$"])]
     public void CosmicBreath(Event @event, ScriptAccessory accessory)
     {
-        if (isText) accessory.Method.TextInfo($"↓ Go to the lower platform ↓", duration: 6300, true);
+        if (isText) accessory.Method.TextInfo($"â†“ Go to the lower platform â†“", duration: 6300, true);
         if (isTTS) accessory.Method.TTS($"Go to lower platform");
         if (isEdgeTTS) accessory.Method.EdgeTTS($"Go to lower platform");
         
@@ -608,7 +608,7 @@ public class Windurst_The_Third_Walk
     [ScriptMethod(name: "Cosmic Tail (Lower Half)", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:regex:^49110$"])]
     public void CosmicTail(Event @event, ScriptAccessory accessory)
     {
-        if (isText) accessory.Method.TextInfo($"↑ Go to the upper platform ↑", duration: 6300, true);
+        if (isText) accessory.Method.TextInfo($"â†‘ Go to the upper platform â†‘", duration: 6300, true);
         if (isTTS) accessory.Method.TTS($"Go to upper platform");
         if (isEdgeTTS) accessory.Method.EdgeTTS($"Go to upper platform");
         
@@ -642,7 +642,7 @@ public class Windurst_The_Third_Walk
     [ScriptMethod(name: "Atomic Tail (Lower Half)", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:regex:^49130$"])]
     public void AtomicTail(Event @event, ScriptAccessory accessory)
     {
-        if (isText) accessory.Method.TextInfo($"↑ Go to upper platform, platform destruction ↑", duration: 6300, true);
+        if (isText) accessory.Method.TextInfo($"â†‘ Go to upper platform, platform destruction â†‘", duration: 6300, true);
         if (isTTS) accessory.Method.TTS($"Go to upper platform");
         if (isEdgeTTS) accessory.Method.EdgeTTS($"Go to upper platform");
         
@@ -659,7 +659,7 @@ public class Windurst_The_Third_Walk
     
     #region BOSS4_Void King
     
-    [ScriptMethod(name: "————————  BOSS4_Void King  ————————", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€”â€”â€”  BOSS4_Void King  â€”â€”â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
     public void Boss4_VoidKing(Event @event, ScriptAccessory accessory) { }
     
     [ScriptMethod(name: "Void Declaration AOE", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:regex:^49179$"])]

@@ -1,4 +1,4 @@
-using KodakkuAssist.Data;
+﻿using KodakkuAssist.Data;
 using KodakkuAssist.Extensions;
 using KodakkuAssist.Module.Draw;
 using KodakkuAssist.Module.Draw.Manager;
@@ -24,7 +24,7 @@ namespace BakaWater77.M11N;
        territorys: new uint[] { 1324 },
        guid: "B0058EC8-4429-4BB7-B223-68DE8B115D04",
        version: "0.0.0.1",
-       author: "Baka-Water77",
+       Author: "Linoa235",
        note: null
     )]
 public class ArcadiaCruiserweightM3

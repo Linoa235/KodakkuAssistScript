@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Numerics;
 using KodakkuAssist.Module.Draw;
 using KodakkuAssist.Module.GameEvent;
@@ -7,7 +7,7 @@ using Newtonsoft.Json;
 
 namespace KodakkuScriptTea
 {
-    [ScriptType(name: "TEA P1.5 Floor Fire Starting Line Guidance", territorys: [887], guid: "2bbc1449-ceab-4d61-90a6-a7d69e81da2f", version: "0.0.0.2", author: "Wotou")]
+    [ScriptType(name: "TEA P1.5 Floor Fire Starting Line Guidance", territorys: [887], guid: "2bbc1449-ceab-4d61-90a6-a7d69e81da2f", version: "0.0.0.2", Author: "Linoa235")]
     public class TeaScript
     {
         private bool is1256 = false;

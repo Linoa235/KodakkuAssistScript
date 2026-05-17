@@ -1,4 +1,4 @@
-// File: TowerOfStrength_XSZYYS.cs
+﻿// File: TowerOfStrength_XSZYYS.cs
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -63,8 +63,8 @@ namespace KodakkuAssistXSZYYS
     guid: "874D3ECF-BD6B-448F-BB42-AE7F082E4805",
     territorys: [1252],
     version: "0.0.40",
-    author: "XSZYYS",
-    note: "Update content\r\nDirect role-based rather than party position-based guidance for second boss fireball positions\r\nMark Chemist: type 【/e Mark Chemist】 to mark all nearby chemist players\r\nTreasure Map: line to chests in 1.5 corridors\r\n\r\n------------The following functions only support Echo output by default, can be configured to respond to party check commands and output in party channel------------\r\nCheck Blue Potion: type 【/e Blue Potion Check】 will output chemist blue potion usage, type 【/e Blue Potion Clear】 will clear all data\r\nCheck Resurrection: type 【/e Resurrection Check <number>】, e.g., 【/e Resurrection Check 1】 will output all nearby players with 1 remaining resurrection\r\nCheck Throw Money: type 【/e Throw Money Check】 will output all players who used throw money and their counts, type 【/e Throw Money Clear】 will clear all data\r\n------------------------------------------------------------\r\nPlease select your team's grouping, guidance available for ABC123/152463/LemonCookie strategies\r\nFirst boss:\r\nAOE drawing: rotation, crushing\r\nGuidance: meteor mark, first tower stepping, second tower stepping\r\nSecond boss:\r\nAOE drawing: tankbuster, cone, ice-fire explosion\r\nGuidance: snowball, fireball\r\nThird boss:\r\nAOE drawing: draconic action, ice circle, dive\r\nGuidance: draconic action pre-position, tower stepping, mobs\r\nFinal boss:\r\nAOE drawing: deadly axe/spear, assassin's dagger\r\nGuidance: rune axe, holy lance"
+    Author: "Linoa235",
+    note: "Update content\r\nDirect role-based rather than party position-based guidance for second boss fireball positions\r\nMark Chemist: type ã€/e Mark Chemistã€‘ to mark all nearby chemist players\r\nTreasure Map: line to chests in 1.5 corridors\r\n\r\n------------The following functions only support Echo output by default, can be configured to respond to party check commands and output in party channel------------\r\nCheck Blue Potion: type ã€/e Blue Potion Checkã€‘ will output chemist blue potion usage, type ã€/e Blue Potion Clearã€‘ will clear all data\r\nCheck Resurrection: type ã€/e Resurrection Check <number>ã€‘, e.g., ã€/e Resurrection Check 1ã€‘ will output all nearby players with 1 remaining resurrection\r\nCheck Throw Money: type ã€/e Throw Money Checkã€‘ will output all players who used throw money and their counts, type ã€/e Throw Money Clearã€‘ will clear all data\r\n------------------------------------------------------------\r\nPlease select your team's grouping, guidance available for ABC123/152463/LemonCookie strategies\r\nFirst boss:\r\nAOE drawing: rotation, crushing\r\nGuidance: meteor mark, first tower stepping, second tower stepping\r\nSecond boss:\r\nAOE drawing: tankbuster, cone, ice-fire explosion\r\nGuidance: snowball, fireball\r\nThird boss:\r\nAOE drawing: draconic action, ice circle, dive\r\nGuidance: draconic action pre-position, tower stepping, mobs\r\nFinal boss:\r\nAOE drawing: deadly axe/spear, assassin's dagger\r\nGuidance: rune axe, holy lance"
     )]
 
     public class TowerOfStrength
@@ -79,12 +79,12 @@ namespace KodakkuAssistXSZYYS
         [UserSetting("Strategy Grouping (YuziShao i.e. ABC123/152463/LemonCookie)")]
         public StrategySelection SelectedStrategy { get; set; } = StrategySelection.ABC_123;
 
-        [UserSetting("【YuziShao】Please select your assigned group in the team")]
+        [UserSetting("ã€YuziShaoã€‘Please select your assigned group in the team")]
         public TeamSelection MyTeam { get; set; } = TeamSelection.A;
 
-        [UserSetting("【152463】Please select your assigned group in the team")]
+        [UserSetting("ã€152463ã€‘Please select your assigned group in the team")]
         public PositionSelection MyPosition { get; set; } = PositionSelection.Pos1;
-        [UserSetting("【LemonCookie】Please select your assigned group in the team")]
+        [UserSetting("ã€LemonCookieã€‘Please select your assigned group in the team")]
         public PositionSelection MyLemonCookiePosition { get; set; } = PositionSelection.Pos1;
         [UserSetting("Rune Axe Long Mark Small Circle Guidance (shows two arrows pointing to top-left and top-right platforms)")]
         public bool LongPointName { get; set; } = false;

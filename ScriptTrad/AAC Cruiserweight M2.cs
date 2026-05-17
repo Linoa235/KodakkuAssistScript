@@ -1,4 +1,4 @@
-using FFXIVClientStructs.FFXIV.Client.Game.Object;
+﻿using FFXIVClientStructs.FFXIV.Client.Game.Object;
 using FFXIVClientStructs.FFXIV.Common.Math;
 using KodakkuAssist.Module.Draw;
 using KodakkuAssist.Module.GameEvent;
@@ -8,7 +8,7 @@ using System;
 
 namespace KDrawScript.Dev
 {
-    [ScriptType(name: "AAC Cruiserweight M2", territorys: [1258], guid: "1EF7A8D1-1D46-4E4A-9051-CC392724CA18", version: "0.0.0.1", author: "Due")]
+    [ScriptType(name: "AAC Cruiserweight M2", territorys: [1258], guid: "1EF7A8D1-1D46-4E4A-9051-CC392724CA18", version: "0.0.0.1", Author: "Linoa235")]
     public class CruiserweightM2
     {
         public ulong DartId = 0;

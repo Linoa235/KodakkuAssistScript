@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Numerics;
 using Newtonsoft.Json;
@@ -24,7 +24,7 @@ using FFXIVClientStructs.FFXIV.Client.UI;
 namespace Veever.DawnTrail.the_Underkeep;
 
 [ScriptType(name: "LV.100 The Underkeep", territorys: [1266], guid: "9b381347-ddbf-4f52-98a9-a63d6e0d69bd",
-    version: "0.0.0.4", author: "Veever & Cyf5119", note: noteStr)]
+    version: "0.0.0.4", Author: "Linoa235", note: noteStr)]
 
 public class the_Underkeep
 {
@@ -597,4 +597,4 @@ public class the_Underkeep
     #endregion
 }
 
-[Le code des classes d'extension (EventExtensions, IbcHelper, etc.) reste identique à l'original car déjà en anglais]
+[Le code des classes d'extension (EventExtensions, IbcHelper, etc.) reste identique Ã  l'original car dÃ©jÃ  en anglais]

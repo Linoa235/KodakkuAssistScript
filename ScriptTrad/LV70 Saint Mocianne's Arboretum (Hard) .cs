@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -15,7 +15,7 @@ using KodakkuAssist.Extensions;
 namespace SaintMociannesArboretum_Hard;
 
 [ScriptType(guid: "7e87b5d1-ae21-4115-9483-d8dc0f1d1652", name: "Saint Mocianne's Arboretum (Hard)", territorys: [788],
-    version: "0.0.0.4", author: "Tetora", note: noteStr)]
+    version: "0.0.0.4", Author: "Linoa235", note: noteStr)]
 
 public class SaintMociannesArboretum_Hard
 {
@@ -181,7 +181,7 @@ public class SaintMociannesArboretum_Hard
     }
     
     [ScriptMethod(name: "Water Conduit Cleanup", userControl: false, eventType: EventTypeEnum.ObjectEffect, 
-        eventCondition: ["SourceName:regex:^(放水栓|water conduit)$", "Id2:2", "Id1:1","SourcePosition:{\"X\":287.36,\"Y\":-353.81,\"Z\":-230.91}"])]
+        eventCondition: ["SourceName:regex:^(æ”¾æ°´æ “|water conduit)$", "Id2:2", "Id1:1","SourcePosition:{\"X\":287.36,\"Y\":-353.81,\"Z\":-230.91}"])]
     public void WaterConduitCleanup(Event @event, ScriptAccessory accessory)
     {
         accessory.Method.RemoveDraw("Water Conduit");

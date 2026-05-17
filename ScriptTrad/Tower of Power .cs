@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Numerics;
 using System.Collections.Generic;
@@ -17,7 +17,7 @@ namespace KodakkuAssistXSZYYSPolice;
     territorys: [1252],
     guid: "9F8E7D6C-5B4A-3C2D-1E0F-9A8B7C6D5E4F",
     version: "0.0.2",
-    author: "XSZYYS",
+    Author: "Linoa235",
     note: "Police functions for Tower of Power instance, providing key mechanic marker announcements and checks. Also supports active checks for money throwing, resurrection, food, blue potions, etc.\n\n------------ Echo channel query commands ------------\nCheck Blue Potions: Type [/e blue potion check] to see alchemist blue potion usage, [/e blue potion clear] to clear data\nCheck Resurrection: Type [/e resurrection check <numbers>...], e.g., [/e resurrection check 1 2] to show players with 1 and 2 resurrection remaining. Without numbers, shows all players with 0-3 resurrections\nCheck Food: Type [/e food check] to show players without food or with remaining time below threshold\nCheck Money Throw: Type [/e money throw check] to show players who used money throw and their counts, [/e money throw clear] to clear statistics"
 )]
 public class TowerPolice
@@ -448,7 +448,7 @@ public class TowerPolice
                 }
             }
 
-            accessory.Method.SendChat($"/{channel} --- Checking players with food remaining ≤ {FoodRemainingTimeThreshold} minutes ({towerPlayerCount} players in tower) ---");
+            accessory.Method.SendChat($"/{channel} --- Checking players with food remaining â‰¤ {FoodRemainingTimeThreshold} minutes ({towerPlayerCount} players in tower) ---");
             if (foodStatusData.Count > 0)
             {
                 var sortedData = foodStatusData.OrderBy(t => t.Item4).ToList();

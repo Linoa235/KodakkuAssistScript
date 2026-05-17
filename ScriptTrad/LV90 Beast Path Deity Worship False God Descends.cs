@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -15,7 +15,7 @@ using System.Threading.Tasks;
 namespace DevoutPilgrimsVSDaivadipa;
 
 [ScriptType(guid: "da82aeb0-9635-4f13-a1c1-39a0c859f596", name: "Beast Path Deity Worship: False God Descends", territorys: [957],
-    version: "0.0.0.5", author: "Tetora", note: noteStr)]
+    version: "0.0.0.5", Author: "Linoa235", note: noteStr)]
 
 public class Daivadipa
 {

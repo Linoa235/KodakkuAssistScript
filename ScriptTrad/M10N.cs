@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using KodakkuAssist.Module.GameEvent;
 using KodakkuAssist.Script;
 using KodakkuAssist.Module.GameEvent.Struct;
@@ -25,7 +25,7 @@ namespace BakaWater77.M10N;
        territorys: new uint[] { 1322 },
        guid: "DC98AE77-83FB-4B76-ACA7-45BBCF05DEFE",
        version: "0.0.0.2",
-       author: "Baka-Water77",
+       Author: "Linoa235",
        note: null
     )]
 public class M10N
@@ -67,7 +67,7 @@ public class M10N
         _elementSnakeManualEvent = new ManualResetEvent(false);
     }
 
-    [ScriptMethod(name: "———————— Test Items ————————", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld:asdf"],
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€”â€”â€” Test Items â€”â€”â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld:asdf"],
         userControl: true)]
     public void TestItemsSeparator(Event ev, ScriptAccessory sa) { }
 
@@ -85,7 +85,7 @@ public class M10N
         var a = uint.Parse(ev["Id"], System.Globalization.NumberStyles.HexNumber);
     }
 
-    [ScriptMethod(name: "———————— Snake ————————", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld:asdf"],
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€”â€”â€” Snake â€”â€”â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld:asdf"],
         userControl: true)]
     public void SnakeSeparator(Event ev, ScriptAccessory sa) { }
 

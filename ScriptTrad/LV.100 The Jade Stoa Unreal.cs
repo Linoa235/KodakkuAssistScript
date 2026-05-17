@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Numerics;
 using Newtonsoft.Json;
@@ -24,7 +24,7 @@ using FFXIVClientStructs.FFXIV.Client.UI;
 namespace Veever.DawnTrail.The_Jade_Stoa_Unreal;
 
 [ScriptType(name: "LV.100 The Jade Stoa Unreal", territorys: [1239], guid: "29193d9d-a2c5-4a0d-875b-943a06790b95",
-    version: "0.0.0.4", author: "Veever", note: noteStr)]
+    version: "0.0.0.4", Author: "Linoa235", note: noteStr)]
 
 public class The_Jade_Stoa_Unreal
 {
@@ -185,7 +185,7 @@ public class The_Jade_Stoa_Unreal
         accessory.Method.SendDraw(DrawModeEnum.Default, DrawTypeEnum.Circle, dp);
     }
 
-    [ScriptMethod(name: "Phase 2 Transition AOE", eventType: EventTypeEnum.Chat, eventCondition: ["Message:regex:^(化为灰烬吧！| To ashes with you! | 塵芥と消えるがよい！)$"])]
+    [ScriptMethod(name: "Phase 2 Transition AOE", eventType: EventTypeEnum.Chat, eventCondition: ["Message:regex:^(åŒ–ä¸ºç°çƒ¬å§ï¼| To ashes with you! | å¡µèŠ¥ã¨æ¶ˆãˆã‚‹ãŒã‚ˆã„ï¼)$"])]
     public void phase2AOE(Event @event, ScriptAccessory accessory)
     {
         if (isText) accessory.Method.TextInfo("Heavy AOE", duration: 2500, true);

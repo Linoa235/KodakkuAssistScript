@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using KodakkuAssist.Module.GameEvent;
 using KodakkuAssist.Script;
 using KodakkuAssist.Module.GameEvent.Struct;
@@ -8,7 +8,7 @@ using Dalamud.Game.ClientState.Objects.Types;
 
 namespace MyScriptNamespace
 {
-    [ScriptType(name: "Variant Dungeon Automation", territorys: [1069, 1137, 1176], guid: "ad122d3e-0966-48c8-bddb-a0a3e9fe3a61", version: "0.0.0.1", author: "Karlin")]
+    [ScriptType(name: "Variant Dungeon Automation", territorys: [1069, 1137, 1176], guid: "ad122d3e-0966-48c8-bddb-a0a3e9fe3a61", version: "0.0.0.1", Author: "Linoa235")]
     public class VariantDungeonAutomation
     {
         [UserSetting(note: "Use heal on self when HP is below this value")]
@@ -40,7 +40,7 @@ namespace MyScriptNamespace
                 if (obj == null) return;
                 if (((IBattleChara)obj).IsDead) return;
                 accessory.Method.SelectTarget(tid);
-                accessory.Method.SendChat($"/generalaction 任务指令{DotSlot}");
+                accessory.Method.SendChat($"/generalaction ä»»åŠ¡æŒ‡ä»¤{DotSlot}");
                 lastdot = DateTime.Now;
             }
         }
@@ -56,7 +56,7 @@ namespace MyScriptNamespace
             if (chp < healthThreshold)
             {
                 accessory.Log.Debug("a6");
-                accessory.Method.SendChat($"/generalaction 任务指令{healthSlot}");
+                accessory.Method.SendChat($"/generalaction ä»»åŠ¡æŒ‡ä»¤{healthSlot}");
                 lasthealth = DateTime.Now;
             }
         }

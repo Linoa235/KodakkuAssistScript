@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -24,7 +24,7 @@ using FFXIVClientStructs.FFXIV.Component.GUI;
 namespace Mistwake;
 
 [ScriptType(guid: "5ecdb3de-a67c-46c1-bac3-20dc015363b6", name: "LV100 7.4 Mistwake", territorys: [1314],
-    version: "0.0.0.2", author: "Tetora", note: noteStr)]
+    version: "0.0.0.2", Author: "Linoa235", note: noteStr)]
 
 public class Mistwake
 {

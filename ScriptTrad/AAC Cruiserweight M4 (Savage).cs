@@ -1,4 +1,4 @@
-// File: AAC Cruiserweight M4 (Savage)_Cicero.cs
+﻿// File: AAC Cruiserweight M4 (Savage)_Cicero.cs
 using System;
 using System.Collections.Concurrent;
 using KodakkuAssist.Module.GameEvent;
@@ -21,7 +21,7 @@ namespace CicerosKodakkuAssist.Arcadion.Savage
         guid:"aeb4391c-e8a6-4daa-ab71-18e44c94fab8",
         version:"0.0.0.35",
         note:scriptNotes,
-        author:"Cicero")]
+        Author: "Linoa235")]
 
     public class AAC_Cruiserweight_M4_Savage
     {
@@ -415,12 +415,12 @@ namespace CicerosKodakkuAssist.Arcadion.Savage
             "Nothing more cruel and inhuman than a war. Nothing more desirable than peace. But peace has its causes, it is an effect. The effect of respect for mutual rights.",
             "One by one the righteous fell, and the ills of ignorance permeated.",
             "They defended the grains of sand in the desert to the last drop of their blood.",
-            "All history is man's efforts to realise ideals.\n- Éamon de Valera, 1929",
+            "All history is man's efforts to realise ideals.\n- Ã‰amon de Valera, 1929",
             "Let us dedicate ourselves to what the Greeks wrote so many years ago: to tame the savageness of man and make gentle the life of this world.\n- Robert F. Kennedy, 1968",
             "Yesterday is not ours to recover, but tomorrow is ours to win or lose.\n- Lyndon B. Johnson, 1964",
             "The end of hope is the beginning of death.\n- Charles de Gaulle, 1945",
             "The day I leave the power, inside my pockets will only be dust.\n- Antonio de Oliveira Salazar, 1968",
-            "When smashing monuments, save the pedestals. They always come in handy.\n- Stanisław Jerzy Lec, 1957",
+            "When smashing monuments, save the pedestals. They always come in handy.\n- StanisÅ‚aw Jerzy Lec, 1957",
             "Fear not the path of truth for the lack of people walking on it.\n- Robert F. Kennedy, 1968",
             "The rocket worked perfectly, except for landing on the wrong planet.\n- Wernher von Braun upon the first V-2 hitting London, 1944",
             "A man is not finished when he's defeated. He's finished when he quits.\n- Richard Nixon, 1962",

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using KodakkuAssist.Module.GameEvent;
 using KodakkuAssist.Script;
 using KodakkuAssist.Module.GameEvent.Struct;
@@ -22,7 +22,7 @@ using Lumina.Excel.Sheets;
 namespace KodakkuScripts.UsamisKodakku._07_DawnTrail.UnrealShinryu;
 
 [ScriptType(name: Name, territorys: [730, 1372], guid: "fcf45bf5-bb72-42f8-b918-4c4b779fb70c",
-    version: Version, author: "Usami", note: NoteStr, updateInfo: UpdateInfo)]
+    version: Version, Author: "Linoa235", note: NoteStr, updateInfo: UpdateInfo)]
 
 public class UnrealShinryu
 {
@@ -73,7 +73,7 @@ public class UnrealShinryu
         var distance = (ev.SourcePosition - Center1).Length();
         if (distance > 2f) return;
         _shinryuParam.GreenFloorCracks = true;
-        sa.DebugMsg($"[INFO]【Earth's Fury】Green floor cracks True");
+        sa.DebugMsg($"[INFO]ã€Earth's Furyã€‘Green floor cracks True");
     }
     
     [ScriptMethod(name: "Flame Chain", eventType: EventTypeEnum.TargetIcon, eventCondition: ["Id:regex:^(0061)$"],
@@ -85,7 +85,7 @@ public class UnrealShinryu
             if (MathTools.Debounce(ref lastTriggerTime, 500))
             {
                 _shinryuParam.FlameChainCount++;
-                sa.DebugMsg($"[INFO]【Flame Chain】Current count: {_shinryuParam.FlameChainCount}");
+                sa.DebugMsg($"[INFO]ã€Flame Chainã€‘Current count: {_shinryuParam.FlameChainCount}");
             };
         }
         
@@ -111,7 +111,7 @@ public class UnrealShinryu
     {
         var region = ev.SourcePosition.GetRadian(Center1).RadianToRegion(4, 0, true);
         DrawRegionKnockback(sa, region , "Tidal Wave Knockback");
-        sa.DebugMsg($"[INFO]【Tidal Wave Knockback】Direction {region}");
+        sa.DebugMsg($"[INFO]ã€Tidal Wave Knockbackã€‘Direction {region}");
         
         void DrawRegionKnockback(ScriptAccessory sa, int dir, string name)
         {
@@ -134,7 +134,7 @@ public class UnrealShinryu
     public void TailPlacement(Event ev, ScriptAccessory sa)
     {
         _shinryuParam.TailPlacementCount++;
-        sa.DebugMsg($"[INFO]【Tail Placement】Current count: {_shinryuParam.TailPlacementCount}");
+        sa.DebugMsg($"[INFO]ã€Tail Placementã€‘Current count: {_shinryuParam.TailPlacementCount}");
         
         if (ev.TargetId != sa.Data.Me) return;
         var pos = _shinryuParam.TailPlacementCount switch
@@ -181,7 +181,7 @@ public class UnrealShinryu
     public void DeathSentence(Event ev, ScriptAccessory sa)
     {
         _shinryuParam.DeathSentenceCount++;
-        sa.DebugMsg($"[INFO]【Death Sentence】Count: {_shinryuParam.DeathSentenceCount}");
+        sa.DebugMsg($"[INFO]ã€Death Sentenceã€‘Count: {_shinryuParam.DeathSentenceCount}");
 
         var myIndex = sa.GetMyIndex();
         var hintText = myIndex switch

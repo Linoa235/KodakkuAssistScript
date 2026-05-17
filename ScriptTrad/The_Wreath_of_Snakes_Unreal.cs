@@ -1,4 +1,4 @@
-using Dalamud.Utility.Numerics;
+﻿using Dalamud.Utility.Numerics;
 using FFXIVClientStructs.FFXIV.Client.Game.Character;
 using FFXIVClientStructs.FFXIV.Client.Game.Object;
 using FFXIVClientStructs.FFXIV.Client.Graphics.Vfx;
@@ -27,7 +27,7 @@ using System.Xml.Linq;
 namespace Veever.DawnTrail.the_Wreath_of_Snakes_Unreal;
 
 [ScriptType(name: Name, territorys: [825, 1302], guid: "3a915832-971d-4c27-b802-407a1e30ae53",
-    version: Version, author: "Veever & Usami", note: NoteStr, updateInfo: UpdateInfo)]
+    version: Version, Author: "Linoa235", note: NoteStr, updateInfo: UpdateInfo)]
 
 public class UnrealSeiryu
 {
@@ -36,11 +36,11 @@ public class UnrealSeiryu
     v0.0.0.1
     1. If you need a draw or notice any issues, @ me on DC or DM me.
     2. For the Forbidden Arts Stack, both healers are hard-locked draw
-       (if both healers die, it’s GG / pray to Hydaelyn xd).
+       (if both healers die, itâ€™s GG / pray to Hydaelyn xd).
     3. Tower positions are as follows:
           MT / D1    ST / D2
           H1 / D3    H2 / D4
-    4. EX trial draw are not fully implemented yet (missing skill IDs — honestly just lazy, 
+    4. EX trial draw are not fully implemented yet (missing skill IDs â€” honestly just lazy, 
        will add them one day).
     5. PostNamazu markers default to standard N/E/S/W (ABCD).
     Duckmen.
@@ -61,7 +61,7 @@ public class UnrealSeiryu
     [UserSetting("Language")]
     public Language language { get; set; } = Language.Chinese;
 
-    [UserSetting("Draw opacity — higher value = more visible")]
+    [UserSetting("Draw opacity â€” higher value = more visible")]
     public static float ColorAlpha { get; set; } = 1f;
 
     [UserSetting("Banner text toggle")]
@@ -275,7 +275,7 @@ public class UnrealSeiryu
                 break;
             
             case 14853 or 44028:
-                string msg1 = language == Language.Chinese ? "Donut first, then Heavy" : "Donut → Heavy";
+                string msg1 = language == Language.Chinese ? "Donut first, then Heavy" : "Donut â†’ Heavy";
                 if (isText) sa.Method.TextInfo($"{msg1}", duration: 2700, true);
                 if (isTTS) sa.Method.EdgeTTS($"{msg1}");
                 
@@ -289,7 +289,7 @@ public class UnrealSeiryu
                 break;
             
             case 14851 or 44026:
-                string msg2 = language == Language.Chinese ? "Heavy first, then Donut" : "Heavy → Donut";
+                string msg2 = language == Language.Chinese ? "Heavy first, then Donut" : "Heavy â†’ Donut";
                 if (isText) sa.Method.TextInfo($"{msg2}", duration: 2700, true);
                 if (isTTS) sa.Method.EdgeTTS($"{msg2}");
 

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Numerics;
 using System.Collections.Generic;
@@ -15,7 +15,7 @@ using KodakkuAssist.Module.Draw;
 namespace KodakkuScript.Script._07_DawnTrail;
 
 [ScriptType(guid: "9F1D4DC0-1891-7AC0-9571-D5266198751D", name: "Origenics", territorys: [1208], version: "0.0.0.1",
-    author: "Poetry")]
+    Author: "Linoa235")]
 public class Origenics
 {
     private int _aoeCount = 0;

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using KodakkuAssist.Module.GameEvent;
 using KodakkuAssist.Script;
 using KodakkuAssist.Module.Draw;
@@ -11,7 +11,7 @@ using System.Runtime.Intrinsics.Arm;
 
 namespace Meva.Heavensward.KodakkuAssist.Alexander;
 
-[ScriptType(name: "LV.60 Alexander - The Breath of the Creator", territorys: [582], guid: "c9446d8e-118d-ec98-fcbc-732213b0a265", version: "0.0.0.4", author: "Meva", note:noteStr)]
+[ScriptType(name: "LV.60 Alexander - The Breath of the Creator", territorys: [582], guid: "c9446d8e-118d-ec98-fcbc-732213b0a265", version: "0.0.0.4", Author: "Linoa235", note:noteStr)]
 public class A11N
 {
     const string noteStr =

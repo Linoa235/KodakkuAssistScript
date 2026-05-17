@@ -8,7 +8,7 @@ using Dalamud.Game.ClientState.Objects.Types;
 
 namespace MyScriptNamespace
 {
-    [ScriptType(name: "Variant Dungeon Automation", territorys: [1069,1137,1176],guid: "ad122d3e-0966-48c8-bddb-a0a3e9fe3a61", version:"0.0.0.1",author:"Karlin")]
+    [ScriptType(name: "Variant Dungeon Automation", territorys: [1069,1137,1176],guid: "ad122d3e-0966-48c8-bddb-a0a3e9fe3a61", version:"0.0.0.1",Author: "Linoa235")]
     public class VariantDungeonAutomation
     {
         

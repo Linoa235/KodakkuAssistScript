@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using KodakkuAssist.Module.GameEvent;
 using KodakkuAssist.Script;
 using KodakkuAssist.Module.Draw;
@@ -21,7 +21,7 @@ namespace CicerosKodakkuAssist.Pandemonium.Normal;
     territorys: [1085],
     guid: "073ca5d8-9a34-41ff-8757-c3862c465be0",
     version: "0.0.0.13",
-    author: "Cicero",
+    Author: "Linoa235",
     note: "A simple script for the duty Abyssos The Seventh Circle.")]
 
 public class Abyssos_The_Seventh_Circle
@@ -58,7 +58,7 @@ public class Abyssos_The_Seventh_Circle
         if (Enable_Text_Prompts)
         {
             if (Language_Of_Text_Prompts == Languages_Of_Text_Prompts.Simplified_Chinese)
-                accessory.Method.TextInfo("远离Boss", 2500);
+                accessory.Method.TextInfo("è¿œç¦»Boss", 2500);
             if (Language_Of_Text_Prompts == Languages_Of_Text_Prompts.English)
                 accessory.Method.TextInfo("Stay away from the Boss", 2500);
         }
@@ -81,7 +81,7 @@ public class Abyssos_The_Seventh_Circle
         if (Enable_Text_Prompts)
         {
             if (Language_Of_Text_Prompts == Languages_Of_Text_Prompts.Simplified_Chinese)
-                accessory.Method.TextInfo("靠近Boss", 2500);
+                accessory.Method.TextInfo("é è¿‘Boss", 2500);
             if (Language_Of_Text_Prompts == Languages_Of_Text_Prompts.English)
                 accessory.Method.TextInfo("Approach the Boss", 2500);
         }
@@ -110,14 +110,14 @@ public class Abyssos_The_Seventh_Circle
             if (currentX < 100)
             {
                 if (Language_Of_Text_Prompts == Languages_Of_Text_Prompts.Simplified_Chinese)
-                    accessory.Method.TextInfo("去右边躲避", 1500);
+                    accessory.Method.TextInfo("åŽ»å³è¾¹èº²é¿", 1500);
                 if (Language_Of_Text_Prompts == Languages_Of_Text_Prompts.English)
                     accessory.Method.TextInfo("Dodge on the right", 1500);
             }
             if (currentX > 100)
             {
                 if (Language_Of_Text_Prompts == Languages_Of_Text_Prompts.Simplified_Chinese)
-                    accessory.Method.TextInfo("去左边躲避", 1500);
+                    accessory.Method.TextInfo("åŽ»å·¦è¾¹èº²é¿", 1500);
                 if (Language_Of_Text_Prompts == Languages_Of_Text_Prompts.English)
                     accessory.Method.TextInfo("Dodge on the left", 1500);
             }
@@ -146,7 +146,7 @@ public class Abyssos_The_Seventh_Circle
         if (Enable_Text_Prompts)
         {
             if (Language_Of_Text_Prompts == Languages_Of_Text_Prompts.Simplified_Chinese)
-                accessory.Method.TextInfo("远离贝希摩斯", 1500);
+                accessory.Method.TextInfo("è¿œç¦»è´å¸Œæ‘©æ–¯", 1500);
             if (Language_Of_Text_Prompts == Languages_Of_Text_Prompts.English)
                 accessory.Method.TextInfo("Stay away from behemoths", 1500);
         }
@@ -169,7 +169,7 @@ public class Abyssos_The_Seventh_Circle
         if (Enable_Text_Prompts)
         {
             if (Language_Of_Text_Prompts == Languages_Of_Text_Prompts.Simplified_Chinese)
-                accessory.Method.TextInfo("远离怪鸟正面", 1500);
+                accessory.Method.TextInfo("è¿œç¦»æ€ªé¸Ÿæ­£é¢", 1500);
             if (Language_Of_Text_Prompts == Languages_Of_Text_Prompts.English)
                 accessory.Method.TextInfo("Stay away from the front of birds", 1500);
         }
@@ -193,7 +193,7 @@ public class Abyssos_The_Seventh_Circle
         if (Enable_Text_Prompts)
         {
             if (Language_Of_Text_Prompts == Languages_Of_Text_Prompts.Simplified_Chinese)
-                accessory.Method.TextInfo("躲避步进式AOE", 9000);
+                accessory.Method.TextInfo("èº²é¿æ­¥è¿›å¼AOE", 9000);
             if (Language_Of_Text_Prompts == Languages_Of_Text_Prompts.English)
                 accessory.Method.TextInfo("Dodge stepping AOEs", 9000);
         }
@@ -227,7 +227,7 @@ public class Abyssos_The_Seventh_Circle
         if (Enable_Text_Prompts)
         {
             if (Language_Of_Text_Prompts == Languages_Of_Text_Prompts.Simplified_Chinese)
-                accessory.Method.TextInfo("击退", 2000);
+                accessory.Method.TextInfo("å‡»é€€", 2000);
             if (Language_Of_Text_Prompts == Languages_Of_Text_Prompts.English)
                 accessory.Method.TextInfo("Knock back", 2000);
         }

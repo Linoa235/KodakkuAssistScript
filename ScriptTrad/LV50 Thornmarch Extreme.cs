@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -15,7 +15,7 @@ using KodakkuAssist.Extensions;
 namespace Thornmarch_Extreme;
 
 [ScriptType(guid: "fc6a6125-4a1d-4669-be4c-9b375dc70ae0", name: "Thornmarch Extreme", territorys: [364],
-    version: "0.0.0.4", author: "Tetora", note: noteStr)]
+    version: "0.0.0.4", Author: "Linoa235", note: noteStr)]
 
 public class ThornmarchExtreme
 {
@@ -66,13 +66,13 @@ public class ThornmarchExtreme
         var isDps = accessory.Data.MyObject?.IsDps() ?? false;
         var isHealer = accessory.Data.MyObject?.IsHealer() ?? false;
 
-        if (isTank && isText) accessory.Method.TextInfo("Difficulty: ☆, Key: Weaken adds and kill together\nT: Good King drains MP, DRK not recommended, watch cleave direction", duration: 5000, true);
-        if (isDps && isText) accessory.Method.TextInfo("Difficulty: ☆, Key: Weaken adds and kill together\nDPS: Manage add HP, first two need simultaneous kills", duration: 5000, true);
-        if (isHealer && isText) accessory.Method.TextInfo("Difficulty: ☆, Key: Weaken adds and kill together\nH: Esuna [Moogle-Mania] and [Wroth Flames] during combo moves, watch AOE", duration: 5000, true);
+        if (isTank && isText) accessory.Method.TextInfo("Difficulty: â˜†, Key: Weaken adds and kill together\nT: Good King drains MP, DRK not recommended, watch cleave direction", duration: 5000, true);
+        if (isDps && isText) accessory.Method.TextInfo("Difficulty: â˜†, Key: Weaken adds and kill together\nDPS: Manage add HP, first two need simultaneous kills", duration: 5000, true);
+        if (isHealer && isText) accessory.Method.TextInfo("Difficulty: â˜†, Key: Weaken adds and kill together\nH: Esuna [Moogle-Mania] and [Wroth Flames] during combo moves, watch AOE", duration: 5000, true);
         
         if (isTTS) accessory.Method.TTS("Dodge what you see, manage add HP");
         if (isEdgeTTS) accessory.Method.EdgeTTS("Dodge what you see, manage add HP");
-        accessory.Method.SendChat("/e ————Cheat Sheet————\nT: MT pulls Axe & Good King, ST pulls Wall, watch cleave (Good King drains MP, DRK not recommended)\nDPS: Manage add HP, first two need simultaneous kills\nH: Esuna [Moogle-Mania] and [Wroth Flames] during combo moves, watch AOE");
+        accessory.Method.SendChat("/e â€”â€”â€”â€”Cheat Sheetâ€”â€”â€”â€”\nT: MT pulls Axe & Good King, ST pulls Wall, watch cleave (Good King drains MP, DRK not recommended)\nDPS: Manage add HP, first two need simultaneous kills\nH: Esuna [Moogle-Mania] and [Wroth Flames] during combo moves, watch AOE");
     }
     
     [ScriptMethod(name: "Add Spawn Hint", eventType: EventTypeEnum.ActionEffect, eventCondition: ["ActionId:2070"])]
@@ -87,7 +87,7 @@ public class ThornmarchExtreme
     }
     
     [ScriptMethod(name: "Mooglesse Oblige Count Reset", userControl: false, eventType: EventTypeEnum.Chat,
-        eventCondition: ["Type:NPCDialogueAnnouncements", "Message:regex:^家臣们，\n到你们出马的时候了库啵！", "Sender:Good King Moggle Mog XII"])]
+        eventCondition: ["Type:NPCDialogueAnnouncements", "Message:regex:^å®¶è‡£ä»¬ï¼Œ\nåˆ°ä½ ä»¬å‡ºé©¬çš„æ—¶å€™äº†åº“å•µï¼", "Sender:Good King Moggle Mog XII"])]
     public void Reset_MooglesseOblige(Event @event, ScriptAccessory accessory) {
         timeMooglesseOblige = 0;
     }

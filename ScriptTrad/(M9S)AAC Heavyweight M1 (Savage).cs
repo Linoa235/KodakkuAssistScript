@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
@@ -13,7 +13,7 @@ using KodakkuAssist.Extensions;
 
 namespace RyougiMioScriptNamespace
 {
-    [ScriptType(name: "(M9S)AAC Heavyweight M1 (Savage)", territorys: [1320, 1321], guid: "ced5c285-484c-4750-bc85-241e927848f1", version: "1.0.0.0", author: "RyougiMio", note: "M9S, script works in both M9N/S. TTS-marked mechanics only have announcements.")]
+    [ScriptType(name: "(M9S)AAC Heavyweight M1 (Savage)", territorys: [1320, 1321], guid: "ced5c285-484c-4750-bc85-241e927848f1", version: "1.0.0.0", Author: "Linoa235", note: "M9S, script works in both M9N/S. TTS-marked mechanics only have announcements.")]
     public class RyougiMio_1321
     {
         #region Settings

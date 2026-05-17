@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Numerics;
 using System.Collections.Generic;
@@ -20,7 +20,7 @@ using KodakkuAssist.Module.Script.Type;
 namespace UsamisKodakku.Scripts._06_EndWalker.DSR;
 
 [ScriptType(name: Name, territorys: [968, 1112], guid: "cc6fb606-ff7b-4739-81aa-4861b204ab1e", 
-    version: Version, author: "Usami", note: NoteStr, updateInfo: UpdateInfo)]
+    version: Version, Author: "Linoa235", note: NoteStr, updateInfo: UpdateInfo)]
 
 // ^(?!.*((Monk|Machinist|Dragoon|Samurai|Ninja|Viper|Reaper|Dancer|Bard|Astrologian|Sage|Scholar|(Eos|Selene)|Seraph|White Mage|Warrior|Paladin|Dark Knight|Gunbreaker|Pictomancer|Black Mage|Blue Mage|Summoner|Carbuncle|Demigod Bahamut|Demigod Phoenix|Garuda-Egi|Titan-Egi|Ifrit-Egi|Puppet)\] (Used|Cast))).*$
 
@@ -162,7 +162,7 @@ public class DsrPatch
     
     #region P1
     
-    [ScriptMethod(name: "---- 《P1&P4.5: Door Boss》 ----", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld"],
+    [ScriptMethod(name: "---- ã€ŠP1&P4.5: Door Bossã€‹ ----", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld"],
         userControl: true)]
     public void SplitLine_PhaseDoorBoss(Event @event, ScriptAccessory accessory)
     {
@@ -224,7 +224,7 @@ public class DsrPatch
     
     #region P2
 
-    [ScriptMethod(name: "---- 《P2: King Thordan》 ----", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld"],
+    [ScriptMethod(name: "---- ã€ŠP2: King Thordanã€‹ ----", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld"],
         userControl: true)]
     public void SplitLine_PhaseKingThordan(Event @event, ScriptAccessory accessory)
     {
@@ -359,7 +359,7 @@ public class DsrPatch
 
     #region P3
     
-    [ScriptMethod(name: "---- 《P3: Nidhogg》 ----", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld"],
+    [ScriptMethod(name: "---- ã€ŠP3: Nidhoggã€‹ ----", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld"],
         userControl: true)]
     public void SplitLine_PhaseNidhogg(Event @event, ScriptAccessory accessory)
     {
@@ -776,7 +776,7 @@ public class DsrPatch
 
     #region P4
 
-    [ScriptMethod(name: "---- 《P4: Dragon's Eye》 ----", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld"],
+    [ScriptMethod(name: "---- ã€ŠP4: Dragon's Eyeã€‹ ----", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld"],
         userControl: true)]
     public void SplitLine_PhaseEyes(Event @event, ScriptAccessory accessory)
     {
@@ -1072,7 +1072,7 @@ public class DsrPatch
     
     #region P5
 
-    [ScriptMethod(name: "---- 《P5: Alternate Thordan》 ----", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld"],
+    [ScriptMethod(name: "---- ã€ŠP5: Alternate Thordanã€‹ ----", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld"],
         userControl: true)]
     public void SplitLine_PhaseAlternateThordan(Event @event, ScriptAccessory accessory)
     {
@@ -1202,7 +1202,7 @@ public class DsrPatch
     
     #region P6 Ice & Fire
 
-    [ScriptMethod(name: "---- 《P6: Twin Dragons》 ----", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld"],
+    [ScriptMethod(name: "---- ã€ŠP6: Twin Dragonsã€‹ ----", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld"],
         userControl: true)]
     public void SplitLine_PhaseDragons(Event @event, ScriptAccessory accessory)
     {
@@ -1546,7 +1546,7 @@ public class DsrPatch
 
     #region P7 Exaflare
 
-    [ScriptMethod(name: "---- 《P7: Dragon-King Thordan》 ----", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld"],
+    [ScriptMethod(name: "---- ã€ŠP7: Dragon-King Thordanã€‹ ----", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld"],
         userControl: true)]
     public void SplitLine_PhaseDragonKingThordan(Event @event, ScriptAccessory accessory)
     {

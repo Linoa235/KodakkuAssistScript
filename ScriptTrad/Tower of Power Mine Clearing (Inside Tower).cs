@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Numerics;
@@ -47,7 +47,7 @@ namespace KodakkuAssistXSZYYS
         guid: "874D3ECF-BD6B-448F-BB42-AE7F082E4999",
         territorys: [1252],
         version: "0.1.1",
-        author: "XSZYYS",
+        Author: "Linoa235",
         note: "Type [/e Crescent Mine Clear] in chat to start mine clearing. Type again to hide. Display lasts 1800s. If display disappears, re-enter the command.\nMajor updates:\n- Added auto show/hide mine markers on map change.\n- Data restructured by Map ID, ensuring only current map mines are displayed."
     )]
     public class TowerOfPowerMineClearing

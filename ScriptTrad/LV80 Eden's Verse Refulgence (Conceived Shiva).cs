@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -15,7 +15,7 @@ using System.Threading.Tasks;
 namespace E8n;
 
 [ScriptType(guid: "c4d533c8-8798-441d-b849-fc3cd5cf63d9", name: "E8N", territorys: [905],
-    version: "0.0.0.4", author: "Tetora", note: noteStr)]
+    version: "0.0.0.4", Author: "Linoa235", note: noteStr)]
 
 public class E8n
 {
@@ -132,7 +132,7 @@ public class E8n
         accessory.Method.SendDraw(DrawModeEnum.Default, DrawTypeEnum.Fan, dp); 
     }
     
-    [ScriptMethod(name: "Frost Slash (270° Cleave)", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:19931"])]
+    [ScriptMethod(name: "Frost Slash (270Â° Cleave)", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:19931"])]
     public void FrostSlash(Event @event, ScriptAccessory accessory)
     {
         var dp = accessory.Data.GetDefaultDrawProperties();

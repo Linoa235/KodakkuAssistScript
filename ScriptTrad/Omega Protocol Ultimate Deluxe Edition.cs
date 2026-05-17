@@ -24,7 +24,7 @@ using FFXIVClientStructs.FFXIV.Client.Game.Object;
 namespace MyScriptNamespace
 {
     
-    [ScriptType(name: "Omega Protocol Ultimate Deluxe Edition", territorys: [1122], guid: "e0bfb4db-0d38-909f-5088-b23f09b7585e", version:"0.0.0.19", author:"Karlin", note: noteStr, updateInfo: UpdateInfo)]
+    [ScriptType(name: "Omega Protocol Ultimate Deluxe Edition", territorys: [1122], guid: "e0bfb4db-0d38-909f-5088-b23f09b7585e", version:"0.0.0.19", Author: "Linoa235", note: noteStr, updateInfo: UpdateInfo)]
     public class OmegaProtocolUltimate
     {
         const string noteStr =

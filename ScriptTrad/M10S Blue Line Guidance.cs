@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using KodakkuAssist.Module.GameEvent;
 using KodakkuAssist.Script;
 using KodakkuAssist.Module.GameEvent.Struct;
@@ -63,7 +63,7 @@ namespace BakaWater77.M10N
         territorys: new uint[] { 1323 },
         guid: "C328CC14-B074-4196-BA4C-161020987536",
         version: "0.0.0.2",
-        author: "Baka-Water77"
+        Author: "Linoa235"
     )]
     public class M10S
     {

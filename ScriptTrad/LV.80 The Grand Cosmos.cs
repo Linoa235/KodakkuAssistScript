@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Numerics;
 using Newtonsoft.Json;
@@ -24,7 +24,7 @@ using FFXIVClientStructs.FFXIV.Client.Game.Character;
 namespace Veever.Shadowbringers.theGrandCosmos;
 
 [ScriptType(name: "LV.80 The Grand Cosmos", territorys: [884], guid: "b3a2febd-73ff-44a9-a897-22fa50c74ff3",
-    version: "0.0.0.3", author: "Veever", note: noteStr)]
+    version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
 
 public class the_Grand_Cosmos
 {
@@ -38,7 +38,7 @@ public class the_Grand_Cosmos
     5. Boss3 Crystal Lamp marker not implemented, too big to miss
     6. Supports dungeon waypoint navigation, red lines indicate aggro range
     7. If you feel the waypoints are insufficient, please let me know on Discord (24 waypoints should be enough (x))
-    8. Don't leave the instance immediately, there may be残留
+    8. Don't leave the instance immediately, there may beæ®‹ç•™
     Duckmen.
     """;
 

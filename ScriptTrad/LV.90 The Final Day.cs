@@ -1,4 +1,4 @@
-using Dalamud.Utility.Numerics;
+﻿using Dalamud.Utility.Numerics;
 using FFXIVClientStructs.FFXIV.Client.Game.Character;
 using FFXIVClientStructs.FFXIV.Client.Game.Object;
 using FFXIVClientStructs.FFXIV.Client.Graphics.Vfx;
@@ -27,7 +27,7 @@ using System.Xml.Linq;
 namespace Veever.EndWalker.the_Final_Day;
 
 [ScriptType(name: Name, territorys: [997], guid: "eee45586-c0cc-4f43-9af1-6f0f4427cbf7",
-    version: Version, author: "Veever", note: NoteStr, updateInfo: UpdateInfo)]
+    version: Version, Author: "Linoa235", note: NoteStr, updateInfo: UpdateInfo)]
 
 public class the_Final_Day
 {
@@ -55,7 +55,7 @@ public class the_Final_Day
     [UserSetting("Language")]
     public Language language { get; set; } = Language.Chinese;
 
-    [UserSetting("Draw opacity — higher value = more visible")]
+    [UserSetting("Draw opacity â€” higher value = more visible")]
     public static float ColorAlpha { get; set; } = 1f;
 
     [UserSetting("Text Banner Toggle")]
@@ -177,7 +177,7 @@ public class the_Final_Day
         {
             if (ev.TargetId == sa.Data.Me)
             {
-                string msg = language == Language.Chinese ? "AOE tankbuster — Stay away from party" : "AOE tankbuster — Stay away from party";
+                string msg = language == Language.Chinese ? "AOE tankbuster â€” Stay away from party" : "AOE tankbuster â€” Stay away from party";
                 if (isText) sa.Method.TextInfo($"{msg}", duration: 4700, true);
                 if (isTTS) sa.Method.EdgeTTS($"{msg}");
             }

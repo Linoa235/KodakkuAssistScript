@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Numerics;
 using System.Collections.Generic;
@@ -16,7 +16,7 @@ using KodakkuAssist.Module.Draw;
 namespace KodakkuScript.Script._07_DawnTrail;
 
 [ScriptType(guid: "123e4567-e89b-12d3-a456-426614174000", name: "Ihuykatumu", territorys: [1167], version: "0.0.0.1",
-    author: "Poetry")]
+    Author: "Linoa235")]
 public class Ihuykatumu
 {
     private Vector3 SW;
@@ -77,7 +77,7 @@ public class Ihuykatumu
     
     //Boss1_Chief Seahippo
     
-    // Return to Earth (重吐于世)
+    // Return to Earth (é‡åäºŽä¸–)
     // Collapse (Circle)
     [ScriptMethod(name:"Boss1-Collapse: Circle", eventType:EventTypeEnum.StartCasting,eventCondition:["ActionId:regex:^(36502|36498|36497)$"])]
     public void CollapseCircle(Event @event,ScriptAccessory accessory)

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Numerics;
 using Newtonsoft.Json;
@@ -18,7 +18,7 @@ using System.Windows;
 namespace Veever.A_Realm_Reborn.WardUp;
 
 [ScriptType(name: "LV.40 Ward Up", territorys: [299], guid: "35d901f8-4861-4d5b-b279-59affb7a740f",
-    version: "0.0.0.4", author: "Veever", note: noteStr)]
+    version: "0.0.0.4", Author: "Linoa235", note: noteStr)]
 
 public class Ward_Up
 {

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using KodakkuAssist.Module.GameEvent;
 using KodakkuAssist.Script;
 using KodakkuAssist.Module.GameEvent.Struct;
@@ -3251,7 +3251,7 @@ namespace MyScriptNamespace
             
             if (!ParseObjectId(@event["SourceId"], out var sid)) return;
             if (sid != accessory.Data.Me) return;
-            //accessory.Log.Debug("线");
+            //accessory.Log.Debug("çº¿");
             Task.Delay(50).ContinueWith(t =>
             {
                 var tIndex = P4Tether[0] == -1 ? 1 : 0;

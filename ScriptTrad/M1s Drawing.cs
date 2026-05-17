@@ -18,7 +18,7 @@ using KodakkuAssist.Extensions;
 
 namespace KarlinScriptNamespace
 {
-    [ScriptType(name: "M1s Drawing", territorys: [1226], guid: "8010d865-7d6d-4c23-92e0-f4b0120e18ac", version: "0.0.0.9", author: "Karlin")]
+    [ScriptType(name: "M1s Drawing", territorys: [1226], guid: "8010d865-7d6d-4c23-92e0-f4b0120e18ac", version: "0.0.0.9", Author: "Linoa235")]
     public class M1sDraw
     {
         [UserSetting("Floor Repair Knockback, Mt Group Safe Half")]

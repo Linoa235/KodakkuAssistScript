@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -15,7 +15,7 @@ using System.ComponentModel;
 
 namespace the_Palace_of_the_Dead;
 
-[ScriptType(guid: "4210c323-eba4-4d67-a7e7-b90799494729", name: "Palace of the Dead", author: "Tetora", 
+[ScriptType(guid: "4210c323-eba4-4d67-a7e7-b90799494729", name: "Palace of the Dead", Author: "Linoa235", 
     territorys: [561,562,563,564,565,593,594,595,596,597,598,599,600,601,602,603,604,605,606,607],
     version: "0.0.1.1", note: noteStr)]
 
@@ -167,17 +167,17 @@ public class the_Palace_of_the_Dead
     }
     
     #region 1~10 Floors - Nothing to draw
-    [ScriptMethod(name: "—————— 1 ~ 10 Floors ——————", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€” 1 ~ 10 Floors â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
     public void Floor1(Event @event, ScriptAccessory accessory) { }
     #endregion
     
     #region 11~20 Floors - Nothing to draw
-    [ScriptMethod(name: "—————— 11 ~ 20 Floors ——————", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€” 11 ~ 20 Floors â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
     public void Floor11(Event @event, ScriptAccessory accessory) { }
     #endregion
     
     #region 21~30 Floors
-    [ScriptMethod(name: "—————— 21 ~ 30 Floors ——————", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€” 21 ~ 30 Floors â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
     public void Floor21(Event @event, ScriptAccessory accessory) { }
     
     [ScriptMethod(name: "Palace Minotaur_110-tonze Swing (Chariot)", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:6364", "SourceDataId:5802"])]
@@ -225,7 +225,7 @@ public class the_Palace_of_the_Dead
     #endregion
     
     #region 31~40 Floors
-    [ScriptMethod(name: "—————— 31 ~ 40 Floors ——————", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€” 31 ~ 40 Floors â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
     public void Floor31(Event @event, ScriptAccessory accessory) { }
     
     [ScriptMethod(name: "Nightmare Gourami_Suction (Pull)", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:6372", "SourceDataId:5811"])]
@@ -239,7 +239,7 @@ public class the_Palace_of_the_Dead
     #endregion
     
     #region 41~50 Floors
-    [ScriptMethod(name: "—————— 41 ~ 50 Floors ——————", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€” 41 ~ 50 Floors â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
     public void Floor41(Event @event, ScriptAccessory accessory) { }
     
     [ScriptMethod(name: "Nightmare Manticore_Ripping Claw (Cleave)", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:6394", "SourceDataId:5827"])]
@@ -257,7 +257,7 @@ public class the_Palace_of_the_Dead
     #endregion
     
     #region 51~60 Floors
-    [ScriptMethod(name: "—————— 51 ~ 60 Floors ——————", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€” 51 ~ 60 Floors â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
     public void Floor51(Event @event, ScriptAccessory accessory) { }
     
     [ScriptMethod(name: "60 Dark Knight_Carnage (Knockback)", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:7089"])]
@@ -292,12 +292,12 @@ public class the_Palace_of_the_Dead
     #endregion
     
     #region 61~70 Floors
-    [ScriptMethod(name: "—————— 61 ~ 70 Floors ——————", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€” 61 ~ 70 Floors â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
     public void Floor61(Event @event, ScriptAccessory accessory) { }
     #endregion
     
     #region 71~80 Floors
-    [ScriptMethod(name: "—————— 71 ~ 80 Floors ——————", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€” 71 ~ 80 Floors â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
     public void Floor71(Event @event, ScriptAccessory accessory) { }
     
     [ScriptMethod(name: "Palace Cyclops_Hundred-tonze Swing (Chariot)", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:6971", "SourceDataId:6203"])]
@@ -331,7 +331,7 @@ public class the_Palace_of_the_Dead
     #endregion
     
     #region 81~90 Floors
-    [ScriptMethod(name: "—————— 81 ~ 90 Floors ——————", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€” 81 ~ 90 Floors â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
     public void Floor81(Event @event, ScriptAccessory accessory) { }
     
     [ScriptMethod(name: "Palace Chimera_Ice Roar (Chariot)", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:7078", "SourceDataId:6220"])]
@@ -404,17 +404,17 @@ public class the_Palace_of_the_Dead
     #endregion
     
     #region 91~100 Floors - Nothing to draw
-    [ScriptMethod(name: "—————— 91 ~ 100 Floors ——————", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€” 91 ~ 100 Floors â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
     public void Floor91(Event @event, ScriptAccessory accessory) { }
     #endregion
     
     #region 101~110 Floors - Nothing to draw
-    [ScriptMethod(name: "—————— 101 ~ 110 Floors ——————", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€” 101 ~ 110 Floors â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
     public void Floor101(Event @event, ScriptAccessory accessory) { }
     #endregion
     
     #region 111~120 Floors
-    [ScriptMethod(name: "—————— 111 ~ 120 Floors ——————", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€” 111 ~ 120 Floors â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
     public void Floor111(Event @event, ScriptAccessory accessory) { }
     
     [ScriptMethod(name: "Palace Salamander_Mucous Membrane Interrupt Hint", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:7014", "SourceDataId:6249"])]
@@ -427,7 +427,7 @@ public class the_Palace_of_the_Dead
     #endregion
     
     #region 121~130 Floors
-    [ScriptMethod(name: "—————— 121 ~ 130 Floors ——————", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€” 121 ~ 130 Floors â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
     public void Floor121(Event @event, ScriptAccessory accessory) { }
     
     [ScriptMethod(name: "Palace Scannit_Chittering (Sleep Chariot)", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:6365", "SourceDataId:6267"])]
@@ -475,7 +475,7 @@ public class the_Palace_of_the_Dead
     #endregion
     
     #region 131~140 Floors
-    [ScriptMethod(name: "—————— 131 ~ 140 Floors ——————", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€” 131 ~ 140 Floors â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
     public void Floor131(Event @event, ScriptAccessory accessory) { }
     
     [ScriptMethod(name: "Palace Ghostfish_Suction (Pull)", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:6372", "SourceDataId:6274"])]
@@ -522,7 +522,7 @@ public class the_Palace_of_the_Dead
     #endregion
     
     #region 141~150 Floors
-    [ScriptMethod(name: "—————— 141 ~ 150 Floors ——————", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€” 141 ~ 150 Floors â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
     public void Floor141(Event @event, ScriptAccessory accessory) { }
     
     [ScriptMethod(name: "Palace Wraith_Strong Paralysis Interrupt Hint", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:6386", "SourceDataId:6284"])]
@@ -572,7 +572,7 @@ public class the_Palace_of_the_Dead
     #endregion
     
     #region 151~160 Floors
-    [ScriptMethod(name: "—————— 151 ~ 160 Floors ——————", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€” 151 ~ 160 Floors â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
     public void Floor151(Event @event, ScriptAccessory accessory) { }
     
     [ScriptMethod(name: "Palace Imp_Ice Thorn Barrier Interrupt Alert", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:6943", "SourceDataId:6295"])]
@@ -615,7 +615,7 @@ public class the_Palace_of_the_Dead
     #endregion
     
     #region 161~170 Floors
-    [ScriptMethod(name: "—————— 161 ~ 170 Floors ——————", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€” 161 ~ 170 Floors â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
     public void Floor161(Event @event, ScriptAccessory accessory) { }
     
     [ScriptMethod(name: "Palace Diplocaulus_Mucous Membrane Interrupt Hint", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:7014", "SourceDataId:6305"])]
@@ -628,7 +628,7 @@ public class the_Palace_of_the_Dead
     #endregion
     
     #region 171~180 Floors Trash
-    [ScriptMethod(name: "—————— 171 ~ 180 Floors ——————", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€” 171 ~ 180 Floors â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
     public void Floor171(Event @event, ScriptAccessory accessory) { }
     
     [ScriptMethod(name: "Palace Yeti_Glare (Line)", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:7061", "SourceDataId:6317"])]
@@ -718,7 +718,7 @@ public class the_Palace_of_the_Dead
     #endregion
 
     #region 181~190 Floors Trash
-    [ScriptMethod(name: "—————— 181 ~ 190 Floors ——————", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€” 181 ~ 190 Floors â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
     public void Floor181(Event @event, ScriptAccessory accessory) { }
 
     [ScriptMethod(name: "Palace Garm_Ice Roar (Chariot)", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:7078", "SourceDataId:6335"])]
@@ -897,7 +897,7 @@ public class the_Palace_of_the_Dead
     #endregion
     
     #region 191~200 Floors Trash
-    [ScriptMethod(name: "—————— 191 ~ 200 Floors ——————", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€” 191 ~ 200 Floors â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
     public void Floor191(Event @event, ScriptAccessory accessory) { }
     
     [ScriptMethod(name: "Onyx Dragon_Evil Eye (Look Away)", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:7043", "SourceDataId:6338"])]
@@ -928,7 +928,7 @@ public class the_Palace_of_the_Dead
     
     #region Cheat Section
     
-    [ScriptMethod(name: "—————— Cheat Section (Requires corresponding plugin & permissions) ——————", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
+    [ScriptMethod(name: "â€”â€”â€”â€”â€”â€” Cheat Section (Requires corresponding plugin & permissions) â€”â€”â€”â€”â€”â€”", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:"])]
     public void CheatSection(Event @event, ScriptAccessory accessory) { }
 
     [ScriptMethod(name: "[DR] When Transformed into Manticore, Set Speed to 1.5x", eventType: EventTypeEnum.StatusAdd, eventCondition: ["StatusID:565", "StackCount:42", "Duration:60.00"])]

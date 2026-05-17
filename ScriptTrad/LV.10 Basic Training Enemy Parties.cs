@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Numerics;
 using Newtonsoft.Json;
@@ -17,7 +17,7 @@ using System.ComponentModel;
 namespace Veever.A_Realm_Reborn.BasicTrainingEnemyParties;
 
 [ScriptType(name: "LV.10 Basic Training: Enemy Parties", territorys: [214], guid: "6747a004-9234-4b32-9daf-75f6e384061c",
-    version: "0.0.0.3", author: "Veever", note: noteStr)]
+    version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
 
 public class Basic_Training_Enemy_Parties
 {

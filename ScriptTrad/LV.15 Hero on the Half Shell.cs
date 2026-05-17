@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Numerics;
 using Newtonsoft.Json;
@@ -17,7 +17,7 @@ using System.ComponentModel;
 namespace Veever.A_Realm_Reborn.HeroontheHalfShell;
 
 [ScriptType(name: "LV.15 Hero on the Half Shell", territorys: [216], guid: "8513e0c9-5a1e-4748-a852-c6150d1c80e4",
-    version: "0.0.0.3", author: "Veever", note: noteStr)]
+    version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
 
 public class Hero_on_the_Half_Shell
 {
@@ -92,7 +92,7 @@ public class Hero_on_the_Half_Shell
     }
 
 
-    [ScriptMethod(name: "Remove Draw + Herb Patch Waypoint", eventType: EventTypeEnum.Chat, eventCondition: ["Message:regex:^(用火元精核心在我这里点燃香草！| Use the core to light the herb patch lying before me. | ファイアスプライトの核で、\nアタイの目の前の香草に着火するんだ！)$"])]
+    [ScriptMethod(name: "Remove Draw + Herb Patch Waypoint", eventType: EventTypeEnum.Chat, eventCondition: ["Message:regex:^(ç”¨ç«å…ƒç²¾æ ¸å¿ƒåœ¨æˆ‘è¿™é‡Œç‚¹ç‡ƒé¦™è‰ï¼| Use the core to light the herb patch lying before me. | ãƒ•ã‚¡ã‚¤ã‚¢ã‚¹ãƒ—ãƒ©ã‚¤ãƒˆã®æ ¸ã§ã€\nã‚¢ã‚¿ã‚¤ã®ç›®ã®å‰ã®é¦™è‰ã«ç€ç«ã™ã‚‹ã‚“ã ï¼)$"])]
     public async void delDraw(Event @event, ScriptAccessory accessory)
     {
         accessory.Method.RemoveDraw(".*");

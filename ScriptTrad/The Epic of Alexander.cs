@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Numerics;
 using System.Collections.Generic;
@@ -14,7 +14,7 @@ using KodakkuAssist.Module.Draw.Manager;
 
 namespace Cyf5119Script.Shadowbringers.TheEpicOfAlexander;
 
-[ScriptType(guid: "E047803D-38D5-45B4-AF48-71C0691CDCC9", name: "The Epic of Alexander", territorys: [887], version: "0.0.2.9", author: "Cyf5119", note: Note, updateInfo: UpdateInfo)]
+[ScriptType(guid: "E047803D-38D5-45B4-AF48-71C0691CDCC9", name: "The Epic of Alexander", territorys: [887], version: "0.0.2.9", Author: "Linoa235", note: Note, updateInfo: UpdateInfo)]
 public class TheEpicOfAlexander
 {
     private const string Note = "Report issues on DC.\nDrawing based on party role settings, please ensure settings are correct.\n/e KASCLEAR to clear remaining drawings";
@@ -107,10 +107,10 @@ public class TheEpicOfAlexander
     [ScriptMethod(name: "Phase Control P4 - Final Sentence", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:18557"], userControl: false)]
     public void PhaseControl4(Event evt, ScriptAccessory sa) => _phase = 400;
 
-    [ScriptMethod(name: "Phase Control P4 - Future Observation α", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:18555"], userControl: false)]
+    [ScriptMethod(name: "Phase Control P4 - Future Observation Î±", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:18555"], userControl: false)]
     public void PhaseControl4_1(Event evt, ScriptAccessory sa) => _phase = 410;
 
-    [ScriptMethod(name: "Phase Control P4 - Future Observation β", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:19219"], userControl: false)]
+    [ScriptMethod(name: "Phase Control P4 - Future Observation Î²", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:19219"], userControl: false)]
     public void PhaseControl4_2(Event evt, ScriptAccessory sa) => _phase = 420;
 
     [ScriptMethod(name: "Phase Control P4 - Holy Judgment", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:18574"], userControl: false)]

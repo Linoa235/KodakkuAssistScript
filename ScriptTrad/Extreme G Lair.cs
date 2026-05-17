@@ -1,4 +1,4 @@
-using Dalamud.Game;
+﻿using Dalamud.Game;
 using Dalamud.Plugin.Services;
 using Dalamud.Utility.Numerics;
 using KodakkuAssist.Data;
@@ -19,14 +19,14 @@ using System.Numerics;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace BakaWater77.极格莱杨拉;
+namespace BakaWater77.æžæ ¼èŽ±æ¨æ‹‰;
 
 [ScriptType(
    name: "Extreme G Lair",
    territorys: new uint[] { 1308 },
    guid: "125b0e7e-1fcc-412f-9d70-49d0ba2a6e3f",
    version: "0.0.0.3",
-   author: "Baka-Water77",
+   Author: "Linoa235",
    note: null
 )]
 public class ExtremeGLair

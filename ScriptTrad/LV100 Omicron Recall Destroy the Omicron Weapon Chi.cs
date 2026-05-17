@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -15,7 +15,7 @@ using System.Threading.Tasks;
 namespace Omicron_Recall_Killing_Order;
 
 [ScriptType(guid: "b73d07ef-aa90-45a9-ab4b-fc3ccce8791b", name: "Omicron Recall: Destroy the Omicron Weapon Chi", territorys: [960],
-    version: "0.0.0.3", author: "Tetora", note: noteStr)]
+    version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
 
 public class Chi
 {

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Numerics;
 using Newtonsoft.Json;
@@ -17,7 +17,7 @@ using System.ComponentModel;
 namespace Veever.A_Realm_Reborn.AllsWellthatEndsintheWell;
 
 [ScriptType(name: "LV.25 All's Well that Ends in the Well", territorys: [220], guid: "862174b8-ed10-4981-bd86-9538a019ef74",
-    version: "0.0.0.3", author: "Veever", note: noteStr)]
+    version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
 
 public class All_s_Well_that_Ends_in_the_Well
 {
@@ -72,7 +72,7 @@ public class All_s_Well_that_Ends_in_the_Well
         accessory.Method.SendDraw(DrawModeEnum.Default, DrawTypeEnum.Fan, dp);
     }
 
-    [ScriptMethod(name: "notify", eventType: EventTypeEnum.Chat, eventCondition: ["Message:regex:^(发现梦幻之布拉奇希奥了！\n不要慌，按一直以来的战术就好！| Without an ally to draw his magicks away from the others, Briaxio will unleash his bane on all of you! | 夢幻のブラキシオを確認した！\n盾役はその務めを果たし、味方を守り抜け！)$"])]
+    [ScriptMethod(name: "notify", eventType: EventTypeEnum.Chat, eventCondition: ["Message:regex:^(å‘çŽ°æ¢¦å¹»ä¹‹å¸ƒæ‹‰å¥‡å¸Œå¥¥äº†ï¼\nä¸è¦æ…Œï¼ŒæŒ‰ä¸€ç›´ä»¥æ¥çš„æˆ˜æœ¯å°±å¥½ï¼| Without an ally to draw his magicks away from the others, Briaxio will unleash his bane on all of you! | å¤¢å¹»ã®ãƒ–ãƒ©ã‚­ã‚·ã‚ªã‚’ç¢ºèªã—ãŸï¼\nç›¾å½¹ã¯ãã®å‹™ã‚ã‚’æžœãŸã—ã€å‘³æ–¹ã‚’å®ˆã‚ŠæŠœã‘ï¼)$"])]
     public async void notify(Event @event, ScriptAccessory accessory)
     {
         if (isText) accessory.Method.TextInfo("Prioritize attacking Briaxio", duration: 5000, true);

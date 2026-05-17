@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -15,7 +15,7 @@ using System.Threading.Tasks;
 namespace TheHead_theTail_theWholeDamnedThing;
 
 [ScriptType(guid: "f11c3069-d163-41dd-904e-b016cfcf089c", name: "Archaeotania: The Head, the Tail, the Whole Damned Thing", territorys: [818],
-    version: "0.0.0.5", author: "Tetora", note: noteStr)]
+    version: "0.0.0.5", Author: "Linoa235", note: noteStr)]
 
 public class Archaeotania
 {

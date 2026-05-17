@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Numerics;
 using Newtonsoft.Json;
@@ -10,7 +10,7 @@ using KodakkuAssist.Module.Draw.Manager;
 
 namespace Cyf5119Script.Endwalker.TheGildedAraya;
 
-[ScriptType(guid: "0F38EA83-3D3A-AF4E-8908-56655F76014E", name: "The Gilded Araya", territorys: [1136], version: "0.0.0.1", author: "Cyf5119")]
+[ScriptType(guid: "0F38EA83-3D3A-AF4E-8908-56655F76014E", name: "The Gilded Araya", territorys: [1136], version: "0.0.0.1", Author: "Linoa235")]
 public class TheGildedAraya
 {
     public void Init(ScriptAccessory sa)

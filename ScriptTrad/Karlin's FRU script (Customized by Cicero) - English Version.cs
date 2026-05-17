@@ -26,7 +26,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
         guid: "148718fd-575d-493a-8ac7-1cc7092aff85",
         version: "0.0.1.19",
         note: notesOfTheScript,
-        author: "Karlin")]
+        Author: "Linoa235")]
 
     public class Futures_Rewritten_Ultimate
     {

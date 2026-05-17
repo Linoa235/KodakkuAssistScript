@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Numerics;
 using Newtonsoft.Json;
@@ -16,7 +16,7 @@ using System.Collections.Generic;
 namespace Veever.EndWalker.theMinstrelsBalladEndsingersAria;
 
 [ScriptType(name: "LV.90 The Minstrel's Ballad: Endsinger's Aria (Unrestricted)", territorys: [998], guid: "100df6f8-d8ce-44f7-9fb0-431eca0f2825",
-    version: "0.0.0.6", author: "Veever", note: noteStr)]
+    version: "0.0.0.6", Author: "Linoa235", note: noteStr)]
 
 public class the_Minstrels_Ballad_Endsingers_Aria
 {
