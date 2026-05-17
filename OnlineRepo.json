@@ -1,2927 +1,2628 @@
 ﻿[
     {
-        "Name":  "(Another Dungeon) Another Merchant\u0027s Tale",
-        "Guid":  "41658b2f-191c-4d68-98c3-c26a10ddce67",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/(Another%20Dungeon)%20Another%20Merchant\u0027s%20Tale.cs",
-        "Note":  "",
+        "Note":  "Another Merchant\u0027s Tale test",
+        "TerritoryIds":  1317,
+        "Version":  "0.0.0.76",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "41658b2f-191c-4d68-98c3-c26a10ddce67",
+        "Author":  "Linoa235",
+        "Name":  "(Another Dungeon) Another Merchant\u0027s Tale",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "(M10S)AAC Heavyweight M2 (Savage)",
-        "Guid":  "d244ff34-5a89-41e4-a937-7d5c7c6b1348",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/(M10S)AAC%20Heavyweight%20M2%20(Savage).cs",
-        "Note":  "",
-        "UpdateInfo":  "",
+        "Note":  "M10S, script works in both M10N/S.",
         "TerritoryIds":  [
-
-                         ]
+                             1322,
+                             1323
+                         ],
+        "Version":  "0.1.0.1",
+        "UpdateInfo":  "",
+        "Guid":  "d244ff34-5a89-41e4-a937-7d5c7c6b1348",
+        "Author":  "Linoa235",
+        "Name":  "(M10S)AAC Heavyweight M2 (Savage)",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "(M11S)AAC Heavyweight M3 (Savage)",
-        "Guid":  "725bcd38-1173-420e-a248-b3e11a1ff1b3",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/(M11S)AAC%20Heavyweight%20M3%20(Savage).cs",
-        "Note":  "",
-        "UpdateInfo":  "",
+        "Note":  "M11S, script works in both M11N/S.",
         "TerritoryIds":  [
-
-                         ]
+                             1324,
+                             1325
+                         ],
+        "Version":  "0.1.5.0",
+        "UpdateInfo":  "",
+        "Guid":  "725bcd38-1173-420e-a248-b3e11a1ff1b3",
+        "Author":  "Linoa235",
+        "Name":  "(M11S)AAC Heavyweight M3 (Savage)",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "(M9S)AAC Heavyweight M1 (Savage)",
-        "Guid":  "ced5c285-484c-4750-bc85-241e927848f1",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/(M9S)AAC%20Heavyweight%20M1%20(Savage).cs",
-        "Note":  "",
-        "UpdateInfo":  "",
+        "Note":  "M9S, script works in both M9N/S. TTS-marked mechanics only have announcements.",
         "TerritoryIds":  [
-
-                         ]
+                             1320,
+                             1321
+                         ],
+        "Version":  "1.0.0.0",
+        "UpdateInfo":  "",
+        "Guid":  "ced5c285-484c-4750-bc85-241e927848f1",
+        "Author":  "Linoa235",
+        "Name":  "(M9S)AAC Heavyweight M1 (Savage)",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "2026 Little Ladies\u0027 Day Performance Cheer",
-        "Guid":  "22cfc380-edc2-f441-f9f9-f9f212f2632f",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/2026%20Little%20Ladies\u0027%20Day%20Performance%20Cheer.cs",
         "Note":  "",
+        "TerritoryIds":  130,
+        "Version":  "0.0.0.1",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "22cfc380-edc2-f441-f9f9-f9f212f2632f",
+        "Author":  "Linoa235",
+        "Name":  "2026 Little Ladies\u0027 Day Performance Cheer",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "AAC Cruiserweight M1",
-        "Guid":  "6376CF47-0403-459E-9350-D168AB9119B5",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/AAC%20Cruiserweight%20M1.cs",
         "Note":  "",
+        "TerritoryIds":  1256,
+        "Version":  "0.0.0.1",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "6376CF47-0403-459E-9350-D168AB9119B5",
+        "Author":  "Linoa235",
+        "Name":  "AAC Cruiserweight M1",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "AAC Cruiserweight M2",
-        "Guid":  "1EF7A8D1-1D46-4E4A-9051-CC392724CA18",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/AAC%20Cruiserweight%20M2.cs",
         "Note":  "",
+        "TerritoryIds":  1258,
+        "Version":  "0.0.0.1",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "1EF7A8D1-1D46-4E4A-9051-CC392724CA18",
+        "Author":  "Linoa235",
+        "Name":  "AAC Cruiserweight M2",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "AAC Cruiserweight M3",
-        "Guid":  "E30016AA-1FD4-4E87-8152-15282D46B806",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/AAC%20Cruiserweight%20M3.cs",
         "Note":  "",
+        "TerritoryIds":  1260,
+        "Version":  "0.0.0.1",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "E30016AA-1FD4-4E87-8152-15282D46B806",
+        "Author":  "Linoa235",
+        "Name":  "AAC Cruiserweight M3",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "AAC Cruiserweight M4 (Savage)",
-        "Guid":  "aeb4391c-e8a6-4daa-ab71-18e44c94fab8",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/AAC%20Cruiserweight%20M4%20(Savage).cs",
         "Note":  "",
+        "TerritoryIds":  1263,
+        "Version":  "0.0.0.35",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "aeb4391c-e8a6-4daa-ab71-18e44c94fab8",
+        "Author":  "Linoa235",
+        "Name":  "AAC Cruiserweight M4 (Savage)",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "AAC Cruiserweight M4",
-        "Guid":  "73D227EB-D2E2-40B6-8107-16E36A09FB8D",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/AAC%20Cruiserweight%20M4.cs",
         "Note":  "",
+        "TerritoryIds":  1262,
+        "Version":  "0.0.0.1",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "73D227EB-D2E2-40B6-8107-16E36A09FB8D",
+        "Author":  "Linoa235",
+        "Name":  "AAC Cruiserweight M4",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "Abyssos The Eighth Circle (P8)",
-        "Guid":  "A8B2CE40-AD15-4F26-9CBE-C8AD1081F702",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Abyssos%20The%20Eighth%20Circle%20(P8).cs",
-        "Note":  "",
+        "Note":  "Enable text reminders",
+        "TerritoryIds":  1087,
+        "Version":  "0.0.0.1",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "A8B2CE40-AD15-4F26-9CBE-C8AD1081F702",
+        "Author":  "Linoa235",
+        "Name":  "Abyssos The Eighth Circle (P8)",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "Abyssos The Seventh Circle",
-        "Guid":  "073ca5d8-9a34-41ff-8757-c3862c465be0",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Abyssos%20The%20Seventh%20Circle.cs",
-        "Note":  "",
+        "Note":  "A simple script for the duty Abyssos The Seventh Circle.",
+        "TerritoryIds":  1085,
+        "Version":  "0.0.0.13",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "073ca5d8-9a34-41ff-8757-c3862c465be0",
+        "Author":  "Linoa235",
+        "Name":  "Abyssos The Seventh Circle",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "Action Area",
-        "Guid":  "f85df3b8-baa4-42b7-8196-bc26c58fa251",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Action%20Area.cs",
         "Note":  "",
-        "UpdateInfo":  "",
         "TerritoryIds":  [
 
-                         ]
+                         ],
+        "Version":  "0.0.0.1",
+        "UpdateInfo":  "",
+        "Guid":  "f85df3b8-baa4-42b7-8196-bc26c58fa251",
+        "Author":  "Linoa235",
+        "Name":  "Action Area",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "Alexander - The Burden of the Son (A8S)",
-        "Guid":  "2113EAA7-0C90-4802-AA48-C9CFF30BFBEA",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Alexander%20-%20The%20Burden%20of%20the%20Son%20(A8S).cs",
         "Note":  "",
+        "TerritoryIds":  532,
+        "Version":  "0.0.1",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "2113EAA7-0C90-4802-AA48-C9CFF30BFBEA",
+        "Author":  "Linoa235",
+        "Name":  "Alexander - The Burden of the Son (A8S)",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "Alexander - The Cuff of the Son (A6)",
-        "Guid":  "E6835ED0-D91C-4946-B07E-3634337311D7",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Alexander%20-%20The%20Cuff%20of%20the%20Son%20(A6).cs",
         "Note":  "",
+        "TerritoryIds":  521,
+        "Version":  "0.0.0.1",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "E6835ED0-D91C-4946-B07E-3634337311D7",
+        "Author":  "Linoa235",
+        "Name":  "Alexander - The Cuff of the Son (A6)",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "Alexander - The Eyes of the Creator (A9)",
-        "Guid":  "31204d48-0846-41fc-a389-20c8fb5327b1",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Alexander%20-%20The%20Eyes%20of%20the%20Creator%20(A9).cs",
         "Note":  "",
+        "TerritoryIds":  580,
+        "Version":  "0.0.0.1",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "31204d48-0846-41fc-a389-20c8fb5327b1",
+        "Author":  "Linoa235",
+        "Name":  "Alexander - The Eyes of the Creator (A9)",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "Alexander - The Fist of the Son (A5)",
-        "Guid":  "214e5774-a935-4b5f-858e-b9b7db00816d",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Alexander%20-%20The%20Fist%20of%20the%20Son%20(A5).cs",
         "Note":  "",
+        "TerritoryIds":  520,
+        "Version":  "0.0.0.1",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "214e5774-a935-4b5f-858e-b9b7db00816d",
+        "Author":  "Linoa235",
+        "Name":  "Alexander - The Fist of the Son (A5)",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "Alexander - The Heart of the Creator (Lamebrix Strikebocks)",
-        "Guid":  "ec6bec7b-27bf-4a19-ae0c-cef069c7742d",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Alexander%20-%20The%20Heart%20of%20the%20Creator%20(Lamebrix%20Strikebocks).cs",
         "Note":  "",
+        "TerritoryIds":  581,
+        "Version":  "0.0.0.1",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "ec6bec7b-27bf-4a19-ae0c-cef069c7742d",
+        "Author":  "Linoa235",
+        "Name":  "A10N",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "Alexander - The Soul of the Creator (A12S)",
-        "Guid":  "3A494EDE-416B-4878-B8A5-3322EE5F8843",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Alexander%20-%20The%20Soul%20of%20the%20Creator%20(A12S).cs",
         "Note":  "",
+        "TerritoryIds":  587,
+        "Version":  "0.0.1",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "3A494EDE-416B-4878-B8A5-3322EE5F8843",
+        "Author":  "Linoa235",
+        "Name":  "Alexander - The Soul of the Creator (A12S)",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "Alexandria",
-        "Guid":  "243443E4-FC8E-3EA6-9A75-FD2A4B6990FF",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Alexandria.cs",
         "Note":  "",
+        "TerritoryIds":  1199,
+        "Version":  "0.0.0.4",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "243443E4-FC8E-3EA6-9A75-FD2A4B6990FF",
+        "Author":  "Linoa235",
+        "Name":  "Alexandria",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "All Others",
-        "Guid":  "260323f1-9d7d-4fd6-9222-282eb1aa9bf5",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/All%20Others.cs",
         "Note":  "",
-        "UpdateInfo":  "",
         "TerritoryIds":  [
 
-                         ]
+                         ],
+        "Version":  "0.0.0.1",
+        "UpdateInfo":  "",
+        "Guid":  "260323f1-9d7d-4fd6-9222-282eb1aa9bf5",
+        "Author":  "Linoa235",
+        "Name":  "Verify Key",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "Aloalo Island Drawing - Guide",
-        "Guid":  "e3cfc380-edc2-f441-bebe-e9e294f2632a",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Aloalo%20Island%20Drawing%20-%20Guide.cs",
         "Note":  "",
-        "UpdateInfo":  "",
         "TerritoryIds":  [
-
-                         ]
+                             1179,
+                             1180
+                         ],
+        "Version":  "0.0.1.5",
+        "UpdateInfo":  "",
+        "Guid":  "e3cfc380-edc2-f441-bebe-e9e294f2632a",
+        "Author":  "Linoa235",
+        "Name":  "Aloalo Island Drawing + Guide",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "Arcadia - Cruiser Zero ",
-        "Guid":  "783C797E-52BB-41ED-98CD-A2315533036F",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Arcadia%20-%20Cruiser%20Zero%20.cs",
         "Note":  "",
+        "TerritoryIds":  1257,
+        "Version":  "0.0.0.6",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "783C797E-52BB-41ED-98CD-A2315533036F",
+        "Author":  "Linoa235",
+        "Name":  "Arcadia Cruiser Zero 1",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "ASS [Another Sil\u0027dihn Subterrane]",
-        "Guid":  "783C797E-52BB-41ED-98CD-A2315533036F",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/ASS%20%5BAnother%20Sil\u0027dihn%20Subterrane%5D.cs",
         "Note":  "",
+        "TerritoryIds":  1257,
+        "Version":  "0.0.0.6",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "783C797E-52BB-41ED-98CD-A2315533036F",
+        "Author":  "Linoa235",
+        "Name":  "Arcadia Cruiser Zero 1",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "Binding Coil of Bahamut (BLU Exclusive)",
-        "Guid":  "8d41b5f9-0ab6-404a-9572-aabb390023f0",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Binding%20Coil%20of%20Bahamut%20(BLU%20Exclusive).cs",
         "Note":  "",
-        "UpdateInfo":  "",
         "TerritoryIds":  [
-
-                         ]
+                             196,
+                             245,
+                             358
+                         ],
+        "Version":  "0.0.0.3",
+        "UpdateInfo":  "",
+        "Guid":  "8d41b5f9-0ab6-404a-9572-aabb390023f0",
+        "Author":  "Linoa235",
+        "Name":  "Binding Coil of Bahamut (BLU Exclusive)",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "Byakko",
-        "Guid":  "6a9e30e9-c58e-4f39-9f1e-ad26e5d49dc3",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Byakko.cs",
         "Note":  "",
+        "TerritoryIds":  746,
+        "Version":  "0.0.0.12",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "6a9e30e9-c58e-4f39-9f1e-ad26e5d49dc3",
+        "Author":  "Linoa235",
+        "Name":  "Byakko",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "Celestium",
-        "Guid":  "7703f1a9-5698-4896-8908-bb8e415c1321",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Celestium.cs",
         "Note":  "",
+        "TerritoryIds":  796,
+        "Version":  "0.0.0.6",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "7703f1a9-5698-4896-8908-bb8e415c1321",
+        "Author":  "Linoa235",
+        "Name":  "Celestium",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "Cenote Ja Ja Gural",
-        "Guid":  "64620549-e269-49c0-b0ae-76edec024864",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Cenote%20Ja%20Ja%20Gural.cs",
         "Note":  "",
+        "TerritoryIds":  1209,
+        "Version":  "0.0.0.4",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "64620549-e269-49c0-b0ae-76edec024864",
+        "Author":  "Linoa235",
+        "Name":  "Cenote Ja Ja Gural",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "CoD (Chaotic) Cloud of Darkness",
-        "Guid":  "436effd2-a350-4c67-b341-b4fe5a4ac233",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/CoD%20(Chaotic)%20Cloud%20of%20Darkness.cs",
-        "Note":  "",
+        "Note":  "Enable text notifications",
+        "TerritoryIds":  1241,
+        "Version":  "0.0.2.1",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "436effd2-a350-4c67-b341-b4fe5a4ac233",
+        "Author":  "Linoa235",
+        "Name":  "CoD (Chaotic) Cloud of Darkness",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "DawnTrail FRU",
-        "Guid":  "3076a62b-127e-468e-96d3-4f1d559857ec",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/DawnTrail%20FRU.cs",
         "Note":  "",
+        "TerritoryIds":  1238,
+        "Version":  "0.0.0.1",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "3076a62b-127e-468e-96d3-4f1d559857ec",
+        "Author":  "Linoa235",
+        "Name":  "General Debug Use",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "DawnTrail QueenEternal",
-        "Guid":  "45fff289-e23d-41ab-9039-71cd310668e4",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/DawnTrail%20QueenEternal.cs",
         "Note":  "",
+        "TerritoryIds":  1243,
+        "Version":  "0.0.0.1",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "45fff289-e23d-41ab-9039-71cd310668e4",
+        "Author":  "Linoa235",
+        "Name":  "General Debug Use",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "Debug Script (By Chat Command)",
-        "Guid":  "B866F3EA-35A3-4BAA-8259-17A0D7608928",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Debug%20Script%20(By%20Chat%20Command).cs",
-        "Note":  "",
-        "UpdateInfo":  "",
+        "Note":  "Enter commands in echo channel for dynamic drawing.\\nUsage:\\n[target] [shape] [parameters...]\\n\\nTarget (optional, defaults to self):\\n- test ... (draw on self)\\n- test eid=[entity ID] ... (draw on specified entity)\\n\\nShapes and parameters:\\n- circle [radius]\\n- fan [radius] [angle]\\n- rect [width] [length]\\n- donut [outer radius] [inner radius]\\n- straight [width] [length]\\n\\nExamples:\\n- test circle 5\\n- test eid=4000123A fan 10 90",
         "TerritoryIds":  [
 
-                         ]
+                         ],
+        "Version":  "0.0.2",
+        "UpdateInfo":  "",
+        "Guid":  "B866F3EA-35A3-4BAA-8259-17A0D7608928",
+        "Author":  "Linoa235",
+        "Name":  "Debug Script (By Chat Command)",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "Dragonsong\u0027s - Reprise - Drawing",
-        "Guid":  "d9c97e91-9b59-432d-a3a1-42a8475b7e2a",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Dragonsong\u0027s%20-%20Reprise%20-%20Drawing.cs",
         "Note":  "",
+        "TerritoryIds":  968,
+        "Version":  "0.0.0.6",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "d9c97e91-9b59-432d-a3a1-42a8475b7e2a",
+        "Author":  "Linoa235",
+        "Name":  "Dragonsong\u0027s Reprise Drawings",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "Dragonsong\u0027s Reprise Drawing",
-        "Guid":  "d9c97e91-9b59-432d-a3a1-42a8475b7e2a",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Dragonsong\u0027s%20Reprise%20Drawing.cs",
         "Note":  "",
+        "TerritoryIds":  968,
+        "Version":  "0.0.0.6",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "d9c97e91-9b59-432d-a3a1-42a8475b7e2a",
+        "Author":  "Linoa235",
+        "Name":  "Dragonsong\u0027s Reprise Drawing",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "E11n",
-        "Guid":  "e12185b8-2930-44a8-8e1b-9f58c3fd6e0a",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/E11n.cs",
         "Note":  "",
+        "TerritoryIds":  944,
+        "Version":  "0.0.0.1",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "e12185b8-2930-44a8-8e1b-9f58c3fd6e0a",
+        "Author":  "Linoa235",
+        "Name":  "E11n",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "E11n_Poetry",
-        "Guid":  "e12185b8-2930-44a8-8e1b-9f58c3fd6e0a",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/E11n_Poetry.cs",
         "Note":  "",
+        "TerritoryIds":  944,
+        "Version":  "0.0.0.1",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "e12185b8-2930-44a8-8e1b-9f58c3fd6e0a",
+        "Author":  "Linoa235",
+        "Name":  "E11n",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "Eden Ultimate EU",
-        "Guid":  "ce4472d1-fbdb-a4d4-1dd2-e8305a1db4bc",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Eden%20Ultimate%20EU.cs",
         "Note":  "",
+        "TerritoryIds":  1238,
+        "Version":  "0.0.0.10",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "ce4472d1-fbdb-a4d4-1dd2-e8305a1db4bc",
+        "Author":  "Linoa235",
+        "Name":  "EdenUltimate",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "EdenUltimate",
-        "Guid":  "a4e14eff-0aea-a4b6-d8c3-47644a3e9e9a",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/EdenUltimate.cs",
         "Note":  "",
+        "TerritoryIds":  1238,
+        "Version":  "0.0.0.11",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "a4e14eff-0aea-a4b6-d8c3-47644a3e9e9a",
+        "Author":  "Linoa235",
+        "Name":  "EdenUltimate",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "EndWalker DSR",
-        "Guid":  "cc6fb606-ff7b-4739-81aa-4861b204ab1e",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/EndWalker%20DSR.cs",
         "Note":  "",
-        "UpdateInfo":  "",
         "TerritoryIds":  [
-
-                         ]
+                             968,
+                             1112
+                         ],
+        "Version":  "0.0.0.1",
+        "UpdateInfo":  "",
+        "Guid":  "cc6fb606-ff7b-4739-81aa-4861b204ab1e",
+        "Author":  "Linoa235",
+        "Name":  "---- ã€ŠP1\u0026P4.5: Door Bossã€‹ ----",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "EndWalker TopReborn",
-        "Guid":  "6272e52b-5500-4ff0-8634-dd15f2e3b25e",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/EndWalker%20TopReborn.cs",
         "Note":  "",
+        "TerritoryIds":  1122,
+        "Version":  "0.0.0.1",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "6272e52b-5500-4ff0-8634-dd15f2e3b25e",
+        "Author":  "Linoa235",
+        "Name":  "Test: Parameter Reset",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "Extreme G Lair",
-        "Guid":  "125b0e7e-1fcc-412f-9d70-49d0ba2a6e3f",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Extreme%20G%20Lair.cs",
         "Note":  "",
-        "UpdateInfo":  "",
         "TerritoryIds":  [
 
-                         ]
+                         ],
+        "Version":  "0.0.0.3",
+        "UpdateInfo":  "",
+        "Guid":  "125b0e7e-1fcc-412f-9d70-49d0ba2a6e3f",
+        "Author":  "Linoa235",
+        "Name":  "Extreme G Lair",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "FRU P5 Floor Fire Grid Guidance",
-        "Guid":  "A20DB976-B60D-E62D-B93E-A164275C13AD",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/FRU%20P5%20Floor%20Fire%20Grid%20Guidance.cs",
         "Note":  "",
+        "TerritoryIds":  1238,
+        "Version":  "0.0.1.0",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "A20DB976-B60D-E62D-B93E-A164275C13AD",
+        "Author":  "Linoa235",
+        "Name":  "FRU P5 Floor Fire Grid Guidance",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "Futures Rewritten Ultimate Additional Supplement",
-        "Guid":  "981e39b5-ea99-4b85-a4b1-0e698d4c4036",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Futures%20Rewritten%20Ultimate%20Additional%20Supplement.cs",
-        "Note":  "",
+        "Note":  "P4 Akh Morn Stack Position",
+        "TerritoryIds":  1238,
+        "Version":  "0.0.0.4",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "981e39b5-ea99-4b85-a4b1-0e698d4c4036",
+        "Author":  "Linoa235",
+        "Name":  "FRU_DLC [Futures Rewritten Ultimate_Additional Supplement]",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "G Lair Abolition Hell on Rails (Extreme)",
-        "Guid":  "b9dfc210-add4-d464-3030-e9e294b384ff",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/G%20Lair%20Abolition%20Hell%20on%20Rails%20(Extreme).cs",
-        "Note":  "",
+        "Note":  "Bug fix",
+        "TerritoryIds":  1308,
+        "Version":  "0.0.0.2",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "b9dfc210-add4-d464-3030-e9e294b384ff",
+        "Author":  "Linoa235",
+        "Name":  "G Lair Abolition: Hell on Rails (Extreme)",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "General.InvulnAlert",
-        "Guid":  "FCDCA220-DA96-48B5-909B-C1E336671D54",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/General.InvulnAlert.cs",
-        "Note":  "",
-        "UpdateInfo":  "",
+        "Note":  "Invincibility countdown prompt for self.",
         "TerritoryIds":  [
 
-                         ]
+                         ],
+        "Version":  "0.0.0.4",
+        "UpdateInfo":  "",
+        "Guid":  "FCDCA220-DA96-48B5-909B-C1E336671D54",
+        "Author":  "Linoa235",
+        "Name":  "Invuln Alert Macro",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "Gold Saucer - Cliffhanger",
-        "Guid":  "4359482a-b7a8-4eb1-9a42-ffa3c79d6b7b",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Gold%20Saucer%20-%20Cliffhanger.cs",
         "Note":  "",
+        "TerritoryIds":  144,
+        "Version":  "0.0.0.3",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "4359482a-b7a8-4eb1-9a42-ffa3c79d6b7b",
+        "Author":  "Linoa235",
+        "Name":  "Gold Saucer - Cliffhanger",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "Golden Saucer Assistant",
-        "Guid":  "9eed3085-cb11-738a-7e06-5ba0aa67363c",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Golden%20Saucer%20Assistant.cs",
         "Note":  "",
+        "TerritoryIds":  144,
+        "Version":  "0.0.0.1",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "9eed3085-cb11-738a-7e06-5ba0aa67363c",
+        "Author":  "Linoa235",
+        "Name":  "Golden Saucer Assistant",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "Heavy Weight Savage",
-        "Guid":  "A5689105-A7FD-4B84-9674-67610285768C",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Heavy%20Weight%20Savage.cs",
-        "Note":  "",
+        "Note":  "Experimental toggle.",
+        "TerritoryIds":  1323,
+        "Version":  "0.0.0.1",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "A5689105-A7FD-4B84-9674-67610285768C",
+        "Author":  "Linoa235",
+        "Name":  "Heavy Weight Savage",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "HelloWorld",
-        "Guid":  "AF4E8C43-08BA-4C98-8DEF-70F023AF234D",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/HelloWorld.cs",
         "Note":  "",
-        "UpdateInfo":  "",
         "TerritoryIds":  [
 
-                         ]
+                         ],
+        "Version":  "0.0.0.1",
+        "UpdateInfo":  "",
+        "Guid":  "AF4E8C43-08BA-4C98-8DEF-70F023AF234D",
+        "Author":  "Linoa235",
+        "Name":  "HelloWorld",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "Ihuykatumu",
-        "Guid":  "123e4567-e89b-12d3-a456-426614174000",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Ihuykatumu.cs",
         "Note":  "",
+        "TerritoryIds":  1167,
+        "Version":  "0.0.0.1",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "123e4567-e89b-12d3-a456-426614174000",
+        "Author":  "Linoa235",
+        "Name":  "Ihuykatumu",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "Jeuno The First Walk",
-        "Guid":  "5e7c9708-b36c-4b04-af16-43747b58b8ed",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Jeuno%20The%20First%20Walk.cs",
-        "Note":  "",
+        "Note":  "Enable text reminders",
+        "TerritoryIds":  1248,
+        "Version":  "0.0.0.7",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "5e7c9708-b36c-4b04-af16-43747b58b8ed",
+        "Author":  "Linoa235",
+        "Name":  "Jeuno The First Walk",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "Karlin\u0027s Eden Ultimate Script (Spirit Sight Modified Edition) wotou modified for personal use",
-        "Guid":  "148718fd-575d-493a-8ac7-1cc7092aff81",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Karlin\u0027s%20Eden%20Ultimate%20Script%20(Spirit%20Sight%20Modified%20Edition)%20wotou%20modified%20for%20personal%20use.cs",
         "Note":  "",
+        "TerritoryIds":  1238,
+        "Version":  "0.0.1.50",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "148718fd-575d-493a-8ac7-1cc7092aff81",
+        "Author":  "Linoa235",
+        "Name":  "Karlin\u0027s Eden Ultimate Script (Spirit Sight Modified Edition) wotou modified for personal use",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "Karlin\u0027s FRU script (Customized by Cicero) - English Version",
-        "Guid":  "148718fd-575d-493a-8ac7-1cc7092aff85",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Karlin\u0027s%20FRU%20script%20(Customized%20by%20Cicero)%20-%20English%20Version.cs",
         "Note":  "",
+        "TerritoryIds":  1238,
+        "Version":  "0.0.1.19",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "148718fd-575d-493a-8ac7-1cc7092aff85",
+        "Author":  "Linoa235",
+        "Name":  "Karlin\u0027s FRU script (Customized by Cicero) - English Version",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "Karlin\u0027s FRU script (Customized by Cicero)",
-        "Guid":  "148718fd-575d-493a-8ac7-1cc7092aff85",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Karlin\u0027s%20FRU%20script%20(Customized%20by%20Cicero).cs",
         "Note":  "",
+        "TerritoryIds":  1238,
+        "Version":  "0.0.1.19",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "148718fd-575d-493a-8ac7-1cc7092aff85",
+        "Author":  "Linoa235",
+        "Name":  "Karlin\u0027s FRU script (Customized by Cicero) | Karlinçš„ç»ä¼Šç”¸è„šæœ¬ (çµè§†æ”¹è£…ç‰ˆ)",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "Latest Hottest Temporary Drawing",
-        "Guid":  "80890eac-4730-4708-ad1b-05aba469c2a1",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Latest%20Hottest%20Temporary%20Drawing.cs",
         "Note":  "",
+        "TerritoryIds":  1307,
+        "Version":  "0.0.0.8",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "80890eac-4730-4708-ad1b-05aba469c2a1",
+        "Author":  "Linoa235",
+        "Name":  "Latest Hottest Temporary Drawing",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV.10 Basic Training Enemy Parties",
-        "Guid":  "6747a004-9234-4b32-9daf-75f6e384061c",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.10%20Basic%20Training%20Enemy%20Parties.cs",
         "Note":  "",
+        "TerritoryIds":  214,
+        "Version":  "0.0.0.3",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "6747a004-9234-4b32-9daf-75f6e384061c",
+        "Author":  "Linoa235",
+        "Name":  "LV.10 Basic Training: Enemy Parties",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV.10 Under the Armor",
-        "Guid":  "8b28e087-549e-4a88-96db-50e1e7cc5214",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.10%20Under%20the%20Armor.cs",
         "Note":  "",
+        "TerritoryIds":  190,
+        "Version":  "0.0.0.5",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "8b28e087-549e-4a88-96db-50e1e7cc5214",
+        "Author":  "Linoa235",
+        "Name":  "LV.10 Under the Armor",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV.100 Guardian Arkveld (Extreme) The Windward",
-        "Guid":  "b4a3871d-2499-4152-aaa2-a911ee1bbce2",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.100%20Guardian%20Arkveld%20(Extreme)%20The%20Windward.cs",
         "Note":  "",
+        "TerritoryIds":  1306,
+        "Version":  "0.0.0.1",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "b4a3871d-2499-4152-aaa2-a911ee1bbce2",
+        "Author":  "Linoa235",
+        "Name":  "Place waymarks manually",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV.100 Hells\u0027 Kier Unreal",
-        "Guid":  "60468283-702c-4ddb-95db-fd81409d5630",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.100%20Hells\u0027%20Kier%20Unreal.cs",
         "Note":  "",
+        "TerritoryIds":  1272,
+        "Version":  "0.0.0.7",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "60468283-702c-4ddb-95db-fd81409d5630",
+        "Author":  "Linoa235",
+        "Name":  "LV.100 Hells\u0027 Kier Unreal",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV.100 The Jade Stoa Unreal",
-        "Guid":  "29193d9d-a2c5-4a0d-875b-943a06790b95",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.100%20The%20Jade%20Stoa%20Unreal.cs",
         "Note":  "",
+        "TerritoryIds":  1239,
+        "Version":  "0.0.0.4",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "29193d9d-a2c5-4a0d-875b-943a06790b95",
+        "Author":  "Linoa235",
+        "Name":  "LV.100 The Jade Stoa Unreal",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV.100 The Underkeep",
-        "Guid":  "9b381347-ddbf-4f52-98a9-a63d6e0d69bd",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.100%20The%20Underkeep.cs",
         "Note":  "",
+        "TerritoryIds":  1266,
+        "Version":  "0.0.0.4",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "9b381347-ddbf-4f52-98a9-a63d6e0d69bd",
+        "Author":  "Linoa235",
+        "Name":  "LV.100 The Underkeep",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV.100 Yuweyawata Field Station",
-        "Guid":  "992e47a8-17d0-4379-891b-0762c0509257",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.100%20Yuweyawata%20Field%20Station.cs",
         "Note":  "",
+        "TerritoryIds":  1242,
+        "Version":  "0.0.2.1",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "992e47a8-17d0-4379-891b-0762c0509257",
+        "Author":  "Linoa235",
+        "Name":  "LV.100 Yuweyawata Field Station",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV.100 [The Windward Wilds]",
-        "Guid":  "992e47a8-17d0-4379-891b-0762c0509257",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.100%20%5BThe%20Windward%20Wilds%5D.cs",
         "Note":  "",
+        "TerritoryIds":  1242,
+        "Version":  "0.0.2.1",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "992e47a8-17d0-4379-891b-0762c0509257",
+        "Author":  "Linoa235",
+        "Name":  "LV.100 Yuweyawata Field Station",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV.15 Basic Training Enemy Strongholds",
-        "Guid":  "72889f91-2654-400c-9112-69d4a063557c",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.15%20Basic%20Training%20Enemy%20Strongholds.cs",
         "Note":  "",
+        "TerritoryIds":  215,
+        "Version":  "0.0.0.3",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "72889f91-2654-400c-9112-69d4a063557c",
+        "Author":  "Linoa235",
+        "Name":  "LV.15 Basic Training: Enemy Strongholds",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV.15 Hero on the Half Shell",
-        "Guid":  "8513e0c9-5a1e-4748-a852-c6150d1c80e4",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.15%20Hero%20on%20the%20Half%20Shell.cs",
         "Note":  "",
+        "TerritoryIds":  216,
+        "Version":  "0.0.0.3",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "8513e0c9-5a1e-4748-a852-c6150d1c80e4",
+        "Author":  "Linoa235",
+        "Name":  "LV.15 Hero on the Half Shell",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV.20 Pulling Poison Posies",
-        "Guid":  "ffdb31c2-0517-430e-924e-159766aea93d",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.20%20Pulling%20Poison%20Posies.cs",
         "Note":  "",
+        "TerritoryIds":  191,
+        "Version":  "0.0.0.3",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "ffdb31c2-0517-430e-924e-159766aea93d",
+        "Author":  "Linoa235",
+        "Name":  "LV.20 Pulling Poison Posies",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV.20 Stinging Back",
-        "Guid":  "69177d90-6983-4af4-a3e2-ad1e6ab28635",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.20%20Stinging%20Back.cs",
         "Note":  "",
+        "TerritoryIds":  192,
+        "Version":  "0.0.0.3",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "69177d90-6983-4af4-a3e2-ad1e6ab28635",
+        "Author":  "Linoa235",
+        "Name":  "LV.20 Stinging Back",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV.25 All\u0027s Well that Ends in the Well",
-        "Guid":  "862174b8-ed10-4981-bd86-9538a019ef74",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.25%20All\u0027s%20Well%20that%20Ends%20in%20the%20Well.cs",
         "Note":  "",
+        "TerritoryIds":  220,
+        "Version":  "0.0.0.3",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "862174b8-ed10-4981-bd86-9538a019ef74",
+        "Author":  "Linoa235",
+        "Name":  "LV.25 All\u0027s Well that Ends in the Well",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV.25 Flicking Sticks and Taking Names",
-        "Guid":  "f63ef61a-5fe6-437a-afb4-513dafecbb54",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.25%20Flicking%20Sticks%20and%20Taking%20Names.cs",
         "Note":  "",
+        "TerritoryIds":  219,
+        "Version":  "0.0.0.3",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "f63ef61a-5fe6-437a-afb4-513dafecbb54",
+        "Author":  "Linoa235",
+        "Name":  "LV.25 Flicking Sticks and Taking Names",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV.28 Haukke Manor",
-        "Guid":  "964f1a0a-5b2a-4473-b41b-a170bc823f67",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.28%20Haukke%20Manor.cs",
         "Note":  "",
+        "TerritoryIds":  1040,
+        "Version":  "0.0.0.4",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "964f1a0a-5b2a-4473-b41b-a170bc823f67",
+        "Author":  "Linoa235",
+        "Name":  "LV.28 Haukke Manor",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV.30 Annoy the Void",
-        "Guid":  "9106a502-2bcb-41ac-8598-6c76bd1061ae",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.30%20Annoy%20the%20Void.cs",
         "Note":  "",
+        "TerritoryIds":  222,
+        "Version":  "0.0.0.3",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "9106a502-2bcb-41ac-8598-6c76bd1061ae",
+        "Author":  "Linoa235",
+        "Name":  "LV.30 Annoy the Void",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV.30 More than a Feeler",
-        "Guid":  "3113eeb5-96d8-48a8-9069-e1e3e5232ee1",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.30%20More%20than%20a%20Feeler.cs",
         "Note":  "",
+        "TerritoryIds":  221,
+        "Version":  "0.0.0.3",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "3113eeb5-96d8-48a8-9069-e1e3e5232ee1",
+        "Author":  "Linoa235",
+        "Name":  "LV.30 More than a Feeler",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV.35 Long Live the Queen",
-        "Guid":  "2279725d-b2c4-4624-b7c6-3ae514c19fa5",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.35%20Long%20Live%20the%20Queen.cs",
         "Note":  "",
+        "TerritoryIds":  298,
+        "Version":  "0.0.0.3",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "2279725d-b2c4-4624-b7c6-3ae514c19fa5",
+        "Author":  "Linoa235",
+        "Name":  "LV.35 Long Live the Queen",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV.35 Shadow and Claw",
-        "Guid":  "70cf9a76-fc90-4f2b-9471-504472fb1b1e",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.35%20Shadow%20and%20Claw.cs",
         "Note":  "",
+        "TerritoryIds":  223,
+        "Version":  "0.0.0.4",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "70cf9a76-fc90-4f2b-9471-504472fb1b1e",
+        "Author":  "Linoa235",
+        "Name":  "LV.35 Shadow and Claw",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV.40 Solemn Trinity",
-        "Guid":  "32e7ed24-f55c-48b0-8a40-3fa7442dd6df",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.40%20Solemn%20Trinity.cs",
         "Note":  "",
+        "TerritoryIds":  300,
+        "Version":  "0.0.0.3",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "32e7ed24-f55c-48b0-8a40-3fa7442dd6df",
+        "Author":  "Linoa235",
+        "Name":  "LV.40 Solemn Trinity",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV.40 Ward Up",
-        "Guid":  "35d901f8-4861-4d5b-b279-59affb7a740f",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.40%20Ward%20Up.cs",
         "Note":  "",
+        "TerritoryIds":  299,
+        "Version":  "0.0.0.4",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "35d901f8-4861-4d5b-b279-59affb7a740f",
+        "Author":  "Linoa235",
+        "Name":  "LV.40 Ward Up",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV.50 Snowcloak",
-        "Guid":  "e64621a3-5ff4-40e2-9070-88e69191a1c0",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.50%20Snowcloak.cs",
         "Note":  "",
+        "TerritoryIds":  1062,
+        "Version":  "0.0.0.1",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "e64621a3-5ff4-40e2-9070-88e69191a1c0",
+        "Author":  "Linoa235",
+        "Name":  "---- Mobs ----",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV.60 Aetherochemical Research Facility",
-        "Guid":  "dd08165c-b709-4100-a96e-65f2c7ae4f3b",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.60%20Aetherochemical%20Research%20Facility.cs",
         "Note":  "",
+        "TerritoryIds":  1110,
+        "Version":  "0.0.0.7",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "dd08165c-b709-4100-a96e-65f2c7ae4f3b",
+        "Author":  "Linoa235",
+        "Name":  "LV.60 Aetherochemical Research Facility",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV.60 Alexander - The Breath of the Creator",
-        "Guid":  "c9446d8e-118d-ec98-fcbc-732213b0a265",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.60%20Alexander%20-%20The%20Breath%20of%20the%20Creator.cs",
         "Note":  "",
+        "TerritoryIds":  582,
+        "Version":  "0.0.0.4",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "c9446d8e-118d-ec98-fcbc-732213b0a265",
+        "Author":  "Linoa235",
+        "Name":  "LV.60 Alexander - The Breath of the Creator",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV.60 Alexander - The Burden of the Father",
-        "Guid":  "c77e794f-f3bc-37fc-810b-bb153ba399c1",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.60%20Alexander%20-%20The%20Burden%20of%20the%20Father.cs",
         "Note":  "",
+        "TerritoryIds":  583,
+        "Version":  "0.0.0.4",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "c77e794f-f3bc-37fc-810b-bb153ba399c1",
+        "Author":  "Linoa235",
+        "Name":  "LV.60 Alexander - The Burden of the Father",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV.60 Alexander - The Eyes of the Creator",
-        "Guid":  "7cb80e0d-e693-6ca9-c46e-c96b0ec5d109",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.60%20Alexander%20-%20The%20Eyes%20of%20the%20Creator.cs",
         "Note":  "",
+        "TerritoryIds":  580,
+        "Version":  "0.0.0.3",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "7cb80e0d-e693-6ca9-c46e-c96b0ec5d109",
+        "Author":  "Linoa235",
+        "Name":  "LV.60 Alexander - The Eyes of the Creator",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV.60 The Great Gubal Library (Hard)",
-        "Guid":  "d376d381-8bd0-4a3b-9a87-d3e06e5afab8",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.60%20The%20Great%20Gubal%20Library%20(Hard).cs",
         "Note":  "",
+        "TerritoryIds":  578,
+        "Version":  "0.0.0.1",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "d376d381-8bd0-4a3b-9a87-d3e06e5afab8",
+        "Author":  "Linoa235",
+        "Name":  "---- Mobs ----",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV.73 Dohn Mheg",
-        "Guid":  "d8fbc4be-b2c3-43a5-93f7-2901b40d0921",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.73%20Dohn%20Mheg.cs",
         "Note":  "",
+        "TerritoryIds":  821,
+        "Version":  "0.0.0.7",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "d8fbc4be-b2c3-43a5-93f7-2901b40d0921",
+        "Author":  "Linoa235",
+        "Name":  "LV.73 Dohn Mheg",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV.75 The Qitana Ravel",
-        "Guid":  "50c922c1-1ecd-4750-8b55-24f19793408f",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.75%20The%20Qitana%20Ravel.cs",
         "Note":  "",
+        "TerritoryIds":  823,
+        "Version":  "0.0.0.2",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "50c922c1-1ecd-4750-8b55-24f19793408f",
+        "Author":  "Linoa235",
+        "Name":  "LV.75 The Qitana Ravel",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV.77 [Malikahs Well]",
-        "Guid":  "50c922c1-1ecd-4750-8b55-24f19793408f",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.77%20%5BMalikahs%20Well%5D.cs",
         "Note":  "",
+        "TerritoryIds":  823,
+        "Version":  "0.0.0.2",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "50c922c1-1ecd-4750-8b55-24f19793408f",
+        "Author":  "Linoa235",
+        "Name":  "LV.75 The Qitana Ravel",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV.80 Eden\u0027s Verse Iconoclasm",
-        "Guid":  "7732767d-bfb3-4c96-9719-962ba10cec08",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.80%20Eden\u0027s%20Verse%20Iconoclasm.cs",
         "Note":  "",
+        "TerritoryIds":  904,
+        "Version":  "0.0.0.1",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "7732767d-bfb3-4c96-9719-962ba10cec08",
+        "Author":  "Linoa235",
+        "Name":  "LV.80 Eden\u0027s Verse: Iconoclasm",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV.80 The Grand Cosmos",
-        "Guid":  "b3a2febd-73ff-44a9-a897-22fa50c74ff3",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.80%20The%20Grand%20Cosmos.cs",
         "Note":  "",
+        "TerritoryIds":  884,
+        "Version":  "0.0.0.3",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "b3a2febd-73ff-44a9-a897-22fa50c74ff3",
+        "Author":  "Linoa235",
+        "Name":  "LV.80 The Grand Cosmos",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV.80 The Seat of Sacrifice",
-        "Guid":  "4359482a-b7a8-4eb1-9a42-ffa3c79d6b7b",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.80%20The%20Seat%20of%20Sacrifice.cs",
         "Note":  "",
+        "TerritoryIds":  144,
+        "Version":  "0.0.0.3",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "4359482a-b7a8-4eb1-9a42-ffa3c79d6b7b",
+        "Author":  "Linoa235",
+        "Name":  "Gold Saucer - Cliffhanger",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV.81 The Tower of Zot",
-        "Guid":  "98a97134-f87b-4386-aad9-2a99e81794ab",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.81%20The%20Tower%20of%20Zot.cs",
         "Note":  "",
+        "TerritoryIds":  952,
+        "Version":  "0.0.0.4",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "98a97134-f87b-4386-aad9-2a99e81794ab",
+        "Author":  "Linoa235",
+        "Name":  "LV.81 The Tower of Zot",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV.90 The Dead Ends",
-        "Guid":  "850c08df-adad-43f7-8a2a-f8da31df4e84",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.90%20The%20Dead%20Ends.cs",
         "Note":  "",
+        "TerritoryIds":  973,
+        "Version":  "0.0.0.1",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "850c08df-adad-43f7-8a2a-f8da31df4e84",
+        "Author":  "Linoa235",
+        "Name":  "---- Mobs ----",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV.90 The Final Day",
-        "Guid":  "eee45586-c0cc-4f43-9af1-6f0f4427cbf7",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.90%20The%20Final%20Day.cs",
         "Note":  "",
+        "TerritoryIds":  997,
+        "Version":  "0.0.0.1",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "eee45586-c0cc-4f43-9af1-6f0f4427cbf7",
+        "Author":  "Linoa235",
+        "Name":  "Elegeia",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV.90 The Minstrel\u0027s Ballad Endsinger\u0027s Aria (Unrestricted)",
-        "Guid":  "100df6f8-d8ce-44f7-9fb0-431eca0f2825",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.90%20The%20Minstrel\u0027s%20Ballad%20Endsinger\u0027s%20Aria%20(Unrestricted).cs",
         "Note":  "",
+        "TerritoryIds":  998,
+        "Version":  "0.0.0.6",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "100df6f8-d8ce-44f7-9fb0-431eca0f2825",
+        "Author":  "Linoa235",
+        "Name":  "LV.90 The Minstrel\u0027s Ballad: Endsinger\u0027s Aria (Unrestricted)",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV.90 The\u0027Dead Ends",
-        "Guid":  "850c08df-adad-43f7-8a2a-f8da31df4e84",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.90%20The\u0027Dead%20Ends.cs",
         "Note":  "",
+        "TerritoryIds":  973,
+        "Version":  "0.0.0.1",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "850c08df-adad-43f7-8a2a-f8da31df4e84",
+        "Author":  "Linoa235",
+        "Name":  "---- Mobs ----",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV.99 Everkeep",
-        "Guid":  "7a6d317c-b176-4e94-9fbc-3bc833be1338",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.99%20Everkeep.cs",
         "Note":  "",
+        "TerritoryIds":  1200,
+        "Version":  "0.0.0.9",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "7a6d317c-b176-4e94-9fbc-3bc833be1338",
+        "Author":  "Linoa235",
+        "Name":  "LV.99 Everkeep",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV100 7.4 Mistwake",
-        "Guid":  "5ecdb3de-a67c-46c1-bac3-20dc015363b6",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV100%207.4%20Mistwake.cs",
         "Note":  "",
+        "TerritoryIds":  1314,
+        "Version":  "0.0.0.2",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "5ecdb3de-a67c-46c1-bac3-20dc015363b6",
+        "Author":  "Linoa235",
+        "Name":  "LV100 7.4 Mistwake",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV100 7.5 Windurst The Third Walk ",
-        "Guid":  "fa374b84-5ce5-405c-a22d-3e7ea1c9591b",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV100%207.5%20Windurst%20The%20Third%20Walk%20.cs",
         "Note":  "",
+        "TerritoryIds":  1368,
+        "Version":  "0.0.0.4",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "fa374b84-5ce5-405c-a22d-3e7ea1c9591b",
+        "Author":  "Linoa235",
+        "Name":  "LV100 7.5 Windurst: The Third Walk",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV100 7.5 Windurst The Third Walk",
-        "Guid":  "fa374b84-5ce5-405c-a22d-3e7ea1c9591b",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV100%207.5%20Windurst%20The%20Third%20Walk.cs",
         "Note":  "",
+        "TerritoryIds":  1368,
+        "Version":  "0.0.0.4",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "fa374b84-5ce5-405c-a22d-3e7ea1c9591b",
+        "Author":  "Linoa235",
+        "Name":  "LV100 7.5 Windurst: The Third Walk",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV100 Mica the Magical Mu Dressed-Up Parade, All Rejoice",
-        "Guid":  "22134617-0ca4-463e-a40d-675ef1c20cf2",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV100%20Mica%20the%20Magical%20Mu%20Dressed-Up%20Parade%2C%20All%20Rejoice.cs",
         "Note":  "",
+        "TerritoryIds":  1192,
+        "Version":  "0.0.0.3",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "22134617-0ca4-463e-a40d-675ef1c20cf2",
+        "Author":  "Linoa235",
+        "Name":  "Mica the Magical Mu: Dressed-Up Parade, All Rejoice",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV100 Omicron Recall Destroy the Omicron Weapon Chi",
-        "Guid":  "b73d07ef-aa90-45a9-ab4b-fc3ccce8791b",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV100%20Omicron%20Recall%20Destroy%20the%20Omicron%20Weapon%20Chi.cs",
         "Note":  "",
+        "TerritoryIds":  960,
+        "Version":  "0.0.0.3",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "b73d07ef-aa90-45a9-ab4b-fc3ccce8791b",
+        "Author":  "Linoa235",
+        "Name":  "Omicron Recall: Destroy the Omicron Weapon Chi",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV100 San d\u0027Oria The Second Walk",
-        "Guid":  "26a812eb-b8e2-4f31-8568-affe775bd4c6",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV100%20San%20d\u0027Oria%20The%20Second%20Walk.cs",
         "Note":  "",
+        "TerritoryIds":  1304,
+        "Version":  "0.0.0.1",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "26a812eb-b8e2-4f31-8568-affe775bd4c6",
+        "Author":  "Linoa235",
+        "Name":  "---- Mobs ----",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV100 The Meso Terminal",
-        "Guid":  "c74e8153-46e1-4a18-97bd-250463781ed2",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV100%20The%20Meso%20Terminal.cs",
         "Note":  "",
+        "TerritoryIds":  1292,
+        "Version":  "0.0.0.1",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "c74e8153-46e1-4a18-97bd-250463781ed2",
+        "Author":  "Linoa235",
+        "Name":  "---- Mobs ----",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV100 The Serpentlord Seethes Duel in the Wilds",
-        "Guid":  "ab67129e-880f-48e8-852e-f92b4afa68e5",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV100%20The%20Serpentlord%20Seethes%20Duel%20in%20the%20Wilds.cs",
         "Note":  "",
+        "TerritoryIds":  1190,
+        "Version":  "0.0.0.4",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "ab67129e-880f-48e8-852e-f92b4afa68e5",
+        "Author":  "Linoa235",
+        "Name":  "The Serpentlord Seethes: Duel in the Wilds",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV50 A Relic Reborn the Hydra",
-        "Guid":  "d32d7489-a1bb-4117-98dd-ee895390804d",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV50%20A%20Relic%20Reborn%20the%20Hydra.cs",
         "Note":  "",
+        "TerritoryIds":  369,
+        "Version":  "0.0.0.3",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "d32d7489-a1bb-4117-98dd-ee895390804d",
+        "Author":  "Linoa235",
+        "Name":  "A Relic Reborn: the Hydra",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV50 Battle in the Big Keep",
-        "Guid":  "90783a42-7947-4392-9c3e-f3162d52c248",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV50%20Battle%20in%20the%20Big%20Keep.cs",
         "Note":  "",
+        "TerritoryIds":  396,
+        "Version":  "0.0.0.3",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "90783a42-7947-4392-9c3e-f3162d52c248",
+        "Author":  "Linoa235",
+        "Name":  "Battle in the Big Keep",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV50 Battle on the Big Bridge",
-        "Guid":  "3e4102cb-9410-44fd-85e8-d43a3bc25737",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV50%20Battle%20on%20the%20Big%20Bridge.cs",
         "Note":  "",
+        "TerritoryIds":  366,
+        "Version":  "0.0.0.4",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "3e4102cb-9410-44fd-85e8-d43a3bc25737",
+        "Author":  "Linoa235",
+        "Name":  "Battle on the Big Bridge",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV50 Dhorme Chimera",
-        "Guid":  "e24bb311-704f-4f4c-8188-87eaa8da8b29",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV50%20Dhorme%20Chimera.cs",
         "Note":  "",
+        "TerritoryIds":  368,
+        "Version":  "0.0.0.5",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "e24bb311-704f-4f4c-8188-87eaa8da8b29",
+        "Author":  "Linoa235",
+        "Name":  "Dhorme Chimera",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV50 Garuda (Hard)",
-        "Guid":  "ef230d41-5fbf-413d-b745-7227efebec48",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV50%20Garuda%20(Hard).cs",
         "Note":  "",
+        "TerritoryIds":  294,
+        "Version":  "0.0.0.2",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "ef230d41-5fbf-413d-b745-7227efebec48",
+        "Author":  "Linoa235",
+        "Name":  "Garuda (Hard)",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV50 Leviathan Extreme",
-        "Guid":  "07f20e0e-9463-4a10-9dd1-956fde6a9c46",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV50%20Leviathan%20Extreme.cs",
         "Note":  "",
+        "TerritoryIds":  359,
+        "Version":  "0.0.0.4",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "07f20e0e-9463-4a10-9dd1-956fde6a9c46",
+        "Author":  "Linoa235",
+        "Name":  "Leviathan Extreme",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV50 Main Scenario Roulette",
-        "Guid":  "84c15eea-2a19-4477-ad21-cd43d1263cfa",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV50%20Main%20Scenario%20Roulette.cs",
         "Note":  "",
-        "UpdateInfo":  "",
         "TerritoryIds":  [
-
-                         ]
+                             1043,
+                             1044,
+                             1048
+                         ],
+        "Version":  "0.0.0.3",
+        "UpdateInfo":  "",
+        "Guid":  "84c15eea-2a19-4477-ad21-cd43d1263cfa",
+        "Author":  "Linoa235",
+        "Name":  "Main Scenario Roulette",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV50 Nabriales",
-        "Guid":  "64206b9e-cd0a-47ec-960d-15f39a888f9e",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV50%20Nabriales.cs",
         "Note":  "",
+        "TerritoryIds":  426,
+        "Version":  "0.0.0.4",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "64206b9e-cd0a-47ec-960d-15f39a888f9e",
+        "Author":  "Linoa235",
+        "Name":  "Nabriales",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV50 Shiva",
-        "Guid":  "cddb93a8-e01e-40fe-989c-5153ad62bfbc",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV50%20Shiva.cs",
         "Note":  "",
+        "TerritoryIds":  377,
+        "Version":  "0.0.0.3",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "cddb93a8-e01e-40fe-989c-5153ad62bfbc",
+        "Author":  "Linoa235",
+        "Name":  "Shiva",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV50 The Bowl of Embers (Hard)",
-        "Guid":  "d3d532f1-0707-427f-ac04-871a22022c11",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV50%20The%20Bowl%20of%20Embers%20(Hard).cs",
         "Note":  "",
-        "UpdateInfo":  "",
         "TerritoryIds":  [
-
-                         ]
+                             292,
+                             1045
+                         ],
+        "Version":  "0.0.0.4",
+        "UpdateInfo":  "",
+        "Guid":  "d3d532f1-0707-427f-ac04-871a22022c11",
+        "Author":  "Linoa235",
+        "Name":  "The Bowl of Embers (Hard)",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV50 The Bowl of Embers Hard",
-        "Guid":  "d3d532f1-0707-427f-ac04-871a22022c11",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV50%20The%20Bowl%20of%20Embers%20Hard.cs",
         "Note":  "",
-        "UpdateInfo":  "",
         "TerritoryIds":  [
-
-                         ]
+                             292,
+                             1045
+                         ],
+        "Version":  "0.0.0.4",
+        "UpdateInfo":  "",
+        "Guid":  "d3d532f1-0707-427f-ac04-871a22022c11",
+        "Author":  "Linoa235",
+        "Name":  "The Bowl of Embers (Hard)",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV50 The Striking Tree (Hard)",
-        "Guid":  "de6d6f10-775d-4c45-91ec-2bd4ed6762c7",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV50%20The%20Striking%20Tree%20(Hard).cs",
         "Note":  "",
+        "TerritoryIds":  374,
+        "Version":  "0.0.0.3",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "de6d6f10-775d-4c45-91ec-2bd4ed6762c7",
+        "Author":  "Linoa235",
+        "Name":  "The Striking Tree (Hard)",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV50 Thornmarch (Hard)",
-        "Guid":  "cd81e178-12e6-4e53-9b81-63002cc51ecb",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV50%20Thornmarch%20(Hard).cs",
         "Note":  "",
+        "TerritoryIds":  1067,
+        "Version":  "0.0.0.3",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "cd81e178-12e6-4e53-9b81-63002cc51ecb",
+        "Author":  "Linoa235",
+        "Name":  "Thornmarch (Hard) (Fun Edition)",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV50 Thornmarch Extreme",
-        "Guid":  "fc6a6125-4a1d-4669-be4c-9b375dc70ae0",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV50%20Thornmarch%20Extreme.cs",
         "Note":  "",
+        "TerritoryIds":  364,
+        "Version":  "0.0.0.4",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "fc6a6125-4a1d-4669-be4c-9b375dc70ae0",
+        "Author":  "Linoa235",
+        "Name":  "Thornmarch Extreme",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV50 Urth\u0027s Fount",
-        "Guid":  "1a07440d-a7bd-4b67-b781-90d14087ee60",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV50%20Urth\u0027s%20Fount.cs",
         "Note":  "",
+        "TerritoryIds":  394,
+        "Version":  "0.0.0.3",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "1a07440d-a7bd-4b67-b781-90d14087ee60",
+        "Author":  "Linoa235",
+        "Name":  "Urth\u0027s Fount",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV55 The Aery",
-        "Guid":  "ac6caf4e-5eee-406c-8621-a5f3c5c7e9b0",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV55%20The%20Aery.cs",
         "Note":  "",
+        "TerritoryIds":  1065,
+        "Version":  "0.0.0.3",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "ac6caf4e-5eee-406c-8621-a5f3c5c7e9b0",
+        "Author":  "Linoa235",
+        "Name":  "LV55 The Aery",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV60 Alexander - The Arm of the Son (Quickthinx Allthoughts)",
-        "Guid":  "48d652cd-16c4-413f-a08c-49a308ccb98f",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV60%20Alexander%20-%20The%20Arm%20of%20the%20Son%20(Quickthinx%20Allthoughts).cs",
         "Note":  "",
+        "TerritoryIds":  522,
+        "Version":  "0.0.0.1",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "48d652cd-16c4-413f-a08c-49a308ccb98f",
+        "Author":  "Linoa235",
+        "Name":  "A7N",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV60 Alexander - The Cuff of the Son (Living Liquid)",
-        "Guid":  "69712d1f-26c4-441f-97f0-e63f8baf98a6",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV60%20Alexander%20-%20The%20Cuff%20of%20the%20Son%20(Living%20Liquid).cs",
         "Note":  "",
+        "TerritoryIds":  444,
+        "Version":  "0.0.0.3",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "69712d1f-26c4-441f-97f0-e63f8baf98a6",
+        "Author":  "Linoa235",
+        "Name":  "A3N",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV60 Alexander - The Fist of the Son (Ratfinx Twinkledinks)",
-        "Guid":  "1462516c-2bc2-4560-8244-387845cc098d",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV60%20Alexander%20-%20The%20Fist%20of%20the%20Son%20(Ratfinx%20Twinkledinks).cs",
         "Note":  "",
+        "TerritoryIds":  520,
+        "Version":  "0.0.0.2",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "1462516c-2bc2-4560-8244-387845cc098d",
+        "Author":  "Linoa235",
+        "Name":  "A5N",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV60 Bismarck Extreme",
-        "Guid":  "56751be8-113f-4496-8b46-982ff96d90c3",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV60%20Bismarck%20Extreme.cs",
         "Note":  "",
+        "TerritoryIds":  447,
+        "Version":  "0.0.0.2",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "56751be8-113f-4496-8b46-982ff96d90c3",
+        "Author":  "Linoa235",
+        "Name":  "Bismarck Extreme",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV60 Saint Mocianne\u0027s Arboretum",
-        "Guid":  "3491ef10-6190-45e6-a3a7-b98fadc11948",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV60%20Saint%20Mocianne\u0027s%20Arboretum.cs",
         "Note":  "",
+        "TerritoryIds":  511,
+        "Version":  "0.0.0.1",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "3491ef10-6190-45e6-a3a7-b98fadc11948",
+        "Author":  "Linoa235",
+        "Name":  "Saint Mocianne\u0027s Arboretum",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV60 Sephirot",
-        "Guid":  "6d0824b3-6d67-4450-8b4e-46857257579e",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV60%20Sephirot.cs",
         "Note":  "",
+        "TerritoryIds":  517,
+        "Version":  "0.0.0.2",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "6d0824b3-6d67-4450-8b4e-46857257579e",
+        "Author":  "Linoa235",
+        "Name":  "Sephirot",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV60 The Minstrel\u0027s Ballad Nidhogg\u0027s Rage",
-        "Guid":  "dcfdb19e-0357-4214-b64e-205100f55822",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV60%20The%20Minstrel\u0027s%20Ballad%20Nidhogg\u0027s%20Rage.cs",
         "Note":  "",
+        "TerritoryIds":  559,
+        "Version":  "0.0.0.3",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "dcfdb19e-0357-4214-b64e-205100f55822",
+        "Author":  "Linoa235",
+        "Name":  "LV60 The Minstrel\u0027s Ballad: Nidhogg\u0027s Rage",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV60 Zurvan",
-        "Guid":  "214f8fbd-ad04-430f-8bba-fd7319581780",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV60%20Zurvan.cs",
         "Note":  "",
+        "TerritoryIds":  637,
+        "Version":  "0.0.0.5",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "214f8fbd-ad04-430f-8bba-fd7319581780",
+        "Author":  "Linoa235",
+        "Name":  "Zurvan",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV63 Susano ",
-        "Guid":  "2c4b6205-6a77-4c89-b641-2c2359a43f25",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV63%20Susano%20.cs",
         "Note":  "",
+        "TerritoryIds":  674,
+        "Version":  "0.0.0.3",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "2c4b6205-6a77-4c89-b641-2c2359a43f25",
+        "Author":  "Linoa235",
+        "Name":  "Susano",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV70 Ala Mhigo",
-        "Guid":  "aa0ae191-da3f-48f1-9340-46a56cfeeabf",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV70%20Ala%20Mhigo.cs",
         "Note":  "",
+        "TerritoryIds":  1146,
+        "Version":  "0.0.0.2",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "aa0ae191-da3f-48f1-9340-46a56cfeeabf",
+        "Author":  "Linoa235",
+        "Name":  "Ala Mhigo",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV70 Emanation",
-        "Guid":  "a7bacd3e-834f-41ba-a210-c66e2c12d208",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV70%20Emanation.cs",
         "Note":  "",
+        "TerritoryIds":  719,
+        "Version":  "0.0.0.4",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "a7bacd3e-834f-41ba-a210-c66e2c12d208",
+        "Author":  "Linoa235",
+        "Name":  "Emanation",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV70 Omega Alphascape (Omega)",
-        "Guid":  "2232ae84-c1e7-4382-88b4-d691887f27cf",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV70%20Omega%20Alphascape%20(Omega).cs",
         "Note":  "",
+        "TerritoryIds":  800,
+        "Version":  "0.0.0.4",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "2232ae84-c1e7-4382-88b4-d691887f27cf",
+        "Author":  "Linoa235",
+        "Name":  "O11N",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV70 Omega Deltascape (Exdeath)",
-        "Guid":  "f24f9cef-717e-4a2a-9616-d470443d6d8a",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV70%20Omega%20Deltascape%20(Exdeath).cs",
         "Note":  "",
+        "TerritoryIds":  694,
+        "Version":  "0.0.0.2",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "f24f9cef-717e-4a2a-9616-d470443d6d8a",
+        "Author":  "Linoa235",
+        "Name":  "O4N",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV70 Omega Sigmascape (Phantom Train)",
-        "Guid":  "af11ce46-2c6a-46ba-b2bc-c542e5f5b7b5",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV70%20Omega%20Sigmascape%20(Phantom%20Train).cs",
         "Note":  "",
+        "TerritoryIds":  748,
+        "Version":  "0.0.0.2",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "af11ce46-2c6a-46ba-b2bc-c542e5f5b7b5",
+        "Author":  "Linoa235",
+        "Name":  "O5N",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV70 Saint Mocianne\u0027s Arboretum (Hard) ",
-        "Guid":  "7e87b5d1-ae21-4115-9483-d8dc0f1d1652",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV70%20Saint%20Mocianne\u0027s%20Arboretum%20(Hard)%20.cs",
         "Note":  "",
+        "TerritoryIds":  788,
+        "Version":  "0.0.0.4",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "7e87b5d1-ae21-4115-9483-d8dc0f1d1652",
+        "Author":  "Linoa235",
+        "Name":  "Saint Mocianne\u0027s Arboretum (Hard)",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV70 Tsukuyomi",
-        "Guid":  "97415dc8-cd16-4c9b-87be-026a297c3451",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV70%20Tsukuyomi.cs",
         "Note":  "",
+        "TerritoryIds":  778,
+        "Version":  "0.0.0.2",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "97415dc8-cd16-4c9b-87be-026a297c3451",
+        "Author":  "Linoa235",
+        "Name":  "Tsukuyomi",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV80 A Finale Most Formidable The Secret Weapon",
-        "Guid":  "5f55a121-1fcc-48ce-a0e8-b6fbd4ce8489",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV80%20A%20Finale%20Most%20Formidable%20The%20Secret%20Weapon.cs",
         "Note":  "",
+        "TerritoryIds":  814,
+        "Version":  "0.0.0.4",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "5f55a121-1fcc-48ce-a0e8-b6fbd4ce8489",
+        "Author":  "Linoa235",
+        "Name":  "A Finale Most Formidable: The Secret Weapon",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV80 Archaeotania The Head, the Tail, the Whole Damned Thing",
-        "Guid":  "f11c3069-d163-41dd-904e-b016cfcf089c",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV80%20Archaeotania%20The%20Head%2C%20the%20Tail%2C%20the%20Whole%20Damned%20Thing.cs",
         "Note":  "",
+        "TerritoryIds":  818,
+        "Version":  "0.0.0.5",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "f11c3069-d163-41dd-904e-b016cfcf089c",
+        "Author":  "Linoa235",
+        "Name":  "Archaeotania: The Head, the Tail, the Whole Damned Thing",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV80 Eden\u0027s Gate Descent (Voidwalker)",
-        "Guid":  "b59c7db9-1fba-4476-8701-1e3043cb7dc8",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV80%20Eden\u0027s%20Gate%20Descent%20(Voidwalker).cs",
         "Note":  "",
+        "TerritoryIds":  850,
+        "Version":  "0.0.0.2",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "b59c7db9-1fba-4476-8701-1e3043cb7dc8",
+        "Author":  "Linoa235",
+        "Name":  "E2N",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV80 Eden\u0027s Gate Resurrection (Eden Prime)",
-        "Guid":  "35c751e5-2958-4f55-b783-405b4acfde1b",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV80%20Eden\u0027s%20Gate%20Resurrection%20(Eden%20Prime).cs",
         "Note":  "",
+        "TerritoryIds":  849,
+        "Version":  "0.0.0.3",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "35c751e5-2958-4f55-b783-405b4acfde1b",
+        "Author":  "Linoa235",
+        "Name":  "E1N",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV80 Eden\u0027s Promise Eternity",
-        "Guid":  "3f88ad9c-e7a7-4e00-b19e-546609b319ba",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV80%20Eden\u0027s%20Promise%20Eternity.cs",
         "Note":  "",
+        "TerritoryIds":  945,
+        "Version":  "0.0.0.3",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "3f88ad9c-e7a7-4e00-b19e-546609b319ba",
+        "Author":  "Linoa235",
+        "Name":  "E12N",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV80 Eden\u0027s Promise Litany (Shadowkeeper)",
-        "Guid":  "038e00e8-d378-4f43-89ab-e27df5561d5a",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV80%20Eden\u0027s%20Promise%20Litany%20(Shadowkeeper).cs",
         "Note":  "",
+        "TerritoryIds":  943,
+        "Version":  "0.0.0.3",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "038e00e8-d378-4f43-89ab-e27df5561d5a",
+        "Author":  "Linoa235",
+        "Name":  "E10N",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV80 Eden\u0027s Promise Umbra (Conceived Cloud of Darkness)",
-        "Guid":  "e4b80c15-7885-46b7-8e3d-201a6a248c89",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV80%20Eden\u0027s%20Promise%20Umbra%20(Conceived%20Cloud%20of%20Darkness).cs",
         "Note":  "",
+        "TerritoryIds":  942,
+        "Version":  "0.0.0.2",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "e4b80c15-7885-46b7-8e3d-201a6a248c89",
+        "Author":  "Linoa235",
+        "Name":  "E9N",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV80 Eden\u0027s Verse Refulgence (Conceived Shiva)",
-        "Guid":  "c4d533c8-8798-441d-b849-fc3cd5cf63d9",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV80%20Eden\u0027s%20Verse%20Refulgence%20(Conceived%20Shiva).cs",
         "Note":  "",
+        "TerritoryIds":  905,
+        "Version":  "0.0.0.4",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "c4d533c8-8798-441d-b849-fc3cd5cf63d9",
+        "Author":  "Linoa235",
+        "Name":  "E8N",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV80 The Twinning",
-        "Guid":  "bfb00cd3-ccec-4b21-b3d7-e290f49e6a75",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV80%20The%20Twinning.cs",
         "Note":  "",
+        "TerritoryIds":  840,
+        "Version":  "0.0.0.3",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "bfb00cd3-ccec-4b21-b3d7-e290f49e6a75",
+        "Author":  "Linoa235",
+        "Name":  "The Twinning",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "Lv87 [Ktisis Hyperboreia]",
-        "Guid":  "bfb00cd3-ccec-4b21-b3d7-e290f49e6a75",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Lv87%20%5BKtisis%20Hyperboreia%5D.cs",
         "Note":  "",
+        "TerritoryIds":  840,
+        "Version":  "0.0.0.3",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "bfb00cd3-ccec-4b21-b3d7-e290f49e6a75",
+        "Author":  "Linoa235",
+        "Name":  "The Twinning",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV90 Beast Path Deity Worship False God Descends",
-        "Guid":  "da82aeb0-9635-4f13-a1c1-39a0c859f596",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV90%20Beast%20Path%20Deity%20Worship%20False%20God%20Descends.cs",
         "Note":  "",
+        "TerritoryIds":  957,
+        "Version":  "0.0.0.5",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "da82aeb0-9635-4f13-a1c1-39a0c859f596",
+        "Author":  "Linoa235",
+        "Name":  "Beast Path Deity Worship: False God Descends",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV90 Pandæmonium Asphodelos (Pandaemonium)",
-        "Guid":  "f28cc2f2-6ce2-4526-a303-56fe1c02dea8",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV90%20Pand%C3%A6monium%20Asphodelos%20(Pandaemonium).cs",
         "Note":  "",
+        "TerritoryIds":  1149,
+        "Version":  "0.0.0.3",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "f28cc2f2-6ce2-4526-a303-56fe1c02dea8",
+        "Author":  "Linoa235",
+        "Name":  "P10N",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV90 Pandæmonium Asphodelos (Themis)",
-        "Guid":  "07be068a-65ea-4fd9-a324-9ec5326bb04b",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV90%20Pand%C3%A6monium%20Asphodelos%20(Themis).cs",
         "Note":  "",
+        "TerritoryIds":  1151,
+        "Version":  "0.0.0.2",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "07be068a-65ea-4fd9-a324-9ec5326bb04b",
+        "Author":  "Linoa235",
+        "Name":  "P11N",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV90 Pandæmonium Asphodelos",
-        "Guid":  "f28cc2f2-6ce2-4526-a303-56fe1c02dea8",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV90%20Pand%C3%A6monium%20Asphodelos.cs",
         "Note":  "",
+        "TerritoryIds":  1149,
+        "Version":  "0.0.0.3",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "f28cc2f2-6ce2-4526-a303-56fe1c02dea8",
+        "Author":  "Linoa235",
+        "Name":  "P10N",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "LV90 Pandæmonium Asphodelos1",
-        "Guid":  "07be068a-65ea-4fd9-a324-9ec5326bb04b",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV90%20Pand%C3%A6monium%20Asphodelos1.cs",
         "Note":  "",
+        "TerritoryIds":  1151,
+        "Version":  "0.0.0.2",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "07be068a-65ea-4fd9-a324-9ec5326bb04b",
+        "Author":  "Linoa235",
+        "Name":  "P11N",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "M10N",
-        "Guid":  "DC98AE77-83FB-4B76-ACA7-45BBCF05DEFE",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/M10N.cs",
         "Note":  "",
-        "UpdateInfo":  "",
         "TerritoryIds":  [
 
-                         ]
+                         ],
+        "Version":  "0.0.0.2",
+        "UpdateInfo":  "",
+        "Guid":  "DC98AE77-83FB-4B76-ACA7-45BBCF05DEFE",
+        "Author":  "Linoa235",
+        "Name":  "M10N",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "M10S Blue Line Guidance",
-        "Guid":  "C328CC14-B074-4196-BA4C-161020987536",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/M10S%20Blue%20Line%20Guidance.cs",
         "Note":  "",
-        "UpdateInfo":  "",
         "TerritoryIds":  [
 
-                         ]
+                         ],
+        "Version":  "0.0.0.2",
+        "UpdateInfo":  "",
+        "Guid":  "C328CC14-B074-4196-BA4C-161020987536",
+        "Author":  "Linoa235",
+        "Name":  "M10S Blue Line Guidance",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "M11N",
-        "Guid":  "B0058EC8-4429-4BB7-B223-68DE8B115D04",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/M11N.cs",
         "Note":  "",
-        "UpdateInfo":  "",
         "TerritoryIds":  [
 
-                         ]
+                         ],
+        "Version":  "0.0.0.1",
+        "UpdateInfo":  "",
+        "Guid":  "B0058EC8-4429-4BB7-B223-68DE8B115D04",
+        "Author":  "Linoa235",
+        "Name":  "M11N",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "M12S Phase 4 Rough Drawing",
-        "Guid":  "C83916CE-5BBD-9326-4F44-47FD7CD930B8",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/M12S%20Phase%204%20Rough%20Drawing.cs",
         "Note":  "",
+        "TerritoryIds":  1327,
+        "Version":  "0.0.0.1",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "C83916CE-5BBD-9326-4F44-47FD7CD930B8",
+        "Author":  "Linoa235",
+        "Name":  "M12S Phase 4 Rough Drawing",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "M1n",
-        "Guid":  "28EEE8DC-DA6A-3F91-0D0C-7AA1BFB49AB0",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/M1n.cs",
         "Note":  "",
+        "TerritoryIds":  1225,
+        "Version":  "0.0.0.4",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "28EEE8DC-DA6A-3F91-0D0C-7AA1BFB49AB0",
+        "Author":  "Linoa235",
+        "Name":  "M1n",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "M1s Drawing",
-        "Guid":  "8010d865-7d6d-4c23-92e0-f4b0120e18ac",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/M1s%20Drawing.cs",
         "Note":  "",
+        "TerritoryIds":  1226,
+        "Version":  "0.0.0.9",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "8010d865-7d6d-4c23-92e0-f4b0120e18ac",
+        "Author":  "Linoa235",
+        "Name":  "M1s Drawing",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "M1s",
-        "Guid":  "8010d865-7d6d-4c23-92e0-f4b0120e18ac",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/M1s.cs",
         "Note":  "",
+        "TerritoryIds":  1226,
+        "Version":  "0.0.0.9",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "8010d865-7d6d-4c23-92e0-f4b0120e18ac",
+        "Author":  "Linoa235",
+        "Name":  "M1s绘图",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "M2n",
-        "Guid":  "4FD21978-B76C-4BF7-A3F5-D0490BB51915",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/M2n.cs",
         "Note":  "",
+        "TerritoryIds":  1227,
+        "Version":  "0.0.0.3",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "4FD21978-B76C-4BF7-A3F5-D0490BB51915",
+        "Author":  "Linoa235",
+        "Name":  "M2n",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "M2S",
-        "Guid":  "GUID_NON_TROUVE",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/M2S.cs",
         "Note":  "",
+        "TerritoryIds":  1228,
+        "Version":  "0.0.0.3",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "GUID_MANQUANT",
+        "Author":  "Linoa235",
+        "Name":  "M2s Drawing",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "M3n",
-        "Guid":  "AA6A8D8A-4462-41A2-B500-90515DE6534A",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/M3n.cs",
         "Note":  "",
+        "TerritoryIds":  1229,
+        "Version":  "0.0.0.3",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "AA6A8D8A-4462-41A2-B500-90515DE6534A",
+        "Author":  "Linoa235",
+        "Name":  "M3n",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "M3S",
-        "Guid":  "a7e12eeb-4f05-4b68-8d4f-f64e08b6d7a5",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/M3S.cs",
         "Note":  "",
+        "TerritoryIds":  1230,
+        "Version":  "0.0.0.9",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "a7e12eeb-4f05-4b68-8d4f-f64e08b6d7a5",
+        "Author":  "Linoa235",
+        "Name":  "M3s Drawing",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "M4n",
-        "Guid":  "F4A95B34-AE13-40E4-9106-78D607BCFD57",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/M4n.cs",
         "Note":  "",
+        "TerritoryIds":  1231,
+        "Version":  "0.0.0.4",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "F4A95B34-AE13-40E4-9106-78D607BCFD57",
+        "Author":  "Linoa235",
+        "Name":  "M4n",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "M4S",
-        "Guid":  "e7f7c69b-cc82-4b74-b1ea-2f3f0eecb2e2",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/M4S.cs",
         "Note":  "",
+        "TerritoryIds":  1232,
+        "Version":  "0.0.0.13",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "e7f7c69b-cc82-4b74-b1ea-2f3f0eecb2e2",
+        "Author":  "Linoa235",
+        "Name":  "M4s Drawing",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "M5S",
-        "Guid":  "ecf3365e-8d21-5daa-0329-8aa33ee30778",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/M5S.cs",
         "Note":  "",
+        "TerritoryIds":  1257,
+        "Version":  "0.0.0.3",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "ecf3365e-8d21-5daa-0329-8aa33ee30778",
+        "Author":  "Linoa235",
+        "Name":  "M5s Drawing",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "M6S",
-        "Guid":  "0146ff9b-1118-44e1-7386-e3b0795e7b60",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/M6S.cs",
         "Note":  "",
+        "TerritoryIds":  1259,
+        "Version":  "0.0.0.5",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "0146ff9b-1118-44e1-7386-e3b0795e7b60",
+        "Author":  "Linoa235",
+        "Name":  "M6s Drawing",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "M7S·Arcadia Savage·Heavyweight 3",
-        "Guid":  "e3cfc380-edc2-f441-bebe-e9e294f2631f",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/M7S%C2%B7Arcadia%20Savage%C2%B7Heavyweight%203.cs",
         "Note":  "",
+        "TerritoryIds":  1261,
+        "Version":  "0.0.1.0",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "e3cfc380-edc2-f441-bebe-e9e294f2631f",
+        "Author":  "Linoa235",
+        "Name":  "M7SÂ·Arcadia SavageÂ·Heavyweight 3",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "M9N",
-        "Guid":  "9af9ac60-1d6e-4247-a144-c6273417fea9",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/M9N.cs",
         "Note":  "",
-        "UpdateInfo":  "",
         "TerritoryIds":  [
 
-                         ]
+                         ],
+        "Version":  "0.0.0.9",
+        "UpdateInfo":  "",
+        "Guid":  "9af9ac60-1d6e-4247-a144-c6273417fea9",
+        "Author":  "Linoa235",
+        "Name":  "M9N",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "Mistwake lvl 100 ",
-        "Guid":  "b7d5e223-17b8-43bf-932f-dceddf10ba1a",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Mistwake%20lvl%20100%20.cs",
         "Note":  "",
+        "TerritoryIds":  1314,
+        "Version":  "0.0.0.1",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "b7d5e223-17b8-43bf-932f-dceddf10ba1a",
+        "Author":  "Linoa235",
+        "Name":  "---- Mobs ----",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "MtGulg",
-        "Guid":  "e67816ed-08b7-4df6-857a-2b71e9426d1c",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/MtGulg.cs",
         "Note":  "",
+        "TerritoryIds":  822,
+        "Version":  "0.0.0.1",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "e67816ed-08b7-4df6-857a-2b71e9426d1c",
+        "Author":  "Linoa235",
+        "Name":  "---- Trash Mobs ----",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "NecronEx [The Eternal Darkness Extreme]",
-        "Guid":  "e67816ed-08b7-4df6-857a-2b71e9426d1c",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/NecronEx%20%5BThe%20Eternal%20Darkness%20Extreme%5D.cs",
         "Note":  "",
+        "TerritoryIds":  822,
+        "Version":  "0.0.0.1",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "e67816ed-08b7-4df6-857a-2b71e9426d1c",
+        "Author":  "Linoa235",
+        "Name":  "---- Trash Mobs ----",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "New Moon Island CE",
-        "Guid":  "15725518-8F8E-413A-BEA8-E19CC861CF93",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/New%20Moon%20Island%20CE.cs",
-        "Note":  "",
+        "Note":  "New Moon Island CE Drawing Completed",
+        "TerritoryIds":  1252,
+        "Version":  "0.2.1",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "15725518-8F8E-413A-BEA8-E19CC861CF93",
+        "Author":  "Linoa235",
+        "Name":  "New Moon Island CE",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "O10n",
-        "Guid":  "9248BFE3-D4AE-46AA-9111-AEC2DACDE893",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/O10n.cs",
         "Note":  "",
+        "TerritoryIds":  799,
+        "Version":  "0.0.0.2",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "9248BFE3-D4AE-46AA-9111-AEC2DACDE893",
+        "Author":  "Linoa235",
+        "Name":  "O10n",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "Omega Protocol Ultimate Deluxe Edition",
-        "Guid":  "e0bfb4db-0d38-909f-5088-b23f09b7585e",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Omega%20Protocol%20Ultimate%20Deluxe%20Edition.cs",
         "Note":  "",
+        "TerritoryIds":  1122,
+        "Version":  "0.0.0.19",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "e0bfb4db-0d38-909f-5088-b23f09b7585e",
+        "Author":  "Linoa235",
+        "Name":  "Omega Protocol Ultimate Deluxe Edition",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "Omega-ProtocolUltimate",
-        "Guid":  "625eb340-0811-4c37-b87c-c46fe5204940",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Omega-ProtocolUltimate.cs",
         "Note":  "",
+        "TerritoryIds":  1122,
+        "Version":  "0.0.0.5",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "625eb340-0811-4c37-b87c-c46fe5204940",
+        "Author":  "Linoa235",
+        "Name":  "OmegaProtocolUltimate",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "Omega1",
-        "Guid":  "e0053855-1afd-49a7-85c8-537a6c7c1273",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Omega1.cs",
         "Note":  "",
+        "TerritoryIds":  691,
+        "Version":  "0.0.0.1",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "e0053855-1afd-49a7-85c8-537a6c7c1273",
+        "Author":  "Linoa235",
+        "Name":  "Omega1",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "Omega2",
-        "Guid":  "f5018ffb-0a41-476f-8966-12f81e83e7b1",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Omega2.cs",
         "Note":  "",
+        "TerritoryIds":  692,
+        "Version":  "0.0.0.1",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "f5018ffb-0a41-476f-8966-12f81e83e7b1",
+        "Author":  "Linoa235",
+        "Name":  "Omega2",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "Omega3",
-        "Guid":  "893c2dfc-cf25-4685-a750-9211c5c3610c",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Omega3.cs",
         "Note":  "",
+        "TerritoryIds":  693,
+        "Version":  "0.0.0.1",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "893c2dfc-cf25-4685-a750-9211c5c3610c",
+        "Author":  "Linoa235",
+        "Name":  "Omega3",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "Omega4",
-        "Guid":  "b3d37f50-67f9-4e57-9a58-afa3861a168c",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Omega4.cs",
         "Note":  "",
+        "TerritoryIds":  694,
+        "Version":  "0.0.0.1",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "b3d37f50-67f9-4e57-9a58-afa3861a168c",
+        "Author":  "Linoa235",
+        "Name":  "Omega4",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "OmegaProtocolUltimate",
-        "Guid":  "625eb340-0811-4c37-b87c-c46fe5204940",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/OmegaProtocolUltimate.cs",
         "Note":  "",
+        "TerritoryIds":  1122,
+        "Version":  "0.0.0.5",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "625eb340-0811-4c37-b87c-c46fe5204940",
+        "Author":  "Linoa235",
+        "Name":  "OmegaProtocolUltimate",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "Origenics",
-        "Guid":  "9F1D4DC0-1891-7AC0-9571-D5266198751D",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Origenics.cs",
         "Note":  "",
+        "TerritoryIds":  1208,
+        "Version":  "0.0.0.1",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "9F1D4DC0-1891-7AC0-9571-D5266198751D",
+        "Author":  "Linoa235",
+        "Name":  "Origenics",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "P12S [Anabaseios The Savage 4]",
-        "Guid":  "9F1D4DC0-1891-7AC0-9571-D5266198751D",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/P12S%20%5BAnabaseios%20The%20Savage%204%5D.cs",
         "Note":  "",
+        "TerritoryIds":  1208,
+        "Version":  "0.0.0.1",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "9F1D4DC0-1891-7AC0-9571-D5266198751D",
+        "Author":  "Linoa235",
+        "Name":  "Origenics",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "P1N-P4N Bundle",
-        "Guid":  "AD2A9D42-E040-442E-A8F2-86F7D13768BD",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/P1N-P4N%20Bundle.cs",
-        "Note":  "",
-        "UpdateInfo":  "",
+        "Note":  "Includes P1N, P2N, P3N, P4N",
         "TerritoryIds":  [
-
-                         ]
+                             1002,
+                             1004,
+                             1006,
+                             1008
+                         ],
+        "Version":  "0.0.0.2",
+        "UpdateInfo":  "",
+        "Guid":  "AD2A9D42-E040-442E-A8F2-86F7D13768BD",
+        "Author":  "Linoa235",
+        "Name":  "P1N-P4N Bundle",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "P4S [Pandæmonium Asphodelos The Fourth Circle (Savage)]",
-        "Guid":  "AD2A9D42-E040-442E-A8F2-86F7D13768BD",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/P4S%20%5BPand%C3%A6monium%20Asphodelos%20The%20Fourth%20Circle%20(Savage)%5D.cs",
-        "Note":  "",
-        "UpdateInfo":  "",
+        "Note":  "Includes P1N, P2N, P3N, P4N",
         "TerritoryIds":  [
-
-                         ]
-    },
-    {
-        "Name":  "P8S [Anabaseios The Savage 2]",
+                             1002,
+                             1004,
+                             1006,
+                             1008
+                         ],
+        "Version":  "0.0.0.2",
+        "UpdateInfo":  "",
         "Guid":  "AD2A9D42-E040-442E-A8F2-86F7D13768BD",
-        "Version":  "0.0.0.1",
         "Author":  "Linoa235",
-        "Repo":  "",
+        "Name":  "P1N-P4N Bundle",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
+    },
+    {
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/P8S%20%5BAnabaseios%20The%20Savage%202%5D.cs",
-        "Note":  "",
-        "UpdateInfo":  "",
+        "Note":  "Includes P1N, P2N, P3N, P4N",
         "TerritoryIds":  [
-
-                         ]
+                             1002,
+                             1004,
+                             1006,
+                             1008
+                         ],
+        "Version":  "0.0.0.2",
+        "UpdateInfo":  "",
+        "Guid":  "AD2A9D42-E040-442E-A8F2-86F7D13768BD",
+        "Author":  "Linoa235",
+        "Name":  "P1N-P4N Bundle",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "Palace of the Dead (Version complète)",
-        "Guid":  "4210c323-eba4-4d67-a7e7-b90799494729",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Palace%20of%20the%20Dead%20(Version%20compl%C3%A8te).cs",
-        "Note":  "",
-        "UpdateInfo":  "",
+        "Note":  "Select default Y-adjust depth",
         "TerritoryIds":  [
-
-                         ]
-    },
-    {
-        "Name":  "Palace of the Dead",
+                             561,
+                             562,
+                             563,
+                             564,
+                             565,
+                             593,
+                             594,
+                             595,
+                             596,
+                             597,
+                             598,
+                             599,
+                             600,
+                             601,
+                             602,
+                             603,
+                             604,
+                             605,
+                             606,
+                             607
+                         ],
+        "Version":  "0.0.1.1",
+        "UpdateInfo":  "",
         "Guid":  "4210c323-eba4-4d67-a7e7-b90799494729",
-        "Version":  "0.0.0.1",
         "Author":  "Linoa235",
-        "Repo":  "",
+        "Name":  "Palace of the Dead",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
+    },
+    {
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Palace%20of%20the%20Dead.cs",
-        "Note":  "",
-        "UpdateInfo":  "",
+        "Note":  "Select default Y-adjust depth",
         "TerritoryIds":  [
-
-                         ]
+                             561,
+                             562,
+                             563,
+                             564,
+                             565,
+                             593,
+                             594,
+                             595,
+                             596,
+                             597,
+                             598,
+                             599,
+                             600,
+                             601,
+                             602,
+                             603,
+                             604,
+                             605,
+                             606,
+                             607
+                         ],
+        "Version":  "0.0.1.1",
+        "UpdateInfo":  "",
+        "Guid":  "4210c323-eba4-4d67-a7e7-b90799494729",
+        "Author":  "Linoa235",
+        "Name":  "Palace of the Dead",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "Pilgrim\u0027s Traverse",
-        "Guid":  "3f65b3c0-df48-4ef8-89ae-b8091b7690f1",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Pilgrim\u0027s%20Traverse.cs",
-        "Note":  "",
-        "UpdateInfo":  "",
+        "Note":  "Select Auto Rekindle Target",
         "TerritoryIds":  [
-
-                         ]
+                             1281,
+                             1282,
+                             1283,
+                             1284,
+                             1285,
+                             1286,
+                             1287,
+                             1288,
+                             1289,
+                             1290,
+                             1311,
+                             1333
+                         ],
+        "Version":  "0.0.1.91",
+        "UpdateInfo":  "",
+        "Guid":  "3f65b3c0-df48-4ef8-89ae-b8091b7690f1",
+        "Author":  "Linoa235",
+        "Name":  "Pilgrim\u0027s Traverse",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "PVPAction",
-        "Guid":  "070e161a-26e9-4a57-8b19-da8c4201058c",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/PVPAction.cs",
         "Note":  "",
-        "UpdateInfo":  "",
         "TerritoryIds":  [
 
-                         ]
+                         ],
+        "Version":  "0.0.0.8",
+        "UpdateInfo":  "",
+        "Guid":  "070e161a-26e9-4a57-8b19-da8c4201058c",
+        "Author":  "Linoa235",
+        "Name":  "PVP Skill Drawing",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "PVP_Tetora",
-        "Guid":  "GUID_NON_TROUVE",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/PVP_Tetora.cs",
         "Note":  "",
-        "UpdateInfo":  "",
         "TerritoryIds":  [
-
-                         ]
+                             250,
+                             431,
+                             554,
+                             888,
+                             1273
+                         ],
+        "Version":  "0.0.0.1",
+        "UpdateInfo":  "",
+        "Guid":  "GUID_MANQUANT",
+        "Author":  "Linoa235",
+        "Name":  "PVP_Tetora",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "Resurrection Location",
-        "Guid":  "874D3ECF-BD6B-448F-BB42-AE7F082E4809",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Resurrection%20Location.cs",
-        "Note":  "",
-        "UpdateInfo":  "",
+        "Note":  "See where you will resurrect",
         "TerritoryIds":  [
 
-                         ]
-    },
-    {
-        "Name":  "Rubicante [Extreme]",
+                         ],
+        "Version":  "0.0.2",
+        "UpdateInfo":  "",
         "Guid":  "874D3ECF-BD6B-448F-BB42-AE7F082E4809",
-        "Version":  "0.0.0.1",
         "Author":  "Linoa235",
-        "Repo":  "",
-        "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Rubicante%20%5BExtreme%5D.cs",
-        "Note":  "",
-        "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Name":  "Resurrection Location",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "Rubicante",
-        "Guid":  "dd6bb7eb-c051-4406-8ec3-ff3523c753ee",
-        "Version":  "0.0.0.1",
+        "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Rubicante%20%5BExtreme%5D.cs",
+        "Note":  "See where you will resurrect",
+        "TerritoryIds":  [
+
+                         ],
+        "Version":  "0.0.2",
+        "UpdateInfo":  "",
+        "Guid":  "874D3ECF-BD6B-448F-BB42-AE7F082E4809",
         "Author":  "Linoa235",
-        "Repo":  "",
+        "Name":  "Resurrection Location",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
+    },
+    {
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Rubicante.cs",
         "Note":  "",
+        "TerritoryIds":  1095,
+        "Version":  "0.0.0.2",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "dd6bb7eb-c051-4406-8ec3-ff3523c753ee",
+        "Author":  "Linoa235",
+        "Name":  "Rubicante",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "SimpleScript",
-        "Guid":  "d3b6a9b4-1e0e-4e0c-b7c7-ff1fce0e6cf2",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/SimpleScript.cs",
-        "Note":  "",
-        "UpdateInfo":  "",
+        "Note":  "This is a test Property",
         "TerritoryIds":  [
-
-                         ]
+                             179,
+                             979
+                         ],
+        "Version":  "0.0.0.3",
+        "UpdateInfo":  "",
+        "Guid":  "d3b6a9b4-1e0e-4e0c-b7c7-ff1fce0e6cf2",
+        "Author":  "Linoa235",
+        "Name":  "SimpleScript",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "Storm\u0027s Crown",
-        "Guid":  "776A7DFB-F8C3-4ECC-BFB7-3631D083A117",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Storm\u0027s%20Crown.cs",
         "Note":  "",
+        "TerritoryIds":  1071,
+        "Version":  "0.0.0.2",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "776A7DFB-F8C3-4ECC-BFB7-3631D083A117",
+        "Author":  "Linoa235",
+        "Name":  "Storm\u0027s Crown",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "Tam-Tara Deepcroft (Hard)",
-        "Guid":  "6d397f5e-20b1-4c7b-9e4f-7a1ecbab2333",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Tam-Tara%20Deepcroft%20(Hard).cs",
         "Note":  "",
+        "TerritoryIds":  373,
+        "Version":  "0.0.0.1",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "6d397f5e-20b1-4c7b-9e4f-7a1ecbab2333",
+        "Author":  "Linoa235",
+        "Name":  "Tam-Tara Deepcroft (Hard)",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "TEA P1.5 Floor Fire Starting Line Guidance",
-        "Guid":  "2bbc1449-ceab-4d61-90a6-a7d69e81da2f",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/TEA%20P1.5%20Floor%20Fire%20Starting%20Line%20Guidance.cs",
         "Note":  "",
+        "TerritoryIds":  887,
+        "Version":  "0.0.0.2",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "2bbc1449-ceab-4d61-90a6-a7d69e81da2f",
+        "Author":  "Linoa235",
+        "Name":  "TEA P1.5 Floor Fire Starting Line Guidance",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "Tender Valley",
-        "Guid":  "C6AAF3DF-64BA-15C2-41F8-D24F7F4656DD",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Tender%20Valley.cs",
         "Note":  "",
+        "TerritoryIds":  1203,
+        "Version":  "0.0.0.5",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "C6AAF3DF-64BA-15C2-41F8-D24F7F4656DD",
+        "Author":  "Linoa235",
+        "Name":  "Tender Valley",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "The Aetherfont",
-        "Guid":  "554C2F0D-3E58-14B1-237A-2CA662AC229E",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/The%20Aetherfont.cs",
         "Note":  "",
+        "TerritoryIds":  1126,
+        "Version":  "0.0.0.2",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "554C2F0D-3E58-14B1-237A-2CA662AC229E",
+        "Author":  "Linoa235",
+        "Name":  "The Aetherfont",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "The Borderland Ruins (Siege Battle)",
-        "Guid":  "ec9c9f7d-be48-4974-82cf-396b0fc29261",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/The%20Borderland%20Ruins%20(Siege%20Battle).cs",
         "Note":  "",
+        "TerritoryIds":  1273,
+        "Version":  "0.0.0.3",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "ec9c9f7d-be48-4974-82cf-396b0fc29261",
+        "Author":  "Linoa235",
+        "Name":  "The Borderland Ruins (Siege Battle)",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "The Clyteum",
-        "Guid":  "5f365ada-2833-4164-92b3-8d11b7275b80",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/The%20Clyteum.cs",
         "Note":  "",
+        "TerritoryIds":  1345,
+        "Version":  "0.0.0.1",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "5f365ada-2833-4164-92b3-8d11b7275b80",
+        "Author":  "Linoa235",
+        "Name":  "---- Mobs ----",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "The Copied Factory",
-        "Guid":  "182DCBAA-AF3F-4576-BFA1-0F91CD3FEB04",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/The%20Copied%20Factory.cs",
         "Note":  "",
+        "TerritoryIds":  882,
+        "Version":  "0.0.0.1",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "182DCBAA-AF3F-4576-BFA1-0F91CD3FEB04",
+        "Author":  "Linoa235",
+        "Name":  "The Copied Factory",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "The Epic of Alexander",
-        "Guid":  "E047803D-38D5-45B4-AF48-71C0691CDCC9",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/The%20Epic%20of%20Alexander.cs",
         "Note":  "",
+        "TerritoryIds":  887,
+        "Version":  "0.0.2.9",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "E047803D-38D5-45B4-AF48-71C0691CDCC9",
+        "Author":  "Linoa235",
+        "Name":  "The Epic of Alexander",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "The Final Day",
-        "Guid":  "2BEBDA4A-DA6A-4B54-B9B8-533F34B3A2EB",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/The%20Final%20Day.cs",
         "Note":  "",
+        "TerritoryIds":  997,
+        "Version":  "0.0.0.2",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "2BEBDA4A-DA6A-4B54-B9B8-533F34B3A2EB",
+        "Author":  "Linoa235",
+        "Name":  "The Final Day",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "The Forbidden Land, Eureka - The Baldesion Arsenal",
-        "Guid":  "cb001385-81e0-4c16-8bb3-fb51fd70336a",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/The%20Forbidden%20Land%2C%20Eureka%20-%20The%20Baldesion%20Arsenal.cs",
         "Note":  "",
+        "TerritoryIds":  827,
+        "Version":  "0.0.0.4",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "cb001385-81e0-4c16-8bb3-fb51fd70336a",
+        "Author":  "Linoa235",
+        "Name":  "The Forbidden Land, Eureka - The Baldesion Arsenal",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "The Fractal Continuum (Hard)",
-        "Guid":  "c76136e1-1b5b-4cfb-a677-4cc0917fa050",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/The%20Fractal%20Continuum%20(Hard).cs",
         "Note":  "",
+        "TerritoryIds":  743,
+        "Version":  "0.0.0.3",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "c76136e1-1b5b-4cfb-a677-4cc0917fa050",
+        "Author":  "Linoa235",
+        "Name":  "The Fractal Continuum (Hard)",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "The Gilded Araya",
-        "Guid":  "0F38EA83-3D3A-AF4E-8908-56655F76014E",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/The%20Gilded%20Araya.cs",
         "Note":  "",
+        "TerritoryIds":  1136,
+        "Version":  "0.0.0.1",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "0F38EA83-3D3A-AF4E-8908-56655F76014E",
+        "Author":  "Linoa235",
+        "Name":  "The Gilded Araya",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "The Mothercrystal",
-        "Guid":  "EB83FE40-4DDC-42C8-B248-CBFDF9D0E2C1",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/The%20Mothercrystal.cs",
         "Note":  "",
+        "TerritoryIds":  995,
+        "Version":  "0.0.0.1",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "EB83FE40-4DDC-42C8-B248-CBFDF9D0E2C1",
+        "Author":  "Linoa235",
+        "Name":  "The Mothercrystal",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "The Navel",
-        "Guid":  "BC3B91DA-224A-4356-B7B3-75A8366A2C1C",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/The%20Navel.cs",
         "Note":  "",
-        "UpdateInfo":  "",
         "TerritoryIds":  [
-
-                         ]
+                             1046,
+                             293
+                         ],
+        "Version":  "0.0.0.3",
+        "UpdateInfo":  "",
+        "Guid":  "BC3B91DA-224A-4356-B7B3-75A8366A2C1C",
+        "Author":  "Linoa235",
+        "Name":  "The Navel",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "The Strayborough Deadwalk",
-        "Guid":  "32BC9D47-D623-507F-CDBF-E17EFEA73FA4",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/The%20Strayborough%20Deadwalk.cs",
-        "Note":  "",
+        "Note":  "Good Head friend prompt time (milliseconds)",
+        "TerritoryIds":  1204,
+        "Version":  "0.0.0.8",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "32BC9D47-D623-507F-CDBF-E17EFEA73FA4",
+        "Author":  "Linoa235",
+        "Name":  "The Strayborough Deadwalk",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "The Tower at Paradigm\u0027s Breach",
-        "Guid":  "C5E49762-7E9A-4CCC-8842-1912842420F4",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/The%20Tower%20at%20Paradigm\u0027s%20Breach.cs",
         "Note":  "",
+        "TerritoryIds":  966,
+        "Version":  "0.0.0.1",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "C5E49762-7E9A-4CCC-8842-1912842420F4",
+        "Author":  "Linoa235",
+        "Name":  "The Tower at Paradigm\u0027s Breach",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "The_Wreath_of_Snakes_Unreal",
-        "Guid":  "3a915832-971d-4c27-b802-407a1e30ae53",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/The_Wreath_of_Snakes_Unreal.cs",
         "Note":  "",
-        "UpdateInfo":  "",
         "TerritoryIds":  [
-
-                         ]
+                             825,
+                             1302
+                         ],
+        "Version":  "0.0.0.1",
+        "UpdateInfo":  "",
+        "Guid":  "3a915832-971d-4c27-b802-407a1e30ae53",
+        "Author":  "Linoa235",
+        "Name":  "Place waymarks manually",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "Tower of Power ",
-        "Guid":  "9F8E7D6C-5B4A-3C2D-1E0F-9A8B7C6D5E4F",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Tower%20of%20Power%20.cs",
-        "Note":  "",
+        "Note":  "Police functions for Tower of Power instance, providing key mechanic marker announcements and checks. Also supports active checks for money throwing, resurrection, food, blue potions, etc.\\n\\n------------ Echo channel query commands ------------\\nCheck Blue Potions: Type [/e blue potion check] to see alchemist blue potion usage, [/e blue potion clear] to clear data\\nCheck Resurrection: Type [/e resurrection check \u003cnumbers\u003e...], e.g., [/e resurrection check 1 2] to show players with 1 and 2 resurrection remaining. Without numbers, shows all players with 0-3 resurrections\\nCheck Food: Type [/e food check] to show players without food or with remaining time below threshold\\nCheck Money Throw: Type [/e money throw check] to show players who used money throw and their counts, [/e money throw clear] to clear statistics",
+        "TerritoryIds":  1252,
+        "Version":  "0.0.2",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "9F8E7D6C-5B4A-3C2D-1E0F-9A8B7C6D5E4F",
+        "Author":  "Linoa235",
+        "Name":  "Tower of Power (Police)",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "Tower of Power Mine Clearing (Inside Tower)",
-        "Guid":  "874D3ECF-BD6B-448F-BB42-AE7F082E4999",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Tower%20of%20Power%20Mine%20Clearing%20(Inside%20Tower).cs",
-        "Note":  "",
+        "Note":  "Type [/e Crescent Mine Clear] in chat to start mine clearing. Type again to hide. Display lasts 1800s. If display disappears, re-enter the command.\\nMajor updates:\\n- Added auto show/hide mine markers on map change.\\n- Data restructured by Map ID, ensuring only current map mines are displayed.",
+        "TerritoryIds":  1252,
+        "Version":  "0.1.1",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "874D3ECF-BD6B-448F-BB42-AE7F082E4999",
+        "Author":  "Linoa235",
+        "Name":  "Tower of Power Mine Clearing (Inside Tower)",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "Tower of Strength",
-        "Guid":  "874D3ECF-BD6B-448F-BB42-AE7F082E4805",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Tower%20of%20Strength.cs",
-        "Note":  "",
+        "Note":  "Update content\\r\\nDirect role-based rather than party position-based guidance for second boss fireball positions\\r\\nMark Chemist: type ã€/e Mark Chemistã€‘ to mark all nearby chemist players\\r\\nTreasure Map: line to chests in 1.5 corridors\\r\\n\\r\\n------------The following functions only support Echo output by default, can be configured to respond to party check commands and output in party channel------------\\r\\nCheck Blue Potion: type ã€/e Blue Potion Checkã€‘ will output chemist blue potion usage, type ã€/e Blue Potion Clearã€‘ will clear all data\\r\\nCheck Resurrection: type ã€/e Resurrection Check \u003cnumber\u003eã€‘, e.g., ã€/e Resurrection Check 1ã€‘ will output all nearby players with 1 remaining resurrection\\r\\nCheck Throw Money: type ã€/e Throw Money Checkã€‘ will output all players who used throw money and their counts, type ã€/e Throw Money Clearã€‘ will clear all data\\r\\n------------------------------------------------------------\\r\\nPlease select your team\u0027s grouping, guidance available for ABC123/152463/LemonCookie strategies\\r\\nFirst boss:\\r\\nAOE drawing: rotation, crushing\\r\\nGuidance: meteor mark, first tower stepping, second tower stepping\\r\\nSecond boss:\\r\\nAOE drawing: tankbuster, cone, ice-fire explosion\\r\\nGuidance: snowball, fireball\\r\\nThird boss:\\r\\nAOE drawing: draconic action, ice circle, dive\\r\\nGuidance: draconic action pre-position, tower stepping, mobs\\r\\nFinal boss:\\r\\nAOE drawing: deadly axe/spear, assassin\u0027s dagger\\r\\nGuidance: rune axe, holy lance",
+        "TerritoryIds":  1252,
+        "Version":  "0.0.40",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "874D3ECF-BD6B-448F-BB42-AE7F082E4805",
+        "Author":  "Linoa235",
+        "Name":  "Tower of Strength",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "UCOB The Unending Coil of Bahamut",
-        "Guid":  "884e415a-1210-44cc-bdff-8fab6878e87d",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/UCOB%20The%20Unending%20Coil%20of%20Bahamut.cs",
         "Note":  "",
+        "TerritoryIds":  733,
+        "Version":  "0.0.2.2",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "884e415a-1210-44cc-bdff-8fab6878e87d",
+        "Author":  "Linoa235",
+        "Name":  "UCOB [The Unending Coil of Bahamut]",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "Ultima Weapon Ultimate",
-        "Guid":  "ba05255f-37df-413f-8ddb-f0a61a9bacbe",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Ultima%20Weapon%20Ultimate.cs",
         "Note":  "",
+        "TerritoryIds":  777,
+        "Version":  "0.0.0.2",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "ba05255f-37df-413f-8ddb-f0a61a9bacbe",
+        "Author":  "Linoa235",
+        "Name":  "Ultima Weapon Ultimate",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "UnrealShinryu",
-        "Guid":  "fcf45bf5-bb72-42f8-b918-4c4b779fb70c",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/UnrealShinryu.cs",
         "Note":  "",
-        "UpdateInfo":  "",
         "TerritoryIds":  [
-
-                         ]
+                             730,
+                             1372
+                         ],
+        "Version":  "0.0.0.1",
+        "UpdateInfo":  "",
+        "Guid":  "fcf45bf5-bb72-42f8-b918-4c4b779fb70c",
+        "Author":  "Linoa235",
+        "Name":  "Duty Detection",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "Valigarmanda EX Draw",
-        "Guid":  "GUID_NON_TROUVE",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Valigarmanda%20EX%20Draw.cs",
         "Note":  "",
+        "TerritoryIds":  1196,
+        "Version":  "0.0.0.3",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "GUID_MANQUANT",
+        "Author":  "Linoa235",
+        "Name":  "Valigarmanda EX Draw",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "Vanguard Outpost",
-        "Guid":  "e3b0c442-98fc-1c14-9ddf-4b9b8a8f1a1f",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Vanguard%20Outpost.cs",
         "Note":  "",
+        "TerritoryIds":  1198,
+        "Version":  "0.0.0.1",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "e3b0c442-98fc-1c14-9ddf-4b9b8a8f1a1f",
+        "Author":  "Linoa235",
+        "Name":  "Vanguard Outpost",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "Variant Dungeon Auto",
-        "Guid":  "ad122d3e-0966-48c8-bddb-a0a3e9fe3a61",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Variant%20Dungeon%20Auto.cs",
-        "Note":  "",
-        "UpdateInfo":  "",
+        "Note":  "Use heal on self when HP is below this value",
         "TerritoryIds":  [
-
-                         ]
-    },
-    {
-        "Name":  "Variant Dungeon Automation",
+                             1069,
+                             1137,
+                             1176
+                         ],
+        "Version":  "0.0.0.1",
+        "UpdateInfo":  "",
         "Guid":  "ad122d3e-0966-48c8-bddb-a0a3e9fe3a61",
-        "Version":  "0.0.0.1",
         "Author":  "Linoa235",
-        "Repo":  "",
-        "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Variant%20Dungeon%20Automation.cs",
-        "Note":  "",
-        "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Name":  "Variant Dungeon Automation",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "Worqor Lar Dor",
-        "Guid":  "E9ABB865-498F-4C4F-8071-8A2E9F0589F6",
+        "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Variant%20Dungeon%20Automation.cs",
+        "Note":  "Use healing on self when HP is below this value",
+        "TerritoryIds":  [
+                             1069,
+                             1137,
+                             1176
+                         ],
         "Version":  "0.0.0.1",
+        "UpdateInfo":  "",
+        "Guid":  "ad122d3e-0966-48c8-bddb-a0a3e9fe3a61",
         "Author":  "Linoa235",
-        "Repo":  "",
+        "Name":  "Variant Dungeon Automation",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
+    },
+    {
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Worqor%20Lar%20Dor.cs",
         "Note":  "",
+        "TerritoryIds":  1195,
+        "Version":  "0.0.0.3",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "E9ABB865-498F-4C4F-8071-8A2E9F0589F6",
+        "Author":  "Linoa235",
+        "Name":  "Worqor Lar Dor",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "Zelenia Extreme",
-        "Guid":  "6192A434-05E0-4E7E-9724-1CC855E9C975",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Zelenia%20Extreme.cs",
         "Note":  "",
+        "TerritoryIds":  1271,
+        "Version":  "0.0.1.2",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "6192A434-05E0-4E7E-9724-1CC855E9C975",
+        "Author":  "Linoa235",
+        "Name":  "Zelenia Extreme",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "Zodiark [Extreme]",
-        "Guid":  "6192A434-05E0-4E7E-9724-1CC855E9C975",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Zodiark%20%5BExtreme%5D.cs",
         "Note":  "",
+        "TerritoryIds":  1271,
+        "Version":  "0.0.1.2",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "6192A434-05E0-4E7E-9724-1CC855E9C975",
+        "Author":  "Linoa235",
+        "Name":  "Zelenia Extreme",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "Zoraal Ja EX Draw",
-        "Guid":  "GUID_NON_TROUVE",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Zoraal%20Ja%20EX%20Draw.cs",
         "Note":  "",
+        "TerritoryIds":  1201,
+        "Version":  "0.0.0.2",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "GUID_MANQUANT",
+        "Author":  "Linoa235",
+        "Name":  "Zoraal Ja EX Draw",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     },
     {
-        "Name":  "[Vault Oneiron]",
-        "Guid":  "GUID_NON_TROUVE",
-        "Version":  "0.0.0.1",
-        "Author":  "Linoa235",
-        "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/%5BVault%20Oneiron%5D.cs",
         "Note":  "",
+        "TerritoryIds":  1201,
+        "Version":  "0.0.0.2",
         "UpdateInfo":  "",
-        "TerritoryIds":  [
-
-                         ]
+        "Guid":  "GUID_MANQUANT",
+        "Author":  "Linoa235",
+        "Name":  "Zoraal Ja EX Draw",
+        "Repo":  "https://github.com/Linoa235/KodakkuAssistScript/tree/main/ScriptTrad"
     }
 ]
