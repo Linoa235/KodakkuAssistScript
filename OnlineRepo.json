@@ -1728,14 +1728,14 @@
   },
   {
     "Name": "M2s Drawing",
-    "Guid": "00000000-0000-0000-0000-000000000000",
+    "Guid": "d99c7e91-9b56-432d-a3a8-49a8586915b7e2a",
     "Version": "0.0.0.3",
     "Author": "Linoa235",
     "Repo": "",
     "DownloadUrl": "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/M2S.cs",
     "Note": "",
     "UpdateInfo": "",
-    "TerritoryIds": [1228]
+    "TerritoryIds": [ 1228 ]
   },
   {
     "Name": "M3n",
@@ -2058,14 +2058,14 @@
   },
   {
     "Name": "PVP_Tetora",
-    "Guid": "00000000-0000-0000-0000-000000000000",
+    "Guid": "2312052e-6575-4a91-9e3d-b84699dca8fe",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
     "DownloadUrl": "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/PVP_Tetora.cs",
     "Note": "",
     "UpdateInfo": "",
-    "TerritoryIds": [250, 431, 554, 888, 1273]
+    "TerritoryIds": [ 250, 431, 554, 888, 1273 ]
   },
   {
     "Name": "Resurrection Location",
@@ -2377,14 +2377,14 @@
   },
   {
     "Name": "Valigarmanda EX Draw",
-    "Guid": "00000000-0000-0000-0000-000000000000",
+    "Guid": "d9c97e91-9b59-432d-a8a2-42a8586985b7e2a",
     "Version": "0.0.0.3",
     "Author": "Linoa235",
     "Repo": "",
     "DownloadUrl": "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Valigarmanda EX Draw.cs",
     "Note": "",
     "UpdateInfo": "",
-    "TerritoryIds": [1196]
+    "TerritoryIds": [ 1196 ]
   },
   {
     "Name": "Vanguard Outpost",
@@ -2454,24 +2454,24 @@
   },
   {
     "Name": "Zoraal Ja EX Draw",
-    "Guid": "00000000-0000-0000-0000-000000000000",
+    "Guid": "d9c97e91-9b59-432d-a3a1-42a8586985b7e2a",
     "Version": "0.0.0.2",
     "Author": "Linoa235",
     "Repo": "",
     "DownloadUrl": "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Zoraal Ja EX Draw.cs",
     "Note": "",
     "UpdateInfo": "",
-    "TerritoryIds": [1201]
+    "TerritoryIds": [ 1201 ]
   },
   {
     "Name": "Zoraal Ja EX Draw",
-    "Guid": "00000000-0000-0000-0000-000000000000",
+    "Guid": "d9c97e91-9b59-432d-a3a1-42a8586985b7e2a",
     "Version": "0.0.0.2",
     "Author": "Linoa235",
     "Repo": "",
     "DownloadUrl": "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/[Vault Oneiron].cs",
     "Note": "",
     "UpdateInfo": "",
-    "TerritoryIds": [1201]
+    "TerritoryIds": [ 1201 ]
   }
 ]
