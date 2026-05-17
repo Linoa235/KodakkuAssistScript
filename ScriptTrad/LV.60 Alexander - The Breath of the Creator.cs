@@ -11,7 +11,7 @@ using System.Runtime.Intrinsics.Arm;
 
 namespace Meva.Heavensward.KodakkuAssist.Alexander;
 
-[ScriptType(name: "LV.60 Alexander - The Breath of the Creator", territorys: [582], guid: "c9446d8e-118d-ec98-fcbc-732213b0a265", version: "0.0.0.4", Author: "Linoa235", note:noteStr)]
+[ScriptType(name: "LV.60 Alexander - The Breath of the Creator", territorys: [], guid: "f6026dd5-ca05-4baf-8cc9-fb35848c4127", version: "0.0.0.1", Author: "Linoa235")]
 public class A11N
 {
     const string noteStr =

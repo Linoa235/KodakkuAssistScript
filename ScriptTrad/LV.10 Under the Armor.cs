@@ -16,8 +16,7 @@ using System.ComponentModel;
 
 namespace Veever.A_Realm_Reborn.UndertheArmor;
 
-[ScriptType(name: "LV.10 Under the Armor", territorys: [190], guid: "8b28e087-549e-4a88-96db-50e1e7cc5214",
-    version: "0.0.0.5", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV.10 Under the Armor", territorys: [], $15841e6fb-0e0e-4e95-a337-5b40b10c1ac8", version: "0.0.0.1", Author: "Linoa235", guid: "f7be7283-a009-4e8c-aaa3-ae1569b16deb")]
 
 public class Under_the_Armor
 {

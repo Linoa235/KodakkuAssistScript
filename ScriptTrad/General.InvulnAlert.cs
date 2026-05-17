@@ -6,7 +6,7 @@ using KodakkuAssist.Module.GameEvent;
 
 namespace Cyf5119Script.General.InvulnAlert;
 
-[ScriptType(guid: "FCDCA220-DA96-48B5-909B-C1E336671D54", name: "Invuln Alert Macro", territorys: [], version: "0.0.0.4", Author: "Linoa235", note: "Invincibility countdown prompt for self.")]
+[ScriptType(name: "General.InvulnAlert", territorys: [], guid: "c04312d1-495c-44b9-aca7-73a23d52ee63", version: "0.0.0.1", Author: "Linoa235")]
 public class InvulnAlert
 {
     [UserSetting("Channel")] public string channel { get; set; } = "e";

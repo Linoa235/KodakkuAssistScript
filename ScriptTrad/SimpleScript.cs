@@ -12,7 +12,7 @@ namespace MyScriptNamespace
     /// territorys specifies the regions where this trigger is effective. If left empty, it will be effective in all regions.
     /// Classes with the same GUID will be considered the same trigger. Please ensure your GUID is unique and does not conflict with others.
     /// </summary>
-    [ScriptType(name: "SimpleScript", territorys: [179, 979],guid: "d3b6a9b4-1e0e-4e0c-b7c7-ff1fce0e6cf2",version:"0.0.0.3",Author: "Linoa235", note: noteStr,updateInfo:updateInfoStr)]
+    [ScriptType(name: "SimpleScript", territorys: [179, 979],$15015dff0-9690-4072-b50b-76d36f00349c",version:"0.0.0.3",Author: "Linoa235", note: noteStr,updateInfo:updateInfoStr, guid: "2a888fa1-c562-4979-838f-3c48d3f09cfb")]
     public class SimpleScript
     {
         const string noteStr =

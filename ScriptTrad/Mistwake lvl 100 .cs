@@ -36,8 +36,7 @@ using KodaMarkType = KodakkuAssist.Module.GameOperate.MarkType;
 
 namespace Veever.DawnTrail.Mistwake;
 
-[ScriptType(name: Name, territorys: [1314], guid: "b7d5e223-17b8-43bf-932f-dceddf10ba1a",
-    version: Version, Author: "Linoa235", note: NoteStr, updateInfo: UpdateStr)]
+[ScriptType(name: "Mistwake lvl 100 ", territorys: [], guid: "e8bad51f-699b-43b8-a51c-36825f386c64", version: "0.0.0.1", Author: "Linoa235")]
 
 public class Mistwake
 {

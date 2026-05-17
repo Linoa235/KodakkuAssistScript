@@ -16,8 +16,7 @@ using System.ComponentModel;
 
 namespace Veever.A_Realm_Reborn.PullingPoisonPosies;
 
-[ScriptType(name: "LV.20 Pulling Poison Posies", territorys: [191], guid: "ffdb31c2-0517-430e-924e-159766aea93d",
-    version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV.20 Pulling Poison Posies", territorys: [], $1749023fd-e0a9-457e-8fbd-82cd1663990d", version: "0.0.0.1", Author: "Linoa235", guid: "461ed3ff-5dd6-4895-8680-e8e2394c66e5")]
 
 public class Pulling_Poison_Posies
 {

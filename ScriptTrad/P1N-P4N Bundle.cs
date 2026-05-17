@@ -14,7 +14,7 @@ using FFXIVClientStructs.FFXIV.Client.UI.Agent;
 
 namespace Cyf5119Script.Endwalker.P1To4N;
 
-[ScriptType(guid: "AD2A9D42-E040-442E-A8F2-86F7D13768BD", name: "P1N-P4N Bundle", territorys: [1002, 1004, 1006, 1008], version: "0.0.0.2", Author: "Linoa235", note: "Includes P1N, P2N, P3N, P4N")]
+[ScriptType(name: "P1N-P4N Bundle", territorys: [], $1461f7bb1-e6bf-42e0-bb94-09c77ec9b301", version: "0.0.0.1", Author: "Linoa235", guid: "83470058-5f0b-436f-8666-ec10ef9f05aa")]
 public class P1To4N
 {
     [PluginService] public static IClientState ClientState { get; private set; }

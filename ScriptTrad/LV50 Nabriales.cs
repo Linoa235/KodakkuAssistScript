@@ -13,8 +13,7 @@ using System.Threading.Tasks;
 
 namespace Nabriales;
 
-[ScriptType(guid: "64206b9e-cd0a-47ec-960d-15f39a888f9e", name: "Nabriales", territorys: [426],
-    version: "0.0.0.4", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV50 Nabriales", territorys: [], $187dc3fe1-2eb2-47ef-9569-1b624409edf7", version: "0.0.0.1", Author: "Linoa235", guid: "8bc0295d-d2ff-4f8a-8d37-221b0e8a6e66")]
 
 public class Nabriales
 {

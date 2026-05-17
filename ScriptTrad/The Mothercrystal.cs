@@ -14,7 +14,7 @@ using KodakkuAssist.Module.Draw.Manager;
 
 namespace Cyf5119Scripts.Endwalker.TheMothercrystal;
 
-[ScriptType(guid: "EB83FE40-4DDC-42C8-B248-CBFDF9D0E2C1", name: "The Mothercrystal", territorys: [995], version: "0.0.0.1", Author: "Linoa235")]
+[ScriptType(name: "The Mothercrystal", territorys: [], $12a28be7d-b7ad-47a0-9bce-05efc9e8d163", version: "0.0.0.1", Author: "Linoa235", guid: "6ffeaa8d-e785-4833-944e-fe42b1d39b32")]
 public class TheMothercrystal
 {
     private static List<Vector3> _beaconList = [];

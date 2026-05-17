@@ -8,7 +8,7 @@ using KodakkuAssist.Module.Draw;
 
 namespace Cyf5119Script.Endwalker.StormsCrown;
 
-[ScriptType(guid: "776A7DFB-F8C3-4ECC-BFB7-3631D083A117", name: "Storm's Crown", territorys: [1071], version: "0.0.0.2", Author: "Linoa235")]
+[ScriptType(guid: "a80f9854-2dd8-49d2-a1a8-c62b93dfa309", name: "Storm's Crown", territorys: [1071], version: "0.0.0.2", Author: "Linoa235")]
 public class StormsCrown
 {
     public void Init(ScriptAccessory accessory)

@@ -14,8 +14,7 @@ using System.Threading.Tasks;
 
 namespace E1n;
 
-[ScriptType(guid: "35c751e5-2958-4f55-b783-405b4acfde1b", name: "E1N", territorys: [849],
-    version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV80 Eden's Gate Resurrection (Eden Prime, guid: "b51601fd-c68f-4183-bd22-97cf835900f4")", territorys: [], $12e94d7c9-1b12-45be-b926-b3796f097339", version: "0.0.0.1", Author: "Linoa235")]
 
 public class E1n
 {

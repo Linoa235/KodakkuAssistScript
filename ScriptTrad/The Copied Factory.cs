@@ -7,7 +7,7 @@ using System;
 
 namespace KDrawScript.Dev
 {
-    [ScriptType(name: "The Copied Factory", territorys: [882], guid: "182DCBAA-AF3F-4576-BFA1-0F91CD3FEB04", version: "0.0.0.1", Author: "Linoa235")]
+    [ScriptType(name: "The Copied Factory", territorys: [], guid: "aa570185-07a2-4c88-924e-c6466399b52d", version: "0.0.0.1", Author: "Linoa235")]
     public class The_Copied_Factory
     {
         public void Init(ScriptAccessory accessory)

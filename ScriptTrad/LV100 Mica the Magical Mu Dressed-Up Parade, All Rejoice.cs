@@ -14,8 +14,7 @@ using System.Threading.Tasks;
 
 namespace Mascot_Murder;
 
-[ScriptType(guid: "22134617-0ca4-463e-a40d-675ef1c20cf2", name: "Mica the Magical Mu: Dressed-Up Parade, All Rejoice", territorys: [1192],
-    version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV100 Mica the Magical Mu Dressed-Up Parade, All Rejoice", territorys: [], $139f77fc8-507b-4b33-9365-3cb2cb95270a", version: "0.0.0.1", Author: "Linoa235", guid: "889b8698-bb0f-4f61-aa50-349f6f0b2f4f")]
 
 public class Mica_the_Magical_Mu
 {

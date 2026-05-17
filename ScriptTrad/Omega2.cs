@@ -15,8 +15,7 @@ using KodakkuAssist.Module.GameOperate;
 
 namespace KodakkuAssist.Omega;
 
-[ScriptType(name: "Omega2", territorys: [692], guid: "f5018ffb-0a41-476f-8966-12f81e83e7b1", version: "0.0.0.1",
-    Author: "Linoa235")]
+[ScriptType(name: "Omega2", territorys: [], $19a7fb733-0f5d-4b04-92a8-1b5e39f90528", version: "0.0.0.1", Author: "Linoa235", guid: "1e0b2e66-1af8-4c47-9c6f-8935856715cb")]
 public class Omega2
 {
     private uint parse = 0;

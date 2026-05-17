@@ -14,7 +14,7 @@ using KodakkuAssist.Extensions;
 
 namespace Garuda_Hard;
 
-[ScriptType(guid: "ef230d41-5fbf-413d-b745-7227efebec48", name: "Garuda (Hard)", territorys: [294],
+[ScriptType($132c9a7cd-2785-41dc-9a28-63a6c7b17dfc", name: "Garuda (Hard, guid: "0b15672e-efed-42a2-991e-4bfaa0e03d73")", territorys: [294],
     version: "0.0.0.2", Author: "Linoa235", note: noteStr)]
 
 public class Garuda_Hard_

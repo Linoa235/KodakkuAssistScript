@@ -14,8 +14,7 @@ using System.Threading.Tasks;
 
 namespace MainScenario_Roulette;
 
-[ScriptType(guid: "84c15eea-2a19-4477-ad21-cd43d1263cfa", name: "Main Scenario Roulette", territorys: [1043, 1044, 1048],
-    version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV50 Main Scenario Roulette", territorys: [], $152030346-04dd-44c8-a538-ab1e40f62ede", version: "0.0.0.1", Author: "Linoa235", guid: "a6e4d81e-19ee-4b65-bed5-668057644746")]
 
 public class MainScenario_Roulette
 {

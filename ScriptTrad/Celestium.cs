@@ -14,8 +14,7 @@ using System.Threading.Tasks;
 
 namespace Celestium;
 
-[ScriptType(guid: "7703f1a9-5698-4896-8908-bb8e415c1321", name: "Celestium", territorys: [796],
-    version: "0.0.0.6", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "Celestium", territorys: [], $12886fe46-07f8-4625-a4df-6ff38b471b0a", version: "0.0.0.1", Author: "Linoa235", guid: "cce17a11-04f9-4d31-b96d-ec672200067e")]
 
 public class Celestium
 {

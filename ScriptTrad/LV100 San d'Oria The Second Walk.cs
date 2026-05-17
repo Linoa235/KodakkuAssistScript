@@ -27,8 +27,7 @@ using System.Xml.Linq;
 
 namespace Veever.DawnTrail.San_d_Oria_The_Second_Walk;
 
-[ScriptType(name: Name, territorys: [1304], guid: "26a812eb-b8e2-4f31-8568-affe775bd4c6",
-    version: Version, Author: "Linoa235", note: NoteStr, updateInfo: UpdateInfo)]
+[ScriptType(name: "LV100 San d'Oria The Second Walk", territorys: [], guid: "f15ebb97-7874-4c3b-8c97-4b1d2beec0c4", version: "0.0.0.1", Author: "Linoa235")]
 
 public class San_d_Oria_The_Second_Walk
 {

@@ -7,7 +7,7 @@ using System;
 
 namespace KDrawScript.Dev
 {
-    [ScriptType(name: "AAC Cruiserweight M4", territorys: [1262], guid: "73D227EB-D2E2-40B6-8107-16E36A09FB8D", version: "0.0.0.1", Author: "Linoa235")]
+    [ScriptType(name: "AAC Cruiserweight M4", territorys: [], $14c573967-b54d-4205-8986-e6d55dd326b5", version: "0.0.0.1", Author: "Linoa235", guid: "02588ba9-f90f-4857-b77d-cfcdff747eec")]
     public class CruiserweightM4
     {
         public void Init(ScriptAccessory accessory)

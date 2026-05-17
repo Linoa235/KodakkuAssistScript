@@ -16,8 +16,7 @@ using System.ComponentModel;
 
 namespace Veever.A_Realm_Reborn.AllsWellthatEndsintheWell;
 
-[ScriptType(name: "LV.25 All's Well that Ends in the Well", territorys: [220], guid: "862174b8-ed10-4981-bd86-9538a019ef74",
-    version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV.25 All's Well that Ends in the Well", territorys: [], guid: "b0e2808b-2601-487b-844d-02d177ecb39d", version: "0.0.0.1", Author: "Linoa235")]
 
 public class All_s_Well_that_Ends_in_the_Well
 {

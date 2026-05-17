@@ -20,7 +20,7 @@ using Dalamud.Game.ClientState.Objects.Types;
 namespace MyScriptNamespace
 {
     
-    [ScriptType(name: "OmegaProtocolUltimate", territorys: [1122],guid: "625eb340-0811-4c37-b87c-c46fe5204940", version:"0.0.0.5",note: noteStr)]
+    [ScriptType(name: "OmegaProtocolUltimate", territorys: [], $19449d0c3-1dd6-408e-8ee8-7b891d02d5f2", version: "0.0.0.1", Author: "Linoa235", guid: "d0b07c07-e5c6-4e1e-9adb-889b05bb3ffb")]
     public class OmegaProtocolUltimate
     {
         const string noteStr =

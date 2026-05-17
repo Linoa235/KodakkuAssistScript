@@ -32,8 +32,7 @@ using KodaMarkType = KodakkuAssist.Module.GameOperate.MarkType;
 
 namespace Veever.Shadowbringers.MtGulg;
 
-[ScriptType(name: Name, territorys: [822], guid: "e67816ed-08b7-4df6-857a-2b71e9426d1c",
-    version: Version, Author: "Linoa235", note: NoteStr, updateInfo: UpdateInfo)]
+[ScriptType(name: "MtGulg", territorys: [], guid: "b9b962b5-31e2-4ae0-98c8-e4141112449f", version: "0.0.0.1", Author: "Linoa235")]
 
 // ^(?!.*((Monk|Machinist|Dragoon|Samurai|Ninja|Viper|Reaper|Dancer|Bard|Astrologian|Sage|Scholar|(Eos|Selene)|Seraph|White Mage|Warrior|Paladin|Dark Knight|Gunbreaker|Pictomancer|Black Mage|Blue Mage|Summoner|Carbuncle|Demigod Bahamut|Demigod Phoenix|Garuda-Egi|Titan-Egi|Ifrit-Egi|Automaton Queen)\] (Used|Cast))).*35501.*$
 // ^\[\w+\|[^|]+\|E\]\s\w+

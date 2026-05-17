@@ -16,8 +16,7 @@ using System.ComponentModel;
 
 namespace Veever.A_Realm_Reborn.HeroontheHalfShell;
 
-[ScriptType(name: "LV.15 Hero on the Half Shell", territorys: [216], guid: "8513e0c9-5a1e-4748-a852-c6150d1c80e4",
-    version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV.15 Hero on the Half Shell", territorys: [], $1427445d9-4ff1-4af4-b938-ce72f98e1bca", version: "0.0.0.1", Author: "Linoa235", guid: "4740bbbd-c356-4e67-8a0b-80a6b87a4f43")]
 
 public class Hero_on_the_Half_Shell
 {

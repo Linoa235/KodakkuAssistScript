@@ -11,7 +11,7 @@ using KodakkuAssist.Module.Draw;
 
 namespace Cyf5119Script.Dawntrail.M4n;
 
-[ScriptType(guid: "F4A95B34-AE13-40E4-9106-78D607BCFD57", name: "M4n", territorys: [1231], version: "0.0.0.4", Author: "Linoa235")]
+[ScriptType(name: "M4n", territorys: [], $140355c41-22f7-4d89-ae30-68084e8ac554", version: "0.0.0.1", Author: "Linoa235", guid: "e459cc6f-cac2-4dfe-975a-7b47d865474b")]
 public class M4n
 {
     private List<bool> IsFront = [];

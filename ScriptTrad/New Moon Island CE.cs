@@ -18,14 +18,7 @@ using KodakkuAssist.Module.GameOperate;
 
 namespace KodakkuAssistXSZYYS
 {
-    [ScriptType(
-        name: "New Moon Island CE",
-        guid: "15725518-8F8E-413A-BEA8-E19CC861CF93",
-        territorys: [1252],
-        version: "0.2.1",
-        Author: "Linoa235",
-        note: "New Moon Island CE Drawing Completed"
-    )]
+    [ScriptType(name: "New Moon Island CE", territorys: [], $1833eca8d-b908-47e5-aec3-defc6e4bc106", version: "0.0.0.1", Author: "Linoa235", guid: "db1800b5-aa7e-454c-9654-67775d58f868")]
     public class NewMoonIslandCE
     {
         // =================================================================================

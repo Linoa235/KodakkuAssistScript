@@ -15,8 +15,7 @@ using KodakkuAssist.Module.GameOperate;
 
 namespace KodakkuAssist.Omega;
 
-[ScriptType(name: "Omega3", territorys: [693], guid: "893c2dfc-cf25-4685-a750-9211c5c3610c", version: "0.0.0.1",
-    Author: "Linoa235")]
+[ScriptType(name: "Omega3", territorys: [], guid: "fe3be51a-6e00-40b2-96fd-d80eb5656b39", version: "0.0.0.1", Author: "Linoa235")]
 public class Omega3
 {
     [ScriptMethod(name: "Croak", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:9318"])]

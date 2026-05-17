@@ -19,7 +19,7 @@ using Newtonsoft.Json.Linq;
 
 namespace KodakkuScript
 {
-	[ScriptType(name: "Zelenia Extreme", territorys: [1271], guid: "6192A434-05E0-4E7E-9724-1CC855E9C975", version: "0.0.1.2", note: noteStr, Author: "Linoa235")]
+	[ScriptType(name: "Zelenia Extreme", territorys: [], $129d93a48-e8bd-48c6-aff2-f6b308fdc26e", version: "0.0.0.1", Author: "Linoa235", guid: "e0ed5376-9fa9-4897-9ced-05c707c17682")]
 
 	public class Recollection
 	{

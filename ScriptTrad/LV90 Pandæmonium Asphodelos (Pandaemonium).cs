@@ -14,8 +14,7 @@ using System.Threading.Tasks;
 
 namespace PandÃ¦monium.Normal;
 
-[ScriptType(guid: "f28cc2f2-6ce2-4526-a303-56fe1c02dea8", name: "P10N", territorys: [1149],
-    version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV90 Pandæmonium Asphodelos (Pandaemonium)", territorys: [], guid: "a5abd910-8583-47a4-8987-6f1246431efe", version: "0.0.0.1", Author: "Linoa235")]
 
 public class P10n
 {

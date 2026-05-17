@@ -14,8 +14,7 @@ using System.Threading.Tasks;
 
 namespace Nidhogg;
 
-[ScriptType(guid: "dcfdb19e-0357-4214-b64e-205100f55822", name: "LV60 The Minstrel's Ballad: Nidhogg's Rage", territorys: [559],
-    version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV60 The Minstrel's Ballad Nidhogg's Rage", territorys: [], $14d9bba83-039e-4239-932b-c97bc9e762e0", version: "0.0.0.1", Author: "Linoa235", guid: "c3752714-64dc-4039-bfc0-b65d60ea4821")]
 
 public class Nidhogg
 {

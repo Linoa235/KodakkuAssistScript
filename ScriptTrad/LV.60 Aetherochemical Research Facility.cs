@@ -14,8 +14,7 @@ using System.Runtime.Intrinsics.Arm;
 
 namespace Veever.Heavensward.AetherochemicalResearchFacility;
 
-[ScriptType(name: "LV.60 Aetherochemical Research Facility", territorys: [1110], guid: "dd08165c-b709-4100-a96e-65f2c7ae4f3b",
-    version: "0.0.0.7", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV.60 Aetherochemical Research Facility", territorys: [], guid: "d0921a35-27c1-4711-8e61-d90b4f803a2e", version: "0.0.0.1", Author: "Linoa235")]
 
 public class AetherochemicalResearchFacility
 {

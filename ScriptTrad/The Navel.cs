@@ -9,7 +9,7 @@ using KodakkuAssist.Module.Draw;
 
 namespace Cyf5119Script.ARealmReborn.TheNavel;
 
-[ScriptType(guid: "BC3B91DA-224A-4356-B7B3-75A8366A2C1C", name: "The Navel", territorys: [1046, 293], version: "0.0.0.3", Author: "Linoa235")]
+[ScriptType(name: "The Navel", territorys: [], $107808eda-4c52-41e1-9a91-241a1b3dea52", version: "0.0.0.1", Author: "Linoa235", guid: "2cad1216-992d-48d3-aec0-4d1a0be6cee7")]
 public class TheNavel
 {
     public void Init(ScriptAccessory accessory)

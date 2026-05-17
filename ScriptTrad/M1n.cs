@@ -13,7 +13,7 @@ using KodakkuAssist.Module.Draw;
 
 namespace Cyf5119Script.Dawntrail.M1n;
 
-[ScriptType(guid: "28EEE8DC-DA6A-3F91-0D0C-7AA1BFB49AB0", name: "M1n", territorys: [1225], version: "0.0.0.4", Author: "Linoa235")]
+[ScriptType(name: "M1n", territorys: [], $19005ff39-a283-4f9f-8b5f-13fa44297bbe", version: "0.0.0.1", Author: "Linoa235", guid: "b1c9ba15-8f93-4ae5-ad12-8cd4aa25637f")]
 public class M1n
 {
     private uint tethered = 0;

@@ -14,8 +14,7 @@ using System.Threading.Tasks;
 
 namespace Omicron_Recall_Killing_Order;
 
-[ScriptType(guid: "b73d07ef-aa90-45a9-ab4b-fc3ccce8791b", name: "Omicron Recall: Destroy the Omicron Weapon Chi", territorys: [960],
-    version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV100 Omicron Recall Destroy the Omicron Weapon Chi", territorys: [], $14009aec8-3fdf-41dc-b006-e7eb56a5ad2a", version: "0.0.0.1", Author: "Linoa235", guid: "b6a9d4ca-5902-4afa-9396-4112f1b88594")]
 
 public class Chi
 {

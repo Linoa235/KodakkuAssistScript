@@ -17,8 +17,7 @@ using System.Windows;
 
 namespace Veever.A_Realm_Reborn.WardUp;
 
-[ScriptType(name: "LV.40 Ward Up", territorys: [299], guid: "35d901f8-4861-4d5b-b279-59affb7a740f",
-    version: "0.0.0.4", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV.40 Ward Up", territorys: [], guid: "d91a0325-c1ed-430c-811a-d83339e2687e", version: "0.0.0.1", Author: "Linoa235")]
 
 public class Ward_Up
 {

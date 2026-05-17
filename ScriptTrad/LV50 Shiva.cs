@@ -23,7 +23,7 @@ using FFXIVClientStructs.FFXIV.Component.GUI;
 
 namespace Shiva;
 
-[ScriptType(guid: "cddb93a8-e01e-40fe-989c-5153ad62bfbc", name: "Shiva", territorys: [377],
+[ScriptType(guid: "e759528e-9802-4bc5-ba60-f5f5328d1b03", name: "Shiva", territorys: [377],
     version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
 
 public class Shiva

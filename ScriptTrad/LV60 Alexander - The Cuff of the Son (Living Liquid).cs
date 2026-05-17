@@ -14,8 +14,7 @@ using System.Threading.Tasks;
 
 namespace A3N;
 
-[ScriptType(guid: "69712d1f-26c4-441f-97f0-e63f8baf98a6", name: "A3N", territorys: [444],
-    version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV60 Alexander - The Cuff of the Son (Living Liquid, guid: "de69e846-1964-4947-9679-977397427326")", territorys: [], $174ce119a-a736-4de0-9078-fa847fe589b9", version: "0.0.0.1", Author: "Linoa235")]
 
 public class A3N
 {

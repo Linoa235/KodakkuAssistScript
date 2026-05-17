@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace theStrikingTree_Hard;
 
-[ScriptType(guid: "de6d6f10-775d-4c45-91ec-2bd4ed6762c7", name: "The Striking Tree (Hard)", territorys: [374],
+[ScriptType($169681b59-4dac-4bcb-b37f-53f982dc5ab3", name: "The Striking Tree (Hard, guid: "e8604f22-e599-4168-a3b4-762953d57d76")", territorys: [374],
     version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
 
 public class theStrikingTree_Hard_

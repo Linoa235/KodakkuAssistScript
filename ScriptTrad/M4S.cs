@@ -23,7 +23,7 @@ using KodakkuAssist.Extensions;
 
 namespace KarlinScriptNamespace
 {
-    [ScriptType(name: "M4s Drawing", territorys:[1232],guid: "e7f7c69b-cc82-4b74-b1ea-2f3f0eecb2e2", version:"0.0.0.13", Author: "Linoa235")]
+    [ScriptType(name: "M4S", territorys: [], guid: "f24ba23f-7782-49df-a3e5-327d095ca58d", version: "0.0.0.1", Author: "Linoa235")]
     public class M4sDrawing
     {
         [UserSetting("Thunder Cannon Positioning Method")]

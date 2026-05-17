@@ -32,7 +32,7 @@ using static TsingNamespace.AloaloIsland.ScriptExtensions_Tsing;
 namespace TsingNamespace.AloaloIsland
 {
 
-    [ScriptType(name: "Aloalo Island Drawing + Guide", territorys: [1179, 1180], guid: "e3cfc380-edc2-f441-bebe-e9e294f2632a", version: "0.0.1.5", Author: "Linoa235", note: noteStr)]
+    [ScriptType(name: "Aloalo Island Drawing - Guide", territorys: [], $19fbfe35c-d971-49a4-b8aa-c8c769c82ff3", version: "0.0.0.1", Author: "Linoa235", guid: "ecdff7cd-44cf-41ad-9a61-3bfeddc50399")]
     public class AloaloIslandScript
     {   
         const string noteStr =

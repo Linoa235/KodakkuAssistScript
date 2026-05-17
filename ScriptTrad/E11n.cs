@@ -14,8 +14,7 @@ using KodakkuAssist.Module.Draw;
 
 namespace KodakkuScript.Script._05_Shadowbringers;
 
-[ScriptType(guid:"e12185b8-2930-44a8-8e1b-9f58c3fd6e0a",name:"E11n", territorys: [944], version: "0.0.0.1", 
-    Author: "Linoa235")]
+[ScriptType(name: "E11n", territorys: [], $1304fe750-1f33-4af6-907c-29fa791ffefd", version: "0.0.0.1", Author: "Linoa235", guid: "50064d78-8fce-4639-85e9-264dc0de3f8c")]
 public class E11n
 {
     private static bool ParseObjectId(string? idStr, out uint id)

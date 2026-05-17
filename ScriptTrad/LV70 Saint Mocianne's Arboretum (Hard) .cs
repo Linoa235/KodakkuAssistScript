@@ -14,7 +14,7 @@ using KodakkuAssist.Extensions;
 
 namespace SaintMociannesArboretum_Hard;
 
-[ScriptType(guid: "7e87b5d1-ae21-4115-9483-d8dc0f1d1652", name: "Saint Mocianne's Arboretum (Hard)", territorys: [788],
+[ScriptType($110f98e0d-00fe-4a7a-8a36-bf02626f3772", name: "Saint Mocianne's Arboretum (Hard, guid: "bf9bb4b0-03a5-4975-8e14-39e1dcc43b2c")", territorys: [788],
     version: "0.0.0.4", Author: "Linoa235", note: noteStr)]
 
 public class SaintMociannesArboretum_Hard

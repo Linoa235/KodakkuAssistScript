@@ -7,7 +7,7 @@ using System;
 
 namespace KDrawScript.Dev
 {
-    [ScriptType(name: "The Tower at Paradigm's Breach", territorys: [966], guid: "C5E49762-7E9A-4CCC-8842-1912842420F4", version: "0.0.0.1", Author: "Linoa235")]
+    [ScriptType(name: "The Tower at Paradigm's Breach", territorys: [], $16ed6f647-399b-4c94-94dc-8697fbab7532", version: "0.0.0.1", Author: "Linoa235", guid: "78f979ba-67e2-4b91-aea5-68a1c75ab468")]
     public class The_Tower_at_Paradigms_Breach
     {
         public void Init(ScriptAccessory accessory)

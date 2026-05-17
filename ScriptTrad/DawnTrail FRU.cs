@@ -22,8 +22,7 @@ using Lumina.Excel.Sheets;
 
 namespace UsamisKodakku.Scripts._07_DawnTrail.FRU;
 
-[ScriptType(name: Name, territorys: [1238], guid: "3076a62b-127e-468e-96d3-4f1d559857ec",
-    version: Version, Author: "Linoa235", note: NoteStr, updateInfo: UpdateInfo)]
+[ScriptType(name: "DawnTrail FRU", territorys: [], $139f03ba6-70c1-4faa-9c24-6cca094eb7bd", version: "0.0.0.1", Author: "Linoa235", guid: "35bc1ea7-250c-4f8c-bd3f-2b7707a8fbe9")]
 
 // ^(?!.*((Monk|Machinist|Dragoon|Samurai|Ninja|Viper|Reaper|Dancer|Bard|Astrologian|Sage|Scholar|(Eos|Selene)|Seraph|White Mage|Warrior|Paladin|Dark Knight|Gunbreaker|Pictomancer|Black Mage|Blue Mage|Summoner|Carbuncle|Demigod Bahamut|Demigod Phoenix|Garuda-Egi|Titan-Egi|Ifrit-Egi|Puppet)\] (Used|Cast))).*35501.*$
 // ^\[\w+\|[^|]+\|E\]\s\w+

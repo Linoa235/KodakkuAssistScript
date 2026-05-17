@@ -13,7 +13,7 @@ using KodakkuAssist.Extensions;
 
 namespace RyougiMioScriptNamespace
 {
-    [ScriptType(name: "(M9S)AAC Heavyweight M1 (Savage)", territorys: [1320, 1321], guid: "ced5c285-484c-4750-bc85-241e927848f1", version: "1.0.0.0", Author: "Linoa235", note: "M9S, script works in both M9N/S. TTS-marked mechanics only have announcements.")]
+    [ScriptType(name: "(M9S, guid: "b6917cdd-7e25-48db-813f-8cfe91540c91")AAC Heavyweight M1 (Savage)", territorys: [1320, 1321], $1290cc526-304a-4bfd-be2b-a696139b94ac", version: "1.0.0.0", Author: "Linoa235", note: "M9S, script works in both M9N/S. TTS-marked mechanics only have announcements.")]
     public class RyougiMio_1321
     {
         #region Settings

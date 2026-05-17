@@ -16,8 +16,7 @@ using System.ComponentModel;
 
 namespace Veever.A_Realm_Reborn.FlickingSticksandTakingNames;
 
-[ScriptType(name: "LV.25 Flicking Sticks and Taking Names", territorys: [219], guid: "f63ef61a-5fe6-437a-afb4-513dafecbb54",
-    version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV.25 Flicking Sticks and Taking Names", territorys: [], $18a9e0ca1-f852-4c88-8ef6-c28684e4502e", version: "0.0.0.1", Author: "Linoa235", guid: "2f861363-36e1-4e0f-af10-6170f14eb24c")]
 
 public class Flicking_Sticks_and_Taking_Names
 {

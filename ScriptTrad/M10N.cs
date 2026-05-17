@@ -20,14 +20,7 @@ using FFXIVClientStructs.FFXIV.Client.Graphics.Vfx;
 
 namespace BakaWater77.M10N;
 
-[ScriptType(
-       name: "M10N",
-       territorys: new uint[] { 1322 },
-       guid: "DC98AE77-83FB-4B76-ACA7-45BBCF05DEFE",
-       version: "0.0.0.2",
-       Author: "Linoa235",
-       note: null
-    )]
+[ScriptType(name: "M10N", territorys: [], $1352ef381-a350-4bfb-b7f6-065385b77231", version: "0.0.0.1", Author: "Linoa235", guid: "5e8f5a75-b755-45e0-bb51-1d5aa7f8f3fa")]
 public class M10N
 {
     public bool isText { get; set; } = true;

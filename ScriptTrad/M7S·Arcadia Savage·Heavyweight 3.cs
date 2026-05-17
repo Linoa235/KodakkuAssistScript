@@ -24,7 +24,7 @@ using EX = TsingNamespace.Dawntrail.Savage.M7S.ScriptExtensions_Tsing;
 
 namespace TsingNamespace.Dawntrail.Savage.M7S
 {
-    [ScriptType(name: "M7SÂ·Arcadia SavageÂ·Heavyweight 3", guid: "e3cfc380-edc2-f441-bebe-e9e294f2631f", territorys: [1261], version: "0.0.1.0", Author: "Linoa235", note: noteStr)]
+    [ScriptType(name: "M7S·Arcadia Savage·Heavyweight 3", territorys: [], guid: "e0cacb90-afcb-40c6-af33-f4399a8b02fc", version: "0.0.0.1", Author: "Linoa235")]
     public class M7S_Script
     {
 

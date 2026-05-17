@@ -16,9 +16,9 @@ using Newtonsoft.Json.Linq;
 namespace CicerosKodakkuAssist.Arcadion.Savage
 {
     
-    [ScriptType(name:"AAC Cruiserweight M4 (Savage)",
+    [ScriptType(name:"AAC Cruiserweight M4 (Savage, guid: "430ae53c-ba99-412a-a1d3-6d7b81d298b2")",
         territorys:[1263],
-        guid:"aeb4391c-e8a6-4daa-ab71-18e44c94fab8",
+        $19ec1e073-e2bd-428e-8d0a-450a4a9e21ba",
         version:"0.0.0.35",
         note:scriptNotes,
         Author: "Linoa235")]

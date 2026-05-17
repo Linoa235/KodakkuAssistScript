@@ -14,8 +14,8 @@ using System.Threading.Tasks;
 
 namespace E8n;
 
-[ScriptType(guid: "c4d533c8-8798-441d-b849-fc3cd5cf63d9", name: "E8N", territorys: [905],
-    version: "0.0.0.4", Author: "Linoa235", note: noteStr)]
+[ScriptType($1453e8abe-4ad6-4bd7-8583-c589c52f5e55", name: "E8N", territorys: [905],
+    version: "0.0.0.4", Author: "Linoa235", note: noteStr, guid: "fa18d6e3-2b28-41b7-a2b3-0777405be657")]
 
 public class E8n
 {

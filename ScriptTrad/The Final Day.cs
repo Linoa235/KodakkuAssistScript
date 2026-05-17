@@ -8,7 +8,7 @@ using KodakkuAssist.Module.Draw;
 
 namespace Cyf5119Script.Endwalker.TheFinalDay;
 
-[ScriptType(guid: "2BEBDA4A-DA6A-4B54-B9B8-533F34B3A2EB", name: "The Final Day", territorys: [997], version: "0.0.0.2", Author: "Linoa235")]
+[ScriptType(name: "The Final Day", territorys: [], $1684c349a-6dfd-4982-944b-f5485db619db", version: "0.0.0.1", Author: "Linoa235", guid: "811e97ca-86c2-47bb-b7a3-a41bfe315899")]
 public class TheFinalDay
 {
     public void Init(ScriptAccessory accessory)

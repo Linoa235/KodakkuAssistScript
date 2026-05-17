@@ -22,12 +22,12 @@ namespace KodakkuAssistXSZYYS
 {
     [ScriptType(
         name: "Resurrection Location",
-        guid: "874D3ECF-BD6B-448F-BB42-AE7F082E4809",
+        $1400b8024-e2e2-4aad-b1ba-b561fb4c18cd",
         territorys: [],
         version: "0.0.2",
         Author: "Linoa235",
         note: "See where you will resurrect"
-    )]
+    , guid: "68eb3787-666b-476e-92ac-10fafe78401b")]
     public class ResurrectionLocation
     {
         [ScriptMethod(name: "Resurrection", eventType: EventTypeEnum.StatusAdd, eventCondition: ["StatusID:148"])]

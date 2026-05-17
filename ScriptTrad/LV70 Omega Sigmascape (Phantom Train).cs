@@ -13,8 +13,7 @@ using System.Threading.Tasks;
 
 namespace O5n;
 
-[ScriptType(guid: "af11ce46-2c6a-46ba-b2bc-c542e5f5b7b5", name: "O5N", territorys: [748],
-    version: "0.0.0.2", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV70 Omega Sigmascape (Phantom Train, guid: "0dadfec7-f9b8-49ac-85e5-a7884d18f825")", territorys: [], $17e7a924b-9081-4f78-8f23-a07c0d4bf11b", version: "0.0.0.1", Author: "Linoa235")]
 
 public class O5n
 {

@@ -7,7 +7,7 @@ using Newtonsoft.Json;
 
 namespace KodakkuScriptTea
 {
-    [ScriptType(name: "TEA P1.5 Floor Fire Starting Line Guidance", territorys: [887], guid: "2bbc1449-ceab-4d61-90a6-a7d69e81da2f", version: "0.0.0.2", Author: "Linoa235")]
+    [ScriptType(name: "TEA P1.5 Floor Fire Starting Line Guidance", territorys: [887], $16e166ecf-dd23-4748-81e5-c24276997c88", version: "0.0.0.2", Author: "Linoa235", guid: "8b6f2e39-18dd-4bd8-ac95-596ccab4bb86")]
     public class TeaScript
     {
         private bool is1256 = false;

@@ -6,7 +6,7 @@ using System;
 
 namespace KDrawScript.Dev
 {
-    [ScriptType(name: "Alexander - The Eyes of the Creator (A9)", territorys: [580], guid: "31204d48-0846-41fc-a389-20c8fb5327b1", version: "0.0.0.1", Author: "Linoa235")]
+    [ScriptType(name: "Alexander - The Eyes of the Creator (A9, guid: "10dff07a-da0e-4518-b3da-580a6857c308")", territorys: [580], $1087bb79e-420e-4f34-8fcc-9004b15334f6", version: "0.0.0.1", Author: "Linoa235")]
     public class TheEyesoftheCreator
     {
         public void Init(ScriptAccessory accessory)

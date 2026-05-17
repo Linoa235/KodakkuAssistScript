@@ -24,8 +24,7 @@ using FFXIVClientStructs.FFXIV.Component.GUI;
 
 namespace NewDuty;
 
-[ScriptType(guid: "80890eac-4730-4708-ad1b-05aba469c2a1", name: "Latest Hottest Temporary Drawing", territorys: [1307],
-    version: "0.0.0.8", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "Latest Hottest Temporary Drawing", territorys: [], $144b36358-aa4b-47c7-a2db-599d1bd99e57", version: "0.0.0.1", Author: "Linoa235", guid: "5eff9e14-962a-4a62-aec6-d3d9fa1a23b2")]
 
 /* MapID
  * 1307: G Lair Abolition

@@ -14,8 +14,7 @@ using System.Threading.Tasks;
 
 namespace TheHead_theTail_theWholeDamnedThing;
 
-[ScriptType(guid: "f11c3069-d163-41dd-904e-b016cfcf089c", name: "Archaeotania: The Head, the Tail, the Whole Damned Thing", territorys: [818],
-    version: "0.0.0.5", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV80 Archaeotania The Head, the Tail, the Whole Damned Thing", territorys: [], $1875f9130-c7cc-4995-962c-97645e7e975a", version: "0.0.0.1", Author: "Linoa235", guid: "9a895f37-180a-4019-bf98-7b2b55593ee9")]
 
 public class Archaeotania
 {

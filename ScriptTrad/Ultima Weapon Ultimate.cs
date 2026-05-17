@@ -19,12 +19,7 @@ using Lumina.Data.Parsing;
 
 namespace LinoaScripts.WeaponsRefrainUltimate
 {
-    [ScriptType(name: "Ultima Weapon Ultimate",
-        territorys: [777],
-        guid: "ba05255f-37df-413f-8ddb-f0a61a9bacbe",
-        version: "0.0.0.2",
-        note: scriptNotes,
-        Author: "Linoa235")]
+    [ScriptType(name: "Ultima Weapon Ultimate", territorys: [], guid: "b0734a19-981d-422e-a906-1b45462c4b91", version: "0.0.0.1", Author: "Linoa235")]
 
     public class Weapons_Refrain_Ultimate
     {

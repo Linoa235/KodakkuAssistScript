@@ -7,7 +7,7 @@ using System;
 
 namespace KDrawScript.Dev
 {
-    [ScriptType(name: "Jeuno The First Walk", territorys: [1248], guid: "5e7c9708-b36c-4b04-af16-43747b58b8ed", version: "0.0.0.7", Author: "Linoa235")]
+    [ScriptType(name: "Jeuno The First Walk", territorys: [], $193243b1b-9170-483e-942a-7c308d25c581", version: "0.0.0.1", Author: "Linoa235", guid: "7c3e2146-8f71-4295-a78a-9a83716792d8")]
     public class FirstWalk
     {
         [UserSetting(note: "Enable text reminders")]

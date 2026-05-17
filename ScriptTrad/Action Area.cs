@@ -13,8 +13,7 @@ using System.Threading.Tasks;
 
 namespace TetoraKodakkuScript._00_Other;
 
-[ScriptType(guid: "f85df3b8-baa4-42b7-8196-bc26c58fa251", name: "Action Area", territorys: [],
-    version: "0.0.0.1", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "Action Area", territorys: [], $120c9181d-055c-4fdd-832b-69bf749fc5b1", version: "0.0.0.1", Author: "Linoa235", guid: "bbc248d1-51a0-460b-aada-a9fc25c41cad")]
 
 public class ActionArea
 {

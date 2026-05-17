@@ -26,8 +26,8 @@ using System.Xml.Linq;
 
 namespace Veever.DawnTrail.TheMesoTerminal;
 
-[ScriptType(name: Name, territorys: [1292], guid: "c74e8153-46e1-4a18-97bd-250463781ed2",
-    version: Version, Author: "Linoa235", note: NoteStr, updateInfo: UpdateInfo)]
+[ScriptType(name: Name, territorys: [1292], $150404cd8-765e-4436-b3b5-cad2f24a83ef",
+    version: Version, Author: "Linoa235", note: NoteStr, updateInfo: UpdateInfo, guid: "9d87817d-9d8b-49be-a445-b1c190655ddd")]
 
 public class TheMesoTerminal
 {

@@ -27,8 +27,7 @@ using System.Xml.Linq;
 
 namespace Veever.Heavensward.the_Great_Gubal_Library_Hard;
 
-[ScriptType(name: Name, territorys: [578], guid: "d376d381-8bd0-4a3b-9a87-d3e06e5afab8",
-    version: Version, Author: "Linoa235", note: NoteStr, updateInfo: UpdateInfo)]
+[ScriptType(name: "LV.60 The Great Gubal Library (Hard, guid: "729f982b-dbb9-4075-a5b7-4701336f53d6")", territorys: [], $182577fd9-88d7-4e0d-8698-1ccdd2b36d7b", version: "0.0.0.1", Author: "Linoa235")]
 
 public class the_Great_Gubal_Library_Hard
 {

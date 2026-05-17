@@ -8,7 +8,7 @@ using KodakkuAssist.Module.Draw;
 
 namespace Cyf5119Script.Dawntrail.TenderValley
 {
-    [ScriptType(guid: "C6AAF3DF-64BA-15C2-41F8-D24F7F4656DD", name: "Tender Valley", territorys: [1203], version: "0.0.0.5", Author: "Linoa235")]
+    [ScriptType(name: "Tender Valley", territorys: [], $1069aaacf-1480-4235-977e-45b031b2cf51", version: "0.0.0.1", Author: "Linoa235", guid: "f73a8964-1e02-4260-b8da-91cee7a23999")]
     public class TenderValley
     {
         private uint

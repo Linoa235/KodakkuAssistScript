@@ -17,8 +17,7 @@ using System.Windows;
 
 namespace Veever.Other.Cliffhanger;
 
-[ScriptType(name: "Gold Saucer - Cliffhanger", territorys: [144], guid: "4359482a-b7a8-4eb1-9a42-ffa3c79d6b7b",
-    version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV.80 The Seat of Sacrifice", territorys: [], guid: "c3d6f301-009c-4acd-b8f3-f45570726655", version: "0.0.0.1", Author: "Linoa235")]
 
 public class Cliffhanger
 {

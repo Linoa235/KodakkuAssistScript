@@ -58,13 +58,7 @@ namespace BakaWater77.M10N
         }
     }
 
-    [ScriptType(
-        name: "M10S Blue Line Guidance",
-        territorys: new uint[] { 1323 },
-        guid: "C328CC14-B074-4196-BA4C-161020987536",
-        version: "0.0.0.2",
-        Author: "Linoa235"
-    )]
+    [ScriptType(name: "M10S Blue Line Guidance", territorys: [], $1379f21b9-c43c-463a-8634-dd871c0e5f4b", version: "0.0.0.1", Author: "Linoa235", guid: "52a71fb2-e686-4f7a-8292-cc9783a6f387")]
     public class M10S
     {
         public static Vector3? BluePos;

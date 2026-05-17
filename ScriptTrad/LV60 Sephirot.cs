@@ -14,8 +14,8 @@ using KodakkuAssist.Extensions;
 
 namespace Sephirot;
 
-[ScriptType(guid: "6d0824b3-6d67-4450-8b4e-46857257579e", name: "Sephirot", territorys: [517],
-    version: "0.0.0.2", Author: "Linoa235", note: noteStr)]
+[ScriptType($19ec040ad-f733-4b17-b49d-0a0eeb653e14", name: "Sephirot", territorys: [517],
+    version: "0.0.0.2", Author: "Linoa235", note: noteStr, guid: "499964b7-c2a3-4983-9e76-9e9c591e6f3e")]
 
 public class Sephirot
 {

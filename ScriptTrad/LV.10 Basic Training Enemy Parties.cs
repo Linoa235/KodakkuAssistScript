@@ -16,8 +16,7 @@ using System.ComponentModel;
 
 namespace Veever.A_Realm_Reborn.BasicTrainingEnemyParties;
 
-[ScriptType(name: "LV.10 Basic Training: Enemy Parties", territorys: [214], guid: "6747a004-9234-4b32-9daf-75f6e384061c",
-    version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV.10 Basic Training Enemy Parties", territorys: [], guid: "a808ed0b-8058-49a8-a4fe-6c663ebee5f3", version: "0.0.0.1", Author: "Linoa235")]
 
 public class Basic_Training_Enemy_Parties
 {

@@ -20,8 +20,7 @@ using FFXIVClientStructs.FFXIV.Client.Game.UI;
 
 namespace PVPAction;
 
-[ScriptType(guid: "070e161a-26e9-4a57-8b19-da8c4201058c", name: "PVP Skill Drawing", territorys: [],
-    version: "0.0.0.8", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "PVPAction", territorys: [], $1206e1850-14b3-4c13-80ec-7bf721c4b7b3", version: "0.0.0.1", Author: "Linoa235", guid: "cf627f1f-9139-4936-b5f5-8bc733dcc061")]
 
 public class PVPAction
 {

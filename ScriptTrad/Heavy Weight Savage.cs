@@ -9,7 +9,7 @@ using System.Linq;
 
 namespace KDrawScript.Dev
 {
-    [ScriptType(name: "Heavy Weight Savage", territorys: [1323], guid: "A5689105-A7FD-4B84-9674-67610285768C", version: "0.0.0.1", Author: "Linoa235")]
+    [ScriptType(name: "Heavy Weight Savage", territorys: [], $1342d93b8-696c-4437-ad68-3db8801ea462", version: "0.0.0.1", Author: "Linoa235", guid: "cc3ba215-e3e8-4c04-891f-47b4a24924c1")]
     public class HeavyWeightSavage
     {
         [UserSetting(note: "Experimental toggle.")]

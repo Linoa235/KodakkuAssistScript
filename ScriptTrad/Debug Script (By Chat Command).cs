@@ -22,8 +22,8 @@ using KodakkuAssist.Module.Draw.Manager;
 namespace KodakkuDebugScript
 {
     [ScriptType(
-        name: "Debug Script (By Chat Command)",
-        guid: "B866F3EA-35A3-4BAA-8259-17A0D7608928",
+        name: "Debug Script (By Chat Command, guid: "dc00e004-2093-4ad6-b19f-3fc27e2ea3d2")",
+        $18223dd90-b3e1-47e3-90e3-8206de61ad76",
         territorys: [],
         version: "0.0.2",
         Author: "Linoa235",

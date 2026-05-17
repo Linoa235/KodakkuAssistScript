@@ -16,8 +16,7 @@ using System.ComponentModel;
 
 namespace Veever.A_Realm_Reborn.MorethanaFeeler;
 
-[ScriptType(name: "LV.30 More than a Feeler", territorys: [221], guid: "3113eeb5-96d8-48a8-9069-e1e3e5232ee1",
-    version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV.30 More than a Feeler", territorys: [], $17f3cd8fe-65bc-40cf-8067-3dec4be570e6", version: "0.0.0.1", Author: "Linoa235", guid: "5b72893a-a34c-4d75-9c8e-5e9d22526769")]
 
 public class More_than_a_Feeler
 {

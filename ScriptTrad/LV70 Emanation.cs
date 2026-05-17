@@ -14,8 +14,7 @@ using System.Threading.Tasks;
 
 namespace Emanation;
 
-[ScriptType(guid: "a7bacd3e-834f-41ba-a210-c66e2c12d208", name: "Emanation", territorys: [719],
-    version: "0.0.0.4", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV70 Emanation", territorys: [], guid: "cfd61410-1ef4-4360-8f2b-cd1a7c621da5", version: "0.0.0.1", Author: "Linoa235")]
 
 public class Lakshmi
 {

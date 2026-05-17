@@ -14,8 +14,7 @@ using System.Threading.Tasks;
 
 namespace A_Finale_Most_Formidable;
 
-[ScriptType(guid: "5f55a121-1fcc-48ce-a0e8-b6fbd4ce8489", name: "A Finale Most Formidable: The Secret Weapon", territorys: [814],
-    version: "0.0.0.4", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV80 A Finale Most Formidable The Secret Weapon", territorys: [], $10feaea39-4e13-4af3-8365-42f758f14bae", version: "0.0.0.1", Author: "Linoa235", guid: "e3b1d7b5-89bb-484d-be52-4cc446ebe01f")]
 
 public class Formidable
 {

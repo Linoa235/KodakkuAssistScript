@@ -24,8 +24,7 @@ using FFXIVClientStructs.FFXIV.Component.GUI;
 
 namespace A10N;
 
-[ScriptType(guid: "ec6bec7b-27bf-4a19-ae0c-cef069c7742d", name: "A10N", territorys: [581],
-    version: "0.0.0.1", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "Alexander - The Heart of the Creator (Lamebrix Strikebocks, guid: "aa711491-6b2c-4673-b476-eb484f6d354f")", territorys: [], $179d015a4-e1ee-4cb3-b65d-3ffb122624ce", version: "0.0.0.1", Author: "Linoa235")]
 
 public class NewDuty
 {

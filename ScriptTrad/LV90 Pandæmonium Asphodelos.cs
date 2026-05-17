@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 
 namespace PandÃ¦monium.Normal;
 
-[ScriptType(guid: "f28cc2f2-6ce2-4526-a303-56fe1c02dea8", name: "P10N", territorys: [1149],
+[ScriptType(guid: "f419370e-600c-49c1-8d6e-2e4349bc9b45", name: "P10N", territorys: [1149],
     version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
 
 public class P10n

@@ -36,8 +36,7 @@ using KodaMarkType = KodakkuAssist.Module.GameOperate.MarkType;
 
 namespace Veever.DawnTrail.TheWindwardWildsExtreme;
 
-[ScriptType(name: Name, territorys: [1306], guid: "b4a3871d-2499-4152-aaa2-a911ee1bbce2",
-    version: Version, Author: "Linoa235", note: NoteStr, updateInfo: UpdateStr)]
+[ScriptType(name: "LV.100 Guardian Arkveld (Extreme) The Windward", territorys: [], guid: "d5135e4c-de45-4fd7-ab9d-3b31d84208b3", version: "0.0.0.1", Author: "Linoa235")]
 
 // ^(?!.*((Monk|Machinist|Dragoon|Samurai|Ninja|Viper|Reaper|Dancer|Bard|Astrologian|Sage|Scholar|(Eos|Selene)|Seraph|White Mage|Warrior|Paladin|Dark Knight|Gunbreaker|Pictomancer|Black Mage|Blue Mage|Summoner|Carbuncle|Demigod Bahamut|Demigod Phoenix|Garuda-Egi|Titan-Egi|Ifrit-Egi|Puppet)\] (Used|Cast))).*35501.*$
 // ^\[\w+\|[^|]+\|E\]\s\w+ 

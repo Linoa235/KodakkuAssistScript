@@ -15,7 +15,7 @@ using System.Collections.Generic;
 
 namespace Veever.EndWalker.theMinstrelsBalladEndsingersAria;
 
-[ScriptType(name: "LV.90 The Minstrel's Ballad: Endsinger's Aria (Unrestricted)", territorys: [998], guid: "100df6f8-d8ce-44f7-9fb0-431eca0f2825",
+[ScriptType(name: "LV.90 The Minstrel's Ballad: Endsinger's Aria (Unrestricted, guid: "e5705363-5aea-4b18-8418-41eaa06f04eb")", territorys: [998], $1537b5e04-fd07-4e69-a5ef-08f3e76529dc",
     version: "0.0.0.6", Author: "Linoa235", note: noteStr)]
 
 public class the_Minstrels_Ballad_Endsingers_Aria

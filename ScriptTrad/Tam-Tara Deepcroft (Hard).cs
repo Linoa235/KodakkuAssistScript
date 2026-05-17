@@ -23,7 +23,7 @@ using FFXIVClientStructs.FFXIV.Component.GUI;
 
 namespace the_Tam_Tara_Deepcroft_Hard;
 
-[ScriptType(guid: "6d397f5e-20b1-4c7b-9e4f-7a1ecbab2333", name: "Tam-Tara Deepcroft (Hard)", territorys: [373],
+[ScriptType($102617985-2efe-469c-b90e-8cbfc58bcb2c", name: "Tam-Tara Deepcroft (Hard, guid: "77df5c81-1f1e-4b9f-96cc-a694a030aa2a")", territorys: [373],
     version: "0.0.0.1", Author: "Linoa235", note: noteStr)]
 
 public class the_Tam_Tara_Deepcroft_Hard

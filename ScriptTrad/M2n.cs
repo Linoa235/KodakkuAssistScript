@@ -9,7 +9,7 @@ using KodakkuAssist.Module.Draw;
 
 namespace Cyf5119Script.Dawntrail.M2n;
 
-[ScriptType(guid: "4FD21978-B76C-4BF7-A3F5-D0490BB51915", name: "M2n", territorys: [1227], version: "0.0.0.3", Author: "Linoa235")]
+[ScriptType(name: "M2n", territorys: [], $144a318e9-c7c9-48af-8e22-2dd47aed7e5c", version: "0.0.0.1", Author: "Linoa235", guid: "17736519-c180-4fa3-8237-06d739657dce")]
 public class M2n
 {
     public void Init(ScriptAccessory accessory)

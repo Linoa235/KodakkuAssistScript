@@ -13,8 +13,7 @@ using System.Threading.Tasks;
 
 namespace O11n;
 
-[ScriptType(guid: "2232ae84-c1e7-4382-88b4-d691887f27cf", name: "O11N", territorys: [800],
-    version: "0.0.0.4", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV70 Omega Alphascape (Omega, guid: "5f040632-9d09-4bf5-a36a-3246e732e105")", territorys: [], $17db71ec0-546e-46c9-bca3-d710d6e5bacc", version: "0.0.0.1", Author: "Linoa235")]
 
 public class O11n
 {

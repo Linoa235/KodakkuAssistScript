@@ -23,8 +23,7 @@ using FFXIVClientStructs.FFXIV.Component.GUI;
 
 namespace DhormeChimera;
 
-[ScriptType(guid: "e24bb311-704f-4f4c-8188-87eaa8da8b29", name: "Dhorme Chimera", territorys: [368],
-    version: "0.0.0.5", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV50 Dhorme Chimera", territorys: [], $195ba4a98-6c31-4d95-ab1e-812eacda78b8", version: "0.0.0.1", Author: "Linoa235", guid: "dfae7519-2e0d-4956-99d4-61f767e1bbad")]
 
 public class DhormeChimera
 {

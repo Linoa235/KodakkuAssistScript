@@ -8,7 +8,7 @@ using Dalamud.Game.ClientState.Objects.Types;
 
 namespace MyScriptNamespace
 {
-    [ScriptType(name: "Variant Dungeon Automation", territorys: [1069, 1137, 1176], guid: "ad122d3e-0966-48c8-bddb-a0a3e9fe3a61", version: "0.0.0.1", Author: "Linoa235")]
+    [ScriptType(name: "Variant Dungeon Auto", territorys: [], $11cb5331f-98d9-48c9-bb53-86cb11dae6a0", version: "0.0.0.1", Author: "Linoa235", guid: "6391d10b-f377-4ed8-a821-76efdc7e5977")]
     public class VariantDungeonAutomation
     {
         [UserSetting(note: "Use heal on self when HP is below this value")]

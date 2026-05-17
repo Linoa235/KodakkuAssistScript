@@ -14,8 +14,7 @@ using System.Threading.Tasks;
 
 namespace E12n;
 
-[ScriptType(guid: "3f88ad9c-e7a7-4e00-b19e-546609b319ba", name: "E12N", territorys: [945],
-    version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV80 Eden's Promise Eternity", territorys: [], $1193e4370-bd7a-467b-b141-0ae6c9ead590", version: "0.0.0.1", Author: "Linoa235", guid: "0bb76be2-6b80-4a91-9e3d-3d9f313b008d")]
 
 public class E12n
 {

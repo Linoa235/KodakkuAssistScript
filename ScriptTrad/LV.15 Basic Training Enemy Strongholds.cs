@@ -16,8 +16,7 @@ using System.ComponentModel;
 
 namespace Veever.A_Realm_Reborn.BasicTrainingEnemyStrongholds;
 
-[ScriptType(name: "LV.15 Basic Training: Enemy Strongholds", territorys: [215], guid: "72889f91-2654-400c-9112-69d4a063557c",
-    version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV.15 Basic Training Enemy Strongholds", territorys: [], $1360e7c92-bfd6-4317-9cf1-c2bde0253650", version: "0.0.0.1", Author: "Linoa235", guid: "295e6600-2386-43b7-aad2-a451c14e8bb8")]
 
 public class Basic_Training_Enemy_Strongholds
 {

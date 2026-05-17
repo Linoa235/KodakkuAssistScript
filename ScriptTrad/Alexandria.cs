@@ -11,7 +11,7 @@ using KodakkuAssist.Module.Draw;
 
 namespace Cyf5119Script.Dawntrail.Alexandria;
 
-[ScriptType(guid: "243443E4-FC8E-3EA6-9A75-FD2A4B6990FF", name: "Alexandria", territorys: [1199], version: "0.0.0.4", Author: "Linoa235")]
+[ScriptType(name: "Alexandria", territorys: [], guid: "bbd67a90-4c10-4857-a359-16d20cc50454", version: "0.0.0.1", Author: "Linoa235")]
 public class Alexandria
 {
     private List<List<uint>> InterferonList = [];

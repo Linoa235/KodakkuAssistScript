@@ -14,8 +14,7 @@ using System.Threading.Tasks;
 
 namespace The_Serpentlord_Seethes;
 
-[ScriptType(guid: "ab67129e-880f-48e8-852e-f92b4afa68e5", name: "The Serpentlord Seethes: Duel in the Wilds", territorys: [1190],
-    version: "0.0.0.4", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV100 The Serpentlord Seethes Duel in the Wilds", territorys: [], $15af6a71b-a7c4-4e9e-bac1-8fcf5b152d9e", version: "0.0.0.1", Author: "Linoa235", guid: "93f834e9-d3d0-412d-8e7b-e1a5ed5404e7")]
 
 public class Ttokrrone
 {

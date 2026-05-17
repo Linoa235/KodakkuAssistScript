@@ -23,8 +23,7 @@ using FFXIVClientStructs.FFXIV.Component.GUI;
 
 namespace Mistwake;
 
-[ScriptType(guid: "5ecdb3de-a67c-46c1-bac3-20dc015363b6", name: "LV100 7.4 Mistwake", territorys: [1314],
-    version: "0.0.0.2", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV100 7.4 Mistwake", territorys: [], guid: "f669d803-1154-4440-8e5a-c74173b54ee1", version: "0.0.0.1", Author: "Linoa235")]
 
 public class Mistwake
 {

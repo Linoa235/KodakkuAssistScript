@@ -14,8 +14,7 @@ using KodakkuAssist.Extensions;
 
 namespace Tsukuyomi;
 
-[ScriptType(guid: "97415dc8-cd16-4c9b-87be-026a297c3451", name: "Tsukuyomi", territorys: [778],
-    version: "0.0.0.2", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV70 Tsukuyomi", territorys: [], $17f98de5b-2d98-43be-a212-0145faea1033", version: "0.0.0.1", Author: "Linoa235", guid: "c4073bbd-6396-4d88-ba69-212eb7bc7363")]
 
 public class Tsukuyomi
 {

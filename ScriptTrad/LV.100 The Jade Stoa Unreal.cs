@@ -23,8 +23,7 @@ using FFXIVClientStructs.FFXIV.Client.UI;
 
 namespace Veever.DawnTrail.The_Jade_Stoa_Unreal;
 
-[ScriptType(name: "LV.100 The Jade Stoa Unreal", territorys: [1239], guid: "29193d9d-a2c5-4a0d-875b-943a06790b95",
-    version: "0.0.0.4", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV.100 The Jade Stoa Unreal", territorys: [], guid: "fb950322-58ba-4e07-bc10-c76b8d78bafe", version: "0.0.0.1", Author: "Linoa235")]
 
 public class The_Jade_Stoa_Unreal
 {

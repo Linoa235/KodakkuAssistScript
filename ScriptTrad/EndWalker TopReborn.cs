@@ -22,8 +22,7 @@ using Lumina.Excel.Sheets;
 
 namespace UsamisKodakku.Scripts._06_EndWalker.TopReborn;
 
-[ScriptType(name: Name, territorys: [1122], guid: "6272e52b-5500-4ff0-8634-dd15f2e3b25e",
-    version: Version, Author: "Linoa235", note: NoteStr, updateInfo: UpdateInfo)]
+[ScriptType(name: "EndWalker TopReborn", territorys: [], $14af32bef-2fdd-482c-a326-b3412da5b7be", version: "0.0.0.1", Author: "Linoa235", guid: "56cb36a3-83e9-4cb0-b121-630d64971c10")]
 
 // ^(?!.*((Monk|Machinist|Dragoon|Samurai|Ninja|Viper|Reaper|Dancer|Bard|Astrologian|Sage|Scholar|(Eos|Selene)|Seraph|White Mage|Warrior|Paladin|Dark Knight|Gunbreaker|Pictomancer|Black Mage|Blue Mage|Summoner|Carbuncle|Demigod Bahamut|Demigod Phoenix|Garuda-Egi|Titan-Egi|Ifrit-Egi|Puppet)) (Used|Cast))).*35501.*$
 // ^\[\w+\|[^|]+\|E\]\s\w+

@@ -23,8 +23,7 @@ using FFXIVClientStructs.FFXIV.Component.GUI;
 
 namespace Windurst_The_Third_Walk;
 
-[ScriptType(guid: "fa374b84-5ce5-405c-a22d-3e7ea1c9591b", name: "LV100 7.5 Windurst: The Third Walk", territorys: [1368],
-    version: "0.0.0.4", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV100 7.5 Windurst The Third Walk", territorys: [], guid: "c0288e06-56ac-4444-b6cc-e22900aa08d3", version: "0.0.0.1", Author: "Linoa235")]
 
 public class Windurst_The_Third_Walk
 {

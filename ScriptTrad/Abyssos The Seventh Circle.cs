@@ -17,12 +17,7 @@ using Newtonsoft.Json.Linq;
 
 namespace CicerosKodakkuAssist.Pandemonium.Normal;
 
-[ScriptType(name: "Abyssos The Seventh Circle",
-    territorys: [1085],
-    guid: "073ca5d8-9a34-41ff-8757-c3862c465be0",
-    version: "0.0.0.13",
-    Author: "Linoa235",
-    note: "A simple script for the duty Abyssos The Seventh Circle.")]
+[ScriptType(name: "Abyssos The Seventh Circle", territorys: [], $179e4d9da-ee30-4e83-ad56-67899d060054", version: "0.0.0.1", Author: "Linoa235", guid: "64bc5200-d5e3-4166-9dfd-820140bcc31f")]
 
 public class Abyssos_The_Seventh_Circle
 {

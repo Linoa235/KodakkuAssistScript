@@ -7,7 +7,7 @@ using System;
 
 namespace KDrawScript.Dev
 {
-    [ScriptType(name: "Alexander - The Fist of the Son (A5)", territorys: [520], guid: "214e5774-a935-4b5f-858e-b9b7db00816d", version: "0.0.0.1", Author: "Linoa235")]
+    [ScriptType(name: "Alexander - The Fist of the Son (A5)", territorys: [520], guid: "adc66a30-4a2b-4336-8115-f9b072d932f7", version: "0.0.0.1", Author: "Linoa235")]
     public class TheFistoftheSon
     {
         public void Init(ScriptAccessory accessory)

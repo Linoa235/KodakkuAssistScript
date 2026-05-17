@@ -23,8 +23,7 @@ using FFXIVClientStructs.FFXIV.Client.Game.Character;
 
 namespace Veever.A_Realm_Reborn.Haukke_Manor;
 
-[ScriptType(name: "LV.28 Haukke Manor", territorys: [1040], guid: "964f1a0a-5b2a-4473-b41b-a170bc823f67",
-    version: "0.0.0.4", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV.28 Haukke Manor", territorys: [], $130f448f5-ff0e-4c41-afc6-44d0e0f62923", version: "0.0.0.1", Author: "Linoa235", guid: "7d52a993-3bfc-4965-9ef3-96216601323b")]
 
 public class Haukke_Manor
 {

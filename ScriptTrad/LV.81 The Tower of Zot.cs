@@ -17,8 +17,7 @@ using System.Windows;
 
 namespace Veever.EndWalker.theTowerofZot;
 
-[ScriptType(name: "LV.81 The Tower of Zot", territorys: [952], guid: "98a97134-f87b-4386-aad9-2a99e81794ab",
-    version: "0.0.0.4", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV.81 The Tower of Zot", territorys: [], $10dfad7d9-f812-4801-b5dd-57e4069749c6", version: "0.0.0.1", Author: "Linoa235", guid: "d62ee263-3b84-496e-90f2-a44880c68c39")]
 
 public class the_Tower_of_Zot
 {

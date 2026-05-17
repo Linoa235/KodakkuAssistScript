@@ -14,8 +14,7 @@ using System.Threading.Tasks;
 
 namespace The_Baldesion_Arsenal_Eureka;
 
-[ScriptType(guid: "cb001385-81e0-4c16-8bb3-fb51fd70336a", name: "The Forbidden Land, Eureka - The Baldesion Arsenal", territorys: [827],
-    version: "0.0.0.4", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "The Forbidden Land, Eureka - The Baldesion Arsenal", territorys: [], guid: "aaab3962-b4c2-40db-b250-f5fc52238eaa", version: "0.0.0.1", Author: "Linoa235")]
 
 public class The_Baldesion_Arsenal
 {

@@ -27,8 +27,7 @@ using static FFXIVClientStructs.FFXIV.Client.Graphics.Render.Skeleton;
 
 namespace Veever.EndWalker.the_Dead_Ends;
 
-[ScriptType(name: Name, territorys: [973], guid: "850c08df-adad-43f7-8a2a-f8da31df4e84",
-    version: Version, Author: "Linoa235", note: NoteStr, updateInfo: UpdateInfo)]
+[ScriptType(name: "LV.90 The Dead Ends", territorys: [], guid: "d8c3a05e-65a0-44e9-8814-5067aa90f572", version: "0.0.0.1", Author: "Linoa235")]
 
 public class the_Dead_Ends
 {

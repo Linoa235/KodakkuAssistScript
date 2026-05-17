@@ -23,8 +23,7 @@ using FFXIVClientStructs.FFXIV.Component.GUI;
 
 namespace SaintMociannesArboretum;
 
-[ScriptType(guid: "3491ef10-6190-45e6-a3a7-b98fadc11948", name: "Saint Mocianne's Arboretum", territorys: [511],
-    version: "0.0.0.1", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV60 Saint Mocianne's Arboretum", territorys: [], $124b8b2d5-0c9e-48f7-9b75-dd7483b5a5f7", version: "0.0.0.1", Author: "Linoa235", guid: "bfd18478-3707-46a6-83dc-2bedc1066b0f")]
 
 public class SaintMociannesArboretum
 {

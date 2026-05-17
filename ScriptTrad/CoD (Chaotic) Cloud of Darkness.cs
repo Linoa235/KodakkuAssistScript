@@ -17,7 +17,7 @@ using System.Threading.Tasks;
 
 namespace KDrawScript.Dev
 {
-    [ScriptType(name: "CoD (Chaotic) Cloud of Darkness", territorys: [1241], guid: "436effd2-a350-4c67-b341-b4fe5a4ac233", version: "0.0.2.1", Author: "Linoa235", note: NoteStr, updateInfo: UpdateInfo)]
+    [ScriptType(name: "CoD (Chaotic, guid: "e68faebf-94f0-4392-bbd6-3214e983b7d0") Cloud of Darkness", territorys: [1241], $1067f84fc-489a-4fd2-9f64-5f7f886b37ce", version: "0.0.2.1", Author: "Linoa235", note: NoteStr, updateInfo: UpdateInfo)]
     public class Cloud_of_Darkness_Chaotic
     {
         private const string NoteStr =

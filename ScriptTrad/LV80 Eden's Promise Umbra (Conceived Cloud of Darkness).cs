@@ -13,8 +13,7 @@ using System.Threading.Tasks;
 
 namespace E9n;
 
-[ScriptType(guid: "e4b80c15-7885-46b7-8e3d-201a6a248c89", name: "E9N", territorys: [942],
-    version: "0.0.0.2", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV80 Eden's Promise Umbra (Conceived Cloud of Darkness, guid: "940d99a8-5364-48c8-9d12-e0aa6315bc21")", territorys: [], $188ed94ce-c9a3-442a-a2a4-d3a256b7d166", version: "0.0.0.1", Author: "Linoa235")]
 
 public class E9n
 {

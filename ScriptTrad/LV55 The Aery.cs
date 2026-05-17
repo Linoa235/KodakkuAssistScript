@@ -14,8 +14,7 @@ using System.Threading.Tasks;
 
 namespace the_Aery;
 
-[ScriptType(guid: "ac6caf4e-5eee-406c-8621-a5f3c5c7e9b0", name: "LV55 The Aery", territorys: [1065],
-    version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV55 The Aery", territorys: [], $124422e71-03ad-4919-bbdb-20d0c5db142d", version: "0.0.0.1", Author: "Linoa235", guid: "6c1b779a-5e9d-41cb-9d3d-8253033074c1")]
 
 public class the_Aery
 {

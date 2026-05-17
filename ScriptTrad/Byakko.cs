@@ -14,8 +14,7 @@ using System.Threading.Tasks;
 
 namespace Byakko;
 
-[ScriptType(guid: "6a9e30e9-c58e-4f39-9f1e-ad26e5d49dc3", name: "Byakko", territorys: [746],
-    version: "0.0.0.12", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "Byakko", territorys: [], guid: "bf226f6c-1a40-4edd-8638-f07b1072e147", version: "0.0.0.1", Author: "Linoa235")]
 
 public class Byakko
 {

@@ -10,7 +10,7 @@ using System.Linq;
 
 namespace Meva.Heavensward.KodakkuAssist.Alexander;
 
-[ScriptType(name: "LV.60 Alexander - The Eyes of the Creator", territorys: [580], guid: "7cb80e0d-e693-6ca9-c46e-c96b0ec5d109", version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV.60 Alexander - The Eyes of the Creator", territorys: [], $16d1bbac1-d104-4dee-b90d-d5199c167099", version: "0.0.0.1", Author: "Linoa235", guid: "8c46f859-f21f-4f55-964a-5173dff4655d")]
 public class A9N
 {
     const string noteStr =

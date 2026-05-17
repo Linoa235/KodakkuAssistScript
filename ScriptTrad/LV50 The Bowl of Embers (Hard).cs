@@ -23,7 +23,7 @@ using FFXIVClientStructs.FFXIV.Component.GUI;
 
 namespace theBowlofEmbers_Hard;
 
-[ScriptType(guid: "d3d532f1-0707-427f-ac04-871a22022c11", name: "The Bowl of Embers (Hard)", territorys: [292, 1045],
+[ScriptType($12c42cfec-595d-4cb4-9012-c46100be059e", name: "The Bowl of Embers (Hard, guid: "8641b1ba-4c63-4025-aa08-71adfb8d7274")", territorys: [292, 1045],
     version: "0.0.0.4", Author: "Linoa235", note: noteStr)]
 
 public class theBowlofEmbers_Hard

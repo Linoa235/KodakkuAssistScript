@@ -17,7 +17,7 @@ using Dalamud.Utility.Numerics;
 namespace MyScriptNamespace
 {
     
-    [ScriptType(name: "EdenUltimate", territorys: [1238],guid: "ce4472d1-fbdb-a4d4-1dd2-e8305a1db4bc", version:"0.0.0.10",note: noteStr)]
+    [ScriptType(name: "Eden Ultimate EU", territorys: [], guid: "d1c34951-a191-4d93-9420-70495853bcd4", version: "0.0.0.1", Author: "Linoa235")]
     public class EdenUltimate 
     {
         const string noteStr =

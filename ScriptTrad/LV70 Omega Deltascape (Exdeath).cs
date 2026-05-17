@@ -13,8 +13,7 @@ using System.Threading.Tasks;
 
 namespace O4n;
 
-[ScriptType(guid: "f24f9cef-717e-4a2a-9616-d470443d6d8a", name: "O4N", territorys: [694],
-    version: "0.0.0.2", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV70 Omega Deltascape (Exdeath, guid: "f249b6ac-b2d2-4bdb-8b1d-b3450bae06d1")", territorys: [], $158d4a4e4-07e5-4df4-80a0-3413000a30ff", version: "0.0.0.1", Author: "Linoa235")]
 
 public class O4n
 {

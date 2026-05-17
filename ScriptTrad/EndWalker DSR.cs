@@ -19,7 +19,7 @@ using KodakkuAssist.Module.Script.Type;
 
 namespace UsamisKodakku.Scripts._06_EndWalker.DSR;
 
-[ScriptType(name: Name, territorys: [968, 1112], guid: "cc6fb606-ff7b-4739-81aa-4861b204ab1e", 
+[ScriptType(name: Name, territorys: [968, 1112], guid: "b0092cf4-4625-475c-ba95-72bdada40e99", 
     version: Version, Author: "Linoa235", note: NoteStr, updateInfo: UpdateInfo)]
 
 // ^(?!.*((Monk|Machinist|Dragoon|Samurai|Ninja|Viper|Reaper|Dancer|Bard|Astrologian|Sage|Scholar|(Eos|Selene)|Seraph|White Mage|Warrior|Paladin|Dark Knight|Gunbreaker|Pictomancer|Black Mage|Blue Mage|Summoner|Carbuncle|Demigod Bahamut|Demigod Phoenix|Garuda-Egi|Titan-Egi|Ifrit-Egi|Puppet)\] (Used|Cast))).*$

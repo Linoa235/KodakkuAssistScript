@@ -15,8 +15,7 @@ using KodakkuAssist.Module.GameOperate;
 
 namespace KodakkuAssist.Omega;
 
-[ScriptType(name: "Omega1", territorys: [691], guid: "e0053855-1afd-49a7-85c8-537a6c7c1273", version: "0.0.0.1",
-    Author: "Linoa235")]
+[ScriptType(name: "Omega1", territorys: [], $142143674-e273-4a3e-a257-d10977c29e58", version: "0.0.0.1", Author: "Linoa235", guid: "65e6afbb-f469-41fb-987e-21dbcb0be4cb")]
 public class Omega1
 {
     [ScriptMethod(name: "Fireball", eventType: EventTypeEnum.AddCombatant, eventCondition: ["DataId:6769"])]

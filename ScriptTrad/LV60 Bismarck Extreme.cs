@@ -14,8 +14,7 @@ using KodakkuAssist.Extensions;
 
 namespace Bismarck_Extreme;
 
-[ScriptType(guid: "56751be8-113f-4496-8b46-982ff96d90c3", name: "Bismarck Extreme", territorys: [447],
-    version: "0.0.0.2", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV60 Bismarck Extreme", territorys: [], $1705af3c1-8317-44e6-bcdf-1541d11b94a6", version: "0.0.0.1", Author: "Linoa235", guid: "6779cdda-e285-43a7-b52c-bbdb13e2b05c")]
 
 public class Bismarck_Extreme
 {

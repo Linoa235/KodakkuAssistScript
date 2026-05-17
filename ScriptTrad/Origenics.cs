@@ -14,8 +14,8 @@ using KodakkuAssist.Module.Draw;
 
 namespace KodakkuScript.Script._07_DawnTrail;
 
-[ScriptType(guid: "9F1D4DC0-1891-7AC0-9571-D5266198751D", name: "Origenics", territorys: [1208], version: "0.0.0.1",
-    Author: "Linoa235")]
+[ScriptType($13e20be88-6e00-40cf-a1ff-a166999be075", name: "Origenics", territorys: [1208], version: "0.0.0.1",
+    Author: "Linoa235", guid: "1c3bef30-6250-495e-ac47-7eaa2e740b03")]
 public class Origenics
 {
     private int _aoeCount = 0;

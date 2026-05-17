@@ -14,8 +14,7 @@ using System.Threading.Tasks;
 
 namespace theTwinning;
 
-[ScriptType(guid: "bfb00cd3-ccec-4b21-b3d7-e290f49e6a75", name: "The Twinning", territorys: [840],
-    version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV80 The Twinning", territorys: [], $17ff84d1e-f3b9-4d16-a353-923cf2f197f0", version: "0.0.0.1", Author: "Linoa235", guid: "a9fdd0b8-c616-4b94-9f4e-5c31bf3e7c0b")]
 
 public class theTwinning
 {

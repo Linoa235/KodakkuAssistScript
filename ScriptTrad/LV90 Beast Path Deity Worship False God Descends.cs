@@ -14,8 +14,7 @@ using System.Threading.Tasks;
 
 namespace DevoutPilgrimsVSDaivadipa;
 
-[ScriptType(guid: "da82aeb0-9635-4f13-a1c1-39a0c859f596", name: "Beast Path Deity Worship: False God Descends", territorys: [957],
-    version: "0.0.0.5", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV90 Beast Path Deity Worship False God Descends", territorys: [], guid: "c9284c69-dada-4f91-8d2e-e9ef87c7ffa0", version: "0.0.0.1", Author: "Linoa235")]
 
 public class Daivadipa
 {

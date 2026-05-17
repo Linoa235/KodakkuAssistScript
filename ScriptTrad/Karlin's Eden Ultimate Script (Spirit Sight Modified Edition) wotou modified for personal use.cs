@@ -27,9 +27,9 @@ using Newtonsoft.Json.Linq;
 namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 {
 
-    [ScriptType(name: "Karlin's Eden Ultimate Script (Spirit Sight Modified Edition) wotou modified for personal use",
+    [ScriptType(name: "Karlin's Eden Ultimate Script (Spirit Sight Modified Edition, guid: "01e15b6f-8788-4b37-a603-e960ed159c5f") wotou modified for personal use",
         territorys: [1238],
-        guid: "148718fd-575d-493a-8ac7-1cc7092aff81",
+        $148bc6210-1e28-42d5-9796-fa158a9059be",
         version: "0.0.1.50",
         note: notesOfTheScript,
         Author: "Linoa235", 

@@ -23,9 +23,9 @@ using Newtonsoft.Json.Linq;
 namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 {
 
-    [ScriptType(name: "Karlin's FRU script (Customized by Cicero) | Karlinçš„ç»ä¼Šç”¸è„šæœ¬ (çµè§†æ”¹è£…ç‰ˆ)",
+    [ScriptType(name: "Karlin's FRU script (Customized by Cicero, guid: "6f4aada2-a3d5-418d-9eed-44776a94c483") | Karlinçš„ç»ä¼Šç”¸è„šæœ¬ (çµè§†æ”¹è£…ç‰ˆ)",
         territorys: [1238],
-        guid: "148718fd-575d-493a-8ac7-1cc7092aff85",
+        $1968f7031-3354-41c4-bdf3-5573f66c3d94",
         version: "0.0.1.19",
         note: notesOfTheScript,
         Author: "Linoa235")]

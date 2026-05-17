@@ -14,8 +14,7 @@ using KodakkuAssist.Extensions;
 
 namespace A5N;
 
-[ScriptType(guid: "1462516c-2bc2-4560-8244-387845cc098d", name: "A5N", territorys: [520],
-    version: "0.0.0.2", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV60 Alexander - The Fist of the Son (Ratfinx Twinkledinks, guid: "a584180e-97f3-490f-a611-28645fc8fdf2")", territorys: [], $19a159ff5-4bc5-4f3c-800f-9a2b6356e1a7", version: "0.0.0.1", Author: "Linoa235")]
 
 public class A5N
 {

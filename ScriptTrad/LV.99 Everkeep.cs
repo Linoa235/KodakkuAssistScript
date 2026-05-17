@@ -18,8 +18,7 @@ using System.Runtime.CompilerServices;
 
 namespace Veever.DawnTrail.Everkeep;
 
-[ScriptType(name: "LV.99 Everkeep", territorys: [1200], guid: "7a6d317c-b176-4e94-9fbc-3bc833be1338",
-    version: "0.0.0.9", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV.99 Everkeep", territorys: [], $10e1e7db0-3870-4900-b8e0-4b84b2f361c7", version: "0.0.0.1", Author: "Linoa235", guid: "cfdebd7d-421f-4886-848c-93726ae7689d")]
 
 public class Everkeep
 {

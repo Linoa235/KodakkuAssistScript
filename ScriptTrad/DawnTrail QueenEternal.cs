@@ -22,8 +22,7 @@ using FFXIVClientStructs.FFXIV.Client.Graphics.Vfx;
 
 namespace UsamisKodakku.Script._07_DawnTrail.QueenEternal;
 
-[ScriptType(name: Name, territorys: [1243], guid: "45fff289-e23d-41ab-9039-71cd310668e4", 
-    version: Version, Author: "Linoa235", note: NoteStr)]
+[ScriptType(name: "DawnTrail QueenEternal", territorys: [], guid: "a239eb01-fa4f-4169-ae40-f7e2216a61a1", version: "0.0.0.1", Author: "Linoa235")]
 
 // ^(?!.*((Monk|Machinist|Dragoon|Samurai|Ninja|Viper|Reaper|Dancer|Bard|Astrologian|Sage|Scholar|(Eos|Selene)|Seraph|White Mage|Warrior|Paladin|Dark Knight|Gunbreaker|Pictomancer|Black Mage|Blue Mage|Summoner|Carbuncle|Demigod Bahamut|Demigod Phoenix|Garuda-Egi|Titan-Egi|Ifrit-Egi|Puppet)\] (Used|Cast))).*35501.*$
 

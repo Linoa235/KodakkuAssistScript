@@ -14,8 +14,7 @@ using System.Threading.Tasks;
 
 namespace E10n;
 
-[ScriptType(guid: "038e00e8-d378-4f43-89ab-e27df5561d5a", name: "E10N", territorys: [943],
-    version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV80 Eden's Promise Litany (Shadowkeeper)", territorys: [], guid: "e5358519-bacd-41c9-8769-924a14236e99", version: "0.0.0.1", Author: "Linoa235")]
 
 public class E10n
 {

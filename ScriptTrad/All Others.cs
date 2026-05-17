@@ -55,8 +55,7 @@ public enum PartyFilterMode
     ExcludeMyParty = 2
 }
 
-[ScriptType(name: Name, territorys: [], guid: "260323f1-9d7d-4fd6-9222-282eb1aa9bf5",
-    version: Version, Author: "Linoa235", note: NoteStr, updateInfo: UpdateInfo)]
+[ScriptType(name: "All Others", territorys: [], $128463427-3299-4f90-9a24-25708dd45450", version: "0.0.0.1", Author: "Linoa235", guid: "b46a739b-f50f-4ea5-8fc9-7542979dbe01")]
 
 public class VVToolKit
 {

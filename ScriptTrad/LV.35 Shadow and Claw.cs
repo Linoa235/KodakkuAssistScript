@@ -17,8 +17,7 @@ using System.Windows;
 
 namespace Veever.A_Realm_Reborn.ShadowandClaw;
 
-[ScriptType(name: "LV.35 Shadow and Claw", territorys: [223], guid: "70cf9a76-fc90-4f2b-9471-504472fb1b1e",
-    version: "0.0.0.4", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV.35 Shadow and Claw", territorys: [], $1483b33dc-506a-416c-9929-e510efe57199", version: "0.0.0.1", Author: "Linoa235", guid: "9913aed5-c262-4e40-ae90-f690b1c9694a")]
 
 public class Shadow_and_Claw
 {

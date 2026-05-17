@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace Bahamute_NormalRaid_for_BLU;
 
-[ScriptType(guid: "8d41b5f9-0ab6-404a-9572-aabb390023f0", name: "Binding Coil of Bahamut (BLU Exclusive)", territorys: [196, 245, 358],
+[ScriptType($195f7ba02-a0a7-46c7-a157-6f75a8ec2bd6", name: "Binding Coil of Bahamut (BLU Exclusive, guid: "eae52792-1ff5-4137-9785-a10ef3913d78")", territorys: [196, 245, 358],
     version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
 
 public class Bahamute_NormalRaid_for_BLU

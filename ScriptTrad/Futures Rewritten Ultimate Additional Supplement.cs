@@ -14,8 +14,7 @@ using System.Threading.Tasks;
 
 namespace FRU_DLC;
 
-[ScriptType(guid: "981e39b5-ea99-4b85-a4b1-0e698d4c4036", name: "FRU_DLC [Futures Rewritten Ultimate_Additional Supplement]", territorys: [1238],
-    version: "0.0.0.4", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "Futures Rewritten Ultimate Additional Supplement", territorys: [], guid: "e7e2b815-ba3f-4df9-a7e8-931aaa48e31a", version: "0.0.0.1", Author: "Linoa235")]
 
 public class FRU_DLC
 {

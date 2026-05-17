@@ -17,8 +17,7 @@ using System.Windows;
 
 namespace Veever.A_Realm_Reborn.AnnoytheVoid;
 
-[ScriptType(name: "LV.30 Annoy the Void", territorys: [222], guid: "9106a502-2bcb-41ac-8598-6c76bd1061ae",
-    version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV.30 Annoy the Void", territorys: [], guid: "c2bd03fe-215d-4fc3-be81-6fa0ea4d2fc8", version: "0.0.0.1", Author: "Linoa235")]
 
 public class Annoy_the_Void
 {

@@ -13,8 +13,7 @@ using System.Threading.Tasks;
 
 namespace Urths_Fount;
 
-[ScriptType(guid: "1a07440d-a7bd-4b67-b781-90d14087ee60", name: "Urth's Fount", territorys: [394],
-    version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV50 Urth's Fount", territorys: [], $177ba3f59-1b21-4f16-9a7a-3e460e2d419e", version: "0.0.0.1", Author: "Linoa235", guid: "c9501e4d-b1a8-4f31-acca-b227df40298b")]
 public class Urths_Fount
 {
     const string noteStr =

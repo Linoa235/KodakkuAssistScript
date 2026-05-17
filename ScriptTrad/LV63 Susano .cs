@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace Susano;
 
-[ScriptType(guid: "2c4b6205-6a77-4c89-b641-2c2359a43f25", name: "Susano", territorys: [674],
+[ScriptType(guid: "b3073311-5679-43d0-b251-a953d2452ea5", name: "Susano", territorys: [674],
     version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
 
 public class Susano

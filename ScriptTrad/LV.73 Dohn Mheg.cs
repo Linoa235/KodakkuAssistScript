@@ -10,7 +10,7 @@ using System.Reflection.Metadata;
 
 namespace Veever.Shadowbringers.DohnMheg;
 
-[ScriptType(name: "LV.73 Dohn Mheg", territorys: [821], guid: "d8fbc4be-b2c3-43a5-93f7-2901b40d0921",
+[ScriptType(name: "LV.73 Dohn Mheg", territorys: [821], guid: "f5eaefdf-fdda-4f9b-ae6b-a7732c768191",
     version: "0.0.0.7", Author: "Linoa235", note: noteStr)]
 
 public class DohnMheg

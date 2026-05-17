@@ -8,7 +8,7 @@ using Dalamud.Game.ClientState.Objects.Types;
 
 namespace MyScriptNamespace
 {
-    [ScriptType(name: "Golden Saucer Assistant", territorys: [144], guid: "9eed3085-cb11-738a-7e06-5ba0aa67363c", version: "0.0.0.1", Author: "Linoa235")]
+    [ScriptType(name: "Golden Saucer Assistant", territorys: [], $13c5156f3-c780-4f63-af7f-755e819fd6b8", version: "0.0.0.1", Author: "Linoa235", guid: "67c668cf-e68a-4e12-9748-acd5f01cba59")]
     public class GoldenSaucerAssistant
     {
         DateTime lasthealth = DateTime.Now;

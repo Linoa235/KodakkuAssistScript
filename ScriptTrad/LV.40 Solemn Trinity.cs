@@ -17,8 +17,7 @@ using System.Windows;
 
 namespace Veever.A_Realm_Reborn.SolemnTrinity;
 
-[ScriptType(name: "LV.40 Solemn Trinity", territorys: [300], guid: "32e7ed24-f55c-48b0-8a40-3fa7442dd6df",
-    version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV.40 Solemn Trinity", territorys: [], guid: "c02354dd-49b1-4848-9448-9590151756e0", version: "0.0.0.1", Author: "Linoa235")]
 
 public class Solemn_Trinity
 {

@@ -21,14 +21,7 @@ using System.Threading.Tasks;
 
 namespace BakaWater77.æžæ ¼èŽ±æ¨æ‹‰;
 
-[ScriptType(
-   name: "Extreme G Lair",
-   territorys: new uint[] { 1308 },
-   guid: "125b0e7e-1fcc-412f-9d70-49d0ba2a6e3f",
-   version: "0.0.0.3",
-   Author: "Linoa235",
-   note: null
-)]
+[ScriptType(name: "Extreme G Lair", territorys: [], guid: "f68f79dd-2c19-4a62-95dd-3f43368fbfb1", version: "0.0.0.1", Author: "Linoa235")]
 public class ExtremeGLair
 {
     public bool isText { get; set; } = true;

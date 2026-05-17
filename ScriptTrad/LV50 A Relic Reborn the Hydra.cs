@@ -13,8 +13,7 @@ using System.Threading.Tasks;
 
 namespace A_Relic_Reborn_the_Hydra;
 
-[ScriptType(guid: "d32d7489-a1bb-4117-98dd-ee895390804d", name: "A Relic Reborn: the Hydra", territorys: [369],
-    version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV50 A Relic Reborn the Hydra", territorys: [], guid: "c41b950e-4b1b-4762-b3a0-5ab35152efd1", version: "0.0.0.1", Author: "Linoa235")]
 
 public class theBowlofEmbers_Hard
 {

@@ -17,7 +17,7 @@ using KodakkuAssist.Module.GameOperate;
 
 namespace KarlinScriptNamespace
 {
-    [ScriptType(name:"Dragonsong's Reprise Drawing", territorys: [968], guid: "d9c97e91-9b59-432d-a3a1-42a8475b7e2a", version:"0.0.0.6", Author: "Linoa235")]
+    [ScriptType(name: "Dragonsong's Reprise Drawing", territorys: [], $172bf04ee-a16b-43a9-bf7c-5625ccc95f83", version: "0.0.0.1", Author: "Linoa235", guid: "90cf6c7e-aa4d-471c-83f8-8ce70094c9fd")]
     public class DragongSingDraw
     {
         

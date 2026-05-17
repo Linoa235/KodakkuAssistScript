@@ -13,7 +13,7 @@ using KodakkuAssist.Module.Draw.Manager;
 
 namespace Cyf5119Scripts.Endwalker.TheAetherfont;
 
-[ScriptType(guid: "554C2F0D-3E58-14B1-237A-2CA662AC229E", name: "The Aetherfont", territorys: [1126], version: "0.0.0.2", Author: "Linoa235")]
+[ScriptType(name: "The Aetherfont", territorys: [], $11dffc2e2-a125-4101-ba98-7a602f740977", version: "0.0.0.1", Author: "Linoa235", guid: "b2eabfee-10cd-4dff-8ffa-0eca9ee29294")]
 public class TheAetherfont
 {
     public void Init(ScriptAccessory sa)

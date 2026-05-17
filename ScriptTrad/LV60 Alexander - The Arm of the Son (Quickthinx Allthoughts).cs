@@ -14,8 +14,7 @@ using System.Threading.Tasks;
 
 namespace A7N;
 
-[ScriptType(guid: "48d652cd-16c4-413f-a08c-49a308ccb98f", name: "A7N", territorys: [522],
-    version: "0.0.0.1", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV60 Alexander - The Arm of the Son (Quickthinx Allthoughts, guid: "924fcb38-43f7-4057-97fc-d6722657f62c")", territorys: [], $196f21293-34b3-4513-833e-efc5ae47ec3e", version: "0.0.0.1", Author: "Linoa235")]
 
 public class A7N
 {

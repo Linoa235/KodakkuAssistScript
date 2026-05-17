@@ -13,8 +13,7 @@ using System.Threading.Tasks;
 
 namespace E2n;
 
-[ScriptType(guid: "b59c7db9-1fba-4476-8701-1e3043cb7dc8", name: "E2N", territorys: [850],
-    version: "0.0.0.2", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV80 Eden's Gate Descent (Voidwalker, guid: "5302b102-61ca-4871-9200-53f962c129e1")", territorys: [], $164557a60-eb85-4825-a3d8-128f2f0fc188", version: "0.0.0.1", Author: "Linoa235")]
 
 public class E2n
 {

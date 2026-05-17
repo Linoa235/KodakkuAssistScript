@@ -24,8 +24,8 @@ using FFXIVClientStructs.FFXIV.Client.Game.Character;
 
 namespace Veever.DawnTrail.Cenote_Ja_Ja_Gural;
 
-[ScriptType(name: "Cenote Ja Ja Gural", territorys: [1209], guid: "64620549-e269-49c0-b0ae-76edec024864",
-    version: "0.0.0.4", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "Cenote Ja Ja Gural", territorys: [1209], $167f45823-0762-4bd0-940d-49767869e86d",
+    version: "0.0.0.4", Author: "Linoa235", note: noteStr, guid: "030d0543-760f-4209-966f-317c6a7058c8")]
 
 public class Cenote_Ja_Ja_Gural
 {

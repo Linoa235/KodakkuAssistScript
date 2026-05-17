@@ -15,8 +15,7 @@ using KodakkuAssist.Extensions;
 
 namespace Battle_in_the_Big_Keep;
 
-[ScriptType(guid: "90783a42-7947-4392-9c3e-f3162d52c248", name: "Battle in the Big Keep", territorys: [396],
-    version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV50 Battle in the Big Keep", territorys: [], guid: "b1b5304e-1330-46d0-88a6-e37c5beeb5f4", version: "0.0.0.1", Author: "Linoa235")]
 
 public class Battle_in_the_Big_Keep
 {

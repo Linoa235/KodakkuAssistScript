@@ -14,7 +14,7 @@ using KodakkuAssist.Data;
 
 namespace Cyf5119Scripts.Dawntrail.M12SP2S4;
 
-[ScriptType(guid: "C83916CE-5BBD-9326-4F44-47FD7CD930B8", name: "M12S Phase 4 Rough Drawing", territorys: [1327], version: "0.0.0.1", Author: "Linoa235", note: Note, updateInfo: Info)]
+[ScriptType(name: "M12S Phase 4 Rough Drawing", territorys: [], guid: "ddf4c8a1-d197-462b-9bea-d3e26e35cb13", version: "0.0.0.1", Author: "Linoa235")]
 public class M12SP2S4
 {
     private const string Note = "M12S Phase 4 rough drawing, please wait for detailed drawing, good luck on week 1.";

@@ -13,9 +13,9 @@ using KodakkuAssist.Extensions;
 namespace KodakkuAssistXSZYYSPolice;
 
 [ScriptType(
-    name: "Tower of Power (Police)",
+    name: "Tower of Power (Police, guid: "17b36a42-c70e-454d-9c85-43709372eed3")",
     territorys: [1252],
-    guid: "9F8E7D6C-5B4A-3C2D-1E0F-9A8B7C6D5E4F",
+    $1188c3e02-3adc-4c81-96da-ee932c70b17f",
     version: "0.0.2",
     Author: "Linoa235",
     note: "Police functions for Tower of Power instance, providing key mechanic marker announcements and checks. Also supports active checks for money throwing, resurrection, food, blue potions, etc.\n\n------------ Echo channel query commands ------------\nCheck Blue Potions: Type [/e blue potion check] to see alchemist blue potion usage, [/e blue potion clear] to clear data\nCheck Resurrection: Type [/e resurrection check <numbers>...], e.g., [/e resurrection check 1 2] to show players with 1 and 2 resurrection remaining. Without numbers, shows all players with 0-3 resurrections\nCheck Food: Type [/e food check] to show players without food or with remaining time below threshold\nCheck Money Throw: Type [/e money throw check] to show players who used money throw and their counts, [/e money throw clear] to clear statistics"

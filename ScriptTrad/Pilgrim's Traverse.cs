@@ -25,9 +25,7 @@ using FFXIVClientStructs.FFXIV.Component.GUI;
 
 namespace Pilgrims_Traverse;
 
-[ScriptType(guid: "3f65b3c0-df48-4ef8-89ae-b8091b7690f1", name: "Pilgrim's Traverse", Author: "Linoa235", 
-    territorys: [1281, 1282, 1283, 1284, 1285, 1286, 1287, 1288, 1289, 1290, 1311, 1333],
-    version: "0.0.1.91",note: noteStr)]
+[ScriptType(name: "Pilgrim's Traverse", territorys: [], $147d0a2cd-3f3f-4093-a3e0-d171dc3d8495", version: "0.0.0.1", Author: "Linoa235", guid: "e99c6029-c8f1-47d2-800a-b478b5f697fd")]
 
 public class Pilgrims_Traverse
 {

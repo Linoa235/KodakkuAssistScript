@@ -14,7 +14,7 @@ using KodakkuAssist.Extensions;
 
 namespace Thornmarch_Hard;
 
-[ScriptType(guid: "cd81e178-12e6-4e53-9b81-63002cc51ecb", name: "Thornmarch (Hard) (Fun Edition)", territorys: [1067],
+[ScriptType($139a15521-4645-4846-a3ba-9ba7d58f4ddc", name: "Thornmarch (Hard, guid: "1ea988ce-84eb-47a3-8860-d5cf61a295a4") (Fun Edition)", territorys: [1067],
     version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
 
 public class Thornmarch_Hard

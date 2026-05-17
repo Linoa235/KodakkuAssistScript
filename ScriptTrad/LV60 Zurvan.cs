@@ -14,8 +14,7 @@ using System.Threading.Tasks;
 
 namespace Zurvan;
 
-[ScriptType(guid: "214f8fbd-ad04-430f-8bba-fd7319581780", name: "Zurvan", territorys: [637],
-    version: "0.0.0.5", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV60 Zurvan", territorys: [], $1614631a2-a049-4df0-aaeb-c6f07f6e5a00", version: "0.0.0.1", Author: "Linoa235", guid: "cc50f1ba-c7e5-44f4-9f0a-3691f97b0f1f")]
 
 public class Zurvan
 {

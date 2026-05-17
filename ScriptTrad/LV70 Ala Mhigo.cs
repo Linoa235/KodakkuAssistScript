@@ -14,8 +14,8 @@ using System.Threading.Tasks;
 
 namespace Ala_Mhigo;
 
-[ScriptType(guid: "aa0ae191-da3f-48f1-9340-46a56cfeeabf", name: "Ala Mhigo", territorys: [1146],
-    version: "0.0.0.2", Author: "Linoa235", note: noteStr)]
+[ScriptType($185bca53d-8a32-4b31-babf-2898e0a2866d", name: "Ala Mhigo", territorys: [1146],
+    version: "0.0.0.2", Author: "Linoa235", note: noteStr, guid: "f8e0b0f5-3ee8-46b0-895c-af1a006ac119")]
 
 public class Ala_Mhigo
 {

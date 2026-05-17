@@ -14,8 +14,7 @@ using KodakkuAssist.Extensions;
 
 namespace Thornmarch_Extreme;
 
-[ScriptType(guid: "fc6a6125-4a1d-4669-be4c-9b375dc70ae0", name: "Thornmarch Extreme", territorys: [364],
-    version: "0.0.0.4", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV50 Thornmarch Extreme", territorys: [], guid: "ec22bc8a-75c9-4870-b1d8-d580571be2c1", version: "0.0.0.1", Author: "Linoa235")]
 
 public class ThornmarchExtreme
 {

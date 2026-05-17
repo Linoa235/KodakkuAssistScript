@@ -23,14 +23,7 @@ using Lumina.Excel.Sheets;
 
 namespace BakaWater77.M9N;
 
-[ScriptType(
-    name: "M9N",
-    territorys: new uint[] { 1320 },
-    guid: "9af9ac60-1d6e-4247-a144-c6273417fea9",
-    version: "0.0.0.9",
-    Author: "Linoa235",
-    note: null
-)]
+[ScriptType(name: "M9N", territorys: [], guid: "bd21de42-5fb2-43ab-8a4a-871319002818", version: "0.0.0.1", Author: "Linoa235")]
 public class M9N
 {
     public bool isText { get; set; } = true;

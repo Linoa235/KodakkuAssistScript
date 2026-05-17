@@ -13,8 +13,7 @@ using System.Threading.Tasks;
 
 namespace P11n;
 
-[ScriptType(guid: "07be068a-65ea-4fd9-a324-9ec5326bb04b", name: "P11N", territorys: [1151],
-    version: "0.0.0.2", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV90 Pandæmonium Asphodelos (Themis, guid: "6127899c-cbc8-4e84-9683-9ddce8e0e4d9")", territorys: [], $102b2bde4-c6d7-499f-9420-c39b10180428", version: "0.0.0.1", Author: "Linoa235")]
 
 public class P11n
 {

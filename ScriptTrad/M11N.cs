@@ -19,14 +19,7 @@ using System.Threading.Tasks;
 
 namespace BakaWater77.M11N;
 
-[ScriptType(
-       name: "M11N",
-       territorys: new uint[] { 1324 },
-       guid: "B0058EC8-4429-4BB7-B223-68DE8B115D04",
-       version: "0.0.0.1",
-       Author: "Linoa235",
-       note: null
-    )]
+[ScriptType(name: "M11N", territorys: [], guid: "a973aeb9-1c69-4d05-8c64-5c07b13fada0", version: "0.0.0.1", Author: "Linoa235")]
 public class ArcadiaCruiserweightM3
 {
     public bool isText { get; set; } = true;

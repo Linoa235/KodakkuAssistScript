@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 
 namespace the_Fractal_Continuum_Hard;
 
-[ScriptType(guid: "c76136e1-1b5b-4cfb-a677-4cc0917fa050", name: "The Fractal Continuum (Hard)", territorys: [743],
+[ScriptType($12ff0807c-c346-4cd6-9d5c-d0754d7c7648", name: "The Fractal Continuum (Hard, guid: "3f0a5b90-e08c-4b4d-ae32-8bdf956fdfc6")", territorys: [743],
     version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
 
 public class the_Fractal_Continuum_Hard

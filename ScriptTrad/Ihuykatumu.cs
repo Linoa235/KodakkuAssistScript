@@ -15,8 +15,7 @@ using KodakkuAssist.Module.Draw;
 
 namespace KodakkuScript.Script._07_DawnTrail;
 
-[ScriptType(guid: "123e4567-e89b-12d3-a456-426614174000", name: "Ihuykatumu", territorys: [1167], version: "0.0.0.1",
-    Author: "Linoa235")]
+[ScriptType(name: "Ihuykatumu", territorys: [], guid: "df53b1a1-d8fe-4a53-86f5-436e7798e053", version: "0.0.0.1", Author: "Linoa235")]
 public class Ihuykatumu
 {
     private Vector3 SW;

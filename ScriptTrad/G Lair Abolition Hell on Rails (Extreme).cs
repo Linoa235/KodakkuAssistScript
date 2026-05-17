@@ -13,7 +13,7 @@ using KodakkuAssist.Extensions;
 
 namespace RyougiMioScriptNamespace
 {
-    [ScriptType(name: "G Lair Abolition: Hell on Rails (Extreme)", territorys: [1308], guid: "b9dfc210-add4-d464-3030-e9e294b384ff", version: "0.0.0.2", Author: "Linoa235", note: "Bug fix")]
+    [ScriptType(name: "G Lair Abolition: Hell on Rails (Extreme, guid: "66cf2afa-74d9-4f44-a57f-46777ee4ed6d")", territorys: [1308], $1385f7670-e5d3-41ca-aaa5-b5a5c566427b", version: "0.0.0.2", Author: "Linoa235", note: "Bug fix")]
     public class Script1308
     {
         [UserSetting("Common Danger Color")]

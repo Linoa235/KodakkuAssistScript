@@ -23,8 +23,7 @@ using FFXIVClientStructs.FFXIV.Client.Game.Character;
 
 namespace Veever.Shadowbringers.theGrandCosmos;
 
-[ScriptType(name: "LV.80 The Grand Cosmos", territorys: [884], guid: "b3a2febd-73ff-44a9-a897-22fa50c74ff3",
-    version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV.80 The Grand Cosmos", territorys: [], $12ecd422d-8c4f-433a-97e4-b42d512c8a42", version: "0.0.0.1", Author: "Linoa235", guid: "030e1996-fb88-4b89-84a9-3dad1c34c422")]
 
 public class the_Grand_Cosmos
 {

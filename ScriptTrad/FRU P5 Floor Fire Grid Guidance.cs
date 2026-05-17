@@ -13,7 +13,7 @@ using System.Collections.Concurrent;
 
 namespace MyScriptNamespace
 {
-    [ScriptType(name: "FRU P5 Floor Fire Grid Guidance", territorys: [1238], guid: "A20DB976-B60D-E62D-B93E-A164275C13AD", version: "0.0.1.0", Author: "Linoa235")]
+    [ScriptType(name: "FRU P5 Floor Fire Grid Guidance", territorys: [], $16adc08ae-bdf8-45f3-a110-be32b256c178", version: "0.0.0.1", Author: "Linoa235", guid: "767a47d6-2adc-4583-9f4d-e1e29d7a6110")]
     public class FRUScript
     {
         [UserSetting("Floor Fire Safe Guidance Color")]

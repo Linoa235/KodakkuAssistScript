@@ -19,7 +19,7 @@ using KodakkuAssist.Module.GameEvent;
 
 namespace TsingNamespace.Normal.LittleLadiesDay2026
 {
-    [ScriptType(name: "2026 Little Ladies' Day Performance Cheer", territorys: [130], guid: "22cfc380-edc2-f441-f9f9-f9f212f2632f", version: "0.0.0.1", Author: "Linoa235")]
+    [ScriptType(name: "2026 Little Ladies' Day Performance Cheer", territorys: [], $12c571570-a8c4-4379-a6f1-b00bcaecee02", version: "0.0.0.1", Author: "Linoa235", guid: "b949d165-55c3-4d25-bfce-bbee6f4bb0f2")]
     public class LittleLadiesDay
     {
         [UserSetting("Performance Audience Status Refresh Reminder")]

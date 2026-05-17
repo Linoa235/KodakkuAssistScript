@@ -23,8 +23,7 @@ using FFXIVClientStructs.FFXIV.Client.UI;
 
 namespace Veever.DawnTrail.the_Underkeep;
 
-[ScriptType(name: "LV.100 The Underkeep", territorys: [1266], guid: "9b381347-ddbf-4f52-98a9-a63d6e0d69bd",
-    version: "0.0.0.4", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV.100 The Underkeep", territorys: [], $169887a85-aec7-43bf-b48a-6d56de3d7ab0", version: "0.0.0.1", Author: "Linoa235", guid: "863da5d3-7f00-490c-9be8-c3234a3ddf3a")]
 
 public class the_Underkeep
 {

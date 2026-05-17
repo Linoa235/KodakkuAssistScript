@@ -17,8 +17,7 @@ using System.Windows;
 
 namespace Veever.A_Realm_Reborn.LongLivetheQueen;
 
-[ScriptType(name: "LV.35 Long Live the Queen", territorys: [298], guid: "2279725d-b2c4-4624-b7c6-3ae514c19fa5",
-    version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV.35 Long Live the Queen", territorys: [], guid: "c6f8b453-9527-4de8-8907-c32dbea5859e", version: "0.0.0.1", Author: "Linoa235")]
 
 public class Long_Live_the_Queen
 {

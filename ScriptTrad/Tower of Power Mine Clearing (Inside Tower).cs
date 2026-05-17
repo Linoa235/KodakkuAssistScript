@@ -43,8 +43,8 @@ namespace KodakkuAssistXSZYYS
     }
 
     [ScriptType(
-        name: "Tower of Power Mine Clearing (Inside Tower)",
-        guid: "874D3ECF-BD6B-448F-BB42-AE7F082E4999",
+        name: "Tower of Power Mine Clearing (Inside Tower, guid: "f4c9e65f-aa98-4bca-8c32-25266f37682c")",
+        $1410ff93e-10eb-45bf-85a4-b593966d5cb1",
         territorys: [1252],
         version: "0.1.1",
         Author: "Linoa235",

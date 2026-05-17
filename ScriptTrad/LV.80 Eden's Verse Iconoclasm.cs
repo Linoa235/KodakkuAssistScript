@@ -24,8 +24,7 @@ using Lumina.Data.Structs;
 
 namespace Veever.Shadowbringers.Edens_Verse_Iconoclasm;
 
-[ScriptType(name: "LV.80 Eden's Verse: Iconoclasm", territorys: [904], guid: "7732767d-bfb3-4c96-9719-962ba10cec08",
-    version: "0.0.0.1", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV.80 Eden's Verse Iconoclasm", territorys: [], guid: "cb4f0d0a-1c6d-4236-a8d1-a427aed889bc", version: "0.0.0.1", Author: "Linoa235")]
 
 public class Edens_Verse_Iconoclasm
 {

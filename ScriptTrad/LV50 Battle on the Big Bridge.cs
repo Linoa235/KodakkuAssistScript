@@ -14,8 +14,7 @@ using KodakkuAssist.Extensions;
 
 namespace BattleOnTheBigBridgen;
 
-[ScriptType(guid: "3e4102cb-9410-44fd-85e8-d43a3bc25737", name: "Battle on the Big Bridge", territorys: [366],
-    version: "0.0.0.4", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV50 Battle on the Big Bridge", territorys: [], $144023b5b-42b5-48c4-92c5-fb91ff44722e", version: "0.0.0.1", Author: "Linoa235", guid: "731b9db2-8223-40f1-b797-fadf6985ab47")]
 
 public class BattleOnTheBigBridge
 {

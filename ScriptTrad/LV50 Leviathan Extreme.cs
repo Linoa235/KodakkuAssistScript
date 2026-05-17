@@ -14,8 +14,7 @@ using KodakkuAssist.Extensions;
 
 namespace the_Whorleater_Extreme;
 
-[ScriptType(guid: "07f20e0e-9463-4a10-9dd1-956fde6a9c46", name: "Leviathan Extreme", territorys: [359],
-    version: "0.0.0.4", Author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV50 Leviathan Extreme", territorys: [], guid: "b7a8188d-f392-4db2-b816-e7e6bebb8923", version: "0.0.0.1", Author: "Linoa235")]
 
 public class the_Whorleater_Extreme
 {
