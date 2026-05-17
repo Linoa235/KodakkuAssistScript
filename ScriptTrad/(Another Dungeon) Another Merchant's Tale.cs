@@ -12,7 +12,7 @@ using KodakkuAssist.Script;
 
 namespace RyougiMioScriptNamespace
 {
-    [ScriptType(name: "(Another Dungeon, guid: "fcd87c34-0bb0-49c2-8e22-e011cef0b2b8") Another Merchant's Tale", territorys: [1317], $18124d921-79bc-4497-92fb-a656ec837f42", version: "0.0.0.76", Author: "Linoa235", note: "Another Merchant's Tale test")]
+    [ScriptType(name: "(Another Dungeon) Another Merchant's Tale", territorys: [1317], guid: "fcd87c34-0bb0-49c2-8e22-e011cef0b2b8", version: "0.0.0.76", Author: "Linoa235", note: "Another Merchant's Tale test")]
     public class Script1317
     {
         #region Settings
