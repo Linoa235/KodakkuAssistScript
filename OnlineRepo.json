@@ -165,7 +165,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Action%20Area.cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.1:         [Test Version] Won\u0027t be updated for a while due to laziness, use as is for now.         Action area drawing, works in all scenarios.         Set appropriate brightness first and test with any skill.         Displacement skill prediction triggered by macros, e.g., [/e 15m] [/e 10mF] [/e 15mB]         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
 
@@ -230,7 +230,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Alexander%20-%20The%20Heart%20of%20the%20Creator%20(Lamebrix%20Strikebocks).cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.1:         Alexander - The Heart of the Creator (Lamebrix Strikebocks) Initial Drawing         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              581
@@ -269,7 +269,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/All%20Others.cs",
-        "Note":  "",
+        "Note":  "      v0.0.2.4     ---------------------------------------------------------     1. Enter /e vvfind + name; automatically finds the person you\u0027re looking for within range     2. To turn off navigation markers or other extra features, enter /e vvstop     3. Enter /e vvmove or /e vvfly to call vnav to go to a specified position (can also be triggered in method settings)     4. /e vvguid automatically generates a new GUID and copies it to clipboard     5. /e vvrot changes your own facing to the target\u0027s current facing (need to find target first using vvfind or vvselect, local only)     6. /e vvrotme [number] changes your own facing to a specified radian value     7. /e vvrottarget sets the target object\u0027s (player/pet/NPC) facing to your current facing (need to find target first using vvfind or vvselect, local only)     8. /e vvrottarget [number] sets the target object\u0027s (player/pet/NPC) facing to a specified radian (need to find target first using vvfind or vvselect, local only)     9. /e vvlist lists up to 10 nearby players     10. /e vvselect [number] selects a player listed by /vvlist as target     11. /e vvvvv authentication key, required to use additional features     ---------------------------------------------------------     The following features require a key:     1. /e vvtp      Duck Sect     ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
 
@@ -282,7 +282,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Aloalo%20Island%20Drawing%20-%20Guide.cs",
-        "Note":  "",
+        "Note":  "         Based on Maomao Nest Guide;         Mobs: Provides target filtering function, enabled by default, can be disabled in method settings.             â†‘ When the current group of mobs is not defeated, the next group of mobs cannot be targeted (Crab Boss group will be released when Shrimp auto-attacks).             â†‘ Tree grouping strategy follows MMW guide; all mobs will forcibly release target selection if triggered accidentally.         Boss 1 uses fusion method by default, can be modified in user settings.         Boss 2 provides facing correction function, can be enabled in user settings.         Boss 2 can set facing indicator color depth separately for double light orb + step floor fire.         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              1179,
@@ -296,7 +296,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Arcadia%20-%20Cruiser%20Zero%20.cs",
-        "Note":  "",
+        "Note":  "         Game8 strategy         Added CNServer strategy          ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              1257
@@ -309,7 +309,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/ASS%20%5BAnother%20Sil\u0027dihn%20Subterrane%5D.cs",
-        "Note":  "",
+        "Note":  "         Game8 strategy         Added CNServer strategy          ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              1257
@@ -322,7 +322,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Binding%20Coil%20of%20Bahamut%20(BLU%20Exclusive).cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.2:         Binding Coil of Bahamut Normal Difficulty Drawing         Adapted for BLU Morbol achievement         Currently supported: T5         Planned: T9 T13         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              196,
@@ -337,7 +337,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Byakko.cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.11:         LV70 Byakko Initial Drawing         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              746
@@ -350,7 +350,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Celestium.cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.5:         Celestium drawing and mechanic alerts, updated sporadically         If unable to update, delete and refresh to re-download         Currently supported floors: 18 [Blasting Duel]         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              796
@@ -363,7 +363,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Cenote%20Ja%20Ja%20Gural.cs",
-        "Note":  "",
+        "Note":  "     v0.0.0.4:     1. Cenote Ja Ja Gural drawing is based only on my own runs. No drawings for later Sky Arrow mechanics.     2. If you have footage of this, please DM me on Discord and I will add it to the drawings.     Duckmen.     ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              1209
@@ -376,7 +376,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/CoD%20(Chaotic)%20Cloud%20of%20Darkness.cs",
-        "Note":  "",
+        "Note":  "         Currently includes basic drawings and A/C team D2-4 waypoints (i.e., fixed swap to opposite platform group).         Inner platform group mechanics under development.         Please report any issues with an ARR log.         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              1241
@@ -389,7 +389,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/DawnTrail%20FRU.cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.12         Command mode is effective for P3 mechanic 2.         If command mode is enabled, melee-optimized waymarks will be applied. (Fixed MT left and D1 right, not MT left and ST right!)         Both tanks will receive guidance on the direction they need to face, regardless of which tank is baiting.         If issues occur, please provide feedback via ARR.         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              1238
@@ -480,7 +480,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Eden%20Ultimate%20EU.cs",
-        "Note":  "",
+        "Note":  "         Modified by Seal, using EU strategy, based on K\u0027s 1.0.0.0 as original version.         P1: Modified 4-line priority, Brightfire adjustment completed. Many thanks to @Ruru for help. Tower adjustment completed. Uses https://raidplan.io/plan/V0swEBYmpTP22HnK         P2: Modified Light Rampant priority, now Light Rampant towers cross top-bottom and top-left-top-right. Uses https://raidplan.io/plan/FG4cE9SQY4h5ryOT         P3: Corrected lamp navigation to fit EU positions.                  ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              1238
@@ -493,7 +493,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/EdenUltimate.cs",
-        "Note":  "",
+        "Note":  "         Eden Ultimate Preview Version P4 Complete         P3 floor fire positioning and water stack missing         P4 white circle indication missing         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              1238
@@ -559,7 +559,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Futures%20Rewritten%20Ultimate%20Additional%20Supplement.cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.3:         Futures Rewritten Ultimate Additional Supplement         Can be used simultaneously with Lyse\u0027s drawings and Lian\u0027s patch, no major conflicts.         Suggest turning everything off in method settings first, then enable as needed.         Some banner alerts may conflict - banners only show the first one that appears. You can disable unnecessary ones based on timeline.         Examples: [P4 Gaia Appearance Banner Countdown] conflicts with [P4 Edge of Oblivion AOE Alert] and Lyse\u0027s [P4 Akh Rhai Avoid Alert]. Please enable only one of the three.         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              1238
@@ -598,7 +598,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Gold%20Saucer%20-%20Cliffhanger.cs",
-        "Note":  "",
+        "Note":  "     v0.0.0.3:     1. Supports classic version of Cliffhanger     2. Bomb explosion range and timing are precise, refer to the drawing     3. TODO: Another version of Cliffhanger (will do when encountered)     4. Gold Saucer!! Saucer!!!!!!!     Duckmen.     ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              144
@@ -715,7 +715,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Latest%20Hottest%20Temporary%20Drawing.cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.8:         Latest hottest dungeon drawing, might be electric. Disable if you mind.         Will be deleted when someone releases an official version.         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              1307
@@ -728,7 +728,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.10%20Basic%20Training%20Enemy%20Parties.cs",
-        "Note":  "",
+        "Note":  "     v0.0.0.3:     1. Now supports text banner/TTS toggle/DR TTS toggle (make sure you have correctly installed the `DailyRoutines` plugin before using DR TTS toggle) (do not enable both TTS toggles at the same time)     Duckmen.     ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              214
@@ -741,7 +741,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.10%20Under%20the%20Armor.cs",
-        "Note":  "",
+        "Note":  "     v0.0.0.5:     1. Now supports banner text/TTS/DR TTS (ensure DailyRoutines plugin is properly installed before using DR TTS). Do not enable both TTS options simultaneously.     2. Added a switch. There\u0027s no TTS in this dungeon anyway, don\u0027t look.jpg     Duckmen.     ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              190
@@ -754,7 +754,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.100%20Guardian%20Arkveld%20(Extreme)%20The%20Windward.cs",
-        "Note":  "",
+        "Note":  "     v0.0.0.8     ----- Thanks to @Usami for the distance-based Cracked Crystal drawing method.-----     ----- Please read the notes before use and adjust user settings as needed. -----     1. If you need a draw or notice any issues, @ me on DC or DM me.     2. Left/Right notifies are **boss-relative** (based on you facing the boss),         not the boss model’s own left/right. Please keep this in mind.     3. This script follows the Game8 \u0026 子言 guide.     4. If you want WayMarkers, make sure ACT is running and the PostNamazu plugin is installed.     5. Most drawing depends on **party list order** — please make sure the party order is correct.     6. Cleaned up a few TTS after the drawings. If you need any of them, let me know and I’ll restore them.     7. Stack drawings may behave oddly if a healer goes down.     8. There may be some odd bugs with network lag.     9. Wyvern’s Weal now has both recommend and stack guide arrow.        The recommended guide arrow is shown in green, and the stack guide arrow is shown in purple.     10. Boss Model Scale and VFX Scale can be adjusted in User Settings, 1 is the Game default value.     11. You can now manually set your Role in the User Settings → Role Settings.         `默认defalutRole` follows KodakkuAssist’s Role order.     Duckmen.     ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              1306
@@ -767,7 +767,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.100%20Hells\u0027%20Kier%20Unreal.cs",
-        "Note":  "",
+        "Note":  "     v0.0.0.7:     1. This script uses the Kashi guide. Please adjust your! Kwek! party order before playing! (Very important, affects waypoint and mechanic announcements)     2. If you\u0027re too lazy to adjust or don\u0027t want waypoints that require party position detection, you can turn off the waypoint toggle in user settings     3. Added arena waymark setting in user settings (place ABCD markers at start) (requires ACT Namazu), may implement a method without Namazu in the future     4. Thought about an automatic rotation method for the transition, maybe one day (in the distant future)     5. If you need a draw for a mechanic or notice any issues, @ me on DC or DM me     Duckmen.     ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              1272
@@ -780,7 +780,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.100%20The%20Jade%20Stoa%20Unreal.cs",
-        "Note":  "",
+        "Note":  "     v0.0.0.4:     1. This script uses the Zi Yan guide. Please adjust your! Kwek! party order before playing! (Very important, affects waypoint and mechanic announcements)     2. If you\u0027re too lazy to adjust or don\u0027t want waypoints that require party position detection, you can turn off the waypoint toggle in user settings     Duckmen.     ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              1239
@@ -793,7 +793,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.100%20The%20Underkeep.cs",
-        "Note":  "",
+        "Note":  "     v0.0.0.4:     1. Continuously updating     2. Boss3 cross bomb drawing is incomplete, not yet available     3. If you need a draw or notice any issues, @ me on DC or DM me.     Duckmen.     ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              1266
@@ -806,7 +806,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.100%20Yuweyawata%20Field%20Station.cs",
-        "Note":  "",
+        "Note":  "     v0.0.2.1:     1. If there are any missing drawings (boss appearing in the south side nuclear explosion) or incorrect drawings, please @ me on discord and attach the arr file     Duckmen.     ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              1242
@@ -819,7 +819,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.100%20%5BThe%20Windward%20Wilds%5D.cs",
-        "Note":  "",
+        "Note":  "     v0.0.2.1:     1. If there are any missing drawings (boss appearing in the south side nuclear explosion) or incorrect drawings, please @ me on discord and attach the arr file     Duckmen.     ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              1242
@@ -832,7 +832,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.15%20Basic%20Training%20Enemy%20Strongholds.cs",
-        "Note":  "",
+        "Note":  "     v0.0.0.3:     1. Now supports text banner/TTS toggle/DR TTS toggle (make sure you have correctly installed the `DailyRoutines` plugin before using DR TTS toggle) (do not enable both TTS toggles at the same time)     Duckmen.     ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              215
@@ -845,7 +845,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.15%20Hero%20on%20the%20Half%20Shell.cs",
-        "Note":  "",
+        "Note":  "     v0.0.0.3:     1. Now supports text banner/TTS toggle/DR TTS toggle (make sure you have correctly installed the `DailyRoutines` plugin before using DR TTS toggle) (do not enable both TTS toggles at the same time)     Duckmen.     ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              216
@@ -858,7 +858,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.20%20Pulling%20Poison%20Posies.cs",
-        "Note":  "",
+        "Note":  "     v0.0.0.3:     1. Now supports text banner/TTS toggle/DR TTS toggle (make sure you have correctly installed the `DailyRoutines` plugin before using DR TTS toggle) (do not enable both TTS toggles at the same time)     Duckmen.     ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              191
@@ -871,7 +871,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.20%20Stinging%20Back.cs",
-        "Note":  "",
+        "Note":  "     v0.0.0.3:     1. Now supports text banner/TTS toggle/DR TTS toggle (make sure you have correctly installed the `DailyRoutines` plugin before using DR TTS toggle) (do not enable both TTS toggles at the same time)     2. Marker toggle and local toggle are in user settings, you can choose to turn them off or on (local enabled by default)     Duckmen.     ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              192
@@ -884,7 +884,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.25%20All\u0027s%20Well%20that%20Ends%20in%20the%20Well.cs",
-        "Note":  "",
+        "Note":  "     v0.0.0.3:     1. Now supports text banner/TTS toggle/DR TTS toggle (make sure you have correctly installed the `DailyRoutines` plugin before using DR TTS toggle) (do not enable both TTS toggles at the same time)     Duckmen.     ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              220
@@ -897,7 +897,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.25%20Flicking%20Sticks%20and%20Taking%20Names.cs",
-        "Note":  "",
+        "Note":  "     v0.0.0.3:     1. Now supports text banner/TTS toggle/DR TTS toggle (make sure you have correctly installed the `DailyRoutines` plugin before using DR TTS toggle) (do not enable both TTS toggles at the same time)     Duckmen.     ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              219
@@ -910,7 +910,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.28%20Haukke%20Manor.cs",
-        "Note":  "",
+        "Note":  "     v0.0.0.4:     1. Green markers indicate keys to pick up, red indicates do not pick up     2. If you need a draw for a mechanic or notice any issues, @ me on DC or DM me     3. If you want Namazu markers, make sure ACT is open and Namazu plugin is installed     Duckmen.     ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              1040
@@ -923,7 +923,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.30%20Annoy%20the%20Void.cs",
-        "Note":  "",
+        "Note":  "     v0.0.0.3:     1. Now supports text banner/TTS toggle/DR TTS toggle (make sure you have correctly installed the `DailyRoutines` plugin before using DR TTS toggle) (do not enable both TTS toggles at the same time)     2. Marker toggle and local toggle are in user settings, you can choose to turn them off or on (local enabled by default)     Duckmen.     ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              222
@@ -936,7 +936,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.30%20More%20than%20a%20Feeler.cs",
-        "Note":  "",
+        "Note":  "     v0.0.0.3:     1. Now supports text banner/TTS toggle/DR TTS toggle (make sure you have correctly installed the `DailyRoutines` plugin before using DR TTS toggle) (do not enable both TTS toggles at the same time)     2. Marker toggle and local toggle are in user settings, you can choose to turn them off or on (local enabled by default)     Duckmen.     ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              221
@@ -949,7 +949,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.35%20Long%20Live%20the%20Queen.cs",
-        "Note":  "",
+        "Note":  "     v0.0.0.3:     1. Now supports text banner/TTS toggle/DR TTS toggle (make sure you have correctly installed the `DailyRoutines` plugin before using DR TTS toggle) (do not enable both TTS toggles at the same time)     2. Marker toggle and local toggle are in user settings, you can choose to turn them off or on (local enabled by default)     Duckmen.     ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              298
@@ -962,7 +962,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.35%20Shadow%20and%20Claw.cs",
-        "Note":  "",
+        "Note":  "     v0.0.0.4:     1. Now supports text banner/TTS toggle/DR TTS toggle (make sure you have correctly installed the `DailyRoutines` plugin before using DR TTS toggle) (do not enable both TTS toggles at the same time)     2. Marker toggle and local toggle are in user settings, you can choose to turn them off or on (local enabled by default)     Duckmen.     ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              223
@@ -975,7 +975,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.40%20Solemn%20Trinity.cs",
-        "Note":  "",
+        "Note":  "     v0.0.0.3:     1. Now supports text banner/TTS toggle/DR TTS toggle (make sure you have correctly installed the `DailyRoutines` plugin before using DR TTS toggle) (do not enable both TTS toggles at the same time)     2. Marker toggle and local toggle are in user settings, you can choose to turn them off or on (local enabled by default)     Duckmen.     ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              300
@@ -988,7 +988,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.40%20Ward%20Up.cs",
-        "Note":  "",
+        "Note":  "     v0.0.0.4:     1. Now supports text banner/TTS toggle/DR TTS toggle (make sure you have correctly installed the `DailyRoutines` plugin before using DR TTS toggle) (do not enable both TTS toggles at the same time)     2. Marker toggle and local toggle are in user settings, you can choose to turn them off or on (local enabled by default)     Duckmen.     ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              299
@@ -1001,7 +1001,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.50%20Snowcloak.cs",
-        "Note":  "",
+        "Note":  "     v0.0.0.1     ----- Please read the notes before use and adjust user settings as needed. -----     1. If you need a draw or notice any issues, @ me on DC or DM me.     Duckmen.     ----------------------------------     ----- Please read the notes before use and adjust user settings as needed. -----     1. If you need a draw or notice any issues, @ me on DC or DM me.     Duckmen.     ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              1062
@@ -1014,7 +1014,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.60%20Aetherochemical%20Research%20Facility.cs",
-        "Note":  "",
+        "Note":  "     v0.0.0.7:     1. Now supports text banner/TTS toggle/DR TTS toggle (make sure you have correctly installed the `DailyRoutines` plugin before using DR TTS toggle) (do not enable both TTS toggles at the same time)     2. The underlying extensions of these previous scripts are currently too lazy to refactor (just add whatever)     Duckmen.     ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              1110
@@ -1027,7 +1027,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.60%20Alexander%20-%20The%20Breath%20of%20the%20Creator.cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.4:         1. Now supports text banner/TTS toggle/DR TTS toggle (in user settings) (Make sure DailyRoutines plugin is properly installed before using DR TTS toggle) (Do not enable both TTS toggles at the same time)         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              582
@@ -1040,7 +1040,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.60%20Alexander%20-%20The%20Burden%20of%20the%20Father.cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.4:         1. Now supports text banner/TTS toggle/DR TTS toggle (in user settings) (Make sure DailyRoutines plugin is properly installed before using DR TTS toggle) (Do not enable both TTS toggles at the same time)         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              583
@@ -1053,7 +1053,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.60%20Alexander%20-%20The%20Eyes%20of%20the%20Creator.cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.3         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              580
@@ -1066,7 +1066,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.60%20The%20Great%20Gubal%20Library%20(Hard).cs",
-        "Note":  "",
+        "Note":  "     v0.0.0.1     1. If you need a draw for a mechanic or notice any issues, @ me on DC or DM me.     2. Boss 1 knockback felt unnecessary to draw, so I just skipped it.     Duckmen     ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              578
@@ -1079,7 +1079,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.73%20Dohn%20Mheg.cs",
-        "Note":  "",
+        "Note":  "     v0.0.0.7:     1. Now supports text banner/TTS toggle/DR TTS toggle (make sure you have correctly installed the `DailyRoutines` plugin before using DR TTS toggle) (do not enable both TTS toggles at the same time)     2. The underlying extensions of these previous scripts are currently too lazy to refactor (just add whatever)     Duckmen.     ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              821
@@ -1092,7 +1092,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.75%20The%20Qitana%20Ravel.cs",
-        "Note":  "",
+        "Note":  "     v0.0.0.2:     1. If you need a draw for a mechanic or notice any issues, @ me on DC or DM me.     2. Only tested using a single replay, drawings may not be 100% accurate.     Duckism.     ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              823
@@ -1105,7 +1105,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.77%20%5BMalikahs%20Well%5D.cs",
-        "Note":  "",
+        "Note":  "     v0.0.0.2:     1. If you need a draw for a mechanic or notice any issues, @ me on DC or DM me.     2. Only tested using a single replay, drawings may not be 100% accurate.     Duckism.     ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              823
@@ -1118,7 +1118,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.80%20Eden\u0027s%20Verse%20Iconoclasm.cs",
-        "Note":  "",
+        "Note":  "     v0.0.0.1:     1. This script was tested using only one ARR replay. If you encounter drawing issues, please @ me on Discord and provide the ARR replay.     Duckmen.     ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              904
@@ -1131,7 +1131,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.80%20The%20Grand%20Cosmos.cs",
-        "Note":  "",
+        "Note":  "     v0.0.0.3:     1. Now supports text banner/TTS toggle/DR TTS toggle (make sure you have correctly installed the `DailyRoutines` plugin before using DR TTS toggle) (do not enable both TTS toggles at the same time)     2. Marker toggle and local toggle are in user settings, you can choose to turn them off or on (local enabled by default)     3. Someday! Maybe! Will add new broom purple circle detection method     4. Someday! Maybe! Will add new Boss2 seed detection method     5. Boss3 Crystal Lamp marker not implemented, too big to miss     6. Supports dungeon waypoint navigation, red lines indicate aggro range     7. If you feel the waypoints are insufficient, please let me know on Discord (24 waypoints should be enough (x))     8. Don\u0027t leave the instance immediately, there may beæ®‹ç•™     Duckmen.     ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              884
@@ -1144,7 +1144,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.80%20The%20Seat%20of%20Sacrifice.cs",
-        "Note":  "",
+        "Note":  "     v0.0.0.3:     1. Supports classic version of Cliffhanger     2. Bomb explosion range and timing are precise, refer to the drawing     3. TODO: Another version of Cliffhanger (will do when encountered)     4. Gold Saucer!! Saucer!!!!!!!     Duckmen.     ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              144
@@ -1157,7 +1157,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.81%20The%20Tower%20of%20Zot.cs",
-        "Note":  "",
+        "Note":  "     v0.0.0.4:     1. Now supports text banner/TTS toggle/DR TTS toggle (make sure you have correctly installed the `DailyRoutines` plugin before using DR TTS toggle) (do not enable both TTS toggles at the same time)     2. Marker toggle and local toggle are in user settings, you can choose to turn them off or on (local enabled by default)     3. After killing Boss1, a door waypoint is generated. Green circles show the door that opens after killing adds (prevents disorientation)     4. Boss2 marker deletion currently has a bug, but with normal DPS the boss will be almost dead by then (one Attack1 marker doesn\u0027t affect much), so maybe it will be fixed eventually     5. Strongly recommend using local markers by default because they are instant (inhuman)     6. Recommended to turn off Cactbot announcement features to prevent duplicate announcements     Duckmen.     ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              952
@@ -1170,7 +1170,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.90%20The%20Dead%20Ends.cs",
-        "Note":  "",
+        "Note":  "     v0.0.0.1     1. If you need a draw for a mechanic or notice any issues, @ me on DC or DM me.     2. Boss 2 knockback distance is uncertain due to lack of examples.          If you have ARR without anti-knockback used, please send it to me.     Duckmen     ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              973
@@ -1183,7 +1183,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.90%20The%20Final%20Day.cs",
-        "Note":  "",
+        "Note":  "     v0.0.0.1     1. If you need a draw for a mechanic or notice any issues, @ me on DC or DM me.     Duckmen     ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              997
@@ -1196,7 +1196,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.90%20The%20Minstrel\u0027s%20Ballad%20Endsinger\u0027s%20Aria%20(Unrestricted).cs",
-        "Note":  "",
+        "Note":  "     v0.0.0.6:     1. Now supports banner text/TTS/DR TTS (ensure DailyRoutines plugin is properly installed before using DR TTS). Do not enable both TTS options simultaneously.     2. The underlying extensions of these old scripts are too lazy to refactor (just adding whatever I can).     Duckmen.      ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              998
@@ -1209,7 +1209,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.90%20The\u0027Dead%20Ends.cs",
-        "Note":  "",
+        "Note":  "     v0.0.0.1     1. If you need a draw for a mechanic or notice any issues, @ me on DC or DM me.     2. Boss 2 knockback distance is uncertain due to lack of examples.          If you have ARR without anti-knockback used, please send it to me.     Duckmen     ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              973
@@ -1222,7 +1222,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.99%20Everkeep.cs",
-        "Note":  "",
+        "Note":  "     v0.0.0.9:     1. Now supports text banner/TTS toggle/DR TTS toggle (in user settings) (make sure you have correctly installed the `DailyRoutines` plugin before using DR TTS toggle) (do not enable both TTS toggles at the same time)     Duckmen.     2. Now supports all Vorpal Trail cases. If you still encounter missing/incorrect drawings, please DM me on Discord with the replay (thank you very much)     ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              1200
@@ -1235,7 +1235,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV100%207.4%20Mistwake.cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.2:         Mistwake Initial Drawing         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              1314
@@ -1248,7 +1248,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV100%207.5%20Windurst%20The%20Third%20Walk%20.cs",
-        "Note":  "",
+        "Note":  "         LV100 7.5 Windurst: The Third Walk v0.0.0.4:         Initial drawing, incomplete, makeshift for now!         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              1368
@@ -1261,7 +1261,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV100%207.5%20Windurst%20The%20Third%20Walk.cs",
-        "Note":  "",
+        "Note":  "         LV100 7.5 Windurst: The Third Walk v0.0.0.4:         Initial drawing, incomplete, makeshift for now!         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              1368
@@ -1274,7 +1274,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV100%20Mica%20the%20Magical%20Mu%20Dressed-Up%20Parade%2C%20All%20Rejoice.cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.2:         LV100 Special FATE Drawing         Mica the Magical Mu: Dressed-Up Parade, All Rejoice         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              1192
@@ -1287,7 +1287,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV100%20Omicron%20Recall%20Destroy%20the%20Omicron%20Weapon%20Chi.cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.2:         LV90 Special FATE Drawing         Omicron Recall: Destroy the Omicron Weapon Chi         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              960
@@ -1300,7 +1300,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV100%20San%20d\u0027Oria%20The%20Second%20Walk.cs",
-        "Note":  "",
+        "Note":  "     v0.0.0.4     1. If you need a draw for a mechanic or notice any issues, @ me on DC or DM me.     2. Boss 1 may have an issue where the double-arm Rect AOE lasts a bit too long.          (Not a big deal so I\u0027m too lazy to fix it.)     3. Boss 3 does not auto-use anti-knockback for tankbuster knockbacks.      4. In the initial version, Boss 2\u0027s Energy Ray (reflect laser) and Boss 4\u0027s Duplicate may have drawing issues (wrong/missing).          If you encounter this, please provide an ARR for feedback on DC.     5. Boss 2\u0027s floor drawing has a small issue â€” just ignore it.     6. If the game crashes, please report it in the dc channel.          If no ARR is available, let me know roughly which mechanic and the time it happened, and provide your [dalamud.log].     Duckmen     ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              1304
@@ -1313,7 +1313,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV100%20The%20Meso%20Terminal.cs",
-        "Note":  "",
+        "Note":  "     v0.0.0.4     1. If you need a draw for a mechanic or notice any issues, @ me on DC or DM me.     2. Boss 3: The circle draw for Bombardment may fail to draw if you disconnect     Duckmen     ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              1292
@@ -1326,7 +1326,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV100%20The%20Serpentlord%20Seethes%20Duel%20in%20the%20Wilds.cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.3:         LV100 Special FATE Drawing         The Serpentlord Seethes: Duel in the Wilds         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              1190
@@ -1339,7 +1339,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV50%20A%20Relic%20Reborn%20the%20Hydra.cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.2:         LV50 A Relic Reborn: the Hydra Initial Drawing         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              369
@@ -1352,7 +1352,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV50%20Battle%20in%20the%20Big%20Keep.cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.2:         LV50 Battle in the Big Keep Initial Drawing         Please choose one TTS option in User Settings, do not enable both.         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              396
@@ -1365,7 +1365,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV50%20Battle%20on%20the%20Big%20Bridge.cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.3:         LV50 Battle on the Big Bridge Initial Drawing         Please choose one TTS option in User Settings, do not enable both.         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              366
@@ -1378,7 +1378,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV50%20Dhorme%20Chimera.cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.5:         LV50 Dhorme Chimera Initial Drawing         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              368
@@ -1391,7 +1391,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV50%20Garuda%20(Hard).cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.1:         LV50 Garuda (Hard) Initial Drawing         Please choose one TTS option in User Settings, do not enable both.         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              294
@@ -1404,7 +1404,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV50%20Leviathan%20Extreme.cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.3:         LV50 Leviathan Extreme Initial Drawing         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              359
@@ -1417,7 +1417,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV50%20Main%20Scenario%20Roulette.cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.2:         LV50 Main Scenario Roulette Initial Drawing         DR Helper requires Daily Routines plugin to be properly installed.         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              1043,
@@ -1432,7 +1432,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV50%20Nabriales.cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.3:         LV50 Nabriales Initial Drawing         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              426
@@ -1445,7 +1445,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV50%20Shiva.cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.3:         LV50 Shiva Initial Drawing         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              377
@@ -1458,7 +1458,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV50%20The%20Bowl%20of%20Embers%20(Hard).cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.4:         LV50 The Bowl of Embers (Hard) Initial Drawing         Includes LV20 The Bowl of Embers floor fire eruption.         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              292,
@@ -1472,7 +1472,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV50%20The%20Bowl%20of%20Embers%20Hard.cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.4:         LV50 The Bowl of Embers (Hard) Initial Drawing         Includes LV20 The Bowl of Embers floor fire eruption.         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              292,
@@ -1486,7 +1486,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV50%20The%20Striking%20Tree%20(Hard).cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.2:         LV50 The Striking Tree (Hard) Initial Drawing         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              374
@@ -1499,7 +1499,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV50%20Thornmarch%20(Hard).cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.2:         LV50 Thornmarch (Hard)         Pure fun, no real meaning. Feel free to skip if you don\u0027t like it.         Voice lines currently work for CN version, not adapted for other languages yet.         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              1067
@@ -1512,7 +1512,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV50%20Thornmarch%20Extreme.cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.3:         LV50 Thornmarch Extreme Initial Drawing         You can basically clear without reading guides. No role restrictions. Disable unnecessary hints yourself.         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              364
@@ -1525,7 +1525,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV50%20Urth\u0027s%20Fount.cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.2:         LV50 Urth\u0027s Fount Initial Drawing         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              394
@@ -1538,7 +1538,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV55%20The%20Aery.cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.3:         LV55 The Aery Initial Drawing         Please choose one TTS option in User Settings, do not enable both.         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              1065
@@ -1551,7 +1551,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV60%20Alexander%20-%20The%20Arm%20of%20the%20Son%20(Quickthinx%20Allthoughts).cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.1:         LV60 Alexander - The Arm of the Son (Quickthinx Allthoughts) Initial Drawing         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              522
@@ -1564,7 +1564,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV60%20Alexander%20-%20The%20Cuff%20of%20the%20Son%20(Living%20Liquid).cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.2:         LV60 Alexander - The Cuff of the Son (Living Liquid) Initial Drawing         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              444
@@ -1577,7 +1577,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV60%20Alexander%20-%20The%20Fist%20of%20the%20Son%20(Ratfinx%20Twinkledinks).cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.1:         LV60 Alexander - The Fist of the Son (Ratfinx Twinkledinks) Initial Drawing         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              520
@@ -1590,7 +1590,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV60%20Bismarck%20Extreme.cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.1:         LV60 Bismarck Extreme Initial Drawing         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              447
@@ -1603,7 +1603,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV60%20Saint%20Mocianne\u0027s%20Arboretum.cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.1:         LV60 Saint Mocianne\u0027s Arboretum Initial Drawing         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              511
@@ -1616,7 +1616,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV60%20Sephirot.cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.1:         LV60 Sephirot Initial Drawing         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              517
@@ -1629,7 +1629,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV60%20The%20Minstrel\u0027s%20Ballad%20Nidhogg\u0027s%20Rage.cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.3:         LV60 The Minstrel\u0027s Ballad: Nidhogg\u0027s Rage Initial Drawing         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              559
@@ -1642,7 +1642,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV60%20Zurvan.cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.4:         LV60 Zurvan Initial Drawing         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              637
@@ -1655,7 +1655,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV63%20Susano%20.cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.3:         LV63 Susano Initial Drawing         Supports DR auto QTE         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              674
@@ -1668,7 +1668,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV70%20Ala%20Mhigo.cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.1:         LV70 Ala Mhigo Initial Drawing         Please choose one TTS option in User Settings, do not enable both.         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              1146
@@ -1681,7 +1681,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV70%20Emanation.cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.3:         LV70 Emanation Initial Drawing         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              719
@@ -1694,7 +1694,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV70%20Omega%20Alphascape%20(Omega).cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.3:         LV70 Omega: Alphascape (Omega) Initial Drawing         Supports DR auto-use of Task Command on Lightning Discharge Points.         (Default is ON. Ensure you have DailyRoutines plugin v1.4.9.0 or higher properly installed.)         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              800
@@ -1707,7 +1707,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV70%20Omega%20Deltascape%20(Exdeath).cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.1:         LV70 Omega: Deltascape (Exdeath) Drawing         Modified and supplemented based on JiaXX\u0027s drawing         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              694
@@ -1720,7 +1720,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV70%20Omega%20Sigmascape%20(Phantom%20Train).cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.1:         LV70 Omega: Sigmascape (Phantom Train) Initial Drawing         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              748
@@ -1733,7 +1733,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV70%20Saint%20Mocianne\u0027s%20Arboretum%20(Hard)%20.cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.3:         LV70 Saint Mocianne\u0027s Arboretum (Hard) Initial Drawing         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              788
@@ -1746,7 +1746,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV70%20Tsukuyomi.cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.1:         LV70 Tsukuyomi Initial Drawing         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              778
@@ -1759,7 +1759,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV80%20A%20Finale%20Most%20Formidable%20The%20Secret%20Weapon.cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.3:         LV80 Special FATE Drawing         A Finale Most Formidable: The Secret Weapon         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              814
@@ -1772,7 +1772,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV80%20Archaeotania%20The%20Head%2C%20the%20Tail%2C%20the%20Whole%20Damned%20Thing.cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.4:         LV80 Special FATE Drawing         Archaeotania: The Head, the Tail, the Whole Damned Thing         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              818
@@ -1785,7 +1785,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV80%20Eden\u0027s%20Gate%20Descent%20(Voidwalker).cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.1:         LV80 Eden\u0027s Gate: Descent (Voidwalker) Initial Drawing         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              850
@@ -1798,7 +1798,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV80%20Eden\u0027s%20Gate%20Resurrection%20(Eden%20Prime).cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.2:         LV80 Eden\u0027s Gate: Resurrection (Eden Prime) Initial Drawing         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              849
@@ -1811,7 +1811,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV80%20Eden\u0027s%20Promise%20Eternity.cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.2:         LV80 Eden\u0027s Promise: Eternity (Eden\u0027s Promise) Initial Drawing         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              945
@@ -1824,7 +1824,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV80%20Eden\u0027s%20Promise%20Litany%20(Shadowkeeper).cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.2:         LV80 Eden\u0027s Promise: Litany (Shadowkeeper) Initial Drawing         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              943
@@ -1837,7 +1837,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV80%20Eden\u0027s%20Promise%20Umbra%20(Conceived%20Cloud%20of%20Darkness).cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.1:         LV80 Eden\u0027s Promise: Umbra (Conceived Cloud of Darkness) Initial Drawing         TTS: Please choose one option in User Settings, do not enable both.         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              942
@@ -1850,7 +1850,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV80%20Eden\u0027s%20Verse%20Refulgence%20(Conceived%20Shiva).cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.3:         LV80 Eden\u0027s Verse: Refulgence (Conceived Shiva) Initial Drawing         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              905
@@ -1863,7 +1863,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV80%20The%20Twinning.cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.2:         LV80 The Twinning Initial Drawing         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              840
@@ -1876,7 +1876,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Lv87%20%5BKtisis%20Hyperboreia%5D.cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.2:         LV80 The Twinning Initial Drawing         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              840
@@ -1889,7 +1889,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV90%20Beast%20Path%20Deity%20Worship%20False%20God%20Descends.cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.4:         LV90 Special FATE Drawing         Beast Path Deity Worship: False God Descends         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              957
@@ -1902,7 +1902,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV90%20Pand%C3%A6monium%20Asphodelos%20(Pandaemonium).cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.2:         LV90 PandÃ¦monium: Asphodelos (Pandaemonium) Initial Drawing         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              1149
@@ -1915,7 +1915,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV90%20Pand%C3%A6monium%20Asphodelos%20(Themis).cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.1:         LV90 PandÃ¦monium: Asphodelos (Themis) Initial Drawing         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              1151
@@ -1928,7 +1928,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV90%20Pand%C3%A6monium%20Asphodelos.cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.2:         LV90 PandÃ¦monium: Asphodelos (Pandaemonium) Initial Drawing         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              1149
@@ -1941,7 +1941,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV90%20Pand%C3%A6monium%20Asphodelos1.cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.1:         LV90 PandÃ¦monium: Asphodelos (Themis) Initial Drawing         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              1151
@@ -2085,7 +2085,7 @@
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/M3S.cs",
         "Note":  "",
-        "UpdateInfo":  "",
+        "UpdateInfo":  "         Fixed P2 ground bomb processing position issues caused by plugin updates         ",
         "TerritoryIds":  [
                              1230
                          ]
@@ -2123,8 +2123,8 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/M5S.cs",
-        "Note":  "",
-        "UpdateInfo":  "",
+        "Note":  "                  ",
+        "UpdateInfo":  "         1. Added Cross Reaper floor fire drawing         2. Added Tetris safe zone drawing         ",
         "TerritoryIds":  [
                              1257
                          ]
@@ -2136,8 +2136,8 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/M6S.cs",
-        "Note":  "",
-        "UpdateInfo":  "",
+        "Note":  "         M6S Extended Drawing Script         Currently includes the following:         1. Extended drawing (not all mechanics, use with Usami script)         2. Zoo phase tank pull route indicator         3. Zoo round 2 fish bait auto-selection (requires setting left/right), round 4 fish auto-selection (based on role assignment)         4. Zoo phase melee auto-target horse selection         ",
+        "UpdateInfo":  "         1. Added zoo round 4 horse selection         ",
         "TerritoryIds":  [
                              1259
                          ]
@@ -2175,7 +2175,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Mistwake%20lvl%20100%20.cs",
-        "Note":  "",
+        "Note":  "     v0.0.0.1     ----- Please read the notes before use and adjust user settings as needed. -----     ----- Please support Tetora! Meow! Thank you! Meow! -----     1. If you need a draw or notice any issues, @ me on DC or DM me.     2. The safe zone behind the rock during Boss1 not be perfectly precise. Please adjust your position as needed during the duty.     Duckmen.     ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              1314
@@ -2188,7 +2188,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/MtGulg.cs",
-        "Note":  "",
+        "Note":  "     v0.0.0.2     1. If you need a draw for a mechanic or notice any issues, @ me on DC or DM me.     Duckmen     ------------------------------     1. Si necesita un dibujo para una mecÃ¡nica o nota algÃºn problema, @ me en DC o envÃ­ame un MD.     Duckmen     ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              822
@@ -2201,7 +2201,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/NecronEx%20%5BThe%20Eternal%20Darkness%20Extreme%5D.cs",
-        "Note":  "",
+        "Note":  "     v0.0.0.2     1. If you need a draw for a mechanic or notice any issues, @ me on DC or DM me.     Duckmen     ------------------------------     1. Si necesita un dibujo para una mecÃ¡nica o nota algÃºn problema, @ me en DC o envÃ­ame un MD.     Duckmen     ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              822
@@ -2240,7 +2240,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Omega%20Protocol%20Ultimate%20Deluxe%20Edition.cs",
-        "Note":  "",
+        "Note":  "         Omega Protocol Ultimate (Based on K\u0027s original script with added P5 second/third trios, P6 guidance)         Thanks to Usami for P5 first trio guidance         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              1122
@@ -2253,7 +2253,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Omega-ProtocolUltimate.cs",
-        "Note":  "",
+        "Note":  "         Omega Protocol Ultimate Verification Battle         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              1122
@@ -2318,7 +2318,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/OmegaProtocolUltimate.cs",
-        "Note":  "",
+        "Note":  "         欧米茄验证绝境战         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              1122
@@ -2405,7 +2405,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Palace%20of%20the%20Dead%20(Version%20compl%C3%A8te).cs",
-        "Note":  "",
+        "Note":  "         v0.0.1.1:         Palace of the Dead Drawing         Note: Floor numbers in method settings are only for separation, not batch toggles.         Please bring ARR feedback if issues occur!         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              561,
@@ -2437,7 +2437,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Palace%20of%20the%20Dead.cs",
-        "Note":  "",
+        "Note":  "         v0.0.1.1:         Palace of the Dead Drawing         Note: Floor numbers in method settings are only for separation, not batch toggles.         Please bring ARR feedback if issues occur!         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              561,
@@ -2469,7 +2469,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Pilgrim\u0027s%20Traverse.cs",
-        "Note":  "",
+        "Note":  "         v0.0.1.91:         Pilgrim\u0027s Traverse Basic Drawing         Changelog on Discord, please provide ARR recording if issues occur         Note: Layer numbers in method settings are foråˆ†å‰²çº¿ effects only, not batch switches         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              1281,
@@ -2493,7 +2493,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/PVPAction.cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.8:         PVP skill drawing, available on all maps, no regional restrictions.         Recommended to go through settings first and disable unnecessary features.         Remember to save after changing user settings!         [Only apply to enemy target markers] is for frontlines, usually marked with x on targets.         [Instant skill range prediction] requires manual macro trigger.         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
 
@@ -2549,7 +2549,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Rubicante.cs",
-        "Note":  "",
+        "Note":  "     v0.0.0.2:     Duckmen.     ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              1095
@@ -2562,8 +2562,8 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/SimpleScript.cs",
-        "Note":  "",
-        "UpdateInfo":  "",
+        "Note":  "         这是一个提示文本.         他有多行显示.         请在这里放置你的提示文本         ",
+        "UpdateInfo":  "         这里是更新信息.         他有多行显示.         请在这里放置你的更新信息         ",
         "TerritoryIds":  [
                              179,
                              979
@@ -2589,7 +2589,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Tam-Tara%20Deepcroft%20(Hard).cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.1:         LV50 Tam-Tara Deepcroft (Hard) Initial Drawing         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              373
@@ -2641,7 +2641,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/The%20Borderland%20Ruins%20(Siege%20Battle).cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.3:         The Borderland Ruins (Siege Battle) Partial Drawing         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              1273
@@ -2654,7 +2654,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/The%20Clyteum.cs",
-        "Note":  "",
+        "Note":  "     v0.0.0.2     ----- Please read the notes before use and adjust user settings as needed. -----     1. If you need a draw or notice any issues, @ me on DC or DM me.     2. English version will be added in a future update, I\u0027ll update it when XIV strings comp is updated.     3. Mobs and some details will be added in future updates.     Duckmen.     ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              1345
@@ -2706,7 +2706,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/The%20Forbidden%20Land%2C%20Eureka%20-%20The%20Baldesion%20Arsenal.cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.3:         The Forbidden Land, Eureka - The Baldesion Arsenal Initial Drawing         [WIP] Not finished, not tested, WILL be electric. If you\u0027re a chad, record a video for me.         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              827
@@ -2719,7 +2719,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/The%20Fractal%20Continuum%20(Hard).cs",
-        "Note":  "",
+        "Note":  "         v0.0.0.2:         The Fractal Continuum (Hard) Drawing         Note: Boss 2 Triad and Final Boss Light Pillar mechanics not battle-tested. Please provide feedback on ARR if issues.         ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              743
@@ -2798,7 +2798,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/The_Wreath_of_Snakes_Unreal.cs",
-        "Note":  "",
+        "Note":  "     v0.0.0.1     1. If you need a draw or notice any issues, @ me on DC or DM me.     2. For the Forbidden Arts Stack, both healers are hard-locked draw        (if both healers die, itâ€™s GG / pray to Hydaelyn xd).     3. Tower positions are as follows:           MT / D1    ST / D2           H1 / D3    H2 / D4     4. EX trial draw are not fully implemented yet (missing skill IDs â€” honestly just lazy,         will add them one day).     5. PostNamazu markers default to standard N/E/S/W (ABCD).     Duckmen.     ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              825,
@@ -2960,7 +2960,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Zelenia%20Extreme.cs",
-        "Note":  "",
+        "Note":  "         Game8 strategy, plug and play          ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              1271
@@ -2973,7 +2973,7 @@
         "Author":  "Linoa235",
         "Repo":  "",
         "DownloadUrl":  "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/Zodiark%20%5BExtreme%5D.cs",
-        "Note":  "",
+        "Note":  "         Game8 strategy, plug and play          ",
         "UpdateInfo":  "",
         "TerritoryIds":  [
                              1271
