@@ -14,7 +14,7 @@ using KodakkuAssist.Module.Draw;
 
 namespace KodakkuScript.Script._05_Shadowbringers;
 
-[ScriptType(guid: "5bb50691-7d7a-416a-ab88-a3e1dd8a5c45",name:"E11n", territorys: [944], version: "0.0.0.1", 
+[ScriptType(guid: "59d238eb-de7e-4780-9022-2182226f47d5",name:"E11n", territorys: [944], version: "0.0.0.1", 
     author: "Linoa235")]
 public class E11n
 {
