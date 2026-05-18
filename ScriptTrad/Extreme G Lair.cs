@@ -24,7 +24,7 @@ namespace BakaWater77.æžæ ¼èŽ±æ¨æ‹‰;
 [ScriptType(
    name: "Extreme G Lair",
    territorys: new uint[] { 1308 },
-  guid: "3b0dbbec-7608-40d8-84c7-dfeddea93bfc",
+  guid: "5ed42145-3ab4-4ad3-8f02-24548465a19f",
    version: "0.0.0.3",
    author: "Linoa235",
    note: null
