@@ -2013,8 +2013,8 @@
     "TerritoryIds": [1002, 1004, 1006, 1008]
   },
   {
-    "Name": "Palace of the Dead",
-    "Guid": "81099d8c-c812-4d22-8347-48ca191d0029",
+    "Name": "Palace of the Dead (Version complète)",
+    "Guid": "c4c6af76-ec75-4508-8801-a2fa80d9d67d",
     "Version": "0.0.1.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -2025,7 +2025,7 @@
   },
   {
     "Name": "Palace of the Dead",
-    "Guid": "90909e42-d6c9-4efa-8ffc-37ececeb65e2",
+    "Guid": "f034491f-c57b-4aa9-be88-50f157c9c94b",
     "Version": "0.0.1.1",
     "Author": "Linoa235",
     "Repo": "",
