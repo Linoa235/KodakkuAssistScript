@@ -1,7 +1,7 @@
 [
   {
     "Name": "(Another Dungeon) Another Merchant's Tale",
-    "Guid": "a51a6d05-4e82-4260-90b4-e56b656ab9bd",
+    "Guid": "b066e07a-6e2c-4eed-a3e8-f527f0e7e0e0",
     "Version": "0.0.0.76",
     "Author": "Linoa235",
     "Repo": "",
@@ -12,7 +12,7 @@
   },
   {
     "Name": "(M10S)AAC Heavyweight M2 (Savage)",
-    "Guid": "f73f6702-7d0a-410f-b884-922f15f1611f",
+    "Guid": "32944670-cc34-406c-97ea-d3eb998954ac",
     "Version": "0.1.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -23,7 +23,7 @@
   },
   {
     "Name": "(M11S)AAC Heavyweight M3 (Savage)",
-    "Guid": "e5f7b1a1-26f0-498f-88d5-a9c5016c3b64",
+    "Guid": "134d1c11-e4f4-4ee5-806b-70a8f7234e3f",
     "Version": "0.1.5.0",
     "Author": "Linoa235",
     "Repo": "",
@@ -34,7 +34,7 @@
   },
   {
     "Name": "(M9S)AAC Heavyweight M1 (Savage)",
-    "Guid": "e9a5fb42-39b9-4ba9-a54b-d65411da0b75",
+    "Guid": "c297dcc8-1c89-4d0c-81ec-071c0fbb7732",
     "Version": "1.0.0.0",
     "Author": "Linoa235",
     "Repo": "",
@@ -45,7 +45,7 @@
   },
   {
     "Name": "2026 Little Ladies' Day Performance Cheer",
-    "Guid": "b86c778b-b21e-45dd-9188-3e479ced9663",
+    "Guid": "2aaaa0bc-901c-4b4f-9eb5-d0befe86f30a",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -56,7 +56,7 @@
   },
   {
     "Name": "AAC Cruiserweight M1",
-    "Guid": "29dea0bc-25e2-4bb3-9b2c-e2990e562457",
+    "Guid": "507054ef-1490-472f-b154-865df0b00fd1",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -67,7 +67,7 @@
   },
   {
     "Name": "AAC Cruiserweight M2",
-    "Guid": "bae53eb3-4804-430b-8721-305c13302137",
+    "Guid": "4080a3e4-17de-4b50-8fa7-9efa3a43469b",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -78,7 +78,7 @@
   },
   {
     "Name": "AAC Cruiserweight M3",
-    "Guid": "ffdfdc83-4ff1-4e61-a75c-e9649db6c550",
+    "Guid": "d140ad01-2533-4c5a-bdab-0a0c5ffe696f",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -89,7 +89,7 @@
   },
   {
     "Name": "AAC Cruiserweight M4 (Savage)",
-    "Guid": "e536edcb-14da-4683-821e-e9996f3024f6",
+    "Guid": "da552e5a-64cf-423d-84b6-9ddccba4467d",
     "Version": "0.0.0.35",
     "Author": "Linoa235",
     "Repo": "",
@@ -100,7 +100,7 @@
   },
   {
     "Name": "AAC Cruiserweight M4",
-    "Guid": "e7bb0664-e0b7-457c-a5ef-932f7cac8d34",
+    "Guid": "2a007969-20b2-4168-b77d-67fe80834603",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -111,7 +111,7 @@
   },
   {
     "Name": "Abyssos The Eighth Circle (P8)",
-    "Guid": "05e7f8c2-2f5d-4b34-8c56-5fa6f24bf211",
+    "Guid": "68209c64-ea8b-4962-80cc-18b3a655f9de",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -122,7 +122,7 @@
   },
   {
     "Name": "Abyssos The Seventh Circle",
-    "Guid": "dcd96d7b-8914-4209-832a-10d79d141244",
+    "Guid": "5432d753-e6b8-45ef-ad63-d0adb6ce8aff",
     "Version": "0.0.0.13",
     "Author": "Linoa235",
     "Repo": "",
@@ -133,7 +133,7 @@
   },
   {
     "Name": "Action Area",
-    "Guid": "c8155436-0f9e-4b65-9f9e-e9f6369de096",
+    "Guid": "d21fb733-8380-4512-8fbc-7a0f23ca91c5",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -144,7 +144,7 @@
   },
   {
     "Name": "Alexander - The Burden of the Son (A8S)",
-    "Guid": "1a82b735-cda3-4106-98a4-7d5e425aa432",
+    "Guid": "bf33b8d9-a6f3-4953-a161-5cc3af79ce3f",
     "Version": "0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -155,7 +155,7 @@
   },
   {
     "Name": "Alexander - The Cuff of the Son (A6)",
-    "Guid": "844fee77-0436-40b3-8b56-59c7438738c7",
+    "Guid": "819c0f4c-e66a-47f6-bd34-d6c12958ba26",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -166,7 +166,7 @@
   },
   {
     "Name": "Alexander - The Eyes of the Creator (A9)",
-    "Guid": "bc5ed8fd-5a8b-47d8-a921-45032b05788d",
+    "Guid": "93453b65-5786-4663-9a78-58db5a27e0a8",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -177,7 +177,7 @@
   },
   {
     "Name": "Alexander - The Fist of the Son (A5)",
-    "Guid": "05a8e15e-1890-4a6a-a063-86c7bc9cc07e",
+    "Guid": "bf9e655f-c0f1-425e-8b7c-e7b803ad024d",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -188,7 +188,7 @@
   },
   {
     "Name": "Alexander - The Heart of the Creator (Lamebrix Strikebocks)",
-    "Guid": "a370d0fd-4866-4208-8639-1ad60e5e677e",
+    "Guid": "0e802e10-39c6-4beb-949c-122da4256423",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -199,7 +199,7 @@
   },
   {
     "Name": "Alexander - The Soul of the Creator (A12S)",
-    "Guid": "2f958039-02e6-4a64-9f09-90e7070b19fc",
+    "Guid": "ad114d4c-f694-410d-8a7f-4f5758649fb5",
     "Version": "0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -210,7 +210,7 @@
   },
   {
     "Name": "Alexandria",
-    "Guid": "3e5c8166-1c49-452c-96c5-785455eebe67",
+    "Guid": "55c7bc25-0481-498d-b276-bdbe7e473a0d",
     "Version": "0.0.0.4",
     "Author": "Linoa235",
     "Repo": "",
@@ -221,7 +221,7 @@
   },
   {
     "Name": "Verify Key",
-    "Guid": "c43960df-f81c-45c3-96f4-2e10f3a98e98",
+    "Guid": "ce57d210-be3a-460b-b956-d36645355975",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -232,7 +232,7 @@
   },
   {
     "Name": "Aloalo Island Drawing + Guide",
-    "Guid": "4430e55f-5199-4ca2-9372-78b8a4624e8d",
+    "Guid": "1d1edb5d-b2de-4763-98f9-11551769ceb4",
     "Version": "0.0.1.5",
     "Author": "Linoa235",
     "Repo": "",
@@ -243,7 +243,7 @@
   },
   {
     "Name": "Arcadia Cruiser Zero 1",
-    "Guid": "b6135fdb-8dba-4c2e-aebf-4f4e7b87cf91",
+    "Guid": "6491b628-f803-4580-89e0-f2ebc9933617",
     "Version": "0.0.0.6",
     "Author": "Linoa235",
     "Repo": "",
@@ -254,7 +254,7 @@
   },
   {
     "Name": "Arcadia Cruiser Zero 1",
-    "Guid": "4cada783-79b1-47b9-9a42-a3a1e2db18da",
+    "Guid": "783C797E-52BB-41ED-98CD-A2315533036F",
     "Version": "0.0.0.6",
     "Author": "Linoa235",
     "Repo": "",
@@ -265,7 +265,7 @@
   },
   {
     "Name": "Binding Coil of Bahamut (BLU Exclusive)",
-    "Guid": "56b427cc-0492-4368-9827-17ca77433e86",
+    "Guid": "fd0350b1-ff5f-4f31-a70e-5b4ea5335e51",
     "Version": "0.0.0.3",
     "Author": "Linoa235",
     "Repo": "",
@@ -276,7 +276,7 @@
   },
   {
     "Name": "Byakko",
-    "Guid": "c79e9e0c-032a-4fcc-9e5c-59c1343c3fc9",
+    "Guid": "11baa2dc-00db-475d-8282-ff3d70d8e662",
     "Version": "0.0.0.12",
     "Author": "Linoa235",
     "Repo": "",
@@ -287,7 +287,7 @@
   },
   {
     "Name": "Celestium",
-    "Guid": "376b5330-0e6c-4ed5-b574-ea479bf77f02",
+    "Guid": "ccfa80e0-9f53-43b1-97a9-9c8abfad8000",
     "Version": "0.0.0.6",
     "Author": "Linoa235",
     "Repo": "",
@@ -298,7 +298,7 @@
   },
   {
     "Name": "Cenote Ja Ja Gural",
-    "Guid": "70e05ea9-2a09-4c0e-9cf0-03e5502882af",
+    "Guid": "be809796-e12c-4f34-bb05-60d268adc5b4",
     "Version": "0.0.0.4",
     "Author": "Linoa235",
     "Repo": "",
@@ -309,7 +309,7 @@
   },
   {
     "Name": "CoD (Chaotic) Cloud of Darkness",
-    "Guid": "a3785129-3660-4a37-8dc9-a93139ecd930",
+    "Guid": "5f565f29-f504-45fc-941a-aaf71ef6f973",
     "Version": "0.0.2.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -320,7 +320,7 @@
   },
   {
     "Name": "General Debug Use",
-    "Guid": "5e6f3e9b-7775-4d06-86ba-4700cc8412f0",
+    "Guid": "76aed92d-26ce-40a3-a94c-1a3091e79315",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -331,7 +331,7 @@
   },
   {
     "Name": "General Debug Use",
-    "Guid": "3cfa5ec6-3424-4ac7-8522-d03eb1ce3869",
+    "Guid": "c4655014-661c-49c6-baf3-c9a27e1e0e7c",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -342,7 +342,7 @@
   },
   {
     "Name": "Debug Script (By Chat Command)",
-    "Guid": "8fdb3162-2ea8-45a7-b5cc-a187c35bad24",
+    "Guid": "e447e994-66e9-4240-9400-243ba7c1e78f",
     "Version": "0.0.2",
     "Author": "Linoa235",
     "Repo": "",
@@ -353,7 +353,7 @@
   },
   {
     "Name": "Dragonsong's Reprise Drawings",
-    "Guid": "e958863d-4daa-46a2-80ba-bc26b613ad81",
+    "Guid": "71e79443-b817-4f58-af69-70e174db7ade",
     "Version": "0.0.0.6",
     "Author": "Linoa235",
     "Repo": "",
@@ -364,7 +364,7 @@
   },
   {
     "Name": "Dragonsong's Reprise Drawing",
-    "Guid": "fa48c9f9-cd68-4216-9cd4-75ab41c58b55",
+    "Guid": "0bfe3657-a2fd-4e38-b5c8-0f55a561cc75",
     "Version": "0.0.0.6",
     "Author": "Linoa235",
     "Repo": "",
@@ -375,7 +375,7 @@
   },
   {
     "Name": "E11n",
-    "Guid": "0a76aa07-cac9-4442-91f9-2d964d63bd28",
+    "Guid": "65abdbca-a249-49ff-92e1-cc2b69d5ae2f",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -386,7 +386,7 @@
   },
   {
     "Name": "E11n",
-    "Guid": "090f8d4a-5922-4cc3-aab5-30e1032b11bb",
+    "Guid": "1bbb80eb-02f6-495b-ad6d-d58d70ec8b5d",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -397,7 +397,7 @@
   },
   {
     "Name": "EdenUltimate",
-    "Guid": "45e44f0c-3e6e-4c95-b486-12c50a55964b",
+    "Guid": "c41cc13f-3f4e-4152-9ac1-63eae4bbeec7",
     "Version": "0.0.0.10",
     "Author": "Linoa235",
     "Repo": "",
@@ -408,7 +408,7 @@
   },
   {
     "Name": "EdenUltimate",
-    "Guid": "85cf25cd-c105-477a-ae4b-f84261c038ef",
+    "Guid": "2e36475e-6f84-476a-b243-b14139d3416d",
     "Version": "0.0.0.11",
     "Author": "Linoa235",
     "Repo": "",
@@ -419,7 +419,7 @@
   },
   {
     "Name": "---- <P1&P4.5: Door Boss> ----",
-    "Guid": "452e468d-6bbc-4f6b-bb78-8bebdbd88b39",
+    "Guid": "d5b96147-b74b-4bcb-8f1e-1f96f0d998bd",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -430,7 +430,7 @@
   },
   {
     "Name": "Test: Parameter Reset",
-    "Guid": "7c5f04b6-69ba-4a77-9ac7-e3b186ece8e1",
+    "Guid": "2f817bb1-4d3e-4518-86f5-0e7864356250",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -441,7 +441,7 @@
   },
   {
     "Name": "Extreme G Lair",
-    "Guid": "bde76931-0576-4302-adab-924e8bd3c456",
+    "Guid": "192298bf-0e3f-4acf-824e-da5b70ad8249",
     "Version": "0.0.0.3",
     "Author": "Linoa235",
     "Repo": "",
@@ -452,7 +452,7 @@
   },
   {
     "Name": "FRU P5 Floor Fire Grid Guidance",
-    "Guid": "954e51c9-c9c5-4d7b-b707-ed51b85ff73a",
+    "Guid": "6341dc47-4bd9-48b2-b6b6-702b79960cbb",
     "Version": "0.0.1.0",
     "Author": "Linoa235",
     "Repo": "",
@@ -463,7 +463,7 @@
   },
   {
     "Name": "FRU_DLC [Futures Rewritten Ultimate_Additional Supplement]",
-    "Guid": "878dd78e-a7c3-4cfc-b5ae-00e2d1357b6a",
+    "Guid": "57233f18-b925-4f1d-bc11-d921398be832",
     "Version": "0.0.0.4",
     "Author": "Linoa235",
     "Repo": "",
@@ -474,7 +474,7 @@
   },
   {
     "Name": "G Lair Abolition: Hell on Rails (Extreme)",
-    "Guid": "f3a43b4a-673f-44b1-80fb-28d3e6c6ca63",
+    "Guid": "79a0ac92-0f04-48a8-bc40-e86be8043242",
     "Version": "0.0.0.2",
     "Author": "Linoa235",
     "Repo": "",
@@ -485,7 +485,7 @@
   },
   {
     "Name": "Invuln Alert Macro",
-    "Guid": "0621a33a-fbf1-4303-8c5a-f46c4770bef4",
+    "Guid": "7f02c10c-98be-4c62-bd6f-f5a9d337272e",
     "Version": "0.0.0.4",
     "Author": "Linoa235",
     "Repo": "",
@@ -496,7 +496,7 @@
   },
   {
     "Name": "Gold Saucer - Cliffhanger",
-    "Guid": "916f6790-1dfd-4d5b-95c7-b165c19ae004",
+    "Guid": "50526bde-eb70-48b7-a274-277e66e607d5",
     "Version": "0.0.0.3",
     "Author": "Linoa235",
     "Repo": "",
@@ -507,7 +507,7 @@
   },
   {
     "Name": "Golden Saucer Assistant",
-    "Guid": "e0f9c82b-6fb4-4909-a9ed-009f3fece399",
+    "Guid": "eb51957a-972f-4b21-8250-aff774962125",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -518,7 +518,7 @@
   },
   {
     "Name": "Heavy Weight Savage",
-    "Guid": "87864569-f3e1-497a-99f6-eecbc9139bc0",
+    "Guid": "5b7035eb-0570-410d-b887-7621196b59cc",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -529,7 +529,7 @@
   },
   {
     "Name": "HelloWorld",
-    "Guid": "d568107b-5463-4ad4-b0dc-2316b68c6dda",
+    "Guid": "58d98bc0-23f6-4133-9afa-87060a2905b8",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -540,7 +540,7 @@
   },
   {
     "Name": "Ihuykatumu",
-    "Guid": "a73fd8e1-536a-4e37-88a4-e84e0098ef81",
+    "Guid": "4575e825-60ef-462a-8360-4623a2f86d9d",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -551,7 +551,7 @@
   },
   {
     "Name": "Jeuno The First Walk",
-    "Guid": "e7f041df-8830-4ff3-99f5-87e4b1a2ab7e",
+    "Guid": "88c7fb92-fe44-4675-a4d7-419e2340005a",
     "Version": "0.0.0.7",
     "Author": "Linoa235",
     "Repo": "",
@@ -562,7 +562,7 @@
   },
   {
     "Name": "Karlin's Eden Ultimate Script (Spirit Sight Modified Edition) wotou modified for personal use",
-    "Guid": "1ea927f2-ef56-44b9-99a5-730d2b47f128",
+    "Guid": "b7dbf67e-e960-4ead-b495-6fe819060ec4",
     "Version": "0.0.1.50",
     "Author": "Linoa235",
     "Repo": "",
@@ -573,7 +573,7 @@
   },
   {
     "Name": "Karlin's FRU script (Customized by Cicero) - English Version",
-    "Guid": "daf4c259-f0a1-464f-b6a0-a8ba5558a40c",
+    "Guid": "244e500d-c709-417a-a0ec-2b3a4de4619d",
     "Version": "0.0.1.19",
     "Author": "Linoa235",
     "Repo": "",
@@ -584,7 +584,7 @@
   },
   {
     "Name": "Karlin's FRU script (Customized by Cicero)",
-    "Guid": "3f6b87b0-fc40-47d3-85e6-c4f473e1c642",
+    "Guid": "6049e1ca-5f81-4b78-a1ad-af4156ee38ca",
     "Version": "0.0.1.19",
     "Author": "Linoa235",
     "Repo": "",
@@ -595,7 +595,7 @@
   },
   {
     "Name": "Latest Hottest Temporary Drawing",
-    "Guid": "dbde11d5-3323-4cab-a885-be1dffddb6aa",
+    "Guid": "bb7f4dbd-e35d-4cba-ab7e-dfb326178676",
     "Version": "0.0.0.8",
     "Author": "Linoa235",
     "Repo": "",
@@ -606,7 +606,7 @@
   },
   {
     "Name": "LV.10 Basic Training: Enemy Parties",
-    "Guid": "13dbc54c-28ee-49ad-88d1-96d0cb0c9be3",
+    "Guid": "616300f3-3cbe-4482-b39e-608f8c2da704",
     "Version": "0.0.0.3",
     "Author": "Linoa235",
     "Repo": "",
@@ -617,7 +617,7 @@
   },
   {
     "Name": "LV.10 Under the Armor",
-    "Guid": "fe0c55fd-b406-485f-a1f1-9abef897ae9c",
+    "Guid": "25fb9aae-bc9a-484c-afd9-0f8639f9e644",
     "Version": "0.0.0.5",
     "Author": "Linoa235",
     "Repo": "",
@@ -628,7 +628,7 @@
   },
   {
     "Name": "Place waymarks manually",
-    "Guid": "b44a196f-edac-4687-b485-d177427928a7",
+    "Guid": "e785e9e8-825c-413e-9b49-1cd38df03ae8",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -639,7 +639,7 @@
   },
   {
     "Name": "LV.100 Hells' Kier Unreal",
-    "Guid": "46cd4370-728e-4827-97cc-7a1a25f1a5d2",
+    "Guid": "75d73ae1-e919-4279-9e24-45d2c14a9e8e",
     "Version": "0.0.0.7",
     "Author": "Linoa235",
     "Repo": "",
@@ -650,7 +650,7 @@
   },
   {
     "Name": "LV.100 The Jade Stoa Unreal",
-    "Guid": "d5f987d5-1170-4d06-b01b-9e18d681ad54",
+    "Guid": "7359dd2d-af23-467c-835f-eaa556a639cf",
     "Version": "0.0.0.4",
     "Author": "Linoa235",
     "Repo": "",
@@ -661,7 +661,7 @@
   },
   {
     "Name": "LV.100 The Underkeep",
-    "Guid": "17e43669-48d3-41da-86fa-0a65ce1fb6c6",
+    "Guid": "78902514-1151-4b7e-9c75-8b1319a17b05",
     "Version": "0.0.0.4",
     "Author": "Linoa235",
     "Repo": "",
@@ -672,7 +672,7 @@
   },
   {
     "Name": "LV.100 Yuweyawata Field Station",
-    "Guid": "5b77ab3e-3f30-4cf6-b4d5-d26bf15c6917",
+    "Guid": "6cfcf53b-98dd-4c66-a9a8-2a61eafef0e5",
     "Version": "0.0.2.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -683,7 +683,7 @@
   },
   {
     "Name": "LV.100 Yuweyawata Field Station",
-    "Guid": "51a3fe81-e6f7-41fe-ab8f-f95fbc3a4cc8",
+    "Guid": "992e47a8-17d0-4379-891b-0762c0509257",
     "Version": "0.0.2.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -694,7 +694,7 @@
   },
   {
     "Name": "LV.15 Basic Training: Enemy Strongholds",
-    "Guid": "f544b75d-85b9-45d3-aa5f-7c037e4303cf",
+    "Guid": "6d433426-d546-48bd-b4c5-0a08cbe5ec43",
     "Version": "0.0.0.3",
     "Author": "Linoa235",
     "Repo": "",
@@ -705,7 +705,7 @@
   },
   {
     "Name": "LV.15 Hero on the Half Shell",
-    "Guid": "7f925c89-2e9a-4b2f-8f70-0d400befde46",
+    "Guid": "8abfe4df-3d6c-4915-89d2-e16d4396d4e9",
     "Version": "0.0.0.3",
     "Author": "Linoa235",
     "Repo": "",
@@ -716,7 +716,7 @@
   },
   {
     "Name": "LV.20 Pulling Poison Posies",
-    "Guid": "017b0a15-5e78-438a-b119-617e00db03dd",
+    "Guid": "ca583fb2-4fdf-4adb-b394-0a20a2bfb26d",
     "Version": "0.0.0.3",
     "Author": "Linoa235",
     "Repo": "",
@@ -727,7 +727,7 @@
   },
   {
     "Name": "LV.20 Stinging Back",
-    "Guid": "95253814-0cbe-4ad9-b180-3be2b03b2c43",
+    "Guid": "e073f196-031c-4353-a762-c64cb0bcdf49",
     "Version": "0.0.0.3",
     "Author": "Linoa235",
     "Repo": "",
@@ -738,7 +738,7 @@
   },
   {
     "Name": "LV.25 All's Well that Ends in the Well",
-    "Guid": "53ef92d2-c860-4d2d-b716-abd26d7d7fed",
+    "Guid": "b3fd758d-e7fc-4648-9388-8279e83ade7b",
     "Version": "0.0.0.3",
     "Author": "Linoa235",
     "Repo": "",
@@ -749,7 +749,7 @@
   },
   {
     "Name": "LV.25 Flicking Sticks and Taking Names",
-    "Guid": "57a6f78c-f50d-4c16-9540-6ff0b018fe49",
+    "Guid": "8ea3ee66-0ba9-4425-a757-c87fb55711c4",
     "Version": "0.0.0.3",
     "Author": "Linoa235",
     "Repo": "",
@@ -760,7 +760,7 @@
   },
   {
     "Name": "LV.28 Haukke Manor",
-    "Guid": "cdcb203d-798a-4a7e-a883-497b3337be20",
+    "Guid": "07da6d15-43b4-47b8-95df-424f3c97f9fb",
     "Version": "0.0.0.4",
     "Author": "Linoa235",
     "Repo": "",
@@ -771,7 +771,7 @@
   },
   {
     "Name": "LV.30 Annoy the Void",
-    "Guid": "d8395c7f-5798-404f-a8b7-0601cdf0e3ee",
+    "Guid": "f5e9a968-f527-4cbb-b999-50a3a38a9e86",
     "Version": "0.0.0.3",
     "Author": "Linoa235",
     "Repo": "",
@@ -782,7 +782,7 @@
   },
   {
     "Name": "LV.30 More than a Feeler",
-    "Guid": "320580a6-efc7-4ee3-9423-289b715d426b",
+    "Guid": "05e0f25c-dc59-44bb-b497-36671ada59c3",
     "Version": "0.0.0.3",
     "Author": "Linoa235",
     "Repo": "",
@@ -793,7 +793,7 @@
   },
   {
     "Name": "LV.35 Long Live the Queen",
-    "Guid": "f32cb98d-7f4d-416b-b783-c8258b88a826",
+    "Guid": "3b0caaba-b68e-4a1a-9b59-fecff4c61344",
     "Version": "0.0.0.3",
     "Author": "Linoa235",
     "Repo": "",
@@ -804,7 +804,7 @@
   },
   {
     "Name": "LV.35 Shadow and Claw",
-    "Guid": "8c9d477d-c344-4c57-9314-d543115a1c19",
+    "Guid": "9f8a3768-aec4-4e11-b6fb-d17b09d8df81",
     "Version": "0.0.0.4",
     "Author": "Linoa235",
     "Repo": "",
@@ -815,7 +815,7 @@
   },
   {
     "Name": "LV.40 Solemn Trinity",
-    "Guid": "0094019c-93c6-44eb-b764-686929241afd",
+    "Guid": "22c12ec8-a994-462c-b9b5-50ff5d13b810",
     "Version": "0.0.0.3",
     "Author": "Linoa235",
     "Repo": "",
@@ -826,7 +826,7 @@
   },
   {
     "Name": "LV.40 Ward Up",
-    "Guid": "6c881929-2a4b-44a8-b8eb-63ba664e3aaf",
+    "Guid": "5e8e9de5-df83-4f39-9a23-e31d2418e470",
     "Version": "0.0.0.4",
     "Author": "Linoa235",
     "Repo": "",
@@ -837,7 +837,7 @@
   },
   {
     "Name": "---- Mobs ----",
-    "Guid": "eb12b607-cce5-426e-9f6d-0ef05603ea6e",
+    "Guid": "af05648a-8755-49f0-92ed-c2e0205afd2b",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -848,7 +848,7 @@
   },
   {
     "Name": "LV.60 Aetherochemical Research Facility",
-    "Guid": "128f60d3-9854-4df1-af12-a5b76c9629f0",
+    "Guid": "b3532f58-c1ca-4e1d-90cd-52f2abde17e4",
     "Version": "0.0.0.7",
     "Author": "Linoa235",
     "Repo": "",
@@ -859,7 +859,7 @@
   },
   {
     "Name": "LV.60 Alexander - The Breath of the Creator",
-    "Guid": "29057cd2-20e9-437f-abec-37ae4e52ecd9",
+    "Guid": "0cc640e0-bc4c-4d99-8da5-79f76f9ec600",
     "Version": "0.0.0.4",
     "Author": "Linoa235",
     "Repo": "",
@@ -870,7 +870,7 @@
   },
   {
     "Name": "LV.60 Alexander - The Burden of the Father",
-    "Guid": "ef546306-88de-4ca9-8bce-b7b2fcc17a80",
+    "Guid": "cf1f92c5-d1b7-4d27-ae95-08121bac268b",
     "Version": "0.0.0.4",
     "Author": "Linoa235",
     "Repo": "",
@@ -881,7 +881,7 @@
   },
   {
     "Name": "LV.60 Alexander - The Eyes of the Creator",
-    "Guid": "56bfd376-bd9f-4901-add6-4658a64cfb86",
+    "Guid": "5ac8f7c7-403d-4cf0-8c94-00c6b8a2745a",
     "Version": "0.0.0.3",
     "Author": "Linoa235",
     "Repo": "",
@@ -892,7 +892,7 @@
   },
   {
     "Name": "---- Mobs ----",
-    "Guid": "594b2ffa-852a-4875-b65d-d19a4a663b30",
+    "Guid": "260ef10b-90a8-4e07-837a-a92caccd4bdd",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -903,7 +903,7 @@
   },
   {
     "Name": "LV.73 Dohn Mheg",
-    "Guid": "cb2a78d9-7a72-4d02-a3cd-18580a246976",
+    "Guid": "eae5e81d-ee52-4bb5-bbc5-39a54a994498",
     "Version": "0.0.0.7",
     "Author": "Linoa235",
     "Repo": "",
@@ -914,7 +914,7 @@
   },
   {
     "Name": "LV.75 The Qitana Ravel",
-    "Guid": "bba3881d-0b6f-49c0-afa4-1239920ac284",
+    "Guid": "288d9050-19c6-412d-8e56-f64f5ecd0517",
     "Version": "0.0.0.2",
     "Author": "Linoa235",
     "Repo": "",
@@ -925,7 +925,7 @@
   },
   {
     "Name": "LV.75 The Qitana Ravel",
-    "Guid": "ebd978f3-559a-405e-af68-0c1175cb984d",
+    "Guid": "50c922c1-1ecd-4750-8b55-24f19793408f",
     "Version": "0.0.0.2",
     "Author": "Linoa235",
     "Repo": "",
@@ -936,7 +936,7 @@
   },
   {
     "Name": "LV.80 Eden's Verse: Iconoclasm",
-    "Guid": "0f5deddd-09f0-4038-bcd1-ca646efe6b0e",
+    "Guid": "32d7bb29-f87a-4e52-ae5d-6fe8b891b123",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -947,7 +947,7 @@
   },
   {
     "Name": "LV.80 The Grand Cosmos",
-    "Guid": "a004fc64-be66-42d6-8bc2-96f25fa29415",
+    "Guid": "a8086d7d-da15-4d97-a661-debaf6780198",
     "Version": "0.0.0.3",
     "Author": "Linoa235",
     "Repo": "",
@@ -958,7 +958,7 @@
   },
   {
     "Name": "Gold Saucer - Cliffhanger",
-    "Guid": "736ba2d7-8694-45c2-8fac-4f7d29728b5f",
+    "Guid": "a42cd764-0729-432e-8bec-2cfd0a620da4",
     "Version": "0.0.0.3",
     "Author": "Linoa235",
     "Repo": "",
@@ -969,7 +969,7 @@
   },
   {
     "Name": "LV.81 The Tower of Zot",
-    "Guid": "97de71b5-4164-4c54-8deb-75707863d782",
+    "Guid": "520b7486-4f21-4293-a1de-dc9551b1c60e",
     "Version": "0.0.0.4",
     "Author": "Linoa235",
     "Repo": "",
@@ -980,7 +980,7 @@
   },
   {
     "Name": "---- Mobs ----",
-    "Guid": "65f874c3-088e-4c46-8256-d89776b91238",
+    "Guid": "30c199f3-37b2-4a8b-bedd-379556fa30c7",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -991,7 +991,7 @@
   },
   {
     "Name": "Elegeia",
-    "Guid": "79ebd50f-6414-4952-b5a6-2c6c7af47afe",
+    "Guid": "369eaee3-b4d4-4564-8eed-e47998f9a643",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -1002,7 +1002,7 @@
   },
   {
     "Name": "LV.90 The Minstrel's Ballad: Endsinger's Aria (Unrestricted)",
-    "Guid": "7504a148-2a9e-4b5b-815b-a63bf6ccfcd5",
+    "Guid": "d8e42690-7ed7-428f-ad28-35de145a27ac",
     "Version": "0.0.0.6",
     "Author": "Linoa235",
     "Repo": "",
@@ -1013,7 +1013,7 @@
   },
   {
     "Name": "---- Mobs ----",
-    "Guid": "d66d8b1a-44a2-4752-a613-4c52abf81c7b",
+    "Guid": "5c8af346-8457-43bb-b9cd-9eadba16087d",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -1024,7 +1024,7 @@
   },
   {
     "Name": "LV.99 Everkeep",
-    "Guid": "3c51140a-af21-426f-a83c-bd0cf6407e6e",
+    "Guid": "c506a9d2-a1e1-431e-8af3-2664563be37d",
     "Version": "0.0.0.9",
     "Author": "Linoa235",
     "Repo": "",
@@ -1035,7 +1035,7 @@
   },
   {
     "Name": "LV100 7.4 Mistwake",
-    "Guid": "64e8f604-26fa-425e-bb11-7336d51d9735",
+    "Guid": "af758bf0-597b-42d6-af28-46b07ad995af",
     "Version": "0.0.0.2",
     "Author": "Linoa235",
     "Repo": "",
@@ -1046,7 +1046,7 @@
   },
   {
     "Name": "LV100 7.5 Windurst: The Third Walk",
-    "Guid": "b1bd1d0c-2b5e-479d-ae44-2a6d19749e28",
+    "Guid": "ebb0f737-c289-4e64-8111-57dd859a79ec",
     "Version": "0.0.0.4",
     "Author": "Linoa235",
     "Repo": "",
@@ -1057,7 +1057,7 @@
   },
   {
     "Name": "LV100 7.5 Windurst: The Third Walk",
-    "Guid": "1c04623e-76c6-47e2-9792-a4d4fb68b571",
+    "Guid": "c863d088-8ec2-45a3-a939-b3d4be33cdd7",
     "Version": "0.0.0.4",
     "Author": "Linoa235",
     "Repo": "",
@@ -1068,7 +1068,7 @@
   },
   {
     "Name": "Mica the Magical Mu: Dressed-Up Parade, All Rejoice",
-    "Guid": "8266ed09-d336-46fa-bc67-31ffcf0e5c05",
+    "Guid": "26dd454a-d047-4fe5-8d88-787e586b9035",
     "Version": "0.0.0.3",
     "Author": "Linoa235",
     "Repo": "",
@@ -1079,7 +1079,7 @@
   },
   {
     "Name": "Omicron Recall: Destroy the Omicron Weapon Chi",
-    "Guid": "b4b0c5df-ff10-4286-844a-79c6367d2e4a",
+    "Guid": "704e0225-50b3-4ee4-8a1f-ba5d5ad73bda",
     "Version": "0.0.0.3",
     "Author": "Linoa235",
     "Repo": "",
@@ -1090,7 +1090,7 @@
   },
   {
     "Name": "---- Mobs ----",
-    "Guid": "da7bb0d8-609c-4319-b222-62bc03cc396a",
+    "Guid": "6605fd22-074a-4561-9e12-b2c31cfa0a62",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -1101,7 +1101,7 @@
   },
   {
     "Name": "---- Mobs ----",
-    "Guid": "f2a1baaa-fdd3-442b-bc3b-0db1ba804cce",
+    "Guid": "d0df8a70-b611-4433-9531-24be07b984f9",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -1112,7 +1112,7 @@
   },
   {
     "Name": "The Serpentlord Seethes: Duel in the Wilds",
-    "Guid": "9594c961-aec6-4b8b-8218-5550527e1746",
+    "Guid": "bf0b5709-0690-416d-981c-4f8e9fcc5a5d",
     "Version": "0.0.0.4",
     "Author": "Linoa235",
     "Repo": "",
@@ -1123,7 +1123,7 @@
   },
   {
     "Name": "A Relic Reborn: the Hydra",
-    "Guid": "76efb1bf-e962-4f84-887a-18f2bf78e029",
+    "Guid": "b46c2fc2-292d-43c0-85e7-5b8597eb6a67",
     "Version": "0.0.0.3",
     "Author": "Linoa235",
     "Repo": "",
@@ -1134,7 +1134,7 @@
   },
   {
     "Name": "Battle in the Big Keep",
-    "Guid": "94e68f7e-2f2e-4a70-8ff3-14e9e2048e6b",
+    "Guid": "389154a5-e024-4de7-9918-d327912f6a51",
     "Version": "0.0.0.3",
     "Author": "Linoa235",
     "Repo": "",
@@ -1145,7 +1145,7 @@
   },
   {
     "Name": "Battle on the Big Bridge",
-    "Guid": "c4cc856a-3a29-4d58-87e6-684ad478fd33",
+    "Guid": "11ac91d5-3e43-45dc-847e-c8ff8b5e48b8",
     "Version": "0.0.0.4",
     "Author": "Linoa235",
     "Repo": "",
@@ -1156,7 +1156,7 @@
   },
   {
     "Name": "Dhorme Chimera",
-    "Guid": "2cd3f239-5420-411c-a2cb-d3425b632e09",
+    "Guid": "00b0a827-80d6-4da0-aa3e-b5bce107d214",
     "Version": "0.0.0.5",
     "Author": "Linoa235",
     "Repo": "",
@@ -1167,7 +1167,7 @@
   },
   {
     "Name": "Garuda (Hard)",
-    "Guid": "ba55a465-8201-4dff-902e-6904a5c08076",
+    "Guid": "8061f068-2fe7-4b58-a4d0-927398928ac3",
     "Version": "0.0.0.2",
     "Author": "Linoa235",
     "Repo": "",
@@ -1178,7 +1178,7 @@
   },
   {
     "Name": "Leviathan Extreme",
-    "Guid": "d78d10f8-038a-4e6a-8eaa-5d4e10593087",
+    "Guid": "720a2e9d-f6f9-47bf-b465-9dc5e47daf98",
     "Version": "0.0.0.4",
     "Author": "Linoa235",
     "Repo": "",
@@ -1189,7 +1189,7 @@
   },
   {
     "Name": "Main Scenario Roulette",
-    "Guid": "dd017ea4-ee76-40e1-8186-fc1a60b15a49",
+    "Guid": "5336256b-6cf9-4b37-85b0-f6e40aa67234",
     "Version": "0.0.0.3",
     "Author": "Linoa235",
     "Repo": "",
@@ -1200,7 +1200,7 @@
   },
   {
     "Name": "Nabriales",
-    "Guid": "f9c383ef-da60-4e43-8b0a-7b662b286489",
+    "Guid": "b948a9c9-562e-4f6b-bdee-a67bd4c2bce6",
     "Version": "0.0.0.4",
     "Author": "Linoa235",
     "Repo": "",
@@ -1211,7 +1211,7 @@
   },
   {
     "Name": "Shiva",
-    "Guid": "f54eb3d3-dfa8-49f5-8542-8a594fdd60ff",
+    "Guid": "6f702f44-0866-464e-8ba3-5b3d796e0b8d",
     "Version": "0.0.0.3",
     "Author": "Linoa235",
     "Repo": "",
@@ -1222,7 +1222,7 @@
   },
   {
     "Name": "The Bowl of Embers (Hard)",
-    "Guid": "4f874a0f-00fd-4c22-91bf-53e277189dd6",
+    "Guid": "e462e69c-d78b-4a0b-9dfb-f2172fd56e28",
     "Version": "0.0.0.4",
     "Author": "Linoa235",
     "Repo": "",
@@ -1233,7 +1233,7 @@
   },
   {
     "Name": "The Bowl of Embers (Hard)",
-    "Guid": "8f0e08b1-41af-4ef2-b913-481ee91ff60e",
+    "Guid": "596fd2e9-a90b-4630-83c7-f42caa275ea5",
     "Version": "0.0.0.4",
     "Author": "Linoa235",
     "Repo": "",
@@ -1244,7 +1244,7 @@
   },
   {
     "Name": "The Striking Tree (Hard)",
-    "Guid": "fc021c2d-39de-45d4-8716-e80cd05116a5",
+    "Guid": "2281fc2f-5aee-4664-8204-7f7f3062a183",
     "Version": "0.0.0.3",
     "Author": "Linoa235",
     "Repo": "",
@@ -1255,7 +1255,7 @@
   },
   {
     "Name": "Thornmarch (Hard) (Fun Edition)",
-    "Guid": "e583ec39-8d1f-45f4-aa2e-387f8cdfa2ab",
+    "Guid": "a04a23b0-20a5-4381-93fe-3cef7ceccc9c",
     "Version": "0.0.0.3",
     "Author": "Linoa235",
     "Repo": "",
@@ -1266,7 +1266,7 @@
   },
   {
     "Name": "Thornmarch Extreme",
-    "Guid": "1b40d7f2-6913-4883-9840-003d80646f1d",
+    "Guid": "a25a701a-0a9a-4bbf-b00c-87e53ce797e6",
     "Version": "0.0.0.4",
     "Author": "Linoa235",
     "Repo": "",
@@ -1277,7 +1277,7 @@
   },
   {
     "Name": "Urth's Fount",
-    "Guid": "3f3275ee-ba06-4fe7-a5e5-87ab566ee96f",
+    "Guid": "85391a71-f111-48fb-b61c-a0c90e0afb76",
     "Version": "0.0.0.3",
     "Author": "Linoa235",
     "Repo": "",
@@ -1288,7 +1288,7 @@
   },
   {
     "Name": "LV55 The Aery",
-    "Guid": "04549e8d-7039-4436-9790-9bbe9abf940a",
+    "Guid": "aad1118d-f90f-44df-9a65-3c14b8045698",
     "Version": "0.0.0.3",
     "Author": "Linoa235",
     "Repo": "",
@@ -1299,7 +1299,7 @@
   },
   {
     "Name": "A7N",
-    "Guid": "d8afa1b8-6e34-4079-a863-6197d9f373d4",
+    "Guid": "8b9e040a-ed20-4ef7-816c-64931359be0b",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -1310,7 +1310,7 @@
   },
   {
     "Name": "A3N",
-    "Guid": "98a4c590-1e20-42ac-a90e-af370d8e160a",
+    "Guid": "6b4cda86-8c7b-412a-8595-54dbbedce1df",
     "Version": "0.0.0.3",
     "Author": "Linoa235",
     "Repo": "",
@@ -1321,7 +1321,7 @@
   },
   {
     "Name": "A5N",
-    "Guid": "3b0c1c19-9213-4f87-a41e-5f7881f13e0c",
+    "Guid": "859177db-a929-499a-becc-77e50443e1e2",
     "Version": "0.0.0.2",
     "Author": "Linoa235",
     "Repo": "",
@@ -1332,7 +1332,7 @@
   },
   {
     "Name": "Bismarck Extreme",
-    "Guid": "5e50a5d8-4aff-488a-af05-5b9ffd3eef69",
+    "Guid": "bd13109d-b65a-4eb0-8446-b6c70a85c72e",
     "Version": "0.0.0.2",
     "Author": "Linoa235",
     "Repo": "",
@@ -1343,7 +1343,7 @@
   },
   {
     "Name": "Saint Mocianne's Arboretum",
-    "Guid": "40d6844f-ec81-4209-be34-2248d627aef9",
+    "Guid": "809d4428-a108-412a-b819-e3a1ede1f383",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -1354,7 +1354,7 @@
   },
   {
     "Name": "Sephirot",
-    "Guid": "a34507c7-5bbc-466b-8f51-03c762b6c7dd",
+    "Guid": "a6b04620-292d-45c4-8b56-ba0f34fa2240",
     "Version": "0.0.0.2",
     "Author": "Linoa235",
     "Repo": "",
@@ -1365,7 +1365,7 @@
   },
   {
     "Name": "LV60 The Minstrel's Ballad: Nidhogg's Rage",
-    "Guid": "db5e4bf0-3c22-411b-934a-5a42646b5c83",
+    "Guid": "17a593bd-7c8b-4143-b922-5e5575a12083",
     "Version": "0.0.0.3",
     "Author": "Linoa235",
     "Repo": "",
@@ -1376,7 +1376,7 @@
   },
   {
     "Name": "Zurvan",
-    "Guid": "591b862d-7978-4b25-9843-8dfef00177d4",
+    "Guid": "8e7212ce-f262-43de-9169-b878461ca773",
     "Version": "0.0.0.5",
     "Author": "Linoa235",
     "Repo": "",
@@ -1387,7 +1387,7 @@
   },
   {
     "Name": "Susano",
-    "Guid": "b6f39e97-c76b-4904-b0d6-67661a055977",
+    "Guid": "02724b74-1fab-4cb2-b360-8f75ec5184c7",
     "Version": "0.0.0.3",
     "Author": "Linoa235",
     "Repo": "",
@@ -1398,7 +1398,7 @@
   },
   {
     "Name": "Ala Mhigo",
-    "Guid": "f10e44d1-7453-46e0-938e-24f09ffd49ec",
+    "Guid": "33b94458-6ed0-4063-b7c9-64a11b10650b",
     "Version": "0.0.0.2",
     "Author": "Linoa235",
     "Repo": "",
@@ -1409,7 +1409,7 @@
   },
   {
     "Name": "Emanation",
-    "Guid": "4c0322db-63a9-4380-aaf1-2304bf605973",
+    "Guid": "cc3c4900-33fa-412d-81c7-11c0d15d538f",
     "Version": "0.0.0.4",
     "Author": "Linoa235",
     "Repo": "",
@@ -1420,7 +1420,7 @@
   },
   {
     "Name": "O11N",
-    "Guid": "08124034-ba79-49fb-ab0c-a675e3eecbf6",
+    "Guid": "3b85d5cb-076d-4734-936a-5c42cc4119ec",
     "Version": "0.0.0.4",
     "Author": "Linoa235",
     "Repo": "",
@@ -1431,7 +1431,7 @@
   },
   {
     "Name": "O4N",
-    "Guid": "b1b035ad-554d-4e49-84e3-9901e8ba941e",
+    "Guid": "5a053174-2ce9-4b61-a18b-ec9b7e0215a8",
     "Version": "0.0.0.2",
     "Author": "Linoa235",
     "Repo": "",
@@ -1442,7 +1442,7 @@
   },
   {
     "Name": "O5N",
-    "Guid": "50a5cdbc-9894-4dd7-97a1-0d1b3ae67bc7",
+    "Guid": "ec753246-7abb-4e4a-8e05-dd54d659280a",
     "Version": "0.0.0.2",
     "Author": "Linoa235",
     "Repo": "",
@@ -1453,7 +1453,7 @@
   },
   {
     "Name": "Saint Mocianne's Arboretum (Hard)",
-    "Guid": "a02cb54d-8b37-4c4d-ac29-5b5cd25223d5",
+    "Guid": "db28193a-6166-4e42-ba84-c4c41fa28406",
     "Version": "0.0.0.4",
     "Author": "Linoa235",
     "Repo": "",
@@ -1464,7 +1464,7 @@
   },
   {
     "Name": "Tsukuyomi",
-    "Guid": "31f3c8a9-9c38-43e3-9a36-d89e5469f05b",
+    "Guid": "6e0d55f4-8eda-4b2e-815c-7994c19bbea1",
     "Version": "0.0.0.2",
     "Author": "Linoa235",
     "Repo": "",
@@ -1475,7 +1475,7 @@
   },
   {
     "Name": "A Finale Most Formidable: The Secret Weapon",
-    "Guid": "6f48dd73-afa9-4530-a7c3-6f5820655a0e",
+    "Guid": "304fa68c-1cb3-4f50-bf75-779643f71dac",
     "Version": "0.0.0.4",
     "Author": "Linoa235",
     "Repo": "",
@@ -1486,7 +1486,7 @@
   },
   {
     "Name": "Archaeotania: The Head, the Tail, the Whole Damned Thing",
-    "Guid": "78d66ac8-aff8-496f-97cb-8a9adbca359d",
+    "Guid": "aa46ee4d-c1a9-46fe-b4d5-1755f0c65fb9",
     "Version": "0.0.0.5",
     "Author": "Linoa235",
     "Repo": "",
@@ -1497,7 +1497,7 @@
   },
   {
     "Name": "E2N",
-    "Guid": "edca0539-8fe1-4e02-846d-4f3df4fee7a8",
+    "Guid": "0bccb85f-fc25-40ec-8941-4b7a1aee30d5",
     "Version": "0.0.0.2",
     "Author": "Linoa235",
     "Repo": "",
@@ -1508,7 +1508,7 @@
   },
   {
     "Name": "E1N",
-    "Guid": "89639d3c-e564-409c-b413-030f9e3818df",
+    "Guid": "64521438-deca-4c87-b929-4cd75317cc53",
     "Version": "0.0.0.3",
     "Author": "Linoa235",
     "Repo": "",
@@ -1519,7 +1519,7 @@
   },
   {
     "Name": "E12N",
-    "Guid": "77a05c0a-84a9-46bd-b32b-b3424f726767",
+    "Guid": "2d93014e-99c6-4cd6-b12b-57627a415a31",
     "Version": "0.0.0.3",
     "Author": "Linoa235",
     "Repo": "",
@@ -1530,7 +1530,7 @@
   },
   {
     "Name": "E10N",
-    "Guid": "36850c8b-25d8-41ba-976e-3213a488859f",
+    "Guid": "dfe109a0-1af8-482d-a178-c6734811a653",
     "Version": "0.0.0.3",
     "Author": "Linoa235",
     "Repo": "",
@@ -1541,7 +1541,7 @@
   },
   {
     "Name": "E9N",
-    "Guid": "523a4ed5-b1ee-4168-ac7c-9f9c08b5a0a5",
+    "Guid": "5b716443-7793-4891-99ce-d79204988714",
     "Version": "0.0.0.2",
     "Author": "Linoa235",
     "Repo": "",
@@ -1552,7 +1552,7 @@
   },
   {
     "Name": "E8N",
-    "Guid": "888aafb6-3df3-4a86-87e1-6990070f7b2e",
+    "Guid": "27452c2e-7e0e-4efb-877f-822b2cf37ae7",
     "Version": "0.0.0.4",
     "Author": "Linoa235",
     "Repo": "",
@@ -1563,7 +1563,7 @@
   },
   {
     "Name": "The Twinning",
-    "Guid": "6f5cd42e-cff4-494a-b10c-ce129770af61",
+    "Guid": "8294dff8-0878-4cab-af9e-25748a646710",
     "Version": "0.0.0.3",
     "Author": "Linoa235",
     "Repo": "",
@@ -1574,7 +1574,7 @@
   },
   {
     "Name": "The Twinning",
-    "Guid": "e560b7c0-d2c4-4909-a212-fc82cf276a5b",
+    "Guid": "bfb00cd3-ccec-4b21-b3d7-e290f49e6a75",
     "Version": "0.0.0.3",
     "Author": "Linoa235",
     "Repo": "",
@@ -1585,7 +1585,7 @@
   },
   {
     "Name": "Beast Path Deity Worship: False God Descends",
-    "Guid": "7add0348-3f35-4108-8add-3273c544be58",
+    "Guid": "7a07f59c-05cc-4488-81a7-d723f8be215d",
     "Version": "0.0.0.5",
     "Author": "Linoa235",
     "Repo": "",
@@ -1596,7 +1596,7 @@
   },
   {
     "Name": "P10N",
-    "Guid": "b7d9709f-10f9-4263-8888-bdbafe876a8e",
+    "Guid": "0157cea5-7e6f-47d0-b8c5-4cc978b88893",
     "Version": "0.0.0.3",
     "Author": "Linoa235",
     "Repo": "",
@@ -1607,7 +1607,7 @@
   },
   {
     "Name": "P11N",
-    "Guid": "ae653596-b38b-4d4e-b43a-1c7ef16dd191",
+    "Guid": "bc060955-e690-46e0-9bcc-20c7d5304913",
     "Version": "0.0.0.2",
     "Author": "Linoa235",
     "Repo": "",
@@ -1618,7 +1618,7 @@
   },
   {
     "Name": "P10N",
-    "Guid": "096866d4-3a41-49fc-ab14-5d699c370dea",
+    "Guid": "5f9e6fe1-4fb6-43db-a577-ea6c87125efb",
     "Version": "0.0.0.3",
     "Author": "Linoa235",
     "Repo": "",
@@ -1629,7 +1629,7 @@
   },
   {
     "Name": "P11N",
-    "Guid": "9b610957-2242-4f6a-9a85-83e476e9dfb3",
+    "Guid": "76fee5c0-1184-4970-a6c0-0716c9146643",
     "Version": "0.0.0.2",
     "Author": "Linoa235",
     "Repo": "",
@@ -1640,7 +1640,7 @@
   },
   {
     "Name": "M10N",
-    "Guid": "8633b185-7710-4167-9825-2c7e7bae0c18",
+    "Guid": "4d59cc88-6846-48bc-871b-b404d0c7f9c0",
     "Version": "0.0.0.2",
     "Author": "Linoa235",
     "Repo": "",
@@ -1651,7 +1651,7 @@
   },
   {
     "Name": "M10S Blue Line Guidance",
-    "Guid": "c31eacd9-856e-43d6-929d-44f17c047357",
+    "Guid": "7ab8fa18-71ed-45f7-b12a-4020de18c43c",
     "Version": "0.0.0.2",
     "Author": "Linoa235",
     "Repo": "",
@@ -1662,7 +1662,7 @@
   },
   {
     "Name": "M11N",
-    "Guid": "bf37625f-d41e-4c8f-8664-104015cdd199",
+    "Guid": "1ca27f2c-5e1c-43ac-a41a-7a8a62d734c9",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -1673,7 +1673,7 @@
   },
   {
     "Name": "M12S Phase 4 Rough Drawing",
-    "Guid": "5a51a28f-1f27-4ac0-a3a8-8c380c73bd61",
+    "Guid": "cf2f9b53-aef2-4ddb-847d-1aeea93edc71",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -1684,7 +1684,7 @@
   },
   {
     "Name": "M1n",
-    "Guid": "8347b361-92f5-4815-8c71-b5ecdd7c4df8",
+    "Guid": "f821c1cd-6c92-4792-8b84-61469e922f57",
     "Version": "0.0.0.4",
     "Author": "Linoa235",
     "Repo": "",
@@ -1695,7 +1695,7 @@
   },
   {
     "Name": "M1s Drawing",
-    "Guid": "c387b43a-cdb8-416c-966f-41dd4610bb12",
+    "Guid": "1625c7dd-a198-4d06-968e-fa90d7ef40d8",
     "Version": "0.0.0.9",
     "Author": "Linoa235",
     "Repo": "",
@@ -1706,7 +1706,7 @@
   },
   {
     "Name": "M1s绘图",
-    "Guid": "5ca6843d-df56-4d9c-a663-ce6b87a617c5",
+    "Guid": "55bee115-35dc-436b-b2dd-745932d546b1",
     "Version": "0.0.0.9",
     "Author": "Linoa235",
     "Repo": "",
@@ -1717,7 +1717,7 @@
   },
   {
     "Name": "M2n",
-    "Guid": "9ebabc2a-16db-491a-8750-bb08fd8d5f52",
+    "Guid": "39b0e6a0-0fa9-44ef-a9e5-94f58955e726",
     "Version": "0.0.0.3",
     "Author": "Linoa235",
     "Repo": "",
@@ -1728,7 +1728,7 @@
   },
   {
     "Name": "M2s Drawing",
-    "Guid": "922e2c38-ff61-4187-a66a-f27748debe1c",
+    "Guid": "d80fa1d1-2033-4aff-8271-ac14bd66f1ec",
     "Version": "0.0.0.3",
     "Author": "Linoa235",
     "Repo": "",
@@ -1739,7 +1739,7 @@
   },
   {
     "Name": "M3n",
-    "Guid": "47418897-6ab6-4be4-a611-fb49f9068de8",
+    "Guid": "7f360ad3-1501-41ca-bd12-6cf4662354f8",
     "Version": "0.0.0.3",
     "Author": "Linoa235",
     "Repo": "",
@@ -1750,7 +1750,7 @@
   },
   {
     "Name": "M3s Drawing",
-    "Guid": "d22daf3b-2362-49f8-b4b8-8925d6c0911f",
+    "Guid": "3e4771f5-dba8-49f2-a9d0-ea9ee32fda02",
     "Version": "0.0.0.9",
     "Author": "Linoa235",
     "Repo": "",
@@ -1761,7 +1761,7 @@
   },
   {
     "Name": "M4n",
-    "Guid": "cc57802d-60f4-4f67-ad19-a8e70906db47",
+    "Guid": "8f025539-6ff5-40f4-9004-e3ad8ac24660",
     "Version": "0.0.0.4",
     "Author": "Linoa235",
     "Repo": "",
@@ -1772,7 +1772,7 @@
   },
   {
     "Name": "M4s Drawing",
-    "Guid": "9a8754aa-8e45-4c22-8633-9797da4e79ef",
+    "Guid": "c4fe7584-9deb-447b-b511-5052a4c0bf23",
     "Version": "0.0.0.13",
     "Author": "Linoa235",
     "Repo": "",
@@ -1783,7 +1783,7 @@
   },
   {
     "Name": "M5s Drawing",
-    "Guid": "b94a55e7-b32d-4369-8646-949200886efd",
+    "Guid": "a756c231-c625-4c1e-bb73-e0bb42afdd5b",
     "Version": "0.0.0.3",
     "Author": "Linoa235",
     "Repo": "",
@@ -1794,7 +1794,7 @@
   },
   {
     "Name": "M6s Drawing",
-    "Guid": "70ffc73b-dfb5-4631-94dd-180a800263f2",
+    "Guid": "e715669c-071c-4c09-ae91-bd434d63f9fa",
     "Version": "0.0.0.5",
     "Author": "Linoa235",
     "Repo": "",
@@ -1805,7 +1805,7 @@
   },
   {
     "Name": "M7S·Arcadia Savage·Heavyweight 3",
-    "Guid": "aad193df-365f-42ad-87ba-e7d92855d55f",
+    "Guid": "df670b37-78dd-4535-98b8-a58baabef08c",
     "Version": "0.0.1.0",
     "Author": "Linoa235",
     "Repo": "",
@@ -1816,7 +1816,7 @@
   },
   {
     "Name": "M9N",
-    "Guid": "1094f6a8-d363-4360-8dfb-5966dba9406f",
+    "Guid": "b4f3e292-2368-4fce-ac3e-94d153adc1f7",
     "Version": "0.0.0.9",
     "Author": "Linoa235",
     "Repo": "",
@@ -1827,7 +1827,7 @@
   },
   {
     "Name": "---- Mobs ----",
-    "Guid": "da4f5921-9426-4894-9c30-2c59bc2e307b",
+    "Guid": "9624a92e-a4ef-4bf4-85f8-9fb9e324ceda",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -1838,7 +1838,7 @@
   },
   {
     "Name": "---- Trash Mobs ----",
-    "Guid": "4640bce1-154c-4252-818d-fca5c7620175",
+    "Guid": "8a28eb37-6ae5-49e0-acf0-ed14f84e4ab1",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -1849,7 +1849,7 @@
   },
   {
     "Name": "---- Trash Mobs ----",
-    "Guid": "fe8aa4af-ceb2-421b-b830-3cea3a2145ad",
+    "Guid": "e67816ed-08b7-4df6-857a-2b71e9426d1c",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -1860,7 +1860,7 @@
   },
   {
     "Name": "New Moon Island CE",
-    "Guid": "72cdfe35-1075-44cf-9062-8464d77af778",
+    "Guid": "519bc5f8-1505-4bf7-8242-55c559c06c33",
     "Version": "0.2.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -1871,7 +1871,7 @@
   },
   {
     "Name": "O10n",
-    "Guid": "95a112de-90fa-4edd-b1f1-e2cabbac09e6",
+    "Guid": "3ba5c53a-e823-4bca-94be-89a1a313e89e",
     "Version": "0.0.0.2",
     "Author": "Linoa235",
     "Repo": "",
@@ -1882,7 +1882,7 @@
   },
   {
     "Name": "Omega Protocol Ultimate Deluxe Edition",
-    "Guid": "074e0c29-f4c8-40f0-b6a3-185c9f9da5a1",
+    "Guid": "d373ea02-6092-4bc8-9931-8630e1c28163",
     "Version": "0.0.0.19",
     "Author": "Linoa235",
     "Repo": "",
@@ -1893,7 +1893,7 @@
   },
   {
     "Name": "OmegaProtocolUltimate",
-    "Guid": "2c7051ce-f31c-4233-a490-5ad91a1c5cd3",
+    "Guid": "200e600c-99bb-41cc-a876-c48c6440774a",
     "Version": "0.0.0.5",
     "Author": "Linoa235",
     "Repo": "",
@@ -1904,7 +1904,7 @@
   },
   {
     "Name": "Omega1",
-    "Guid": "85f63792-2531-40a2-81a6-127be6d4b9cb",
+    "Guid": "d26e0659-20fa-4988-8795-dda53c50f4f0",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -1915,7 +1915,7 @@
   },
   {
     "Name": "Omega2",
-    "Guid": "41a74daf-9b2b-4061-a27f-2b773dd3f4e7",
+    "Guid": "3f56ac50-f3ec-4a58-b8e0-6aa39934d971",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -1926,7 +1926,7 @@
   },
   {
     "Name": "Omega3",
-    "Guid": "790af03f-7995-47ad-a850-96c6b8a3d2ab",
+    "Guid": "7b65bf6a-4c0f-4890-af91-75835ecce197",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -1937,7 +1937,7 @@
   },
   {
     "Name": "Omega4",
-    "Guid": "9c3a5876-5254-45a1-8365-9065145b4e03",
+    "Guid": "2497816d-edda-4b11-9a92-8937e194ba32",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -1948,7 +1948,7 @@
   },
   {
     "Name": "OmegaProtocolUltimate",
-    "Guid": "1cbadb6d-fb0c-4e6c-a9f3-541fefcc6a23",
+    "Guid": "18cdfbb4-acba-4098-92d2-1f85e3b6a60f",
     "Version": "0.0.0.5",
     "Author": "Linoa235",
     "Repo": "",
@@ -1959,7 +1959,7 @@
   },
   {
     "Name": "Origenics",
-    "Guid": "ce93ef73-4268-4d1e-b48f-38f59463b060",
+    "Guid": "26969c48-e6b8-4876-855c-d0b6c134c91e",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -1970,7 +1970,7 @@
   },
   {
     "Name": "Origenics",
-    "Guid": "718f2751-b478-432d-9b43-48f87c40d0c7",
+    "Guid": "9F1D4DC0-1891-7AC0-9571-D5266198751D",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -1981,7 +1981,7 @@
   },
   {
     "Name": "P1N-P4N Bundle",
-    "Guid": "1d6fbeca-05a1-46a2-8450-508b2b258e53",
+    "Guid": "475ca0e8-d489-4954-941e-cbc47b24f88b",
     "Version": "0.0.0.2",
     "Author": "Linoa235",
     "Repo": "",
@@ -1992,7 +1992,7 @@
   },
   {
     "Name": "P1N-P4N Bundle",
-    "Guid": "1bfdf011-ab5d-4f3e-9d84-371faa5d23ac",
+    "Guid": "AD2A9D42-E040-442E-A8F2-86F7D13768BD",
     "Version": "0.0.0.2",
     "Author": "Linoa235",
     "Repo": "",
@@ -2003,7 +2003,7 @@
   },
   {
     "Name": "P1N-P4N Bundle",
-    "Guid": "371bd9a0-6b89-44c5-add0-ca1b808d321e",
+    "Guid": "AD2A9D42-E040-442E-A8F2-86F7D13768BD",
     "Version": "0.0.0.2",
     "Author": "Linoa235",
     "Repo": "",
@@ -2014,7 +2014,7 @@
   },
   {
     "Name": "Palace of the Dead",
-    "Guid": "0f9d61f6-7585-495c-b26e-6426d3adb0dd",
+    "Guid": "504cecca-cc80-4018-8091-c4876c338e1a",
     "Version": "0.0.1.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -2025,7 +2025,7 @@
   },
   {
     "Name": "Palace of the Dead",
-    "Guid": "bb11d2e9-6cef-4363-a07d-cefa56eb3a0e",
+    "Guid": "3977854f-4078-4185-97a4-4f1a082e2fe3",
     "Version": "0.0.1.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -2036,7 +2036,7 @@
   },
   {
     "Name": "Pilgrim's Traverse",
-    "Guid": "093359ee-f9da-4bbd-9e7a-b002c14be0c7",
+    "Guid": "3619b5a7-d4ed-4675-a60e-c873ebbacbde",
     "Version": "0.0.1.91",
     "Author": "Linoa235",
     "Repo": "",
@@ -2047,7 +2047,7 @@
   },
   {
     "Name": "PVP Skill Drawing",
-    "Guid": "c0c2a95a-29f8-4435-9b57-1a4c2a7dacf7",
+    "Guid": "56de6b81-7e75-4b08-8efe-ee22b4d1342f",
     "Version": "0.0.0.8",
     "Author": "Linoa235",
     "Repo": "",
@@ -2058,7 +2058,7 @@
   },
   {
     "Name": "PVP_Tetora",
-    "Guid": "c231c091-f5da-4d73-8744-8bf84b199361",
+    "Guid": "8b7eddc5-33b0-4371-bfa9-2c916c112c63",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -2069,7 +2069,7 @@
   },
   {
     "Name": "Resurrection Location",
-    "Guid": "e3319404-ad3e-430d-822c-5ad1714ebfa6",
+    "Guid": "d69862ce-a8a3-4078-84c2-34bf43301192",
     "Version": "0.0.2",
     "Author": "Linoa235",
     "Repo": "",
@@ -2080,7 +2080,7 @@
   },
   {
     "Name": "Resurrection Location",
-    "Guid": "ab39a4c8-2d79-423b-a1b4-b8ec723077af",
+    "Guid": "874D3ECF-BD6B-448F-BB42-AE7F082E4809",
     "Version": "0.0.2",
     "Author": "Linoa235",
     "Repo": "",
@@ -2091,7 +2091,7 @@
   },
   {
     "Name": "Rubicante",
-    "Guid": "bbc7cca8-e15a-4868-bd66-8376506043ee",
+    "Guid": "79657c33-fe73-427a-b42b-e24995a7f4d7",
     "Version": "0.0.0.2",
     "Author": "Linoa235",
     "Repo": "",
@@ -2102,7 +2102,7 @@
   },
   {
     "Name": "SimpleScript",
-    "Guid": "e5d5b31d-6c05-446b-bd96-1aa69f32e3c7",
+    "Guid": "7c794b74-71d8-4707-9b94-8f536eed202b",
     "Version": "0.0.0.3",
     "Author": "Linoa235",
     "Repo": "",
@@ -2113,7 +2113,7 @@
   },
   {
     "Name": "Storm's Crown",
-    "Guid": "bc1e496a-abf5-4acb-bb6f-2bd1bf2715b0",
+    "Guid": "6e99e723-2c0d-4eb1-80ee-2d7137e405e1",
     "Version": "0.0.0.2",
     "Author": "Linoa235",
     "Repo": "",
@@ -2124,7 +2124,7 @@
   },
   {
     "Name": "Tam-Tara Deepcroft (Hard)",
-    "Guid": "12fbb71f-e33b-4a9a-9ae3-76836e7d4ee2",
+    "Guid": "a023af00-8efe-4aaf-8d86-256ee8c00b2e",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -2135,7 +2135,7 @@
   },
   {
     "Name": "TEA P1.5 Floor Fire Starting Line Guidance",
-    "Guid": "3efbea6e-ec81-4d98-957a-601d9d14aae3",
+    "Guid": "e9492173-64ce-4911-ab61-79612ebc5262",
     "Version": "0.0.0.2",
     "Author": "Linoa235",
     "Repo": "",
@@ -2146,7 +2146,7 @@
   },
   {
     "Name": "Tender Valley",
-    "Guid": "e889d50d-84aa-4cb0-92f7-b515d3f7dbd5",
+    "Guid": "243fc18a-d2ba-4026-95f9-dda7ac07298a",
     "Version": "0.0.0.5",
     "Author": "Linoa235",
     "Repo": "",
@@ -2157,7 +2157,7 @@
   },
   {
     "Name": "The Aetherfont",
-    "Guid": "372358a5-5c7e-42f8-bc40-425efbf55d7e",
+    "Guid": "5306b41c-6982-4d17-8cc4-8c42a3c89f33",
     "Version": "0.0.0.2",
     "Author": "Linoa235",
     "Repo": "",
@@ -2168,7 +2168,7 @@
   },
   {
     "Name": "The Borderland Ruins (Siege Battle)",
-    "Guid": "347aef96-db52-45ad-ac95-580aee34149a",
+    "Guid": "5ce220af-55eb-44f6-940a-2f725f1f2793",
     "Version": "0.0.0.3",
     "Author": "Linoa235",
     "Repo": "",
@@ -2179,7 +2179,7 @@
   },
   {
     "Name": "---- Mobs ----",
-    "Guid": "b2ffe582-ad24-4d82-aa8e-1a0509705763",
+    "Guid": "67c9ac0d-89a7-4a65-9624-ccfc4a5f64bd",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -2190,7 +2190,7 @@
   },
   {
     "Name": "The Copied Factory",
-    "Guid": "bc6f3a7f-3cc3-4913-8cb0-8afeed0007af",
+    "Guid": "42a65ec4-cbb6-4b8b-81f6-ca9f4eec754b",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -2201,7 +2201,7 @@
   },
   {
     "Name": "The Epic of Alexander",
-    "Guid": "2a226858-88a4-4033-85f9-f35906f85ee5",
+    "Guid": "d36343bc-678d-4e92-bac7-f78e6c4c1211",
     "Version": "0.0.2.9",
     "Author": "Linoa235",
     "Repo": "",
@@ -2212,7 +2212,7 @@
   },
   {
     "Name": "The Final Day",
-    "Guid": "3d687875-7e82-44f9-be4e-70195821c5d7",
+    "Guid": "c996343b-7614-49fd-822b-877a35a1fd52",
     "Version": "0.0.0.2",
     "Author": "Linoa235",
     "Repo": "",
@@ -2223,7 +2223,7 @@
   },
   {
     "Name": "The Forbidden Land, Eureka - The Baldesion Arsenal",
-    "Guid": "08d5ca3e-0722-4916-9c15-45483437a6d9",
+    "Guid": "25c708f9-1ce0-41f8-a1c9-b746ed61e559",
     "Version": "0.0.0.4",
     "Author": "Linoa235",
     "Repo": "",
@@ -2234,7 +2234,7 @@
   },
   {
     "Name": "The Fractal Continuum (Hard)",
-    "Guid": "b6eefc79-54c7-45fb-a693-616f9aeae3ec",
+    "Guid": "68dfd6e5-4a96-4983-bc08-673d71110693",
     "Version": "0.0.0.3",
     "Author": "Linoa235",
     "Repo": "",
@@ -2245,7 +2245,7 @@
   },
   {
     "Name": "The Gilded Araya",
-    "Guid": "1e386313-5c85-4590-a8ed-a50ecc2a14c5",
+    "Guid": "ee59d264-fbe4-4088-9f29-6729e120aa20",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -2256,7 +2256,7 @@
   },
   {
     "Name": "The Mothercrystal",
-    "Guid": "76e74125-af8d-4c8b-a125-d76edb8f0f9c",
+    "Guid": "4369c75f-0ee4-4d6e-b11c-c094b629a5c0",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -2267,7 +2267,7 @@
   },
   {
     "Name": "The Navel",
-    "Guid": "570e568a-bfca-4ffa-aef7-4f6d0eb03054",
+    "Guid": "66d18d86-eb09-4fc0-be0b-0987b5aa5a18",
     "Version": "0.0.0.3",
     "Author": "Linoa235",
     "Repo": "",
@@ -2278,7 +2278,7 @@
   },
   {
     "Name": "The Strayborough Deadwalk",
-    "Guid": "3e045bf2-7a6b-49f4-8c6f-f8b47448c0b7",
+    "Guid": "70f4effa-d403-4ebc-b3d0-e8753338b1ee",
     "Version": "0.0.0.8",
     "Author": "Linoa235",
     "Repo": "",
@@ -2289,7 +2289,7 @@
   },
   {
     "Name": "The Tower at Paradigm's Breach",
-    "Guid": "a251ca57-1f1a-4776-b8a8-d8972bab4023",
+    "Guid": "a654f603-256b-41de-90fd-9912bdb62ddf",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -2300,7 +2300,7 @@
   },
   {
     "Name": "Place waymarks manually",
-    "Guid": "fb303ec4-382d-44ea-a386-dce108343410",
+    "Guid": "74b5d71b-cd83-4a93-9523-2f470a538623",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -2311,7 +2311,7 @@
   },
   {
     "Name": "Tower of Power (Police)",
-    "Guid": "600f3be8-84fd-42ba-a6ac-f594c8222454",
+    "Guid": "ce938058-4888-4700-acc7-a9f7d627b1ad",
     "Version": "0.0.2",
     "Author": "Linoa235",
     "Repo": "",
@@ -2322,7 +2322,7 @@
   },
   {
     "Name": "Tower of Power Mine Clearing (Inside Tower)",
-    "Guid": "3e33cac7-ac0a-4eda-bb55-33fa66c2d12e",
+    "Guid": "e39a74e5-1bc3-430c-a15c-64cbc2ce5cb9",
     "Version": "0.1.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -2333,7 +2333,7 @@
   },
   {
     "Name": "Tower of Strength",
-    "Guid": "9bf3d87d-0682-42e4-b53c-075c848d09c1",
+    "Guid": "c4901d90-1939-42c6-9554-c88501c5812d",
     "Version": "0.0.40",
     "Author": "Linoa235",
     "Repo": "",
@@ -2344,7 +2344,7 @@
   },
   {
     "Name": "UCOB [The Unending Coil of Bahamut]",
-    "Guid": "91c35ae6-1fa4-4d8c-9985-07dbfa9f7dd3",
+    "Guid": "fc06c438-75d7-475b-8984-46802b2283e1",
     "Version": "0.0.2.2",
     "Author": "Linoa235",
     "Repo": "",
@@ -2355,7 +2355,7 @@
   },
   {
     "Name": "Ultima Weapon Ultimate",
-    "Guid": "e550f35a-825d-40cf-8593-922dcff73227",
+    "Guid": "73826b8c-8a9a-4cb7-9e37-88316e00cec1",
     "Version": "0.0.0.2",
     "Author": "Linoa235",
     "Repo": "",
@@ -2366,7 +2366,7 @@
   },
   {
     "Name": "Duty Detection",
-    "Guid": "819c43d6-caa9-4c99-a65c-5718a1fe4d60",
+    "Guid": "4843cef2-ffbb-4cb9-9f5b-aaac36c7fcb4",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -2377,7 +2377,7 @@
   },
   {
     "Name": "Valigarmanda EX Draw",
-    "Guid": "b5c60c9b-9a74-45bd-b85b-c52181d520d7",
+    "Guid": "6faecd9c-0679-4995-b0b6-483a80ad6fc6",
     "Version": "0.0.0.3",
     "Author": "Linoa235",
     "Repo": "",
@@ -2388,7 +2388,7 @@
   },
   {
     "Name": "Vanguard Outpost",
-    "Guid": "199301e6-82d4-45cb-a48c-f649b8892893",
+    "Guid": "a0cd2385-eaaf-4cdf-9d36-08b1e2a4b068",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -2399,7 +2399,7 @@
   },
   {
     "Name": "Variant Dungeon Automation",
-    "Guid": "9c5b6fb7-06ab-4393-9771-7c0b55fd2a37",
+    "Guid": "5f606fe5-8a11-4a03-888a-fcd4089ac17a",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -2410,7 +2410,7 @@
   },
   {
     "Name": "Variant Dungeon Automation",
-    "Guid": "cc339112-6ebd-4b71-ac0f-32ec44fabd04",
+    "Guid": "348c9db7-80aa-46c5-8547-88eca84b85f4",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -2421,7 +2421,7 @@
   },
   {
     "Name": "Worqor Lar Dor",
-    "Guid": "739f3c7d-c99b-4301-a368-0bbd754e36e3",
+    "Guid": "2a7dc2cb-a32d-4183-a663-7b8e85685ea4",
     "Version": "0.0.0.3",
     "Author": "Linoa235",
     "Repo": "",
@@ -2432,7 +2432,7 @@
   },
   {
     "Name": "Zelenia Extreme",
-    "Guid": "cbc94b88-5510-4d99-b364-77301b23f383",
+    "Guid": "9648df28-e5a1-464c-a004-7fb8e2f75250",
     "Version": "0.0.1.2",
     "Author": "Linoa235",
     "Repo": "",
@@ -2443,7 +2443,7 @@
   },
   {
     "Name": "Zelenia Extreme",
-    "Guid": "825bab8b-1031-47a2-b5ac-0c94df7e9537",
+    "Guid": "6192A434-05E0-4E7E-9724-1CC855E9C975",
     "Version": "0.0.1.2",
     "Author": "Linoa235",
     "Repo": "",
@@ -2454,7 +2454,7 @@
   },
   {
     "Name": "Zoraal Ja EX Draw",
-    "Guid": "c9e11b5e-18b5-4b06-be4e-a332d3bb2f8b",
+    "Guid": "f6873118-459b-4679-af25-62e6ad2795b2",
     "Version": "0.0.0.2",
     "Author": "Linoa235",
     "Repo": "",
@@ -2465,7 +2465,7 @@
   },
   {
     "Name": "Zoraal Ja EX Draw",
-    "Guid": "40a6c515-a2c6-4dc6-825a-29d4d9f4a9e7",
+    "Guid": "18ef8ab2-b8b9-4ab0-92ef-d32bc0dc1eb7",
     "Version": "0.0.0.2",
     "Author": "Linoa235",
     "Repo": "",
