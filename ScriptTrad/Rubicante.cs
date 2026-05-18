@@ -24,7 +24,7 @@ using Lumina.Excel.Sheets;
 namespace UsamisScript.EndWalker.Rubicante;
 
 [ScriptType(name: "Rubicante", territorys: [1095],
-    guid: "f01f615b-4867-4596-a609-eefcc9d38c55", version: "0.0.0.2", author: "Linoa235", note: noteStr, updateInfo: UpdateInfo)]
+    guid: "d9c4d192-8ae2-4a17-8a96-72ff9646680f", version: "0.0.0.2", author: "Linoa235", note: noteStr, updateInfo: UpdateInfo)]
 
 public class Rubicante
 {
