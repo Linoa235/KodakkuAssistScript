@@ -26,7 +26,7 @@ using System.Xml.Linq;
 
 namespace Veever.DawnTrail.the_Wreath_of_Snakes_Unreal;
 
-[ScriptType(name: Name, territorys: [825, 1302], guid: "737ca491-2fae-400c-ac89-0623addb90b2",
+[ScriptType(name: Name, territorys: [825, 1302], guid: "b42ab9ee-71bb-47bd-90d0-93fc9480feaf",
     version: Version, author: "Linoa235", note: NoteStr, updateInfo: UpdateInfo)]
 
 public class UnrealSeiryu
