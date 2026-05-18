@@ -9,7 +9,7 @@ using KodakkuAssist.Module.Draw;
 
 namespace Cyf5119Script.Dawntrail.WorqorLarDor;
 
-[ScriptType(guid: "79f67f76-e205-42ba-b40e-435e0c356bc8", name: "Worqor Lar Dor", territorys: [1195], version: "0.0.0.3", author: "Linoa235")]
+[ScriptType(guid: "5ce75511-6313-46af-b60d-efcf3886d1c6", name: "Worqor Lar Dor", territorys: [1195], version: "0.0.0.3", author: "Linoa235")]
 public class WorqorLarDor
 {
     public void Init(ScriptAccessory accessory)
