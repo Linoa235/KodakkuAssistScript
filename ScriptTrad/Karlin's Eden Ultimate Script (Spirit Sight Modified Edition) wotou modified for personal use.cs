@@ -29,7 +29,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
     [ScriptType(name: "Karlin's Eden Ultimate Script (Spirit Sight Modified Edition) wotou modified for personal use",
         territorys: [1238],
-        guid: "2690e9a9-7881-4304-8d05-721d2989b1ec",
+        guid: "42afdfd9-d75a-4fd5-b3ee-5f2f25a39757",
         version: "0.0.1.50",
         note: notesOfTheScript,
         author: "Linoa235", 
