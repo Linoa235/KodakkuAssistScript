@@ -396,7 +396,7 @@
     "TerritoryIds": [944]
   },
   {
-    "Name": "EdenUltimate EU",
+    "Name": "Ultimate EU",
     "Guid": "ed3688e5-615e-4d3a-ab9f-1a4b6278ef3b",
     "Version": "0.0.0.10",
     "Author": "Linoa235",
@@ -418,8 +418,8 @@
     "TerritoryIds": [1238]
   },
   {
-    "Name": "---- <P1&P4.5: Door Boss> ----",
-    "Guid": "ce47a699-2443-4da0-89fe-03b0aff69dd6",
+    "Name": "EndWalker DSR",
+    "Guid": "fa052109-0202-4de9-8e91-d2d955981fbf",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -429,7 +429,7 @@
     "TerritoryIds": [968, 1112]
   },
   {
-    "Name": "Test: Parameter Reset",
+    "Name": "EndWalker TopReborn",
     "Guid": "2a8eae26-0869-4738-bacb-8ff232a9bb4e",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
@@ -441,7 +441,7 @@
   },
   {
     "Name": "Extreme G Lair",
-    "Guid": "3b0dbbec-7608-40d8-84c7-dfeddea93bfc",
+    "Guid": "5ed42145-3ab4-4ad3-8f02-24548465a19f",
     "Version": "0.0.0.3",
     "Author": "Linoa235",
     "Repo": "",
@@ -473,8 +473,8 @@
     "TerritoryIds": [1238]
   },
   {
-    "Name": "G Lair Abolition: Hell on Rails (Extreme)",
-    "Guid": "947615c1-ec57-4bbc-898f-aa09d312174c",
+    "Name": "G Lair Abolition Hell on Rails (Extreme)",
+    "Guid": "a7452887-6e0f-49a4-9348-ecf54ec6a68b",
     "Version": "0.0.0.2",
     "Author": "Linoa235",
     "Repo": "",
@@ -540,7 +540,7 @@
   },
   {
     "Name": "Ihuykatumu",
-    "Guid": "d0b0ca07-6b2f-426f-b36a-c856dad0d1d3",
+    "Guid": "1eb6ef9a-1cea-492e-91d9-7ab094a41caf",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -562,7 +562,7 @@
   },
   {
     "Name": "Karlin's Eden Ultimate Script (Spirit Sight Modified Edition) wotou modified for personal use",
-    "Guid": "2690e9a9-7881-4304-8d05-721d2989b1ec",
+    "Guid": "42afdfd9-d75a-4fd5-b3ee-5f2f25a39757",
     "Version": "0.0.1.50",
     "Author": "Linoa235",
     "Repo": "",
