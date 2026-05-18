@@ -573,7 +573,7 @@
   },
   {
     "Name": "Karlin's FRU script (Customized by Cicero) - English Version",
-    "Guid": "393ececf-888b-41b6-841d-120fb4cf906b",
+    "Guid": "45d5f5f1-7521-446f-a939-acb97c6652a0",
     "Version": "0.0.1.19",
     "Author": "Linoa235",
     "Repo": "",
@@ -584,7 +584,7 @@
   },
   {
     "Name": "Karlin's FRU script (Customized by Cicero)",
-    "Guid": "18eda575-ad49-4fdd-9888-e1a1afe56451",
+    "Guid": "1943f3fd-ab45-43b7-8dc9-828fb3085d2d",
     "Version": "0.0.1.19",
     "Author": "Linoa235",
     "Repo": "",
@@ -605,8 +605,8 @@
     "TerritoryIds": [1307]
   },
   {
-    "Name": "LV.10 Basic Training: Enemy Parties",
-    "Guid": "44c9ca04-4768-4350-b657-af592a3b2c04",
+    "Name": "LV.10 Basic Training Enemy Parties",
+    "Guid": "94e3fff0-ab7d-4708-b120-11769831d994",
     "Version": "0.0.0.3",
     "Author": "Linoa235",
     "Repo": "",
@@ -627,8 +627,8 @@
     "TerritoryIds": [190]
   },
   {
-    "Name": "Place waymarks manually",
-    "Guid": "b6bc05fe-caac-4ccd-8e0e-cd9bef675af5",
+    "Name": "LV.100 Guardian Arkveld (Extreme) The Windward",
+    "Guid": "cf63aa48-c4f1-450a-b03f-f5922d33f3bd",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -639,7 +639,7 @@
   },
   {
     "Name": "LV.100 Hells' Kier Unreal",
-    "Guid": "f20eef85-5b51-428a-ad44-13ce4106f5ce",
+    "Guid": "a00f29d2-d813-4933-9cf3-ba6cbfeed356",
     "Version": "0.0.0.7",
     "Author": "Linoa235",
     "Repo": "",
