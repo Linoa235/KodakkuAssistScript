@@ -27,8 +27,8 @@ using System.Xml.Linq;
 
 namespace Veever.Heavensward.the_Great_Gubal_Library_Hard;
 
-[ScriptType(name: Name, territorys: [578], guid: "e1d85acc-3a31-4a57-9909-4afa1025a194",
-    version: Version, author: "Linoa235", note: NoteStr, updateInfo: UpdateInfo)]
+[ScriptType(name: Name, territorys: [578], guid: "2d4d9901-1b9d-4f9f-83ae-7d4315689418",
+    version: Version, author: "Veever", note: NoteStr, updateInfo: UpdateInfo)]
 
 public class the_Great_Gubal_Library_Hard
 {
@@ -187,6 +187,11 @@ public class the_Great_Gubal_Library_Hard
     #endregion
 
     #region Boss1
+    private static IGameObject? GetBossObject(ScriptAccessory sa, uint BossDataId)
+    {
+        return sa.GetByDataId(BossDataId).FirstOrDefault();
+    }
+
     [ScriptMethod(name: "---- Boss1 ----", eventType: EventTypeEnum.NpcYell, eventCondition: ["HelloayaWorld:asdf"],
         userControl: Debugging)]
     public void Boss1(Event ev, ScriptAccessory sa)
