@@ -37,7 +37,7 @@ using KodaMarkType = KodakkuAssist.Module.GameOperate.MarkType;
 
 namespace Veever.DawnTrail.the_Clyteum;
 
-[ScriptType(name: Name, territorys: [1345], guid: "339b45d8-d034-4489-a2cd-077d072f40ca",
+[ScriptType(name: Name, territorys: [1345], guid: "6d481822-8354-4e95-bf6f-dffd827a2147",
     version: Version, author: "Linoa235", note: NoteStr, updateInfo: UpdateStr)]
 
 // ^(?!.*((Monk|Machinist|Dragoon|Samurai|Ninja|Viper|Reaper|Dancer|Bard|Astrologian|Sage|Scholar|(Eos|Selene)|Seraph|White Mage|Warrior|Paladin|Dark Knight|Gunbreaker|Pictomancer|Black Mage|Blue Mage|Summoner|Carbuncle|Demigod Bahamut|Demigod Phoenix|Garuda-Egi|Titan-Egi|Ifrit-Egi|Puppet)\] (Used|Cast))).*35501.*$
