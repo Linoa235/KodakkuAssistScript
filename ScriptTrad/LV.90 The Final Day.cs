@@ -26,7 +26,7 @@ using System.Xml.Linq;
 
 namespace Veever.EndWalker.the_Final_Day;
 
-[ScriptType(name: Name, territorys: [997], guid: "5e51ef3f-c555-4e64-a2ac-a2a5ee01929d",
+[ScriptType(name: Name, territorys: [997], guid: "2d5109ba-3e76-453f-a681-454d782aed9a",
     version: Version, author: "Linoa235", note: NoteStr, updateInfo: UpdateInfo)]
 
 public class the_Final_Day
