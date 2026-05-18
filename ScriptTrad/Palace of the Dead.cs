@@ -15,7 +15,7 @@ using System.ComponentModel;
 
 namespace the_Palace_of_the_Dead;
 
-[ScriptType(guid: "fb690c0d-1a1e-449c-9d8c-7a6f82cc81d5", name: "Palace of the Dead", author: "Linoa235", 
+[ScriptType(guid: "f034491f-c57b-4aa9-be88-50f157c9c94b", name: "Palace of the Dead", author: "Linoa235", 
     territorys: [561,562,563,564,565,593,594,595,596,597,598,599,600,601,602,603,604,605,606,607],
     version: "0.0.1.1", note: noteStr)]
 
