@@ -10,7 +10,7 @@ using KodakkuAssist.Module.Draw.Manager;
 
 namespace Cyf5119Script.Endwalker.TheGildedAraya;
 
-[ScriptType(guid: "360a9977-07ff-496b-ba0b-27ec66c45584", name: "The Gilded Araya", territorys: [1136], version: "0.0.0.1", author: "Linoa235")]
+[ScriptType(guid: "c1afaf1a-dd0b-472e-94d3-c845839c422a", name: "The Gilded Araya", territorys: [1136], version: "0.0.0.1", author: "Linoa235")]
 public class TheGildedAraya
 {
     public void Init(ScriptAccessory sa)
