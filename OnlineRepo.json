@@ -836,7 +836,7 @@
     "TerritoryIds": [299]
   },
   {
-    "Name": "---- Mobs ----",
+    "Name": "A_Realm_Reborn.Snowcloak",
     "Guid": "af05648a-8755-49f0-92ed-c2e0205afd2b",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
@@ -891,7 +891,7 @@
     "TerritoryIds": [580]
   },
   {
-    "Name": "---- Mobs ----",
+    "Name": "LV.60 The Great Gubal Library (Hard)",
     "Guid": "260ef10b-90a8-4e07-837a-a92caccd4bdd",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
@@ -979,7 +979,7 @@
     "TerritoryIds": [952]
   },
   {
-    "Name": "---- Mobs ----",
+    "Name": "LV.90 The Dead Ends",
     "Guid": "30c199f3-37b2-4a8b-bedd-379556fa30c7",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
@@ -1012,7 +1012,7 @@
     "TerritoryIds": [998]
   },
   {
-    "Name": "---- Mobs ----",
+    "Name": "LV.90 The'Dead Ends",
     "Guid": "5c8af346-8457-43bb-b9cd-9eadba16087d",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
@@ -1089,7 +1089,7 @@
     "TerritoryIds": [960]
   },
   {
-    "Name": "---- Mobs ----",
+    "Name": "LV100 San d'Oria The Second Walk",
     "Guid": "6605fd22-074a-4561-9e12-b2c31cfa0a62",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
@@ -1100,7 +1100,7 @@
     "TerritoryIds": [1304]
   },
   {
-    "Name": "---- Mobs ----",
+    "Name": "LV100 The Meso Terminal",
     "Guid": "d0df8a70-b611-4433-9531-24be07b984f9",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
@@ -1826,7 +1826,7 @@
     "TerritoryIds": []
   },
   {
-    "Name": "---- Mobs ----",
+    "Name": "Mistwake lvl 100",
     "Guid": "9624a92e-a4ef-4bf4-85f8-9fb9e324ceda",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
@@ -1837,7 +1837,7 @@
     "TerritoryIds": [1314]
   },
   {
-    "Name": "---- Trash Mobs ----",
+    "Name": "MtGulg",
     "Guid": "8a28eb37-6ae5-49e0-acf0-ed14f84e4ab1",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
@@ -1848,7 +1848,7 @@
     "TerritoryIds": [822]
   },
   {
-    "Name": "---- Trash Mobs ----",
+    "Name": "NecronEx [The Eternal Darkness Extreme]",
     "Guid": "e67816ed-08b7-4df6-857a-2b71e9426d1c",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
@@ -2178,7 +2178,7 @@
     "TerritoryIds": [1273]
   },
   {
-    "Name": "---- Mobs ----",
+    "Name": "The Clyteum",
     "Guid": "67c9ac0d-89a7-4a65-9624-ccfc4a5f64bd",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
