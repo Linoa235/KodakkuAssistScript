@@ -15,8 +15,8 @@ using KodakkuAssist.Module.Draw;
 
 namespace KodakkuScript.Script._07_DawnTrail;
 
-[ScriptType(guid: "1eb6ef9a-1cea-492e-91d9-7ab094a41caf", name: "Ihuykatumu", territorys: [1167], version: "0.0.0.1",
-    author: "Linoa235")]
+[ScriptType(guid: "123e4567-e89b-12d3-a456-426614174000", name: "Ihuykatumu", territorys: [1167], version: "0.0.0.1",
+    author: "Poetry")]
 public class Ihuykatumu
 {
     private Vector3 SW;
@@ -77,7 +77,7 @@ public class Ihuykatumu
     
     //Boss1_Chief Seahippo
     
-    // Return to Earth (é‡åäºŽä¸–)
+    // Return to Earth (重吐于世)
     // Collapse (Circle)
     [ScriptMethod(name:"Boss1-Collapse: Circle", eventType:EventTypeEnum.StartCasting,eventCondition:["ActionId:regex:^(36502|36498|36497)$"])]
     public void CollapseCircle(Event @event,ScriptAccessory accessory)
@@ -96,12 +96,12 @@ public class Ihuykatumu
         dp.Name = $"Collapse: Circle Indicator";
         dp.Color = accessory.Data.DefaultDangerColor;
         dp.Owner = sid;
-        dp.Position= DeserializeVector3(@event["EffectPosition"]);
+        dp.Position = DeserializeVector3(@event["EffectPosition"]);
         dp.Scale = drawScale;
         dp.ScaleMode = ScaleMode.ByTime;
         dp.Color = accessory.Data.DefaultDangerColor.WithW(3);
         dp.DestoryAt = 4000;
-        accessory.Method.SendDraw(DrawModeEnum.Imgui,DrawTypeEnum.Circle,dp);
+        accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Circle, dp);
     }
     
     // Collapse (Line)
@@ -126,7 +126,7 @@ public class Ihuykatumu
         dp.Scale = drawScale;
         dp.ScaleMode = ScaleMode.ByTime;
         dp.DestoryAt = 4000;
-        accessory.Method.SendDraw(DrawModeEnum.Imgui,DrawTypeEnum.Rect,dp);
+        accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Rect, dp);
     }
     
     // Rotting (Donut)
@@ -143,7 +143,7 @@ public class Ihuykatumu
         dp.DestoryAt = 3000;
         dp.Radian = float.Pi * 2;
         dp.Delay = 4000;
-        accessory.Method.SendDraw(DrawModeEnum.Default,DrawTypeEnum.Donut,dp);
+        accessory.Method.SendDraw(DrawModeEnum.Default, DrawTypeEnum.Donut, dp);
     }
     
     // Boss2_Sleepy Monster
@@ -165,7 +165,7 @@ public class Ihuykatumu
         dp.Owner = sid;
         dp.Scale = drawScale;
         dp.DestoryAt = 7000;
-        accessory.Method.SendDraw(DrawModeEnum.Default,DrawTypeEnum.Rect,dp);
+        accessory.Method.SendDraw(DrawModeEnum.Default, DrawTypeEnum.Rect, dp);
     }
     
     // Boss3_Apollyon
@@ -183,7 +183,7 @@ public class Ihuykatumu
         dp.ScaleMode = ScaleMode.ByTime;
         dp.Scale = new(12,50);
         dp.DestoryAt = 3000;
-        accessory.Method.SendDraw(DrawModeEnum.Default,DrawTypeEnum.Rect,dp);
+        accessory.Method.SendDraw(DrawModeEnum.Default, DrawTypeEnum.Rect, dp);
     }
     
     // Lightning Sickle (Fan Discharge)
@@ -263,7 +263,7 @@ public class Ihuykatumu
     }
     
     //AOE drawing group
-    public void WindAoe(Event @event, ScriptAccessory accessory,Vector3 point, long delay,long destoryAt)
+    public void WindAoe(Event @event, ScriptAccessory accessory, Vector3 point, long delay, long destoryAt)
     {
         var dp1 = accessory.Data.GetDefaultDrawProperties();
         var dp2 = accessory.Data.GetDefaultDrawProperties();
