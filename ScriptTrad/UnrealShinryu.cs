@@ -21,7 +21,7 @@ using Lumina.Excel.Sheets;
 
 namespace KodakkuScripts.UsamisKodakku._07_DawnTrail.UnrealShinryu;
 
-[ScriptType(name: Name, territorys: [730, 1372], guid: "b97dfb40-e4d5-4f5c-89c6-2b53ca2dd799",
+[ScriptType(name: Name, territorys: [730, 1372], guid: "be00fd0a-b03c-4293-a162-f317f5813d32",
     version: Version, author: "Linoa235", note: NoteStr, updateInfo: UpdateInfo)]
 
 public class UnrealShinryu
