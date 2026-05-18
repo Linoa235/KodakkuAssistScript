@@ -23,7 +23,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
     [ScriptType(name: "Karlin's FRU script (Customized by Cicero) - English Version",
         territorys: [1238],
-        guid: "393ececf-888b-41b6-841d-120fb4cf906b",
+        guid: "45d5f5f1-7521-446f-a939-acb97c6652a0",
         version: "0.0.1.19",
         note: notesOfTheScript,
         author: "Linoa235")]
