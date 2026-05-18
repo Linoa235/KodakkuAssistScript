@@ -990,8 +990,8 @@
     "TerritoryIds": [973]
   },
   {
-    "Name": "Elegeia",
-    "Guid": "5e51ef3f-c555-4e64-a2ac-a2a5ee01929d",
+    "Name": "LV.90 The Final Day",
+    "Guid": "2d5109ba-3e76-453f-a681-454d782aed9a",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -2025,7 +2025,7 @@
   },
   {
     "Name": "Palace of the Dead",
-    "Guid": "fb690c0d-1a1e-449c-9d8c-7a6f82cc81d5",
+    "Guid": "90909e42-d6c9-4efa-8ffc-37ececeb65e2",
     "Version": "0.0.1.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -2091,7 +2091,7 @@
   },
   {
     "Name": "Rubicante",
-    "Guid": "f01f615b-4867-4596-a609-eefcc9d38c55",
+    "Guid": "72a155da-eb45-4a55-8663-c3015d7163de",
     "Version": "0.0.0.2",
     "Author": "Linoa235",
     "Repo": "",
@@ -2113,7 +2113,7 @@
   },
   {
     "Name": "Storm's Crown",
-    "Guid": "d7dee712-4f25-4cfe-ba75-8682167c0033",
+    "Guid": "d40c4303-a485-44a5-8527-cc5725deaf39",
     "Version": "0.0.0.2",
     "Author": "Linoa235",
     "Repo": "",
@@ -2124,7 +2124,7 @@
   },
   {
     "Name": "Tam-Tara Deepcroft (Hard)",
-    "Guid": "044a65ea-56fc-4435-8a1d-2d4d0a44dadc",
+    "Guid": "0c00d073-44a8-4d9d-9635-819478eae2aa",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -2157,7 +2157,7 @@
   },
   {
     "Name": "The Aetherfont",
-    "Guid": "49da631e-ac61-449e-8c01-45283ffcc734",
+    "Guid": "8022686e-554e-4725-9e36-a84c4f9d11e0",
     "Version": "0.0.0.2",
     "Author": "Linoa235",
     "Repo": "",
@@ -2179,7 +2179,7 @@
   },
   {
     "Name": "The Clyteum",
-    "Guid": "339b45d8-d034-4489-a2cd-077d072f40ca",
+    "Guid": "6d481822-8354-4e95-bf6f-dffd827a2147",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -2245,7 +2245,7 @@
   },
   {
     "Name": "The Gilded Araya",
-    "Guid": "360a9977-07ff-496b-ba0b-27ec66c45584",
+    "Guid": "c1afaf1a-dd0b-472e-94d3-c845839c422a",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -2256,7 +2256,7 @@
   },
   {
     "Name": "The Mothercrystal",
-    "Guid": "a35abeb8-7a20-4950-8097-ba1f1f965d60",
+    "Guid": "3b0a3e4a-d227-464b-9016-494403d821ad",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -2299,8 +2299,8 @@
     "TerritoryIds": [966]
   },
   {
-    "Name": "Place waymarks manually",
-    "Guid": "737ca491-2fae-400c-ac89-0623addb90b2",
+    "Name": "The_Wreath_of_Snakes_Unreal",
+    "Guid": "b42ab9ee-71bb-47bd-90d0-93fc9480feaf",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -2365,8 +2365,8 @@
     "TerritoryIds": [777]
   },
   {
-    "Name": "Duty Detection",
-    "Guid": "b97dfb40-e4d5-4f5c-89c6-2b53ca2dd799",
+    "Name": "UnrealShinryu",
+    "Guid": "be00fd0a-b03c-4293-a162-f317f5813d32",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -2388,7 +2388,7 @@
   },
   {
     "Name": "Vanguard Outpost",
-    "Guid": "a3e8a2c6-1571-482e-bd2a-b94006068af0",
+    "Guid": "a7d66540-b189-424f-8fae-153910f9dcd6",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
@@ -2421,7 +2421,7 @@
   },
   {
     "Name": "Worqor Lar Dor",
-    "Guid": "79f67f76-e205-42ba-b40e-435e0c356bc8",
+    "Guid": "5ce75511-6313-46af-b60d-efcf3886d1c6",
     "Version": "0.0.0.3",
     "Author": "Linoa235",
     "Repo": "",
