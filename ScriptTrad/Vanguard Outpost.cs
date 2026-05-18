@@ -15,7 +15,7 @@ using KodakkuAssist.Module.Draw;
 
 namespace KodakkuScript.Script._07_DawnTrail;
 
-[ScriptType(guid: "a3e8a2c6-1571-482e-bd2a-b94006068af0", name: "Vanguard Outpost", territorys: [1198], version: "0.0.0.1",
+[ScriptType(guid: "a7d66540-b189-424f-8fae-153910f9dcd6", name: "Vanguard Outpost", territorys: [1198], version: "0.0.0.1",
     author: "Linoa235")]
 public class Vanguard
 {
