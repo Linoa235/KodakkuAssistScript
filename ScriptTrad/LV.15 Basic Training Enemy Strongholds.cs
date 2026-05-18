@@ -16,8 +16,8 @@ using System.ComponentModel;
 
 namespace Veever.A_Realm_Reborn.BasicTrainingEnemyStrongholds;
 
-[ScriptType(name: "LV.15 Basic Training: Enemy Strongholds", territorys: [215], guid: "81665c45-03a7-4aa0-97bd-b3518bb6611b",
-    version: "0.0.0.3", author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV.15 Basic Training: Enemy Strongholds", territorys: [215], guid: "e73d4772-7afd-4549-b319-70c3df83113f",
+    version: "0.0.0.3", author: "Veever", note: noteStr)]
 
 public class Basic_Training_Enemy_Strongholds
 {
@@ -106,12 +106,7 @@ public class Basic_Training_Enemy_Strongholds
         }
         attackCount++;
     }
-
 }
-
-
-
-
 
 public static class EventExtensions
 {
@@ -226,7 +221,6 @@ public static class EventExtensions
         return JsonConvert.DeserializeObject<uint>(@event["Param"]);
     }
 }
-
 
 public static class Extensions
 {
