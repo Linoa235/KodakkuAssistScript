@@ -18,7 +18,7 @@ using KodakkuAssist.Extensions;
 namespace MyScriptNamespace
 {
     
-    [ScriptType(name: "EdenUltimate", territorys: [1238], guid: "01d37f7e-6543-4a98-b401-c597fb2485e4", version:"0.0.0.11",note: noteStr)]
+    [ScriptType(name: "EdenUltimate", territorys: [1238], guid: "ed3688e5-615e-4d3a-ab9f-1a4b6278ef3b", version:"0.0.0.11",note: noteStr)]
     public class EdenUltimate
     {
         const string noteStr =
