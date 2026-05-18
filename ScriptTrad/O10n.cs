@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Numerics;
 using System.Collections.Generic;
@@ -12,7 +12,7 @@ using KodakkuAssist.Module.Draw;
 
 namespace Cyf5119Script.Stormblood.O10n;
 
-[ScriptType(guid: "95a112de-90fa-4edd-b1f1-e2cabbac09e6", name: "O10n", territorys: [799], version: "0.0.0.2", author: "Linoa235")]
+[ScriptType(guid: "3ba5c53a-e823-4bca-94be-89a1a313e89e", name: "O10n", territorys: [799], version: "0.0.0.2", Author: "Linoa235")]
 public class O10n
 {
     private bool IsCross = false;

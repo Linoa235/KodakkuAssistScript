@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Numerics;
 using Newtonsoft.Json;
@@ -17,8 +17,8 @@ using System.Windows;
 
 namespace Veever.A_Realm_Reborn.WardUp;
 
-[ScriptType(name: "LV.40 Ward Up", territorys: [299], guid: "6c881929-2a4b-44a8-b8eb-63ba664e3aaf",
-    version: "0.0.0.4", author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV.40 Ward Up", territorys: [299], guid: "5e8e9de5-df83-4f39-9a23-e31d2418e470",
+    version: "0.0.0.4", Author: "Linoa235", note: noteStr)]
 
 public class Ward_Up
 {

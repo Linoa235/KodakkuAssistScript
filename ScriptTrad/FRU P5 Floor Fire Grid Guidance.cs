@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Numerics;
 using KodakkuAssist.Module.GameEvent;
 using KodakkuAssist.Script;
@@ -13,7 +13,7 @@ using System.Collections.Concurrent;
 
 namespace MyScriptNamespace
 {
-    [ScriptType(name: "FRU P5 Floor Fire Grid Guidance", territorys: [1238], guid: "954e51c9-c9c5-4d7b-b707-ed51b85ff73a", version: "0.0.1.0", author: "Linoa235")]
+    [ScriptType(name: "FRU P5 Floor Fire Grid Guidance", territorys: [1238], guid: "6341dc47-4bd9-48b2-b6b6-702b79960cbb", version: "0.0.1.0", Author: "Linoa235")]
     public class FRUScript
     {
         [UserSetting("Floor Fire Safe Guidance Color")]

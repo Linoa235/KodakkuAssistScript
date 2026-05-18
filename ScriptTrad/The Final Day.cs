@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Numerics;
 using Newtonsoft.Json;
@@ -8,7 +8,7 @@ using KodakkuAssist.Module.Draw;
 
 namespace Cyf5119Script.Endwalker.TheFinalDay;
 
-[ScriptType(guid: "3d687875-7e82-44f9-be4e-70195821c5d7", name: "The Final Day", territorys: [997], version: "0.0.0.2", author: "Linoa235")]
+[ScriptType(guid: "c996343b-7614-49fd-822b-877a35a1fd52", name: "The Final Day", territorys: [997], version: "0.0.0.2", Author: "Linoa235")]
 public class TheFinalDay
 {
     public void Init(ScriptAccessory accessory)

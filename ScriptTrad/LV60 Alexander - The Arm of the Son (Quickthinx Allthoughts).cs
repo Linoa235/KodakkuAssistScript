@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -14,8 +14,8 @@ using System.Threading.Tasks;
 
 namespace A7N;
 
-[ScriptType(guid: "d8afa1b8-6e34-4079-a863-6197d9f373d4", name: "A7N", territorys: [522],
-    version: "0.0.0.1", author: "Linoa235", note: noteStr)]
+[ScriptType(guid: "8b9e040a-ed20-4ef7-816c-64931359be0b", name: "A7N", territorys: [522],
+    version: "0.0.0.1", Author: "Linoa235", note: noteStr)]
 
 public class A7N
 {

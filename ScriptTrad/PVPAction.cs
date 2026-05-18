@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -20,8 +20,8 @@ using FFXIVClientStructs.FFXIV.Client.Game.UI;
 
 namespace PVPAction;
 
-[ScriptType(guid: "c0c2a95a-29f8-4435-9b57-1a4c2a7dacf7", name: "PVP Skill Drawing", territorys: [],
-    version: "0.0.0.8", author: "Linoa235", note: noteStr)]
+[ScriptType(guid: "56de6b81-7e75-4b08-8efe-ee22b4d1342f", name: "PVP Skill Drawing", territorys: [],
+    version: "0.0.0.8", Author: "Linoa235", note: noteStr)]
 
 public class PVPAction
 {

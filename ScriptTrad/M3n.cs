@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Numerics;
 using System.Collections.Generic;
@@ -9,7 +9,7 @@ using KodakkuAssist.Module.Draw;
 
 namespace Cyf5119Script.Dawntrail.M3n;
 
-[ScriptType(guid: "47418897-6ab6-4be4-a611-fb49f9068de8", name: "M3n", territorys: [1229], version: "0.0.0.3", author: "Linoa235")]
+[ScriptType(guid: "7f360ad3-1501-41ca-bd12-6cf4662354f8", name: "M3n", territorys: [1229], version: "0.0.0.3", Author: "Linoa235")]
 public class M3n
 {
     public void Init(ScriptAccessory accessory)

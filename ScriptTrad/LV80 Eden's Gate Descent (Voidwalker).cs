@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -13,8 +13,8 @@ using System.Threading.Tasks;
 
 namespace E2n;
 
-[ScriptType(guid: "edca0539-8fe1-4e02-846d-4f3df4fee7a8", name: "E2N", territorys: [850],
-    version: "0.0.0.2", author: "Linoa235", note: noteStr)]
+[ScriptType(guid: "0bccb85f-fc25-40ec-8941-4b7a1aee30d5", name: "E2N", territorys: [850],
+    version: "0.0.0.2", Author: "Linoa235", note: noteStr)]
 
 public class E2n
 {

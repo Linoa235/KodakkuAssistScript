@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -24,8 +24,8 @@ using FFXIVClientStructs.FFXIV.Component.GUI;
 
 namespace A10N;
 
-[ScriptType(guid: "a370d0fd-4866-4208-8639-1ad60e5e677e", name: "A10N", territorys: [581],
-    version: "0.0.0.1", author: "Linoa235", note: noteStr)]
+[ScriptType(guid: "0e802e10-39c6-4beb-949c-122da4256423", name: "A10N", territorys: [581],
+    version: "0.0.0.1", Author: "Linoa235", note: noteStr)]
 
 public class NewDuty
 {

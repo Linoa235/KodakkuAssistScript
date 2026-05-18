@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -23,8 +23,8 @@ using FFXIVClientStructs.FFXIV.Component.GUI;
 
 namespace theBowlofEmbers_Hard;
 
-[ScriptType(guid: "8f0e08b1-41af-4ef2-b913-481ee91ff60e", name: "The Bowl of Embers (Hard)", territorys: [292, 1045],
-    version: "0.0.0.4", author: "Linoa235", note: noteStr)]
+[ScriptType(guid: "596fd2e9-a90b-4630-83c7-f42caa275ea5", name: "The Bowl of Embers (Hard)", territorys: [292, 1045],
+    version: "0.0.0.4", Author: "Linoa235", note: noteStr)]
 
 public class theBowlofEmbers_Hard
 {

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -13,8 +13,8 @@ using System.Threading.Tasks;
 
 namespace Bahamute_NormalRaid_for_BLU;
 
-[ScriptType(guid: "56b427cc-0492-4368-9827-17ca77433e86", name: "Binding Coil of Bahamut (BLU Exclusive)", territorys: [196, 245, 358],
-    version: "0.0.0.3", author: "Linoa235", note: noteStr)]
+[ScriptType(guid: "fd0350b1-ff5f-4f31-a70e-5b4ea5335e51", name: "Binding Coil of Bahamut (BLU Exclusive)", territorys: [196, 245, 358],
+    version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
 
 public class Bahamute_NormalRaid_for_BLU
 {

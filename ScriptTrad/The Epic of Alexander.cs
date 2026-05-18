@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Numerics;
 using System.Collections.Generic;
@@ -14,7 +14,7 @@ using KodakkuAssist.Module.Draw.Manager;
 
 namespace Cyf5119Script.Shadowbringers.TheEpicOfAlexander;
 
-[ScriptType(guid: "2a226858-88a4-4033-85f9-f35906f85ee5", name: "The Epic of Alexander", territorys: [887], version: "0.0.2.9", author: "Linoa235", note: Note, updateInfo: UpdateInfo)]
+[ScriptType(guid: "d36343bc-678d-4e92-bac7-f78e6c4c1211", name: "The Epic of Alexander", territorys: [887], version: "0.0.2.9", Author: "Linoa235", note: Note, updateInfo: UpdateInfo)]
 public class TheEpicOfAlexander
 {
     private const string Note = "Report issues on DC.\nDrawing based on party role settings, please ensure settings are correct.\n/e KASCLEAR to clear remaining drawings";

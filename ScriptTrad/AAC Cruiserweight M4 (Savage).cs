@@ -1,4 +1,4 @@
-// File: AAC Cruiserweight M4 (Savage)_Cicero.cs
+﻿// File: AAC Cruiserweight M4 (Savage)_Cicero.cs
 using System;
 using System.Collections.Concurrent;
 using KodakkuAssist.Module.GameEvent;
@@ -18,10 +18,10 @@ namespace CicerosKodakkuAssist.Arcadion.Savage
     
     [ScriptType(name:"AAC Cruiserweight M4 (Savage)",
         territorys:[1263],
-        guid:"e536edcb-14da-4683-821e-e9996f3024f6",
+        guid:"da552e5a-64cf-423d-84b6-9ddccba4467d",
         version:"0.0.0.35",
         note:scriptNotes,
-        author: "Linoa235")]
+        Author: "Linoa235")]
 
     public class AAC_Cruiserweight_M4_Savage
     {

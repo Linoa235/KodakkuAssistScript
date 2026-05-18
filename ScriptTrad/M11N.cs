@@ -1,4 +1,4 @@
-using KodakkuAssist.Data;
+﻿using KodakkuAssist.Data;
 using KodakkuAssist.Extensions;
 using KodakkuAssist.Module.Draw;
 using KodakkuAssist.Module.Draw.Manager;
@@ -22,9 +22,9 @@ namespace BakaWater77.M11N;
 [ScriptType(
        name: "M11N",
        territorys: new uint[] { 1324 },
-       guid: "bf37625f-d41e-4c8f-8664-104015cdd199",
+       guid: "1ca27f2c-5e1c-43ac-a41a-7a8a62d734c9",
        version: "0.0.0.1",
-       author: "Linoa235",
+       Author: "Linoa235",
        note: null
     )]
 public class ArcadiaCruiserweightM3

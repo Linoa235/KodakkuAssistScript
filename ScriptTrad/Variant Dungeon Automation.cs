@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using KodakkuAssist.Module.GameEvent;
 using KodakkuAssist.Script;
 using KodakkuAssist.Module.GameEvent.Struct;
@@ -8,7 +8,7 @@ using Dalamud.Game.ClientState.Objects.Types;
 
 namespace MyScriptNamespace
 {
-    [ScriptType(name: "Variant Dungeon Automation", territorys: [1069,1137,1176],guid: "cc339112-6ebd-4b71-ac0f-32ec44fabd04", version:"0.0.0.1",author: "Linoa235")]
+    [ScriptType(name: "Variant Dungeon Automation", territorys: [1069,1137,1176],guid: "348c9db7-80aa-46c5-8547-88eca84b85f4", version:"0.0.0.1",Author: "Linoa235")]
     public class VariantDungeonAutomation
     {
         

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -24,8 +24,8 @@ using FFXIVClientStructs.FFXIV.Component.GUI;
 
 namespace NewDuty;
 
-[ScriptType(guid: "dbde11d5-3323-4cab-a885-be1dffddb6aa", name: "Latest Hottest Temporary Drawing", territorys: [1307],
-    version: "0.0.0.8", author: "Linoa235", note: noteStr)]
+[ScriptType(guid: "bb7f4dbd-e35d-4cba-ab7e-dfb326178676", name: "Latest Hottest Temporary Drawing", territorys: [1307],
+    version: "0.0.0.8", Author: "Linoa235", note: noteStr)]
 
 /* MapID
  * 1307: G Lair Abolition

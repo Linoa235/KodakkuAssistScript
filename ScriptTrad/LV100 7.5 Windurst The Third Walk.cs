@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -23,8 +23,8 @@ using FFXIVClientStructs.FFXIV.Component.GUI;
 
 namespace Windurst_The_Third_Walk;
 
-[ScriptType(guid: "1c04623e-76c6-47e2-9792-a4d4fb68b571", name: "LV100 7.5 Windurst: The Third Walk", territorys: [1368],
-    version: "0.0.0.4", author: "Linoa235", note: noteStr)]
+[ScriptType(guid: "c863d088-8ec2-45a3-a939-b3d4be33cdd7", name: "LV100 7.5 Windurst: The Third Walk", territorys: [1368],
+    version: "0.0.0.4", Author: "Linoa235", note: noteStr)]
 
 public class Windurst_The_Third_Walk
 {

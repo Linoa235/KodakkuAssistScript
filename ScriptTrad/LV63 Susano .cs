@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -13,8 +13,8 @@ using System.Threading.Tasks;
 
 namespace Susano;
 
-[ScriptType(guid: "b6f39e97-c76b-4904-b0d6-67661a055977", name: "Susano", territorys: [674],
-    version: "0.0.0.3", author: "Linoa235", note: noteStr)]
+[ScriptType(guid: "02724b74-1fab-4cb2-b360-8f75ec5184c7", name: "Susano", territorys: [674],
+    version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
 
 public class Susano
 {

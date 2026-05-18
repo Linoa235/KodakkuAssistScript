@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -13,8 +13,8 @@ using System.Threading.Tasks;
 
 namespace P11n;
 
-[ScriptType(guid: "9b610957-2242-4f6a-9a85-83e476e9dfb3", name: "P11N", territorys: [1151],
-    version: "0.0.0.2", author: "Linoa235", note: noteStr)]
+[ScriptType(guid: "76fee5c0-1184-4970-a6c0-0716c9146643", name: "P11N", territorys: [1151],
+    version: "0.0.0.2", Author: "Linoa235", note: noteStr)]
 
 public class P11n
 {

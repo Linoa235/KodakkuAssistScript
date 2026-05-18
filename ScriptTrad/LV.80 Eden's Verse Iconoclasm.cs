@@ -1,4 +1,4 @@
-using Dalamud.Game.ClientState.Objects.Types;
+﻿using Dalamud.Game.ClientState.Objects.Types;
 using System;
 using System.Linq;
 using System.Numerics;
@@ -24,8 +24,8 @@ using Lumina.Data.Structs;
 
 namespace Veever.Shadowbringers.Edens_Verse_Iconoclasm;
 
-[ScriptType(name: "LV.80 Eden's Verse: Iconoclasm", territorys: [904], guid: "0f5deddd-09f0-4038-bcd1-ca646efe6b0e",
-    version: "0.0.0.1", author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV.80 Eden's Verse: Iconoclasm", territorys: [904], guid: "32d7bb29-f87a-4e52-ae5d-6fe8b891b123",
+    version: "0.0.0.1", Author: "Linoa235", note: noteStr)]
 
 public class Edens_Verse_Iconoclasm
 {

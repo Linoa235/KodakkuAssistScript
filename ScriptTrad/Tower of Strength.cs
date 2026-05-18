@@ -1,4 +1,4 @@
-// File: TowerOfStrength_XSZYYS.cs
+﻿// File: TowerOfStrength_XSZYYS.cs
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -60,10 +60,10 @@ namespace KodakkuAssistXSZYYS
 
     [ScriptType(
     name: "Tower of Strength",
-    guid: "9bf3d87d-0682-42e4-b53c-075c848d09c1",
+    guid: "c4901d90-1939-42c6-9554-c88501c5812d",
     territorys: [1252],
     version: "0.0.40",
-    author: "Linoa235",
+    Author: "Linoa235",
     note: "Update content\r\nDirect role-based rather than party position-based guidance for second boss fireball positions\r\nMark Chemist: type ã€/e Mark Chemistã€‘ to mark all nearby chemist players\r\nTreasure Map: line to chests in 1.5 corridors\r\n\r\n------------The following functions only support Echo output by default, can be configured to respond to party check commands and output in party channel------------\r\nCheck Blue Potion: type ã€/e Blue Potion Checkã€‘ will output chemist blue potion usage, type ã€/e Blue Potion Clearã€‘ will clear all data\r\nCheck Resurrection: type ã€/e Resurrection Check <number>ã€‘, e.g., ã€/e Resurrection Check 1ã€‘ will output all nearby players with 1 remaining resurrection\r\nCheck Throw Money: type ã€/e Throw Money Checkã€‘ will output all players who used throw money and their counts, type ã€/e Throw Money Clearã€‘ will clear all data\r\n------------------------------------------------------------\r\nPlease select your team's grouping, guidance available for ABC123/152463/LemonCookie strategies\r\nFirst boss:\r\nAOE drawing: rotation, crushing\r\nGuidance: meteor mark, first tower stepping, second tower stepping\r\nSecond boss:\r\nAOE drawing: tankbuster, cone, ice-fire explosion\r\nGuidance: snowball, fireball\r\nThird boss:\r\nAOE drawing: draconic action, ice circle, dive\r\nGuidance: draconic action pre-position, tower stepping, mobs\r\nFinal boss:\r\nAOE drawing: deadly axe/spear, assassin's dagger\r\nGuidance: rune axe, holy lance"
     )]
 

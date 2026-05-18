@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using KodakkuAssist.Module.GameEvent;
 using KodakkuAssist.Script;
 using KodakkuAssist.Module.Draw;
@@ -18,7 +18,7 @@ using KodakkuAssist.Extensions;
 
 namespace KarlinScriptNamespace
 {
-    [ScriptType(name: "M1s绘图", territorys: [1226], guid: "5ca6843d-df56-4d9c-a663-ce6b87a617c5", version: "0.0.0.9", author: "Linoa235")]
+    [ScriptType(name: "M1s绘图", territorys: [1226], guid: "55bee115-35dc-436b-b2dd-745932d546b1", version: "0.0.0.9", Author: "Linoa235")]
     public class M1sDraw
     {
         [UserSetting("地板修复击退,Mt组安全半场")]

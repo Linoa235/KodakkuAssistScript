@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Numerics;
 using Newtonsoft.Json;
@@ -24,8 +24,8 @@ using FFXIVClientStructs.FFXIV.Client.Game.Character;
 
 namespace Veever.DawnTrail.Cenote_Ja_Ja_Gural;
 
-[ScriptType(name: "Cenote Ja Ja Gural", territorys: [1209], guid: "70e05ea9-2a09-4c0e-9cf0-03e5502882af",
-    version: "0.0.0.4", author: "Linoa235", note: noteStr)]
+[ScriptType(name: "Cenote Ja Ja Gural", territorys: [1209], guid: "be809796-e12c-4f34-bb05-60d268adc5b4",
+    version: "0.0.0.4", Author: "Linoa235", note: noteStr)]
 
 public class Cenote_Ja_Ja_Gural
 {

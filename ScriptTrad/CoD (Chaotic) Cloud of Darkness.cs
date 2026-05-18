@@ -1,4 +1,4 @@
-using Dalamud.Utility.Numerics;
+﻿using Dalamud.Utility.Numerics;
 using FFXIVClientStructs.FFXIV.Client.Game.Group;
 using FFXIVClientStructs.FFXIV.Client.Game.Object;
 using FFXIVClientStructs.FFXIV.Common.Math;
@@ -17,7 +17,7 @@ using System.Threading.Tasks;
 
 namespace KDrawScript.Dev
 {
-    [ScriptType(name: "CoD (Chaotic) Cloud of Darkness", territorys: [1241], guid: "a3785129-3660-4a37-8dc9-a93139ecd930", version: "0.0.2.1", author: "Linoa235", note: NoteStr, updateInfo: UpdateInfo)]
+    [ScriptType(name: "CoD (Chaotic) Cloud of Darkness", territorys: [1241], guid: "5f565f29-f504-45fc-941a-aaf71ef6f973", version: "0.0.2.1", Author: "Linoa235", note: NoteStr, updateInfo: UpdateInfo)]
     public class Cloud_of_Darkness_Chaotic
     {
         private const string NoteStr =

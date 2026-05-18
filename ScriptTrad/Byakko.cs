@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -14,8 +14,8 @@ using System.Threading.Tasks;
 
 namespace Byakko;
 
-[ScriptType(guid: "c79e9e0c-032a-4fcc-9e5c-59c1343c3fc9", name: "Byakko", territorys: [746],
-    version: "0.0.0.12", author: "Linoa235", note: noteStr)]
+[ScriptType(guid: "11baa2dc-00db-475d-8282-ff3d70d8e662", name: "Byakko", territorys: [746],
+    version: "0.0.0.12", Author: "Linoa235", note: noteStr)]
 
 public class Byakko
 {

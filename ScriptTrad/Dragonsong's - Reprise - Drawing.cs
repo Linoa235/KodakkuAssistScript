@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using KodakkuAssist.Module.GameEvent;
 using KodakkuAssist.Script;
 using KodakkuAssist.Module.Draw;
@@ -16,7 +16,7 @@ using KodakkuAssist.Module.GameOperate;
 
 namespace KarlinScriptNamespace
 {
-    [ScriptType(name: "Dragonsong's Reprise Drawings", territorys: [968], guid: "e958863d-4daa-46a2-80ba-bc26b613ad81", version: "0.0.0.6", author: "Linoa235")]
+    [ScriptType(name: "Dragonsong's Reprise Drawings", territorys: [968], guid: "71e79443-b817-4f58-af69-70e174db7ade", version: "0.0.0.6", Author: "Linoa235")]
     public class DragongSingDraw
     {
         [UserSetting("P5 Tether Crash Display Delay (ms)")]

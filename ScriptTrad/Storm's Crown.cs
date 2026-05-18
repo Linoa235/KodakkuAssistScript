@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Numerics;
 using Newtonsoft.Json;
@@ -8,7 +8,7 @@ using KodakkuAssist.Module.Draw;
 
 namespace Cyf5119Script.Endwalker.StormsCrown;
 
-[ScriptType(guid: "bc1e496a-abf5-4acb-bb6f-2bd1bf2715b0", name: "Storm's Crown", territorys: [1071], version: "0.0.0.2", author: "Linoa235")]
+[ScriptType(guid: "6e99e723-2c0d-4eb1-80ee-2d7137e405e1", name: "Storm's Crown", territorys: [1071], version: "0.0.0.2", Author: "Linoa235")]
 public class StormsCrown
 {
     public void Init(ScriptAccessory accessory)

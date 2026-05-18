@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Numerics;
 using KodakkuAssist.Script;
 using KodakkuAssist.Module.GameEvent;
@@ -8,9 +8,9 @@ namespace HelloWorld;
 [ScriptType(
     name: "HelloWorld",
     territorys: new uint[] { },
-    guid: "d568107b-5463-4ad4-b0dc-2316b68c6dda",
+    guid: "58d98bc0-23f6-4133-9afa-87060a2905b8",
     version: "0.0.0.1",
-    author: "Linoa235",
+    Author: "Linoa235",
     note: null
 )]
 public class HelloWorld

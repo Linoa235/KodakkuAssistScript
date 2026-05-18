@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -23,8 +23,8 @@ using FFXIVClientStructs.FFXIV.Component.GUI;
 
 namespace SaintMociannesArboretum;
 
-[ScriptType(guid: "40d6844f-ec81-4209-be34-2248d627aef9", name: "Saint Mocianne's Arboretum", territorys: [511],
-    version: "0.0.0.1", author: "Linoa235", note: noteStr)]
+[ScriptType(guid: "809d4428-a108-412a-b819-e3a1ede1f383", name: "Saint Mocianne's Arboretum", territorys: [511],
+    version: "0.0.0.1", Author: "Linoa235", note: noteStr)]
 
 public class SaintMociannesArboretum
 {

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using KodakkuAssist.Module.GameEvent;
 using KodakkuAssist.Script;
 using KodakkuAssist.Module.Draw;
@@ -16,8 +16,8 @@ using KodakkuAssist.Module.Draw.Manager;
 
 namespace UsamisScript.StormBlood.Ucob;
 
-[ScriptType(name: "UCOB [The Unending Coil of Bahamut]", territorys: [733], guid: "91c35ae6-1fa4-4d8c-9985-07dbfa9f7dd3",
-    version: "0.0.2.2", author: "Linoa235", note: noteStr, updateInfo: UpdateInfo)]
+[ScriptType(name: "UCOB [The Unending Coil of Bahamut]", territorys: [733], guid: "fc06c438-75d7-475b-8984-46802b2283e1",
+    version: "0.0.2.2", Author: "Linoa235", note: noteStr, updateInfo: UpdateInfo)]
 public class Ucob
 {
     // TODO

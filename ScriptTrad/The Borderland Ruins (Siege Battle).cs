@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Runtime;
 using System.ComponentModel;
 using System.Linq;
@@ -16,8 +16,8 @@ using System.Threading.Tasks;
 
 namespace The_Borderland_Ruins;
 
-[ScriptType(guid: "347aef96-db52-45ad-ac95-580aee34149a", name: "The Borderland Ruins (Siege Battle)", territorys: [1273],
-    version: "0.0.0.3", author: "Linoa235", note: noteStr)]
+[ScriptType(guid: "5ce220af-55eb-44f6-940a-2f725f1f2793", name: "The Borderland Ruins (Siege Battle)", territorys: [1273],
+    version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
 
 public class The_Borderland_Ruins
 {

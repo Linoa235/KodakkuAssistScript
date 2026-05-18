@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -14,8 +14,8 @@ using System.Threading.Tasks;
 
 namespace theTwinning;
 
-[ScriptType(guid: "6f5cd42e-cff4-494a-b10c-ce129770af61", name: "The Twinning", territorys: [840],
-    version: "0.0.0.3", author: "Linoa235", note: noteStr)]
+[ScriptType(guid: "8294dff8-0878-4cab-af9e-25748a646710", name: "The Twinning", territorys: [840],
+    version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
 
 public class theTwinning
 {

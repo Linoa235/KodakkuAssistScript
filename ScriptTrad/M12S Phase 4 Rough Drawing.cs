@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Numerics;
 using System.Collections.Generic;
@@ -14,7 +14,7 @@ using KodakkuAssist.Data;
 
 namespace Cyf5119Scripts.Dawntrail.M12SP2S4;
 
-[ScriptType(guid: "5a51a28f-1f27-4ac0-a3a8-8c380c73bd61", name: "M12S Phase 4 Rough Drawing", territorys: [1327], version: "0.0.0.1", author: "Linoa235", note: Note, updateInfo: Info)]
+[ScriptType(guid: "cf2f9b53-aef2-4ddb-847d-1aeea93edc71", name: "M12S Phase 4 Rough Drawing", territorys: [1327], version: "0.0.0.1", Author: "Linoa235", note: Note, updateInfo: Info)]
 public class M12SP2S4
 {
     private const string Note = "M12S Phase 4 rough drawing, please wait for detailed drawing, good luck on week 1.";

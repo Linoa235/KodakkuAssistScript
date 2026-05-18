@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Numerics;
 using System.Collections.Generic;
@@ -15,8 +15,8 @@ using KodakkuAssist.Module.Draw;
 
 namespace KodakkuScript.Script._07_DawnTrail;
 
-[ScriptType(guid: "a73fd8e1-536a-4e37-88a4-e84e0098ef81", name: "Ihuykatumu", territorys: [1167], version: "0.0.0.1",
-    author: "Linoa235")]
+[ScriptType(guid: "4575e825-60ef-462a-8360-4623a2f86d9d", name: "Ihuykatumu", territorys: [1167], version: "0.0.0.1",
+    Author: "Linoa235")]
 public class Ihuykatumu
 {
     private Vector3 SW;

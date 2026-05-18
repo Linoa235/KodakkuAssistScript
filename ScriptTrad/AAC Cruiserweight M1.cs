@@ -1,4 +1,4 @@
-using FFXIVClientStructs.FFXIV.Common.Math;
+﻿using FFXIVClientStructs.FFXIV.Common.Math;
 using KodakkuAssist.Module.Draw;
 using KodakkuAssist.Module.GameEvent;
 using KodakkuAssist.Script;
@@ -7,7 +7,7 @@ using System;
 
 namespace KDrawScript.Dev
 {
-    [ScriptType(name: "AAC Cruiserweight M1", territorys: [1256], guid: "29dea0bc-25e2-4bb3-9b2c-e2990e562457", version: "0.0.0.1", author: "Linoa235")]
+    [ScriptType(name: "AAC Cruiserweight M1", territorys: [1256], guid: "507054ef-1490-472f-b154-865df0b00fd1", version: "0.0.0.1", Author: "Linoa235")]
     public class CruiserweightM1
     {
         public void Init(ScriptAccessory accessory)

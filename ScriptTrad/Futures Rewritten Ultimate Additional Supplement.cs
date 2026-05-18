@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -14,8 +14,8 @@ using System.Threading.Tasks;
 
 namespace FRU_DLC;
 
-[ScriptType(guid: "878dd78e-a7c3-4cfc-b5ae-00e2d1357b6a", name: "FRU_DLC [Futures Rewritten Ultimate_Additional Supplement]", territorys: [1238],
-    version: "0.0.0.4", author: "Linoa235", note: noteStr)]
+[ScriptType(guid: "57233f18-b925-4f1d-bc11-d921398be832", name: "FRU_DLC [Futures Rewritten Ultimate_Additional Supplement]", territorys: [1238],
+    version: "0.0.0.4", Author: "Linoa235", note: noteStr)]
 
 public class FRU_DLC
 {

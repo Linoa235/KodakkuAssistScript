@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Numerics;
 using Newtonsoft.Json;
@@ -17,8 +17,8 @@ using System.Windows;
 
 namespace Veever.A_Realm_Reborn.AnnoytheVoid;
 
-[ScriptType(name: "LV.30 Annoy the Void", territorys: [222], guid: "d8395c7f-5798-404f-a8b7-0601cdf0e3ee",
-    version: "0.0.0.3", author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV.30 Annoy the Void", territorys: [222], guid: "f5e9a968-f527-4cbb-b999-50a3a38a9e86",
+    version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
 
 public class Annoy_the_Void
 {

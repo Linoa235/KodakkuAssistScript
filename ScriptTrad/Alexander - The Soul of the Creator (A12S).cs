@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using KodakkuAssist.Module.GameEvent;
 using KodakkuAssist.Script;
 using KodakkuAssist.Module.Draw;
@@ -8,7 +8,7 @@ using KodakkuAssist.Module.Draw.Manager;
 
 namespace A12S_Scripts
 {
-    [ScriptType(name: "Alexander - The Soul of the Creator (A12S)", territorys: [587], guid: "2f958039-02e6-4a64-9f09-90e7070b19fc", version: "0.0.1", author: "Linoa235")]
+    [ScriptType(name: "Alexander - The Soul of the Creator (A12S)", territorys: [587], guid: "ad114d4c-f694-410d-8a7f-4f5758649fb5", version: "0.0.1", Author: "Linoa235")]
     public class A12S
     {
         public void Init(ScriptAccessory accessory)

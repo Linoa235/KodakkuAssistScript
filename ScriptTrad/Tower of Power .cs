@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Numerics;
 using System.Collections.Generic;
@@ -15,9 +15,9 @@ namespace KodakkuAssistXSZYYSPolice;
 [ScriptType(
     name: "Tower of Power (Police)",
     territorys: [1252],
-    guid: "600f3be8-84fd-42ba-a6ac-f594c8222454",
+    guid: "ce938058-4888-4700-acc7-a9f7d627b1ad",
     version: "0.0.2",
-    author: "Linoa235",
+    Author: "Linoa235",
     note: "Police functions for Tower of Power instance, providing key mechanic marker announcements and checks. Also supports active checks for money throwing, resurrection, food, blue potions, etc.\n\n------------ Echo channel query commands ------------\nCheck Blue Potions: Type [/e blue potion check] to see alchemist blue potion usage, [/e blue potion clear] to clear data\nCheck Resurrection: Type [/e resurrection check <numbers>...], e.g., [/e resurrection check 1 2] to show players with 1 and 2 resurrection remaining. Without numbers, shows all players with 0-3 resurrections\nCheck Food: Type [/e food check] to show players without food or with remaining time below threshold\nCheck Money Throw: Type [/e money throw check] to show players who used money throw and their counts, [/e money throw clear] to clear statistics"
 )]
 public class TowerPolice

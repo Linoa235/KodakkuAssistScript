@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using KodakkuAssist.Module.GameEvent;
 using KodakkuAssist.Script;
 using KodakkuAssist.Module.GameEvent.Struct;
@@ -17,7 +17,7 @@ using Dalamud.Utility.Numerics;
 namespace MyScriptNamespace
 {
     
-    [ScriptType(name: "EdenUltimate", territorys: [1238],guid: "45e44f0c-3e6e-4c95-b486-12c50a55964b", version:"0.0.0.10",note: noteStr)]
+    [ScriptType(name: "EdenUltimate", territorys: [1238],guid: "c41cc13f-3f4e-4152-9ac1-63eae4bbeec7", version:"0.0.0.10",note: noteStr)]
     public class EdenUltimate 
     {
         const string noteStr =

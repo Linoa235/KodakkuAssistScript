@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using KodakkuAssist.Module.GameEvent;
 using KodakkuAssist.Script;
 using KodakkuAssist.Module.Draw;
@@ -10,7 +10,7 @@ using System.Linq;
 
 namespace Meva.Heavensward.KodakkuAssist.Alexander;
 
-[ScriptType(name: "LV.60 Alexander - The Eyes of the Creator", territorys: [580], guid: "56bfd376-bd9f-4901-add6-4658a64cfb86", version: "0.0.0.3", author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV.60 Alexander - The Eyes of the Creator", territorys: [580], guid: "5ac8f7c7-403d-4cf0-8c94-00c6b8a2745a", version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
 public class A9N
 {
     const string noteStr =

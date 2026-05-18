@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Numerics;
@@ -22,10 +22,10 @@ namespace KodakkuAssistXSZYYS
 {
     [ScriptType(
         name: "Resurrection Location",
-        guid: "e3319404-ad3e-430d-822c-5ad1714ebfa6",
+        guid: "d69862ce-a8a3-4078-84c2-34bf43301192",
         territorys: [],
         version: "0.0.2",
-        author: "Linoa235",
+        Author: "Linoa235",
         note: "See where you will resurrect"
     )]
     public class ResurrectionLocation

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using KodakkuAssist.Module.GameEvent;
 using KodakkuAssist.Script;
 using KodakkuAssist.Module.Draw;
@@ -23,7 +23,7 @@ using KodakkuAssist.Extensions;
 
 namespace KarlinScriptNamespace
 {
-    [ScriptType(name: "M4s Drawing", territorys:[1232],guid: "9a8754aa-8e45-4c22-8633-9797da4e79ef", version:"0.0.0.13", author: "Linoa235")]
+    [ScriptType(name: "M4s Drawing", territorys:[1232],guid: "c4fe7584-9deb-447b-b511-5052a4c0bf23", version:"0.0.0.13", Author: "Linoa235")]
     public class M4sDrawing
     {
         [UserSetting("Thunder Cannon Positioning Method")]

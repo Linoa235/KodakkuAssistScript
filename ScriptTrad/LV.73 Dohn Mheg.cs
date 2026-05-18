@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Numerics;
 using Newtonsoft.Json;
@@ -10,8 +10,8 @@ using System.Reflection.Metadata;
 
 namespace Veever.Shadowbringers.DohnMheg;
 
-[ScriptType(name: "LV.73 Dohn Mheg", territorys: [821], guid: "cb2a78d9-7a72-4d02-a3cd-18580a246976",
-    version: "0.0.0.7", author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV.73 Dohn Mheg", territorys: [821], guid: "eae5e81d-ee52-4bb5-bbc5-39a54a994498",
+    version: "0.0.0.7", Author: "Linoa235", note: noteStr)]
 
 public class DohnMheg
 {

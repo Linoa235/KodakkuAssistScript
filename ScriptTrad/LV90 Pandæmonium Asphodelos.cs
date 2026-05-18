@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -14,8 +14,8 @@ using System.Threading.Tasks;
 
 namespace PandÃ¦monium.Normal;
 
-[ScriptType(guid: "096866d4-3a41-49fc-ab14-5d699c370dea", name: "P10N", territorys: [1149],
-    version: "0.0.0.3", author: "Linoa235", note: noteStr)]
+[ScriptType(guid: "5f9e6fe1-4fb6-43db-a577-ea6c87125efb", name: "P10N", territorys: [1149],
+    version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
 
 public class P10n
 {

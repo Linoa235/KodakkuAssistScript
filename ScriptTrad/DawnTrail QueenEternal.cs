@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using KodakkuAssist.Module.GameEvent;
 using KodakkuAssist.Script;
 using KodakkuAssist.Module.GameEvent.Struct;
@@ -22,8 +22,8 @@ using FFXIVClientStructs.FFXIV.Client.Graphics.Vfx;
 
 namespace UsamisKodakku.Script._07_DawnTrail.QueenEternal;
 
-[ScriptType(name: Name, territorys: [1243], guid: "3cfa5ec6-3424-4ac7-8522-d03eb1ce3869", 
-    version: Version, author: "Linoa235", note: NoteStr)]
+[ScriptType(name: Name, territorys: [1243], guid: "c4655014-661c-49c6-baf3-c9a27e1e0e7c", 
+    version: Version, Author: "Linoa235", note: NoteStr)]
 
 // ^(?!.*((Monk|Machinist|Dragoon|Samurai|Ninja|Viper|Reaper|Dancer|Bard|Astrologian|Sage|Scholar|(Eos|Selene)|Seraph|White Mage|Warrior|Paladin|Dark Knight|Gunbreaker|Pictomancer|Black Mage|Blue Mage|Summoner|Carbuncle|Demigod Bahamut|Demigod Phoenix|Garuda-Egi|Titan-Egi|Ifrit-Egi|Puppet)\] (Used|Cast))).*35501.*$
 

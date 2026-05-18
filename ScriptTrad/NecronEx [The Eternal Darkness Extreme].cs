@@ -1,4 +1,4 @@
-using Dalamud.Utility.Numerics;
+﻿using Dalamud.Utility.Numerics;
 using FFXIVClientStructs.FFXIV.Client.Game;
 using FFXIVClientStructs.FFXIV.Client.Game.Character;
 using FFXIVClientStructs.FFXIV.Client.Game.Control;
@@ -32,8 +32,8 @@ using KodaMarkType = KodakkuAssist.Module.GameOperate.MarkType;
 
 namespace Veever.Shadowbringers.MtGulg;
 
-[ScriptType(name: Name, territorys: [822], guid: "fe8aa4af-ceb2-421b-b830-3cea3a2145ad",
-    version: Version, author: "Linoa235", note: NoteStr, updateInfo: UpdateInfo)]
+[ScriptType(name: Name, territorys: [822], guid: "e67816ed-08b7-4df6-857a-2b71e9426d1c",
+    version: Version, Author: "Linoa235", note: NoteStr, updateInfo: UpdateInfo)]
 
 // ^(?!.*((Monk|Machinist|Dragoon|Samurai|Ninja|Viper|Reaper|Dancer|Bard|Astrologian|Sage|Scholar|(Eos|Selene)|Seraph|White Mage|Warrior|Paladin|Dark Knight|Gunbreaker|Pictomancer|Black Mage|Blue Mage|Summoner|Carbuncle|Demigod Bahamut|Demigod Phoenix|Garuda-Egi|Titan-Egi|Ifrit-Egi|Automaton Queen)\] (Used|Cast))).*35501.*$
 // ^\[\w+\|[^|]+\|E\]\s\w+

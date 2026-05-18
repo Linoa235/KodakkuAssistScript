@@ -1,4 +1,4 @@
-using Dalamud.Game.ClientState.Objects.Types;
+﻿using Dalamud.Game.ClientState.Objects.Types;
 using Dalamud.Utility.Numerics;
 using FFXIVClientStructs;
 using FFXIVClientStructs.FFXIV.Client.Game.Character;
@@ -25,8 +25,8 @@ using static Lumina.Data.Parsing.Layer.LayerCommon;
 
 namespace Veever.Shadowbringers.the_Qitana_Ravel;
 
-[ScriptType(name: "LV.75 The Qitana Ravel", territorys: [823], guid: "bba3881d-0b6f-49c0-afa4-1239920ac284",
-    version: "0.0.0.2", author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV.75 The Qitana Ravel", territorys: [823], guid: "288d9050-19c6-412d-8e56-f64f5ecd0517",
+    version: "0.0.0.2", Author: "Linoa235", note: noteStr)]
 
 public class the_Qitana_Ravel
 {

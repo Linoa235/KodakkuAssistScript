@@ -1,4 +1,4 @@
-// File: M7S_ArcadiaSavage_Heavyweight3_Mao.cs
+﻿// File: M7S_ArcadiaSavage_Heavyweight3_Mao.cs
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,7 +24,7 @@ using EX = TsingNamespace.Dawntrail.Savage.M7S.ScriptExtensions_Tsing;
 
 namespace TsingNamespace.Dawntrail.Savage.M7S
 {
-    [ScriptType(name: "M7SÂ·Arcadia SavageÂ·Heavyweight 3", guid: "aad193df-365f-42ad-87ba-e7d92855d55f", territorys: [1261], version: "0.0.1.0", author: "Linoa235", note: noteStr)]
+    [ScriptType(name: "M7SÂ·Arcadia SavageÂ·Heavyweight 3", guid: "df670b37-78dd-4535-98b8-a58baabef08c", territorys: [1261], version: "0.0.1.0", Author: "Linoa235", note: noteStr)]
     public class M7S_Script
     {
 

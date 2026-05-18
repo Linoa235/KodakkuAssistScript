@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Numerics;
 using Newtonsoft.Json;
@@ -16,8 +16,8 @@ using System.ComponentModel;
 
 namespace Veever.A_Realm_Reborn.AllsWellthatEndsintheWell;
 
-[ScriptType(name: "LV.25 All's Well that Ends in the Well", territorys: [220], guid: "53ef92d2-c860-4d2d-b716-abd26d7d7fed",
-    version: "0.0.0.3", author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV.25 All's Well that Ends in the Well", territorys: [220], guid: "b3fd758d-e7fc-4648-9388-8279e83ade7b",
+    version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
 
 public class All_s_Well_that_Ends_in_the_Well
 {

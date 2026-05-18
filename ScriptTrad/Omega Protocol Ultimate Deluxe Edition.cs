@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using KodakkuAssist.Module.GameEvent;
 using KodakkuAssist.Script;
 using KodakkuAssist.Module.GameEvent.Struct;
@@ -24,7 +24,7 @@ using FFXIVClientStructs.FFXIV.Client.Game.Object;
 namespace MyScriptNamespace
 {
     
-    [ScriptType(name: "Omega Protocol Ultimate Deluxe Edition", territorys: [1122], guid: "074e0c29-f4c8-40f0-b6a3-185c9f9da5a1", version:"0.0.0.19", author: "Linoa235", note: noteStr, updateInfo: UpdateInfo)]
+    [ScriptType(name: "Omega Protocol Ultimate Deluxe Edition", territorys: [1122], guid: "d373ea02-6092-4bc8-9931-8630e1c28163", version:"0.0.0.19", Author: "Linoa235", note: noteStr, updateInfo: UpdateInfo)]
     public class OmegaProtocolUltimate
     {
         const string noteStr =

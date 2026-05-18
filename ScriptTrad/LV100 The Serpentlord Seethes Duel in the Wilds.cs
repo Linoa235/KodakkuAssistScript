@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -14,8 +14,8 @@ using System.Threading.Tasks;
 
 namespace The_Serpentlord_Seethes;
 
-[ScriptType(guid: "9594c961-aec6-4b8b-8218-5550527e1746", name: "The Serpentlord Seethes: Duel in the Wilds", territorys: [1190],
-    version: "0.0.0.4", author: "Linoa235", note: noteStr)]
+[ScriptType(guid: "bf0b5709-0690-416d-981c-4f8e9fcc5a5d", name: "The Serpentlord Seethes: Duel in the Wilds", territorys: [1190],
+    version: "0.0.0.4", Author: "Linoa235", note: noteStr)]
 
 public class Ttokrrone
 {

@@ -1,4 +1,4 @@
-using Dalamud.Utility.Numerics;
+﻿using Dalamud.Utility.Numerics;
 using FFXIVClientStructs.FFXIV.Client.Game;
 using FFXIVClientStructs.FFXIV.Client.Game.Character;
 using FFXIVClientStructs.FFXIV.Client.Game.Control;
@@ -36,8 +36,8 @@ using KodaMarkType = KodakkuAssist.Module.GameOperate.MarkType;
 
 namespace Veever.DawnTrail.TheWindwardWildsExtreme;
 
-[ScriptType(name: Name, territorys: [1306], guid: "b44a196f-edac-4687-b485-d177427928a7",
-    version: Version, author: "Linoa235", note: NoteStr, updateInfo: UpdateStr)]
+[ScriptType(name: Name, territorys: [1306], guid: "e785e9e8-825c-413e-9b49-1cd38df03ae8",
+    version: Version, Author: "Linoa235", note: NoteStr, updateInfo: UpdateStr)]
 
 // ^(?!.*((Monk|Machinist|Dragoon|Samurai|Ninja|Viper|Reaper|Dancer|Bard|Astrologian|Sage|Scholar|(Eos|Selene)|Seraph|White Mage|Warrior|Paladin|Dark Knight|Gunbreaker|Pictomancer|Black Mage|Blue Mage|Summoner|Carbuncle|Demigod Bahamut|Demigod Phoenix|Garuda-Egi|Titan-Egi|Ifrit-Egi|Puppet)\] (Used|Cast))).*35501.*$
 // ^\[\w+\|[^|]+\|E\]\s\w+ 
@@ -224,7 +224,7 @@ public class TheWindwardWildsExtreme
 
         _ = ScriptVersionChecker.CheckVersionAsync(
             sa,
-            "b4a3871d-2499-4152-aaa2-a911ee1bbce2",
+            "e785e9e8-825c-413e-9b49-1cd38df03ae8",
             Version,
             showNotification: true
         );

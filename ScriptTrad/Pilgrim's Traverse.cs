@@ -1,4 +1,4 @@
-// File: Pilgrims_Traverse_Tetora.cs
+﻿// File: Pilgrims_Traverse_Tetora.cs
 using System;
 using System.ComponentModel;
 using System.Linq;
@@ -25,7 +25,7 @@ using FFXIVClientStructs.FFXIV.Component.GUI;
 
 namespace Pilgrims_Traverse;
 
-[ScriptType(guid: "093359ee-f9da-4bbd-9e7a-b002c14be0c7", name: "Pilgrim's Traverse", author: "Linoa235", 
+[ScriptType(guid: "3619b5a7-d4ed-4675-a60e-c873ebbacbde", name: "Pilgrim's Traverse", Author: "Linoa235", 
     territorys: [1281, 1282, 1283, 1284, 1285, 1286, 1287, 1288, 1289, 1290, 1311, 1333],
     version: "0.0.1.91",note: noteStr)]
 

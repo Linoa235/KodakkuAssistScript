@@ -1,4 +1,4 @@
-using Dalamud.Utility.Numerics;
+﻿using Dalamud.Utility.Numerics;
 using FFXIVClientStructs.FFXIV.Client.Game.Character;
 using FFXIVClientStructs.FFXIV.Client.Game.Object;
 using FFXIVClientStructs.FFXIV.Client.Graphics.Vfx;
@@ -27,8 +27,8 @@ using static FFXIVClientStructs.FFXIV.Client.Graphics.Render.Skeleton;
 
 namespace Veever.EndWalker.the_Dead_Ends;
 
-[ScriptType(name: Name, territorys: [973], guid: "65f874c3-088e-4c46-8256-d89776b91238",
-    version: Version, author: "Linoa235", note: NoteStr, updateInfo: UpdateInfo)]
+[ScriptType(name: Name, territorys: [973], guid: "30c199f3-37b2-4a8b-bedd-379556fa30c7",
+    version: Version, Author: "Linoa235", note: NoteStr, updateInfo: UpdateInfo)]
 
 public class the_Dead_Ends
 {

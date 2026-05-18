@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Numerics;
 using Newtonsoft.Json;
@@ -16,8 +16,8 @@ using System.ComponentModel;
 
 namespace Veever.A_Realm_Reborn.StingingBack;
 
-[ScriptType(name: "LV.20 Stinging Back", territorys: [192], guid: "95253814-0cbe-4ad9-b180-3be2b03b2c43",
-    version: "0.0.0.3", author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV.20 Stinging Back", territorys: [192], guid: "e073f196-031c-4353-a762-c64cb0bcdf49",
+    version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
 
 public class Stinging_Back
 {

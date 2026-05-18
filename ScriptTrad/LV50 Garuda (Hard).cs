@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -14,8 +14,8 @@ using KodakkuAssist.Extensions;
 
 namespace Garuda_Hard;
 
-[ScriptType(guid: "ba55a465-8201-4dff-902e-6904a5c08076", name: "Garuda (Hard)", territorys: [294],
-    version: "0.0.0.2", author: "Linoa235", note: noteStr)]
+[ScriptType(guid: "8061f068-2fe7-4b58-a4d0-927398928ac3", name: "Garuda (Hard)", territorys: [294],
+    version: "0.0.0.2", Author: "Linoa235", note: noteStr)]
 
 public class Garuda_Hard_
 {

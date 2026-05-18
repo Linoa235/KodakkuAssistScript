@@ -1,4 +1,4 @@
-using Dalamud.Utility.Numerics;
+﻿using Dalamud.Utility.Numerics;
 using FFXIVClientStructs.FFXIV.Client.Game;
 using FFXIVClientStructs.FFXIV.Client.Game.Character;
 using FFXIVClientStructs.FFXIV.Client.Game.Control;
@@ -36,8 +36,8 @@ using KodaMarkType = KodakkuAssist.Module.GameOperate.MarkType;
 
 namespace Veever.DawnTrail.Mistwake;
 
-[ScriptType(name: Name, territorys: [1314], guid: "da4f5921-9426-4894-9c30-2c59bc2e307b",
-    version: Version, author: "Linoa235", note: NoteStr, updateInfo: UpdateStr)]
+[ScriptType(name: Name, territorys: [1314], guid: "9624a92e-a4ef-4bf4-85f8-9fb9e324ceda",
+    version: Version, Author: "Linoa235", note: NoteStr, updateInfo: UpdateStr)]
 
 public class Mistwake
 {
@@ -115,7 +115,7 @@ public class Mistwake
         
         _ = ScriptVersionChecker.CheckVersionAsync(
             sa,
-            "b7d5e223-17b8-43bf-932f-dceddf10ba1a",
+            "9624a92e-a4ef-4bf4-85f8-9fb9e324ceda",
             Version,
             showNotification: true
         );

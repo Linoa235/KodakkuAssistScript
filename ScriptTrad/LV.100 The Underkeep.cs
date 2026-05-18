@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Numerics;
 using Newtonsoft.Json;
@@ -23,8 +23,8 @@ using FFXIVClientStructs.FFXIV.Client.UI;
 
 namespace Veever.DawnTrail.the_Underkeep;
 
-[ScriptType(name: "LV.100 The Underkeep", territorys: [1266], guid: "17e43669-48d3-41da-86fa-0a65ce1fb6c6",
-    version: "0.0.0.4", author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV.100 The Underkeep", territorys: [1266], guid: "78902514-1151-4b7e-9c75-8b1319a17b05",
+    version: "0.0.0.4", Author: "Linoa235", note: noteStr)]
 
 public class the_Underkeep
 {

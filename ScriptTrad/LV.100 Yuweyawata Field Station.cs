@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Numerics;
 using Newtonsoft.Json;
@@ -18,8 +18,8 @@ using FFXIVClientStructs.FFXIV.Client.Game.Character;
 
 namespace Veever.DawnTrail.YuweyawataFieldStation;
 
-[ScriptType(name: "LV.100 Yuweyawata Field Station", territorys: [1242], guid: "5b77ab3e-3f30-4cf6-b4d5-d26bf15c6917",
-    version: "0.0.2.1", author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV.100 Yuweyawata Field Station", territorys: [1242], guid: "6cfcf53b-98dd-4c66-a9a8-2a61eafef0e5",
+    version: "0.0.2.1", Author: "Linoa235", note: noteStr)]
 
 public class YuweyawataFieldStation
 {

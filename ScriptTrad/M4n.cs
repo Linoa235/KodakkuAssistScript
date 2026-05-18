@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Numerics;
 using System.Collections.Generic;
@@ -11,7 +11,7 @@ using KodakkuAssist.Module.Draw;
 
 namespace Cyf5119Script.Dawntrail.M4n;
 
-[ScriptType(guid: "cc57802d-60f4-4f67-ad19-a8e70906db47", name: "M4n", territorys: [1231], version: "0.0.0.4", author: "Linoa235")]
+[ScriptType(guid: "8f025539-6ff5-40f4-9004-e3ad8ac24660", name: "M4n", territorys: [1231], version: "0.0.0.4", Author: "Linoa235")]
 public class M4n
 {
     private List<bool> IsFront = [];

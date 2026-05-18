@@ -1,4 +1,4 @@
-using Dalamud.Utility.Numerics;
+﻿using Dalamud.Utility.Numerics;
 using FFXIVClientStructs.FFXIV.Client.Game;
 using FFXIVClientStructs.FFXIV.Client.Game.Character;
 using FFXIVClientStructs.FFXIV.Client.Game.Control;
@@ -37,8 +37,8 @@ using KodaMarkType = KodakkuAssist.Module.GameOperate.MarkType;
 
 namespace Veever.DawnTrail.the_Clyteum;
 
-[ScriptType(name: Name, territorys: [1345], guid: "b2ffe582-ad24-4d82-aa8e-1a0509705763",
-    version: Version, author: "Linoa235", note: NoteStr, updateInfo: UpdateStr)]
+[ScriptType(name: Name, territorys: [1345], guid: "67c9ac0d-89a7-4a65-9624-ccfc4a5f64bd",
+    version: Version, Author: "Linoa235", note: NoteStr, updateInfo: UpdateStr)]
 
 // ^(?!.*((Monk|Machinist|Dragoon|Samurai|Ninja|Viper|Reaper|Dancer|Bard|Astrologian|Sage|Scholar|(Eos|Selene)|Seraph|White Mage|Warrior|Paladin|Dark Knight|Gunbreaker|Pictomancer|Black Mage|Blue Mage|Summoner|Carbuncle|Demigod Bahamut|Demigod Phoenix|Garuda-Egi|Titan-Egi|Ifrit-Egi|Puppet)\] (Used|Cast))).*35501.*$
 // ^\[\w+\|[^|]+\|E\]\s\w+ 
@@ -129,7 +129,7 @@ public class the_Clyteum
 
         _ = ScriptVersionChecker.CheckVersionAsync(
             sa,
-            "5f365ada-2833-4164-92b3-8d11b7275b80",
+            "67c9ac0d-89a7-4a65-9624-ccfc4a5f64bd",
             Version,
             showNotification: true
         );

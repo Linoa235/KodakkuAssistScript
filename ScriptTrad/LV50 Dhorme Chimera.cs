@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -23,8 +23,8 @@ using FFXIVClientStructs.FFXIV.Component.GUI;
 
 namespace DhormeChimera;
 
-[ScriptType(guid: "2cd3f239-5420-411c-a2cb-d3425b632e09", name: "Dhorme Chimera", territorys: [368],
-    version: "0.0.0.5", author: "Linoa235", note: noteStr)]
+[ScriptType(guid: "00b0a827-80d6-4da0-aa3e-b5bce107d214", name: "Dhorme Chimera", territorys: [368],
+    version: "0.0.0.5", Author: "Linoa235", note: noteStr)]
 
 public class DhormeChimera
 {

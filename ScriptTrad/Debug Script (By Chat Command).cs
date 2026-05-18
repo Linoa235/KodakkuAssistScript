@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Collections.Concurrent;
 using System.Globalization;
@@ -23,10 +23,10 @@ namespace KodakkuDebugScript
 {
     [ScriptType(
         name: "Debug Script (By Chat Command)",
-        guid: "8fdb3162-2ea8-45a7-b5cc-a187c35bad24",
+        guid: "e447e994-66e9-4240-9400-243ba7c1e78f",
         territorys: [],
         version: "0.0.2",
-        author: "Linoa235",
+        Author: "Linoa235",
         note: "Enter commands in echo channel for dynamic drawing.\nUsage:\n[target] [shape] [parameters...]\n\nTarget (optional, defaults to self):\n- test ... (draw on self)\n- test eid=[entity ID] ... (draw on specified entity)\n\nShapes and parameters:\n- circle [radius]\n- fan [radius] [angle]\n- rect [width] [length]\n- donut [outer radius] [inner radius]\n- straight [width] [length]\n\nExamples:\n- test circle 5\n- test eid=4000123A fan 10 90"
     )]
     public class GeneralDebugScript

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -14,8 +14,8 @@ using System.Threading.Tasks;
 
 namespace Ala_Mhigo;
 
-[ScriptType(guid: "f10e44d1-7453-46e0-938e-24f09ffd49ec", name: "Ala Mhigo", territorys: [1146],
-    version: "0.0.0.2", author: "Linoa235", note: noteStr)]
+[ScriptType(guid: "33b94458-6ed0-4063-b7c9-64a11b10650b", name: "Ala Mhigo", territorys: [1146],
+    version: "0.0.0.2", Author: "Linoa235", note: noteStr)]
 
 public class Ala_Mhigo
 {

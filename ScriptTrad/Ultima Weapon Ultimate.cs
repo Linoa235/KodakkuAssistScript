@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Threading;
 using System.Collections.Generic;
 using System.Collections.Immutable;
@@ -21,10 +21,10 @@ namespace LinoaScripts.WeaponsRefrainUltimate
 {
     [ScriptType(name: "Ultima Weapon Ultimate",
         territorys: [777],
-        guid: "e550f35a-825d-40cf-8593-922dcff73227",
+        guid: "73826b8c-8a9a-4cb7-9e37-88316e00cec1",
         version: "0.0.0.2",
         note: scriptNotes,
-        author: "Linoa235")]
+        Author: "Linoa235")]
 
     public class Weapons_Refrain_Ultimate
     {

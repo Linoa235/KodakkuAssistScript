@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Numerics;
 using Newtonsoft.Json;
@@ -23,8 +23,8 @@ using FFXIVClientStructs.FFXIV.Client.Game.Character;
 
 namespace Veever.DawnTrail.Hells_Kier_Unreal;
 
-[ScriptType(name: "LV.100 Hells' Kier Unreal", territorys: [1272], guid: "46cd4370-728e-4827-97cc-7a1a25f1a5d2",
-    version: "0.0.0.7", author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV.100 Hells' Kier Unreal", territorys: [1272], guid: "75d73ae1-e919-4279-9e24-45d2c14a9e8e",
+    version: "0.0.0.7", Author: "Linoa235", note: noteStr)]
 
 public class Hells_Kier_Unreal
 {

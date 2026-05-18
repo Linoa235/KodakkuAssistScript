@@ -1,4 +1,4 @@
-using Dalamud.Utility.Numerics;
+﻿using Dalamud.Utility.Numerics;
 using FFXIVClientStructs.FFXIV.Client.Game;
 using FFXIVClientStructs.FFXIV.Client.Game.Character;
 using FFXIVClientStructs.FFXIV.Client.Game.Control;
@@ -37,8 +37,8 @@ using KodaMarkType = KodakkuAssist.Module.GameOperate.MarkType;
 
 namespace Veever.A_Realm_Reborn.Snowcloak;
 
-[ScriptType(name: Name, territorys: [1062], guid: "eb12b607-cce5-426e-9f6d-0ef05603ea6e",
-    version: Version, author: "Linoa235", note: NoteStr, updateInfo: UpdateStr)]
+[ScriptType(name: Name, territorys: [1062], guid: "af05648a-8755-49f0-92ed-c2e0205afd2b",
+    version: Version, Author: "Linoa235", note: NoteStr, updateInfo: UpdateStr)]
 
 // ^(?!.*((Monk|Machinist|Dragoon|Samurai|Ninja|Viper|Reaper|Dancer|Bard|Astrologian|Sage|Scholar|(Eos|Selene)|Seraph|White Mage|Warrior|Paladin|Dark Knight|Gunbreaker|Pictomancer|Black Mage|Blue Mage|Summoner|Carbuncle|Demigod Bahamut|Demigod Phoenix|Garuda-Egi|Titan-Egi|Ifrit-Egi|Puppet)\] (Used|Cast))).*35501.*$
 // ^\[\w+\|[^|]+\|E\]\s\w+ 
@@ -129,7 +129,7 @@ public class Snowcloak
 
         _ = ScriptVersionChecker.CheckVersionAsync(
             sa,
-            "e64621a3-5ff4-40e2-9070-88e69191a1c0",
+            "af05648a-8755-49f0-92ed-c2e0205afd2b",
             Version,
             showNotification: true
         );

@@ -1,4 +1,4 @@
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using System;
 using System.Numerics;
 using System.Collections.Generic;
@@ -19,7 +19,7 @@ using KodakkuAssist.Module.GameEvent;
 
 namespace TsingNamespace.Normal.LittleLadiesDay2026
 {
-    [ScriptType(name: "2026 Little Ladies' Day Performance Cheer", territorys: [130], guid: "b86c778b-b21e-45dd-9188-3e479ced9663", version: "0.0.0.1", author: "Linoa235")]
+    [ScriptType(name: "2026 Little Ladies' Day Performance Cheer", territorys: [130], guid: "2aaaa0bc-901c-4b4f-9eb5-d0befe86f30a", version: "0.0.0.1", Author: "Linoa235")]
     public class LittleLadiesDay
     {
         [UserSetting("Performance Audience Status Refresh Reminder")]

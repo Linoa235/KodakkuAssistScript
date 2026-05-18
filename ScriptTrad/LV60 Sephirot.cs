@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -14,8 +14,8 @@ using KodakkuAssist.Extensions;
 
 namespace Sephirot;
 
-[ScriptType(guid: "a34507c7-5bbc-466b-8f51-03c762b6c7dd", name: "Sephirot", territorys: [517],
-    version: "0.0.0.2", author: "Linoa235", note: noteStr)]
+[ScriptType(guid: "a6b04620-292d-45c4-8b56-ba0f34fa2240", name: "Sephirot", territorys: [517],
+    version: "0.0.0.2", Author: "Linoa235", note: noteStr)]
 
 public class Sephirot
 {

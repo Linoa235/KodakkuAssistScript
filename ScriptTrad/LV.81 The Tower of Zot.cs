@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Numerics;
 using Newtonsoft.Json;
@@ -17,8 +17,8 @@ using System.Windows;
 
 namespace Veever.EndWalker.theTowerofZot;
 
-[ScriptType(name: "LV.81 The Tower of Zot", territorys: [952], guid: "97de71b5-4164-4c54-8deb-75707863d782",
-    version: "0.0.0.4", author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV.81 The Tower of Zot", territorys: [952], guid: "520b7486-4f21-4293-a1de-dc9551b1c60e",
+    version: "0.0.0.4", Author: "Linoa235", note: noteStr)]
 
 public class the_Tower_of_Zot
 {

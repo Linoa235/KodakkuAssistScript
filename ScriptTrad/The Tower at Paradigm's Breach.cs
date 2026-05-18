@@ -1,4 +1,4 @@
-using FFXIVClientStructs.FFXIV.Common.Math;
+﻿using FFXIVClientStructs.FFXIV.Common.Math;
 using KodakkuAssist.Module.Draw;
 using KodakkuAssist.Module.GameEvent;
 using KodakkuAssist.Script;
@@ -7,7 +7,7 @@ using System;
 
 namespace KDrawScript.Dev
 {
-    [ScriptType(name: "The Tower at Paradigm's Breach", territorys: [966], guid: "a251ca57-1f1a-4776-b8a8-d8972bab4023", version: "0.0.0.1", author: "Linoa235")]
+    [ScriptType(name: "The Tower at Paradigm's Breach", territorys: [966], guid: "a654f603-256b-41de-90fd-9912bdb62ddf", version: "0.0.0.1", Author: "Linoa235")]
     public class The_Tower_at_Paradigms_Breach
     {
         public void Init(ScriptAccessory accessory)

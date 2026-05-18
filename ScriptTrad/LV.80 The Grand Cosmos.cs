@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Numerics;
 using Newtonsoft.Json;
@@ -23,8 +23,8 @@ using FFXIVClientStructs.FFXIV.Client.Game.Character;
 
 namespace Veever.Shadowbringers.theGrandCosmos;
 
-[ScriptType(name: "LV.80 The Grand Cosmos", territorys: [884], guid: "a004fc64-be66-42d6-8bc2-96f25fa29415",
-    version: "0.0.0.3", author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV.80 The Grand Cosmos", territorys: [884], guid: "a8086d7d-da15-4d97-a661-debaf6780198",
+    version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
 
 public class the_Grand_Cosmos
 {

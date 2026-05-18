@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -14,8 +14,8 @@ using KodakkuAssist.Extensions;
 
 namespace Thornmarch_Hard;
 
-[ScriptType(guid: "e583ec39-8d1f-45f4-aa2e-387f8cdfa2ab", name: "Thornmarch (Hard) (Fun Edition)", territorys: [1067],
-    version: "0.0.0.3", author: "Linoa235", note: noteStr)]
+[ScriptType(guid: "a04a23b0-20a5-4381-93fe-3cef7ceccc9c", name: "Thornmarch (Hard) (Fun Edition)", territorys: [1067],
+    version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
 
 public class Thornmarch_Hard
 {

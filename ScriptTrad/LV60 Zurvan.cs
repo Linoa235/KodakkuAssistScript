@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -14,8 +14,8 @@ using System.Threading.Tasks;
 
 namespace Zurvan;
 
-[ScriptType(guid: "591b862d-7978-4b25-9843-8dfef00177d4", name: "Zurvan", territorys: [637],
-    version: "0.0.0.5", author: "Linoa235", note: noteStr)]
+[ScriptType(guid: "8e7212ce-f262-43de-9169-b878461ca773", name: "Zurvan", territorys: [637],
+    version: "0.0.0.5", Author: "Linoa235", note: noteStr)]
 
 public class Zurvan
 {

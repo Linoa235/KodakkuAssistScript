@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using KodakkuAssist.Module.GameEvent;
 using KodakkuAssist.Script;
 using KodakkuAssist.Module.GameEvent.Struct;
@@ -22,8 +22,8 @@ using Lumina.Excel.Sheets;
 
 namespace UsamisKodakku.Scripts._06_EndWalker.TopReborn;
 
-[ScriptType(name: Name, territorys: [1122], guid: "7c5f04b6-69ba-4a77-9ac7-e3b186ece8e1",
-    version: Version, author: "Linoa235", note: NoteStr, updateInfo: UpdateInfo)]
+[ScriptType(name: Name, territorys: [1122], guid: "2f817bb1-4d3e-4518-86f5-0e7864356250",
+    version: Version, Author: "Linoa235", note: NoteStr, updateInfo: UpdateInfo)]
 
 // ^(?!.*((Monk|Machinist|Dragoon|Samurai|Ninja|Viper|Reaper|Dancer|Bard|Astrologian|Sage|Scholar|(Eos|Selene)|Seraph|White Mage|Warrior|Paladin|Dark Knight|Gunbreaker|Pictomancer|Black Mage|Blue Mage|Summoner|Carbuncle|Demigod Bahamut|Demigod Phoenix|Garuda-Egi|Titan-Egi|Ifrit-Egi|Puppet)) (Used|Cast))).*35501.*$
 // ^\[\w+\|[^|]+\|E\]\s\w+

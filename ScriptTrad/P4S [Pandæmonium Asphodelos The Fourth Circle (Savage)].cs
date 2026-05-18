@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Numerics;
 using System.Threading;
@@ -14,7 +14,7 @@ using FFXIVClientStructs.FFXIV.Client.UI.Agent;
 
 namespace Cyf5119Script.Endwalker.P1To4N;
 
-[ScriptType(guid: "1bfdf011-ab5d-4f3e-9d84-371faa5d23ac", name: "P1N-P4N Bundle", territorys: [1002, 1004, 1006, 1008], version: "0.0.0.2", author: "Linoa235", note: "Includes P1N, P2N, P3N, P4N")]
+[ScriptType(guid: "AD2A9D42-E040-442E-A8F2-86F7D13768BD", name: "P1N-P4N Bundle", territorys: [1002, 1004, 1006, 1008], version: "0.0.0.2", Author: "Linoa235", note: "Includes P1N, P2N, P3N, P4N")]
 public class P1To4N
 {
     [PluginService] public static IClientState ClientState { get; private set; }

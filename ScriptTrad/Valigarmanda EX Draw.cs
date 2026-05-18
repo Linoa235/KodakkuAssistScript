@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using KodakkuAssist.Module.GameEvent;
 using KodakkuAssist.Script;
 using KodakkuAssist.Module.Draw;
@@ -16,7 +16,7 @@ using KodakkuAssist.Module.GameOperate;
 
 namespace KarlinScriptNamespace
 {
-    [ScriptType(name: "Valigarmanda EX Draw", territorys: [1196], guid: "b5c60c9b-9a74-45bd-b85b-c52181d520d7", version: "0.0.0.3", author: "Linoa235")]
+    [ScriptType(name: "Valigarmanda EX Draw", territorys: [1196], guid: "6faecd9c-0679-4995-b0b6-483a80ad6fc6", version: "0.0.0.3", Author: "Linoa235")]
     public class ValigarmandaExDraw
     {
         int? firstTargetIcon = null;

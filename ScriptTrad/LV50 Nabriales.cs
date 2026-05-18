@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -13,8 +13,8 @@ using System.Threading.Tasks;
 
 namespace Nabriales;
 
-[ScriptType(guid: "f9c383ef-da60-4e43-8b0a-7b662b286489", name: "Nabriales", territorys: [426],
-    version: "0.0.0.4", author: "Linoa235", note: noteStr)]
+[ScriptType(guid: "b948a9c9-562e-4f6b-bdee-a67bd4c2bce6", name: "Nabriales", territorys: [426],
+    version: "0.0.0.4", Author: "Linoa235", note: noteStr)]
 
 public class Nabriales
 {

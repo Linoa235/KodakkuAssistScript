@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Numerics;
 using System.Collections.Generic;
@@ -14,8 +14,8 @@ using KodakkuAssist.Module.Draw;
 
 namespace KodakkuScript.Script._05_Shadowbringers;
 
-[ScriptType(guid: "090f8d4a-5922-4cc3-aab5-30e1032b11bb",name:"E11n", territorys: [944], version: "0.0.0.1", 
-    author: "Linoa235")]
+[ScriptType(guid:"1bbb80eb-02f6-495b-ad6d-d58d70ec8b5d",name:"E11n", territorys: [944], version: "0.0.0.1", 
+    Author: "Linoa235")]
 public class E11n
 {
     private static bool ParseObjectId(string? idStr, out uint id)

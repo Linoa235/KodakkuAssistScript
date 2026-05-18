@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -12,11 +12,7 @@ using KodakkuAssist.Script;
 
 namespace RyougiMioScriptNamespace
 {
-<<<<<<< HEAD
-    [ScriptType(name: "(Another Dungeon) Another Merchant's Tale", territorys: [1317], guid: "a51a6d05-4e82-4260-90b4-e56b656ab9bd", version: "0.0.0.76", author: "Linoa235", note: "Another Merchant's Tale test")]
-=======
-    [ScriptType(name: "(Another Dungeon) Another Merchant's Tale", territorys: [1317], guid: "", version: "0.0.0.76", Author: "Linoa235", note: "Another Merchant's Tale test")]
->>>>>>> 8f05f450b31f4086086c1031ab7c61562bd6aa66
+    [ScriptType(name: "(Another Dungeon) Another Merchant's Tale", territorys: [1317], guid: "b066e07a-6e2c-4eed-a3e8-f527f0e7e0e0", version: "0.0.0.76", Author: "Linoa235", note: "Another Merchant's Tale test")]
     public class Script1317
     {
         #region Settings

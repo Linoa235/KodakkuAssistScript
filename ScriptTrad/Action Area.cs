@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -13,8 +13,8 @@ using System.Threading.Tasks;
 
 namespace TetoraKodakkuScript._00_Other;
 
-[ScriptType(guid: "c8155436-0f9e-4b65-9f9e-e9f6369de096", name: "Action Area", territorys: [],
-    version: "0.0.0.1", author: "Linoa235", note: noteStr)]
+[ScriptType(guid: "d21fb733-8380-4512-8fbc-7a0f23ca91c5", name: "Action Area", territorys: [],
+    version: "0.0.0.1", Author: "Linoa235", note: noteStr)]
 
 public class ActionArea
 {

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Numerics;
 using System.Collections.Generic;
@@ -11,7 +11,7 @@ using KodakkuAssist.Module.Draw;
 
 namespace Cyf5119Script.Dawntrail.TheStrayboroughDeadwalk;
 
-[ScriptType(guid: "3e045bf2-7a6b-49f4-8c6f-f8b47448c0b7", name: "The Strayborough Deadwalk", territorys: [1204], version: "0.0.0.8", author: "Linoa235")]
+[ScriptType(guid: "70f4effa-d403-4ebc-b3d0-e8753338b1ee", name: "The Strayborough Deadwalk", territorys: [1204], version: "0.0.0.8", Author: "Linoa235")]
 public class TheStrayboroughDeadwalk
 {
     [UserSetting(note: "Good Head friend prompt time (milliseconds)")] public int Prop1 { get; set; } = 60000;

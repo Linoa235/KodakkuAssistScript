@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Concurrent;
 using KodakkuAssist.Module.GameEvent;
 using KodakkuAssist.Script;
@@ -29,10 +29,10 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
     [ScriptType(name: "Karlin's Eden Ultimate Script (Spirit Sight Modified Edition) wotou modified for personal use",
         territorys: [1238],
-        guid: "1ea927f2-ef56-44b9-99a5-730d2b47f128",
+        guid: "b7dbf67e-e960-4ead-b495-6fe819060ec4",
         version: "0.0.1.50",
         note: notesOfTheScript,
-        author: "Linoa235", 
+        Author: "Linoa235", 
         updateInfo: UpdateInfo)]
 
     public class Futures_Rewritten_Ultimate

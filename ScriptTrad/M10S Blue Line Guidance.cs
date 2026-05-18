@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using KodakkuAssist.Module.GameEvent;
 using KodakkuAssist.Script;
 using KodakkuAssist.Module.GameEvent.Struct;
@@ -61,9 +61,9 @@ namespace BakaWater77.M10N
     [ScriptType(
         name: "M10S Blue Line Guidance",
         territorys: new uint[] { 1323 },
-        guid: "c31eacd9-856e-43d6-929d-44f17c047357",
+        guid: "7ab8fa18-71ed-45f7-b12a-4020de18c43c",
         version: "0.0.0.2",
-        author: "Linoa235"
+        Author: "Linoa235"
     )]
     public class M10S
     {

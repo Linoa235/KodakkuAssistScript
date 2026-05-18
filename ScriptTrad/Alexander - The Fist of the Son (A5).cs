@@ -1,4 +1,4 @@
-using FFXIVClientStructs.FFXIV.Common.Math;
+﻿using FFXIVClientStructs.FFXIV.Common.Math;
 using KodakkuAssist.Module.Draw;
 using KodakkuAssist.Module.GameEvent;
 using KodakkuAssist.Script;
@@ -7,7 +7,7 @@ using System;
 
 namespace KDrawScript.Dev
 {
-    [ScriptType(name: "Alexander - The Fist of the Son (A5)", territorys: [520], guid: "05a8e15e-1890-4a6a-a063-86c7bc9cc07e", version: "0.0.0.1", author: "Linoa235")]
+    [ScriptType(name: "Alexander - The Fist of the Son (A5)", territorys: [520], guid: "bf9e655f-c0f1-425e-8b7c-e7b803ad024d", version: "0.0.0.1", Author: "Linoa235")]
     public class TheFistoftheSon
     {
         public void Init(ScriptAccessory accessory)

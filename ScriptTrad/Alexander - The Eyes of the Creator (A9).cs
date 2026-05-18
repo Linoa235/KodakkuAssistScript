@@ -1,4 +1,4 @@
-using FFXIVClientStructs.FFXIV.Common.Math;
+﻿using FFXIVClientStructs.FFXIV.Common.Math;
 using KodakkuAssist.Module.GameEvent;
 using KodakkuAssist.Script;
 using Newtonsoft.Json;
@@ -6,7 +6,7 @@ using System;
 
 namespace KDrawScript.Dev
 {
-    [ScriptType(name: "Alexander - The Eyes of the Creator (A9)", territorys: [580], guid: "bc5ed8fd-5a8b-47d8-a921-45032b05788d", version: "0.0.0.1", author: "Linoa235")]
+    [ScriptType(name: "Alexander - The Eyes of the Creator (A9)", territorys: [580], guid: "93453b65-5786-4663-9a78-58db5a27e0a8", version: "0.0.0.1", Author: "Linoa235")]
     public class TheEyesoftheCreator
     {
         public void Init(ScriptAccessory accessory)

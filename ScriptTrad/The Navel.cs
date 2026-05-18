@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Numerics;
 using Newtonsoft.Json;
@@ -9,7 +9,7 @@ using KodakkuAssist.Module.Draw;
 
 namespace Cyf5119Script.ARealmReborn.TheNavel;
 
-[ScriptType(guid: "570e568a-bfca-4ffa-aef7-4f6d0eb03054", name: "The Navel", territorys: [1046, 293], version: "0.0.0.3", author: "Linoa235")]
+[ScriptType(guid: "66d18d86-eb09-4fc0-be0b-0987b5aa5a18", name: "The Navel", territorys: [1046, 293], version: "0.0.0.3", Author: "Linoa235")]
 public class TheNavel
 {
     public void Init(ScriptAccessory accessory)

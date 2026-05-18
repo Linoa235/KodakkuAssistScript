@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -14,8 +14,8 @@ using System.Threading.Tasks;
 
 namespace Celestium;
 
-[ScriptType(guid: "376b5330-0e6c-4ed5-b574-ea479bf77f02", name: "Celestium", territorys: [796],
-    version: "0.0.0.6", author: "Linoa235", note: noteStr)]
+[ScriptType(guid: "ccfa80e0-9f53-43b1-97a9-9c8abfad8000", name: "Celestium", territorys: [796],
+    version: "0.0.0.6", Author: "Linoa235", note: noteStr)]
 
 public class Celestium
 {

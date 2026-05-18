@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Numerics;
 using Newtonsoft.Json;
@@ -17,8 +17,8 @@ using System.Windows;
 
 namespace Veever.Other.Cliffhanger;
 
-[ScriptType(name: "Gold Saucer - Cliffhanger", territorys: [144], guid: "736ba2d7-8694-45c2-8fac-4f7d29728b5f",
-    version: "0.0.0.3", author: "Linoa235", note: noteStr)]
+[ScriptType(name: "Gold Saucer - Cliffhanger", territorys: [144], guid: "a42cd764-0729-432e-8bec-2cfd0a620da4",
+    version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
 
 public class Cliffhanger
 {

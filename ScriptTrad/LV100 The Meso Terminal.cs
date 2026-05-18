@@ -1,4 +1,4 @@
-using Dalamud.Utility.Numerics;
+﻿using Dalamud.Utility.Numerics;
 using FFXIVClientStructs.FFXIV.Client.Game.Character;
 using FFXIVClientStructs.FFXIV.Client.Game.Object;
 using FFXIVClientStructs.FFXIV.Client.Graphics.Vfx;
@@ -26,8 +26,8 @@ using System.Xml.Linq;
 
 namespace Veever.DawnTrail.TheMesoTerminal;
 
-[ScriptType(name: Name, territorys: [1292], guid: "f2a1baaa-fdd3-442b-bc3b-0db1ba804cce",
-    version: Version, author: "Linoa235", note: NoteStr, updateInfo: UpdateInfo)]
+[ScriptType(name: Name, territorys: [1292], guid: "d0df8a70-b611-4433-9531-24be07b984f9",
+    version: Version, Author: "Linoa235", note: NoteStr, updateInfo: UpdateInfo)]
 
 public class TheMesoTerminal
 {

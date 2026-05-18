@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Concurrent;
 using KodakkuAssist.Module.GameEvent;
 using KodakkuAssist.Script;
@@ -21,7 +21,7 @@ using FFXIVClientStructs.FFXIV.Client.Game.Character;
 
 namespace KodakkuScript
 {
-	[ScriptType(name: "Arcadia Cruiser Zero 1", territorys: [1257], guid: "b6135fdb-8dba-4c2e-aebf-4f4e7b87cf91", version: "0.0.0.6", note: noteStr, author: "Linoa235")]
+	[ScriptType(name: "Arcadia Cruiser Zero 1", territorys: [1257], guid: "6491b628-f803-4580-89e0-f2ebc9933617", version: "0.0.0.6", note: noteStr, Author: "Linoa235")]
 
 	public class M5S
 	{

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Numerics;
 using System.Collections.Generic;
@@ -19,8 +19,8 @@ using KodakkuAssist.Module.Script.Type;
 
 namespace UsamisKodakku.Scripts._06_EndWalker.DSR;
 
-[ScriptType(name: Name, territorys: [968, 1112], guid: "452e468d-6bbc-4f6b-bb78-8bebdbd88b39", 
-    version: Version, author: "Linoa235", note: NoteStr, updateInfo: UpdateInfo)]
+[ScriptType(name: Name, territorys: [968, 1112], guid: "d5b96147-b74b-4bcb-8f1e-1f96f0d998bd", 
+    version: Version, Author: "Linoa235", note: NoteStr, updateInfo: UpdateInfo)]
 
 // ^(?!.*((Monk|Machinist|Dragoon|Samurai|Ninja|Viper|Reaper|Dancer|Bard|Astrologian|Sage|Scholar|(Eos|Selene)|Seraph|White Mage|Warrior|Paladin|Dark Knight|Gunbreaker|Pictomancer|Black Mage|Blue Mage|Summoner|Carbuncle|Demigod Bahamut|Demigod Phoenix|Garuda-Egi|Titan-Egi|Ifrit-Egi|Puppet)\] (Used|Cast))).*$
 

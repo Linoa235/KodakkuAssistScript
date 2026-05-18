@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -14,8 +14,8 @@ using System.Threading.Tasks;
 
 namespace A_Finale_Most_Formidable;
 
-[ScriptType(guid: "6f48dd73-afa9-4530-a7c3-6f5820655a0e", name: "A Finale Most Formidable: The Secret Weapon", territorys: [814],
-    version: "0.0.0.4", author: "Linoa235", note: noteStr)]
+[ScriptType(guid: "304fa68c-1cb3-4f50-bf75-779643f71dac", name: "A Finale Most Formidable: The Secret Weapon", territorys: [814],
+    version: "0.0.0.4", Author: "Linoa235", note: noteStr)]
 
 public class Formidable
 {

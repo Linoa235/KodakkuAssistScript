@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -15,8 +15,8 @@ using KodakkuAssist.Extensions;
 
 namespace Battle_in_the_Big_Keep;
 
-[ScriptType(guid: "94e68f7e-2f2e-4a70-8ff3-14e9e2048e6b", name: "Battle in the Big Keep", territorys: [396],
-    version: "0.0.0.3", author: "Linoa235", note: noteStr)]
+[ScriptType(guid: "389154a5-e024-4de7-9918-d327912f6a51", name: "Battle in the Big Keep", territorys: [396],
+    version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
 
 public class Battle_in_the_Big_Keep
 {

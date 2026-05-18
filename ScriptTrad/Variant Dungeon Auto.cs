@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using KodakkuAssist.Module.GameEvent;
 using KodakkuAssist.Script;
 using KodakkuAssist.Module.GameEvent.Struct;
@@ -8,7 +8,7 @@ using Dalamud.Game.ClientState.Objects.Types;
 
 namespace MyScriptNamespace
 {
-    [ScriptType(name: "Variant Dungeon Automation", territorys: [1069, 1137, 1176], guid: "9c5b6fb7-06ab-4393-9771-7c0b55fd2a37", version: "0.0.0.1", author: "Linoa235")]
+    [ScriptType(name: "Variant Dungeon Automation", territorys: [1069, 1137, 1176], guid: "5f606fe5-8a11-4a03-888a-fcd4089ac17a", version: "0.0.0.1", Author: "Linoa235")]
     public class VariantDungeonAutomation
     {
         [UserSetting(note: "Use heal on self when HP is below this value")]

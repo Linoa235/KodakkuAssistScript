@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -14,8 +14,8 @@ using System.Threading.Tasks;
 
 namespace Mascot_Murder;
 
-[ScriptType(guid: "8266ed09-d336-46fa-bc67-31ffcf0e5c05", name: "Mica the Magical Mu: Dressed-Up Parade, All Rejoice", territorys: [1192],
-    version: "0.0.0.3", author: "Linoa235", note: noteStr)]
+[ScriptType(guid: "26dd454a-d047-4fe5-8d88-787e586b9035", name: "Mica the Magical Mu: Dressed-Up Parade, All Rejoice", territorys: [1192],
+    version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
 
 public class Mica_the_Magical_Mu
 {

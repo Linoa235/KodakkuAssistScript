@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using KodakkuAssist.Module.GameEvent;
 using KodakkuAssist.Script;
 using KodakkuAssist.Module.Draw;
@@ -15,8 +15,8 @@ using KodakkuAssist.Module.GameOperate;
 
 namespace KodakkuAssist.Omega;
 
-[ScriptType(name: "Omega4", territorys: [694], guid: "9c3a5876-5254-45a1-8365-9065145b4e03", version: "0.0.0.1",
-    author: "Linoa235")]
+[ScriptType(name: "Omega4", territorys: [694], guid: "2497816d-edda-4b11-9a92-8937e194ba32", version: "0.0.0.1",
+    Author: "Linoa235")]
 public class Omega4
 {
     [ScriptMethod(name: "Doom", eventType: EventTypeEnum.StatusAdd, eventCondition: ["StatusID:910"])]

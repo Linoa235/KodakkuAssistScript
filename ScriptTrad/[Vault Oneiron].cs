@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using KodakkuAssist.Module.GameEvent;
 using KodakkuAssist.Script;
 using KodakkuAssist.Module.Draw;
@@ -16,7 +16,7 @@ using KodakkuAssist.Module.GameOperate;
 
 namespace KarlinScriptNamespace
 {
-    [ScriptType(name: "Zoraal Ja EX Draw", territorys: [1201], guid: "40a6c515-a2c6-4dc6-825a-29d4d9f4a9e7", version: "0.0.0.2", author: "Linoa235")]
+    [ScriptType(name: "Zoraal Ja EX Draw", territorys: [1201], guid: "18ef8ab2-b8b9-4ab0-92ef-d32bc0dc1eb7", version: "0.0.0.2", Author: "Linoa235")]
     public class ZoraalaExDraw
     {
         int? firstTargetIcon = null;

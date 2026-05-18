@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -14,8 +14,8 @@ using KodakkuAssist.Extensions;
 
 namespace BattleOnTheBigBridgen;
 
-[ScriptType(guid: "c4cc856a-3a29-4d58-87e6-684ad478fd33", name: "Battle on the Big Bridge", territorys: [366],
-    version: "0.0.0.4", author: "Linoa235", note: noteStr)]
+[ScriptType(guid: "11ac91d5-3e43-45dc-847e-c8ff8b5e48b8", name: "Battle on the Big Bridge", territorys: [366],
+    version: "0.0.0.4", Author: "Linoa235", note: noteStr)]
 
 public class BattleOnTheBigBridge
 {

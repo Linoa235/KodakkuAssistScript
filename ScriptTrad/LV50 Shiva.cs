@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -23,8 +23,8 @@ using FFXIVClientStructs.FFXIV.Component.GUI;
 
 namespace Shiva;
 
-[ScriptType(guid: "f54eb3d3-dfa8-49f5-8542-8a594fdd60ff", name: "Shiva", territorys: [377],
-    version: "0.0.0.3", author: "Linoa235", note: noteStr)]
+[ScriptType(guid: "6f702f44-0866-464e-8ba3-5b3d796e0b8d", name: "Shiva", territorys: [377],
+    version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
 
 public class Shiva
 {

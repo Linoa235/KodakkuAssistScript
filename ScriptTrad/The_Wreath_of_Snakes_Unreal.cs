@@ -1,4 +1,4 @@
-using Dalamud.Utility.Numerics;
+﻿using Dalamud.Utility.Numerics;
 using FFXIVClientStructs.FFXIV.Client.Game.Character;
 using FFXIVClientStructs.FFXIV.Client.Game.Object;
 using FFXIVClientStructs.FFXIV.Client.Graphics.Vfx;
@@ -26,8 +26,8 @@ using System.Xml.Linq;
 
 namespace Veever.DawnTrail.the_Wreath_of_Snakes_Unreal;
 
-[ScriptType(name: Name, territorys: [825, 1302], guid: "fb303ec4-382d-44ea-a386-dce108343410",
-    version: Version, author: "Linoa235", note: NoteStr, updateInfo: UpdateInfo)]
+[ScriptType(name: Name, territorys: [825, 1302], guid: "74b5d71b-cd83-4a93-9523-2f470a538623",
+    version: Version, Author: "Linoa235", note: NoteStr, updateInfo: UpdateInfo)]
 
 public class UnrealSeiryu
 {

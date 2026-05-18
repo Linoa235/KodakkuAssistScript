@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Numerics;
 using System.Collections.Generic;
@@ -15,8 +15,8 @@ using KodakkuAssist.Module.Draw;
 
 namespace KodakkuScript.Script._07_DawnTrail;
 
-[ScriptType(guid: "199301e6-82d4-45cb-a48c-f649b8892893", name: "Vanguard Outpost", territorys: [1198], version: "0.0.0.1",
-    author: "Linoa235")]
+[ScriptType(guid: "a0cd2385-eaaf-4cdf-9d36-08b1e2a4b068", name: "Vanguard Outpost", territorys: [1198], version: "0.0.0.1",
+    Author: "Linoa235")]
 public class Vanguard
 {
     public void Init(ScriptAccessory accessory)

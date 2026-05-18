@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Numerics;
 using Newtonsoft.Json;
@@ -16,8 +16,8 @@ using System.ComponentModel;
 
 namespace Veever.A_Realm_Reborn.UndertheArmor;
 
-[ScriptType(name: "LV.10 Under the Armor", territorys: [190], guid: "fe0c55fd-b406-485f-a1f1-9abef897ae9c",
-    version: "0.0.0.5", author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV.10 Under the Armor", territorys: [190], guid: "25fb9aae-bc9a-484c-afd9-0f8639f9e644",
+    version: "0.0.0.5", Author: "Linoa235", note: noteStr)]
 
 public class Under_the_Armor
 {

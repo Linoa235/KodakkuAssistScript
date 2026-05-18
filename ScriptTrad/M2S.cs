@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using KodakkuAssist.Module.GameEvent;
 using KodakkuAssist.Script;
 using KodakkuAssist.Module.Draw;
@@ -19,7 +19,7 @@ using KodakkuAssist.Extensions;
 
 namespace KarlinScriptNamespace
 {
-    [ScriptType(name: "M2s Drawing", territorys:[1228],guid: "922e2c38-ff61-4187-a66a-f27748debe1c", version:"0.0.0.3", author: "Linoa235")]
+    [ScriptType(name: "M2s Drawing", territorys:[1228],guid: "d80fa1d1-2033-4aff-8271-ac14bd66f1ec", version:"0.0.0.3", Author: "Linoa235")]
     public class M2sDrawing
     {
         [UserSetting("Ground Heart Trajectory Length")]

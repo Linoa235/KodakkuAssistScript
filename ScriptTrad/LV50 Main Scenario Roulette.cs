@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -14,8 +14,8 @@ using System.Threading.Tasks;
 
 namespace MainScenario_Roulette;
 
-[ScriptType(guid: "dd017ea4-ee76-40e1-8186-fc1a60b15a49", name: "Main Scenario Roulette", territorys: [1043, 1044, 1048],
-    version: "0.0.0.3", author: "Linoa235", note: noteStr)]
+[ScriptType(guid: "5336256b-6cf9-4b37-85b0-f6e40aa67234", name: "Main Scenario Roulette", territorys: [1043, 1044, 1048],
+    version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
 
 public class MainScenario_Roulette
 {

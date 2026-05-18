@@ -1,4 +1,4 @@
-using FFXIVClientStructs.FFXIV.Common.Math;
+﻿using FFXIVClientStructs.FFXIV.Common.Math;
 using KodakkuAssist.Extensions;
 using KodakkuAssist.Module.Draw;
 using KodakkuAssist.Module.GameEvent;
@@ -9,7 +9,7 @@ using System.Linq;
 
 namespace KDrawScript.Dev
 {
-    [ScriptType(name: "Heavy Weight Savage", territorys: [1323], guid: "87864569-f3e1-497a-99f6-eecbc9139bc0", version: "0.0.0.1", author: "Linoa235")]
+    [ScriptType(name: "Heavy Weight Savage", territorys: [1323], guid: "5b7035eb-0570-410d-b887-7621196b59cc", version: "0.0.0.1", Author: "Linoa235")]
     public class HeavyWeightSavage
     {
         [UserSetting(note: "Experimental toggle.")]

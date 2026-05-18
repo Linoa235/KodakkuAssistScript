@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using KodakkuAssist.Module.GameEvent;
 using KodakkuAssist.Script;
 using KodakkuAssist.Module.GameEvent.Struct;
@@ -21,8 +21,8 @@ using Lumina.Excel.Sheets;
 
 namespace KodakkuScripts.UsamisKodakku._07_DawnTrail.UnrealShinryu;
 
-[ScriptType(name: Name, territorys: [730, 1372], guid: "819c43d6-caa9-4c99-a65c-5718a1fe4d60",
-    version: Version, author: "Linoa235", note: NoteStr, updateInfo: UpdateInfo)]
+[ScriptType(name: Name, territorys: [730, 1372], guid: "4843cef2-ffbb-4cb9-9f5b-aaac36c7fcb4",
+    version: Version, Author: "Linoa235", note: NoteStr, updateInfo: UpdateInfo)]
 
 public class UnrealShinryu
 {

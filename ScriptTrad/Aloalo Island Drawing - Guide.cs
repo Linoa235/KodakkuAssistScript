@@ -1,4 +1,4 @@
-// File: AloaloIslandDrawingAndGuide_Mao.cs
+﻿// File: AloaloIslandDrawingAndGuide_Mao.cs
 using System;
 using Newtonsoft.Json;
 using System.Numerics;
@@ -32,7 +32,7 @@ using static TsingNamespace.AloaloIsland.ScriptExtensions_Tsing;
 namespace TsingNamespace.AloaloIsland
 {
 
-    [ScriptType(name: "Aloalo Island Drawing + Guide", territorys: [1179, 1180], guid: "4430e55f-5199-4ca2-9372-78b8a4624e8d", version: "0.0.1.5", author: "Linoa235", note: noteStr)]
+    [ScriptType(name: "Aloalo Island Drawing + Guide", territorys: [1179, 1180], guid: "1d1edb5d-b2de-4763-98f9-11551769ceb4", version: "0.0.1.5", Author: "Linoa235", note: noteStr)]
     public class AloaloIslandScript
     {   
         const string noteStr =

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Numerics;
 using Newtonsoft.Json;
@@ -17,8 +17,8 @@ using System.Windows;
 
 namespace Veever.A_Realm_Reborn.ShadowandClaw;
 
-[ScriptType(name: "LV.35 Shadow and Claw", territorys: [223], guid: "8c9d477d-c344-4c57-9314-d543115a1c19",
-    version: "0.0.0.4", author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV.35 Shadow and Claw", territorys: [223], guid: "9f8a3768-aec4-4e11-b6fb-d17b09d8df81",
+    version: "0.0.0.4", Author: "Linoa235", note: noteStr)]
 
 public class Shadow_and_Claw
 {

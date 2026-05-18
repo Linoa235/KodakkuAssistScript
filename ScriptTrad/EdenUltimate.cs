@@ -1,4 +1,4 @@
-// File: EdenUltimate_Unknown.cs
+﻿// File: EdenUltimate_Unknown.cs
 using System;
 using KodakkuAssist.Module.GameEvent;
 using KodakkuAssist.Script;
@@ -18,7 +18,7 @@ using KodakkuAssist.Extensions;
 namespace MyScriptNamespace
 {
     
-    [ScriptType(name: "EdenUltimate", territorys: [1238],guid: "85cf25cd-c105-477a-ae4b-f84261c038ef", version:"0.0.0.11",note: noteStr)]
+    [ScriptType(name: "EdenUltimate", territorys: [1238],guid: "2e36475e-6f84-476a-b243-b14139d3416d", version:"0.0.0.11",note: noteStr)]
     public class EdenUltimate
     {
         const string noteStr =

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Numerics;
 using System.Threading;
@@ -9,7 +9,7 @@ using KodakkuAssist.Module.Draw;
 
 namespace Cyf5119Script.Dawntrail.WorqorLarDor;
 
-[ScriptType(guid: "739f3c7d-c99b-4301-a368-0bbd754e36e3", name: "Worqor Lar Dor", territorys: [1195], version: "0.0.0.3", author: "Linoa235")]
+[ScriptType(guid: "2a7dc2cb-a32d-4183-a663-7b8e85685ea4", name: "Worqor Lar Dor", territorys: [1195], version: "0.0.0.3", Author: "Linoa235")]
 public class WorqorLarDor
 {
     public void Init(ScriptAccessory accessory)

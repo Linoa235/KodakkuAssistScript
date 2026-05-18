@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using KodakkuAssist.Module.GameEvent;
 using KodakkuAssist.Script;
 using KodakkuAssist.Module.Draw;
@@ -8,7 +8,7 @@ using KodakkuAssist.Module.Draw.Manager;
 
 namespace A8S_Scripts
 {
-    [ScriptType(name: "Alexander - The Burden of the Son (A8S)", territorys: [532], guid: "1a82b735-cda3-4106-98a4-7d5e425aa432", version: "0.0.1", author: "Linoa235")]
+    [ScriptType(name: "Alexander - The Burden of the Son (A8S)", territorys: [532], guid: "bf33b8d9-a6f3-4953-a161-5cc3af79ce3f", version: "0.0.1", Author: "Linoa235")]
     public class A8S
     {
         public void Init(ScriptAccessory accessory)

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using KodakkuAssist.Module.GameEvent;
 using KodakkuAssist.Script;
 using KodakkuAssist.Module.GameEvent.Struct;
@@ -26,9 +26,9 @@ namespace BakaWater77.M9N;
 [ScriptType(
     name: "M9N",
     territorys: new uint[] { 1320 },
-    guid: "1094f6a8-d363-4360-8dfb-5966dba9406f",
+    guid: "b4f3e292-2368-4fce-ac3e-94d153adc1f7",
     version: "0.0.0.9",
-    author: "Linoa235",
+    Author: "Linoa235",
     note: null
 )]
 public class M9N

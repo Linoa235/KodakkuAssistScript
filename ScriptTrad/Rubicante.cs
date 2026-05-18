@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using KodakkuAssist.Module.GameEvent;
 using KodakkuAssist.Script;
 using KodakkuAssist.Module.GameEvent.Struct;
@@ -24,7 +24,7 @@ using Lumina.Excel.Sheets;
 namespace UsamisScript.EndWalker.Rubicante;
 
 [ScriptType(name: "Rubicante", territorys: [1095],
-    guid: "bbc7cca8-e15a-4868-bd66-8376506043ee", version: "0.0.0.2", author: "Linoa235", note: noteStr, updateInfo: UpdateInfo)]
+    guid: "79657c33-fe73-427a-b42b-e24995a7f4d7", version: "0.0.0.2", Author: "Linoa235", note: noteStr, updateInfo: UpdateInfo)]
 
 public class Rubicante
 {

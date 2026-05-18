@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -14,8 +14,8 @@ using KodakkuAssist.Extensions;
 
 namespace the_Whorleater_Extreme;
 
-[ScriptType(guid: "d78d10f8-038a-4e6a-8eaa-5d4e10593087", name: "Leviathan Extreme", territorys: [359],
-    version: "0.0.0.4", author: "Linoa235", note: noteStr)]
+[ScriptType(guid: "720a2e9d-f6f9-47bf-b465-9dc5e47daf98", name: "Leviathan Extreme", territorys: [359],
+    version: "0.0.0.4", Author: "Linoa235", note: noteStr)]
 
 public class the_Whorleater_Extreme
 {

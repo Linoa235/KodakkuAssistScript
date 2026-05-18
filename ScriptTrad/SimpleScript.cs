@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using KodakkuAssist.Module.GameEvent;
 using KodakkuAssist.Script;
 using KodakkuAssist.Module.GameEvent.Struct;
@@ -12,7 +12,7 @@ namespace MyScriptNamespace
     /// territorys specifies the regions where this trigger is effective. If left empty, it will be effective in all regions.
     /// Classes with the same GUID will be considered the same trigger. Please ensure your GUID is unique and does not conflict with others.
     /// </summary>
-    [ScriptType(name: "SimpleScript", territorys: [179, 979],guid: "e5d5b31d-6c05-446b-bd96-1aa69f32e3c7",version:"0.0.0.3",author: "Linoa235", note: noteStr,updateInfo:updateInfoStr)]
+    [ScriptType(name: "SimpleScript", territorys: [179, 979],guid: "7c794b74-71d8-4707-9b94-8f536eed202b",version:"0.0.0.3",Author: "Linoa235", note: noteStr,updateInfo:updateInfoStr)]
     public class SimpleScript
     {
         const string noteStr =

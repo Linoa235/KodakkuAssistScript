@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
@@ -13,7 +13,7 @@ using KodakkuAssist.Extensions;
 
 namespace RyougiMioScriptNamespace
 {
-    [ScriptType(name: "G Lair Abolition: Hell on Rails (Extreme)", territorys: [1308], guid: "f3a43b4a-673f-44b1-80fb-28d3e6c6ca63", version: "0.0.0.2", author: "Linoa235", note: "Bug fix")]
+    [ScriptType(name: "G Lair Abolition: Hell on Rails (Extreme)", territorys: [1308], guid: "79a0ac92-0f04-48a8-bc40-e86be8043242", version: "0.0.0.2", Author: "Linoa235", note: "Bug fix")]
     public class Script1308
     {
         [UserSetting("Common Danger Color")]

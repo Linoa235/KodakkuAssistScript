@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using KodakkuAssist.Module.GameEvent;
 using KodakkuAssist.Script;
 using KodakkuAssist.Module.Draw;
@@ -19,9 +19,9 @@ namespace CicerosKodakkuAssist.Pandemonium.Normal;
 
 [ScriptType(name: "Abyssos The Seventh Circle",
     territorys: [1085],
-    guid: "dcd96d7b-8914-4209-832a-10d79d141244",
+    guid: "5432d753-e6b8-45ef-ad63-d0adb6ce8aff",
     version: "0.0.0.13",
-    author: "Linoa235",
+    Author: "Linoa235",
     note: "A simple script for the duty Abyssos The Seventh Circle.")]
 
 public class Abyssos_The_Seventh_Circle

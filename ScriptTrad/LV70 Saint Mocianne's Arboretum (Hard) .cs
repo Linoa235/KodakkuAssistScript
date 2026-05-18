@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -14,8 +14,8 @@ using KodakkuAssist.Extensions;
 
 namespace SaintMociannesArboretum_Hard;
 
-[ScriptType(guid: "a02cb54d-8b37-4c4d-ac29-5b5cd25223d5", name: "Saint Mocianne's Arboretum (Hard)", territorys: [788],
-    version: "0.0.0.4", author: "Linoa235", note: noteStr)]
+[ScriptType(guid: "db28193a-6166-4e42-ba84-c4c41fa28406", name: "Saint Mocianne's Arboretum (Hard)", territorys: [788],
+    version: "0.0.0.4", Author: "Linoa235", note: noteStr)]
 
 public class SaintMociannesArboretum_Hard
 {

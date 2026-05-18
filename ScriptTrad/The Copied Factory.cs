@@ -1,4 +1,4 @@
-using FFXIVClientStructs.FFXIV.Common.Math;
+﻿using FFXIVClientStructs.FFXIV.Common.Math;
 using KodakkuAssist.Module.Draw;
 using KodakkuAssist.Module.GameEvent;
 using KodakkuAssist.Script;
@@ -7,7 +7,7 @@ using System;
 
 namespace KDrawScript.Dev
 {
-    [ScriptType(name: "The Copied Factory", territorys: [882], guid: "bc6f3a7f-3cc3-4913-8cb0-8afeed0007af", version: "0.0.0.1", author: "Linoa235")]
+    [ScriptType(name: "The Copied Factory", territorys: [882], guid: "42a65ec4-cbb6-4b8b-81f6-ca9f4eec754b", version: "0.0.0.1", Author: "Linoa235")]
     public class The_Copied_Factory
     {
         public void Init(ScriptAccessory accessory)

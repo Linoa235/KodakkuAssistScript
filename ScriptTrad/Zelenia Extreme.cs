@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Concurrent;
 using KodakkuAssist.Module.GameEvent;
 using KodakkuAssist.Script;
@@ -19,7 +19,7 @@ using Newtonsoft.Json.Linq;
 
 namespace KodakkuScript
 {
-	[ScriptType(name: "Zelenia Extreme", territorys: [1271], guid: "cbc94b88-5510-4d99-b364-77301b23f383", version: "0.0.1.2", note: noteStr, author: "Linoa235")]
+	[ScriptType(name: "Zelenia Extreme", territorys: [1271], guid: "9648df28-e5a1-464c-a004-7fb8e2f75250", version: "0.0.1.2", note: noteStr, Author: "Linoa235")]
 
 	public class Recollection
 	{

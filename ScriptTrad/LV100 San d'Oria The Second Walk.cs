@@ -1,4 +1,4 @@
-using Dalamud.Utility.Numerics;
+﻿using Dalamud.Utility.Numerics;
 using FFXIVClientStructs.FFXIV.Client.Game.Character;
 using FFXIVClientStructs.FFXIV.Client.Game.Object;
 using FFXIVClientStructs.FFXIV.Client.Graphics.Vfx;
@@ -27,8 +27,8 @@ using System.Xml.Linq;
 
 namespace Veever.DawnTrail.San_d_Oria_The_Second_Walk;
 
-[ScriptType(name: Name, territorys: [1304], guid: "da7bb0d8-609c-4319-b222-62bc03cc396a",
-    version: Version, author: "Linoa235", note: NoteStr, updateInfo: UpdateInfo)]
+[ScriptType(name: Name, territorys: [1304], guid: "6605fd22-074a-4561-9e12-b2c31cfa0a62",
+    version: Version, Author: "Linoa235", note: NoteStr, updateInfo: UpdateInfo)]
 
 public class San_d_Oria_The_Second_Walk
 {

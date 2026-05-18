@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Concurrent;
 using KodakkuAssist.Module.GameEvent;
 using KodakkuAssist.Script;
@@ -23,10 +23,10 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
 
     [ScriptType(name: "Karlin's FRU script (Customized by Cicero) - English Version",
         territorys: [1238],
-        guid: "daf4c259-f0a1-464f-b6a0-a8ba5558a40c",
+        guid: "244e500d-c709-417a-a0ec-2b3a4de4619d",
         version: "0.0.1.19",
         note: notesOfTheScript,
-        author: "Linoa235")]
+        Author: "Linoa235")]
 
     public class Futures_Rewritten_Ultimate
     {

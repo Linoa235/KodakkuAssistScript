@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using KodakkuAssist.Module.GameEvent;
 using KodakkuAssist.Script;
 using KodakkuAssist.Module.Draw;
@@ -23,7 +23,7 @@ using KodakkuAssist.Extensions;
 
 namespace KarlinScriptNamespace
 {
-    [ScriptType(name: "M6s Drawing", territorys: [1259], guid: "70ffc73b-dfb5-4631-94dd-180a800263f2", version: "0.0.0.5", author: "Linoa235", note: noteStr, updateInfo: updateInfoStr)]
+    [ScriptType(name: "M6s Drawing", territorys: [1259], guid: "e715669c-071c-4c09-ae91-bd434d63f9fa", version: "0.0.0.5", Author: "Linoa235", note: noteStr, updateInfo: updateInfoStr)]
     public class M6sDraw
     {
         const string noteStr =

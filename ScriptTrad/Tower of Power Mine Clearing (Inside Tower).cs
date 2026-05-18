@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Numerics;
@@ -44,10 +44,10 @@ namespace KodakkuAssistXSZYYS
 
     [ScriptType(
         name: "Tower of Power Mine Clearing (Inside Tower)",
-        guid: "3e33cac7-ac0a-4eda-bb55-33fa66c2d12e",
+        guid: "e39a74e5-1bc3-430c-a15c-64cbc2ce5cb9",
         territorys: [1252],
         version: "0.1.1",
-        author: "Linoa235",
+        Author: "Linoa235",
         note: "Type [/e Crescent Mine Clear] in chat to start mine clearing. Type again to hide. Display lasts 1800s. If display disappears, re-enter the command.\nMajor updates:\n- Added auto show/hide mine markers on map change.\n- Data restructured by Map ID, ensuring only current map mines are displayed."
     )]
     public class TowerOfPowerMineClearing

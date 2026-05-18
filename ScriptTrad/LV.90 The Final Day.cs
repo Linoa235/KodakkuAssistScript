@@ -1,4 +1,4 @@
-using Dalamud.Utility.Numerics;
+﻿using Dalamud.Utility.Numerics;
 using FFXIVClientStructs.FFXIV.Client.Game.Character;
 using FFXIVClientStructs.FFXIV.Client.Game.Object;
 using FFXIVClientStructs.FFXIV.Client.Graphics.Vfx;
@@ -26,8 +26,8 @@ using System.Xml.Linq;
 
 namespace Veever.EndWalker.the_Final_Day;
 
-[ScriptType(name: Name, territorys: [997], guid: "79ebd50f-6414-4952-b5a6-2c6c7af47afe",
-    version: Version, author: "Linoa235", note: NoteStr, updateInfo: UpdateInfo)]
+[ScriptType(name: Name, territorys: [997], guid: "369eaee3-b4d4-4564-8eed-e47998f9a643",
+    version: Version, Author: "Linoa235", note: NoteStr, updateInfo: UpdateInfo)]
 
 public class the_Final_Day
 {

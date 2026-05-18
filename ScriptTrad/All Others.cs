@@ -1,4 +1,4 @@
-using Dalamud.Game.Text.SeStringHandling;
+﻿using Dalamud.Game.Text.SeStringHandling;
 using Dalamud.Plugin;
 using Dalamud.Plugin.Ipc;
 using Dalamud.Utility.Numerics;
@@ -55,8 +55,8 @@ public enum PartyFilterMode
     ExcludeMyParty = 2
 }
 
-[ScriptType(name: Name, territorys: [], guid: "c43960df-f81c-45c3-96f4-2e10f3a98e98",
-    version: Version, author: "Linoa235", note: NoteStr, updateInfo: UpdateInfo)]
+[ScriptType(name: Name, territorys: [], guid: "ce57d210-be3a-460b-b956-d36645355975",
+    version: Version, Author: "Linoa235", note: NoteStr, updateInfo: UpdateInfo)]
 
 public class VVToolKit
 {

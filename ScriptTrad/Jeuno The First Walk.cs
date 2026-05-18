@@ -1,4 +1,4 @@
-using FFXIVClientStructs.FFXIV.Common.Math;
+﻿using FFXIVClientStructs.FFXIV.Common.Math;
 using KodakkuAssist.Module.Draw;
 using KodakkuAssist.Module.GameEvent;
 using KodakkuAssist.Script;
@@ -7,7 +7,7 @@ using System;
 
 namespace KDrawScript.Dev
 {
-    [ScriptType(name: "Jeuno The First Walk", territorys: [1248], guid: "e7f041df-8830-4ff3-99f5-87e4b1a2ab7e", version: "0.0.0.7", author: "Linoa235")]
+    [ScriptType(name: "Jeuno The First Walk", territorys: [1248], guid: "88c7fb92-fe44-4675-a4d7-419e2340005a", version: "0.0.0.7", Author: "Linoa235")]
     public class FirstWalk
     {
         [UserSetting(note: "Enable text reminders")]

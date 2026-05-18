@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Numerics;
 using Newtonsoft.Json;
@@ -16,8 +16,8 @@ using System.ComponentModel;
 
 namespace Veever.A_Realm_Reborn.PullingPoisonPosies;
 
-[ScriptType(name: "LV.20 Pulling Poison Posies", territorys: [191], guid: "017b0a15-5e78-438a-b119-617e00db03dd",
-    version: "0.0.0.3", author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV.20 Pulling Poison Posies", territorys: [191], guid: "ca583fb2-4fdf-4adb-b394-0a20a2bfb26d",
+    version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
 
 public class Pulling_Poison_Posies
 {

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -13,8 +13,8 @@ using System.Threading.Tasks;
 
 namespace O4n;
 
-[ScriptType(guid: "b1b035ad-554d-4e49-84e3-9901e8ba941e", name: "O4N", territorys: [694],
-    version: "0.0.0.2", author: "Linoa235", note: noteStr)]
+[ScriptType(guid: "5a053174-2ce9-4b61-a18b-ec9b7e0215a8", name: "O4N", territorys: [694],
+    version: "0.0.0.2", Author: "Linoa235", note: noteStr)]
 
 public class O4n
 {

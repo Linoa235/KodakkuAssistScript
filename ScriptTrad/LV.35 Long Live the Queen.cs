@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Numerics;
 using Newtonsoft.Json;
@@ -17,8 +17,8 @@ using System.Windows;
 
 namespace Veever.A_Realm_Reborn.LongLivetheQueen;
 
-[ScriptType(name: "LV.35 Long Live the Queen", territorys: [298], guid: "f32cb98d-7f4d-416b-b783-c8258b88a826",
-    version: "0.0.0.3", author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV.35 Long Live the Queen", territorys: [298], guid: "3b0caaba-b68e-4a1a-9b59-fecff4c61344",
+    version: "0.0.0.3", Author: "Linoa235", note: noteStr)]
 
 public class Long_Live_the_Queen
 {

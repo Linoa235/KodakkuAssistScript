@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Numerics;
 using Newtonsoft.Json;
@@ -14,8 +14,8 @@ using System.Runtime.Intrinsics.Arm;
 
 namespace Veever.Heavensward.AetherochemicalResearchFacility;
 
-[ScriptType(name: "LV.60 Aetherochemical Research Facility", territorys: [1110], guid: "128f60d3-9854-4df1-af12-a5b76c9629f0",
-    version: "0.0.0.7", author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV.60 Aetherochemical Research Facility", territorys: [1110], guid: "b3532f58-c1ca-4e1d-90cd-52f2abde17e4",
+    version: "0.0.0.7", Author: "Linoa235", note: noteStr)]
 
 public class AetherochemicalResearchFacility
 {

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -14,8 +14,8 @@ using KodakkuAssist.Extensions;
 
 namespace Bismarck_Extreme;
 
-[ScriptType(guid: "5e50a5d8-4aff-488a-af05-5b9ffd3eef69", name: "Bismarck Extreme", territorys: [447],
-    version: "0.0.0.2", author: "Linoa235", note: noteStr)]
+[ScriptType(guid: "bd13109d-b65a-4eb0-8446-b6c70a85c72e", name: "Bismarck Extreme", territorys: [447],
+    version: "0.0.0.2", Author: "Linoa235", note: noteStr)]
 
 public class Bismarck_Extreme
 {

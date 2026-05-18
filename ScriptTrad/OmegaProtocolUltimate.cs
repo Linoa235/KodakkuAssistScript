@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using KodakkuAssist.Module.GameEvent;
 using KodakkuAssist.Script;
 using KodakkuAssist.Data;
@@ -20,7 +20,7 @@ using Dalamud.Game.ClientState.Objects.Types;
 namespace MyScriptNamespace
 {
     
-    [ScriptType(name: "OmegaProtocolUltimate", territorys: [1122],guid: "1cbadb6d-fb0c-4e6c-a9f3-541fefcc6a23", version:"0.0.0.5",note: noteStr)]
+    [ScriptType(name: "OmegaProtocolUltimate", territorys: [1122],guid: "18cdfbb4-acba-4098-92d2-1f85e3b6a60f", version:"0.0.0.5",note: noteStr)]
     public class OmegaProtocolUltimate
     {
         const string noteStr =

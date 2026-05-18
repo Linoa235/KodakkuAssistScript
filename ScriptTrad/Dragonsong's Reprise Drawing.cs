@@ -1,4 +1,4 @@
-// File: DragongSingDraw_Karlin.cs
+﻿// File: DragongSingDraw_Karlin.cs
 using System;
 using KodakkuAssist.Module.GameEvent;
 using KodakkuAssist.Script;
@@ -17,7 +17,7 @@ using KodakkuAssist.Module.GameOperate;
 
 namespace KarlinScriptNamespace
 {
-    [ScriptType(name:"Dragonsong's Reprise Drawing", territorys: [968], guid: "fa48c9f9-cd68-4216-9cd4-75ab41c58b55", version:"0.0.0.6", author: "Linoa235")]
+    [ScriptType(name:"Dragonsong's Reprise Drawing", territorys: [968], guid: "0bfe3657-a2fd-4e38-b5c8-0f55a561cc75", version:"0.0.0.6", Author: "Linoa235")]
     public class DragongSingDraw
     {
         

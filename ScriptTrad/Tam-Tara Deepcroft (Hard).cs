@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
@@ -23,8 +23,8 @@ using FFXIVClientStructs.FFXIV.Component.GUI;
 
 namespace the_Tam_Tara_Deepcroft_Hard;
 
-[ScriptType(guid: "12fbb71f-e33b-4a9a-9ae3-76836e7d4ee2", name: "Tam-Tara Deepcroft (Hard)", territorys: [373],
-    version: "0.0.0.1", author: "Linoa235", note: noteStr)]
+[ScriptType(guid: "a023af00-8efe-4aaf-8d86-256ee8c00b2e", name: "Tam-Tara Deepcroft (Hard)", territorys: [373],
+    version: "0.0.0.1", Author: "Linoa235", note: noteStr)]
 
 public class the_Tam_Tara_Deepcroft_Hard
 {
