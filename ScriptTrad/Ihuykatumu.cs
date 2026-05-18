@@ -15,7 +15,7 @@ using KodakkuAssist.Module.Draw;
 
 namespace KodakkuScript.Script._07_DawnTrail;
 
-[ScriptType(guid: "123e4567-e89b-12d3-a456-426614174000", name: "Ihuykatumu", territorys: [1167], version: "0.0.0.1",
+[ScriptType(guid: "1eb6ef9a-1cea-492e-91d9-7ab094a41caf", name: "Ihuykatumu", territorys: [1167], version: "0.0.0.1",
     author: "Poetry")]
 public class Ihuykatumu
 {
