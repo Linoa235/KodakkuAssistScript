@@ -891,12 +891,12 @@
     "TerritoryIds": [580]
   },
   {
-    "Name": "LV.60 The Great Gubal Library (Hard)",
+    "Name": "Veever.Heavensward.the_Great_Gubal_Library_Hard",
     "Guid": "b49e44c7-278c-4c87-8afb-dcf4daecf65e",
     "Version": "0.0.0.1",
     "Author": "Linoa235",
     "Repo": "",
-    "DownloadUrl": "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/main/ScriptTrad/LV.60 The Great Gubal Library (Hard).cs",
+    "DownloadUrl": "https://raw.githubusercontent.com/Linoa235/KodakkuAssistScript/refs/heads/main/ScriptTrad/Veever.Heavensward.the_Great_Gubal_Library_Hardry (Hard).cs",
     "Note": "",
     "UpdateInfo": "",
     "TerritoryIds": [578]
