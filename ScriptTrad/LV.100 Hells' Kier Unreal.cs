@@ -23,7 +23,7 @@ using FFXIVClientStructs.FFXIV.Client.Game.Character;
 
 namespace Veever.DawnTrail.Hells_Kier_Unreal;
 
-[ScriptType(name: "LV.100 Hells' Kier Unreal", territorys: [1272], guid: "f20eef85-5b51-428a-ad44-13ce4106f5ce",
+[ScriptType(name: "LV.100 Hells' Kier Unreal", territorys: [1272], guid: "a00f29d2-d813-4933-9cf3-ba6cbfeed356",
     version: "0.0.0.7", author: "Linoa235", note: noteStr)]
 
 public class Hells_Kier_Unreal
