@@ -1,122 +1,234 @@
 using System;
-using System.ComponentModel;
 using System.Linq;
 using System.Numerics;
-using System.Collections.Generic;
 using Newtonsoft.Json;
 using Dalamud.Utility.Numerics;
 using KodakkuAssist.Script;
 using KodakkuAssist.Module.GameEvent;
 using KodakkuAssist.Module.Draw;
-using KodakkuAssist.Data;
-using System.Threading.Tasks;
-using KodakkuAssist.Extensions;
+using System.Reflection.Metadata;
 
-namespace Tsukuyomi;
+namespace Veever.Shadowbringers.DohnMheg;
 
-[ScriptType(guid: "ab88dd06-ada2-4cc8-9d0c-80a6f1a773b6", name: "Tsukuyomi", territorys: [778],
-    version: "0.0.0.2", author: "Linoa235", note: noteStr)]
+[ScriptType(name: "LV.73 Dohn Mheg", territorys: [821], guid: "ab526b82-c6de-417e-ac97-8f274cb8ed70",
+    version: "0.0.0.7", author: "Linoa235", note: noteStr)]
 
-public class Tsukuyomi
+public class DohnMheg
 {
     const string noteStr =
-        """
-        v0.0.0.1:
-        LV70 Tsukuyomi Initial Drawing
-        """;
-    
-    [UserSetting("TTS Toggle")]
-    public bool isTTS { get; set; } = true;
-    
-    [UserSetting("Popup Text Toggle")]
+    """
+    v0.0.0.7:
+    1. Now supports Text Banner/TTS Switch/DR TTS Switch (Please ensure `DailyRoutines` is properly installed before using DR TTS Switch) (Do not enable both TTS switches at the same time)
+    2. The underlying extensions of these previous scripts are too lazy to refactor (just adding whatever I can)
+    Duck gate.
+    """;
+    [UserSetting("Text Banner Switch")]
     public bool isText { get; set; } = true;
-    
-    uint Maiogi = 0;
-    
-    public void Init(ScriptAccessory accessory) {
-        Maiogi = 0; 
+    [UserSetting("TTS Switch")]
+    public bool isTTS { get; set; } = false;
+    [UserSetting("DR TTS Switch")]
+    public bool isDRTTS { get; set; } = true;
+
+    public void Init(ScriptAccessory accessory)
+    {
+        accessory.Method.RemoveDraw(".*");
     }
-    
-    [ScriptMethod(name: "Affliction (Cleave Tankbuster)", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:11235"])]
-    public void Affliction(Event @event, ScriptAccessory accessory)
+
+    #region Adds
+    [ScriptMethod(name: "Watering Wheel", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:15786"])]
+    public void WateringWheel(Event @event, ScriptAccessory accessory)
+    {
+        if (isText) accessory.Method.TextInfo("Interrupt the Fuath", duration: 5000, true);
+        if (isTTS) accessory.Method.TTS("Interrupt the Fuath");
+        if (isDRTTS) accessory.Method.SendChat($"/pdr tts Interrupt the Fuath");
+    }
+
+    [ScriptMethod(name: "Unfinal Sting", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:15794"])]
+    public void UnfinalSting(Event @event, ScriptAccessory accessory)
     {
         var dp = accessory.Data.GetDefaultDrawProperties();
-        dp.Name = "Affliction";
-        dp.Color = accessory.Data.DefaultDangerColor;
-        var boss = accessory.Data.Objects.GetByDataId(8720).FirstOrDefault();
-        if (boss == null) return;
-        dp.Owner = boss.GameObjectId;
-        dp.Scale = new Vector2(18.2f);
-        dp.Radian = 90f.DegToRad();
-        dp.DestoryAt = 4000;
-        accessory.Method.SendDraw(DrawModeEnum.Default, DrawTypeEnum.Fan, dp); 
-    }
-    
-    [ScriptMethod(name: "Party and Play (Nine Rings Prep)", eventType: EventTypeEnum.AddCombatant, eventCondition: ["DataId:8769"])]
-    public void PartyAndPlay(Event @event, ScriptAccessory accessory)
-    {
-        Maiogi++;
-        
-        if (Maiogi <= 7)
-        {
-            var dp = accessory.Data.GetDefaultDrawProperties();
-            dp.Name = "Party and Play";
-            dp.Color = accessory.Data.DefaultDangerColor.WithW(0.6f);
-            dp.Owner = @event.SourceId();
-            dp.Scale = new Vector2(10f);
-            dp.DestoryAt = 5000 - 400 * Maiogi;
-            accessory.Method.SendDraw(DrawModeEnum.Default, DrawTypeEnum.Circle, dp);
-        }
-    }
-    
-    [ScriptMethod(name: "Dancing Fan Under the Moon (Nine Rings Execution)", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:regex:^(11206|11245)$"])]
-    public void DancingFanUnderTheMoon(Event @event, ScriptAccessory accessory)
-    {
-        Maiogi = 0;
-        
-        var dp = accessory.Data.GetDefaultDrawProperties();
-        dp.Name = "Dancing Fan Under the Moon";
-        dp.Color = accessory.Data.DefaultDangerColor;
+        dp.Name = "Unfinal Sting";
+        dp.Color = new Vector4(1.0f, 1.0f, 0.0f, 1.0f);
         dp.Owner = @event.SourceId();
-        dp.Scale = new Vector2(10f);
-        dp.DestoryAt = 4700;
-        dp.ScaleMode = ScaleMode.ByTime;
+        dp.Scale = new Vector2(3,8);
+        dp.DestoryAt = 2500;
+        accessory.Method.SendDraw(DrawModeEnum.Default, DrawTypeEnum.Rect, dp);
+    }
+
+    [ScriptMethod(name: "Straight Punch", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:15787"])]
+    public void StraightPunch(Event @event, ScriptAccessory accessory)
+    {
+        if (isText) accessory.Method.TextInfo("Mini tankbuster", duration: 2700, true);
+        if (isTTS) accessory.Method.TTS("Mini tankbuster");
+        if (isDRTTS) accessory.Method.SendChat($"/pdr tts Mini tankbuster");
+    }
+    #endregion
+
+    #region Boss1
+    [ScriptMethod(name: "Boss1 Tankbuster", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:8857"])]
+    public void Boss1Tankbuster(Event @event, ScriptAccessory accessory)
+    {
+        if (isText) accessory.Method.TextInfo("Tankbuster incoming", duration: 4000, true);
+        if (isTTS) accessory.Method.TTS("Tankbuster incoming");
+        if (isDRTTS) accessory.Method.SendChat($"/pdr tts Tankbuster incoming");
+    }
+
+    [ScriptMethod(name: "Boss1 AOE", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:15813"])]
+    public void Boss1AOE(Event @event, ScriptAccessory accessory)
+    {
+        if (isText) accessory.Method.TextInfo("AOE", duration: 4000, true);
+        if (isTTS) accessory.Method.TTS("AOE");
+        if (isDRTTS) accessory.Method.SendChat($"/pdr tts AOE");
+    }
+
+    [ScriptMethod(name: "Boss1 Landsblood (Too hard, giving up)", eventType: EventTypeEnum.ActionEffect, eventCondition: ["ActionId:8800"])]
+    public void Boss1Landsblood(Event @event, ScriptAccessory accessory)
+    {
+        var sid = @event.SourceId();
+
+        var dp = accessory.Data.GetDefaultDrawProperties();
+
+        dp.Name = "Landsblood";
+        dp.Color = accessory.Data.DefaultDangerColor;
+        dp.Position = @event.SourcePosition();
+        dp.Scale = new Vector2(6);
+        dp.DestoryAt = 1000;
         accessory.Method.SendDraw(DrawModeEnum.Default, DrawTypeEnum.Circle, dp);
     }
-    
-    [ScriptMethod(name: "Nether Shot (Line Stack)", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:11238"])]
-    public void NetherShot(Event @event, ScriptAccessory accessory)
+
+    [ScriptMethod(name: "Boss1 Stack", eventType: EventTypeEnum.TargetIcon, eventCondition: ["Id:003E"])]
+    public void Boss1Stack(Event @event, ScriptAccessory accessory)
     {
+        var sid = @event.SourceId();
+        string tname = @event["TargetName"]?.ToString() ?? "Unknown Target";
+
         var dp = accessory.Data.GetDefaultDrawProperties();
-        dp.Name = "Nether Shot";
-        dp.Scale = new (8, 43.2f);
-        dp.Owner = @event.SourceId();
-        dp.TargetObject = @event.TargetId();
-        dp.Color = accessory.Data.DefaultSafeColor.WithW(0.8f);
-        dp.DestoryAt = 5000;
-        accessory.Method.SendDraw(DrawModeEnum.Default, DrawTypeEnum.Rect, dp);  
-    }
-    
-    [ScriptMethod(name: "Tsukuyomi (Yin-Yang)", eventType: EventTypeEnum.StatusAdd, eventCondition: ["StatusID:regex:^153[89]$", "StackCount:regex:^[34]$"])]
-    public void Tsukuyomi(Event @event, ScriptAccessory accessory)
-    {
-        if (@event.TargetId() != accessory.Data.Me) return; 
-        var color = @event.StatusId == 1538 ? "Black" : "White";
-        if (isText) accessory.Method.TextInfo($"Eat {color}", duration: 2000, true);
-        if (isTTS) accessory.Method.EdgeTTS($"Eat {color}");
-    }
-    
-    [ScriptMethod(name: "Under the Moon (Continuous Stack)", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:11259"])]
-    public void UnderTheMoon(Event @event, ScriptAccessory accessory)
-    {
-        var dp = accessory.Data.GetDefaultDrawProperties();
-        dp.Name = "Under the Moon";
+
+        dp.Name = "Boss1 Stack";
         dp.Color = accessory.Data.DefaultSafeColor;
         dp.Owner = @event.TargetId();
-        dp.Scale = new Vector2(6f);
-        dp.DestoryAt = 8200;
+        dp.Scale = new Vector2(6);
+        dp.DestoryAt = 5500;
         accessory.Method.SendDraw(DrawModeEnum.Default, DrawTypeEnum.Circle, dp);
+
+        if (isText) accessory.Method.TextInfo($"Stack with {tname}", duration: 4000, true);
+        if (isTTS) accessory.Method.TTS($"Stack with {tname}");
+        if (isDRTTS) accessory.Method.SendChat($"/pdr tts Stack with {tname}");
     }
+    #endregion
+
+    #region Boss2
+    [ScriptMethod(name: "Boss2 AOE", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:8915"])]
+    public void Boss2AOE(Event @event, ScriptAccessory accessory)
+    {
+        if (isText) accessory.Method.TextInfo("AOE", duration: 4000, true);
+        if (isTTS) accessory.Method.TTS("AOE");
+        if (isDRTTS) accessory.Method.SendChat($"/pdr tts AOE");
+    }
+
+    [ScriptMethod(name: "Boss2 Summon Fodder", eventType: EventTypeEnum.ActionEffect, eventCondition: ["ActionId:8897"])]
+    public void Boss2Fodder(Event @event, ScriptAccessory accessory)
+    {
+        if (isText) accessory.Method.TextInfo("Take a tether connected to the boss", duration: 8000, true);
+        if (isTTS) accessory.Method.TTS("Take a tether connected to the boss");
+        if (isDRTTS) accessory.Method.SendChat($"/pdr tts Take a tether connected to the boss");
+    }
+    #endregion
+
+    #region Boss3
+    [ScriptMethod(name: "Boss3 Tankbuster", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:13732"])]
+    public void Boss3Tankbuster(Event @event, ScriptAccessory accessory)
+    {
+        if (isText) accessory.Method.TextInfo("Tankbuster incoming", duration: 4000, true);
+        if (isTTS) accessory.Method.TTS("Tankbuster incoming");
+        if (isDRTTS) accessory.Method.SendChat($"/pdr tts Tankbuster incoming");
+    }
+
+    [ScriptMethod(name: "Boss3 AOE", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:13708"])]
+    public void Boss3AOE(Event @event, ScriptAccessory accessory)
+    {
+        if (isText) accessory.Method.TextInfo("AOE", duration: 4700, true);
+        if (isTTS) accessory.Method.TTS("AOE");
+        if (isDRTTS) accessory.Method.SendChat($"/pdr tts AOE");
+    }
+
+    [ScriptMethod(name: "Boss3 Imp Choir", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:13552"])]
+    public void Boss3ImpChoir(Event @event, ScriptAccessory accessory)
+    {
+        if (isText) accessory.Method.TextInfo("Look away from the boss", duration: 3700, true);
+        if (isTTS) accessory.Method.TTS("Look away from the boss");
+        if (isDRTTS) accessory.Method.SendChat($"/pdr tts Look away from the boss");
+    }
+
+    [ScriptMethod(name: "Boss3 Toad Choir", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:13551"])]
+    public void Boss3ToadChoir(Event @event, ScriptAccessory accessory)
+    {
+        if (isText) accessory.Method.TextInfo("Go behind the boss", duration: 3700, true);
+        if (isTTS) accessory.Method.TTS("Go behind the boss");
+        if (isDRTTS) accessory.Method.SendChat($"/pdr tts Go behind the boss");
+
+        var dp = accessory.Data.GetDefaultDrawProperties();
+
+        dp.Name = "Boss3 Toad Choir";
+        dp.Color = accessory.Data.DefaultDangerColor;
+        dp.Owner = @event.TargetId();
+        dp.Scale = new Vector2(21);
+        dp.Radian = float.Pi / 180 * 150;
+        dp.DestoryAt = 3700;
+        accessory.Method.SendDraw(DrawModeEnum.Default, DrawTypeEnum.Fan, dp);
+    }
+
+    [ScriptMethod(name: "Boss3 Finale", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:15723"])]
+    public void Boss3Finale(Event @event, ScriptAccessory accessory)
+    {
+        if (isText) accessory.Method.TextInfo("After crossing the bridge, enter the circle and attack the Dreaming Stringed Instrument", duration: 15000, true);
+        if (isTTS) accessory.Method.TTS("After crossing the bridge, enter the circle and attack the instrument");
+        if (isDRTTS) accessory.Method.SendChat($"/pdr tts After crossing the bridge, enter the circle and attack the instrument");
+    }
+
+    [ScriptMethod(name: "Boss3 Corrosive Bile", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:13547"])]
+    public void Boss3CorrosiveBile(Event @event, ScriptAccessory accessory)
+    {
+        if (isText) accessory.Method.TextInfo("Move away from the boss's front", duration: 3700, true);
+        if (isTTS) accessory.Method.TTS("Move away from the boss's front");
+        if (isDRTTS) accessory.Method.SendChat($"/pdr tts Move away from the boss's front");
+
+        var dp = accessory.Data.GetDefaultDrawProperties();
+
+        dp.Name = "Boss3 Corrosive Bile";
+        dp.Color = accessory.Data.DefaultDangerColor;
+        dp.Owner = @event.TargetId();
+        dp.Scale = new Vector2(20);
+        dp.Radian = float.Pi / 180 * 90;
+        dp.DestoryAt = 3700;
+        accessory.Method.SendDraw(DrawModeEnum.Default, DrawTypeEnum.Fan, dp);
+    }
+
+    [ScriptMethod(name: "Boss3 Flailing Tentacles", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:13952"])]
+    public void Boss3FlailingTentacles(Event @event, ScriptAccessory accessory)
+    {
+        if (isText) accessory.Method.TextInfo("Move away from the boss's corners", duration: 4700, true);
+        if (isTTS) accessory.Method.TTS("Move away from the boss's corners");
+        if (isDRTTS) accessory.Method.SendChat($"/pdr tts Move away from the boss's corners");
+
+        float iAng = 45;
+        float aIncrement = 90;
+
+        for (var i = 0; i < 4; i++)
+        {
+            var dp = accessory.Data.GetDefaultDrawProperties();
+            dp.Name = $"Boss3 Flailing Tentacles:{i}";
+            dp.Color = accessory.Data.DefaultDangerColor;
+            dp.Owner = @event.TargetId();
+            dp.Scale = new Vector2(20);
+            dp.Radian = float.Pi / 180 * 50;
+            dp.Rotation = float.Pi / 180 * (iAng + i * aIncrement);
+            dp.DestoryAt = 4700;
+
+            accessory.Method.SendDraw(DrawModeEnum.Default, DrawTypeEnum.Fan, dp);
+        }
+    }
+    #endregion
 }
 
 public static class EventExtensions
@@ -147,51 +259,6 @@ public static class EventExtensions
         return ParseHexId(@event["SourceId"], out var id) ? id : 0;
     }
 
-    public static uint SourceDataId(this Event @event)
-    {
-        return JsonConvert.DeserializeObject<uint>(@event["SourceDataId"]);
-    }
-
-    public static uint Command(this Event @event)
-    {
-        return ParseHexId(@event["Command"], out var cid) ? cid : 0;
-    }
-    
-    public static uint DurationMilliseconds(this Event @event)
-    {
-        return JsonConvert.DeserializeObject<uint>(@event["DurationMilliseconds"]);
-    }
-
-    public static float SourceRotation(this Event @event)
-    {
-        return JsonConvert.DeserializeObject<float>(@event["SourceRotation"]);
-    }
-
-    public static float TargetRotation(this Event @event)
-    {
-        return JsonConvert.DeserializeObject<float>(@event["TargetRotation"]);
-    }
-
-    public static byte Index(this Event @event)
-    {
-        return (byte)(ParseHexId(@event["Index"], out var index) ? index : 0);
-    }
-
-    public static uint State(this Event @event)
-    {
-        return ParseHexId(@event["State"], out var state) ? state : 0;
-    }
-
-    public static string SourceName(this Event @event)
-    {
-        return @event["SourceName"];
-    }
-
-    public static string TargetName(this Event @event)
-    {
-        return @event["TargetName"];
-    }
-
     public static uint TargetId(this Event @event)
     {
         return ParseHexId(@event["TargetId"], out var id) ? id : 0;
@@ -211,93 +278,4 @@ public static class EventExtensions
     {
         return JsonConvert.DeserializeObject<Vector3>(@event["EffectPosition"]);
     }
-
-    public static uint DirectorId(this Event @event)
-    {
-        return ParseHexId(@event["DirectorId"], out var id) ? id : 0;
-    }
-
-    public static uint StatusId(this Event @event)
-    {
-        return JsonConvert.DeserializeObject<uint>(@event["StatusId"]);
-    }
-
-    public static uint StackCount(this Event @event)
-    {
-        return JsonConvert.DeserializeObject<uint>(@event["StackCount"]);
-    }
-
-    public static uint Param(this Event @event)
-    {
-        return JsonConvert.DeserializeObject<uint>(@event["Param"]);
-    }
 }
-
-public static class Extensions
-{
-    public static void TTS(this ScriptAccessory accessory, string text, bool isTTS, bool isDRTTS)
-    {
-        if (isDRTTS)
-        {
-            accessory.Method.SendChat($"/pdr tts {text}");
-        }
-        else if (isTTS)
-        {
-            accessory.Method.TTS(text);
-        }
-    }
-}
-
-#region Math Functions
-
-public static class MathTools
-{
-    public static float DegToRad(this float deg) => (deg + 360f) % 360f / 180f * float.Pi;
-    public static float RadToDeg(this float rad) => (rad + 2 * float.Pi) % (2 * float.Pi) / float.Pi * 180f;
-
-    public static float GetRadian(this Vector3 point, Vector3 center)
-        => MathF.Atan2(point.X - center.X, point.Z - center.Z);
-
-    public static float GetLength(this Vector3 point, Vector3 center)
-        => new Vector2(point.X - center.X, point.Z - center.Z).Length();
-
-    public static Vector3 RotateAndExtend(this Vector3 point, Vector3 center, float radian, float length)
-    {
-        var baseRad = point.GetRadian(center);
-        var baseLength = point.GetLength(center);
-        var rotRad = baseRad + radian;
-        return new Vector3(
-            center.X + MathF.Sin(rotRad) * (length + baseLength),
-            center.Y,
-            center.Z + MathF.Cos(rotRad) * (length + baseLength)
-        );
-    }
-
-    public static int RadianToRegion(this float radian, int regionNum, int baseRegionIdx = 0, bool isDiagDiv = false, bool isCw = false)
-    {
-        var sepRad = float.Pi * 2 / regionNum;
-        var inputAngle = radian * (isCw ? -1 : 1) + (isDiagDiv ? sepRad / 2 : 0);
-        var rad = (inputAngle + 4 * float.Pi) % (2 * float.Pi);
-        return ((int)Math.Floor(rad / sepRad) + baseRegionIdx + regionNum) % regionNum;
-    }
-
-    public static Vector3 FoldPointHorizon(this Vector3 point, float centerX)
-        => point with { X = 2 * centerX - point.X };
-
-    public static Vector3 FoldPointVertical(this Vector3 point, float centerZ)
-        => point with { Z = 2 * centerZ - point.Z };
-
-    public static Vector3 PointCenterSymmetry(this Vector3 point, Vector3 center)
-        => point.RotateAndExtend(center, float.Pi, 0);
-
-    public static int GetDecimalDigit(this int val, int x)
-    {
-        var valStr = val.ToString();
-        var length = valStr.Length;
-        if (x < 1 || x > length) return -1;
-        var digitChar = valStr[length - x];
-        return int.Parse(digitChar.ToString());
-    }
-}
-
-#endregion
