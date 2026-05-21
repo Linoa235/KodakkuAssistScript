@@ -14,7 +14,7 @@ using KodakkuAssist.Module.Draw;
 
 namespace KodakkuScript.Script._05_Shadowbringers;
 
-[ScriptType(guid: "106f04de-0a44-4741-bc84-081bd539145d",name:"E11n", territorys: [944], version: "0.0.0.1", 
+[ScriptType(guid:"c00d50b8-a549-470a-96d8-9891f2c6a133",name:"E11n", territorys: [944], version: "0.0.0.1", 
     author: "Linoa235")]
 public class E11n
 {
@@ -39,9 +39,8 @@ public class E11n
         accessory.Method.RemoveDraw(".*");
     }
     
-    // Draw front and back separately
-    [ScriptMethod(name:"Burning Strike: Line", eventType:EventTypeEnum.StartCasting, eventCondition:["ActionId:regex:^(2206[024])$"])]
-    public void BurningStrike_Line(Event @event, ScriptAccessory accessory)
+    [ScriptMethod(name:"Burning Strike: Line",eventType:EventTypeEnum.StartCasting, eventCondition:["ActionId:regex:^(2206[024])$"])]
+    public void BurningStrikeLine(Event @event, ScriptAccessory accessory)
     {
         if (!ParseObjectId(@event["SourceId"], out var sid)) return;
         var dp1 = accessory.Data.GetDefaultDrawProperties();
@@ -63,19 +62,15 @@ public class E11n
         accessory.Method.SendDraw(DrawModeEnum.Default,DrawTypeEnum.Rect,dp2);
     }
     
-    // 22061
-    // 22084 Clone Knockback
-    [ScriptMethod(name:"Fire Explosion: Knockback", eventType:EventTypeEnum.StartCasting, eventCondition:["ActionId:regex:^(220(61|84))$"])]
-    public void FireExplosion_Knockback(Event @event, ScriptAccessory accessory)
+    [ScriptMethod(name:"Fire Explosion: Knockback",eventType:EventTypeEnum.StartCasting, eventCondition:["ActionId:regex:^(220(61|84))$"])]
+    public void FireExplosionKnockback(Event @event, ScriptAccessory accessory)
     {
         Thread.Sleep(6000);
-        accessory.Method.TextInfo($"Move through after knockback!", 5000);
+        accessory.Method.TextInfo($"Go through after hit then knockback!", 5000);
     }
     
-    // 22063 Spread Line
-    // 22086 Clone Spread Line
-    [ScriptMethod(name:"Lightning Explosion: Spread Line", eventType:EventTypeEnum.StartCasting, eventCondition:["ActionId:regex:^(220(63|86))$"])]
-    public void LightningExplosion_SpreadLine(Event @event, ScriptAccessory accessory)
+    [ScriptMethod(name:"Lightning Explosion: Spread Line",eventType:EventTypeEnum.StartCasting, eventCondition:["ActionId:regex:^(220(63|86))$"])]
+    public void LightningExplosionSpreadLine(Event @event, ScriptAccessory accessory)
     {
         if (!ParseObjectId(@event["SourceId"], out var sid)) return;
         var dp1 = accessory.Data.GetDefaultDrawProperties();
@@ -97,13 +92,12 @@ public class E11n
         accessory.Method.SendDraw(DrawModeEnum.Default,DrawTypeEnum.Rect,dp2);
     }
 
-    // 22075 Small Light Ring
-    [ScriptMethod(name: "Light Blaze: Small Light Ring", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:22075"])]
-    public void LightBlaze_SmallRing(Event @event, ScriptAccessory accessory)
+    [ScriptMethod(name: "Light Flame: Small Wheel", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:22075"])]
+    public void LightFlameSmallWheel(Event @event, ScriptAccessory accessory)
     {
         if (!ParseObjectId(@event["SourceId"], out var sid)) return;
         var dp = accessory.Data.GetDefaultDrawProperties();
-        dp.Name = $"Light Blaze: Small Light Ring";
+        dp.Name = $"Light Flame: Small Wheel";
         dp.Color = accessory.Data.DefaultDangerColor.WithW(3);
         dp.Owner = sid;
         dp.Scale = new(5);
@@ -111,13 +105,12 @@ public class E11n
         accessory.Method.SendDraw(DrawModeEnum.Default,DrawTypeEnum.Circle,dp);
     }
 
-    // 22076 Large Light Ring
-    [ScriptMethod(name: "Light Blaze: Large Light Ring", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:22076"])]
-    public void LightBlaze_LargeRing(Event @event, ScriptAccessory accessory)
+    [ScriptMethod(name: "Light Flame: Large Wheel", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:22076"])]
+    public void LightFlameLargeWheel(Event @event, ScriptAccessory accessory)
     {
         if (!ParseObjectId(@event["SourceId"], out var sid)) return;
         var dp = accessory.Data.GetDefaultDrawProperties();
-        dp.Name = $"Light Blaze: Large Light Ring";
+        dp.Name = $"Light Flame: Large Wheel";
         dp.Color = accessory.Data.DefaultDangerColor.WithW(3);
         dp.Owner = sid;
         dp.Scale = new(10);
@@ -125,16 +118,12 @@ public class E11n
         accessory.Method.SendDraw(DrawModeEnum.Default,DrawTypeEnum.Circle,dp);
     }
     
-    // 22079
-    
-    // 22083
-    // 22085 Clone Burning Strike
-    [ScriptMethod(name: "Clone Burning Strike: Line", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:regex:^(2208[35])$"])]
-    public void CloneBurningStrike(Event @event, ScriptAccessory accessory)
+    [ScriptMethod(name: "Copy Burning Strike: Line", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:regex:^(2208[35])$"])]
+    public void CopyBurningStrike(Event @event, ScriptAccessory accessory)
     {
         if (!ParseObjectId(@event["SourceId"], out var sid)) return;
         var dp = accessory.Data.GetDefaultDrawProperties();
-        dp.Name = $"Clone Burning Strike: Line";
+        dp.Name = $"Copy Burning Strike: Line";
         dp.Color = accessory.Data.DefaultDangerColor;
         dp.Owner = sid;
         dp.DestoryAt = 8000;
@@ -143,14 +132,12 @@ public class E11n
         accessory.Method.SendDraw(DrawModeEnum.Default,DrawTypeEnum.Rect,dp);
     }
     
-    // StatusID: 1678 Get clone position
-    // 22097 Phantom of the Doom Warrior: Blast Zone
-    [ScriptMethod(name:"Phantom: Blast Zone", eventType:EventTypeEnum.StatusAdd, eventCondition:["StatusID:1678"])]
-    public void Phantom_BlastZone(Event @event, ScriptAccessory accessory)
+    [ScriptMethod(name:"Phantom: Burst Field",eventType:EventTypeEnum.StatusAdd,eventCondition:["StatusID:1678"])]
+    public void PhantomBurstField(Event @event, ScriptAccessory accessory)
     {
         if (!ParseObjectId(@event["TargetId"], out var tid)) return;
         var dp = accessory.Data.GetDefaultDrawProperties();
-        dp.Name = $"Phantom_BlastZone";
+        dp.Name = $"Phantom_BurstField";
         dp.Color = accessory.Data.DefaultDangerColor;
         dp.Owner = tid;
         dp.DestoryAt = 14000;
@@ -158,5 +145,4 @@ public class E11n
         dp.Scale = new(16, 80);
         accessory.Method.SendDraw(DrawModeEnum.Default, DrawTypeEnum.Rect, dp);
     }
-
 }
