@@ -23,7 +23,7 @@ using FFXIVClientStructs.FFXIV.Client.Game.Character;
 
 namespace Veever.A_Realm_Reborn.Haukke_Manor;
 
-[ScriptType(name: "LV.28 Haukke Manor", territorys: [1040], guid: "5ea6f660-6c25-4d2c-8abd-62dd4b3a9fc6",
+[ScriptType(name: "LV.28 Haukke Manor", territorys: [1040], guid: "5585e8bf-fd54-433e-a2fe-a0911b148fe9",
     version: "0.0.0.4", author: "Linoa235", note: noteStr)]
 
 public class Haukke_Manor
@@ -31,37 +31,37 @@ public class Haukke_Manor
     const string noteStr =
     """
     v0.0.0.4:
-    1. Green markers indicate keys to pick up, red means do not pick up
-    2. If you need a draw for a mechanic or notice any issues, @ me on DC or DM me.
-    3. If you want Namazu markers, ensure ACT is running and Namazu plugin is installed
+    1. Green markers indicate keys to pick up, red indicates do not pick up
+    2. If you need a draw for a mechanic or notice any issues, @ me on DC or DM me
+    3. If you want Namazu markers, make sure ACT is open and Namazu plugin is installed
     Duckmen.
     """;
 
-    [UserSetting("Banner text notification toggle")]
+    [UserSetting("Text Banner Toggle")]
     public bool isText { get; set; } = true;
 
-    [UserSetting("TTS toggle")]
+    [UserSetting("TTS Toggle")]
     public bool isTTS { get; set; } = true;
 
-    [UserSetting("Guide arrow toggle")]
+    [UserSetting("Waypoint Toggle")]
     public bool isLead { get; set; } = true;
 
-    [UserSetting("Target marker toggle")]
+    [UserSetting("Target Marker Toggle")]
     public bool isMark { get; set; } = true;
 
-    [UserSetting("Local target marker toggle (ON = local only, OFF = party shared)")]
+    [UserSetting("Local Target Marker Toggle (ON = local only, OFF = party)")]
     public bool LocalMark { get; set; } = true;
 
-    [UserSetting("Waymark guide toggle")]
+    [UserSetting("Waymark Guide Toggle")]
     public bool PostNamazuPrint { get; set; } = true;
 
-    [UserSetting("PostNamazuPort setting")]
+    [UserSetting("PostNamazu Port Setting")]
     public int PostNamazuPort { get; set; } = 2019;
 
-    [UserSetting("Waymarks: local toggle (off = party shared, OOC only)")]
+    [UserSetting("Waymarks Local Toggle (if non-local selected, script only places markers OOC)")]
     public bool PostNamazuisLocal { get; set; } = true;
 
-    [UserSetting("Debug toggle, disable unless developing")]
+    [UserSetting("Debug toggle, please turn off for non-development use")]
     public bool isDebug { get; set; } = false;
 
     public void Init(ScriptAccessory accessory)
@@ -76,11 +76,6 @@ public class Haukke_Manor
         accessory.Method.SendChat($"/e [DEBUG] {str}");
     }
 
-    [ScriptMethod(name: "debug", eventType: EventTypeEnum.Chat, eventCondition: ["Message:debug"])]
-    public void debug(Event @event, ScriptAccessory accessory)
-    {
-    }
-
     #region Waymark
     private static readonly Vector3 posA = new Vector3(48.76f, 0.00f, 36.00f);
     private static readonly Vector3 posB = new Vector3(16.94f, 0.00f, 70.82f);
@@ -89,10 +84,9 @@ public class Haukke_Manor
     public void PostWaymark(ScriptAccessory accessory)
     {
         var waymark = new NamazuHelper.Waymark(accessory);
-        waymark.AddWaymarkType("A", posA); 
+        waymark.AddWaymarkType("A", posA);
         waymark.AddWaymarkType("B", posB);
         waymark.AddWaymarkType("C", posC);
-
         waymark.SetJsonPayload(LocalMark, PostNamazuisLocal);
         waymark.PostWaymarkCommand(PostNamazuPort);
     }
@@ -110,7 +104,6 @@ public class Haukke_Manor
         waymark1.AddWaymarkType("B", newposB);
         waymark1.AddWaymarkType("C", newposC);
         waymark1.AddWaymarkType("D", newposD);
-
         waymark1.SetJsonPayload(LocalMark, PostNamazuisLocal);
         waymark1.PostWaymarkCommand(PostNamazuPort);
     }
@@ -123,12 +116,11 @@ public class Haukke_Manor
         var waymark1 = new NamazuHelper.Waymark(accessory);
         waymark1.AddWaymarkType("A", newposAA);
         waymark1.AddWaymarkType("B", newposBB);
-
         waymark1.SetJsonPayload(LocalMark, PostNamazuisLocal);
         waymark1.PostWaymarkCommand(PostNamazuPort);
     }
 
-    [ScriptMethod(name: "Key marker", eventType: EventTypeEnum.ObjectChanged, eventCondition: [])]
+    [ScriptMethod(name: "Key Marker", eventType: EventTypeEnum.ObjectChanged, eventCondition: [])]
     public async void keymark(Event @event, ScriptAccessory accessory)
     {
         await Task.Delay(1000);
@@ -137,56 +129,60 @@ public class Haukke_Manor
         if (@event.DataId() == keyId0)
         {
             DebugMsg("key0", accessory);
-            DrawHelper.DrawCircleObject(accessory, @event.SourceId(), new Vector2(0.7f), 999999999, $"Marker-{@event.DataId()}", accessory.Data.DefaultSafeColor, scaleByTime: false);
+            DrawHelper.DrawCircleObject(accessory, @event.SourceId(), new Vector2(0.7f), 999999999, $"Mark-{@event.DataId()}", accessory.Data.DefaultSafeColor, scaleByTime: false);
         }
         else if (@event.DataId() == keyId0 + 1)
         {
             DebugMsg("key1", accessory);
-            DrawHelper.DrawCircleObject(accessory, @event.SourceId(), new Vector2(0.7f), 999999999, $"Marker-{@event.DataId()}", accessory.Data.DefaultSafeColor, scaleByTime: false);
+            DrawHelper.DrawCircleObject(accessory, @event.SourceId(), new Vector2(0.7f), 999999999, $"Mark-{@event.DataId()}", accessory.Data.DefaultSafeColor, scaleByTime: false);
         }
         else if (@event.DataId() == keyId0 + 2)
         {
             DebugMsg("key2", accessory);
-            DrawHelper.DrawCircleObject(accessory, @event.SourceId(), new Vector2(0.7f), 999999999, $"Marker-{@event.DataId()}", accessory.Data.DefaultDangerColor, scaleByTime: false);
-        } else if (@event.DataId() == 2000324)
+            DrawHelper.DrawCircleObject(accessory, @event.SourceId(), new Vector2(0.7f), 999999999, $"Mark-{@event.DataId()}", accessory.Data.DefaultDangerColor, scaleByTime: false);
+        }
+        else if (@event.DataId() == 2000324)
         {
             DebugMsg("key2000324", accessory);
-            DrawHelper.DrawCircleObject(accessory, @event.SourceId(), new Vector2(0.7f), 999999999, $"Marker-{@event.DataId()}", accessory.Data.DefaultSafeColor, scaleByTime: false);
+            DrawHelper.DrawCircleObject(accessory, @event.SourceId(), new Vector2(0.7f), 999999999, $"Mark-{@event.DataId()}", accessory.Data.DefaultSafeColor, scaleByTime: false);
             Vector3 pos = new Vector3(-46.49f, 0.00f, 0.05f);
-            DrawHelper.DrawDisplacement(accessory, pos, new Vector2(1.5f), 999999999, $"Displacement-{@event.DataId()}", accessory.Data.DefaultSafeColor);
+            DrawHelper.DrawDisplacement(accessory, pos, new Vector2(1.5f), 999999999, $"displacement-{@event.DataId()}", accessory.Data.DefaultSafeColor);
             PostWaymark1(accessory);
             DrawHelper.DrawArrow(accessory, newposB, targetC, 1f, 10f, 999999999, "arrow", accessory.Data.DefaultSafeColor);
-            
-        } else if (@event.DataId() == 2000305)
+        }
+        else if (@event.DataId() == 2000305)
         {
             DebugMsg("key2000305", accessory);
-            DrawHelper.DrawCircleObject(accessory, @event.SourceId(), new Vector2(0.7f), 999999999, $"Marker-{@event.DataId()}", accessory.Data.DefaultDangerColor, scaleByTime: false);
-        } else if (@event.DataId() == 2000325)
+            DrawHelper.DrawCircleObject(accessory, @event.SourceId(), new Vector2(0.7f), 999999999, $"Mark-{@event.DataId()}", accessory.Data.DefaultDangerColor, scaleByTime: false);
+        }
+        else if (@event.DataId() == 2000325)
         {
             DebugMsg("key2000325", accessory);
-            DrawHelper.DrawCircleObject(accessory, @event.SourceId(), new Vector2(0.7f), 999999999, $"Marker-{@event.DataId()}", accessory.Data.DefaultSafeColor, scaleByTime: false);
-        } else if (@event.DataId() == 2001235)
+            DrawHelper.DrawCircleObject(accessory, @event.SourceId(), new Vector2(0.7f), 999999999, $"Mark-{@event.DataId()}", accessory.Data.DefaultSafeColor, scaleByTime: false);
+        }
+        else if (@event.DataId() == 2001235)
         {
             DebugMsg("key2001235", accessory);
-            DrawHelper.DrawCircleObject(accessory, @event.SourceId(), new Vector2(0.7f), 999999999, $"Marker-{@event.DataId()}", accessory.Data.DefaultSafeColor, scaleByTime: false);
-        } else if (@event.DataId() == 2000327)
+            DrawHelper.DrawCircleObject(accessory, @event.SourceId(), new Vector2(0.7f), 999999999, $"Mark-{@event.DataId()}", accessory.Data.DefaultSafeColor, scaleByTime: false);
+        }
+        else if (@event.DataId() == 2000327)
         {
             DebugMsg("key2000327", accessory);
-            DrawHelper.DrawCircleObject(accessory, @event.SourceId(), new Vector2(0.7f), 999999999, $"Marker-{@event.DataId()}", accessory.Data.DefaultDangerColor, scaleByTime: false);
+            DrawHelper.DrawCircleObject(accessory, @event.SourceId(), new Vector2(0.7f), 999999999, $"Mark-{@event.DataId()}", accessory.Data.DefaultDangerColor, scaleByTime: false);
         }
 
         if (@event.Operate() == "Remove")
         {
-            accessory.Method.RemoveDraw($"Marker-{@event.DataId()}");
+            accessory.Method.RemoveDraw($"Mark-{@event.DataId()}");
             if (@event.DataId() == 2000324)
             {
                 await Task.Delay(5000);
-                accessory.Method.RemoveDraw($"Displacement-{@event.DataId()}");
+                accessory.Method.RemoveDraw($"displacement-{@event.DataId()}");
             }
         }
     }
 
-    [ScriptMethod(name: "Initial key marker", eventType: EventTypeEnum.ObjectChanged, eventCondition: [])]
+    [ScriptMethod(name: "Initial Key Marker", eventType: EventTypeEnum.ObjectChanged, eventCondition: [])]
     public async void keymarkInit(Event @event, ScriptAccessory accessory)
     {
         await Task.Delay(6000);
@@ -195,27 +191,27 @@ public class Haukke_Manor
         if (@event.DataId() == keyId0)
         {
             DebugMsg("key0", accessory);
-            DrawHelper.DrawCircleObject(accessory, @event.SourceId(), new Vector2(0.7f), 999999999, $"Marker-{@event.DataId()}", accessory.Data.DefaultSafeColor, scaleByTime: false);
+            DrawHelper.DrawCircleObject(accessory, @event.SourceId(), new Vector2(0.7f), 999999999, $"Mark-{@event.DataId()}", accessory.Data.DefaultSafeColor, scaleByTime: false);
         }
         else if (@event.DataId() == keyId0 + 1)
         {
             DebugMsg("key1", accessory);
-            DrawHelper.DrawCircleObject(accessory, @event.SourceId(), new Vector2(0.7f), 999999999, $"Marker-{@event.DataId()}", accessory.Data.DefaultSafeColor, scaleByTime: false);
+            DrawHelper.DrawCircleObject(accessory, @event.SourceId(), new Vector2(0.7f), 999999999, $"Mark-{@event.DataId()}", accessory.Data.DefaultSafeColor, scaleByTime: false);
         }
         else if (@event.DataId() == keyId0 + 2)
         {
             DebugMsg("key2", accessory);
-            DrawHelper.DrawCircleObject(accessory, @event.SourceId(), new Vector2(0.7f), 999999999, $"Marker-{@event.DataId()}", accessory.Data.DefaultDangerColor, scaleByTime: false);
-        } 
+            DrawHelper.DrawCircleObject(accessory, @event.SourceId(), new Vector2(0.7f), 999999999, $"Mark-{@event.DataId()}", accessory.Data.DefaultDangerColor, scaleByTime: false);
+        }
 
         if (@event.Operate() == "Remove")
         {
-            accessory.Method.RemoveDraw($"Marker-{@event.DataId()}");
+            accessory.Method.RemoveDraw($"Mark-{@event.DataId()}");
         }
     }
     #endregion
 
-    #region Mobs
+    #region Trash Mobs
     [ScriptMethod(name: "Dark Mist", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:29776"])]
     public void DarkMist(Event @event, ScriptAccessory accessory)
     {
@@ -225,7 +221,7 @@ public class Haukke_Manor
         DrawHelper.DrawCircleObject(accessory, @event.SourceId(), new Vector2(8f), 3700, $"DarkMist-{@event.SourceId()}", accessory.Data.DefaultDangerColor);
     }
 
-    [ScriptMethod(name: "Dark Mist Clear", eventType: EventTypeEnum.CancelAction, eventCondition: ["ActionId:29776"], userControl: false)]
+    [ScriptMethod(name: "DarkMist Clear", eventType: EventTypeEnum.CancelAction, eventCondition: ["ActionId:29776"], userControl: false)]
     public void DarkMistClear(Event @event, ScriptAccessory accessory)
     {
         accessory.Method.RemoveDraw($"DarkMist-{@event.SourceId()}");
@@ -234,10 +230,10 @@ public class Haukke_Manor
     [ScriptMethod(name: "Dread Gaze", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:513"])]
     public void DreadGaze(Event @event, ScriptAccessory accessory)
     {
-        DrawHelper.DrawFanOwner(accessory, @event.SourceId(), 0, new Vector2(7.35f), 90, 2700, $"DarkMist-{@event.SourceId()}", accessory.Data.DefaultDangerColor);
+        DrawHelper.DrawFanOwner(accessory, @event.SourceId(), 0, new Vector2(7.35f), 90, 2700, $"DreadGaze-{@event.SourceId()}", accessory.Data.DefaultDangerColor);
     }
 
-    [ScriptMethod(name: "Dread Gaze Clear", eventType: EventTypeEnum.CancelAction, eventCondition: ["ActionId:513"], userControl: false)]
+    [ScriptMethod(name: "DreadGaze Clear", eventType: EventTypeEnum.CancelAction, eventCondition: ["ActionId:513"], userControl: false)]
     public void DreadGazeClear(Event @event, ScriptAccessory accessory)
     {
         accessory.Method.RemoveDraw($"DreadGaze-{@event.SourceId()}");
@@ -253,8 +249,8 @@ public class Haukke_Manor
         if (isMark) accessory.Method.Mark(@event.SourceId(), KodakkuAssist.Module.GameOperate.MarkType.Attack1, LocalMark);
         DrawHelper.DrawCircle(accessory, @event.EffectPosition(), new Vector2(5f), 2700, $"VoidFireII-{@event.SourceId()}", accessory.Data.DefaultDangerColor);
     }
-    
-    [ScriptMethod(name: "Void Fire II Clear", eventType: EventTypeEnum.CancelAction, eventCondition: ["ActionId:855"], userControl: false)]
+
+    [ScriptMethod(name: "VoidFireII Clear", eventType: EventTypeEnum.CancelAction, eventCondition: ["ActionId:855"], userControl: false)]
     public void VoidFireIIClear(Event @event, ScriptAccessory accessory)
     {
         accessory.Method.RemoveDraw($"VoidFireII-{@event.SourceId()}");
@@ -269,7 +265,7 @@ public class Haukke_Manor
         DrawHelper.DrawCircle(accessory, @event.EffectPosition(), new Vector2(9.4f), 3700, $"DarkMist1-{@event.SourceId()}", accessory.Data.DefaultDangerColor);
     }
 
-    [ScriptMethod(name: "Dark Mist1 Clear", eventType: EventTypeEnum.CancelAction, eventCondition: ["ActionId:705"], userControl: false)]
+    [ScriptMethod(name: "DarkMist1 Clear", eventType: EventTypeEnum.CancelAction, eventCondition: ["ActionId:705"], userControl: false)]
     public void DarkMist1Clear(Event @event, ScriptAccessory accessory)
     {
         accessory.Method.RemoveDraw($"DarkMist1-{@event.SourceId()}");
@@ -303,27 +299,27 @@ public class Haukke_Manor
     public void PetrifyingEye(Event @event, ScriptAccessory accessory)
     {
         accessory.Method.RemoveDraw(".*");
-        if (isText) accessory.Method.TextInfo("Look away from the eye", duration: 4700, true);
-        if (isTTS) accessory.Method.EdgeTTS("Look away from the eye");
+        if (isText) accessory.Method.TextInfo("Turn away from the eye", duration: 4700, true);
+        if (isTTS) accessory.Method.EdgeTTS("Turn away from the eye");
     }
 
-    [ScriptMethod(name: "Maid Marker", eventType: EventTypeEnum.Targetable, eventCondition: ["DataId:14506", "Targetable:True"])]
+    [ScriptMethod(name: "Maid Target Mark", eventType: EventTypeEnum.Targetable, eventCondition: ["DataId:14506", "Targetable:True"])]
     public void TargetMark(Event @event, ScriptAccessory accessory)
     {
-        if (isText) accessory.Method.TextInfo("Prioritize attacking the attending maid", duration: 4700, true);
-        if (isTTS) accessory.Method.EdgeTTS("Prioritize attacking the attending maid");
+        if (isText) accessory.Method.TextInfo("Prioritize attacking the Attendant", duration: 4700, true);
+        if (isTTS) accessory.Method.EdgeTTS("Prioritize attacking the Attendant");
         if (isMark) accessory.Method.Mark(@event.SourceId(), KodakkuAssist.Module.GameOperate.MarkType.Attack1, LocalMark);
     }
 
     [ScriptMethod(name: "Boss3 Dark Mist", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:28646"])]
     public void Boss3DarkMist(Event @event, ScriptAccessory accessory)
     {
-        if (isText) accessory.Method.TextInfo("Move away or use Leg Sweep to interrupt", duration: 3700, true);
-        if (isTTS) accessory.Method.EdgeTTS("Move away or use Leg Sweep to interrupt");
+        if (isText) accessory.Method.TextInfo("Move away or Leg Sweep to interrupt", duration: 3700, true);
+        if (isTTS) accessory.Method.EdgeTTS("Move away or Leg Sweep to interrupt");
         DrawHelper.DrawCircle(accessory, @event.EffectPosition(), new Vector2(9f), 3700, $"DarkMist-{@event.SourceId()}", accessory.Data.DefaultDangerColor);
     }
 
-    [ScriptMethod(name: "Boss3 Dark Mist Clear", eventType: EventTypeEnum.CancelAction, eventCondition: ["ActionId:28646"], userControl: false)]
+    [ScriptMethod(name: "Boss3DarkMist Clear", eventType: EventTypeEnum.CancelAction, eventCondition: ["ActionId:28646"], userControl: false)]
     public void Boss3DarkMistClear(Event @event, ScriptAccessory accessory)
     {
         accessory.Method.RemoveDraw($"DarkMist-{@event.SourceId()}");
@@ -337,6 +333,7 @@ public class Haukke_Manor
     #endregion
 
     #region Helpers
+
     public unsafe static float GetStatusRemainingTime(ScriptAccessory sa, IBattleChara? battleChara, uint statusId)
     {
         if (battleChara == null || !battleChara.IsValid()) return 0;
