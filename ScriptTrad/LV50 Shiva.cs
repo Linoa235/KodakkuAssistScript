@@ -15,6 +15,7 @@ using FFXIVClientStructs.FFXIV.Client.Game.Object;
 using FFXIVClientStructs.FFXIV.Client.Game.Character;
 using System.Runtime.CompilerServices;
 using System.Runtime.Intrinsics;
+using System.Collections.Generic;
 using FFXIVClientStructs.FFXIV.Client.Game;
 using FFXIVClientStructs.FFXIV.Client.Game.Control;
 using FFXIVClientStructs.FFXIV.Client.Game.UI;
@@ -23,7 +24,7 @@ using FFXIVClientStructs.FFXIV.Component.GUI;
 
 namespace Shiva;
 
-[ScriptType(guid: "87f8cd0f-3730-4bf7-8f92-94b0af17c820", name: "Shiva", territorys: [377],
+[ScriptType(guid: "6c9f54f9-7b39-4558-b350-664ca4fb128b", name: "The Howling Eye (Hard)", territorys: [377],
     version: "0.0.0.3", author: "Linoa235", note: noteStr)]
 
 public class Shiva
@@ -31,22 +32,22 @@ public class Shiva
     const string noteStr =
         """
         v0.0.0.3:
-        LV50 Shiva Initial Drawing
+        LV50 The Howling Eye (Hard) first version drawing
         """;
     
-    [UserSetting("TTS Toggle")]
+    [UserSetting("TTS switch")]
     public bool isTTS { get; set; } = false;
     
-    [UserSetting("EdgeTTS Toggle (Choose one TTS option)")]
+    [UserSetting("EdgeTTS switch (choose one of the two TTS)")]
     public bool isEdgeTTS { get; set; } = true;
     
-    [UserSetting("Popup Text Toggle")]
+    [UserSetting("Popup text notification switch")]
     public bool isText { get; set; } = true;
 
     
-    uint FrostStaff = 0;
-    uint FrostBlade = 0;
-    uint Melt = 0;
+    uint FrostStaff = 0; // Frost Staff
+    uint FrostBlade = 0; // Frost Blade
+    uint Melt = 0; // Weapon Melt
     
     public void Init(ScriptAccessory accessory) {
         FrostStaff = 0; 
@@ -54,19 +55,19 @@ public class Shiva
         Melt = 0;
     }
     
-    [ScriptMethod(name: "Frost Staff Transformation Hint", eventType: EventTypeEnum.ActionEffect, eventCondition: ["ActionId:2453"])]
+    [ScriptMethod(name: "Frost Staff transformation notification", eventType: EventTypeEnum.ActionEffect, eventCondition: ["ActionId:2453"])]
     public void FrostStaff(Event @event, ScriptAccessory accessory)
     {
         FrostStaff = 1; 
         FrostBlade = 0;
         Melt = 0;
         
-        if (isText) accessory.Method.TextInfo("Spread", duration: 2000, false);
-        if (isTTS) accessory.Method.TTS("Spread");
-        if (isEdgeTTS) accessory.Method.EdgeTTS("Spread");
+        if (isText)accessory.Method.TextInfo("Spread", duration: 2000, false);
+        if (isTTS)accessory.Method.TTS("Spread");
+        if (isEdgeTTS)accessory.Method.EdgeTTS("Spread");
     }
     
-    [ScriptMethod(name: "Hail (Spread)", eventType: EventTypeEnum.TargetIcon, eventCondition: ["Id:001D"])]
+    [ScriptMethod(name: "Hail (spread)", eventType: EventTypeEnum.TargetIcon, eventCondition: ["Id:001D"])]
     public void Hail(Event @event, ScriptAccessory accessory)
     {
         var dp = accessory.Data.GetDefaultDrawProperties();
@@ -78,7 +79,7 @@ public class Shiva
         accessory.Method.SendDraw(DrawModeEnum.Default, DrawTypeEnum.Circle, dp);
     }
 
-    [ScriptMethod(name: "Icicle Impact (Circle)", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:2462"])]
+    [ScriptMethod(name: "Icicle Impact (circle)", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:2462"])]
     public void IcicleImpact(Event @event, ScriptAccessory accessory)
     {
         var dp = accessory.Data.GetDefaultDrawProperties();
@@ -92,7 +93,7 @@ public class Shiva
         accessory.Method.SendDraw(DrawModeEnum.Default, DrawTypeEnum.Circle, dp);
     }
     
-    [ScriptMethod(name: "Ice Brand (Cleave Tankbuster)", eventType: EventTypeEnum.ActionEffect, eventCondition: ["ActionId:2451"])]
+    [ScriptMethod(name: "Ice Brand (cleave tankbuster)", eventType: EventTypeEnum.ActionEffect, eventCondition: ["ActionId:2451"])]
     public void IceBrand(Event @event, ScriptAccessory accessory)
     {
         FrostBlade = 1;
@@ -102,8 +103,8 @@ public class Shiva
         var boss = accessory.Data.Objects.GetByDataId(3100).FirstOrDefault();
         if (boss == null) return;
         
-        if (isTTS) accessory.Method.TTS("Cleave tankbuster");
-        if (isEdgeTTS) accessory.Method.EdgeTTS("Cleave tankbuster");
+        if (isTTS)accessory.Method.TTS("Cleave tankbuster");
+        if (isEdgeTTS)accessory.Method.EdgeTTS("Cleave tankbuster");
         
         var dp = accessory.Data.GetDefaultDrawProperties();
         dp.Name = "Ice Brand";
@@ -118,14 +119,38 @@ public class Shiva
         accessory.Method.SendDraw(DrawModeEnum.Default, DrawTypeEnum.Fan, dp); 
     }
     
-    [ScriptMethod(name: "Anti-Knockback Cleanup", eventType: EventTypeEnum.ActionEffect, eventCondition: ["ActionId:regex:^(7548|7559)$"], userControl: false)]
-    public void AntiKnockbackCleanup(Event @event, ScriptAccessory accessory)
+    /*
+    [ScriptMethod(name: "Falling Strike (small knockback)", eventType: EventTypeEnum.ActionEffect, eventCondition: ["ActionId:2454"])]
+    public void FallingStrike(Event @event, ScriptAccessory accessory)
     {
-        if (@event.TargetId() != accessory.Data.Me) return; 
-        accessory.Method.RemoveDraw("Heavenly Strike");
+        // Note: Occurs a few auto-attacks after "Glacier Bash (cleave)", and timing isn't fixed in P3 (mostly skipped)
+        if (FrostBlade == 1)
+        {
+            if (isText)accessory.Method.TextInfo("Small knockback", duration: 5600, false);
+            if (isTTS)accessory.Method.TTS("Small knockback");
+            if (isEdgeTTS)accessory.Method.EdgeTTS("Small knockback");
+            
+            var dp = accessory.Data.GetDefaultDrawProperties();
+            dp.Name = "Falling Strike";
+            dp.Scale = new(1f, 5);
+            dp.Color = accessory.Data.DefaultDangerColor.WithW(2f);
+            dp.Owner = accessory.Data.Me;
+            dp.TargetObject = @event.SourceId();
+            dp.Rotation = float.Pi;
+            dp.DestoryAt = 6300;
+            accessory.Method.SendDraw(DrawModeEnum.Default, DrawTypeEnum.Displacement, dp);
+        }
+    }
+    */
+    
+    [ScriptMethod(name: "Anti-knockback removal", eventType: EventTypeEnum.ActionEffect, eventCondition: ["ActionId:regex:^(7548|7559)$"],userControl: false)]
+    public void AntiKnockbackRemoval(Event @event, ScriptAccessory accessory)
+    {
+        if ( @event.TargetId() != accessory.Data.Me) return; 
+        accessory.Method.RemoveDraw("Falling Strike");
     }
     
-    [ScriptMethod(name: "Glacier Bash (Cleave)", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:2465"])]
+    [ScriptMethod(name: "Glacier Bash (cleave)", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:2465"])]
     public void GlacierBash(Event @event, ScriptAccessory accessory)
     {
         var dp = accessory.Data.GetDefaultDrawProperties();
@@ -138,20 +163,20 @@ public class Shiva
         accessory.Method.SendDraw(DrawModeEnum.Default, DrawTypeEnum.Fan, dp); 
     }
     
-    [ScriptMethod(name: "Diamond Dust (Freeze)", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:2466"])]
+    [ScriptMethod(name: "Diamond Dust (freeze)", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:2466"])]
     public void DiamondDust(Event @event, ScriptAccessory accessory)
     {
-        if (isText) accessory.Method.TextInfo("AOE", duration: 8700, false);
-        if (isTTS) accessory.Method.TTS("AOE");
-        if (isEdgeTTS) accessory.Method.EdgeTTS("AOE");
+        if (isText)accessory.Method.TextInfo("AOE", duration: 8700, false);
+        if (isTTS)accessory.Method.TTS("AOE");
+        if (isEdgeTTS)accessory.Method.EdgeTTS("AOE");
     }
     
-    [ScriptMethod(name: "Permafrost Freeze Hint", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:2457"])]
-    public void Permafrost(Event @event, ScriptAccessory accessory)
+    [ScriptMethod(name: "Permafrost freeze notification", eventType: EventTypeEnum.StartCasting, eventCondition: ["ActionId:2457"])]
+    public void EnhancedIceHowl(Event @event, ScriptAccessory accessory)
     {
-        if (isText) accessory.Method.TextInfo("Ground freezing", duration: 1200, true);
-        if (isTTS) accessory.Method.TTS("Stop moving");
-        if (isEdgeTTS) accessory.Method.EdgeTTS("Stop moving");
+        if (isText)accessory.Method.TextInfo("Floor freezes", duration: 1200, true);
+        if (isTTS)accessory.Method.TTS("Stop moving");
+        if (isEdgeTTS)accessory.Method.EdgeTTS("Stop moving");
     }
 }
 
@@ -268,7 +293,6 @@ public static class EventExtensions
         return JsonConvert.DeserializeObject<uint>(@event["Param"]);
     }
 }
-
 public static class MathHelpers
 {
     public static float DegToRad(float degrees)
@@ -308,12 +332,33 @@ public static class MathTools
     public static float DegToRad(this float deg) => (deg + 360f) % 360f / 180f * float.Pi;
     public static float RadToDeg(this float rad) => (rad + 2 * float.Pi) % (2 * float.Pi) / float.Pi * 180f;
 
+    /// <summary>
+    /// Get the radian value of any point relative to the center point, with direction (0, 0, 1) as 0 and (1, 0, 0) as pi/2.
+    /// That is, increases counterclockwise.
+    /// </summary>
+    /// <param name="point">Any point</param>
+    /// <param name="center">Center point</param>
+    /// <returns></returns>
     public static float GetRadian(this Vector3 point, Vector3 center)
         => MathF.Atan2(point.X - center.X, point.Z - center.Z);
 
+    /// <summary>
+    /// Get the distance of any point from the center point.
+    /// </summary>
+    /// <param name="point">Any point</param>
+    /// <param name="center">Center point</param>
+    /// <returns></returns>
     public static float GetLength(this Vector3 point, Vector3 center)
         => new Vector2(point.X - center.X, point.Z - center.Z).Length();
 
+    /// <summary>
+    /// Rotate any point counterclockwise around the center point and extend.
+    /// </summary>
+    /// <param name="point">Any point</param>
+    /// <param name="center">Center point</param>
+    /// <param name="radian">Rotation radian</param>
+    /// <param name="length">Extension length based on the point</param>
+    /// <returns></returns>
     public static Vector3 RotateAndExtend(this Vector3 point, Vector3 center, float radian, float length)
     {
         var baseRad = point.GetRadian(center);
@@ -326,6 +371,15 @@ public static class MathTools
         );
     }
 
+    /// <summary>
+    /// Get the divided region of a given angle
+    /// </summary>
+    /// <param name="radian">Input radian</param>
+    /// <param name="regionNum">Number of region divisions</param>
+    /// <param name="baseRegionIdx">Initial index of the region where 0 degrees is located</param>>
+    /// <param name="isDiagDiv">Whether diagonal division, default false</param>
+    /// <param name="isCw">Whether clockwise increasing, default false</param>
+    /// <returns></returns>
     public static int RadianToRegion(this float radian, int regionNum, int baseRegionIdx = 0, bool isDiagDiv = false, bool isCw = false)
     {
         var sepRad = float.Pi * 2 / regionNum;
@@ -334,21 +388,45 @@ public static class MathTools
         return ((int)Math.Floor(rad / sepRad) + baseRegionIdx + regionNum) % regionNum;
     }
 
+    /// <summary>
+    /// Fold the input point horizontally
+    /// </summary>
+    /// <param name="point">Point to fold</param>
+    /// <param name="centerX">Center folding line X coordinate</param>
+    /// <returns></returns>
     public static Vector3 FoldPointHorizon(this Vector3 point, float centerX)
         => point with { X = 2 * centerX - point.X };
 
+    /// <summary>
+    /// Fold the input point vertically
+    /// </summary>
+    /// <param name="point">Point to fold</param>
+    /// <param name="centerZ">Center folding line Z coordinate</param>
+    /// <returns></returns>
     public static Vector3 FoldPointVertical(this Vector3 point, float centerZ)
         => point with { Z = 2 * centerZ - point.Z };
 
+    /// <summary>
+    /// Central symmetry of the input point
+    /// </summary>
+    /// <param name="point">Input point</param>
+    /// <param name="center">Center point</param>
+    /// <returns></returns>
     public static Vector3 PointCenterSymmetry(this Vector3 point, Vector3 center)
         => point.RotateAndExtend(center, float.Pi, 0);
 
+    /// <summary>
+    /// Get the specified digit of a given number
+    /// </summary>
+    /// <param name="val">Given value</param>
+    /// <param name="x">Corresponding digit, units digit is 1</param>
+    /// <returns></returns>
     public static int GetDecimalDigit(this int val, int x)
     {
         var valStr = val.ToString();
         var length = valStr.Length;
         if (x < 1 || x > length) return -1;
-        var digitChar = valStr[length - x];
+        var digitChar = valStr[length - x]; // take the x-th digit from the right
         return int.Parse(digitChar.ToString());
     }
 }
@@ -421,6 +499,9 @@ public static class IbcHelper
         }
     }
 
+    /// <summary>
+    /// Get the EntityId of the object for the specified marker index
+    /// </summary>
     public static unsafe ulong GetMarkerEntityId(uint markerIndex)
     {
         var markingController = MarkingController.Instance();
@@ -430,6 +511,10 @@ public static class IbcHelper
         return markingController->Markers[(int)markerIndex];
     }
 
+    /// <summary>
+    /// Get the marker on the object
+    /// </summary>
+    /// <returns>MarkType</returns>
     public static MarkType GetObjectMarker(IGameObject? obj)
     {
         if (obj == null || !obj.IsValid()) return MarkType.None;
@@ -448,11 +533,17 @@ public static class IbcHelper
         return MarkType.None;
     }
 
+    /// <summary>
+    /// Check if the object has the specified marker
+    /// </summary>
     public static bool HasMarker(IGameObject? obj, MarkType markType)
     {
         return GetObjectMarker(obj) == markType;
     }
 
+    /// <summary>
+    /// Check if the object has any marker
+    /// </summary>
     public static bool HasAnyMarker(IGameObject? obj)
     {
         return GetObjectMarker(obj) != MarkType.None;
@@ -492,6 +583,9 @@ public static class IbcHelper
         return MarkType.None;
     }
 
+    /// <summary>
+    /// Get the name of the marker
+    /// </summary>
     public static string GetMarkerName(MarkType markType)
     {
         return markType switch
@@ -513,7 +607,7 @@ public static class IbcHelper
             MarkType.Attack6 => "Attack 6",
             MarkType.Attack7 => "Attack 7",
             MarkType.Attack8 => "Attack 8",
-            _ => "No Marker"
+            _ => "No marker"
         };
     }
     
@@ -522,12 +616,13 @@ public static class IbcHelper
         if (obj == null || !obj.IsValid()) return -1;
         return obj.HitboxRadius;
     }
+
 }
 
 public static class HelperExtensions
 {
     public static unsafe uint GetCurrentTerritoryId()
     {
-        return AgentMap.Instance()->CurrentTerritoryId;
+        return AgentMap.Instance()->CurrentTerritoryId; // Additional map ID check
     }
 }
