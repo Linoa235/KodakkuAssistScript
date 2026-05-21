@@ -1,4 +1,3 @@
-// LV.28 名门府邸静语庄园_Veever.cs
 using System;
 using System.Linq;
 using System.Numerics;
